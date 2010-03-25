@@ -1,0 +1,18 @@
+<includes>
+    <include name="HideGenreButton">
+        <control type="radiobutton" id="213">
+            <description>Hide Genre Button</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font13bold</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>$LOCALIZE[31111] - Genre [COLOR=grey3] ($LOCALIZE[20314])[/COLOR]</label>
+            <onclick>Skin.ToggleSetting(HomeMenuNoGenreShowsButton)</onclick>
+            <selected>!Skin.HasSetting(HomeMenuNoGenreShowsButton)</selected>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <enable>Library.HasContent(Movies)</enable>
+        </control>
+    </include>
+</includes>
