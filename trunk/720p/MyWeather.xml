@@ -15,9 +15,9 @@
 			</animation>			
 			<visible>!Window.IsVisible(script-twc-main.xml)</visible>
 			<include>VisibleFadeEffect</include>
-                <control type="group">
-                    <include>CurrentWeather</include>
-                </control> 
+			<control type="group">
+				<include>CurrentWeather</include>
+			</control> 
 			<control type="group">
 				<posx>100</posx>
 				<posy>50</posy>

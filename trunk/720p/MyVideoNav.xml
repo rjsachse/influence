@@ -2,7 +2,7 @@
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<views>50,500,501,508,504,503,505,511,513,514</views>
-        <visible>!Skin.HasSetting(kiosk)</visible>
+	<visible>!Skin.HasSetting(kiosk)</visible>
 	<controls>
 		<include>CommonVideoBackground</include>
 		<control type="group">
@@ -151,7 +151,7 @@
 			<include>WideIconView</include> <!-- view id = 505 -->
 			<include>MusicVideoInfoListView</include> <!-- view id = 511 -->
 			<include>WallStreamView</include> <!-- view id = 513 -->
-                        <include>HalfWallView</include> <!-- view id = 514 -->
+			<include>HalfWallView</include> <!-- view id = 514 -->
 		</control>
 		<include>CommonPageCount</include>
 		<include>BehindDialogFadeOut</include>

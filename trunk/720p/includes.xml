@@ -6,10 +6,10 @@
 	<include file="ViewsPictures.xml" />
 	<include file="IncludesCodecFlagging.xml" />
 	<include file="IncludesHomeRecentlyAdded.xml" />
-        <include file="ListGenre.xml" />
-        <include file="Genre.xml" />
-        <include file="ButtonExtra.xml" />
-        <include file="NewWeather.xml" />
+	<include file="ListGenre.xml" />
+	<include file="Genre.xml" />
+	<include file="ButtonExtra.xml" />
+	<include file="NewWeather.xml" />
 	<constant name="FanartCrossfadeTime">500</constant>
 	<constant name="IconCrossfadeTime">400</constant>
 
@@ -76,13 +76,13 @@
 			<width>1280</width>
 			<height>720</height>
 			<imagepath fallback="special://skin/backgrounds/videos.jpg"
-		         background="true">$INFO[Skin.String(Home_Custom_Back_GenreShow_Folder)]</imagepath>
+				background="true">$INFO[Skin.String(Home_Custom_Back_GenreShow_Folder)]</imagepath>
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
 			<visible>[Container.Content(Movies) | Container.Content(Seasons) |Container.Content(Episodes)] +
-		              [!IsEmpty(Skin.String(Home_Custom_Back_GenreShow_Folder) +
-          		    Skin.HasSetting(HomeMenuNoGenreShowsButton)])</visible>
+				[!IsEmpty(Skin.String(Home_Custom_Back_GenreShow_Folder) +
+				Skin.HasSetting(HomeMenuNoGenreShowsButton)])</visible>
 		</control>
 	</include>
 	<include name="CommonMusicBackground">
@@ -844,7 +844,7 @@
 		</control>
 	</include>
 	<include name="ScrollOffsetLabel">
-                <control type="group">
+		<control type="group">
 			<visible>Container.Scrolling + [StringCompare(Container.SortMethod,$LOCALIZE[551]) | StringCompare(Container.SortMethod,$LOCALIZE[561]) | StringCompare(Container.SortMethod,$LOCALIZE[558]) | StringCompare(Container.SortMethod,$LOCALIZE[557]) | StringCompare(Container.SortMethod,$LOCALIZE[556])]</visible>
 			<animation effect="slide" start="0,0" end="0,-60" time="100">Visible</animation>
 			<animation effect="slide" start="0,-60" end="0,0" delay="400" time="100">Hidden</animation>
@@ -868,7 +868,7 @@
 				<textcolor>white</textcolor>
 				<font>font30caps_title</font>
 			</control>
-                </control>
+		</control>
 	</include>
 	<include name="Clock">
 		<control type="group">
@@ -900,8 +900,8 @@
 		</control>
 	</include>
 	<include name="backgroundfade">
-		 <animation effect="fade" time="600">Visible</animation>
-		 <animation effect="fade" time="600">Hidden</animation>
+		<animation effect="fade" time="600">Visible</animation>
+		<animation effect="fade" time="600">Hidden</animation>
 	</include>
 	<include name="Window_OpenClose_Animation">
 		<animation effect="fade" time="250">WindowOpen</animation>

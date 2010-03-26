@@ -1,120 +1,121 @@
 <includes>
-    <include name="ButtonExtraGenre">
-	<item id="12">
-		<label>$INFO[Skin.String(HomeGenre_label)]</label>
-		<onclick>ActivateWindow(videolibrary,videodb://1/1/$INFO[Skin.String(HomeGenre_id)]/)</onclick>
-		<icon>special://skin/backgrounds/videos.jpg</icon>
-		<thumb>$INFO[Skin.String(Home_Custom_Back_GenreShow_Folder)]</thumb>
-		<visible>Skin.HasSetting(HomeMenuNoGenreShowsButton) + Library.HasContent(Movies)</visible>
-	</item>
-    </include>
+	<include name="ButtonExtraGenre">
+		<item id="12">
+			<label>$INFO[Skin.String(HomeGenre_label)]</label>
+			<onclick>ActivateWindow(videolibrary,videodb://1/1/$INFO[Skin.String(HomeGenre_id)]/)</onclick>
+			<icon>special://skin/backgrounds/videos.jpg</icon>
+			<thumb>$INFO[Skin.String(Home_Custom_Back_GenreShow_Folder)]</thumb>
+			<visible>Skin.HasSetting(HomeMenuNoGenreShowsButton) + Library.HasContent(Movies)</visible>
+			<onright>Control.SetFocus(8002,0)</onright>
+		</item>
+	</include>
 
-    <include name="HideGenreButton">
-        <control type="radiobutton" id="213">
-            <description>Hide Genre Button</description>
-            <width>750</width>
-            <height>40</height>
-            <font>font13bold</font>
-            <textcolor>grey2</textcolor>
-            <focusedcolor>white</focusedcolor>
-            <label>$LOCALIZE[31111] - $LOCALIZE[31550] [COLOR=grey3] ($LOCALIZE[20314])[/COLOR]</label>
-            <onclick>Skin.ToggleSetting(HomeMenuNoGenreShowsButton)</onclick>
-            <selected>!Skin.HasSetting(HomeMenuNoGenreShowsButton)</selected>
-            <texturefocus>MenuItemFO.png</texturefocus>
-            <texturenofocus>MenuItemNF.png</texturenofocus>
-            <enable>Library.HasContent(Movies)</enable>
-        </control>
-        <control type="button" id="214">
-            <description>Hide Genre Button</description>
-            <width>750</width>
-            <height>40</height>
-            <font>font12bold</font>
-            <textcolor>grey2</textcolor>
-            <focusedcolor>white</focusedcolor>
-            <label>$LOCALIZE[31551]</label>
-            <onclick>XBMC.RunScript(special://skin/scripts/ListGenre.py)</onclick>
-            <onclick>ReloadSkin()</onclick>
-            <align>center</align>
-            <visible>Skin.HasSetting(HomeMenuNoGenreShowsButton) + Library.HasContent(Movies)</visible>
-            <texturefocus>MenuItemFO.png</texturefocus>
-            <texturenofocus>MenuItemNF.png</texturenofocus>
-            <enable>Library.HasContent(Movies)</enable>
-        </control>
-        <control type="group" id="215">
-            <height>40</height>
-            <visible>Skin.HasSetting(HomeMenuNoGenreShowsButton) + Library.HasContent(Movies)</visible>
-            <control type="button" id="2151">
-                <description>Menu Item Next Button</description>
-                <posx>670</posx>
-                <posy>9</posy>
-                <width>33</width>
-                <height>22</height>
-                <label>-</label>
-                <font>-</font>
-                <texturenofocus>scroll-down-2.png</texturenofocus>
-                <texturefocus>scroll-down-focus-2.png</texturefocus>
-                <onclick>Control.Move(9021,1)</onclick>
-                <onclick>Skin.SetString(HomeGenre_Id,$INFO[Container(9021).ListItem(0).Label])</onclick>
-                <onclick>Skin.SetString(HomeGenre_Label,$INFO[Container(9021).ListItem(0).Label2])</onclick>
-                <onclick>Skin.SetString(HomeGenre_Offset,Container(9021).Position)</onclick>
-                <onleft>9000</onleft>
-                <onright>2152</onright>
-                <onup>214</onup>
-                <ondown>2152</ondown>
-            </control>
-            <control type="button" id="2152">
-                <description>Menu Item Prev Button</description>
-                <posx>703</posx>
-                <posy>9</posy>
-                <width>33</width>
-                <height>22</height>
-                <label>-</label>
-                <font>-</font>
-                <texturenofocus>scroll-up-2.png</texturenofocus>
-                <texturefocus>scroll-up-focus-2.png</texturefocus>
-                <onclick>Control.Move(9021,-1)</onclick>
-                <onclick>Skin.SetString(HomeGenre_Id,$INFO[Container(9021).ListItem(0).Label])</onclick>
-                <onclick>Skin.SetString(HomeGenre_Label,$INFO[Container(9021).ListItem(0).Label2])</onclick>
-                <onleft>2151</onleft>
-                <onright>208</onright>
-                <onup>2151</onup>
-                <ondown>208</ondown>
-            </control>
-            <control type="list" id="9021">
-                <hitrect x="0" y="0" w="0" h="0" />
-                <posx>0</posx>
-                <width>750</width>
-                <height>40</height>
-                <pagecontrol>-</pagecontrol>
-                <scrolltime>0</scrolltime>
-                <itemlayout height="1" width="750">
-                </itemlayout>
-                <focusedlayout height="40" width="750">
-                    <control type="label">
-                        <posx>10</posx>
-                        <posy>0</posy>
-                        <width>600</width>
-                        <height>40</height>
-                        <font>font12bold</font>
-                        <textcolor>grey2</textcolor>
-                        <align>left</align>
-                        <aligny>center</aligny>
-                        <label> - $LOCALIZE[31550] </label>
-                    </control>
-                    <control type="label">
-                        <posx>650</posx>
-                        <posy>0</posy>
-                        <width>640</width>
-                        <height>40</height>
-                        <font>font12bold</font>
-                        <textcolor>white</textcolor>
-                        <align>right</align>
-                        <aligny>center</aligny>
-                        <label>$INFO[ListItem.label2]</label>
-                    </control>
-                </focusedlayout>
-                <include>ListGenre</include>
-            </control>
-        </control>
-    </include>
+	<include name="HideGenreButton">
+		<control type="radiobutton" id="213">
+			<description>Hide Genre Button</description>
+			<width>750</width>
+			<height>40</height>
+			<font>font13bold</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<label>$LOCALIZE[31111] - $LOCALIZE[31550] [COLOR=grey3] ($LOCALIZE[20314])[/COLOR]</label>
+			<onclick>Skin.ToggleSetting(HomeMenuNoGenreShowsButton)</onclick>
+			<selected>!Skin.HasSetting(HomeMenuNoGenreShowsButton)</selected>
+			<texturefocus>MenuItemFO.png</texturefocus>
+			<texturenofocus>MenuItemNF.png</texturenofocus>
+			<enable>Library.HasContent(Movies)</enable>
+		</control>
+		<control type="button" id="214">
+			<description>Hide Genre Button</description>
+			<width>750</width>
+			<height>40</height>
+			<font>font12bold</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<label>$LOCALIZE[31551]</label>
+			<onclick>XBMC.RunScript(special://skin/scripts/ListGenre.py)</onclick>
+			<onclick>ReloadSkin()</onclick>
+			<align>center</align>
+			<visible>Skin.HasSetting(HomeMenuNoGenreShowsButton) + Library.HasContent(Movies)</visible>
+			<texturefocus>MenuItemFO.png</texturefocus>
+			<texturenofocus>MenuItemNF.png</texturenofocus>
+			<enable>Library.HasContent(Movies)</enable>
+		</control>
+		<control type="group" id="215">
+			<height>40</height>
+			<visible>Skin.HasSetting(HomeMenuNoGenreShowsButton) + Library.HasContent(Movies)</visible>
+			<control type="button" id="2151">
+				<description>Menu Item Next Button</description>
+				<posx>670</posx>
+				<posy>9</posy>
+				<width>33</width>
+				<height>22</height>
+				<label>-</label>
+				<font>-</font>
+				<texturenofocus>scroll-down-2.png</texturenofocus>
+				<texturefocus>scroll-down-focus-2.png</texturefocus>
+				<onclick>Control.Move(9021,1)</onclick>
+				<onclick>Skin.SetString(HomeGenre_Id,$INFO[Container(9021).ListItem(0).Label])</onclick>
+				<onclick>Skin.SetString(HomeGenre_Label,$INFO[Container(9021).ListItem(0).Label2])</onclick>
+				<onclick>Skin.SetString(HomeGenre_Offset,Container(9021).Position)</onclick>
+				<onleft>9000</onleft>
+				<onright>2152</onright>
+				<onup>214</onup>
+				<ondown>2152</ondown>
+			</control>
+			<control type="button" id="2152">
+				<description>Menu Item Prev Button</description>
+				<posx>703</posx>
+				<posy>9</posy>
+				<width>33</width>
+				<height>22</height>
+				<label>-</label>
+				<font>-</font>
+				<texturenofocus>scroll-up-2.png</texturenofocus>
+				<texturefocus>scroll-up-focus-2.png</texturefocus>
+				<onclick>Control.Move(9021,-1)</onclick>
+				<onclick>Skin.SetString(HomeGenre_Id,$INFO[Container(9021).ListItem(0).Label])</onclick>
+				<onclick>Skin.SetString(HomeGenre_Label,$INFO[Container(9021).ListItem(0).Label2])</onclick>
+				<onleft>2151</onleft>
+				<onright>208</onright>
+				<onup>2151</onup>
+				<ondown>208</ondown>
+			</control>
+			<control type="list" id="9021">
+				<hitrect x="0" y="0" w="0" h="0" />
+				<posx>0</posx>
+				<width>750</width>
+				<height>40</height>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>0</scrolltime>
+				<itemlayout height="1" width="750">
+				</itemlayout>
+				<focusedlayout height="40" width="750">
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>600</width>
+						<height>40</height>
+						<font>font12bold</font>
+						<textcolor>grey2</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label> - $LOCALIZE[31550] </label>
+					</control>
+					<control type="label">
+						<posx>650</posx>
+						<posy>0</posy>
+						<width>640</width>
+						<height>40</height>
+						<font>font12bold</font>
+						<textcolor>white</textcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.label2]</label>
+					</control>
+				</focusedlayout>
+				<include>ListGenre</include>
+			</control>
+		</control>
+	</include>
 </includes>

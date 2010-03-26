@@ -12,16 +12,15 @@
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
 		</control>
-                <!-- Fanart Recently-->
-                <include condition="Skin.HasSetting(homepageHideRecentlyAdded)">HomeRecentlyAddedFanArt</include>
+		<!-- Fanart Recently-->
 
 		<include>CommonMediaPlayingBackground</include>
 		<include condition="Skin.HasSetting(homepageHideRecentlyAdded)">HomeRecentlyAddedInfo</include>
 		<!-- weather Info -->
-                <control type="group">
-		    <visible>Container(9000).HasFocus(6) +  Weather.IsFetched</visible>
-                    <include>CurrentWeather</include>
-                </control>
+		<control type="group">
+			<visible>Container(9000).HasFocus(6) +  Weather.IsFetched</visible>
+			<include>CurrentWeather</include>
+		</control>
 		<control type="group">
 			<posx>510r</posx>
 			<posy>0</posy>
@@ -466,7 +465,7 @@
 						<onclick>ActivateWindow(VideoFiles,$LOCALIZE[1037])</onclick>
 						<visible>!Library.HasContent(Video)</visible>
 					</control>
-                                        <include>ButtonExtra9010</include>
+					<include>ButtonExtra9010</include>
 				</control>
 				<control type="grouplist" id="9011">
 					<posx>10</posx>
@@ -521,7 +520,7 @@
 						<onclick>ActivateWindow(MusicFiles,$LOCALIZE[1038])</onclick>
 						<visible>!Library.HasContent(Music)</visible>
 					</control>
-                                        <include>ButtonExtra9011</include>
+					<include>ButtonExtra9011</include>
 				</control>
 				<control type="grouplist" id="9014">
 					<posx>10</posx>
@@ -561,7 +560,7 @@
 						<onclick>ActivateWindow(Credits)</onclick>
 						<visible>False</visible>
 					</control>
-                                        <include>ButtonExtra9014</include>
+					<include>ButtonExtra9014</include>
 				</control>
 				<control type="grouplist" id="9015">
 					<posx>10</posx>
@@ -666,7 +665,7 @@
 						<label>31328</label>
 						<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</onclick>
 					</control>
-                                        <include>ButtonExtra9016</include>
+					<include>ButtonExtra9016</include>
 				</control>
 				<control type="grouplist" id="9017">
 					<posx>10</posx>
@@ -705,9 +704,9 @@
 						<label>31328</label>
 						<onclick>ActivateWindow(VideoLibrary,RecentlyAddedEpisodes,return)</onclick>
 					</control>
-                                        <include>ButtonExtra9017</include>
+					<include>ButtonExtra9017</include>
 				</control>
-                                <include>ButtonExtraMenuSub</include>
+				<include>ButtonExtraMenuSub</include>
 			</control>
 			<control type="image">
 				<posx>-450</posx>
@@ -796,31 +795,31 @@
 						<height>18</height>
 						<texture>HomeHasSub.png</texture>
 						<visible>Container(9000).HasFocus(2) |
-                                                    Container(9000).HasFocus(3) |
-                                                    Container(9000).HasFocus(5) |
-                                                    Container(9000).HasFocus(7) |
-                                                    Container(9000).HasFocus(9) |
-                                                    [Container(9000).HasFocus(8) +
-                                                    [[Skin.HasSetting(HomeScriptButton1) +
-                                                    !IsEmpty(Skin.String(HomeScriptButton1_label))]
-                                                    | [Skin.HasSetting(HomeScriptButton2) +
-                                                    !IsEmpty(Skin.String(HomeScriptButton2_label))]
-                                                    | [Skin.HasSetting(HomeScriptButton3) +
-                                                    !IsEmpty(Skin.String(HomeScriptButton3_label))]
-                                                    | [Skin.HasSetting(HomeScriptButton4) +
-                                                    !IsEmpty(Skin.String(HomeScriptButton4_label))]
-                                                    | [Skin.HasSetting(HomeScriptButton5) +
-                                                    !IsEmpty(Skin.String(HomeScriptButton5_label))]
-                                                    | [Skin.HasSetting(HomeScriptButton6) +
-                                                    !IsEmpty(Skin.String(HomeScriptButton6_label))]]]
-                                                    | Container(9000).HasFocus(10) |
-                                                    Container(9000).HasFocus(11) |
-                                                    Container(9000).HasFocus(13) +
-                                                    Skin.HasSetting(ButtonExtraMen1Sm) | 
-                                                    Container(9000).HasFocus(14) +
-                                                    Skin.HasSetting(ButtonExtraMen2Sm) | 
-                                                    Container(9000).HasFocus(15) +
-                                                    Skin.HasSetting(ButtonExtraMen3Sm) </visible>
+							Container(9000).HasFocus(3) |
+							Container(9000).HasFocus(5) |
+							Container(9000).HasFocus(7) |
+							Container(9000).HasFocus(9) |
+							[Container(9000).HasFocus(8) +
+							[[Skin.HasSetting(HomeScriptButton1) +
+							!IsEmpty(Skin.String(HomeScriptButton1_label))]
+							| [Skin.HasSetting(HomeScriptButton2) +
+							!IsEmpty(Skin.String(HomeScriptButton2_label))]
+							| [Skin.HasSetting(HomeScriptButton3) +
+							!IsEmpty(Skin.String(HomeScriptButton3_label))]
+							| [Skin.HasSetting(HomeScriptButton4) +
+							!IsEmpty(Skin.String(HomeScriptButton4_label))]
+							| [Skin.HasSetting(HomeScriptButton5) +
+							!IsEmpty(Skin.String(HomeScriptButton5_label))]
+							| [Skin.HasSetting(HomeScriptButton6) +
+							!IsEmpty(Skin.String(HomeScriptButton6_label))]]]
+							| Container(9000).HasFocus(10) |
+							Container(9000).HasFocus(11) |
+							Container(9000).HasFocus(13) +
+							Skin.HasSetting(ButtonExtraMen1Sm) | 
+							Container(9000).HasFocus(14) +
+							Skin.HasSetting(ButtonExtraMen2Sm) | 
+							Container(9000).HasFocus(15) +
+							Skin.HasSetting(ButtonExtraMen3Sm) </visible>
 						<animation effect="fade" start="0" end="100" time="200">Focus</animation>
 						<animation effect="fade" start="100" end="0" time="200">UnFocus</animation>
 					</control>
@@ -884,8 +883,8 @@
 						<thumb>$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</thumb>
 						<visible>Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)</visible>
 					</item>
-                                        <include>ButtonExtraGenre</include>
-                                        <include>ButtonExtraMenu</include>
+					<include>ButtonExtraGenre</include>
+					<include>ButtonExtraMenu</include>
 					<item id="3">
 						<label>2</label>
 						<onclick>ActivateWindow(Music)</onclick>

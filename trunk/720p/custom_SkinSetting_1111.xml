@@ -142,7 +142,7 @@
 						<label2>31200</label2>
 						<onclick>-</onclick>
 					</item>
-                                        <include>ButtonExtraMenuParam</include>
+					<include>ButtonExtraMenuParam</include>
 				</content>
 			</control>
 			<control type="image">
@@ -208,18 +208,18 @@
 						<onclick>Skin.ToggleSetting(AutoScroll)</onclick>
 						<selected>Skin.HasSetting(AutoScroll)</selected>
 					</control>
-                                        <control type="radiobutton" id="1010">
-                                            <width>750</width>
-                                            <height>40</height>
-                                            <font>font13bold</font>
-                                            <label>31560</label>
-                                            <textcolor>grey2</textcolor>
-                                            <focusedcolor>white</focusedcolor>
-                                            <texturefocus>MenuItemFO.png</texturefocus>
-                                            <texturenofocus>MenuItemNF.png</texturenofocus>
-                                            <onclick>Skin.ToggleSetting(kiosk)</onclick>
-                                            <selected>Skin.HasSetting(kiosk)</selected>
-                                        </control>
+					<control type="radiobutton" id="1010">
+						<width>750</width>
+						<height>40</height>
+						<font>font13bold</font>
+						<label>31560</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(kiosk)</onclick>
+						<selected>Skin.HasSetting(kiosk)</selected>
+					</control>
 					<control type="radiobutton" id="102">
 						<width>750</width>
 						<height>40</height>
@@ -462,7 +462,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<enable>Library.HasContent(TVShows)</enable>
 					</control>
-                                        <include>HideGenreButton</include>
+					<include>HideGenreButton</include>
 					<control type="radiobutton" id="208">
 						<description>Hide Music Button</description>
 						<width>750</width>
@@ -701,7 +701,7 @@
 								<thumb>$INFO[Skin.String(Home_Custom_Back_GenreShow_Folder)]</thumb>
 								<visible>Skin.HasSetting(HomeMenuNoGenreShowsButton) + Library.HasContent(Movies)</visible>
 							</item>
-                                                        <include>ButtonExtraMenuFoldInit</include>
+							<include>ButtonExtraMenuFoldInit</include>
 							<item id="2">
 								<label>2</label>
 								<onclick>-</onclick>
@@ -1350,7 +1350,7 @@
 								<ondown>304</ondown>
 							</control>
 						</control>
-                                                <include>ButtonExtraMenuFolder</include>
+						<include>ButtonExtraMenuFolder</include>
 					</control>
 					<control type="multiimage">
 						<posx>95</posx>
@@ -1718,7 +1718,7 @@
 						</control>
 					</control>
 				</control>
-                                <include>ButtonExtra_Setup</include>
+				<include>ButtonExtra_Setup</include>
 				<control type="scrollbar" id="61">
 					<posx>1060</posx>
 					<posy>60</posy>

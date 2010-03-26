@@ -127,9 +127,9 @@
   <!-- Description Labels  -->
   <string id="31400">[B]CONFIGURATION DES PARAMÈTRES APPARENCE[/B][CR][CR]Changer le skin · Choisir la langue et la région · Changer les options de liste[CR]Changer l'économiseur d'écran</string>
   <string id="31401">[B]CONFIGURATION DES PARAMÈTRES VIDÉO[/B][CR][CR]Gérer votre médiathèque · Définir les options de lecture · Changer les options de liste[CR]Régler la police des sous-titres</string>
-  <string id="31402">[B]CONFIGURATION DES PARAMÈTRES MUSIQUE[/B][CR][CR]Gérer votre médiathèque · Définir les options de lecture · Changer les options de liste[CR]Soumettre des chansons · Changer les options karaoké</string>  
+  <string id="31402">[B]CONFIGURATION DES PARAMÈTRES MUSIQUE[/B][CR][CR]Gérer votre médiathèque · Définir les options de lecture · Changer les options de liste[CR]Soumettre des chansons · Changer les options karaoké</string>
   <string id="31403">[B]CONFIGURATION DES PARAMÈTRES IMAGE[/B][CR][CR]Définir les options de lecture · Configurer les diaporamas</string>
-  <string id="31404">[B]CONFIGURATION DES PARAMÈTRES MÉTÉO[/B][CR][CR]Choisir les trois villes qui recueilleront les informations météorologiques</string>  
+  <string id="31404">[B]CONFIGURATION DES PARAMÈTRES MÉTÉO[/B][CR][CR]Choisir les trois villes qui recueilleront les informations météorologiques</string>
   <string id="31405">[B]CONFIGURATION DES PARAMÈTRES RÉSEAU[/B][CR][CR]Permettre le contrôle de XBMC via UPnP et HTTP · Configurer le partage des fichiers[CR]Définir les options d'accès Internet</string>
   <string id="31406">[B]CONFIGURATION DES PARAMÈTRES SYSTÈME[/B][CR][CR]Configurer les sorties vidéo et audio · Configurer les périphériques de contrôle[CR]Définir les options de gestion d'énergie · Activer le débogage · Configurer la sécurité</string>
   <string id="31407">[B]CONFIGURATION DES PARAMÈTRES THÈME[/B][CR][CR]Configuration du skin Confluence · Ajouter et supprimer des éléments du menu d'accueil[CR]Changer les arrière-plans du skin</string>

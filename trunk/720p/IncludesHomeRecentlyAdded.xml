@@ -1,114 +1,29 @@
 <includes>
-        <include name="HomeRecentlyAddedFanArt">
-		<control type="largeimage">
+	<include name="HomeRecentlyAddedPanel">
+		<control type="image">
+			<description>background</description>
 			<posx>0</posx>
 			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>scale</aspectratio>
-			<texture background="true">$INFO[Window.Property(LatestMovie.1.Fanart)]</texture>
-			<visible>Control.HasFocus(8000) + Container(8000).Hasfocus(1)</visible>
+			<width>250</width>
+			<height>300</height>
+			<texture border="10">ContentPanel.png</texture>
 		</control>
-		<control type="largeimage">
+		<control type="image">
+			<posx>20</posx>
+			<posy>10</posy>
+			<width>210</width>
+			<height>50</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>GlassTitleBar.png</texture>
+		</control>
+		<control type="image">
 			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>scale</aspectratio>
-			<texture background="true">$INFO[Window.Property(LatestMovie.2.Fanart)]</texture>
-			<visible>Control.HasFocus(8000) + Container(8000).Hasfocus(2)</visible>
+			<posy>30</posy>
+			<width>250</width>
+			<height>4</height>
+			<texture>separator.png</texture>
 		</control>
-		<control type="largeimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>scale</aspectratio>
-			<texture background="true">$INFO[Window.Property(LatestMovie.3.Fanart)]</texture>
-			<visible>Control.HasFocus(8000) + Container(8000).Hasfocus(3)</visible>
-		</control>
-		<control type="largeimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>scale</aspectratio>
-			<texture background="true">$INFO[Window.Property(LatestMovie.4.Fanart)]</texture>
-			<visible>Control.HasFocus(8000) + Container(8000).Hasfocus(4)</visible>
-		</control>
-		<control type="largeimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>scale</aspectratio>
-			<texture background="true">$INFO[Window.Property(LatestEpisode.1.Fanart)]</texture>
-			<visible>Control.HasFocus(8001) + Container(8001).Hasfocus(1)</visible>
-		</control>
-		<control type="largeimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>scale</aspectratio>
-			<texture background="true">$INFO[Window.Property(LatestEpisode.2.Fanart)]</texture>
-			<visible>Control.HasFocus(8001) + Container(8001).Hasfocus(2)</visible>
-		</control>
-		<control type="largeimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>scale</aspectratio>
-			<texture background="true">$INFO[Window.Property(LatestEpisode.3.Fanart)]</texture>
-			<visible>Control.HasFocus(8001) + Container(8001).Hasfocus(3)</visible>
-		</control>
-		<control type="largeimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>scale</aspectratio>
-			<texture background="true">$INFO[Window.Property(LatestEpisode.4.Fanart)]</texture>
-			<visible>Control.HasFocus(8001) + Container(8001).Hasfocus(4)</visible>
-		</control>
-		<control type="largeimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>scale</aspectratio>
-			<texture background="true">$INFO[Window.Property(LatestGenreMovie.1.Fanart)]</texture>
-			<visible>Control.HasFocus(8002) + Container(8002).Hasfocus(1)</visible>
-		</control>
-		<control type="largeimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>scale</aspectratio>
-			<texture background="true">$INFO[Window.Property(LatestGenreMovie.2.Fanart)]</texture>
-			<visible>Control.HasFocus(8002) + Container(8002).Hasfocus(2)</visible>
-		</control>
-		<control type="largeimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>scale</aspectratio>
-			<texture background="true">$INFO[Window.Property(LatestGenreMovie.3.Fanart)]</texture>
-			<visible>Control.HasFocus(8002) + Container(8002).Hasfocus(3)</visible>
-		</control>
-		<control type="largeimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>scale</aspectratio>
-			<texture background="true">$INFO[Window.Property(LatestGenreMovie.4.Fanart)]</texture>
-			<visible>Control.HasFocus(8002) + Container(8002).Hasfocus(4)</visible>
-		</control>
-        </include>
+	</include>
 	<include name="HomeRecentlyAddedInfo">
 		<control type="group">
 			<visible>!Window.IsVisible(Favourites)</visible>
@@ -120,26 +35,19 @@
 				<posy>50</posy>
 				<visible>Library.HasContent(Movies)</visible>
 				<visible>[Container(9000).Hasfocus(2) +
-                                    !Skin.HasSetting(HomeMenuNoMoviesButton)] |
-                                    Container(9000).Hasfocus(10)</visible>
+					!Skin.HasSetting(HomeMenuNoMoviesButton)] |
+					Container(9000).Hasfocus(10)</visible>
 				<include>VisibleFadeEffect</include>
 				<animation effect="slide" time="0" start="0,0" end="-260,0" condition="[Library.HasContent(TVShows) + ![Skin.HasSetting(HomeMenuNoMoviesButton) | Skin.HasSetting(HomeMenuNoTVShowsButton)]]">Conditional</animation>
-				<control type="image">
-					<description>background</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>250</width>
-					<height>300</height>
-					<texture border="10">RecentAddedNF.png</texture>
-				</control>
+				<include>HomeRecentlyAddedPanel</include>
 				<control type="label">
 					<description>Title label</description>
 					<posx>10</posx>
-					<posy>5</posy>
+					<posy>10</posy>
 					<height>20</height>
 					<width>230</width>
 					<label>31323</label>
-					<align>left</align>
+					<align>center</align>
 					<aligny>center</aligny>
 					<font>font12caps_title</font>
 					<textcolor>white</textcolor>
@@ -244,7 +152,9 @@
 						<item id="1">
 							<label>$INFO[Window.Property(LatestMovie.1.Title)]</label>
 							<label2></label2>
-							<onclick>PlayMedia($INFO[Window.Property(LatestMovie.1.Path)])</onclick>
+							<!--<onclick>PlayMedia($INFO[Window.Property(LatestMovie.1.Path)])</onclick>
+							-->
+							<onclick>xbmc.activatewindow(movieinformation,11)</onclick>
 							<icon>-</icon>
 							<thumb>-</thumb>
 						</item>
@@ -279,22 +189,15 @@
 				<visible>Container(9000).Hasfocus(12)</visible>
 				<include>VisibleFadeEffect</include>
 				<animation effect="slide" time="0" start="0,0" end="-260,0" condition="[Library.HasContent(TVShows) + ![Skin.HasSetting(HomeMenuNoMoviesButton) | Skin.HasSetting(HomeMenuNoTVShowsButton)]]">Conditional</animation>
-				<control type="image">
-					<description>background</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>250</width>
-					<height>300</height>
-					<texture border="10">RecentAddedNF.png</texture>
-				</control>
+				<include>HomeRecentlyAddedPanel</include>
 				<control type="label">
 					<description>Title label</description>
 					<posx>10</posx>
-					<posy>5</posy>
+					<posy>10</posy>
 					<height>20</height>
 					<width>230</width>
 					<label>LATEST GENRE</label>
-					<align>left</align>
+					<align>center</align>
 					<aligny>center</aligny>
 					<font>font12caps_title</font>
 					<textcolor>white</textcolor>
@@ -351,8 +254,8 @@
 					<height>92</height>
 					<onleft>9000</onleft>
 					<onright>8001</onright>
-					<onup>8000</onup>
-					<ondown>8000</ondown>
+					<onup>8002</onup>
+					<ondown>8002</ondown>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>0</scrolltime>
@@ -378,7 +281,7 @@
 							<width>250</width>
 							<height>23</height>
 							<texture border="0,2,0,2">MenuItemFO.png</texture>
-							<visible>Control.HasFocus(8000)</visible>
+							<visible>Control.HasFocus(8002)</visible>
 							<include>VisibleFadeEffect</include>
 						</control>
 						<control type="label">
@@ -433,22 +336,15 @@
 				<visible>Library.HasContent(TVShows)</visible>
 				<visible>[Container(9000).Hasfocus(2) + !Skin.HasSetting(HomeMenuNoTVShowsButton)] | Container(9000).Hasfocus(11)</visible>
 				<include>VisibleFadeEffect</include>
-				<control type="image">
-					<description>background</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>250</width>
-					<height>300</height>
-					<texture border="10">RecentAddedNF.png</texture>
-				</control>
+				<include>HomeRecentlyAddedPanel</include>
 				<control type="label">
 					<description>Title label</description>
 					<posx>10</posx>
-					<posy>5</posy>
+					<posy>10</posy>
 					<height>20</height>
 					<width>230</width>
 					<label>31324</label>
-					<align>left</align>
+					<align>center</align>
 					<aligny>center</aligny>
 					<font>font12caps_title</font>
 					<textcolor>white</textcolor>
