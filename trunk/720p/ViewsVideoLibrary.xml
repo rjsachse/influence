@@ -2528,7 +2528,8 @@
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<preloaditems>200</preloaditems>
-				<visible>![Window.IsVisible(VideoLibrary) + Container.Content(TVShows)]</visible>
+				<!-- <visible>![Window.IsVisible(VideoLibrary) + Container.Content(TVShows)]</visible> -->
+				<visible>Container.Content(TVShows) | Container.Content(Movies) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
 				<itemlayout height="216" width="156">
 					<control type="image">
 						<posx>0</posx>
@@ -2613,8 +2614,6 @@
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Tagline]</label>
 			</control>
-
-
 			<control type="panel" id="514">
 				<posx>16</posx>
 				<posy>0</posy>
@@ -2628,7 +2627,8 @@
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<preloaditems>200</preloaditems>
-				<visible>![Window.IsVisible(VideoLibrary) + Container.Content(TVShows)]</visible>
+				<!-- <visible>![Window.IsVisible(VideoLibrary) + Container.Content(TVShows)]</visible> -->
+				<visible>Container.Content(TVShows) | Container.Content(Movies) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
 				<itemlayout height="142" width="115">					
 					<control type="image">
 						<posx>0</posx>
