@@ -143,6 +143,7 @@
 						<onclick>-</onclick>
 					</item>
 					<include>ButtonExtraMenuParam</include>
+					<include>ButtonScriptHackParam</include>
 				</content>
 			</control>
 			<control type="image">
@@ -1719,6 +1720,7 @@
 					</control>
 				</control>
 				<include>ButtonExtra_Setup</include>
+				<include>ButtonScriptHack_Setup</include>
 				<control type="scrollbar" id="61">
 					<posx>1060</posx>
 					<posy>60</posy>

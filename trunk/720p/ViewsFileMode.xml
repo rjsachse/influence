@@ -150,6 +150,7 @@
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
 					<bordersize>8</bordersize>
+					<visible>!ListItem.IsFolder</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -158,9 +159,10 @@
 					<height>540</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-                                        <texture background="true">special://skin/Extra/foldericons/$INFO[ListItem.Label].png</texture>
+					<texture background="true" fallback="DefaultFolder.png">special://skin/Extra/foldericons/French/$INFO[ListItem.Label].png</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
 					<bordersize>8</bordersize>
+					<visible>ListItem.IsFolder</visible>
 				</control>
 			</control>
 		</control>
@@ -192,14 +194,19 @@
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>5</bordersize>
 						<fadetime>100</fadetime>
-						<texture background="true">$INFO[Listitem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<visible>!ListItem.IsFolder</visible>
 					</control>
 					<control type="image">
-						<posx>50</posx>
-						<posy>60</posy>
-						<width>160</width>
-						<height>160</height>
-                                                <texture background="true">special://skin/Extra/foldericons/$INFO[ListItem.Label].png</texture>
+						<posx>1</posx>
+						<posy>0</posy>
+						<width>268</width>
+						<height>240</height>
+						<bordertexture border="5">button-nofocus.png</bordertexture>
+						<bordersize>5</bordersize>
+						<fadetime>100</fadetime>
+						<texture background="true" fallback="AppleLogo.png">special://skin/Extra/foldericons/French/$INFO[ListItem.Label].png</texture>
+						<visible>ListItem.IsFolder</visible>
 					</control>
 					<control type="label">
 						<posx>135</posx>
@@ -231,15 +238,19 @@
 						<bordertexture border="5">folder-focus.png</bordertexture>
 						<bordersize>5</bordersize>
 						<fadetime>100</fadetime>
-						<texture background="true">$INFO[Listitem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<visible>!ListItem.IsFolder</visible>
 					</control>
 					<control type="image">
-						<posx>50</posx>
-						<posy>60</posy>
-						<width>160</width>
-						<height>160</height>
-                                                <texture
-                                                    background="true">special://skin/Extra/foldericons/$INFO[ListItem.Label].png</texture>
+						<posx>1</posx>
+						<posy>0</posy>
+						<width>268</width>
+						<height>240</height>
+						<bordertexture border="5">folder-focus.png</bordertexture>
+						<bordersize>5</bordersize>
+						<fadetime>100</fadetime>
+						<texture background="true" fallback="AppleLogo.png">special://skin/Extra/foldericons/French/$INFO[ListItem.Label].png</texture>
+						<visible>ListItem.IsFolder</visible>
 					</control>
 					<control type="label">
 						<posx>135</posx>
@@ -307,14 +318,18 @@
 						<height>105</height>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>5</bordersize>
-						<texture background="true">$INFO[Listitem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<visible>!ListItem.IsFolder</visible>
 					</control>
 					<control type="image">
 						<posx>1</posx>
 						<posy>0</posy>
-						<width>63</width>
-						<height>63</height>
-                                                <texture background="true">special://skin/Extra/foldericons/IMAX.png</texture>
+						<width>538</width>
+						<height>105</height>
+						<bordertexture border="5">button-nofocus.png</bordertexture>
+						<bordersize>5</bordersize>
+						<texture background="true" fallback="AppleLogo.png">special://skin/Extra/foldericons/French/$INFO[ListItem.Label].png</texture>
+						<visible>ListItem.IsFolder</visible>
 					</control>
 					<control type="image">
 						<posx>500</posx>
@@ -334,13 +349,6 @@
 						<bordertexture border="5">folder-focus.png</bordertexture>
 						<bordersize>5</bordersize>
 						<texture background="true">$INFO[Listitem.Icon]</texture>
-					</control>
-					<control type="image">
-						<posx>1</posx>
-						<posy>0</posy>
-						<width>63</width>
-						<height>63</height>
-                                                <texture background="true">special://skin/Extra/foldericons/IMAX.png</texture>
 					</control>
 					<control type="image">
 						<posx>500</posx>

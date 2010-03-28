@@ -1064,6 +1064,15 @@
 						<label>20410</label>
 						<visible>!IsEmpty(ListItem.Trailer)</visible>
 					</control>
+					<control type="button" id="13">
+						<description>Home Theater Experience</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label>Theater</label>
+						<onclick>Dialog.Close(MovieInformation)</onclick>
+						<onclick>Playlist.Clear</onclick>
+						<onclick>RunScript(special://home/scripts/Home Theater Experience/default.py)</onclick>
+						<visible>!skin.HasSetting(ScriptHomeTheaterExp)</visible>
+					</control>
 				</control>
 			</control>
 		</control>
