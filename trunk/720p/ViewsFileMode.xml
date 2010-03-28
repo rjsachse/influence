@@ -159,7 +159,7 @@
 					<height>540</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture background="true" fallback="DefaultFolder.png">special://skin/Extra/foldericons/French/$INFO[ListItem.Label].png</texture>
+					<texture background="true" fallback="DefaultFolder.png">special://skin/Extra/foldericons/$INFO[ListItem.Label].png</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
 					<bordersize>8</bordersize>
 					<visible>ListItem.IsFolder</visible>
@@ -205,7 +205,7 @@
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>5</bordersize>
 						<fadetime>100</fadetime>
-						<texture background="true" fallback="AppleLogo.png">special://skin/Extra/foldericons/French/$INFO[ListItem.Label].png</texture>
+						<texture background="true" fallback="DefaultFolder.png">special://skin/Extra/foldericons/$INFO[ListItem.Label].png</texture>
 						<visible>ListItem.IsFolder</visible>
 					</control>
 					<control type="label">
@@ -249,7 +249,7 @@
 						<bordertexture border="5">folder-focus.png</bordertexture>
 						<bordersize>5</bordersize>
 						<fadetime>100</fadetime>
-						<texture background="true" fallback="AppleLogo.png">special://skin/Extra/foldericons/French/$INFO[ListItem.Label].png</texture>
+						<texture background="true" fallback="DefaultFolder.png">special://skin/Extra/foldericons/$INFO[ListItem.Label].png</texture>
 						<visible>ListItem.IsFolder</visible>
 					</control>
 					<control type="label">
@@ -328,7 +328,7 @@
 						<height>105</height>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>5</bordersize>
-						<texture background="true" fallback="AppleLogo.png">special://skin/Extra/foldericons/French/$INFO[ListItem.Label].png</texture>
+						<texture background="true" fallback="DefaultFolder.png">special://skin/Extra/foldericons/$INFO[ListItem.Label].png</texture>
 						<visible>ListItem.IsFolder</visible>
 					</control>
 					<control type="image">

@@ -33,6 +33,7 @@
 					<texturefocus>MenuItemFO.png</texturefocus>
 					<texturenofocus>MenuItemNF.png</texturenofocus>
 					<onclick>Skin.ToggleSetting(ScriptHomeTheaterExp)</onclick>
+					<selected>Skin.HasSetting(ScriptHomeTheaterExp)</selected>
 				</control>
 				<control type="radiobutton" id="6011">
 					<width>750</width>
@@ -47,6 +48,7 @@
 					<texturefocus>MenuItemFO.png</texturefocus>
 					<texturenofocus>MenuItemNF.png</texturenofocus>
 					<onclick>Skin.ToggleSetting(ScriptOpenSubtitles)</onclick>
+					<selected>Skin.HasSetting(ScriptOpenSubtitles)</selected>
 				</control>
 			</control>
 		</control>
