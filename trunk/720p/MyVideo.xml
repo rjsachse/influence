@@ -195,7 +195,7 @@
 				<posy>0</posy>
 				<width>846</width>
 				<height>720</height>
-				<texture>aHomeBlade.png</texture>
+				<texture>HomeBlade.png</texture>
 			</control>
 			<control type="image">
 				<description>LOGO</description>
