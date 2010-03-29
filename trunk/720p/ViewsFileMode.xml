@@ -195,7 +195,14 @@
 						<bordersize>5</bordersize>
 						<fadetime>100</fadetime>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<visible>!ListItem.IsFolder</visible>
+				                <visible>Container.Content(Movies) |
+                                                    Container.Content(Seasons) |
+                                                    Container.Content(TVShows) |
+                                                    Container.Content(Episodes) |
+                                                    Container.Content(Albums) |
+                                                    Container.Content(MusicVideos) |
+                                                    Container.Content(Artists) |
+                                                    Container.Content(Song) </visible>
 					</control>
 					<control type="image">
 						<posx>1</posx>
@@ -206,7 +213,14 @@
 						<bordersize>5</bordersize>
 						<fadetime>100</fadetime>
 						<texture background="true" fallback="DefaultFolder.png">special://skin/Extra/foldericons/$INFO[ListItem.Label].png</texture>
-						<visible>ListItem.IsFolder</visible>
+				                <visible>![Container.Content(Movies) |
+                                                    Container.Content(Seasons) |
+                                                    Container.Content(TVShows) |
+                                                    Container.Content(Episodes) |
+                                                    Container.Content(Albums) |
+                                                    Container.Content(MusicVideos) |
+                                                    Container.Content(Artists) |
+                                                    Container.Content(Song)]</visible>
 					</control>
 					<control type="label">
 						<posx>135</posx>
