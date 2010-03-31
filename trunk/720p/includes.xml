@@ -11,6 +11,9 @@
 	<include file="ButtonExtra.xml" />
 	<include file="EnableScriptHack.xml" />
 	<include file="NewWeather.xml" />
+	<include file="Carousel.xml" />
+	<include file="CarouselMenu.xml" />
+	<include file="ClassicMenu.xml" />
 	<constant name="FanartCrossfadeTime">500</constant>
 	<constant name="IconCrossfadeTime">400</constant>
 
@@ -225,6 +228,18 @@
 		<textoffsetx>10</textoffsetx>
 		<textwidth>235</textwidth>
 		<aligny>center</aligny>
+		<font>font13boldcaps</font>
+		<texturefocus border="5">button-focus.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<pulseonselect>false</pulseonselect>
+	</include>
+	<include name="BHSubCarouselCommonValues">
+		<height>40</height>
+		<width>250</width>
+		<textoffsetx>10</textoffsetx>
+		<textwidth>235</textwidth>
+		<aligny>center</aligny>
+		<align>center</align>
 		<font>font13boldcaps</font>
 		<texturefocus border="5">button-focus.png</texturefocus>
 		<texturenofocus>-</texturenofocus>

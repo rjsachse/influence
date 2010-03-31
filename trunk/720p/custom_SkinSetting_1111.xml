@@ -1,4 +1,4 @@
-﻿<window id="1111">
+<window id="1111">
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<controls>
 		<include>CommonSettingsBackground</include>
@@ -359,6 +359,19 @@
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
+					</control>
+					<control type="radiobutton" id="201">
+						<description>enable carousel menu (by Frost)</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13bold</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>Enable carousel menu (by Frost)</label>
+						<onclick>Skin.ToggleSetting(HomeMenuCarousel)</onclick>
+						<selected>Skin.HasSetting(HomeMenuCarousel)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
 					<control type="radiobutton" id="202">
 						<description>enable video info</description>
