@@ -381,8 +381,12 @@
             </control>
         </control>
         <control type="group">
-            <include condition="Skin.HasSetting(HomeMenuCarousel)">SubMenuCarousel</include>
-            <include condition="!Skin.HasSetting(HomeMenuCarousel)">SubMenuClassic</include>
+            <!--
+            <include condition="Skin.HasSetting(HomeMenuCarousel) + !Skin.HasSetting(HomeMenuClassic) + !Skin.HasSetting(HomeMenuHorizontal)">SubMenuCarousel</include>
+            <include condition="!Skin.HasSetting(HomeMenuCarousel) + Skin.HasSetting(HomeMenuClassic) + !Skin.HasSetting(HomeMenuHorizontal)">SubMenuClassic</include>
+            <include condition="!Skin.HasSetting(HomeMenuCarousel) + !Skin.HasSetting(HomeMenuClassic) + Skin.HasSetting(HomeMenuHorizontal)">SubMenuHorizontal</include>
+            -->
+            <include>SubMenuClassic</include>
             <control type="button" id="8999">
                 <description>Run Recently added</description>
                 <posx>-20</posx>
@@ -410,8 +414,11 @@
                 <texturefocus>-</texturefocus>
                 <visible>!Skin.HasSetting(homepageHideRecentlyAdded)</visible>
             </control>
+            <!--
             <include condition="Skin.HasSetting(HomeMenuCarousel)">MenuCarousel</include>
             <include condition="!Skin.HasSetting(HomeMenuCarousel)">MenuClassic</include>
+            -->
+            <include>MenuClassic</include>
         </control>
         <control type="group">
             <posx>420</posx>

@@ -327,6 +327,93 @@
         </control>
         <include>ButtonExtra9017</include>
     </include>
+    <include name="MenuHorizontal">
+        <control type="wraplist" id="9000">
+            <posx>-235</posx>
+            <posy>570</posy>
+            <width>1515</width>
+            <height>100</height>
+            <onleft>9000</onleft>
+            <onright>9000</onright>
+            <onup>9001</onup>
+            <ondown>10</ondown>
+            <pagecontrol>-</pagecontrol>
+            <scrolltime>300</scrolltime>
+            <focusposition>2</focusposition>
+            <orientation>horizontal</orientation>
+            <animation effect="fade" start="0" end="100" time="200">Visible</animation>
+            <animation effect="fade" start="100" end="30" time="200" condition="Window.IsVisible(1113) | ControlGroup(9001).HasFocus | ControlGroup(10).HasFocus | Control.HasFocus(8000) | Control.HasFocus(8001)">conditional</animation>
+            <itemlayout height="100" width="350">
+                <control type="label">
+                    <posx>175</posx>
+                    <posy>21</posy>
+                    <width>350</width>
+                    <height>40</height>
+                    <font>font45caps_title</font>
+                    <textcolor>grey3</textcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <label>$INFO[ListItem.Label]</label>
+                </control>
+                <control type="label">
+                    <posx>175</posx>
+                    <posy>0</posy>
+                    <width>350</width>
+                    <height>40</height>
+                    <font>font45caps_title</font>
+                    <textcolor>grey3</textcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <label>$INFO[ListItem.Label]</label>
+                    <animation effect="fade" start="10" end="10" time="0" condition="true">Conditional</animation>
+                    <animation effect="rotatex" start="0" end="180" center="49,0" time="0" condition="true">Conditional</animation>
+                </control>
+            </itemlayout>
+            <focusedlayout height="100" width="350">
+                <control type="label">
+                    <posx>175</posx>
+                    <posy>21</posy>
+                    <width>350</width>
+                    <height>40</height>
+                    <font>font45caps_title</font>
+                    <textcolor>white</textcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <label>$INFO[ListItem.Label]</label>
+                </control>
+                <control type="label">
+                    <posx>175</posx>
+                    <posy>0</posy>
+                    <width>350</width>
+                    <height>40</height>
+                    <font>font45caps_title</font>
+                    <textcolor>grey3</textcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <label>$INFO[ListItem.Label]</label>
+                    <animation effect="fade" start="10" end="10" time="0" condition="true">Conditional</animation>
+                    <animation effect="rotatex" start="0" end="180" center="49,0" time="0" condition="true">Conditional</animation>
+                </control>
+            </focusedlayout>
+            <content>
+                <include>FLMenu</include>
+            </content>
+        </control>
+        <control type="image">
+            <posx>0</posx>
+            <posy>160r</posy>
+            <width>1280</width>
+            <height>70</height>
+            <texture>HomeBackHorizontal_top.png</texture>
+        </control>
+        <control type="image">
+            <posx>0</posx>
+            <posy>90r</posy>
+            <width>1280</width>
+            <height>90</height>
+            <texture>floor2.png</texture>
+        </control>
+    </include>
     <include name="MenuClassic">
         <control type="fixedlist" id="9000">
             <hitrect x="50" y="50" w="330" h="620" />
@@ -434,117 +521,269 @@
     </include>
 
     <include name="SubMenuClassic">
-            <animation effect="slide" end="-370,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
-            <animation effect="slide" start="-370,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
-            <control type="group">
-                <animation effect="slide" end="-228,0" time="300" tween="quadratic" easing="out">WindowClose</animation>
-                <control type="image">
-                    <posx>379</posx>
-                    <posy>0</posy>
-                    <width>1</width>
-                    <height>720</height>
-                    <texture>HomeBladeSub_Part1.png</texture>
-                    <animation effect="zoom" start="379,0,1,720" end="379,0,229,720" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus">Conditional</animation>
-                </control>
-                <control type="image">
-                    <posx>380</posx>
-                    <posy>0</posy>
-                    <width>12</width>
-                    <height>720</height>
-                    <texture>HomeBladeSub_Part2.png</texture>
-                    <animation effect="slide" end="228,0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus">Conditional</animation>
-                </control>
+        <animation effect="slide" end="-370,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
+        <animation effect="slide" start="-370,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
+        <control type="group">
+            <animation effect="slide" end="-228,0" time="300" tween="quadratic" easing="out">WindowClose</animation>
+            <control type="image">
+                <posx>379</posx>
+                <posy>0</posy>
+                <width>1</width>
+                <height>720</height>
+                <texture>HomeBladeSub_Part1.png</texture>
+                <animation effect="zoom" start="379,0,1,720" end="379,0,229,720" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus">Conditional</animation>
             </control>
-            <control type="group" id="9001">
-                <posx>170</posx>
-                <posy>240</posy>
-                <animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(9001).HasFocus">conditional</animation>
-                <animation effect="fade" start="0" end="100" delay="300" time="200" condition="ControlGroup(9001).HasFocus">conditional</animation>
-                <animation effect="fade" start="100" end="0" time="0" condition="ControlGroup(9001).HasFocus">WindowClose</animation>
-                <animation effect="slide" end="210,0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus">conditional</animation>
-                <animation effect="slide" end="0,-204" time="300" condition="Container(9000).Row(1)">conditional</animation>
-                <animation effect="slide" end="0,-102" time="300" condition="Container(9000).Row(2)">conditional</animation>
-                <animation effect="slide" end="0,102" time="300" condition="Container(9000).Row(4)">conditional</animation>
-                <animation effect="slide" end="0,204" time="300" condition="Container(9000).Row(5)">conditional</animation>
-                <control type="grouplist" id="9010">
-                    <posx>10</posx>
-                    <posy>0</posy>
-                    <width>240</width>
-                    <height>340</height>
-                    <align>center</align>
-                    <onleft>9000</onleft>
-                    <onright>Control.SetFocus(8000,0)</onright>
-                    <onup>9010</onup>
-                    <ondown>9010</ondown>
-                    <itemgap>0</itemgap>
-                    <include>SubMenu9010</include>
-                </control>
-                <control type="grouplist" id="9011">
-                    <posx>10</posx>
-                    <posy>0</posy>
-                    <width>240</width>
-                    <height>340</height>
-                    <align>center</align>
-                    <onleft>9000</onleft>
-                    <onright>9001</onright>
-                    <onup>9011</onup>
-                    <ondown>9011</ondown>
-                    <itemgap>0</itemgap>
-                    <include>SubMenu9011</include>
-                </control>
-                <control type="grouplist" id="9014">
-                    <posx>10</posx>
-                    <posy>0</posy>
-                    <width>240</width>
-                    <height>340</height>
-                    <align>center</align>
-                    <onleft>9000</onleft>
-                    <onright>9001</onright>
-                    <onup>9014</onup>
-                    <ondown>9014</ondown>
-                    <itemgap>0</itemgap>
-                    <include>SubMenu9014</include>
-                </control>
-                <control type="grouplist" id="9015">
-                    <posx>10</posx>
-                    <posy>0</posy>
-                    <width>240</width>
-                    <height>340</height>
-                    <align>center</align>
-                    <onleft>9000</onleft>
-                    <onright>9001</onright>
-                    <onup>9015</onup>
-                    <ondown>9015</ondown>
-                    <itemgap>0</itemgap>
-                    <include>SubMenu9015</include>
-                </control>
-                <control type="grouplist" id="9016">
-                    <posx>10</posx>
-                    <posy>0</posy>
-                    <width>240</width>
-                    <height>340</height>
-                    <align>center</align>
-                    <onleft>9000</onleft>
-                    <onright>Control.SetFocus(8000,0)</onright>
-                    <onup>9016</onup>
-                    <ondown>9016</ondown>
-                    <itemgap>0</itemgap>
-                    <include>SubMenu9016</include>
-                </control>
-                <control type="grouplist" id="9017">
-                    <posx>10</posx>
-                    <posy>0</posy>
-                    <width>240</width>
-                    <height>340</height>
-                    <align>center</align>
-                    <onleft>9000</onleft>
-                    <onright>Control.SetFocus(8001,0)</onright>
-                    <onup>9017</onup>
-                    <ondown>9017</ondown>
-                    <itemgap>0</itemgap>
-                    <include>SubMenu9017</include>
-                </control>
-                <include>ButtonExtraMenuSubCla</include>
+            <control type="image">
+                <posx>380</posx>
+                <posy>0</posy>
+                <width>12</width>
+                <height>720</height>
+                <texture>HomeBladeSub_Part2.png</texture>
+                <animation effect="slide" end="228,0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus">Conditional</animation>
             </control>
+        </control>
+        <control type="group" id="9001">
+            <posx>170</posx>
+            <posy>240</posy>
+            <animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(9001).HasFocus">conditional</animation>
+            <animation effect="fade" start="0" end="100" delay="300" time="200" condition="ControlGroup(9001).HasFocus">conditional</animation>
+            <animation effect="fade" start="100" end="0" time="0" condition="ControlGroup(9001).HasFocus">WindowClose</animation>
+            <animation effect="slide" end="210,0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus">conditional</animation>
+            <animation effect="slide" end="0,-204" time="300" condition="Container(9000).Row(1)">conditional</animation>
+            <animation effect="slide" end="0,-102" time="300" condition="Container(9000).Row(2)">conditional</animation>
+            <animation effect="slide" end="0,102" time="300" condition="Container(9000).Row(4)">conditional</animation>
+            <animation effect="slide" end="0,204" time="300" condition="Container(9000).Row(5)">conditional</animation>
+            <control type="grouplist" id="9010">
+                <posx>10</posx>
+                <posy>0</posy>
+                <width>240</width>
+                <height>340</height>
+                <align>center</align>
+                <onleft>9000</onleft>
+                <onright>Control.SetFocus(8000,0)</onright>
+                <onup>9010</onup>
+                <ondown>9010</ondown>
+                <itemgap>0</itemgap>
+                <include>SubMenu9010</include>
+            </control>
+            <control type="grouplist" id="9011">
+                <posx>10</posx>
+                <posy>0</posy>
+                <width>240</width>
+                <height>340</height>
+                <align>center</align>
+                <onleft>9000</onleft>
+                <onright>9001</onright>
+                <onup>9011</onup>
+                <ondown>9011</ondown>
+                <itemgap>0</itemgap>
+                <include>SubMenu9011</include>
+            </control>
+            <control type="grouplist" id="9014">
+                <posx>10</posx>
+                <posy>0</posy>
+                <width>240</width>
+                <height>340</height>
+                <align>center</align>
+                <onleft>9000</onleft>
+                <onright>9001</onright>
+                <onup>9014</onup>
+                <ondown>9014</ondown>
+                <itemgap>0</itemgap>
+                <include>SubMenu9014</include>
+            </control>
+            <control type="grouplist" id="9015">
+                <posx>10</posx>
+                <posy>0</posy>
+                <width>240</width>
+                <height>340</height>
+                <align>center</align>
+                <onleft>9000</onleft>
+                <onright>9001</onright>
+                <onup>9015</onup>
+                <ondown>9015</ondown>
+                <itemgap>0</itemgap>
+                <include>SubMenu9015</include>
+            </control>
+            <control type="grouplist" id="9016">
+                <posx>10</posx>
+                <posy>0</posy>
+                <width>240</width>
+                <height>340</height>
+                <align>center</align>
+                <onleft>9000</onleft>
+                <onright>Control.SetFocus(8000,0)</onright>
+                <onup>9016</onup>
+                <ondown>9016</ondown>
+                <itemgap>0</itemgap>
+                <include>SubMenu9016</include>
+            </control>
+            <control type="grouplist" id="9017">
+                <posx>10</posx>
+                <posy>0</posy>
+                <width>240</width>
+                <height>340</height>
+                <align>center</align>
+                <onleft>9000</onleft>
+                <onright>Control.SetFocus(8001,0)</onright>
+                <onup>9017</onup>
+                <ondown>9017</ondown>
+                <itemgap>0</itemgap>
+                <include>SubMenu9017</include>
+            </control>
+            <include>ButtonExtraMenuSubCla</include>
+        </control>
+    </include>
+    <include name="MenuCarousel">
+        <control type="wraplist" id="9000">
+            <posx>27</posx>
+            <posy>207</posy>
+            <width>666</width>
+            <height>368</height>
+            <onleft>9000</onleft>
+            <onright>9000</onright>
+            <onup>10</onup>
+            <ondown>9001</ondown>
+            <scrolltime>200</scrolltime>
+            <pagecontrol>-</pagecontrol>
+            <focusposition>0</focusposition>
+            <orientation>horizontal</orientation>
+            <itemlayout height="1" width="1" />
+            <focusedlayout height="368" width="666" />
+            <content>
+                <include>FLMenu</include>
+            </content>
+        </control>
+        <include>Carousel</include>
+    </include>
+
+    <include name="BSSubCarouselCommonGL">
+        <orientation>horizontal</orientation>
+        <posx>10</posx>
+        <posy>0</posy>
+        <width>1000</width>
+        <height>340</height>
+        <align>left</align>
+        <onup>9000</onup>
+        <itemgap>0</itemgap>
+    </include>
+    <include name="BSSubHorizontalCommonGL">
+        <orientation>horizontal</orientation>
+        <posx>175</posx>
+        <posy>21</posy>
+        <width>350</width>
+        <height>40</height>
+        <align>left</align>
+        <ondown>9000</ondown>
+    </include>
+    <include name="BHSubCarouselCommonValues">
+        <height>40</height>
+        <width>250</width>
+        <textoffsetx>10</textoffsetx>
+        <textwidth>235</textwidth>
+        <aligny>center</aligny>
+        <align>center</align>
+        <font>font13boldcaps</font>
+        <texturefocus border="5">button-Carfocus.png</texturefocus>
+        <texturenofocus>button-Carnofocus.png</texturenofocus>
+        <pulseonselect>false</pulseonselect>
+    </include>
+    <include name="SubMenuHorizontal">
+        <control type="group" id="9001">
+            <posx>0</posx>
+            <posy>550</posy>
+            <control type="grouplist" id="9010">
+                <include>BSSubHorizontalCommonGL</include>
+                <onup>Control.SetFocus(8000,0)</onup>
+                <onleft>9010</onleft>
+                <onright>9010</onright>
+                <include>SubMenu9010</include>
+            </control>
+            <control type="grouplist" id="9011">
+                <include>BSSubHorizontalCommonGL</include>
+                <onup>9001</onup>
+                <onleft>9011</onleft>
+                <onright>9011</onright>
+                <include>SubMenu9011</include>
+            </control>
+            <control type="grouplist" id="9014">
+                <include>BSSubHorizontalCommonGL</include>
+                <onup>9001</onup>
+                <onleft>9014</onleft>
+                <onright>9014</onright>
+                <include>SubMenu9014</include>
+            </control>
+            <control type="grouplist" id="9015">
+                <include>BSSubHorizontalCommonGL</include>
+                <onup>9001</onup>
+                <onleft>9015</onleft>
+                <onright>9015</onright>
+                <include>SubMenu9015</include>
+            </control>
+            <control type="grouplist" id="9016">
+                <include>BSSubHorizontalCommonGL</include>
+                <onup>Control.SetFocus(8000,0)</onup>
+                <onleft>9016</onleft>
+                <onright>9016</onright>
+                <include>SubMenu9016</include>
+            </control>
+            <control type="grouplist" id="9017">
+                <include>BSSubHorizontalCommonGL</include>
+                <onup>Control.SetFocus(8001,0)</onup>
+                <onleft>9017</onleft>
+                <onright>9017</onright>
+                <include>SubMenu9017</include>
+            </control>
+            <include>ButtonExtraMenuSubCar</include>
+        </control>
+    </include>
+    <include name="SubMenuCarousel">
+        <control type="group" id="9001">
+            <posx>0</posx>
+            <posy>600</posy>
+            <control type="grouplist" id="9010">
+                <include>BSSubCarouselCommonGL</include>
+                <ondown>Control.SetFocus(8000,0)</ondown>
+                <onleft>9010</onleft>
+                <onright>9010</onright>
+                <include>SubMenu9010</include>
+            </control>
+            <control type="grouplist" id="9011">
+                <include>BSSubCarouselCommonGL</include>
+                <ondown>9001</ondown>
+                <onleft>9011</onleft>
+                <onright>9011</onright>
+                <include>SubMenu9011</include>
+            </control>
+            <control type="grouplist" id="9014">
+                <include>BSSubCarouselCommonGL</include>
+                <ondown>9001</ondown>
+                <onleft>9014</onleft>
+                <onright>9014</onright>
+                <include>SubMenu9014</include>
+            </control>
+            <control type="grouplist" id="9015">
+                <include>BSSubCarouselCommonGL</include>
+                <ondown>9001</ondown>
+                <onleft>9015</onleft>
+                <onright>9015</onright>
+                <include>SubMenu9015</include>
+            </control>
+            <control type="grouplist" id="9016">
+                <include>BSSubCarouselCommonGL</include>
+                <ondown>Control.SetFocus(8000,0)</ondown>
+                <onleft>9016</onleft>
+                <onright>9016</onright>
+                <include>SubMenu9016</include>
+            </control>
+            <control type="grouplist" id="9017">
+                <include>BSSubCarouselCommonGL</include>
+                <ondown>Control.SetFocus(8001,0)</ondown>
+                <onleft>9017</onleft>
+                <onright>9017</onright>
+                <include>SubMenu9017</include>
+            </control>
+            <include>ButtonExtraMenuSubCar</include>
+        </control>
     </include>
 </includes>

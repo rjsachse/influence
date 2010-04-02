@@ -12,8 +12,7 @@
 	<include file="EnableScriptHack.xml" />
 	<include file="NewWeather.xml" />
 	<include file="Carousel.xml" />
-	<include file="CarouselMenu.xml" />
-	<include file="ClassicMenu.xml" />
+	<include file="Menu.xml" />
 	<constant name="FanartCrossfadeTime">500</constant>
 	<constant name="IconCrossfadeTime">400</constant>
 

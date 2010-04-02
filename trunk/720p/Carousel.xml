@@ -804,7 +804,327 @@
                 <colordiffuse>90ffffff</colordiffuse>
             </control>
         </control>
+
         <!-- END STATIC ICONS -->
         <!-- CAROUSEL-LIST -->
     </include>
+    <include name="HomeCube3D">
+        <animation effect="fade" time="500">Visible</animation>
+        <animation effect="fade" time="500">Hidden</animation>
+
+        <control type="group">
+            <posx>38</posx>
+            <posy>100</posy>
+            <camera x="360" y="64" />
+            <control type="group" id="3011">
+                <description>cube move next</description>
+                <visible>Container(9000).OnNext + !Container(9000).OnPrevious</visible>
+                <animation effect="rotatey" tween="linear" easing="inout" center="320,130" start="0" end="90" time="1000" acceleration="-1.3">Hidden</animation>
+                <control type="image">
+                    <description>cube move next back</description>
+                    <posx>194</posx>
+                    <posy>66</posy>
+                    <width>256</width>
+                    <height>256</height>
+                    <texture flipy="true">Carousel/black.png</texture>
+                    <texture fallback="Carousel/default.png">$INFO[Container(9000).Listitem(-2).label2]</texture>
+                    <bordertexture border="5">Carousel/black.png</bordertexture>
+                    <bordersize>5</bordersize>
+                    <aspectratio>stretch</aspectratio>
+                    <visible>true</visible>
+                    <animation effect="rotatex" center="194,128" start="0" end="-180" time="0" condition="true">Conditional</animation>
+                </control>
+                <control type="image">
+                    <description>cube move next left</description>
+                    <posx>-62</posx>
+                    <posy>66</posy>
+                    <width>256</width>
+                    <height>256</height>
+                    <texture>Carousel/black.png</texture>
+                    <texture fallback="Carousel/default.png">$INFO[Container(9000).Listitem(1).label2]</texture>
+                    <bordertexture border="5">Carousel/black.png</bordertexture>
+                    <bordersize>5</bordersize>
+                    <aspectratio>stretch</aspectratio>
+                    <animation effect="rotatey" center="194" start="0" end="90" time="0" condition="true">Conditional</animation>
+                </control>
+                <control type="image">
+                    <description>cube move next bottom</description>
+                    <posx>194</posx>
+                    <posy>322</posy>
+                    <width>256</width>
+                    <height>256</height>
+                    <texture>Carousel/black.png</texture>
+                    <texture fallback="Carousel/default.png">$INFO[Container(9000).Listitem(-3).label2]</texture>
+                    <bordertexture border="5">Carousel/black.png</bordertexture>
+                    <bordersize>10</bordersize>
+                    <aspectratio>stretch</aspectratio>
+                    <animation effect="rotatex" center="322" start="0" end="-90" time="0" condition="true">Conditional</animation>
+                </control>
+                <control type="image">
+                    <description>cube move next bottom shadow</description>
+                    <posx>194</posx>
+                    <posy>375</posy>
+                    <width>256</width>
+                    <height>256</height>
+                    <texture>Carousel/black.png</texture>
+                    <!--<texture diffuse="slot_diffuse2.png">Carousel/black.png</texture>-->
+                    <texture fallback="Carousel/default.png">$INFO[Container(9000).Listitem(-3).label2]</texture>
+                    <bordertexture border="5">Carousel/black.png</bordertexture>
+                    <bordersize>5</bordersize>
+                    <aspectratio>stretch</aspectratio>
+                    <animation effect="fade" start="35" end="35" time="0" condition="true">Conditional</animation>
+                    <animation effect="rotatex" center="375" start="0" end="-90" time="0" condition="true">Conditional</animation>
+                </control>
+                <control type="image">
+                    <description>cube move next top</description>
+                    <posx>194</posx>
+                    <posy>-190</posy>
+                    <width>256</width>
+                    <height>256</height>
+                    <texture>Carousel/black.png</texture>
+                    <texture fallback="Carousel/default.png">$INFO[Container(9000).Listitem(2).label2]</texture>
+                    <bordertexture border="5">Carousel/black.png</bordertexture>
+                    <bordersize>10</bordersize>
+                    <aspectratio>stretch</aspectratio>
+                    <animation effect="rotatex" center="66" start="0" end="90" time="0" condition="true">Conditional</animation>
+                </control>
+                <control type="image">
+                    <description>cube move next front</description>
+                    <posx>194</posx>
+                    <posy>66</posy>
+                    <width>256</width>
+                    <height>256</height>
+                    <texture>Carousel/black.png</texture>
+                    <texture fallback="Carousel/default.png">$INFO[Container(9000).Listitem(-1).label2]</texture>
+                    <bordertexture border="5">Carousel/black.png</bordertexture>
+                    <bordersize>5</bordersize>
+                    <aspectratio>stretch</aspectratio>
+                </control>
+                <control type="image">
+                    <description>cube move next right</description>
+                    <posx>450</posx>
+                    <posy>66</posy>
+                    <width>256</width>
+                    <height>256</height>
+                    <texture>Carousel/black.png</texture>
+                    <texture fallback="Carousel/default.png">$INFO[Container(9000).Listitem(0).label2]</texture>
+                    <bordertexture border="5">Carousel/black.png</bordertexture>
+                    <bordersize>5</bordersize>
+                    <aspectratio>stretch</aspectratio>
+                    <animation effect="rotatey" center="450" start="0" end="-90" time="0" condition="true">Conditional</animation>
+                </control>
+            </control>
+            <control type="group" id="3012">
+                <description>cube move previous</description>
+                <visible>Container(9000).OnPrevious + !Container(9000).OnNext</visible>
+                <animation effect="rotatey" tween="linear" easing="inout" center="320,130" start="0" end="-90" time="1000" acceleration="-1.3">Hidden</animation>
+                <control type="image">
+                    <description>cube move previous bottom</description>
+                    <posx>194</posx>
+                    <posy>322</posy>
+                    <width>256</width>
+                    <height>256</height>
+                    <texture>Carousel/black.png</texture>
+                    <texture fallback="Carousel/default.png">$INFO[Container(9000).Listitem(-3).label2]</texture>
+                    <bordertexture border="5">Carousel/black.png</bordertexture>
+                    <bordersize>10</bordersize>
+                    <aspectratio>stretch</aspectratio>
+                    <animation effect="rotatex" center="322" start="0" end="-90" time="0" condition="true">Conditional</animation>
+                </control>
+                <control type="image">
+                    <description>cube move previous back</description>
+                    <posx>194</posx>
+                    <posy>66</posy>
+                    <width>256</width>
+                    <height>256</height>
+                    <texture flipy="true">Carousel/black.png</texture>
+                    <texture fallback="Carousel/default.png">$INFO[Container(9000).Listitem(-2).label2]</texture>
+                    <bordertexture border="5">Carousel/black.png</bordertexture>
+                    <bordersize>5</bordersize>
+                    <aspectratio>stretch</aspectratio>
+                    <visible>true</visible>
+                    <animation effect="rotatex" center="194,128" start="0" end="-180" time="0" condition="true">Conditional</animation>
+                </control>
+                <control type="image">
+                    <description>cube move previous right</description>
+                    <posx>450</posx>
+                    <posy>66</posy>
+                    <width>256</width>
+                    <height>256</height>
+                    <texture>Carousel/black.png</texture>
+                    <texture fallback="Carousel/default.png">$INFO[Container(9000).Listitem(-1).label2]</texture>
+                    <bordertexture border="5">Carousel/black.png</bordertexture>
+                    <bordersize>5</bordersize>
+                    <aspectratio>stretch</aspectratio>
+                    <animation effect="rotatey" center="450" start="0" end="-90" time="0" condition="true">Conditional</animation>
+                </control>
+                <control type="image">
+                    <description>cube move previous top</description>
+                    <posx>194</posx>
+                    <posy>-190</posy>
+                    <width>256</width>
+                    <height>256</height>
+                    <texture>Carousel/black.png</texture>
+                    <texture fallback="Carousel/default.png">$INFO[Container(9000).Listitem(2).label2]</texture>
+                    <bordertexture border="5">Carousel/black.png</bordertexture>
+                    <bordersize>10</bordersize>
+                    <aspectratio>stretch</aspectratio>
+                    <animation effect="rotatex" center="66" start="0" end="90" time="0" condition="true">Conditional</animation>
+                </control>
+                <control type="image">
+                    <description>cube move previous bottom shadow</description>
+                    <posx>194</posx>
+                    <posy>375</posy>
+                    <width>256</width>
+                    <height>256</height>
+                    <texture>Carousel/black.png</texture>
+                    <texture fallback="Carousel/default.png">$INFO[Container(9000).Listitem(-3).label2]</texture>
+                    <bordertexture border="5">Carousel/black.png</bordertexture>
+                    <bordersize>5</bordersize>
+                    <aspectratio>stretch</aspectratio>
+                    <animation effect="fade" start="35" end="35" time="0" condition="true">Conditional</animation>
+                    <animation effect="rotatex" center="375" start="0" end="-90" time="0" condition="true">Conditional</animation>
+                </control>
+                <control type="image">
+                    <description>cube move previous front</description>
+                    <posx>194</posx>
+                    <posy>66</posy>
+                    <width>256</width>
+                    <height>256</height>
+                    <texture>Carousel/black.png</texture>
+                    <texture fallback="Carousel/default.png">$INFO[Container(9000).Listitem(1).label2]</texture>
+                    <bordertexture border="5">Carousel/black.png</bordertexture>
+                    <bordersize>5</bordersize>
+                    <aspectratio>stretch</aspectratio>
+                </control>
+                <control type="image">
+                    <description>cube move previous left</description>
+                    <posx>-62</posx>
+                    <posy>66</posy>
+                    <width>256</width>
+                    <height>256</height>
+                    <texture>Carousel/black.png</texture>
+                    <texture fallback="Carousel/default.png">$INFO[Container(9000).Listitem(0).label2]</texture>
+                    <bordertexture border="5">Carousel/black.png</bordertexture>
+                    <bordersize>5</bordersize>
+                    <aspectratio>stretch</aspectratio>
+                    <animation effect="rotatey" center="194" start="0" end="90" time="0" condition="true">Conditional</animation>
+                </control>
+            </control>
+            <control type="group">
+                <description>cube fixe</description>
+                <animation effect="rotatey" tween="linear" easing="inout" center="320,130" start="0" end="-720" time="40000" acceleration="-1.3" loop="true" reversible="false" condition="System.IdleTime(5)">Conditional</animation>
+                <visible>!Control.IsVisible(3011) + !Control.IsVisible(3012)</visible>
+                <control type="image">
+                    <description>cube fixe bottom</description>
+                    <posx>194</posx>
+                    <posy>322</posy>
+                    <width>256</width>
+                    <height>256</height>
+                    <texture fallback="Carousel/default.png">$INFO[Container(9000).Listitem(-3).label2]</texture>
+                    <bordertexture border="5">Carousel/black.png</bordertexture>
+                    <bordersize>10</bordersize>
+                    <aspectratio>stretch</aspectratio>
+                    <animation effect="rotatex" center="322" start="0" end="-90" time="0" condition="true">Conditional</animation>
+                </control>
+                <control type="image">
+                    <description>cube fixe back</description>
+                    <posx>194</posx>
+                    <posy>66</posy>
+                    <width>256</width>
+                    <height>256</height>
+                    <texture flipx="true" flipy="true">Carousel/black.png</texture>
+                    <texture fallback="Carousel/default.png">$INFO[Container(9000).Listitem(-2).label2]</texture>
+                    <bordertexture border="5">Carousel/black.png</bordertexture>
+                    <bordersize>5</bordersize>
+                    <aspectratio>stretch</aspectratio>
+                    <visible>true</visible>
+                    <animation effect="rotatex" center="194,128" start="0" end="-180" time="0" condition="true">Conditional</animation>
+                </control>
+                <control type="image">
+                    <description>cube fixe right</description>
+                    <posx>450</posx>
+                    <posy>66</posy>
+                    <width>256</width>
+                    <height>256</height>
+                    <texture>Carousel/black.png</texture>
+                    <texture fallback="Carousel/default.png">$INFO[Container(9000).Listitem(1).label2]</texture>
+                    <bordertexture border="5">Carousel/black.png</bordertexture>
+                    <bordersize>5</bordersize>
+                    <aspectratio>stretch</aspectratio>
+                    <animation effect="rotatey" center="450" start="0" end="-90" time="0" condition="true">Conditional</animation>
+                </control>
+                <control type="image">
+                    <description>cube fixe left</description>
+                    <posx>-62</posx>
+                    <posy>66</posy>
+                    <width>256</width>
+                    <height>256</height>
+                    <texture>Carousel/black.png</texture>
+                    <texture fallback="Carousel/default.png">$INFO[Container(9000).Listitem(-1).label2]</texture>
+                    <bordertexture border="5">Carousel/black.png</bordertexture>
+                    <bordersize>5</bordersize>
+                    <aspectratio>stretch</aspectratio>
+                    <animation effect="rotatey" center="194" start="0" end="90" time="0" condition="true">Conditional</animation>
+                </control>
+                <control type="image">
+                    <description>cube fixe top</description>
+                    <posx>194</posx>
+                    <posy>-190</posy>
+                    <width>256</width>
+                    <height>256</height>
+                    <texture>Carousel/black.png</texture>
+                    <texture fallback="Carousel/default.png">$INFO[Container(9000).Listitem(2).label2]</texture>
+                    <bordertexture border="5">Carousel/black.png</bordertexture>
+                    <bordersize>10</bordersize>
+                    <aspectratio>stretch</aspectratio>
+                    <animation effect="rotatex" center="66" start="0" end="90" time="0" condition="true">Conditional</animation>
+                </control>
+                <control type="image">
+                    <description>cube fixe bottom shadow</description>
+                    <posx>194</posx>
+                    <posy>375</posy>
+                    <width>256</width>
+                    <height>256</height>
+                    <texture>Carousel/black.png</texture>
+                    <texture fallback="Carousel/default.png">$INFO[Container(9000).Listitem(3).label2]</texture>
+                    <bordertexture border="5">Carousel/black.png</bordertexture>
+                    <bordersize>5</bordersize>
+                    <aspectratio>stretch</aspectratio>
+                    <animation effect="fade" start="35" end="35" time="0" condition="true">Conditional</animation>
+                    <animation effect="rotatex" center="375" start="0" end="-90" time="0" condition="true">Conditional</animation>
+                </control>
+                <control type="image">
+                    <description>cube fixe front</description>
+                    <posx>194</posx>
+                    <posy>66</posy>
+                    <width>256</width>
+                    <height>256</height>
+                    <texture>Carousel/black.png</texture>
+                    <texture fallback="Carousel/default.png">$INFO[Container(9000).Listitem(0).label2]</texture>
+                    <bordertexture border="5">Carousel/black.png</bordertexture>
+                    <bordersize>5</bordersize>
+                    <aspectratio>stretch</aspectratio>
+                </control>
+            </control>
+        </control>
+
+        <control type="label">
+            <description>cube label</description>
+            <posx>0</posx>
+            <posy>525</posy>
+            <width>720</width>
+            <height>16</height>
+            <font>special13</font>
+            <selectedcolor>FFe2ff43</selectedcolor>
+            <textcolor>FFFFFFFF</textcolor>
+            <shadowcolor>FF000000</shadowcolor>
+            <scroll>true</scroll>
+            <align>center</align>
+            <info>Container(9000).ListItem.Label</info>
+            <visible>Control.IsVisible(9000)</visible>
+            <animation effect="zoom" reversible="true" center="auto" start="100" end="175" time="200" condition="Control.HasFocus(9000)">conditional</animation>
+        </control>
+    </include>
+</includes>
 </includes>
