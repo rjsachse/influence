@@ -7,8 +7,7 @@
             <posy>0</posy>
             <width>1280</width>
             <height>720</height>
-            <include condition="Skin.HasSetting(HomeMenuCarousel)">BackgroundCarousel</include>
-            <include condition="!Skin.HasSetting(HomeMenuCarousel)">BackgroundClassic</include>
+            <imagepath background="true">$INFO[Container(9000).ListItem.icon]</imagepath>
             <timeperimage>8000</timeperimage>
             <randomize>true</randomize>
             <fadetime>1000</fadetime>

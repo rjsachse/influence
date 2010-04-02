@@ -542,13 +542,15 @@
 
     <include name="ButtonExtra9010">
         <control type="button" id="90108">
-            <include>ButtonHomeSubCommonValues</include>
+            <include condition="Skin.HasSetting(HomeMenuCarousel)">BHSubCarouselCommonValues</include>
+            <include condition="!Skin.HasSetting(HomeMenuCarousel)">ButtonHomeSubCommonValues</include>
             <label>$INFO[Skin.String(ButtonExtra90108Lab)]</label>
             <visible>Skin.HasSetting(ButtonExtra90108)</visible>
             <onclick>$INFO[Skin.String(ButtonExtra90108Todo)]</onclick>
         </control>
         <control type="button" id="90109">
-            <include>ButtonHomeSubCommonValues</include>
+            <include condition="Skin.HasSetting(HomeMenuCarousel)">BHSubCarouselCommonValues</include>
+            <include condition="!Skin.HasSetting(HomeMenuCarousel)">ButtonHomeSubCommonValues</include>
             <label>$INFO[Skin.String(ButtonExtra90109Lab)]</label>
             <visible>Skin.HasSetting(ButtonExtra90109)</visible>
             <onclick>$INFO[Skin.String(ButtonExtra90109Todo)]</onclick>
@@ -557,13 +559,15 @@
 
     <include name="ButtonExtra9011">
         <control type="button" id="90118">
-            <include>ButtonHomeSubCommonValues</include>
+            <include condition="Skin.HasSetting(HomeMenuCarousel)">BHSubCarouselCommonValues</include>
+            <include condition="!Skin.HasSetting(HomeMenuCarousel)">ButtonHomeSubCommonValues</include>
             <label>$INFO[Skin.String(ButtonExtra90118Lab)]</label>
             <visible>Skin.HasSetting(ButtonExtra90118)</visible>
             <onclick>$INFO[Skin.String(ButtonExtra90118Todo)]</onclick>
         </control>
         <control type="button" id="90119">
-            <include>ButtonHomeSubCommonValues</include>
+            <include condition="Skin.HasSetting(HomeMenuCarousel)">BHSubCarouselCommonValues</include>
+            <include condition="!Skin.HasSetting(HomeMenuCarousel)">ButtonHomeSubCommonValues</include>
             <label>$INFO[Skin.String(ButtonExtra90119Lab)]</label>
             <visible>Skin.HasSetting(ButtonExtra90119)</visible>
             <onclick>$INFO[Skin.String(ButtonExtra90119Todo)]</onclick>
@@ -572,13 +576,15 @@
 
     <include name="ButtonExtra9014">
         <control type="button" id="90148">
-            <include>ButtonHomeSubCommonValues</include>
+            <include condition="Skin.HasSetting(HomeMenuCarousel)">BHSubCarouselCommonValues</include>
+            <include condition="!Skin.HasSetting(HomeMenuCarousel)">ButtonHomeSubCommonValues</include>
             <label>$INFO[Skin.String(ButtonExtra90148Lab)]</label>
             <visible>Skin.HasSetting(ButtonExtra90148)</visible>
             <onclick>$INFO[Skin.String(ButtonExtra90148Todo)]</onclick>
         </control>
         <control type="button" id="90149">
-            <include>ButtonHomeSubCommonValues</include>
+            <include condition="Skin.HasSetting(HomeMenuCarousel)">BHSubCarouselCommonValues</include>
+            <include condition="!Skin.HasSetting(HomeMenuCarousel)">ButtonHomeSubCommonValues</include>
             <label>$INFO[Skin.String(ButtonExtra90149Lab)]</label>
             <visible>Skin.HasSetting(ButtonExtra90149)</visible>
             <onclick>$INFO[Skin.String(ButtonExtra90149Todo)]</onclick>
@@ -587,13 +593,15 @@
 
     <include name="ButtonExtra9016">
         <control type="button" id="90168">
-            <include>ButtonHomeSubCommonValues</include>
+            <include condition="Skin.HasSetting(HomeMenuCarousel)">BHSubCarouselCommonValues</include>
+            <include condition="!Skin.HasSetting(HomeMenuCarousel)">ButtonHomeSubCommonValues</include>
             <label>$INFO[Skin.String(ButtonExtra90168Lab)]</label>
             <visible>Skin.HasSetting(ButtonExtra90168)</visible>
             <onclick>$INFO[Skin.String(ButtonExtra90168Todo)]</onclick>
         </control>
         <control type="button" id="90169">
-            <include>ButtonHomeSubCommonValues</include>
+            <include condition="Skin.HasSetting(HomeMenuCarousel)">BHSubCarouselCommonValues</include>
+            <include condition="!Skin.HasSetting(HomeMenuCarousel)">ButtonHomeSubCommonValues</include>
             <label>$INFO[Skin.String(ButtonExtra90169Lab)]</label>
             <visible>Skin.HasSetting(ButtonExtra90169)</visible>
             <onclick>$INFO[Skin.String(ButtonExtra90169Todo)]</onclick>
@@ -601,13 +609,15 @@
     </include>
     <include name="ButtonExtra9017">
         <control type="button" id="90178">
-            <include>ButtonHomeSubCommonValues</include>
+            <include condition="Skin.HasSetting(HomeMenuCarousel)">BHSubCarouselCommonValues</include>
+            <include condition="!Skin.HasSetting(HomeMenuCarousel)">ButtonHomeSubCommonValues</include>
             <label>$INFO[Skin.String(ButtonExtra90178Lab)]</label>
             <visible>Skin.HasSetting(ButtonExtra90178)</visible>
             <onclick>$INFO[Skin.String(ButtonExtra90178Todo)]</onclick>
         </control>
         <control type="button" id="90179">
-            <include>ButtonHomeSubCommonValues</include>
+            <include condition="Skin.HasSetting(HomeMenuCarousel)">BHSubCarouselCommonValues</include>
+            <include condition="!Skin.HasSetting(HomeMenuCarousel)">ButtonHomeSubCommonValues</include>
             <label>$INFO[Skin.String(ButtonExtra90179Lab)]</label>
             <visible>Skin.HasSetting(ButtonExtra90179)</visible>
             <onclick>$INFO[Skin.String(ButtonExtra90179Todo)]</onclick>
