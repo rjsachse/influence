@@ -124,6 +124,25 @@
 					<height>200</height>
 					<aspectratio>keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<visible>!substring(ListItem.Icon,Default)</visible>
+				</control>
+				<control type="image">
+					<posx>250</posx>
+					<posy>465</posy>
+					<width>410</width>
+					<height>200</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true" fallback="DefaultFolder.png">special://skin/Extra/foldericons/$INFO[ListItem.Label].png</texture>
+					<visible>stringcompare(ListItem.Icon,DefaultFolder.png)</visible>
+				</control>
+				<control type="image">
+					<posx>250</posx>
+					<posy>465</posy>
+					<width>410</width>
+					<height>200</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true" fallback="DefaultFolder.png">special://skin/Extra/foldericons/$INFO[ListItem.Icon]</texture>
+					<visible>substring(ListItem.Icon,Default) + !stringcompare(ListItem.Icon,DefaultFolder.png)</visible>
 				</control>
 				<control type="panel" id="450">
 					<posx>20</posx>
@@ -150,6 +169,23 @@
 							<width>38</width>
 							<height>38</height>
 							<texture>$INFO[ListItem.Icon]</texture>
+							<visible>!substring(ListItem.Icon,Default)</visible>
+						</control>
+						<control type="image">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>38</width>
+							<height>38</height>
+							<texture background="true" fallback="DefaultFolder.png">special://skin/Extra/foldericons/$INFO[ListItem.Label].png</texture>
+							<visible>stringcompare(ListItem.Icon,DefaultFolder.png)</visible>
+						</control>
+						<control type="image">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>38</width>
+							<height>38</height>
+							<texture background="true" fallback="DefaultFolder.png">special://skin/Extra/foldericons/$INFO[ListItem.Icon]</texture>
+							<visible>substring(ListItem.Icon,Default) + !stringcompare(ListItem.Icon,DefaultFolder.png)</visible>
 						</control>
 						<control type="label">
 							<posx>55</posx>
@@ -186,6 +222,23 @@
 							<width>38</width>
 							<height>38</height>
 							<texture>$INFO[ListItem.Icon]</texture>
+							<visible>!substring(ListItem.Icon,Default)</visible>
+						</control>
+						<control type="image">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>38</width>
+							<height>38</height>
+							<texture background="true" fallback="DefaultFolder.png">special://skin/Extra/foldericons/$INFO[ListItem.Label].png</texture>
+							<visible>stringcompare(ListItem.Icon,DefaultFolder.png)</visible>
+						</control>
+						<control type="image">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>38</width>
+							<height>38</height>
+							<texture background="true" fallback="DefaultFolder.png">special://skin/Extra/foldericons/$INFO[ListItem.Icon]</texture>
+							<visible>substring(ListItem.Icon,Default) + !stringcompare(ListItem.Icon,DefaultFolder.png)</visible>
 						</control>
 						<control type="label">
 							<posx>55</posx>
@@ -225,6 +278,23 @@
 							<width>38</width>
 							<height>38</height>
 							<texture>$INFO[ListItem.Icon]</texture>
+							<visible>!substring(ListItem.Icon,Default)</visible>
+						</control>
+						<control type="image">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>38</width>
+							<height>38</height>
+							<texture background="true" fallback="DefaultFolder.png">special://skin/Extra/foldericons/$INFO[ListItem.Label].png</texture>
+							<visible>stringcompare(ListItem.Icon,DefaultFolder.png)</visible>
+						</control>
+						<control type="image">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>38</width>
+							<height>38</height>
+							<texture background="true" fallback="DefaultFolder.png">special://skin/Extra/foldericons/$INFO[ListItem.Icon]</texture>
+							<visible>substring(ListItem.Icon,Default) + !stringcompare(ListItem.Icon,DefaultFolder.png)</visible>
 						</control>
 						<control type="label">
 							<posx>55</posx>
@@ -261,6 +331,23 @@
 							<width>38</width>
 							<height>38</height>
 							<texture>$INFO[ListItem.Icon]</texture>
+							<visible>!substring(ListItem.Icon,Default)</visible>
+						</control>
+						<control type="image">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>38</width>
+							<height>38</height>
+							<texture background="true" fallback="DefaultFolder.png">special://skin/Extra/foldericons/$INFO[ListItem.Label].png</texture>
+							<visible>stringcompare(ListItem.Icon,DefaultFolder.png)</visible>
+						</control>
+						<control type="image">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>38</width>
+							<height>38</height>
+							<texture background="true" fallback="DefaultFolder.png">special://skin/Extra/foldericons/$INFO[ListItem.Icon]</texture>
+							<visible>substring(ListItem.Icon,Default) + !stringcompare(ListItem.Icon,DefaultFolder.png)</visible>
 						</control>
 						<control type="label">
 							<posx>55</posx>
