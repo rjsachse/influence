@@ -97,7 +97,7 @@
 						<label>-</label>
 						<texturefocus>OSDPrevTrackFO.png</texturefocus>
 						<texturenofocus>OSDPrevTrackNF.png</texturenofocus>
-						<onleft>712</onleft>
+						<onleft>713</onleft>
 						<onright>601</onright>
 						<onup>600</onup>
 						<ondown>600</ondown>
