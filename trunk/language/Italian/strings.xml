@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<strings>
+  <!-- Misc labels -->
+  <string id="31000">Cambia il tuo</string>
+  <string id="31001">Amabile</string>
+  <string id="31002">Odioso</string>
+  <string id="31003">Alimentazione</string>
+  <string id="31004">!ATTENDERE!</string>
+  <string id="31005">Nascondi INFO</string>
+
+  <string id="31007">Plugins</string>
+
+  <string id="31020">Ultime aggiunte</string>
+  <string id="31021">File Video</string>
+  <string id="31022">File Musicali</string>
+  <string id="31023">Eseguo</string>
+  <string id="31024">Pagina</string>
+  <string id="31025">Elementi</string>
+  <string id="31026">Opzioni varie</string>
+  <string id="31027">Località</string>
+ 
+  <!-- View Type labels -->
+  <string id="31028">Elenco Poster</string>
+  <string id="31029">Fanart</string>
+  <string id="31030">Lista Completa</string>
+  <string id="31031">Miniature</string>
+  <string id="31032">Elenco Immagini</string>
+
+  <!-- Extra labels -->
+  <string id="31040">In riprod.</string>
+
+  <string id="31042">RIPRODUCO</string>
+  <string id="31043">IN PAUSA</string>
+  <string id="31044">AVANZ.VELOCE</string>
+  <string id="31045">RIAVVOLGIMENTO</string>
+  <string id="31046">Proprietà Audio</string>
+  <string id="31047">Impost.Correnti</string>
+  <string id="31048">Impost.Visualizzazione</string>
+  <string id="31049">Fine a</string>
+
+
+  <!-- Playlist Editor labels -->
+  <string id="31055">Apri playlist</string>
+  <string id="31056">Salva playlist</string>
+  <string id="31057">Chiudi playlist</string>
+  <string id="31058">File musicali di sistema</string>
+  <string id="31059">Playlist attuale</string>
+  <string id="31060">Il video ha più parti. Seleziona la parte da riprodurre.</string>
+  
+  <!-- Skin Settings labels -->
+  <string id="31100"></string>
+  <string id="31101">Opzioni HomePage</string>
+  <string id="31102">Sfondo</string>
+  <string id="31103">Mostra "IN PAUSA" in presentazione immagini</string>
+  <string id="31104"></string>
+  <string id="31105">Mostra il titolo del media nello scanner</string>
+  <string id="31106">Opzioni varie</string>
+  <string id="31107"></string>
+  <string id="31108">Nascondi bottoni nella HomePage</string>
+  <string id="31109">Sfondi della HomePage</string>
+  <string id="31110">Cambia sfondo della HomePage</string>
+  <string id="31111">Nascondi</string>
+  <string id="31112">Opzioni</string>
+  <string id="31113">Imm.Singola</string>
+  <string id="31114">Cartella Imm.</string>
+  <string id="31115">Personalizza</string>
+  <string id="31116">Addon Scripts</string>
+  <string id="31117">Mostra i video aggiunti recentemente</string>
+  <string id="31118">Sottomenù della HomePage</string>
+  <string id="31119">Abilita Script personalizzato</string>
+  <string id="31120">Testo del bottone</string>
+  <string id="31121">Percorso allo Script</string>
+  <string id="31122">Pagina Meteo</string>
+  <string id="31123">Usa i "Poster" invece dei "Banner" per le serie</string>
+  <string id="31124">Mostra lo sfondo in "RIPRODUCO" (Video)</string>
+  <string id="31125">Mostra lo sfondo in "RIPRODUCO"</string>
+
+  <string id="31126">Abilita le Lyrics</string>
+  <string id="31127">Percorso al path dello Script</string>
+  <string id="31128">XBMC Lyrics</string>
+
+  <!-- Script labels -->
+  <string id="31200">Collegamento</string>
+  <string id="31201">Categorie</string>
+  <string id="31202">Mostra il cast</string>
+  <string id="31203">Scegli la canzone</string>
+  <string id="31204">Collegamenti alla sezione</string>
+  <string id="31205">Sorgente delle Lyrics</string>
+
+  <!-- The Weather Channel Script labels -->
+  <string id="31250">Radar &amp; Forecast</string>
+  <string id="31251">Forecast</string>
+  <string id="31252">TWC Script</string>
+
+  <!-- Extra labels -->
+  <string id="31300">Temperatura attuale</string>
+  <string id="31301">Ultimo aggiornamento</string>
+  <string id="31302">Menu</string>
+  <string id="31303"></string>
+  <string id="31304">Immagine</string>
+  <string id="31305">Nessun disco rilevato</string>
+  <string id="31306">Espelli</string>
+  <string id="31307">Nascondi Fanart</string>
+  <string id="31308">Dettagli del film</string>
+  <string id="31309">Memoria usata:</string>
+  <string id="31310">Traccia numero</string>
+  <string id="31311">IMMAGINE FANART[CR][CR]NON DISPONIBILE[CR][CR] PREMERE PER SELEZIONARLA</string>
+  <string id="31312">Scraper attuale</string>
+  <string id="31313">Seleziona uno Scraper</string>
+  <string id="31314">Opzioni per la scansione del contenuto</string>
+  <string id="31315">Base</string>
+  <string id="31316"></string>
+  <string id="31317">Imposta percorso delle Fanart</string>
+  <string id="31318">Fanart piccole</string>
+  <string id="31319">Seleziona il profilo</string>
+  <string id="31320">Ultimo accesso il</string>
+  <string id="31321">Karaoke Song Selector</string>
+  <string id="31322">Aired</string>
+  <string id="31323">Ultimi film</string>
+  <string id="31324">Ultimi episodi</string>
+  <string id="31325">Opzioni Playlist</string>
+  <string id="31326">Creato</string>
+  <string id="31327">Risoluzione</string>
+  <string id="31328">Aggiunti recentemente</string>
+  <string id="31329">TIMER IMPOSTATO!  - IL SISTEMA SI CHIUDERA' TRA</string>
+
+  <!-- Description Labels  -->
+  <string id="31400">CAMBIA L'ASPETTO[CR][CR]Cambia la skin · Imposta la lingua e la regione · Cambia la visualizzazione dei file[CR]Scegli un salvaschermo</string>
+  <string id="31401">CONFIGURA LE OPZIONI VIDEO[CR][CR]Gestisci la libreria video · Scegli le impostazioni per la riproduzione · Cambia la modalità di visualizzazione · Scegli i caratteri per i sottotitoli</string>
+  <string id="31402">CONFIGURA LE OPZIONI MUSICALI[CR][CR]Gestisci la libreria audio · Scegli le impostazioni per la riproduzione · Cambia la modalità di visualizzazione · Scegli a chi inviare i dati · Imposta le opzioni per il karaoke</string>
+  <string id="31403">CONFIGURA LE OPZIONI PER LE IMMAGINI[CR][CR]Scegli come vedere le immagini · Configura la presentazione immagini</string>
+  <string id="31404">CONFIGURA IL METEO[CR][CR]Scegli le tre città che vuoi tenere sotto osservazione meteo</string>
+  <string id="31405">CONFIGURA LE IMPOSTAZIONI DI RETE[CR][CR]Scegli se controllare XBMC via UPnP e HTTP · Configura la condivisione dei file[CR]Configura le condivisioni di rete</string>
+  <string id="31406">CONFIGURA IL SISTEMA[CR][CR]Imposta e calibra il monitor · Scegli il tipo di output audio · Imposta il controllo remoto · Imposta il risparmio energetico · Abilita il file di debug[CR]Configura il master lock</string>
+  <string id="31407">CONFIGURA LE IMPOSTAZIONI DELLA SKIN[CR][CR]Configura Influence · Aggiungi o rimuovi elementi nella pagina iniziale[CR]Cambia gli sfondi della skin</string>
+  
+  <string id="31420">XBMC non rileva nessun disco.[CR][CR]Prego inserirne uno e premere RIPROVA o CANCELLA</string>
+  <string id="31421">Seleziona un profilo utente[CR]per accedere e continuare...</string>
+  
+  <!-- Influence Label -->
+  <string id="31500">Imposta menu </string>
+  <string id="31501">Etichetta</string>
+  <string id="31502">Azione</string>
+  <string id="31503">Attiva i sotto-menu</string>
+  <string id="31504">MENU EXTRA</string>
+  <string id="31505">Attiva i menu</string>
+  <string id="31506">Attiva i sotto-menu</string>
+  <string id="31550">Genere</string>
+  <string id="31551">Carica o ricarica il genere</string>
+  <string id="31560">Abilita modalità Kiosco(disab.menu a scorrimento)</string>
+  <string id="31561">Regista:</string>
+  <string id="31562">Tempo:</string>
+  <string id="31563">Anno:</string>
+  <string id="31564">Scritto da:</string>
+  <string id="31565">Voto IMDB:</string>
+
+</strings>
