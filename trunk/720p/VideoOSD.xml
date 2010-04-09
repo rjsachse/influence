@@ -67,10 +67,24 @@
 					<texturefocus>OSDSubtitlesOF.png</texturefocus>
 					<texturenofocus>OSDSubtitlesNF.png</texturenofocus>
 					<onleft>702</onleft>
-					<onright>600</onright>
+					<onright>713</onright>
 					<onup>712</onup>
 					<ondown>712</ondown>
 					<onclick>RunScript(special://home/scripts/OpenSubtitles_OSD/default.py)</onclick>
+				</control>
+				<control type="button" id="713">
+					<posx>200</posx>
+					<posy>2</posy>
+					<width>45</width>
+					<height>45</height>
+					<label>-</label>
+					<texturefocus>OSDMovieSeekTimeOF.png</texturefocus>
+					<texturenofocus>OSDMovieSeekTimeNF.png</texturenofocus>
+					<onleft>712</onleft>
+					<onright>600</onright>
+					<onup>713</onup>
+					<ondown>713</ondown>
+                                        <onclick>XBMC.RunScript(special://skin/scripts/movie_seek_time.py)</onclick>
 				</control>
 				<control type="group" id="100">
 					<posx>300</posx>
