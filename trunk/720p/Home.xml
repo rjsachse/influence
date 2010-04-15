@@ -414,7 +414,7 @@
             </control>
             <include condition="Skin.HasSetting(HomeCarousel)">MenuCarousel</include>
             <include condition="Skin.HasSetting(HomeHorizontal)">MenuHorizontal</include>
-            <include condition="Skin.HasSetting(HomeVertical) | !Skin.HasSetting(HomeMenuChoice)">MenuClassic</include>
+            <include condition="Skin.HasSetting(HomeVertical) | !Skin.HasSetting(HomeMenuChoice)">MenuVertical</include>
             <include condition="Skin.HasSetting(HomeCube)">MenuCube</include>
         </control>
         <control type="group">

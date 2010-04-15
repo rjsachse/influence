@@ -400,7 +400,7 @@
             </content>
         </control>
     </include>
-    <include name="MenuClassic">
+    <include name="MenuVertical">
         <control type="fixedlist" id="9000">
             <hitrect x="50" y="50" w="330" h="620" />
             <posx>-20</posx>
@@ -506,7 +506,7 @@
         </control>
     </include>
 
-    <include name="SubMenuClassic">
+    <include name="SubMenuVertical">
         <animation effect="slide" end="-370,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
         <animation effect="slide" start="-370,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
         <control type="group">
