@@ -16,9 +16,6 @@
 			<visible>!Window.IsVisible(script-twc-main.xml)</visible>
 			<include>VisibleFadeEffect</include>
 			<control type="group">
-				<include>CurrentWeather</include>
-			</control> 
-			<control type="group">
 				<posx>100</posx>
 				<posy>50</posy>
 				<control type="image">
@@ -42,7 +39,7 @@
 					<posy>18</posy>
 					<width>460</width>
 					<height>30</height>
-					<font>font13boldcaps_title</font>
+					<font>font13caps_title</font>
 					<label>10508</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -59,7 +56,7 @@
 						<posy>0</posy>
 						<width>460</width>
 						<height>35</height>
-						<font>font13boldcaps_title</font>
+						<font>font13caps_title</font>
 						<info>Window.Property(Day0.Title)</info>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -80,7 +77,7 @@
 						<posx>40</posx>
 						<posy>50</posy>
 						<height>20</height>
-						<font>font13bold</font>
+						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$LOCALIZE[393] :</label>
@@ -94,7 +91,7 @@
 						<posy>50</posy>
 						<height>20</height>
 						<label>$INFO[Window.Property(Day0.HighTemp)]$INFO[System.TemperatureUnits]</label>
-						<font>font13bold</font>
+						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>white</textcolor>
@@ -106,7 +103,7 @@
 						<posx>220</posx>
 						<posy>50</posy>
 						<height>20</height>
-						<font>font13bold</font>
+						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$LOCALIZE[391] :</label>
@@ -120,7 +117,7 @@
 						<posy>50</posy>
 						<height>20</height>
 						<label>$INFO[Window.Property(Day0.LowTemp)]$INFO[System.TemperatureUnits]</label>
-						<font>font13bold</font>
+						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>white</textcolor>
@@ -134,7 +131,7 @@
 						<width>320</width>
 						<height>20</height>
 						<info>Window.Property(Day0.Outlook)</info>
-						<font>font13bold</font>
+						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>white</textcolor>
@@ -158,7 +155,7 @@
 						<posy>0</posy>
 						<width>460</width>
 						<height>35</height>
-						<font>font13boldcaps_title</font>
+						<font>font13caps_title</font>
 						<info>Window.Property(Day1.Title)</info>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -179,7 +176,7 @@
 						<posx>40</posx>
 						<posy>50</posy>
 						<height>20</height>
-						<font>font13bold</font>
+						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$LOCALIZE[393] :</label>
@@ -193,7 +190,7 @@
 						<posy>50</posy>
 						<height>20</height>
 						<label>$INFO[Window.Property(Day1.HighTemp)]$INFO[System.TemperatureUnits]</label>
-						<font>font13bold</font>
+						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>white</textcolor>
@@ -205,7 +202,7 @@
 						<posx>220</posx>
 						<posy>50</posy>
 						<height>20</height>
-						<font>font13bold</font>
+						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$LOCALIZE[391] :</label>
@@ -219,7 +216,7 @@
 						<posy>50</posy>
 						<height>20</height>
 						<label>$INFO[Window.Property(Day1.LowTemp)]$INFO[System.TemperatureUnits]</label>
-						<font>font13bold</font>
+						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>white</textcolor>
@@ -233,7 +230,7 @@
 						<width>320</width>
 						<height>20</height>
 						<info>Window.Property(Day1.Outlook)</info>
-						<font>font13bold</font>
+						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>white</textcolor>
@@ -257,7 +254,7 @@
 						<posy>0</posy>
 						<width>460</width>
 						<height>35</height>
-						<font>font13boldcaps_title</font>
+						<font>font13caps_title</font>
 						<info>Window.Property(Day2.Title)</info>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -278,7 +275,7 @@
 						<posx>40</posx>
 						<posy>50</posy>
 						<height>20</height>
-						<font>font13bold</font>
+						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$LOCALIZE[393] :</label>
@@ -292,7 +289,7 @@
 						<posy>50</posy>
 						<height>20</height>
 						<label>$INFO[Window.Property(Day2.HighTemp)]$INFO[System.TemperatureUnits]</label>
-						<font>font13bold</font>
+						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>white</textcolor>
@@ -304,7 +301,7 @@
 						<posx>220</posx>
 						<posy>50</posy>
 						<height>20</height>
-						<font>font13bold</font>
+						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$LOCALIZE[391] :</label>
@@ -318,7 +315,7 @@
 						<posy>50</posy>
 						<height>20</height>
 						<label>$INFO[Window.Property(Day2.LowTemp)]$INFO[System.TemperatureUnits]</label>
-						<font>font13bold</font>
+						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>white</textcolor>
@@ -332,7 +329,7 @@
 						<width>320</width>
 						<height>20</height>
 						<info>Window.Property(Day2.Outlook)</info>
-						<font>font13bold</font>
+						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<shadowcolor>black</shadowcolor>
@@ -356,7 +353,7 @@
 						<posy>0</posy>
 						<width>460</width>
 						<height>35</height>
-						<font>font13boldcaps_title</font>
+						<font>font13caps_title</font>
 						<info>Window.Property(Day3.Title)</info>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -377,7 +374,7 @@
 						<posx>40</posx>
 						<posy>50</posy>
 						<height>20</height>
-						<font>font13bold</font>
+						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$LOCALIZE[393] :</label>
@@ -391,7 +388,7 @@
 						<posy>50</posy>
 						<height>20</height>
 						<label>$INFO[Window.Property(Day3.HighTemp)]$INFO[System.TemperatureUnits]</label>
-						<font>font13bold</font>
+						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>white</textcolor>
@@ -403,7 +400,7 @@
 						<posx>220</posx>
 						<posy>50</posy>
 						<height>20</height>
-						<font>font13bold</font>
+						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$LOCALIZE[391] :</label>
@@ -417,7 +414,7 @@
 						<posy>50</posy>
 						<height>20</height>
 						<label>$INFO[Window.Property(Day3.LowTemp)]$INFO[System.TemperatureUnits]</label>
-						<font>font13bold</font>
+						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>white</textcolor>
@@ -431,7 +428,7 @@
 						<width>320</width>
 						<height>20</height>
 						<info>Window.Property(Day3.Outlook)</info>
-						<font>font13bold</font>
+						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>white</textcolor>
@@ -439,8 +436,10 @@
 					</control>
 				</control>
 			</control>
+			<control type="group">
+                        <include>CurrentWeather</include>
+			</control>
 		</control>
-
 		<control type="group">
 			<animation effect="slide" start="0,0" end="250,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="-250,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus">WindowClose</animation>
@@ -541,7 +540,7 @@
 				<width>220</width>
 				<height>80</height>
 				<aspectratio>keep</aspectratio>
-				<texture>Influence_Logo.png</texture>
+				<texture>Confluence_Logo.png</texture>
 			</control>
 			<control type="group" id="9000">
 				<posx>-250</posx>
@@ -565,7 +564,7 @@
 					<posy>0</posy>
 					<height>40</height>
 					<width>270</width>
-					<font>font13boldcaps</font>
+					<font>font13caps</font>
 					<label>31027</label>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>

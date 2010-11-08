@@ -29,7 +29,7 @@
 				<width>220</width>
 				<height>80</height>
 				<aspectratio>keep</aspectratio>
-				<texture>Influence_Logo.png</texture>
+				<texture>Confluence_Logo.png</texture>
 			</control>
 			<control type="list" id="9000">
 				<posx>10</posx>
@@ -199,7 +199,7 @@
 				<posy>520</posy>
 				<width>740</width>
 				<height>100</height>
-				<font>font12bold</font>
+				<font>font12</font>
 				<label>$INFO[Container(9000).ListItem.Label2]</label>
 				<align>left</align>
 				<textcolor>white</textcolor>

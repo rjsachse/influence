@@ -69,7 +69,7 @@
 					<posy>390</posy>
 					<width>430</width>
 					<height>300</height>
-					<font>font13bold</font>
+					<font>font13</font>
 					<info>Container(503).ListItem.Label2</info>
 				</control>
 				<!-- ** Required ** Do not change <id> or <type> -->
@@ -97,7 +97,7 @@
 							<posy>0</posy>
 							<width>410</width>
 							<height>35</height>
-							<font>font13bold</font>
+							<font>font13</font>
 							<align>left</align>
 							<aligny>center</aligny>
 							<selectedcolor>selected</selectedcolor>
@@ -126,7 +126,7 @@
 							<posy>0</posy>
 							<width>410</width>
 							<height>35</height>
-							<font>font13bold</font>
+							<font>font13</font>
 							<align>left</align>
 							<aligny>center</aligny>
 							<selectedcolor>selected</selectedcolor>
@@ -172,7 +172,7 @@
 							<posy>0</posy>
 							<width>410</width>
 							<height>35</height>
-							<font>font13bold</font>
+							<font>font13</font>
 							<align>left</align>
 							<aligny>center</aligny>
 							<selectedcolor>selected</selectedcolor>
@@ -201,7 +201,7 @@
 							<posy>0</posy>
 							<width>410</width>
 							<height>35</height>
-							<font>font13bold</font>
+							<font>font13</font>
 							<align>left</align>
 							<aligny>center</aligny>
 							<selectedcolor>selected</selectedcolor>

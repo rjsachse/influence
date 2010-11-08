@@ -2,7 +2,6 @@
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<views>50,500,509,506,511,512,513</views>
-        <visible>!Skin.HasSetting(kiosk)</visible>
 	<controls>
 		<include>CommonMusicBackground</include>
 		<control type="group">
@@ -230,7 +229,7 @@
 				<width>220</width>
 				<height>80</height>
 				<aspectratio>keep</aspectratio>
-				<texture>Influence_Logo.png</texture>
+				<texture>Confluence_Logo.png</texture>
 			</control>
 			<control type="group" id="9000">
 				<posx>-250</posx>

@@ -1,29 +1,4 @@
 <includes>
-	<include name="HomeRecentlyAddedPanel">
-		<control type="image">
-			<description>background</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>250</width>
-			<height>300</height>
-			<texture border="10">ContentPanel.png</texture>
-		</control>
-		<control type="image">
-			<posx>20</posx>
-			<posy>10</posy>
-			<width>210</width>
-			<height>50</height>
-			<aspectratio>stretch</aspectratio>
-			<texture>GlassTitleBar.png</texture>
-		</control>
-		<control type="image">
-			<posx>0</posx>
-			<posy>30</posy>
-			<width>250</width>
-			<height>4</height>
-			<texture>separator.png</texture>
-		</control>
-	</include>
 	<include name="HomeRecentlyAddedInfo">
 		<control type="group">
 			<visible>!Window.IsVisible(Favourites)</visible>
@@ -34,20 +9,25 @@
 				<posx>275r</posx>
 				<posy>50</posy>
 				<visible>Library.HasContent(Movies)</visible>
-				<visible>[Container(9000).Hasfocus(2) +
-					!Skin.HasSetting(HomeMenuNoMoviesButton)] |
-					Container(9000).Hasfocus(10)</visible>
+				<visible>[Container(9000).Hasfocus(2) + !Skin.HasSetting(HomeMenuNoMoviesButton)] | Container(9000).Hasfocus(10)</visible>
 				<include>VisibleFadeEffect</include>
 				<animation effect="slide" time="0" start="0,0" end="-260,0" condition="[Library.HasContent(TVShows) + ![Skin.HasSetting(HomeMenuNoMoviesButton) | Skin.HasSetting(HomeMenuNoTVShowsButton)]]">Conditional</animation>
-				<include>HomeRecentlyAddedPanel</include>
+				<control type="image">
+					<description>background</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>300</height>
+					<texture border="10">RecentAddedNF.png</texture>
+				</control>
 				<control type="label">
 					<description>Title label</description>
 					<posx>10</posx>
-					<posy>10</posy>
+					<posy>5</posy>
 					<height>20</height>
 					<width>230</width>
 					<label>31323</label>
-					<align>center</align>
+					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12caps_title</font>
 					<textcolor>white</textcolor>
@@ -152,9 +132,7 @@
 						<item id="1">
 							<label>$INFO[Window.Property(LatestMovie.1.Title)]</label>
 							<label2></label2>
-							<!--<onclick>PlayMedia($INFO[Window.Property(LatestMovie.1.Path)])</onclick>
-							-->
-							<onclick>xbmc.activatewindow(movieinformation,11)</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(LatestMovie.1.Path)])</onclick>
 							<icon>-</icon>
 							<thumb>-</thumb>
 						</item>
@@ -185,166 +163,25 @@
 			<control type="group">
 				<posx>275r</posx>
 				<posy>50</posy>
-				<visible>Library.HasContent(Movies)</visible>
-				<visible>Container(9000).Hasfocus(12)</visible>
-				<include>VisibleFadeEffect</include>
-				<animation effect="slide" time="0" start="0,0" end="-260,0" condition="[Library.HasContent(TVShows) + ![Skin.HasSetting(HomeMenuNoMoviesButton) | Skin.HasSetting(HomeMenuNoTVShowsButton)]]">Conditional</animation>
-				<include>HomeRecentlyAddedPanel</include>
-				<control type="label">
-					<description>Title label</description>
-					<posx>10</posx>
-					<posy>10</posy>
-					<height>20</height>
-					<width>230</width>
-					<label>LATEST GENRE</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>font12caps_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-				<control type="image">
-					<description>Main Icon -3</description>
-					<posx>165</posx>
-					<posy>60</posy>
-					<width>120</width>
-					<height>110</height>
-					<aspectratio align="left">keep</aspectratio>
-					<texture background="true">$INFO[Window.Property(LatestGenreMovie.4.Thumb)]</texture>
-					<bordertexture border="8">ThumbShadow.png</bordertexture>
-					<bordersize>8</bordersize>
-				</control>
-				<control type="image">
-					<description>Main Icon -2</description>
-					<posx>120</posx>
-					<posy>50</posy>
-					<width>120</width>
-					<height>130</height>
-					<aspectratio align="left">keep</aspectratio>
-					<texture background="true">$INFO[Window.Property(LatestGenreMovie.3.Thumb)]</texture>
-					<bordertexture border="8">ThumbShadow.png</bordertexture>
-					<bordersize>8</bordersize>
-				</control>
-				<control type="image">
-					<description>Main Icon -1</description>
-					<posx>70</posx>
-					<posy>40</posy>
-					<width>120</width>
-					<height>150</height>
-					<aspectratio align="left">keep</aspectratio>
-					<texture background="true">$INFO[Window.Property(LatestGenreMovie.2.Thumb)]</texture>
-					<bordertexture border="8">ThumbShadow.png</bordertexture>
-					<bordersize>8</bordersize>
-				</control>
-				<control type="image">
-					<description>Main Icon</description>
-					<posx>10</posx>
-					<posy>25</posy>
-					<width>120</width>
-					<height>180</height>
-					<aspectratio align="left">keep</aspectratio>
-					<texture background="true">$INFO[Window.Property(LatestGenreMovie.1.Thumb)]</texture>
-					<bordertexture border="8">ThumbShadow.png</bordertexture>
-					<bordersize>8</bordersize>
-				</control>
-				<control type="list" id="8002">
-					<posx>0</posx>
-					<posy>200</posy>
-					<width>250</width>
-					<height>92</height>
-					<onleft>9000</onleft>
-					<onright>8001</onright>
-					<onup>8002</onup>
-					<ondown>8002</ondown>
-					<viewtype label="535">list</viewtype>
-					<pagecontrol>-</pagecontrol>
-					<scrolltime>0</scrolltime>
-					<itemlayout height="23" width="230">
-						<control type="label">
-							<posx>10</posx>
-							<posy>0</posy>
-							<width>230</width>
-							<height>23</height>
-							<font>font12caps</font>
-							<textcolor>white</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<selectedcolor>selected</selectedcolor>
-							<align>left</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-					</itemlayout>
-					<focusedlayout height="23" width="230">
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>250</width>
-							<height>23</height>
-							<texture border="0,2,0,2">MenuItemFO.png</texture>
-							<visible>Control.HasFocus(8002)</visible>
-							<include>VisibleFadeEffect</include>
-						</control>
-						<control type="label">
-							<posx>10</posx>
-							<posy>0</posy>
-							<width>230</width>
-							<height>23</height>
-							<font>font12caps</font>
-							<textcolor>white</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<selectedcolor>selected</selectedcolor>
-							<align>left</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-					</focusedlayout>
-					<content>
-						<item id="1">
-							<label>$INFO[Window.Property(LatestGenreMovie.1.Title)]</label>
-							<label2></label2>
-							<onclick>PlayMedia($INFO[Window.Property(LatestGenreMovie.1.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>-</thumb>
-						</item>
-						<item id="2">
-							<label>$INFO[Window.Property(LatestGenreMovie.2.Title)]</label>
-							<label2></label2>
-							<onclick>PlayMedia($INFO[Window.Property(LatestGenreMovie.2.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>-</thumb>
-						</item>
-						<item id="3">
-							<label>$INFO[Window.Property(LatestGenreMovie.3.Title)]</label>
-							<label2></label2>
-							<onclick>PlayMedia($INFO[Window.Property(LatestGenreMovie.3.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>-</thumb>
-						</item>
-						<item id="4">
-							<label>$INFO[Window.Property(LatestGenreMovie.4.Title)]</label>
-							<label2></label2>
-							<onclick>PlayMedia($INFO[Window.Property(LatestGenreMovie.4.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>-</thumb>
-						</item>
-					</content>
-				</control>
-			</control>
-			<control type="group">
-				<posx>275r</posx>
-				<posy>50</posy>
 				<visible>Library.HasContent(TVShows)</visible>
 				<visible>[Container(9000).Hasfocus(2) + !Skin.HasSetting(HomeMenuNoTVShowsButton)] | Container(9000).Hasfocus(11)</visible>
 				<include>VisibleFadeEffect</include>
-				<include>HomeRecentlyAddedPanel</include>
+				<control type="image">
+					<description>background</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>300</height>
+					<texture border="10">RecentAddedNF.png</texture>
+				</control>
 				<control type="label">
 					<description>Title label</description>
 					<posx>10</posx>
-					<posy>10</posy>
+					<posy>5</posy>
 					<height>20</height>
 					<width>230</width>
 					<label>31324</label>
-					<align>center</align>
+					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12caps_title</font>
 					<textcolor>white</textcolor>

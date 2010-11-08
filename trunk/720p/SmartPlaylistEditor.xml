@@ -50,7 +50,7 @@
 				<posy>18</posy>
 				<width>760</width>
 				<height>30</height>
-				<font>font13boldcaps_title</font>
+				<font>font13caps_title</font>
 				<label>$LOCALIZE[21432]</label>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -64,7 +64,7 @@
 				<width>760</width>
 				<height>40</height>
 				<label>467</label>
-				<font>font13bold</font>
+				<font>font13</font>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onright>22</onright>
@@ -90,7 +90,7 @@
 				<height>40</height>
 				<textoffsetx>10</textoffsetx>
 				<textwidth>750</textwidth>
-				<font>font13bold</font>
+				<font>font13</font>
 				<align>center</align>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
@@ -137,7 +137,7 @@
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
 						<selectedcolor>selected</selectedcolor>
-						<font>font13bold</font>
+						<font>font13</font>
 					</control>
 				</itemlayout>
 				<focusedlayout width="560" height="40">
@@ -165,7 +165,7 @@
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
 						<selectedcolor>selected</selectedcolor>
-						<font>font13bold</font>
+						<font>font13</font>
 					</control>
 				</focusedlayout>
 			</control>
@@ -239,7 +239,7 @@
 				<width>760</width>
 				<height>41</height>
 				<label>21424</label>
-				<font>font13bold</font>
+				<font>font13</font>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onright>16</onright>
@@ -254,7 +254,7 @@
 				<width>760</width>
 				<height>41</height>
 				<label>21427</label>
-				<font>font13bold</font>
+				<font>font13</font>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onright>17</onright>
@@ -269,7 +269,7 @@
 				<width>560</width>
 				<height>41</height>
 				<label>21429</label>
-				<font>font13bold</font>
+				<font>font13</font>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onright>19</onright>

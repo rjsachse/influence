@@ -239,7 +239,7 @@
 				<posy>27</posy>
 				<width>240</width>
 				<height>20</height>
-				<font>font13boldcaps_title</font>
+				<font>font13caps_title</font>
 				<textcolor>white</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -252,7 +252,7 @@
 				<posy>27</posy>
 				<width>240</width>
 				<height>20</height>
-				<font>font13boldcaps_title</font>
+				<font>font13caps_title</font>
 				<textcolor>white</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -304,7 +304,7 @@
 				<height>20</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<font>font13boldcaps_title</font>
+				<font>font13caps_title</font>
 				<textcolor>grey2</textcolor>
 				<label>$INFO[player.chapter]$INFO[player.chaptercount, / ]</label>
 				<visible>player.chaptercount</visible>

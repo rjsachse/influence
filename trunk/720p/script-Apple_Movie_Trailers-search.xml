@@ -31,7 +31,7 @@
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<font>font13bold</font>
+				<font>font13</font>
 				<visible>false</visible>
 			</control>
 			<!-- ** Required ** Do not change id or type -->
@@ -56,7 +56,7 @@
 						<height>24</height>
 						<align>right</align>
 						<label />
-						<font>font13boldcaps_title</font>
+						<font>font13caps_title</font>
 						<textcolor>white</textcolor>
 						<texturecheckmark>radiobutton-focus.png</texturecheckmark>
 						<texturecheckmarknofocus>radiobutton-nofocus.png</texturecheckmarknofocus>
@@ -92,7 +92,7 @@
 								<posy>0</posy>
 								<width>350</width>
 								<height>40</height>
-								<font>font12bold</font>
+								<font>font12</font>
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
 								<selectedcolor>selected</selectedcolor>
@@ -122,7 +122,7 @@
 								<posy>0</posy>
 								<width>350</width>
 								<height>40</height>
-								<font>font12bold</font>
+								<font>font12</font>
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
 								<selectedcolor>selected</selectedcolor>
@@ -167,7 +167,7 @@
 						<height>24</height>
 						<align>right</align>
 						<label />
-						<font>font13boldcaps_title</font>
+						<font>font13caps_title</font>
 						<textcolor>white</textcolor>
 						<texturecheckmark>radiobutton-focus.png</texturecheckmark>
 						<texturecheckmarknofocus>radiobutton-nofocus.png</texturecheckmarknofocus>
@@ -203,7 +203,7 @@
 								<posy>0</posy>
 								<width>350</width>
 								<height>40</height>
-								<font>font12bold</font>
+								<font>font12</font>
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
 								<selectedcolor>selected</selectedcolor>
@@ -233,7 +233,7 @@
 								<posy>0</posy>
 								<width>350</width>
 								<height>40</height>
-								<font>font12bold</font>
+								<font>font12</font>
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
 								<selectedcolor>selected</selectedcolor>
@@ -278,7 +278,7 @@
 						<height>24</height>
 						<align>right</align>
 						<label />
-						<font>font13boldcaps_title</font>
+						<font>font13caps_title</font>
 						<textcolor>white</textcolor>
 						<texturecheckmark>radiobutton-focus.png</texturecheckmark>
 						<texturecheckmarknofocus>radiobutton-nofocus.png</texturecheckmarknofocus>
@@ -314,7 +314,7 @@
 								<posy>0</posy>
 								<width>350</width>
 								<height>40</height>
-								<font>font12bold</font>
+								<font>font12</font>
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
 								<selectedcolor>selected</selectedcolor>
@@ -344,7 +344,7 @@
 								<posy>0</posy>
 								<width>350</width>
 								<height>40</height>
-								<font>font12bold</font>
+								<font>font12</font>
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
 								<selectedcolor>selected</selectedcolor>
@@ -389,7 +389,7 @@
 						<height>24</height>
 						<align>right</align>
 						<label />
-						<font>font13boldcaps_title</font>
+						<font>font13caps_title</font>
 						<textcolor>white</textcolor>
 						<texturecheckmark>radiobutton-focus.png</texturecheckmark>
 						<texturecheckmarknofocus>radiobutton-nofocus.png</texturecheckmarknofocus>
@@ -425,7 +425,7 @@
 								<posy>0</posy>
 								<width>350</width>
 								<height>40</height>
-								<font>font12bold</font>
+								<font>font12</font>
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
 								<selectedcolor>selected</selectedcolor>
@@ -455,7 +455,7 @@
 								<posy>0</posy>
 								<width>350</width>
 								<height>40</height>
-								<font>font12bold</font>
+								<font>font12</font>
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
 								<selectedcolor>selected</selectedcolor>
@@ -500,7 +500,7 @@
 						<height>24</height>
 						<align>right</align>
 						<label />
-						<font>font13boldcaps_title</font>
+						<font>font13caps_title</font>
 						<textcolor>white</textcolor>
 						<texturecheckmark>radiobutton-focus.png</texturecheckmark>
 						<texturecheckmarknofocus>radiobutton-nofocus.png</texturecheckmarknofocus>
@@ -536,7 +536,7 @@
 								<posy>0</posy>
 								<width>350</width>
 								<height>40</height>
-								<font>font12bold</font>
+								<font>font12</font>
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
 								<selectedcolor>selected</selectedcolor>
@@ -566,7 +566,7 @@
 								<posy>0</posy>
 								<width>350</width>
 								<height>40</height>
-								<font>font12bold</font>
+								<font>font12</font>
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
 								<selectedcolor>selected</selectedcolor>
@@ -611,7 +611,7 @@
 						<height>24</height>
 						<align>right</align>
 						<label />
-						<font>font13boldcaps_title</font>
+						<font>font13caps_title</font>
 						<textcolor>white</textcolor>
 						<texturecheckmark>radiobutton-focus.png</texturecheckmark>
 						<texturecheckmarknofocus>radiobutton-nofocus.png</texturecheckmarknofocus>
@@ -647,7 +647,7 @@
 								<posy>0</posy>
 								<width>350</width>
 								<height>40</height>
-								<font>font12bold</font>
+								<font>font12</font>
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
 								<selectedcolor>selected</selectedcolor>
@@ -677,7 +677,7 @@
 								<posy>0</posy>
 								<width>350</width>
 								<height>40</height>
-								<font>font12bold</font>
+								<font>font12</font>
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
 								<selectedcolor>selected</selectedcolor>
@@ -752,7 +752,7 @@
 					<posy>145</posy>
 					<width>895</width>
 					<align>left</align>
-					<font>font12bold</font>
+					<font>font12</font>
 					<textcolor>white</textcolor>
 					<label />
 				</control>

@@ -29,7 +29,7 @@
 				<width>220</width>
 				<height>80</height>
 				<aspectratio>keep</aspectratio>
-				<texture>Influence_Logo.png</texture>
+				<texture>Confluence_Logo.png</texture>
 			</control>
 			<control type="button" id ="4">
 				<description>Enable Login screen</description>
@@ -55,7 +55,7 @@
 				<posy>135</posy>
 				<width>240</width>
 				<height>25</height>
-				<font>font13boldcaps</font>
+				<font>font13caps</font>
 				<textcolor>grey2</textcolor>
 				<align>right</align>
 				<aligny>center</aligny>
@@ -67,7 +67,7 @@
 				<posy>135</posy>
 				<width>240</width>
 				<height>25</height>
-				<font>font13boldcaps</font>
+				<font>font13caps</font>
 				<textcolor>grey2</textcolor>
 				<align>right</align>
 				<aligny>center</aligny>
@@ -103,7 +103,7 @@
 					<posy>245</posy>
 					<width>240</width>
 					<height>20</height>
-					<font>font13boldcaps</font>
+					<font>font13caps</font>
 					<textcolor>white</textcolor>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -125,7 +125,7 @@
 					<posy>305</posy>
 					<width>240</width>
 					<height>30</height>
-					<font>font13boldcaps</font>
+					<font>font13caps</font>
 					<textcolor>white</textcolor>
 					<align>center</align>
 					<aligny>center</aligny>

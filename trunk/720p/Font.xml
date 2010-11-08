@@ -16,12 +16,6 @@
 			<size>16</size>
 		</font>
 	 	<font>
-			<name>font12bold</name>
-			<filename>Default.ttf</filename>
-			<size>16</size>
-                        <style>bold</style>
-		</font>
-	 	<font>
 			<name>font12caps</name>
 			<filename>DefaultCaps.ttf</filename>
 			<size>16</size>
@@ -38,21 +32,9 @@
 			<size>20</size>
 		</font>
 	 	<font>
-			<name>font13bold</name>
-			<filename>Default.ttf</filename>
-			<size>20</size>
-			<style>bold</style>
-		</font>
-	 	<font>
 			<name>font13caps</name>
 			<filename>DefaultCaps.ttf</filename>
 			<size>20</size>
-		</font>
-	 	<font>
-			<name>font13caps</name>
-			<filename>DefaultCaps.ttf</filename>
-			<size>20</size>
-			<style>bold</style>
 		</font>
 	 	<font>
 			<name>font16caps</name>
@@ -82,32 +64,14 @@
 			<size>16</size>
 		</font>
 	 	<font>
-			<name>font12boldcaps_title</name>
-			<filename>TitleCaps.ttf</filename>
-			<size>16</size>
-                        <style>bold</style>
-		</font>
-	 	<font>
 			<name>font13_title</name>
 			<filename>Title.ttf</filename>
 			<size>20</size>
 		</font>
 	 	<font>
-			<name>font13bold_title</name>
-			<filename>Title.ttf</filename>
-			<size>20</size>
-			<style>bold</style>
-		</font>
-	 	<font>
 			<name>font13caps_title</name>
 			<filename>TitleCaps.ttf</filename>
 			<size>20</size>
-		</font>
-	 	<font>
-			<name>font13boldcaps_title</name>
-			<filename>TitleCaps.ttf</filename>
-			<size>20</size>
-			<style>bold</style>
 		</font>
 	 	<font>
 			<name>font24caps_title</name>
@@ -164,12 +128,6 @@
 			<size>16</size>
 		</font>
 	 	<font>
-			<name>font12bold</name>
-			<filename>Default.ttf</filename>
-			<size>16</size>
-                        <style>bold</style>
-		</font>
-	 	<font>
 			<name>font12caps</name>
 			<filename>Default.ttf</filename>
 			<size>16</size>
@@ -186,21 +144,9 @@
 			<size>20</size>
 		</font>
 	 	<font>
-			<name>font13bold</name>
-			<filename>Default.ttf</filename>
-			<size>20</size>
-			<style>bold</style>
-		</font>
-	 	<font>
 			<name>font13caps</name>
 			<filename>Default.ttf</filename>
 			<size>20</size>
-		</font>
-	 	<font>
-			<name>font13boldcaps</name>
-			<filename>Default.ttf</filename>
-			<size>20</size>
-			<style>bold</style>
 		</font>
 	 	<font>
 			<name>font16caps</name>
@@ -230,32 +176,14 @@
 			<size>16</size>
 		</font>
 	 	<font>
-			<name>font12boldcaps_title</name>
-			<filename>Title.ttf</filename>
-			<size>16</size>
-                        <style>bold</style>
-		</font>
-	 	<font>
 			<name>font13_title</name>
 			<filename>Title.ttf</filename>
 			<size>20</size>
 		</font>
 	 	<font>
-			<name>font13bold_title</name>
-			<filename>Title.ttf</filename>
-			<size>20</size>
-			<style>bold</style>
-		</font>
-	 	<font>
 			<name>font13caps_title</name>
 			<filename>Title.ttf</filename>
 			<size>20</size>
-		</font>
-	 	<font>
-			<name>font13boldcaps_title</name>
-			<filename>Title.ttf</filename>
-			<size>20</size>
-			<style>bold</style>
 		</font>
 	 	<font>
 			<name>font24caps_title</name>
@@ -311,12 +239,6 @@
 			<size>16</size>
 		</font>
 	 	<font>
-			<name>font12bold</name>
-			<filename>Arial.ttf</filename>
-			<size>16</size>
-                        <style>bold</style>
-		</font>
-	 	<font>
 			<name>font12caps</name>
 			<filename>Arial.ttf</filename>
 			<size>16</size>
@@ -333,21 +255,9 @@
 			<size>20</size>
 		</font>
 	 	<font>
-			<name>font13bold</name>
-			<filename>Arial.ttf</filename>
-			<size>20</size>
-			<style>bold</style>
-		</font>
-	 	<font>
 			<name>font13caps</name>
 			<filename>Arial.ttf</filename>
 			<size>20</size>
-		</font>
-	 	<font>
-			<name>font13boldcaps</name>
-			<filename>Arial.ttf</filename>
-			<size>20</size>
-			<style>bold</style>
 		</font>
 	 	<font>
 			<name>font16caps</name>
@@ -377,32 +287,14 @@
 			<size>16</size>
 		</font>
 	 	<font>
-			<name>font12boldcaps_title</name>
-			<filename>Arial.ttf</filename>
-			<size>16</size>
-                        <style>bold</style>
-		</font>
-	 	<font>
 			<name>font13_title</name>
 			<filename>Arial.ttf</filename>
 			<size>20</size>
 		</font>
 	 	<font>
-			<name>font13bold_title</name>
-			<filename>Arial.ttf</filename>
-			<size>20</size>
-			<style>bold</style>
-		</font>
-	 	<font>
 			<name>font13caps_title</name>
 			<filename>Arial.ttf</filename>
 			<size>20</size>
-		</font>
-	 	<font>
-			<name>font13boldcaps_title</name>
-			<filename>Arial.ttf</filename>
-			<size>20</size>
-			<style>bold</style>
 		</font>
 	 	<font>
 			<name>font24caps_title</name>

@@ -19,7 +19,7 @@
 				<posy>45</posy>
 				<width>330</width>
 				<height>30</height>
-				<font>font13boldcaps_title</font>
+				<font>font13caps_title</font>
 				<textcolor>blue</textcolor>
 				<scroll>true</scroll>
 				<align>center</align>
@@ -199,7 +199,7 @@
 						<posy>0</posy>
 						<width>380</width>
 						<height>30</height>
-						<font>font12bold</font>
+						<font>font12</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
@@ -211,7 +211,7 @@
 						<posy>0</posy>
 						<width>360</width>
 						<height>30</height>
-						<font>font12bold</font>
+						<font>font12</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
@@ -234,7 +234,7 @@
 						<posy>0</posy>
 						<width>380</width>
 						<height>30</height>
-						<font>font12bold</font>
+						<font>font12</font>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
@@ -246,7 +246,7 @@
 						<posy>0</posy>
 						<width>360</width>
 						<height>30</height>
-						<font>font12bold</font>
+						<font>font12</font>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
@@ -339,7 +339,7 @@
 						<posy>0</posy>
 						<width>380</width>
 						<height>30</height>
-						<font>font12bold</font>
+						<font>font12</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
@@ -351,7 +351,7 @@
 						<posy>0</posy>
 						<width>360</width>
 						<height>30</height>
-						<font>font12bold</font>
+						<font>font12</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
@@ -374,7 +374,7 @@
 						<posy>0</posy>
 						<width>380</width>
 						<height>30</height>
-						<font>font12bold</font>
+						<font>font12</font>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
@@ -386,7 +386,7 @@
 						<posy>0</posy>
 						<width>360</width>
 						<height>30</height>
-						<font>font12bold</font>
+						<font>font12</font>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>

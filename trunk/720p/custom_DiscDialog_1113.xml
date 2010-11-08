@@ -26,7 +26,7 @@
 				<posy>18</posy>
 				<width>500</width>
 				<height>30</height>
-				<font>font13boldcaps_title</font>
+				<font>font13caps_title</font>
 				<label>$LOCALIZE[31305]</label>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -39,7 +39,7 @@
 				<posy>80</posy>
 				<width>500</width>
 				<height>190</height>
-				<font>font13boldcaps</font>
+				<font>font13caps</font>
 				<label>31420</label>
 				<align>center</align>
 				<textcolor>grey2</textcolor>

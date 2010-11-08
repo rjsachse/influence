@@ -53,38 +53,10 @@
 					<texturefocus>OSDVideoFO.png</texturefocus>
 					<texturenofocus>OSDVideoNF.png</texturenofocus>
 					<onleft>701</onleft>
-					<onright>712</onright>
+					<onright>600</onright>
 					<onup>702</onup>
 					<ondown>702</ondown>
 					<onclick>ActivateWindow(123)</onclick>
-				</control>
-				<control type="button" id="712">
-					<posx>150</posx>
-					<posy>2</posy>
-					<width>45</width>
-					<height>45</height>
-					<label>-</label>
-					<texturefocus>OSDSubtitlesOF.png</texturefocus>
-					<texturenofocus>OSDSubtitlesNF.png</texturenofocus>
-					<onleft>702</onleft>
-					<onright>713</onright>
-					<onup>712</onup>
-					<ondown>712</ondown>
-					<onclick>RunScript(special://home/scripts/OpenSubtitles_OSD/default.py)</onclick>
-				</control>
-				<control type="button" id="713">
-					<posx>200</posx>
-					<posy>2</posy>
-					<width>45</width>
-					<height>45</height>
-					<label>-</label>
-					<texturefocus>OSDMovieSeekTimeOF.png</texturefocus>
-					<texturenofocus>OSDMovieSeekTimeNF.png</texturenofocus>
-					<onleft>712</onleft>
-					<onright>600</onright>
-					<onup>713</onup>
-					<ondown>713</ondown>
-                                        <onclick>XBMC.RunScript(special://skin/scripts/movie_seek_time.py)</onclick>
 				</control>
 				<control type="group" id="100">
 					<posx>300</posx>
@@ -97,7 +69,7 @@
 						<label>-</label>
 						<texturefocus>OSDPrevTrackFO.png</texturefocus>
 						<texturenofocus>OSDPrevTrackNF.png</texturenofocus>
-						<onleft>713</onleft>
+						<onleft>702</onleft>
 						<onright>601</onright>
 						<onup>600</onup>
 						<ondown>600</ondown>

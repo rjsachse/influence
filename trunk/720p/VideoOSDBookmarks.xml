@@ -48,7 +48,7 @@
 			<posy>18</posy>
 			<width>760</width>
 			<height>30</height>
-			<font>font13boldcaps_title</font>
+			<font>font13caps_title</font>
 			<label>[UPPERCASE]$LOCALIZE[298][/UPPERCASE] - ($INFO[Container(11).NumItems]) $LOCALIZE[31025] - $LOCALIZE[31024] ($INFO[Container(11).CurrentPage]/$INFO[Container(11).NumPages])</label>
 			<align>center</align>
 			<aligny>center</aligny>
@@ -88,7 +88,7 @@
 					<posy>150</posy>
 					<width>225</width>
 					<height>15</height>
-					<font>font12bold</font>
+					<font>font12</font>
 					<selectedcolor>green</selectedcolor>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -115,7 +115,7 @@
 					<posy>1507</posy>
 					<width>225</width>
 					<height>15</height>
-					<font>font12bold</font>
+					<font>font12</font>
 					<selectedcolor>green</selectedcolor>
 					<align>center</align>
 					<aligny>center</aligny>

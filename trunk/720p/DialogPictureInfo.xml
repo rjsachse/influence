@@ -93,7 +93,7 @@
 						<posy>0</posy>
 						<width>390</width>
 						<height>35</height>
-						<font>font12bold</font>
+						<font>font12</font>
 						<aligny>center</aligny>
 						<shadowcolor>black</shadowcolor>
 						<selectedcolor>selected</selectedcolor>
@@ -136,7 +136,7 @@
 						<posy>0</posy>
 						<width>390</width>
 						<height>35</height>
-						<font>font12bold</font>
+						<font>font12</font>
 						<aligny>center</aligny>
 						<shadowcolor>black</shadowcolor>
 						<selectedcolor>selected</selectedcolor>

@@ -29,7 +29,7 @@
 				<width>220</width>
 				<height>80</height>
 				<aspectratio>keep</aspectratio>
-				<texture>Influence_Logo.png</texture>
+				<texture>Confluence_Logo.png</texture>
 			</control>
 			<control type="grouplist" id="9000">
 				<posx>10</posx>
@@ -46,7 +46,7 @@
 					<textoffsetx>0</textoffsetx>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>font13boldcaps_title</font>
+					<font>font13caps_title</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<texturefocus border="5">MenuItemFO.png</texturefocus>
@@ -61,7 +61,7 @@
 					<textoffsetx>0</textoffsetx>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>font13boldcaps_title</font>
+					<font>font13caps_title</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<texturefocus border="5">MenuItemFO.png</texturefocus>
@@ -76,7 +76,7 @@
 					<textoffsetx>0</textoffsetx>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>font13boldcaps_title</font>
+					<font>font13caps_title</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<texturefocus border="5">MenuItemFO.png</texturefocus>
@@ -92,7 +92,7 @@
 					<textoffsetx>0</textoffsetx>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>font13boldcaps_title</font>
+					<font>font13caps_title</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<texturefocus border="5">MenuItemFO.png</texturefocus>
@@ -108,7 +108,7 @@
 					<textoffsetx>0</textoffsetx>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>font13boldcaps_title</font>
+					<font>font13caps_title</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<texturefocus border="5">MenuItemFO.png</texturefocus>
@@ -123,7 +123,7 @@
 					<textoffsetx>0</textoffsetx>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>font13boldcaps_title</font>
+					<font>font13caps_title</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<texturefocus border="5">MenuItemFO.png</texturefocus>
@@ -138,7 +138,7 @@
 					<textoffsetx>0</textoffsetx>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>font13boldcaps_title</font>
+					<font>font13caps_title</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<texturefocus border="5">MenuItemFO.png</texturefocus>
@@ -188,7 +188,7 @@
 					<posy>0</posy>
 					<width>750</width>
 					<label>-</label>
-					<font>font13bold</font>
+					<font>font13</font>
 				</control>
 				<control type="label" id="3">
 					<description>Label 3</description>
@@ -196,7 +196,7 @@
 					<posy>35</posy>
 					<width>750</width>
 					<label>-</label>
-					<font>font13bold</font>
+					<font>font13</font>
 				</control>
 				<control type="label" id="4">
 					<description>Label 4</description>
@@ -204,7 +204,7 @@
 					<posy>70</posy>
 					<width>750</width>
 					<label>-</label>
-					<font>font13bold</font>
+					<font>font13</font>
 				</control>
 				<control type="label" id="5">
 					<description>Label 5</description>
@@ -212,7 +212,7 @@
 					<posy>105</posy>
 					<width>750</width>
 					<label>-</label>
-					<font>font13bold</font>
+					<font>font13</font>
 				</control>
 				<control type="label" id="6">
 					<description>Label 6</description>
@@ -220,7 +220,7 @@
 					<posy>140</posy>
 					<width>750</width>
 					<label>-</label>
-					<font>font13bold</font>
+					<font>font13</font>
 				</control>
 				<control type="label" id="7">
 					<description>Label 7</description>
@@ -228,7 +228,7 @@
 					<posy>175</posy>
 					<width>750</width>
 					<label>-</label>
-					<font>font13bold</font>
+					<font>font13</font>
 				</control>
 				<control type="label" id="8">
 					<description>Label 8</description>
@@ -236,7 +236,7 @@
 					<posy>210</posy>
 					<width>750</width>
 					<label>-</label>
-					<font>font13bold</font>
+					<font>font13</font>
 				</control>
 				<control type="label" id="9">
 					<description>Label 9</description>
@@ -244,7 +244,7 @@
 					<posy>245</posy>
 					<width>750</width>
 					<label>-</label>
-					<font>font13bold</font>
+					<font>font13</font>
 				</control>
 				<control type="label" id="10">
 					<description>Label 10</description>
@@ -252,7 +252,7 @@
 					<posy>280</posy>
 					<width>750</width>
 					<label>-</label>
-					<font>font13bold</font>
+					<font>font13</font>
 				</control>
 				<control type="label" id="11">
 					<description>Label 11</description>
@@ -260,7 +260,7 @@
 					<posy>315</posy>
 					<width>750</width>
 					<label>-</label>
-					<font>font13bold</font>
+					<font>font13</font>
 				</control>
 				<control type="label" id="52">
 					<description>XBMC XBE BUILD Version</description>
@@ -271,7 +271,7 @@
 					<align>right</align>
 					<textcolor>blue</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<font>font13boldcaps_title</font>
+					<font>font13caps_title</font>
 				</control>
 				<control type="label" id="52">
 					<description>CPU Text</description>

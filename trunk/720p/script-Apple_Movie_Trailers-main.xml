@@ -59,7 +59,7 @@
 				<posy>30r</posy>
 				<width>500</width>
 				<height>20</height>
-				<font>font12bold</font>
+				<font>font12</font>
 				<textcolor>grey2</textcolor>
 				<scroll>false</scroll>
 				<align>right</align>
@@ -131,7 +131,7 @@
 								<posy>0</posy>
 								<width>740</width>
 								<height>40</height>
-								<font>font13bold</font>
+								<font>font13</font>
 								<textcolor>grey2</textcolor>
 								<selectedcolor>selected</selectedcolor>
 								<align>left</align>
@@ -143,7 +143,7 @@
 								<posy>0</posy>
 								<width>500</width>
 								<height>40</height>
-								<font>font12bold</font>
+								<font>font12</font>
 								<textcolor>grey2</textcolor>
 								<selectedcolor>selected</selectedcolor>
 								<align>right</align>
@@ -175,7 +175,7 @@
 								<posy>0</posy>
 								<width>740</width>
 								<height>40</height>
-								<font>font13bold</font>
+								<font>font13</font>
 								<textcolor>white</textcolor>
 								<selectedcolor>selected</selectedcolor>
 								<align>left</align>
@@ -195,7 +195,7 @@
 								<posy>0</posy>
 								<width>500</width>
 								<height>40</height>
-								<font>font12bold</font>
+								<font>font12</font>
 								<textcolor>grey2</textcolor>
 								<selectedcolor>selected</selectedcolor>
 								<align>right</align>
@@ -282,7 +282,7 @@
 							<posy>540</posy>
 							<width>850</width>
 							<height>125</height>
-							<font>font12bold</font>
+							<font>font12</font>
 							<align>justify</align>
 							<textcolor>white</textcolor>
 							<pagecontrol>2059</pagecontrol>
@@ -346,7 +346,7 @@
 									<posy>0</posy>
 									<width>270</width>
 									<height>25</height>
-									<font>font12bold</font>
+									<font>font12</font>
 									<aligny>center</aligny>
 									<selectedcolor>green</selectedcolor>
 									<align>left</align>
@@ -359,7 +359,7 @@
 									<posy>0</posy>
 									<width>270</width>
 									<height>25</height>
-									<font>font12bold</font>
+									<font>font12</font>
 									<aligny>center</aligny>
 									<selectedcolor>green</selectedcolor>
 									<align>left</align>
@@ -528,7 +528,7 @@
 							<posy>0</posy>
 							<width>610</width>
 							<height>40</height>
-							<font>font13bold</font>
+							<font>font13</font>
 							<textcolor>grey2</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<align>left</align>
@@ -540,7 +540,7 @@
 							<posy>0</posy>
 							<width>400</width>
 							<height>40</height>
-							<font>font12bold</font>
+							<font>font12</font>
 							<textcolor>grey2</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<align>right</align>
@@ -587,7 +587,7 @@
 							<posy>0</posy>
 							<width>610</width>
 							<height>40</height>
-							<font>font13bold</font>
+							<font>font13</font>
 							<textcolor>white</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<align>left</align>
@@ -599,7 +599,7 @@
 							<posy>0</posy>
 							<width>400</width>
 							<height>40</height>
-							<font>font12bold</font>
+							<font>font12</font>
 							<textcolor>grey2</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<align>right</align>
@@ -767,7 +767,7 @@
 				<width>220</width>
 				<height>80</height>
 				<aspectratio>keep</aspectratio>
-				<texture>Influence_Logo.png</texture>
+				<texture>Confluence_Logo.png</texture>
 			</control>
 			<control type="group" id="9000">
 				<posx>-250</posx>

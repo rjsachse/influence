@@ -334,7 +334,7 @@
 			<posy>80</posy>
 			<width>400</width>
 			<height>100</height>
-			<font>font13boldcaps</font>
+			<font>font13caps</font>
 			<description>Visualisation Select Button</description>
 			<texturebg border="20">OverlayDialogBackground.png</texturebg>
 			<onleft>503</onleft>

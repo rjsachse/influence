@@ -36,7 +36,7 @@
 			<posy>70</posy>
 			<width>250</width>
 			<height>50</height>
-			<font>font13bold</font>
+			<font>font13</font>
 			<textcolor>selected</textcolor>
 			<disabledcolor>grey2</disabledcolor>
 			<align>center</align>
@@ -56,7 +56,7 @@
 			<posy>20</posy>
 			<width>280</width>
 			<height>40</height>
-			<font>font13boldcaps_title</font>
+			<font>font13caps_title</font>
 			<textcolor>white</textcolor>
 			<shadowcolor>black</shadowcolor>
 			<align>center</align>
@@ -81,7 +81,7 @@
 				<posy>0</posy>
 				<width>60</width>
 				<height>60</height>
-				<font>font13bold</font>
+				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
 				<texturenofocus border="25,25,5,5">KeyboardCornerTopNF.png</texturenofocus>
@@ -99,7 +99,7 @@
 				<posy>0</posy>
 				<width>60</width>
 				<height>60</height>
-				<font>font13bold</font>
+				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
 				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
@@ -117,7 +117,7 @@
 				<posy>0</posy>
 				<width>60</width>
 				<height>60</height>
-				<font>font13bold</font>
+				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
 				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
@@ -154,7 +154,7 @@
 				<posy>60</posy>
 				<width>60</width>
 				<height>60</height>
-				<font>font13bold</font>
+				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
 				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
@@ -172,7 +172,7 @@
 				<posy>60</posy>
 				<width>60</width>
 				<height>60</height>
-				<font>font13bold</font>
+				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
 				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
@@ -190,7 +190,7 @@
 				<posy>60</posy>
 				<width>60</width>
 				<height>60</height>
-				<font>font13bold</font>
+				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
 				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
@@ -208,7 +208,7 @@
 				<posy>120</posy>
 				<width>60</width>
 				<height>60</height>
-				<font>font13bold</font>
+				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
 				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
@@ -226,7 +226,7 @@
 				<posy>120</posy>
 				<width>60</width>
 				<height>60</height>
-				<font>font13bold</font>
+				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
 				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
@@ -244,7 +244,7 @@
 				<posy>120</posy>
 				<width>60</width>
 				<height>60</height>
-				<font>font13bold</font>
+				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
 				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
@@ -299,7 +299,7 @@
 				<posy>180</posy>
 				<width>60</width>
 				<height>60</height>
-				<font>font13bold</font>
+				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
 				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>

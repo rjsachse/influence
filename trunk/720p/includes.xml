@@ -4,15 +4,10 @@
 	<include file="ViewsMusicLibrary.xml" />
 	<include file="ViewsFileMode.xml" />
 	<include file="ViewsPictures.xml" />
+	<include file="InfluenceWeather.xml" />
 	<include file="IncludesCodecFlagging.xml" />
 	<include file="IncludesHomeRecentlyAdded.xml" />
-	<include file="ListGenre.xml" />
-	<include file="Genre.xml" />
-	<include file="ButtonExtra.xml" />
-	<include file="EnableScriptHack.xml" />
-	<include file="NewWeather.xml" />
-	<include file="Carousel.xml" />
-	<include file="Menu.xml" />
+
 	<constant name="FanartCrossfadeTime">500</constant>
 	<constant name="IconCrossfadeTime">400</constant>
 
@@ -56,7 +51,7 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<imagepath fallback="special://skin/backgrounds/movies.jpg" background="true">$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</imagepath>
+			<imagepath fallback="special://skin/backgrounds/videos.jpg" background="true">$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</imagepath>
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
@@ -67,25 +62,11 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<imagepath fallback="special://skin/backgrounds/tvshows.jpg" background="true">$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</imagepath>
+			<imagepath fallback="special://skin/backgrounds/videos.jpg" background="true">$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</imagepath>
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
 			<visible>[Container.Content(TVShows) | Container.Content(Seasons) |Container.Content(Episodes)] + [!IsEmpty(Skin.String(Home_Custom_Back_TVShow_Folder) + Skin.HasSetting(HomeMenuNoTVShowsButton)])</visible>
-		</control>
-		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<imagepath fallback="special://skin/backgrounds/videos.jpg"
-				background="true">$INFO[Skin.String(Home_Custom_Back_GenreShow_Folder)]</imagepath>
-			<timeperimage>10000</timeperimage>
-			<randomize>true</randomize>
-			<fadetime>1000</fadetime>
-			<visible>[Container.Content(Movies) | Container.Content(Seasons) |Container.Content(Episodes)] +
-				[!IsEmpty(Skin.String(Home_Custom_Back_GenreShow_Folder) +
-				Skin.HasSetting(HomeMenuNoGenreShowsButton)])</visible>
 		</control>
 	</include>
 	<include name="CommonMusicBackground">
@@ -227,19 +208,7 @@
 		<textoffsetx>10</textoffsetx>
 		<textwidth>235</textwidth>
 		<aligny>center</aligny>
-		<font>font13boldcaps</font>
-		<texturefocus border="5">button-focus.png</texturefocus>
-		<texturenofocus>-</texturenofocus>
-		<pulseonselect>false</pulseonselect>
-	</include>
-	<include name="BHSubCarouselCommonValues">
-		<height>40</height>
-		<width>250</width>
-		<textoffsetx>10</textoffsetx>
-		<textwidth>235</textwidth>
-		<aligny>center</aligny>
-		<align>center</align>
-		<font>font13boldcaps</font>
+		<font>font13caps</font>
 		<texturefocus border="5">button-focus.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<pulseonselect>false</pulseonselect>
@@ -256,11 +225,6 @@
 		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="ButtonHomeSubCommonValues">
-            <include condition="Skin.HasSetting(HomeMenuCarousel)">BHSubCarouselCommonValues</include>
-            <include condition="!Skin.HasSetting(HomeMenuCarousel)">BHSubClassicCommonValues</include>
-	</include>
-
-	<include name="BHSubClassicCommonValues">
 		<height>40</height>
 		<width>221</width>
 		<textoffsetx>20</textoffsetx>
@@ -271,7 +235,6 @@
 		<texturenofocus border="5">button-nofocus.png</texturenofocus>
 		<pulseonselect>false</pulseonselect>
 	</include>
-
 	<include name="ButtonInfoDialogsCommonValues">
 		<height>40</height>
 		<width>170</width>
@@ -292,7 +255,7 @@
 			<label>([COLOR=blue]$INFO[Player.Time] / $INFO[Player.Duration,][/COLOR]) - $INFO[MusicPlayer.Title]$INFO[VideoPlayer.Title]</label>
 			<align>left</align>
 			<aligny>center</aligny>
-			<font>font12bold</font>
+			<font>font12</font>
 			<textcolor>grey2</textcolor>
 			<shadowcolor>black</shadowcolor>
 			<visible>Player.HasMedia</visible>
@@ -305,7 +268,7 @@
 			<posy>30r</posy>
 			<width>500</width>
 			<height>20</height>
-			<font>font12bold</font>
+			<font>font12</font>
 			<textcolor>grey2</textcolor>
 			<scroll>false</scroll>
 			<align>right</align>
@@ -354,7 +317,7 @@
 			<label>$INFO[MusicPlayer.Title]</label>
 			<align>left</align>
 			<aligny>center</aligny>
-			<font>font13boldcaps_title</font>
+			<font>font13caps_title</font>
 			<textcolor>white</textcolor>
 			<shadowcolor>black</shadowcolor>
 			<scrollout>false</scrollout>
@@ -369,7 +332,7 @@
 			<label>$INFO[MusicPlayer.Album]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label>
 			<align>left</align>
 			<aligny>center</aligny>
-			<font>font12bold</font>
+			<font>font12</font>
 			<textcolor>white</textcolor>
 			<shadowcolor>black</shadowcolor>
 		</control>
@@ -382,7 +345,7 @@
 			<label>$INFO[MusicPlayer.Time]$INFO[MusicPlayer.Duration, / ]</label>
 			<align>left</align>
 			<aligny>center</aligny>
-			<font>font12bold</font>
+			<font>font12</font>
 			<textcolor>white</textcolor>
 			<shadowcolor>black</shadowcolor>
 		</control>
@@ -395,7 +358,7 @@
 			<label>[COLOR=blue]$LOCALIZE[209] :[/COLOR] $INFO[MusicPlayer.offset(1).Title]</label>
 			<align>right</align>
 			<aligny>center</aligny>
-			<font>font12bold</font>
+			<font>font12</font>
 			<textcolor>grey</textcolor>
 			<shadowcolor>black</shadowcolor>
 		</control>
@@ -472,7 +435,7 @@
 			<label>$INFO[VideoPlayer.Title]</label>
 			<align>left</align>
 			<aligny>center</aligny>
-			<font>font13boldcaps_title</font>
+			<font>font13caps_title</font>
 			<textcolor>white</textcolor>
 			<shadowcolor>black</shadowcolor>
 			<scrollout>false</scrollout>
@@ -487,7 +450,7 @@
 			<label>$INFO[VideoPlayer.Genre]</label>
 			<align>left</align>
 			<aligny>center</aligny>
-			<font>font12bold</font>
+			<font>font12</font>
 			<textcolor>white</textcolor>
 			<shadowcolor>black</shadowcolor>
 			<visible>!videoplayer.content(episodes) + !videoplayer.content(musicvideos)</visible>
@@ -500,7 +463,7 @@
 			<label>$INFO[VideoPlayer.Album]</label>
 			<align>left</align>
 			<aligny>center</aligny>
-			<font>font12bold</font>
+			<font>font12</font>
 			<textcolor>white</textcolor>
 			<shadowcolor>black</shadowcolor>
 			<visible>videoplayer.content(musicvideos)</visible>
@@ -514,7 +477,7 @@
 			<label>$LOCALIZE[20373] $INFO[VideoPlayer.Season] - $LOCALIZE[20359] $INFO[VideoPlayer.episode]</label>
 			<align>left</align>
 			<aligny>center</aligny>
-			<font>font12bold</font>
+			<font>font12</font>
 			<textcolor>white</textcolor>
 			<shadowcolor>black</shadowcolor>
 			<visible>videoplayer.content(episodes)</visible>
@@ -528,7 +491,7 @@
 			<label>$INFO[VideoPlayer.Time]$INFO[VideoPlayer.Duration, / ]</label>
 			<align>left</align>
 			<aligny>center</aligny>
-			<font>font12bold</font>
+			<font>font12</font>
 			<textcolor>white</textcolor>
 			<shadowcolor>black</shadowcolor>
 		</control>
@@ -772,7 +735,7 @@
 				<label>$INFO[MusicPlayer.Title]</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>font12bold</font>
+				<font>font12</font>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<scrollout>false</scrollout>
@@ -826,7 +789,7 @@
 				<label>$INFO[VideoPlayer.Title]</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>font12bold</font>
+				<font>font12</font>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<scrollout>false</scrollout>
@@ -865,7 +828,7 @@
 		</control>
 	</include>
 	<include name="ScrollOffsetLabel">
-		<control type="group">
+                <control type="group">
 			<visible>Container.Scrolling + [StringCompare(Container.SortMethod,$LOCALIZE[551]) | StringCompare(Container.SortMethod,$LOCALIZE[561]) | StringCompare(Container.SortMethod,$LOCALIZE[558]) | StringCompare(Container.SortMethod,$LOCALIZE[557]) | StringCompare(Container.SortMethod,$LOCALIZE[556])]</visible>
 			<animation effect="slide" start="0,0" end="0,-60" time="100">Visible</animation>
 			<animation effect="slide" start="0,-60" end="0,0" delay="400" time="100">Hidden</animation>
@@ -889,7 +852,7 @@
 				<textcolor>white</textcolor>
 				<font>font30caps_title</font>
 			</control>
-		</control>
+                </control>
 	</include>
 	<include name="Clock">
 		<control type="group">
@@ -914,15 +877,15 @@
 				<height>28</height>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>font12bold</font>
+				<font>font12</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[System.Time]</label>
 			</control>
 		</control>
 	</include>
 	<include name="backgroundfade">
-		<animation effect="fade" time="600">Visible</animation>
-		<animation effect="fade" time="600">Hidden</animation>
+		 <animation effect="fade" time="600">Visible</animation>
+		 <animation effect="fade" time="600">Hidden</animation>
 	</include>
 	<include name="Window_OpenClose_Animation">
 		<animation effect="fade" time="250">WindowOpen</animation>

@@ -29,7 +29,7 @@
 						<posy>0</posy>
 						<width>730</width>
 						<height>40</height>
-						<font>font13bold</font>
+						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
@@ -41,7 +41,7 @@
 						<posy>0</posy>
 						<width>700</width>
 						<height>40</height>
-						<font>font12bold</font>
+						<font>font12</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
@@ -81,7 +81,7 @@
 						<posy>0</posy>
 						<width>730</width>
 						<height>40</height>
-						<font>font13bold</font>
+						<font>font13</font>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
@@ -93,7 +93,7 @@
 						<posy>0</posy>
 						<width>700</width>
 						<height>40</height>
-						<font>font12bold</font>
+						<font>font12</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
@@ -171,7 +171,7 @@
 					<wrapmultiline>true</wrapmultiline>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>font13boldcaps</font>
+					<font>font13caps</font>
 					<textcolor>grey2</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -184,7 +184,7 @@
 					<scroll>true</scroll>
 					<align>center</align>
 					<aligny>top</aligny>
-					<font>font13boldcaps_title</font>
+					<font>font13caps_title</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<wrapmultiline>true</wrapmultiline>
@@ -199,7 +199,7 @@
 					<scroll>true</scroll>
 					<align>center</align>
 					<aligny>top</aligny>
-					<font>font13boldcaps_title</font>
+					<font>font13caps_title</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<wrapmultiline>true</wrapmultiline>
@@ -214,7 +214,7 @@
 					<label>$INFO[listitem.TrackNumber,[COLOR=blue]$LOCALIZE[31310]: [/COLOR]]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>font13boldcaps_title</font>
+					<font>font13caps_title</font>
 					<textcolor>white</textcolor>
 					<visible>!Container.Content(Albums)</visible>
 				</control>
@@ -227,7 +227,7 @@
 					<label>$INFO[listitem.Year,[COLOR=blue]$LOCALIZE[345]: [/COLOR]]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>font13boldcaps_title</font>
+					<font>font13caps_title</font>
 					<textcolor>white</textcolor>
 				</control>
 				<control type="image">
@@ -398,7 +398,7 @@
 						<posy>0</posy>
 						<width>720</width>
 						<height>40</height>
-						<font>font13bold</font>
+						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
@@ -410,7 +410,7 @@
 						<posy>0</posy>
 						<width>700</width>
 						<height>40</height>
-						<font>font12bold</font>
+						<font>font12</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
@@ -457,7 +457,7 @@
 						<posy>0</posy>
 						<width>720</width>
 						<height>40</height>
-						<font>font13bold</font>
+						<font>font13</font>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
@@ -469,7 +469,7 @@
 						<posy>0</posy>
 						<width>700</width>
 						<height>40</height>
-						<font>font12bold</font>
+						<font>font12</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
@@ -564,7 +564,7 @@
 					<wrapmultiline>true</wrapmultiline>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>font13boldcaps</font>
+					<font>font13caps</font>
 					<textcolor>grey2</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -577,7 +577,7 @@
 					<scroll>true</scroll>
 					<align>center</align>
 					<aligny>top</aligny>
-					<font>font13boldcaps_title</font>
+					<font>font13caps_title</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<wrapmultiline>true</wrapmultiline>
@@ -592,7 +592,7 @@
 					<scroll>true</scroll>
 					<align>center</align>
 					<aligny>top</aligny>
-					<font>font13boldcaps</font>
+					<font>font13caps</font>
 					<textcolor>grey2</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<wrapmultiline>true</wrapmultiline>
@@ -606,7 +606,7 @@
 					<label>$INFO[listitem.Year,[COLOR=blue]$LOCALIZE[345]: [/COLOR]]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>font13boldcaps_title</font>
+					<font>font13caps_title</font>
 					<textcolor>white</textcolor>
 				</control>
 				<control type="image">
@@ -650,7 +650,7 @@
 						<posy>0</posy>
 						<width>560</width>
 						<height>40</height>
-						<font>font13bold</font>
+						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
@@ -682,7 +682,7 @@
 						<posy>0</posy>
 						<width>560</width>
 						<height>40</height>
-						<font>font13bold</font>
+						<font>font13</font>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
@@ -780,7 +780,7 @@
 						<label>$LOCALIZE[21893]:</label>
 						<align>right</align>
 						<aligny>center</aligny>
-						<font>font13boldcaps_title</font>
+						<font>font13caps_title</font>
 						<textcolor>blue</textcolor>
 						<visible>!IsEmpty(ListItem.Property(Artist_Born))</visible>
 					</control>
@@ -793,7 +793,7 @@
 						<label>$INFO[ListItem.Property(Artist_Born)]</label>
 						<align>left</align>
 						<aligny>center</aligny>
-						<font>font13bold</font>
+						<font>font13</font>
 						<scroll>true</scroll>
 						<visible>!IsEmpty(ListItem.Property(Artist_Born))</visible>
 					</control>
@@ -806,7 +806,7 @@
 						<label>$LOCALIZE[21894]:</label>
 						<align>right</align>
 						<aligny>center</aligny>
-						<font>font13boldcaps_title</font>
+						<font>font13caps_title</font>
 						<textcolor>blue</textcolor>
 						<visible>!IsEmpty(ListItem.Property(Artist_Formed))</visible>
 					</control>
@@ -819,7 +819,7 @@
 						<label>$INFO[ListItem.Property(Artist_Formed)]</label>
 						<align>left</align>
 						<aligny>center</aligny>
-						<font>font13bold</font>
+						<font>font13</font>
 						<scroll>true</scroll>
 						<visible>!IsEmpty(ListItem.Property(Artist_Formed))</visible>
 					</control>
@@ -832,7 +832,7 @@
 						<label>$LOCALIZE[515]:</label>
 						<align>right</align>
 						<aligny>center</aligny>
-						<font>font13boldcaps_title</font>
+						<font>font13caps_title</font>
 						<textcolor>blue</textcolor>
 					</control>
 					<control type="label">
@@ -844,7 +844,7 @@
 						<label fallback="416">$INFO[ListItem.Property(Genre)]</label>
 						<align>left</align>
 						<aligny>center</aligny>
-						<font>font13bold</font>
+						<font>font13</font>
 						<scroll>true</scroll>
 					</control>
 					<control type="image">
@@ -860,7 +860,7 @@
 						<posy>290</posy>
 						<width>600</width>
 						<height>120</height>
-						<font>font12bold</font>
+						<font>font12</font>
 						<align>justify</align>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Property(Artist_Description)]</label>
@@ -900,7 +900,7 @@
 						<posy>0</posy>
 						<width>730</width>
 						<height>40</height>
-						<font>font13bold</font>
+						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
@@ -912,7 +912,7 @@
 						<posy>0</posy>
 						<width>700</width>
 						<height>40</height>
-						<font>font12bold</font>
+						<font>font12</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
@@ -952,7 +952,7 @@
 						<posy>0</posy>
 						<width>730</width>
 						<height>40</height>
-						<font>font13bold</font>
+						<font>font13</font>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
@@ -964,7 +964,7 @@
 						<posy>0</posy>
 						<width>700</width>
 						<height>40</height>
-						<font>font12bold</font>
+						<font>font12</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
@@ -1057,7 +1057,7 @@
 					<wrapmultiline>true</wrapmultiline>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>font13boldcaps</font>
+					<font>font13caps</font>
 					<textcolor>grey2</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -1070,7 +1070,7 @@
 					<scroll>true</scroll>
 					<align>center</align>
 					<aligny>top</aligny>
-					<font>font13boldcaps_title</font>
+					<font>font13caps_title</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<wrapmultiline>true</wrapmultiline>
@@ -1084,7 +1084,7 @@
 					<label>$INFO[listitem.Year,[COLOR=blue]$LOCALIZE[345]: [/COLOR]]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>font13boldcaps_title</font>
+					<font>font13caps_title</font>
 					<textcolor>white</textcolor>
 				</control>
 				<control type="image">
@@ -1112,7 +1112,7 @@
 					<label>21821</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>font13boldcaps_title</font>
+					<font>font13caps_title</font>
 					<textcolor>blue</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -1122,7 +1122,7 @@
 					<posy>490</posy>
 					<width>750</width>
 					<height>165</height>
-					<font>font12bold</font>
+					<font>font12</font>
 					<align>justify</align>
 					<pagecontrol>51361</pagecontrol>
 					<textcolor>white</textcolor>

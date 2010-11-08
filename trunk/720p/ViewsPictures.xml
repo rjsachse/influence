@@ -72,7 +72,7 @@
 				<posy>200</posy>
 				<width>1200</width>
 				<height>30</height>
-				<font>font13boldcaps_title</font>
+				<font>font13caps_title</font>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<scroll>true</scroll>
@@ -209,7 +209,7 @@
 					<label>$INFO[ListItem.PictureDateTime,[COLOR=blue]$LOCALIZE[31326][/COLOR] - ]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>font13boldcaps</font>
+					<font>font13caps</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -222,7 +222,7 @@
 					<label>$INFO[ListItem.PictureResolution,[COLOR=blue]$LOCALIZE[31327][/COLOR] - ]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>font13boldcaps</font>
+					<font>font13caps</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>

@@ -133,23 +133,7 @@
   <string id="31405">[B]CONFIGURE NETWORK SETTINGS[/B][CR][CR]Setup control of XBMC via UPnP and HTTP · Configure file sharing[CR]Set internet access options</string>
   <string id="31406">[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock</string>
   <string id="31407">[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Setup the Confluence skin · Add and remove home menu items[CR]Change skin backgrounds</string>
+
   <string id="31420">[B][COLOR=white]XBMC has not detected a Disc.[/COLOR][/B][CR][CR]Please Insert a disc into your drive and try again or Cancel</string>
   <string id="31421">Select your XBMC user Profile[CR]to login and continue</string>
-
-<!-- Influence Label -->
-  <string id="31500">Set up menu </string>
-  <string id="31501">Label</string>
-  <string id="31502">Action</string>
-  <string id="31503">Activate Sub-menus</string>
-  <string id="31504">EXTRA MENU</string>
-  <string id="31505">Activate menu</string>
-  <string id="31506">Activate sub-menu</string>
-  <string id="31550">Genre</string>
-  <string id="31551">Load or reload genre</string>
-  <string id="31560">Enable Kiosk Mode (disable slideout menu)</string>
-  <string id="31561">Director:</string>
-  <string id="31562">Runtime:</string>
-  <string id="31563">Year:</string>
-  <string id="31564">Writer:</string>
-  <string id="31565">IMDB Rating:</string>
 </strings>

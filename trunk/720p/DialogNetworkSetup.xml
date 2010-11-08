@@ -46,7 +46,7 @@
 			<posy>18</posy>
 			<width>760</width>
 			<height>30</height>
-			<font>font13boldcaps_title</font>
+			<font>font13caps_title</font>
 			<label>$LOCALIZE[1007]</label>
 			<align>center</align>
 			<aligny>center</aligny>
@@ -66,7 +66,7 @@
 			<textoffsetx>12</textoffsetx>
 			<aligny>center</aligny>
 			<reverse>yes</reverse>
-			<font>font13bold2</font>
+			<font>font132</font>
 			<label>1008</label>
 			<onup>18</onup>
 			<ondown>11</ondown>
@@ -83,7 +83,7 @@
 			<aligny>center</aligny>
 			<texturefocus border="5">MenuItemFO.png</texturefocus>
 			<texturenofocus border="5">MenuItemNF.png</texturenofocus>
-			<font>font13bold</font>
+			<font>font13</font>
 			<label>-</label>
 			<onup>10</onup>
 			<onleft>12</onleft>
@@ -118,7 +118,7 @@
 			<aligny>center</aligny>
 			<texturefocus border="5">MenuItemFO.png</texturefocus>
 			<texturenofocus border="5">MenuItemNF.png</texturenofocus>
-			<font>font13bold</font>
+			<font>font13</font>
 			<label>-</label>
 			<onup>11</onup>
 			<onleft>16</onleft>
@@ -135,7 +135,7 @@
 			<aligny>center</aligny>
 			<texturefocus border="5">MenuItemFO.png</texturefocus>
 			<texturenofocus border="5">MenuItemNF.png</texturenofocus>
-			<font>font13bold</font>
+			<font>font13</font>
 			<label>1013</label>
 			<onup>16</onup>
 			<onleft>13</onleft>
@@ -152,7 +152,7 @@
 			<aligny>center</aligny>
 			<texturefocus border="5">MenuItemFO.png</texturefocus>
 			<texturenofocus border="5">MenuItemNF.png</texturenofocus>
-			<font>font13bold</font>
+			<font>font13</font>
 			<label>1014</label>
 			<onup>13</onup>
 			<onleft>14</onleft>
@@ -169,7 +169,7 @@
 			<aligny>center</aligny>
 			<texturefocus border="5">MenuItemFO.png</texturefocus>
 			<texturenofocus border="5">MenuItemNF.png</texturenofocus>
-			<font>font13bold</font>
+			<font>font13</font>
 			<label>15052</label>
 			<onup>14</onup>
 			<onleft>15</onleft>

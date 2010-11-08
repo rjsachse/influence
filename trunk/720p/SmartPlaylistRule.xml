@@ -47,7 +47,7 @@
 			<posy>18</posy>
 			<width>760</width>
 			<height>30</height>
-			<font>font13boldcaps_title</font>
+			<font>font13caps_title</font>
 			<label>$LOCALIZE[21421]</label>
 			<align>center</align>
 			<aligny>center</aligny>
@@ -88,7 +88,7 @@
 				<posy>100</posy>
 				<width>300</width>
 				<height>40</height>
-				<font>font13boldcaps</font>
+				<font>font13caps</font>
 				<label>$INFO[Control.GetLabel(15)]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -115,7 +115,7 @@
 				<posy>100</posy>
 				<width>300</width>
 				<height>40</height>
-				<font>font13boldcaps</font>
+				<font>font13caps</font>
 				<label>$INFO[Control.GetLabel(16)]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -129,7 +129,7 @@
 			<posy>145</posy>
 			<width>585</width>
 			<height>40</height>
-			<font>font13bold</font>
+			<font>font13</font>
 			<aligny>center</aligny>
 			<texturefocus border="3">button-focus.png</texturefocus>
 			<texturenofocus border="3">button-nofocus.png</texturenofocus>

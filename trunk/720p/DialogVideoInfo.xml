@@ -146,7 +146,7 @@
 								<posy>0</posy>
 								<width>160</width>
 								<height>30</height>
-								<font>font13boldcaps_title</font>
+								<font>font13caps_title</font>
 								<align>right</align>
 								<aligny>center</aligny>
 								<textcolor>blue</textcolor>
@@ -158,7 +158,7 @@
 								<posy>0</posy>
 								<width>565</width>
 								<height>30</height>
-								<font>font13bold</font>
+								<font>font13</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
@@ -181,7 +181,7 @@
 								<posy>0</posy>
 								<width>160</width>
 								<height>30</height>
-								<font>font13boldcaps_title</font>
+								<font>font13caps_title</font>
 								<align>right</align>
 								<aligny>center</aligny>
 								<textcolor>blue</textcolor>
@@ -193,7 +193,7 @@
 								<posy>0</posy>
 								<width>565</width>
 								<height>30</height>
-								<font>font13bold</font>
+								<font>font13</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
@@ -320,7 +320,7 @@
 								<posy>0</posy>
 								<width>160</width>
 								<height>30</height>
-								<font>font13boldcaps_title</font>
+								<font>font13caps_title</font>
 								<align>right</align>
 								<aligny>center</aligny>
 								<textcolor>blue</textcolor>
@@ -332,7 +332,7 @@
 								<posy>0</posy>
 								<width>665</width>
 								<height>30</height>
-								<font>font13bold</font>
+								<font>font13</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
@@ -355,7 +355,7 @@
 								<posy>0</posy>
 								<width>160</width>
 								<height>30</height>
-								<font>font13boldcaps_title</font>
+								<font>font13caps_title</font>
 								<align>right</align>
 								<aligny>center</aligny>
 								<textcolor>blue</textcolor>
@@ -367,7 +367,7 @@
 								<posy>0</posy>
 								<width>665</width>
 								<height>30</height>
-								<font>font13bold</font>
+								<font>font13</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
@@ -464,7 +464,7 @@
 								<posy>0</posy>
 								<width>160</width>
 								<height>30</height>
-								<font>font13boldcaps_title</font>
+								<font>font13caps_title</font>
 								<align>right</align>
 								<aligny>center</aligny>
 								<textcolor>blue</textcolor>
@@ -476,7 +476,7 @@
 								<posy>0</posy>
 								<width>565</width>
 								<height>30</height>
-								<font>font13bold</font>
+								<font>font13</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
@@ -499,7 +499,7 @@
 								<posy>0</posy>
 								<width>160</width>
 								<height>30</height>
-								<font>font13boldcaps_title</font>
+								<font>font13caps_title</font>
 								<align>right</align>
 								<aligny>center</aligny>
 								<textcolor>blue</textcolor>
@@ -511,7 +511,7 @@
 								<posy>0</posy>
 								<width>565</width>
 								<height>30</height>
-								<font>font13bold</font>
+								<font>font13</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
@@ -609,7 +609,7 @@
 								<posy>0</posy>
 								<width>160</width>
 								<height>30</height>
-								<font>font13boldcaps_title</font>
+								<font>font13caps_title</font>
 								<align>right</align>
 								<aligny>center</aligny>
 								<textcolor>blue</textcolor>
@@ -621,7 +621,7 @@
 								<posy>0</posy>
 								<width>465</width>
 								<height>30</height>
-								<font>font13bold</font>
+								<font>font13</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
@@ -644,7 +644,7 @@
 								<posy>0</posy>
 								<width>160</width>
 								<height>30</height>
-								<font>font13boldcaps_title</font>
+								<font>font13caps_title</font>
 								<align>right</align>
 								<aligny>center</aligny>
 								<textcolor>blue</textcolor>
@@ -656,7 +656,7 @@
 								<posy>0</posy>
 								<width>465</width>
 								<height>30</height>
-								<font>font13bold</font>
+								<font>font13</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
@@ -774,7 +774,7 @@
 								<posy>0</posy>
 								<width>160</width>
 								<height>30</height>
-								<font>font13boldcaps_title</font>
+								<font>font13caps_title</font>
 								<align>right</align>
 								<aligny>center</aligny>
 								<textcolor>blue</textcolor>
@@ -786,7 +786,7 @@
 								<posy>0</posy>
 								<width>465</width>
 								<height>30</height>
-								<font>font13bold</font>
+								<font>font13</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
@@ -809,7 +809,7 @@
 								<posy>0</posy>
 								<width>160</width>
 								<height>30</height>
-								<font>font13boldcaps_title</font>
+								<font>font13caps_title</font>
 								<align>right</align>
 								<aligny>center</aligny>
 								<textcolor>blue</textcolor>
@@ -821,7 +821,7 @@
 								<posy>0</posy>
 								<width>465</width>
 								<height>30</height>
-								<font>font13bold</font>
+								<font>font13</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
@@ -894,7 +894,7 @@
 					<posy>480</posy>
 					<width>400</width>
 					<height>30</height>
-					<font>font13boldcaps_title</font>
+					<font>font13caps_title</font>
 					<textcolor>grey2</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<scroll>true</scroll>
@@ -908,7 +908,7 @@
 					<posy>480</posy>
 					<width>400</width>
 					<height>30</height>
-					<font>font13boldcaps_title</font>
+					<font>font13caps_title</font>
 					<textcolor>grey2</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<scroll>true</scroll>
@@ -936,7 +936,7 @@
 					<posy>515</posy>
 					<width>1030</width>
 					<height>120</height>
-					<font>font12bold</font>
+					<font>font12</font>
 					<align>justify</align>
 					<textcolor>white</textcolor>
 					<pagecontrol>61</pagecontrol>
@@ -980,7 +980,7 @@
 							<posy>0</posy>
 							<width>410</width>
 							<height>40</height>
-							<font>font12bold</font>
+							<font>font12</font>
 							<align>left</align>
 							<aligny>center</aligny>
 							<selectedcolor>white</selectedcolor>
@@ -1009,7 +1009,7 @@
 							<posy>0</posy>
 							<width>410</width>
 							<height>40</height>
-							<font>font12bold</font>
+							<font>font12</font>
 							<align>left</align>
 							<aligny>center</aligny>
 							<selectedcolor>white</selectedcolor>
@@ -1063,15 +1063,6 @@
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>20410</label>
 						<visible>!IsEmpty(ListItem.Trailer)</visible>
-					</control>
-					<control type="button" id="13">
-						<description>Home Theater Experience</description>
-						<include>ButtonInfoDialogsCommonValues</include>
-						<label>Theater</label>
-						<onclick>Dialog.Close(MovieInformation)</onclick>
-						<onclick>Playlist.Clear</onclick>
-						<onclick>RunScript(special://home/scripts/Home Theater Experience/default.py)</onclick>
-						<visible>skin.HasSetting(ScriptHomeTheaterExp)</visible>
 					</control>
 				</control>
 			</control>

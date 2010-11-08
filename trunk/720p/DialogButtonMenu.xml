@@ -7,9 +7,65 @@
 		<posy>0</posy>
 	</coordinates>
 	<controls>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>black-back.png</texture>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>black-back.png</texture>
+			<colordiffuse>99FFFFFF</colordiffuse>
+		</control>
 		<control type="group">
 			<posx>305</posx>
-			<posy>445</posy>
+			<posy>245</posy>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>670</width>
+				<height>210</height>
+				<texture border="20">OverlayDialogBackground.png</texture>
+				<visible>!System.HasAlarm(shutdowntimer)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>670</width>
+				<height>235</height>
+				<texture border="20">OverlayDialogBackground.png</texture>
+				<visible>System.HasAlarm(shutdowntimer)</visible>
+			</control>
+			<control type="image">
+				<posx>10</posx>
+				<posy>5</posy>
+				<width>650</width>
+				<height>60</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>GlassTitleBar.png</texture>
+			</control>
+			<control type="button">
+				<description>Close Window button</description>
+				<posx>570</posx>
+				<posy>5</posy>
+				<width>64</width>
+				<height>32</height>
+				<label>-</label>
+				<font>-</font>
+				<onclick>PreviousMenu</onclick>
+				<texturefocus>DialogCloseButton-focus.png</texturefocus>
+				<texturenofocus>DialogCloseButton.png</texturenofocus>
+				<onleft>13</onleft>
+				<onright>13</onright>
+				<onup>13</onup>
+				<ondown>13</ondown>
+				<visible>system.getbool(input.enablemouse)</visible>
+			</control>
 			<control type="label" id="3100">
 				<description>Label control</description>
 				<posx>10</posx>
@@ -197,7 +253,7 @@
 				<posy>190</posy>
 				<width>650</width>
 				<height>35</height>
-				<font>font12bold</font>
+				<font>font12</font>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<align>center</align>

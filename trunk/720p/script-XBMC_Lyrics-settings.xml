@@ -119,7 +119,7 @@
 					<posy>0</posy>
 					<width>570</width>
 					<height>40</height>
-					<font>font13bold</font>
+					<font>font13</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<texturefocus>MenuItemFO.png</texturefocus>
@@ -138,7 +138,7 @@
 					<height>40</height>
 					<label>$LOCALIZE[SCRIPT202]</label>
 					<pulseonselect>no</pulseonselect>
-					<font>font13bold</font>
+					<font>font13</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<texturefocus>MenuItemFO.png</texturefocus>
@@ -151,7 +151,7 @@
 					<width>570</width>
 					<height>40</height>
 					<label>$LOCALIZE[SCRIPT203]</label>
-					<font>font13bold</font>
+					<font>font13</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<texturefocus>MenuItemFO.png</texturefocus>
@@ -163,7 +163,7 @@
 					<height>40</height>
 					<label>$LOCALIZE[SCRIPT210]</label>
 					<pulseonselect>no</pulseonselect>
-					<font>font13bold</font>
+					<font>font13</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<texturefocus>MenuItemFO.png</texturefocus>
@@ -175,7 +175,7 @@
 					<height>40</height>
 					<label>$LOCALIZE[SCRIPT211]</label>
 					<pulseonselect>no</pulseonselect>
-					<font>font13bold</font>
+					<font>font13</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<texturefocus>MenuItemFO.png</texturefocus>
@@ -193,7 +193,7 @@
 					<height>40</height>
 					<label>$LOCALIZE[SCRIPT204]</label>
 					<pulseonselect>no</pulseonselect>
-					<font>font13bold</font>
+					<font>font13</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<texturefocus>MenuItemFO.png</texturefocus>
@@ -205,7 +205,7 @@
 					<height>40</height>
 					<label>$LOCALIZE[SCRIPT205]</label>
 					<pulseonselect>no</pulseonselect>
-					<font>font13bold</font>
+					<font>font13</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<texturefocus>MenuItemFO.png</texturefocus>
@@ -223,7 +223,7 @@
 					<height>40</height>
 					<label>$LOCALIZE[SCRIPT206]</label>
 					<pulseonselect>no</pulseonselect>
-					<font>font13bold</font>
+					<font>font13</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<texturefocus>MenuItemFO.png</texturefocus>
@@ -236,7 +236,7 @@
 					<width>570</width>
 					<height>40</height>
 					<label>$LOCALIZE[SCRIPT207]</label>
-					<font>font13bold</font>
+					<font>font13</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<texturefocus>MenuItemFO.png</texturefocus>
@@ -255,7 +255,7 @@
 					<width>570</width>
 					<height>40</height>
 					<label>$LOCALIZE[SCRIPT208]</label>
-					<font>font13bold</font>
+					<font>font13</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<texturefocus>MenuItemFO.png</texturefocus>
@@ -267,7 +267,7 @@
 					<height>40</height>
 					<label>$LOCALIZE[SCRIPT209]</label>
 					<pulseonselect>no</pulseonselect>
-					<font>font13bold</font>
+					<font>font13</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<texturefocus>MenuItemFO.png</texturefocus>
@@ -285,7 +285,7 @@
 					<width>220</width>
 					<height>80</height>
 					<aspectratio>keep</aspectratio>
-					<texture>Influence_Logo.png</texture>
+					<texture>Confluence_Logo.png</texture>
 				</control>
 				<control type="button" id="250">
 					<description>OK button</description>
@@ -294,7 +294,7 @@
 					<width>215</width>
 					<height>51</height>
 					<label>$LOCALIZE[SCRIPT250]</label>
-					<font>font13boldcaps_title</font>
+					<font>font13caps_title</font>
 					<align>right</align>
 					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
 					<texturefocus border="5">MenuItemFO.png</texturefocus>
@@ -310,7 +310,7 @@
 					<width>215</width>
 					<height>51</height>
 					<label>$LOCALIZE[SCRIPT251]</label>
-					<font>font13boldcaps_title</font>
+					<font>font13caps_title</font>
 					<align>right</align>
 					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
 					<texturefocus border="5">MenuItemFO.png</texturefocus>
@@ -326,7 +326,7 @@
 					<width>215</width>
 					<height>51</height>
 					<label>$LOCALIZE[SCRIPT252]</label>
-					<font>font13boldcaps_title</font>
+					<font>font13caps_title</font>
 					<align>right</align>
 					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
 					<texturefocus border="5">MenuItemFO.png</texturefocus>
@@ -342,7 +342,7 @@
 					<width>215</width>
 					<height>51</height>
 					<label>$LOCALIZE[SCRIPT254]</label>
-					<font>font13boldcaps_title</font>
+					<font>font13caps_title</font>
 					<align>right</align>
 					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
 					<texturefocus border="5">MenuItemFO.png</texturefocus>
@@ -358,7 +358,7 @@
 					<width>215</width>
 					<height>51</height>
 					<label>$LOCALIZE[SCRIPT255]</label>
-					<font>font13boldcaps_title</font>
+					<font>font13caps_title</font>
 					<align>right</align>
 					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
 					<texturefocus border="5">MenuItemFO.png</texturefocus>
@@ -374,7 +374,7 @@
 					<width>215</width>
 					<height>51</height>
 					<label>$LOCALIZE[SCRIPT253]</label>
-					<font>font13boldcaps_title</font>
+					<font>font13caps_title</font>
 					<align>right</align>
 					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
 					<texturefocus border="5">MenuItemFO.png</texturefocus>
