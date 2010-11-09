@@ -29,7 +29,7 @@
 					<label>31323</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>font12caps_title</font>
+					<font>font12_title</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -37,7 +37,7 @@
 					<description>Main Icon -3</description>
 					<posx>165</posx>
 					<posy>60</posy>
-					<width>120</width>
+					<width>75</width>
 					<height>110</height>
 					<aspectratio align="left">keep</aspectratio>
 					<texture background="true">$INFO[Window.Property(LatestMovie.4.Thumb)]</texture>
@@ -46,9 +46,9 @@
 				</control>
 				<control type="image">
 					<description>Main Icon -2</description>
-					<posx>120</posx>
+					<posx>130</posx>
 					<posy>50</posy>
-					<width>120</width>
+					<width>86</width>
 					<height>130</height>
 					<aspectratio align="left">keep</aspectratio>
 					<texture background="true">$INFO[Window.Property(LatestMovie.3.Thumb)]</texture>
@@ -57,9 +57,9 @@
 				</control>
 				<control type="image">
 					<description>Main Icon -1</description>
-					<posx>70</posx>
+					<posx>80</posx>
 					<posy>40</posy>
-					<width>120</width>
+					<width>100</width>
 					<height>150</height>
 					<aspectratio align="left">keep</aspectratio>
 					<texture background="true">$INFO[Window.Property(LatestMovie.2.Thumb)]</texture>
@@ -95,7 +95,7 @@
 							<posy>0</posy>
 							<width>230</width>
 							<height>23</height>
-							<font>font12caps</font>
+							<font>font12</font>
 							<textcolor>white</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<selectedcolor>selected</selectedcolor>
@@ -119,7 +119,7 @@
 							<posy>0</posy>
 							<width>230</width>
 							<height>23</height>
-							<font>font12caps</font>
+							<font>font12</font>
 							<textcolor>white</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<selectedcolor>selected</selectedcolor>
@@ -183,7 +183,7 @@
 					<label>31324</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>font12caps_title</font>
+					<font>font12_title</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -228,7 +228,7 @@
 							<posy>2</posy>
 							<width>230</width>
 							<height>10</height>
-							<font>font10caps</font>
+							<font>font10</font>
 							<textcolor>grey</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<selectedcolor>selected</selectedcolor>
@@ -241,7 +241,7 @@
 							<posy>12</posy>
 							<width>230</width>
 							<height>20</height>
-							<font>font12caps</font>
+							<font>font12</font>
 							<textcolor>white</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<selectedcolor>selected</selectedcolor>
@@ -265,7 +265,7 @@
 							<posy>2</posy>
 							<width>230</width>
 							<height>10</height>
-							<font>font10caps</font>
+							<font>font10</font>
 							<textcolor>grey</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<selectedcolor>selected</selectedcolor>
@@ -278,7 +278,7 @@
 							<posy>12</posy>
 							<width>230</width>
 							<height>20</height>
-							<font>font12caps</font>
+							<font>font12</font>
 							<textcolor>white</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<selectedcolor>selected</selectedcolor>
