@@ -74,11 +74,10 @@
   <string id="31123">Préférer les "Affiches" aux "Bannières" pour les émissions TV</string>
   <string id="31124">Afficher la vidéo en cours de lecture en arrière-plan</string>
   <string id="31125">Afficher la visualisation en cours de lecture en arrière-plan</string>
-
   <string id="31126">Activer le script Lyrics sur l'OSD musique</string>
   <string id="31127">CHEMIN DU SCRIPT LYRICS</string>
   <string id="31128">XBMC Lyrics</string>
-
+  <string id="31129">Activer TvTunes</string>
   <!-- Script labels -->
   <string id="31200">Raccourcis</string>
   <string id="31201">Catégories</string>
