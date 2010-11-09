@@ -1,11 +1,19 @@
 <window id="25">
-	<defaultcontrol always="true">50</defaultcontrol>
+	<defaultcontrol always="true">9999</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<views>50,500,501,508,504,503,505,511</views>
+	<views>50,500,550,560,501,508,504,503,505,511</views>
 	<controls>
+	    <control type="button" id="9999">
+            <description>trigger</description>
+            <onfocus>XBMC.RunScript(script.TvTunes,backend=True&amploop=False)</onfocus>
+            <onfocus>SetFocus(50)</onfocus>
+            <texturenofocus>-</texturenofocus>
+            <texturefocus>-</texturefocus>
+	    <visible> skin.HasSetting(TvTunes)</visible>
+        </control>	
 		<include>CommonVideoBackground</include>
 		<control type="group">
-			<include>Window_OpenClose_Animation</include>		
+			<include>Window_OpenClose_Animation</include>	
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -26,7 +34,7 @@
 				<include>backgroundfade</include>
 				<fadetime>FanartCrossfadeTime</fadetime>
 				<visible>!Skin.HasSetting(VideoLibraryTVFanart)</visible>
-				<visible>Container.Content(TVShows) | [Container.Content(Episodes) + substring(Container.FolderPath,videodb://5/)]</visible>
+				<visible>Container.Content(TVShows) | [Container.Content(Episodes) + stringcompare(Container.FolderPath,videodb://5/)]</visible>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -38,7 +46,7 @@
 				<include>backgroundfade</include>
 				<fadetime>FanartCrossfadeTime</fadetime>
 				<visible>!Skin.HasSetting(VideoLibraryTVFanart)</visible>
-				<visible>Container.Content(Seasons) | [Container.Content(Episodes) + !substring(Container.FolderPath,videodb://5/)]</visible>
+				<visible>Container.Content(Seasons) | [Container.Content(Episodes) + !stringcompare(Container.FolderPath,videodb://5/)]</visible>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -115,9 +123,9 @@
 				<posy>-5</posy>
 				<width>1280</width>
 				<height>725</height>
-				<texture border="0.5.0.0">ContentPanel4.png</texture>
+				<texture border="0,5,0,0">ContentPanel4.png</texture>
 				<include>VisibleFadeEffect</include>
-				<visible>Control.IsVisible(504) | Control.IsVisible(511)</visible>
+				<visible>Control.IsVisible(504) | Control.IsVisible(511) | Control.IsVisible(550) | Control.IsVisible(560)</visible>
 			</control>
 			<control type="group">
 				<include>VisibleFadeEffect</include>
@@ -149,6 +157,8 @@
 			<include>MediaListView2</include> <!-- view id = 504 -->
 			<include>WideIconView</include> <!-- view id = 505 -->
 			<include>MusicVideoInfoListView</include> <!-- view id = 511 -->
+			<include>AddonInfoListView1</include> <!-- view id = 550 -->
+			<include>LiveTVView1</include> <!-- view id = 560 -->
 		</control>
 		<include>CommonPageCount</include>
 		<include>BehindDialogFadeOut</include>
@@ -157,7 +167,8 @@
 			<animation effect="slide" start="0,0" end="250,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="-250,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus">WindowClose</animation>
 			<control type="group">
-				<animation effect="slide" end="-228,0" time="300" tween="quadratic" easing="out">WindowClose</animation>
+				<animation effect="slide" end="-240,0" time="300" tween="quadratic" easing="out">WindowClose</animation>
+				<animation effect="slide" start="-15,0" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -213,6 +224,7 @@
 					<itemgap>0</itemgap>
 					<control type="radiobutton" id="14">
 						<description>Watched Toggle</description>
+						<textwidth>170</textwidth>
 						<include>ButtonMediaSubCommonValues</include>
 						<label>20367</label>
 					</control>
@@ -223,16 +235,19 @@
 					</control>
 					<control type="radiobutton" id="19">
 						<description>Filter</description>
+						<textwidth>170</textwidth>
 						<include>ButtonMediaSubCommonValues</include>
 						<label>587</label>
 					</control>
 					<control type="radiobutton" id="17">
 						<description>Flatten</description>
+						<textwidth>170</textwidth>
 						<include>ButtonMediaSubCommonValues</include>
 						<label>20411</label>
 					</control>
 					<control type="radiobutton" id="11">
 						<description>Unlock Shares</description>
+						<textwidth>170</textwidth>
 						<include>ButtonMediaSubCommonValues</include>
 						<label>20336</label>
 						<onclick>xbmc.mastermode</onclick>
@@ -251,6 +266,7 @@
 					</control>
 					<control type="radiobutton" id="201">
 						<description>Toggle MoviesFanart</description>
+						<textwidth>170</textwidth>
 						<include>ButtonMediaSubCommonValues</include>
 						<label>31307</label>
 						<onclick>Skin.ToggleSetting(VideoLibraryMovieFanart)</onclick>
@@ -259,6 +275,7 @@
 					</control>
 					<control type="radiobutton" id="202">
 						<description>Toggle TVShow Fanart</description>
+						<textwidth>170</textwidth>
 						<include>ButtonMediaSubCommonValues</include>
 						<label>31307</label>
 						<onclick>Skin.ToggleSetting(VideoLibraryTVFanart)</onclick>
@@ -267,6 +284,7 @@
 					</control>
 					<control type="radiobutton" id="203">
 						<description>Toggle MusicVideo Fanart</description>
+						<textwidth>170</textwidth>
 						<include>ButtonMediaSubCommonValues</include>
 						<label>31307</label>
 						<onclick>Skin.ToggleSetting(VideoLibraryMusicVideoFanart)</onclick>
@@ -275,6 +293,7 @@
 					</control>
 					<control type="radiobutton" id="204">
 						<description>Toggle Fanart</description>
+						<textwidth>170</textwidth>
 						<include>ButtonMediaSubCommonValues</include>
 						<label>31318</label>
 						<onclick>Skin.ToggleSetting(VideoLibraryFanartView504)</onclick>
@@ -282,6 +301,7 @@
 						<visible>[Control.IsVisible(504) + [Container.Content(Movies) | Container.Content(TVShows)]]</visible>
 					</control>
 					<control type="radiobutton" id="205">
+						<textwidth>170</textwidth>
 						<description>Toggle Fanart View Media Info</description>
 						<include>ButtonMediaSubCommonValues</include>
 						<label>31005</label>
@@ -303,13 +323,7 @@
 				<texturefocus>-</texturefocus>
 				<visible>true</visible>
 			</control>
-			<control type="image">
-				<posx>-820</posx>
-				<posy>0</posy>
-				<width>846</width>
-				<height>720</height>
-				<texture>HomeBlade.png</texture>
-			</control>
+			<include>SideBladeLeft</include>
 			<control type="image">
 				<description>LOGO</description>
 				<posx>-230</posx>
@@ -415,13 +429,6 @@
 					<visible>false</visible>
 				</control>
 			</control>
-		</control>
-		<control type="image">
-			<posx>26r</posx>
-			<posy>0</posy>
-			<width>846</width>
-			<height>720</height>
-			<texture flipx="true">HomeBlade.png</texture>
 		</control>
 		<control type="group">
 			<posx>240</posx>
