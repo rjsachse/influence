@@ -707,6 +707,7 @@
 				<colordiffuse>DAFFFFFF</colordiffuse>
 				<texture>HomeBlade_bottom.png</texture>
 			</control>
+			
 			<control type="button" id="8999">
 				<description>Run Recently added</description>
 				<posx>-20</posx>
@@ -715,7 +716,7 @@
 				<height>1</height>
 				<label>-</label>
 				<font>-</font>
-				<onfocus>XBMC.RunScript(special://skin/scripts/RecentlyAdded.py,limit=4)</onfocus>
+				<onfocus>XBMC.RunScript(script.recentlyadded,limit=4)</onfocus>
 				<onfocus>SetFocus(9000)</onfocus>
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>-</texturefocus>
@@ -821,6 +822,7 @@
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
 					</item>
+
 					<item id="2">
 						<label>3</label>
 						<onclick>ActivateWindow(Videos)</onclick>
