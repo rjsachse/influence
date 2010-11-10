@@ -1,0 +1,1680 @@
+<includes>
+	<include name="IncludeHomeHorizontal">
+		<!-- Music Info Horizontal-->
+		
+		<control type="group">
+			<posx>0</posx>
+			<posy>400r</posy>
+			<visible>Player.HasAudio + !Skin.HasSetting(homepageMusicinfo)</visible>
+			<include>VisibleFadeEffect</include>
+			<include>Window_OpenClose_Animation</include>
+			<animation effect="slide" end="0,30" time="0" condition="!system.getbool(lookandfeel.enablerssfeeds)">conditional</animation>
+			<animation effect="slide" end="0,115" condition="Skin.HasSetting(RaiseHorizontalMenu)">Conditional</animation>
+			<animation effect="slide" end="70,0" condition="Skin.HasSetting(CDart)">Conditional</animation>
+			<control type="image">
+				<posx>-100</posx>
+				<posy>-30</posy>
+				<width>1480</width>
+				<height>325</height>
+				<texture>home/nowplaying_shadow.png</texture>
+			</control>
+			<control type="image">
+				<description>Cd overlay</description>
+				<posx>1315r</posx>
+				<posy>0</posy>
+				<animation effect="slide" start="70" end="0" time="900" tween="cubic" easing="out" delay="2000">WindowOpen</animation>
+				<animation effect="rotate" end="-360" center="auto" time="2250" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+				<width>200</width>
+				<height>205</height>
+				<texture fallback="cdart/default.png">$INFO[Player.FolderPath]/cdart.png</texture>
+				<aspectratio align="bottom">keep</aspectratio>
+				<visible>Skin.HasSetting(CDart)</visible>
+			</control>
+			<control type="image">
+				<description>Cover image</description>
+				<posx>1225r</posx>
+				<posy>-15</posy>
+				<width>230</width>
+				<height>230</height>
+				<aspectratio aligny="bottom">stretch</aspectratio>
+				<texture>$INFO[MusicPlayer.Cover]</texture>
+				<bordertexture border="11">ThumbBorder.png</bordertexture>
+				<bordersize>5</bordersize>
+			</control>
+			<control type="label">
+				<description>NowPlaying label</description>
+				<posx>975r</posx>
+				<posy>80</posy>
+				<height>30</height>
+				<width>660</width>
+				<label>$LOCALIZE[31040]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font12_title</font>
+				<textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Artist label</description>
+				<posx>975r</posx>
+				<posy>105</posy>
+				<height>30</height>
+				<width>660</width>
+				<label>$INFO[MusicPlayer.Artist]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font12_title</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Album Label</description>
+				<posx>975r</posx>
+				<posy>130</posy>
+				<height>30</height>
+				<width>660</width>
+				<label>$INFO[MusicPlayer.Album]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Title label</description>
+				<posx>975r</posx>
+				<posy>155</posy>
+				<height>30</height>
+				<width>470</width>
+				<label>$INFO[MusicPlayer.Title]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font13_title</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Time Label</description>
+				<posx>975r</posx>
+				<posy>180</posy>
+				<height>30</height>
+				<width>325</width>
+				<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<!-- Next 5 Songs -->
+			<control type="group">
+				<posx>430</posx>
+				<posy>292r</posy>
+				<visible>Skin.HasSetting(Next5Songs)</visible>
+				<control type="label">
+					<posx>360</posx>
+					<posy>-25</posy>
+					<label>Next Tracks:</label>
+					<textcolor>blue</textcolor>
+					<font>font12_title</font>
+					<shadowcolor>black</shadowcolor>
+					<visible>!IsEmpty(MusicPlayer.offset(1).Artist)</visible>
+				</control>
+				<control type="group">
+					<control type="label">
+						<visible>!IsEmpty(MusicPlayer.offset(1).Artist)</visible>
+						<posx>360</posx>
+						<posy>0</posy>
+						<width>410</width>
+						<label>[COLOR blue]1:[/COLOR] $INFO[MusicPlayer.offset(1).Artist]: $INFO[MusicPlayer.offset(1).Title]</label>
+						<font>font12_title</font>
+						<shadowcolor>black</shadowcolor>
+						<animation effect="slide" start="1280" end="0" time="800" tween="cubic" easing="out" delay="2000">WindowOpen</animation>
+					</control>
+					<control type="label">
+						<visible>!IsEmpty(MusicPlayer.offset(2).Artist)</visible>
+						<posx>360</posx>
+						<posy>19</posy>
+						<width>410</width>
+						<label>[COLOR blue]2:[/COLOR] $INFO[MusicPlayer.offset(2).Artist]: $INFO[MusicPlayer.offset(2).Title]</label>
+						<font>font12_title</font>
+						<shadowcolor>black</shadowcolor>
+						<animation effect="slide" start="1280" end="0" time="800" tween="cubic" easing="out" delay="2100">WindowOpen</animation>
+					</control>
+					<control type="label">
+						<visible>!IsEmpty(MusicPlayer.offset(3).Artist)</visible>
+						<posx>360</posx>
+						<posy>39</posy>
+						<width>410</width>
+						<label>[COLOR blue]3:[/COLOR] $INFO[MusicPlayer.offset(3).Artist]: $INFO[MusicPlayer.offset(3).Title]</label>
+						<font>font12_title</font>
+						<shadowcolor>black</shadowcolor>
+						<animation effect="slide" start="1280" end="0" time="800" tween="cubic" easing="out" delay="2200">WindowOpen</animation>
+					</control>
+					<control type="label">
+						<visible>!IsEmpty(MusicPlayer.offset(4).Artist)</visible>
+						<posx>360</posx>
+						<posy>57</posy>
+						<width>410</width>
+						<label>[COLOR blue]4:[/COLOR] $INFO[MusicPlayer.offset(4).Artist]: $INFO[MusicPlayer.offset(4).Title]</label>
+						<font>font12_title</font>
+						<shadowcolor>black</shadowcolor>
+						<animation effect="slide" start="1280" end="0" time="800" tween="cubic" easing="out" delay="2300">WindowOpen</animation>
+					</control>
+					<control type="label">
+						<animation effect="slide" start="1280" end="0" time="800" tween="cubic" easing="out" delay="2400">WindowOpen</animation>
+						<visible>!IsEmpty(MusicPlayer.offset(5).Artist)</visible>
+						<posx>360</posx>
+						<posy>76</posy>
+						<width>410</width>
+						<label>[COLOR blue]5:[/COLOR] $INFO[MusicPlayer.offset(5).Artist]: $INFO[MusicPlayer.offset(5).Title]</label>
+						<font>font12_title</font>
+						<shadowcolor>black</shadowcolor>
+					</control>
+				</control>
+			</control>
+			<!-- Next 5 Songs -->
+		</control>
+		<!-- Video Info Horizontal -->
+		<control type="group">
+			<posx>0</posx>
+			<posy>400r</posy>
+			<visible>Player.HasVideo + !Skin.HasSetting(homepageVideoinfo)</visible>
+			<include>VisibleFadeEffect</include>
+			<include>Window_OpenClose_Animation</include>
+			<animation effect="slide" end="0,30" time="0" condition="!system.getbool(lookandfeel.enablerssfeeds)">conditional</animation>
+			<animation effect="slide" end="0,127" condition="Skin.HasSetting(RaiseHorizontalMenu)">Conditional</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>-30</posy>
+				<width>1280</width>
+				<height>325</height>
+				<texture>home/nowplaying_shadow.png</texture>
+			</control>
+			<control type="group">
+				<visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes)</visible>
+				<control type="image">
+					<description>Cover image</description>
+					<posx>1200r</posx>
+					<posy>25</posy>
+					<width>180</width>
+					<height>180</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<texture>$INFO[VideoPlayer.Cover]</texture>
+					<bordertexture border="8">ThumbBorder.png</bordertexture>
+					<bordersize>5</bordersize>
+				</control>
+				<control type="label">
+					<description>NowPlaying label</description>
+					<posx>1000r</posx>
+					<posy>125</posy>
+					<height>30</height>
+					<width>660</width>
+					<label>$LOCALIZE[31040]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>blue</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>1000r</posx>
+					<posy>150</posy>
+					<height>30</height>
+					<width>660</width>
+					<label>$INFO[VideoPlayer.Title]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Time Label</description>
+					<posx>1000r</posx>
+					<posy>175</posy>
+					<height>30</height>
+					<width>325</width>
+					<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+			<!-- Movie Info Horizontal -->
+			<control type="group">
+				<visible>VideoPlayer.Content(Movies)</visible>
+				<control type="image">
+					<description>Cover image</description>
+					<posx>1200r</posx>
+					<posy>-120</posy>
+					<width>180</width>
+					<height>340</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<texture>$INFO[VideoPlayer.Cover]</texture>
+					<bordertexture border="8">ThumbBorder.png</bordertexture>
+					<bordersize>5</bordersize>
+				</control>
+				<control type="label">
+					<description>NowPlaying label</description>
+					<posx>1000r</posx>
+					<posy>90</posy>
+					<height>30</height>
+					<width>660</width>
+					<label>$LOCALIZE[31040]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>blue</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Studio label</description>
+					<posx>1000r</posx>
+					<posy>115</posy>
+					<height>30</height>
+					<width>660</width>
+					<label>$INFO[VideoPlayer.Studio]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Genre Label</description>
+					<posx>1000r</posx>
+					<posy>140</posy>
+					<height>30</height>
+					<width>660</width>
+					<label>$INFO[VideoPlayer.Genre]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>1000r</posx>
+					<posy>165</posy>
+					<height>30</height>
+					<width>660</width>
+					<label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR=grey] (,)[/COLOR]]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Time Label</description>
+					<posx>1000r</posx>
+					<posy>190</posy>
+					<height>30</height>
+					<width>325</width>
+					<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+			<!-- TV Show Info Horizontal-->
+			<control type="group">
+				<visible>VideoPlayer.Content(Episodes)</visible>
+				<control type="image">
+					<description>Cover image</description>
+					<posx>1250r</posx>
+					<posy>-120</posy>
+					<width>230</width>
+					<height>340</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<texture>$INFO[VideoPlayer.Cover]</texture>
+					<bordertexture border="8">ThumbBorder.png</bordertexture>
+					<bordersize>5</bordersize>
+				</control>
+				<control type="label">
+					<description>NowPlaying label</description>
+					<posx>1000r</posx>
+					<posy>90</posy>
+					<height>30</height>
+					<width>610</width>
+					<label>$LOCALIZE[31040]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>blue</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>TV Show label</description>
+					<posx>1000r</posx>
+					<posy>115</posy>
+					<height>30</height>
+					<width>610</width>
+					<label>$INFO[VideoPlayer.TVShowTitle]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Season Ep Label</description>
+					<posx>1000r</posx>
+					<posy>140</posy>
+					<height>30</height>
+					<width>610</width>
+					<label>$LOCALIZE[20373] $INFO[VideoPlayer.Season] - $LOCALIZE[20359] $INFO[VideoPlayer.episode]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>1000r</posx>
+					<posy>165</posy>
+					<height>30</height>
+					<width>610</width>
+					<label>$INFO[VideoPlayer.Title]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Time Label</description>
+					<posx>1000r</posx>
+					<posy>190</posy>
+					<height>30</height>
+					<width>325</width>
+					<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+		</control>
+		<!-- Horizontal Statistics -->
+		<control type="group">
+			<posx>0</posx>
+			<posy>581</posy>
+			<visible>Skin.HasSetting(HomeStats)</visible>
+			<animation effect="slide" end="-650,0" time="900" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="-650,0" time="900" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" end="0,-275" condition="Skin.HasSetting(RaiseHorizontalMenu)">Conditional</animation>
+			<control type="image">
+				<description>background</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>550</width>
+				<height>35</height>
+				<texture border="0,0,32,0" flipx="true">Rss_Back.png</texture>
+				<visible>Container(9000).HasFocus(2) | Container(9000).HasFocus(10) | Container(9000).HasFocus(3) | Container(9000).HasFocus(11)</visible>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>2</posy>
+				<height>30</height>
+				<width>520</width>
+				<font>font12_title</font>
+				<label> $LOCALIZE[20342]: $INFO[Window.Property(Movies.Count)]  |  $LOCALIZE[20343]: $INFO[Window.Property(TVShows.Count)]  |  Music Videos: $INFO[Window.Property(MusicVideos.Count)]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font13caps_title</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<scrollout>false</scrollout>
+				<pauseatend>2000</pauseatend>
+				<visible>Container(9000).HasFocus(2)</visible>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>2</posy>
+				<height>30</height>
+				<width>520</width>
+				<font>font12_title</font>
+				<label> $LOCALIZE[20342]: $INFO[Window.Property(Movies.Count)]  |  $LOCALIZE[16102]: $INFO[Window.Property(Movies.Watched)]  |  $LOCALIZE[16101]: $INFO[Window.Property(Movies.UnWatched)]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font13caps_title</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<scrollout>false</scrollout>
+				<pauseatend>2000</pauseatend>
+				<visible>Container(9000).HasFocus(10)</visible>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>2</posy>
+				<height>30</height>
+				<width>520</width>
+				<font>font12_title</font>
+				<label> $LOCALIZE[132]: $INFO[Window.Property(Music.AlbumsCount)]  |  $LOCALIZE[134]: $INFO[Window.Property(Music.SongsCount)]  |  $LOCALIZE[133]: $INFO[Window.Property(Music.ArtistsCount)]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font13caps_title</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<scrollout>false</scrollout>
+				<pauseatend>2000</pauseatend>
+				<visible>Container(9000).HasFocus(3)</visible>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>2</posy>
+				<height>30</height>
+				<width>520</width>
+				<font>font12_title</font>
+				<label> $LOCALIZE[20343]: $INFO[Window.Property(TVShows.Count)]  |  $LOCALIZE[20360]: $INFO[Window.Property(Episodes.Count)]  |  $LOCALIZE[16101]: $INFO[Window.Property(Episodes.UnWatched)]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font13caps_title</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<scrollout>false</scrollout>
+				<pauseatend>2000</pauseatend>
+				<visible>Container(9000).HasFocus(11)</visible>
+			</control>
+		</control>
+		<!-- Horizontal -->
+		<control type="group">
+			<animation effect="fade" time="700" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="fade" time="700" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" end="0,-275" condition="Skin.HasSetting(RaiseHorizontalMenu)">Conditional</animation>
+			<control type="group">
+				<animation effect="slide" start="0,0" time="300" tween="quadratic" easing="out">WindowClose</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0r</posy>
+					<width>2000</width>
+					<height>30</height>
+					<texture></texture>
+					<animation effect="zoom" start="100,100,100,100" end="0,0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>380</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>720</height>
+					<texture></texture>
+					<animation effect="slide" end="228,0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+				</control>
+			</control>
+
+			<control type="group" id="300">
+				<control type="button" id="301">
+					<visible>!Skin.HasSetting(AlternateSubMenu) + [Container(9000).HasFocus(11) | Container(9000).HasFocus(10) | Container(9000).HasFocus(1) | Container(9000).HasFocus(2) | Container(9000).HasFocus(3) | Container(9000).HasFocus(5)]</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>Setfocus(9001)</onfocus>
+				</control>
+
+				<control type="button" id="302">
+					<visible>Skin.HasSetting(AlternateSubMenu) + Container(9000).HasFocus(3)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8002)</onfocus>
+				</control>
+				<control type="button" id="306">
+					<visible>Skin.HasSetting(AlternateSubMenu) + Container(9000).HasFocus(10)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8000)</onfocus>
+				</control>
+				<control type="button" id="307">
+					<visible>Skin.HasSetting(AlternateSubMenu) + Container(9000).HasFocus(11)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8001)</onfocus>
+				</control>
+			</control>
+			
+			<control type="group" id="303">
+				<control type="button" id="304">
+					<visible>!Skin.HasSetting(AlternateSubMenu)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(10)</onfocus>
+				</control>
+				<control type="button" id="305">
+					<visible>Skin.HasSetting(AlternateSubMenu) + [Container(9000).HasFocus(11) | Container(9000).HasFocus(10) | Container(9000).HasFocus(1) | Container(9000).HasFocus(2) | Container(9000).HasFocus(3) | Container(9000).HasFocus(5)]</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(9001)</onfocus>
+				</control>
+			</control>
+
+			<!-- Submenu Settings -->
+			<control type="group" id="9001">
+				<posx>-16</posx>
+				<posy>575</posy>
+				<animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(9001).HasFocus">conditional</animation>
+				<animation effect="fade" start="0" end="100" delay="300" time="200" condition="ControlGroup(9001).HasFocus">conditional</animation>
+				<animation effect="fade" start="100" end="0" time="0" condition="ControlGroup(9001).HasFocus">WindowClose</animation>
+				<visible>!Skin.HasSetting(AlternateSubMenu)</visible>
+				<control type="image">
+					<posx>446</posx>
+					<posy>345r</posy>
+					<width>423</width>
+					<height>241x</height>
+					<colordiffuse>DAFFFFFF</colordiffuse>
+					<texture>home/submenubar.png</texture>
+				</control>
+				
+				<!-- Videos Submenu -->
+				
+				<control type="grouplist" id="9010">
+					<posx>574</posx>
+					<posy>-230</posy>
+					<width>0</width>
+					<height>300</height>
+					<align>center</align>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>9010</onup>
+					<ondown>9000</ondown>
+					<itemgap>0</itemgap>
+					<visible>Container(9000).HasFocus(2)</visible>
+					<orientation>vertical</orientation>
+					<control type="button" id="90101">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>342</label>
+						<onclick>ActivateWindow(VideoLibrary,MovieTitles,return)</onclick>
+						<visible>Library.HasContent(Movies)</visible>
+					</control>
+					<control type="button" id="90102">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>20343</label>
+						<onclick>ActivateWindow(VideoLibrary,TvShowTitles,return)</onclick>
+						<visible>Library.HasContent(TVShows)</visible>
+					</control>
+					<control type="button" id="90103">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>20389</label>
+						<onclick>ActivateWindow(VideoLibrary,MusicVideoTitles,return)</onclick>
+						<visible>Library.HasContent(MusicVideos)</visible>
+					</control>
+					<control type="button" id="90104">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>744</label>
+						<onclick>ActivateWindow(VideoFiles)</onclick>
+					</control>
+					<control type="button" id="90105">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>14022</label>
+						<onclick>ActivateWindow(VideoLibrary)</onclick>
+						<visible>Library.HasContent(Video)</visible>
+					</control>
+					<control type="button" id="90106">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>24001</label>
+						<onclick>ActivateWindow(VideoLibrary,Addons,return)</onclick>
+						<visible>Library.HasContent(Video)</visible>
+					</control>
+					<control type="button" id="90107">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>24001</label>
+						<onclick>ActivateWindow(VideoFiles,Addons,return)</onclick>
+						<visible>!Library.HasContent(Video)</visible>
+					</control>
+				</control>
+				
+				<!-- Music Submenu -->
+				
+				<control type="grouplist" id="9011">
+					<posx>574</posx>
+					<posy>-230</posy>
+					<width>0</width>
+					<height>300</height>
+					<align>center</align>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>8002</onup>
+					<ondown>9000</ondown>
+					<itemgap>0</itemgap>
+					<visible>Container(9000).HasFocus(3)</visible>
+					<orientation>vertical</orientation>
+					<control type="button" id="90111">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>133</label>
+						<onclick>ActivateWindow(MusicLibrary,Artists,return)</onclick>
+						<visible>Library.HasContent(Music)</visible>
+					</control>
+					<control type="button" id="90112">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>132</label>
+						<onclick>ActivateWindow(MusicLibrary,Albums,return)</onclick>
+						<visible>Library.HasContent(Music)</visible>
+					</control>
+					<control type="button" id="90113">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>134</label>
+						<onclick>ActivateWindow(MusicLibrary,Songs,return)</onclick>
+						<visible>Library.HasContent(Music)</visible>
+					</control>
+					<control type="button" id="90114">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>744</label>
+						<onclick>ActivateWindow(MusicFiles)</onclick>
+					</control>
+					<control type="button" id="90115">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>14022</label>
+						<onclick>ActivateWindow(MusicLibrary)</onclick>
+						<visible>Library.HasContent(Music)</visible>
+					</control>
+					<control type="button" id="90116">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>24001</label>
+						<onclick>ActivateWindow(MusicLibrary,Addons,return)</onclick>
+						<visible>Library.HasContent(Music)</visible>
+					</control>
+					<control type="button" id="90117">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>24001</label>
+						<onclick>ActivateWindow(MusicFiles,Addons,return)</onclick>
+						<visible>!Library.HasContent(Music)</visible>
+					</control>
+				</control>
+				
+				<!-- Settings Submenu -->
+				
+				<control type="grouplist" id="9014">
+					<posx>574</posx>
+					<posy>-230</posy>
+					<width>0</width>
+					<height>300</height>
+					<align>center</align>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>9001</onup>
+					<ondown>9000</ondown>
+					<itemgap>0</itemgap>
+					<visible>Container(9000).HasFocus(5)</visible>
+					<orientation>vertical</orientation>
+					<control type="button" id="90146">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>24001</label>
+						<onclick>ActivateWindow(AddonBrowser)</onclick>
+					</control>
+					<control type="button" id="90141">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>5</label>
+						<onclick>ActivateWindow(Settings)</onclick>
+					</control>
+					<control type="button" id="90147">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>480</label>
+						<onclick>ActivateWindow(appearancesettings)</onclick>
+					</control>
+					<control type="button" id="90142">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>7</label>
+						<onclick>ActivateWindow(FileManager)</onclick>
+					</control>
+					<control type="button" id="90143">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>13200</label>
+						<onclick>ActivateWindow(Profiles)</onclick>
+					</control>
+					<control type="button" id="90144">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>130</label>
+						<onclick>ActivateWindow(SystemInfo)</onclick>
+					</control>
+					<control type="button" id="90145">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>470</label>
+						<onclick>ActivateWindow(Credits)</onclick>
+						<visible>False</visible>
+					</control>
+				</control>
+				
+				<!-- Custom Submenu -->
+				
+				<control type="grouplist" id="9015">
+					<posx>574</posx>
+					<posy>-230</posy>
+					<width>0</width>
+					<height>300</height>
+					<align>center</align>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>9001</onup>
+					<ondown>9000</ondown>
+					<itemgap>0</itemgap>
+					<visible>Container(9000).HasFocus(1) + [[Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))] | [Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))] | [Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))] | [Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))] | [Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))] | [Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))]]</visible>
+					<orientation>vertiacal</orientation>
+					<control type="button" id="90151">
+						<description>Button1</description>
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(HomeScriptButton1_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton1_Path)])</onclick>
+						<visible>Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))</visible>
+					</control>
+					<control type="button" id="90152">
+						<description>Button2</description>
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(HomeScriptButton2_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton2_Path)])</onclick>
+						<visible>Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))</visible>
+					</control>
+					<control type="button" id="90153">
+						<description>Button3</description>
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(HomeScriptButton3_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton3_Path)])</onclick>
+						<visible>Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))</visible>
+					</control>
+					<control type="button" id="90154">
+						<description>Button4</description>
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(HomeScriptButton4_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton4_Path)])</onclick>
+						<visible>Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))</visible>
+					</control>
+					<control type="button" id="90155">
+						<description>Button5</description>
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(HomeScriptButton5_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton5_Path)])</onclick>
+						<visible>Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))</visible>
+					</control>
+					<control type="button" id="90156">
+						<description>Button6</description>
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(HomeScriptButton6_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton6_Path)])</onclick>
+						<visible>Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))</visible>
+					</control>
+				</control>
+				
+				<!-- Movie Submenu -->
+				
+				<control type="grouplist" id="9016">
+					<posx>574</posx>
+					<posy>-230</posy>
+					<width>0</width>
+					<height>300</height>
+					<align>center</align>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>8000</onup>
+					<ondown>9000</ondown>
+					<itemgap>0</itemgap>
+					<visible>Container(9000).HasFocus(10)</visible>
+					<orientation>vertical</orientation>
+					<control type="button" id="90161">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>369</label>
+						<onclick>ActivateWindow(VideoLibrary,MovieTitles,return)</onclick>
+					</control>
+					<control type="button" id="90162">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>135</label>
+						<onclick>ActivateWindow(VideoLibrary,MovieGenres,return)</onclick>
+					</control>
+					<control type="button" id="90163">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>652</label>
+						<onclick>ActivateWindow(VideoLibrary,MovieYears,return)</onclick>
+					</control>
+					<control type="button" id="90164">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>344</label>
+						<onclick>ActivateWindow(VideoLibrary,MovieActors,return)</onclick>
+					</control>
+					<control type="button" id="90165">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>20348</label>
+						<onclick>ActivateWindow(VideoLibrary,MovieDirectors,return)</onclick>
+					</control>
+					<control type="button" id="90166">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>31328</label>
+						<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</onclick>
+					</control>
+				</control>
+				
+				<!-- TV Show Submenu -->
+				
+				<control type="grouplist" id="9017">
+					<posx>574</posx>
+					<posy>-230</posy>
+					<width>0</width>
+					<height>300</height>
+					<align>center</align>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>8001</onup>
+					<ondown>9000</ondown>
+					<itemgap>0</itemgap>
+					<visible>Container(9000).HasFocus(11)</visible>
+					<orientation>vertical</orientation>
+					<control type="button" id="90171">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>369</label>
+						<onclick>ActivateWindow(VideoLibrary,TVShowTitles,return)</onclick>
+					</control>
+					<control type="button" id="90172">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>135</label>
+						<onclick>ActivateWindow(VideoLibrary,TVShowGenres,return)</onclick>
+					</control>
+					<control type="button" id="90173">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>652</label>
+						<onclick>ActivateWindow(VideoLibrary,TVShowYears,return)</onclick>
+					</control>
+					<control type="button" id="90174">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>344</label>
+						<onclick>ActivateWindow(VideoLibrary,TVShowActors,return)</onclick>
+					</control>
+					<control type="button" id="90176">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>20388</label>
+						<onclick>ActivateWindow(VideoLibrary,TVShowStudios,return)</onclick>
+					</control>
+					<control type="button" id="90175">
+						<width>180</width>
+						<align>center</align>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>31328</label>
+						<onclick>ActivateWindow(VideoLibrary,RecentlyAddedEpisodes,return)</onclick>
+					</control>
+				</control>
+			</control>
+			
+<!-- Alternate Submenu -->
+	
+			<control type="group" id="9001">
+				<posx>207</posx>
+				<posy>668</posy>
+				<visible>Skin.HasSetting(AlternateSubMenu) + [Container(9000).HasFocus(11) | Container(9000).HasFocus(10) | Container(9000).HasFocus(1) | Container(9000).HasFocus(2) | Container(9000).HasFocus(3) | Container(9000).HasFocus(5)]</visible>
+				<animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(9001).HasFocus">conditional</animation>
+				<animation effect="fade" start="0" end="100" delay="300" time="200" condition="ControlGroup(9001).HasFocus">conditional</animation>
+				<animation effect="fade" start="100" end="0" time="0" condition="ControlGroup(9001).HasFocus">WindowClose</animation>
+				<control type="image">
+					<posx>80</posx>
+					<width>700</width>
+					<height>35</height>
+					<colordiffuse>DAFFFFFF</colordiffuse>
+					<texture>home/alternatesubmenubar.png</texture>
+				</control>
+				<control type="wraplist" id="945">
+					<posx>100</posx>
+					<height>33</height>
+					<width>660</width>
+					<onleft>945</onleft>
+					<onright>945</onright>
+					<onup>9000</onup>
+					<ondown>10</ondown>
+					<viewtype>list</viewtype>
+					<orientation>horizontal</orientation>
+					<focusposition>2</focusposition>
+					<scrolltime>200</scrolltime>
+					<itemlayout width="129" height="33">
+						<control type="label">
+							<posx>74</posx>
+							<posy>0</posy>
+							<height>30</height>
+							<width>129</width>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>font12_title</font>
+							<info>ListItem.Label</info>
+							<textcolor>5fFFFFFF</textcolor>
+						</control>
+					</itemlayout>
+					<focusedlayout width="129" height="33">
+						<control type="label">
+							<posx>74</posx>
+							<posy>0</posy>
+							<height>30</height>
+							<width>129</width>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>font12_title</font>
+							<info>ListItem.Label</info>
+							<textcolor>white</textcolor>
+						</control>
+					</focusedlayout>
+					<content>
+						<!-- TV -->
+						<item id="1">
+							<description>By Title</description>
+							<label>369</label>
+							<onclick>ActivateWindow(VideoLibrary,TVShowTitles,return)</onclick>
+							<visible>Container(9000).HasFocus(11)</visible>
+						</item>
+						<item id="2">
+							<description>By Genre</description>
+							<label>135</label>
+							<onclick>ActivateWindow(VideoLibrary,TVShowGenres,return)</onclick>
+							<visible>Container(9000).HasFocus(11)</visible>
+						</item>
+						<item id="3">
+							<description>Recently Added</description>
+							<label>Recent</label>
+							<onclick>ActivateWindow(VideoLibrary,RecentlyAddedEpisodes,return)</onclick>
+							<visible>Container(9000).HasFocus(11)</visible>
+						</item>
+						<item id="4">
+							<description>By Year</description>
+							<label>652</label>
+							<onclick>ActivateWindow(VideoLibrary,TVShowYears,return)</onclick>
+							<visible>Container(9000).HasFocus(11)</visible>
+						</item>
+						<item id="5">
+							<description>By Actor</description>
+							<label>344</label>
+							<onclick>ActivateWindow(VideoLibrary,TVShowActors,return)</onclick>
+							<visible>Container(9000).HasFocus(11)</visible>
+						</item>
+						<item id="6">
+							<description>By Studio</description>
+							<label>20388</label>
+							<onclick>ActivateWindow(VideoLibrary,TVShowStudios,return)</onclick>
+							<visible>Container(9000).HasFocus(11)</visible>
+						</item>
+						<!-- TV end -->
+						<!-- Movies -->
+						<item id="7">
+							<description>By Genre</description>
+							<label>135</label>
+							<onclick>ActivateWindow(VideoLibrary,MovieGenres,return)</onclick>
+							<visible>Container(9000).HasFocus(10)</visible>
+						</item>
+						<item id="8">
+							<description>By Year</description>
+							<label>652</label>
+							<onclick>ActivateWindow(VideoLibrary,MovieYears,return)</onclick>
+							<visible>Container(9000).HasFocus(10)</visible>
+						</item>
+						<item id="9">
+							<description>Recently Added</description>
+							<label>Recent</label>
+							<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</onclick>
+							<visible>Container(9000).HasFocus(10)</visible>
+						</item>
+						<item id="10">
+							<description>Movietitles</description>
+							<label>369</label>
+							<onclick>ActivateWindow(VideoLibrary,Movietitles,return)</onclick>
+							<visible>Container(9000).HasFocus(10)</visible>
+						</item>
+						<item id="11">
+							<description>By Actor</description>
+							<label>344</label>
+							<onclick>ActivateWindow(VideoLibrary,MovieActors,return)</onclick>
+							<visible>Container(9000).HasFocus(10)</visible>
+						</item>
+						<item id="12">
+							<description>By Director</description>
+							<label>20348</label>
+							<onclick>ActivateWindow(VideoLibrary,MovieDirectors,return)</onclick>
+							<visible>Container(9000).HasFocus(10)</visible>
+						</item>
+						<item id="13">
+							<description>By Studio</description>
+							<label>20388</label>
+							<onclick>ActivateWindow(VideoLibrary,MovieStudios,return)</onclick>
+							<visible>Container(9000).HasFocus(10)</visible>
+						</item>
+						<!-- Movies End -->
+						<!-- Music -->
+						<item id="14">
+							<description>Partymode</description>
+							<label>589</label>
+							<onclick>PlayerControl(Partymode(Music))</onclick>
+							<visible>Container(9000).HasFocus(3)</visible>
+						</item>
+						<item id="15">
+							<description>by albums</description>
+							<label>132</label>
+							<onclick>ActivateWindow(MusicLibrary,Albums,return)</onclick>
+							<visible>Container(9000).HasFocus(3)</visible>
+						</item>
+						<item id="16">
+							<description>by Recently Added</description>
+							<label>Recent</label>
+							<onclick>ActivateWindow(MusicLibrary,RecentlyAddedAlbums,return)</onclick>
+							<visible>Container(9000).HasFocus(3)</visible>
+						</item>
+						<item id="17">
+							<description>by Artists</description>
+							<label>133</label>
+							<onclick>ActivateWindow(MusicLibrary,Artists,return)</onclick>
+							<visible>Container(9000).HasFocus(3)</visible>
+						</item>
+						<item id="18">
+							<description>by Playlists</description>
+							<label>136</label>
+							<onclick>ActivateWindow(MusicLibrary,Playlists,return)</onclick>
+							<visible>Container(9000).HasFocus(3)</visible>
+						</item>
+						<item id="19">
+							<description>Browse Button</description>
+							<label>744</label>
+							<onclick>ActivateWindow(Musicfiles)</onclick>
+							<visible>Container(9000).HasFocus(3)</visible>
+						</item>
+						<item id="20">
+							<description>Genres</description>
+							<label>135</label>
+							<onclick>ActivateWindow(MusicLibrary,Genres,return)</onclick>
+							<visible>Container(9000).HasFocus(3)</visible>
+						</item>
+						<item id="21">
+							<description>Compilations</description>
+							<label>521</label>
+							<onclick>ActivateWindow(MusicLibrary,Compilations,return)</onclick>
+							<visible>Container(9000).HasFocus(3)</visible>
+						</item>
+						<item id="22">
+							<description>Addons</description>
+							<label>24001</label>
+							<onclick>ActivateWindow(MusicLibrary,Addons,return)</onclick>
+							<visible>Container(9000).HasFocus(3)</visible>
+						</item>
+						<!-- Music end -->
+						<!-- programs -->
+						<item id="23">
+							<description>Button1</description>
+							<label>$INFO[Skin.String(HomeScriptButton1_label)]</label>
+							<onclick>Setfocus(9000)</onclick>
+							<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton1_Path)])</onclick>
+							<visible>Container(9000).HasFocus(1) + [Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))]</visible>
+						</item>
+						<item id="24">
+							<description>Button2</description>
+							<label>$INFO[Skin.String(HomeScriptButton2_label)]</label>
+							<onclick>Setfocus(9000)</onclick>
+							<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton2_Path)])</onclick>
+							<visible>Container(9000).HasFocus(1) + [Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))]</visible>
+						</item>
+						<item id="25">
+							<description>Button3</description>
+							<label>$INFO[Skin.String(HomeScriptButton3_label)]</label>
+							<onclick>Setfocus(9000)</onclick>
+							<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton3_Path)])</onclick>
+							<visible>Container(9000).HasFocus(1) + [Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))]</visible>
+						</item>
+						<item id="26">
+							<description>Button4</description>
+							<label>$INFO[Skin.String(HomeScriptButton4_label)]</label>
+							<onclick>Setfocus(9000)</onclick>
+							<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton4_Path)])</onclick>
+							<visible>Container(9000).HasFocus(1) + [Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))]</visible>
+						</item>
+						<item id="27">
+							<description>Button5</description>
+							<label>$INFO[Skin.String(HomeScriptButton5_label)]</label>
+							<onclick>Setfocus(9000)</onclick>
+							<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton5_Path)])</onclick>
+							<visible>Container(9000).HasFocus(1) + [Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))]</visible>
+						</item>
+						<item id="28">
+							<description>Button6</description>
+							<label>$INFO[Skin.String(HomeScriptButton6_label)]</label>
+							<onclick>Setfocus(9000)</onclick>
+							<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton6_Path)])</onclick>
+							<visible>Container(9000).HasFocus(1) + [Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))]</visible>
+						</item>
+						<!-- programs End -->
+						<!-- Video -->
+						<item id="29">
+							<description>Movie Titles</description>
+							<label>342</label>
+							<onclick>ActivateWindow(VideoLibrary,MovieTitles,return)</onclick>
+							<visible>Container(9000).HasFocus(2)</visible>
+						</item>
+						<item id="30">
+							<description>TVShow Titles</description>
+							<label>20343</label>
+							<onclick>ActivateWindow(VideoLibrary,TvShowTitles,return)</onclick>
+							<visible>Container(9000).HasFocus(2)</visible>
+						</item>
+						<item id="31">
+							<description>Music Videos</description>
+							<label>20389</label>
+							<onclick>ActivateWindow(VideoLibrary,MusicVideoTitles,return)</onclick>
+							<visible>Container(9000).HasFocus(2)</visible>
+						</item>
+						<item id="32">
+							<description>Video Files</description>
+							<label>744</label>
+							<onclick>ActivateWindow(VideoFiles)</onclick>
+							<visible>Container(9000).HasFocus(2)</visible>
+						</item>
+						<item id="33">
+							<description>Video Library</description>
+							<label>14022</label>
+							<onclick>ActivateWindow(VideoLibrary)</onclick>
+							<visible>Container(9000).HasFocus(2)</visible>
+						</item>
+						<item id="34">
+							<description>Addons</description>
+							<label>24001</label>
+							<onclick>ActivateWindow(VideoFiles,Addons,return)</onclick>
+							<visible>Container(9000).HasFocus(2)</visible>
+						</item>
+						<!-- Video End -->
+						<!-- Settings -->
+						<item id="35">
+							<description>Pictures Settings Button</description>
+							<label>24001</label>
+							<onclick>ActivateWindow(AddonBrowser)</onclick>
+							<visible>Container(9000).HasFocus(5)</visible>
+						</item>
+						<item id="36">
+							<description>Network Settings Button</description>
+							<label>5</label>
+							<onclick>ActivateWindow(Settings)</onclick>
+							<visible>Container(9000).HasFocus(5)</visible>
+						</item>
+						<item id="37">
+							<description>System Settings Button</description>
+							<label>480</label>
+							<onclick>ActivateWindow(appearancesettings)</onclick>
+							<visible>Container(9000).HasFocus(5)</visible>
+						</item>
+						<item id="38">
+							<description>Customise Settings Button</description>
+							<label>7</label>
+							<onclick>ActivateWindow(FileManager)</onclick>
+							<visible>Container(9000).HasFocus(5)</visible>
+						</item>
+						<item id="39">
+							<description>Advanced Settings Button</description>
+							<label>13200</label>
+							<onclick>ActivateWindow(Profiles)</onclick>
+							<visible>Container(9000).HasFocus(5)</visible>
+						</item>
+						<item id="40">
+							<description>Aeon Settings Button</description>
+							<label>130</label>
+							<onclick>ActivateWindow(SystemInfo)</onclick>
+							<visible>Container(9000).HasFocus(5)</visible>
+						</item>
+					</content>
+				</control>
+			</control>
+			
+<!-- Alternate Submenu -->
+
+			<control type="image">
+				<posx>-235</posx>
+				<posy>138r</posy>
+				<width>1950</width>
+				<height>125</height>
+				<colordiffuse>DAFFFFFF</colordiffuse>
+				<texture>home/homemenu_back.png</texture>
+			</control>
+			<control type="button" id="8999">
+				<description>Run Recently added</description>
+				<posx>-20</posx>
+				<posy>-20</posy>
+				<width>1</width>
+				<height>1</height>
+				<label>-</label>
+				<font>-</font>
+				<onfocus>Skin.Reset(LibraryUpdated)</onfocus>
+				<onfocus>XBMC.RunScript(script.recentlyadded,limit=4&amp;albums=True&amp;totals=True)</onfocus>
+				<onfocus>SetFocus(9000)</onfocus>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
+			</control>
+			<control type="button" id="8999">
+				<description>Don't run Recently added</description>
+				<posx>-20</posx>
+				<posy>-20</posy>
+				<width>1</width>
+				<height>1</height>
+				<label>-</label>
+				<font>-</font>
+				<onfocus>SetFocus(9000)</onfocus>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<visible>!Skin.HasSetting(homepageHideRecentlyAdded)</visible>
+			</control>
+			<control type="wraplist" id="9000">
+				<posx>-175</posx>
+				<posy>120r</posy>
+				<width>1515</width>
+				<height>100</height>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>300</onup>
+				<ondown>303</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>300</scrolltime>
+				<focusposition>1</focusposition>
+				<orientation>horizontal</orientation>
+				<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+				<animation effect="fade" start="100" end="30" time="200" condition="Window.IsVisible(1113) | ControlGroup(9001).HasFocus | ControlGroup(10).HasFocus | Control.HasFocus(8000) | Control.HasFocus(8001)">conditional</animation>
+				<itemlayout height="100" width="450">
+					<control type="label">
+						<posx>375</posx>
+						<posy>21</posy>
+						<width>450</width>
+						<height>40</height>
+						<font>font60caps_title</font>
+						<textcolor>grey3</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="100" width="450">
+					<control type="label">
+						<posx>375</posx>
+						<posy>21</posy>
+						<width>500</width>
+						<height>40</height>
+						<font>font60caps_title</font>
+						<textcolor>white</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="6">
+						<label>8</label>
+						<onclick>ActivateWindow(Weather)</onclick>
+						<icon>special://skin/backgrounds/weather.jpg</icon>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>
+						<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+						<visible>!Skin.HasSetting(ShowWeatherFanart) | IsEmpty(Skin.String(WeatherFanartDir))</visible>
+					</item>
+					<item id="6">
+						<label>8</label>
+						<onclick>ActivateWindow(Weather)</onclick>
+						<icon>special://skin/backgrounds/weather.jpg</icon>
+						<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</thumb>
+						<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+						<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
+					</item>
+					<item id="4">
+						<label>1</label>
+						<onclick>ActivateWindow(Pictures)</onclick>
+						<icon>special://skin/backgrounds/pictures.jpg</icon>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</thumb>
+						<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
+					</item>
+					<item id="3">
+						<label>2</label>
+						<onclick>ActivateWindow(Music)</onclick>
+						<icon>special://skin/backgrounds/music.jpg</icon>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</thumb>
+						<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
+					</item>
+					<item id="2">
+						<label>3</label>
+						<onclick>ActivateWindow(Videos)</onclick>
+						<icon>special://skin/backgrounds/videos.jpg</icon>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</thumb>
+						<visible>!Skin.HasSetting(HomeMenuNoVideosButton) + ![Skin.HasSetting(HomeMenuNoMoviesButton) + Skin.HasSetting(HomeMenuNoTVShowsButton)]</visible>
+					</item>
+					<item id="2">
+						<label>3</label>
+						<onclick>ActivateWindow(VideoFiles)</onclick>
+						<icon>special://skin/backgrounds/videos.jpg</icon>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</thumb>
+						<visible>!Skin.HasSetting(HomeMenuNoVideosButton) + [Skin.HasSetting(HomeMenuNoMoviesButton) + Skin.HasSetting(HomeMenuNoTVShowsButton)]</visible>
+					</item>
+					<item id="10">
+						<label>20342</label>
+						<onclick>ActivateWindow(VideoLibrary,MovieTitles,return)</onclick>
+						<icon>special://skin/backgrounds/videos.jpg</icon>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</thumb>
+						<visible>Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)</visible>
+					</item>
+					<item id="11">
+						<label>20343</label>
+						<onclick>ActivateWindow(VideoLibrary,TVShowTitles,return)</onclick>
+						<icon>special://skin/backgrounds/videos.jpg</icon>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</thumb>
+						<visible>Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)</visible>
+					</item>
+<-- Custom Home -->					
+					<item id="15">
+						<description>Custom Movie One</description>
+						<label>$INFO[Skin.String(Menu_Custom1_Label)]</label>
+						<icon>special://skin/backgrounds/custom.jpg</icon>
+						<thumb>$INFO[Skin.String(Menu_Custom1_Folder)]</thumb>
+						<onclick>$INFO[Skin.String(Menu_Custom1_Path)]</onclick>
+						<visible>Skin.HasSetting(Menu_Custom1)</visible>
+					</item>
+					<item id="16">
+						<description>Custom Movie Two</description>
+						<label>$INFO[Skin.String(Menu_Custom2_Label)]</label>
+						<icon>special://skin/backgrounds/custom.jpg</icon>
+						<thumb>$INFO[Skin.String(Menu_Custom2_Folder)]</thumb>
+						<onclick>$INFO[Skin.String(Menu_Custom2_Path)]</onclick>
+						<visible>Skin.HasSetting(Menu_Custom2)</visible>
+					</item>
+					<item id="17">
+						<description>Custom Movie Three</description>
+						<label>$INFO[Skin.String(Menu_Custom3_Label)]</label>
+						<icon>special://skin/backgrounds/custom.jpg</icon>
+						<thumb>$INFO[Skin.String(Menu_Custom3_Folder)]</thumb>
+						<onclick>$INFO[Skin.String(Menu_Custom3_Path)]</onclick>
+						<visible>Skin.HasSetting(Menu_Custom3)</visible>
+					</item>
+					<item id="22">
+						<description>Custom Movie Seven</description>
+						<label>$INFO[Skin.String(Menu_Custom7_Label)]</label>
+						<icon>special://skin/backgrounds/custom.jpg</icon>
+						<thumb>$INFO[Skin.String(Menu_Custom7_Folder)]</thumb>
+						<onclick>$INFO[Skin.String(Menu_Custom7_Path)]</onclick>
+						<visible>Skin.HasSetting(Menu_Custom7)</visible>
+					</item>
+					<item id="23">
+						<description>Custom Movie Eight</description>
+						<label>$INFO[Skin.String(Menu_Custom8_Label)]</label>
+						<icon>special://skin/backgrounds/custom.jpg</icon>
+						<thumb>$INFO[Skin.String(Menu_Custom8_Folder)]</thumb>
+						<onclick>$INFO[Skin.String(Menu_Custom8_Path)]</onclick>
+						<visible>Skin.HasSetting(Menu_Custom8)</visible>
+					</item>
+					<item id="19">
+						<description>Custom Movie Four</description>
+						<label>$INFO[Skin.String(Menu_Custom4_Label)]</label>
+						<icon>special://skin/backgrounds/custom.jpg</icon>
+						<thumb>$INFO[Skin.String(Menu_Custom4_Folder)]</thumb>
+						<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom4_Path)],return)</onclick>
+						<visible>Skin.HasSetting(Menu_Custom4)</visible>
+					</item>
+					<item id="20">
+						<description>Custom Movie Five</description>
+						<label>$INFO[Skin.String(Menu_Custom5_Label)]</label>
+						<icon>special://skin/backgrounds/custom.jpg</icon>
+						<thumb>$INFO[Skin.String(Menu_Custom5_Folder)]</thumb>
+						<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom5_Path)],return)</onclick>
+						<visible>Skin.HasSetting(Menu_Custom5)</visible>
+					</item>
+					<item id="21">
+						<description>Custom Movie Six</description>
+						<label>$INFO[Skin.String(Menu_Custom6_Label)]</label>
+						<icon>special://skin/backgrounds/custom.jpg</icon>
+						<thumb>$INFO[Skin.String(Menu_Custom6_Folder)]</thumb>
+						<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom6_Path)],return)</onclick>
+						<visible>Skin.HasSetting(Menu_Custom6)</visible>
+					</item>
+					<item id="24">
+						<description>Custom Movie Nine</description>
+						<label>$INFO[Skin.String(Menu_Custom9_Label)]</label>
+						<icon>special://skin/backgrounds/custom.jpg</icon>
+						<thumb>$INFO[Skin.String(Menu_Custom9_Folder)]</thumb>
+						<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom9_Path)],return)</onclick>
+						<visible>Skin.HasSetting(Menu_Custom9)</visible>
+					</item>
+					<item id="25">
+						<description>Custom Movie TEn</description>
+						<label>$INFO[Skin.String(Menu_Custom10_Label)]</label>
+						<icon>special://skin/backgrounds/custom.jpg</icon>
+						<thumb>$INFO[Skin.String(Menu_Custom10_Folder)]</thumb>
+						<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom10_Path)],return)</onclick>
+						<visible>Skin.HasSetting(Menu_Custom10)</visible>
+					</item>
+<-- Custom Home -->					
+					<item id="1">
+						<label>0</label>
+						<onclick>ActivateWindow(Programs,Addons,return)</onclick>
+						<icon>special://skin/backgrounds/programs.jpg</icon>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</thumb>
+						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+					</item>
+					<item id="5">
+						<label>13000</label>
+						<onclick>ActivateWindow(Settings)</onclick>
+						<icon>special://skin/backgrounds/settings.jpg</icon>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</thumb>
+						<visible>!Skin.HasSetting(HomeMenuNoSettingsButton)</visible>
+					</item>
+				</content>
+			</control>
+			<control type="image">
+				<animation effect="slide" end="0,275" condition="Skin.HasSetting(RaiseHorizontalMenu)">Conditional</animation>
+				<posx>0</posx>
+				<posy>100r</posy>
+				<width>256</width>
+				<height>100</height>
+				<texture>HomeButtonsBack.png</texture>
+			</control>
+			<control type="group" id="10">
+				<posx>15</posx>
+				<posy>55r</posy>
+				<animation effect="slide" end="0,275" condition="Skin.HasSetting(RaiseHorizontalMenu)">Conditional</animation>
+				<control type="button" id="20">
+					<description>Power push button</description>
+					<posx>90</posx>
+					<posy>10</posy>
+					<width>43</width>
+					<height>43</height>
+					<label>31003</label>
+					<font>-</font>
+					<aligny>-</aligny>
+					<onclick>ActivateWindow(ShutdownMenu)</onclick>
+					<texturefocus>home-power-FO.png</texturefocus>
+					<texturenofocus>home-power.png</texturenofocus>
+					<onleft>21</onleft>
+					<onright>9000</onright>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+				</control>
+				<control type="button" id="21">
+					<description>Favourites push button</description>
+					<posx>45</posx>
+					<posy>10</posy>
+					<width>43</width>
+					<height>43</height>
+					<label>1036</label>
+					<font>-</font>
+					<aligny>-</aligny>
+					<onclick>ActivateWindow(Favourites)</onclick>
+					<texturefocus>home-favourites-FO.png</texturefocus>
+					<texturenofocus>home-favourites.png</texturenofocus>
+					<onleft>22</onleft>
+					<onright>20</onright>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+				</control>
+				<control type="button" id="22">
+					<description>Play Disc Media push button</description>
+					<posx>0</posx>
+					<posy>10</posy>
+					<width>43</width>
+					<height>43</height>
+					<label>16004</label>
+					<font>-</font>
+					<aligny>-</aligny>
+					<onclick>ActivateWindow(1113)</onclick>
+					<texturefocus>home-playmedia-FO.png</texturefocus>
+					<texturenofocus>home-playmedia.png</texturenofocus>
+					<onleft>9000</onleft>
+					<onright>21</onright>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+				</control>
+			</control>
+		</control>
+		<!-- Horizontal Lowered -->
+		<control type="group">
+			<visible>!Skin.HasSetting(RaiseRSSNewsFeed) + [!Skin.HasSetting(RaiseHorizontalMenu) + !Skin.HasSetting(AlternateSubMenu) | !Skin.HasSetting(RaiseHorizontalMenu) + Skin.HasSetting(AlternateSubMenu) + !ControlGroup(9001).HasFocus | Skin.HasSetting(RaiseHorizontalMenu) + !Skin.HasSetting(AlternateSubMenu) | Skin.HasSetting(RaiseHorizontalMenu) + Skin.HasSetting(AlternateSubMenu)]</visible>
+			<posx>420</posx>
+			<posy>35r</posy>
+			<animation effect="slide" end="0,35" time="300" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="0,35" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+			<control type="image">
+				<description>RSS background</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>860</width>
+				<height>35</height>
+				<texture border="32,0,0,0">Rss_Back.png</texture>
+				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			</control>
+			<control type="rss">
+				<description>RSS feed</description>
+				<posx>35</posx>
+				<posy>6</posy>
+				<height>35</height>
+				<width>825</width>
+				<font>font12</font>
+				<urlset>1</urlset>
+				<textcolor>blue</textcolor>
+				<titlecolor>blue</titlecolor>
+				<headlinecolor>white</headlinecolor>
+				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			</control>
+			<control type="image">
+				<description>RSS background</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>35</height>
+				<texture border="32,0,0,0">Rss_Back_Overlay.png</texture>
+				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			</control>
+		</control>
+		<!-- Horizontal Raised -->
+		<control type="group">
+			<visible>Skin.HasSetting(RaiseHorizontalMenu) + !Skin.HasSetting(AlternateSubMenu) + Skin.HasSetting(RaiseRSSNewsFeed) | Skin.HasSetting(RaiseHorizontalMenu) + Skin.HasSetting(AlternateSubMenu) + Skin.HasSetting(RaiseRSSNewsFeed) + !ControlGroup(9001).HasFocus</visible>
+			<posx>565</posx>
+			<posy>326r</posy>
+			<animation effect="slide" end="750,0" time="900" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="750,0" time="900" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" end="0,35" time="300" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="0,35" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+			<control type="image">
+				<description>RSS background</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>860</width>
+				<height>35</height>
+				<texture border="32,0,0,0" flipy="true">Rss_Back.png</texture>
+				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			</control>
+			<control type="rss">
+				<description>RSS feed</description>
+				<posx>35</posx>
+				<posy>6</posy>
+				<height>35</height>
+				<width>825</width>
+				<font>font12</font>
+				<urlset>1</urlset>
+				<textcolor>blue</textcolor>
+				<titlecolor>blue</titlecolor>
+				<headlinecolor>white</headlinecolor>
+				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			</control>
+			<control type="image">
+				<description>RSS background</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>35</height>
+				<texture border="32,0,0,0" flipy="true">Rss_Back_Overlay.png</texture>
+				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			</control>
+		</control>
+	</include>
+</includes>
