@@ -460,22 +460,6 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-	<!-- Alternate SubMenu -->
-					<control type="radiobutton" id="226">
-						<description>Use Alternate SubMenu</description>
-		                        <visible>Skin.HasSetting(HorizontalMenu)</visible>
-						<width>750</width>
-						<height>40</height>
-            		            <font>font12caps</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label> - Use Alternate Submenu</label>
-						<onclick>Skin.ToggleSetting(AlternateSubMenu)</onclick>
-						<selected>Skin.HasSetting(AlternateSubMenu)</selected>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
-	<!-- Alternate SubMenu -->
 					<control type="radiobutton" id="224">
 			                  <description>Raise Horizontal Menu</description>
             		            <visible>Skin.HasSetting(HorizontalMenu)</visible>
