@@ -17,7 +17,6 @@ class Main:
         for count in range( self.LIMIT ):
             # we clear title for visible condition
             self.WINDOW.clearProperty( "LatestMovie.%d.Title" % ( count + 1, ) )
-            self.WINDOW.clearProperty( "LatestGenreMovie.%d.Title" % ( count + 1, ) )
             self.WINDOW.clearProperty( "LatestEpisode.%d.ShowTitle" % ( count + 1, ) )
             self.WINDOW.clearProperty( "LatestSong.%d.Title" % ( count + 1, ) )
 
@@ -42,14 +41,13 @@ class Main:
             # no params passed
             params = {}
         # set our preferences
-        self.LIMIT = int( params.get( "limit", "4" ) )
+        self.LIMIT = int( params.get( "limit", "5" ) )
         self.RECENT = not params.get( "partial", "" ) == "True"
         self.ALBUMS = params.get( "albums", "" ) == "True"
         self.UNPLAYED = params.get( "unplayed", "" ) == "True"
         self.TOTALS = params.get( "totals", "" ) == "True"
         self.PLAY_TRAILER = params.get( "trailer", "" ) == "True"
         self.ALARM = int( params.get( "alarm", "0" ) )
-        self.GENRE = params.get( "genre", "Animation" ) 
 
     def _set_alarm( self ):
         # only run if user/skinner preference
@@ -72,7 +70,6 @@ class Main:
         # fetch media info
         self._fetch_totals()
         self._fetch_movie_info()
-        self._fetch_genremovie_info()
         self._fetch_tvshow_info()
         # self._fetch_music_info()
 
@@ -127,16 +124,7 @@ class Main:
         self.WINDOW.setProperty( "Movies.LastWatchedRuntime" , movies_totals[ 4 ] or "" )
         self.WINDOW.setProperty( "Movies.LastWatchedGenre" , movies_totals[ 5 ] or "" )
         self.WINDOW.setProperty( "Movies.LastWatchedDate" , movies_totals[ 6 ] or "" )
-
-        self.WINDOW.setProperty( "GenreMovies.Count" , str( movies_totals[ 0 ] ) or "" )
-        self.WINDOW.setProperty( "GenreMovies.Watched" , str( movies_totals[ 1 ] ) or "" )
-        self.WINDOW.setProperty( "GenreMovies.UnWatched" , str( movies_totals[ 0 ] - movies_totals[ 1 ] ) or "" )
-        self.WINDOW.setProperty( "GenreMovies.LastWatchedTitle" , movies_totals[ 2 ] or "" )
-        self.WINDOW.setProperty( "GenreMovies.LastWatchedYear" , movies_totals[ 3 ] or "" )
-        self.WINDOW.setProperty( "GenreMovies.LastWatchedRuntime" , movies_totals[ 4 ] or "" )
-        self.WINDOW.setProperty( "GenreMovies.LastWatchedGenre" , movies_totals[ 5 ] or "" )
-        self.WINDOW.setProperty( "GenreMovies.LastWatchedDate" , movies_totals[ 6 ] or "" )
-
+        
         self.WINDOW.setProperty( "MusicVideos.Count" , mvideos_totals[ 0 ] or "" )
         self.WINDOW.setProperty( "MusicVideos.Watched" , mvideos_totals[ 1 ] or "" )
         self.WINDOW.setProperty( "MusicVideos.UnWatched" , str( int( mvideos_totals[ 0 ] ) - int( mvideos_totals[ 1 ] ) ) or "" )
@@ -186,44 +174,6 @@ class Main:
             if ( not os.path.isfile( xbmc.translatePath( thumb ) ) ):
                 thumb = "special://profile/Thumbnails/Video/%s/auto-%s" % ( thumb_cache[ 0 ], thumb_cache, )
             self.WINDOW.setProperty( "LatestMovie.%d.Thumb" % ( count + 1, ), thumb )
-
-    def _fetch_genremovie_info( self ):
-        print "DEBUG"
-        print self.GENRE
-        print "FIN DEBUG"
-        # set our unplayed query
-        unplayed = ( "", "where playCount isnull ", )[ self.UNPLAYED ]
-        # sql statement
-        if ( self.RECENT ):
-            # recently added
-            sql_movies = "select * from movieview where c14='%s' %sorder by idMovie desc limit %d" % ( self.GENRE,unplayed, self.LIMIT)
-        else:
-            # movies not finished
-            sql_movies = "select movieview.*, bookmark.timeInSeconds from movieview where c14='%s' join bookmark on (movieview.idFile = bookmark.idFile) %sorder by movieview.c00 limit %d" % ( self.GENRE, unplayed, self.LIMIT)
-        # query the database
-        movies_xml = xbmc.executehttpapi( "QueryVideoDatabase(%s)" % quote_plus( sql_movies ), )
-        # separate the records
-        movies = re.findall( "<record>(.+?)</record>", movies_xml, re.DOTALL )
-        # enumerate thru our records and set our properties
-        for count, movie in enumerate( movies ):
-            # separate individual fields
-            fields = re.findall( "<field>(.*?)</field>", movie, re.DOTALL )
-            # set properties
-            self.WINDOW.setProperty( "LatestGenreMovie.%d.Title" % ( count + 1, ), fields[ 1 ] )
-            self.WINDOW.setProperty( "LatestGenreMovie.%d.Rating" % ( count + 1, ), fields[ 6 ] )
-            self.WINDOW.setProperty( "LatestGenreMovie.%d.Year" % ( count + 1, ), fields[ 8 ] )
-            self.WINDOW.setProperty( "LatestGenreMovie.%d.RunningTime" % ( count + 1, ), fields[ 12 ] )
-            # get cache names of path to use for thumbnail/fanart and play path
-            thumb_cache, fanart_cache, play_path = self._get_media( fields[ 24 ], fields[ 23 ] )
-            self.WINDOW.setProperty( "LatestGenreMovie.%d.Path" % ( count + 1, ), ( play_path, fields[ 20 ], )[ fields[ 20 ] != "" and self.PLAY_TRAILER ] )
-            self.WINDOW.setProperty( "LatestGenreMovie.%d.Trailer" % ( count + 1, ), fields[ 20 ] )
-            self.WINDOW.setProperty( "LatestGenreMovie.%d.Fanart" % ( count + 1, ), "special://profile/Thumbnails/Video/%s/%s" % ( "Fanart", fanart_cache, ) )
-            # initial thumb path
-            thumb = "special://profile/Thumbnails/Video/%s/%s" % ( thumb_cache[ 0 ], thumb_cache, )
-            # if thumb does not exist use an auto generated thumb path
-            if ( not os.path.isfile( xbmc.translatePath( thumb ) ) ):
-                thumb = "special://profile/Thumbnails/Video/%s/auto-%s" % ( thumb_cache[ 0 ], thumb_cache, )
-            self.WINDOW.setProperty( "LatestGenreMovie.%d.Thumb" % ( count + 1, ), thumb )
 
     def _fetch_tvshow_info( self ):
         # set our unplayed query
