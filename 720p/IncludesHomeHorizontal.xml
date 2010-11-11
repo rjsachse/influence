@@ -640,39 +640,27 @@
 						</item>
 						<item id="111">
 							<description>SubMenu Opt 1</description>
-							<label>$INFO[Skin.String(SubMenu_TV_opt1_lab)]</label>
-							<onclick>$INFO[Skin.String(SubMenu_TV_opt1_run)]</onclick>
-							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(SubMenu_TV_opt1)</visible>
+							<label>$INFO[Skin.String(SubMenu_TvShows_opt1_lab)]</label>
+							<onclick>$INFO[Skin.String(SubMenu_TvShows_opt1_run)]</onclick>
+							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(SubMenu_TvShows_opt1)</visible>
 						</item>
 						<item id="112">
 							<description>SubMenu Opt 2</description>
-							<label>$INFO[Skin.String(SubMenu_TV_opt2_lab)]</label>
-							<onclick>$INFO[Skin.String(SubMenu_TV_opt2_run)]</onclick>
-							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(SubMenu_TV_opt2)</visible>
+							<label>$INFO[Skin.String(SubMenu_TvShows_opt2_lab)]</label>
+							<onclick>$INFO[Skin.String(SubMenu_TvShows_opt2_run)]</onclick>
+							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(SubMenu_TvShows_opt2)</visible>
 						</item>
 						<item id="113">
 							<description>SubMenu Opt 3</description>
-							<label>$INFO[Skin.String(SubMenu_TV_opt3_lab)]</label>
-							<onclick>$INFO[Skin.String(SubMenu_TV_opt3_run)]</onclick>
-							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(SubMenu_TV_opt3)</visible>
+							<label>$INFO[Skin.String(SubMenu_TvShows_opt3_lab)]</label>
+							<onclick>$INFO[Skin.String(SubMenu_TvShows_opt3_run)]</onclick>
+							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(SubMenu_TvShows_opt3)</visible>
 						</item>
 						<item id="114">
 							<description>SubMenu Opt 4</description>
-							<label>$INFO[Skin.String(SubMenu_TV_opt4_lab)]</label>
-							<onclick>$INFO[Skin.String(SubMenu_TV_opt4_run)]</onclick>
-							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(SubMenu_TV_opt4)</visible>
-						</item>
-						<item id="115">
-							<description>SubMenu Opt 5</description>
-							<label>$INFO[Skin.String(SubMenu_TV_opt5_lab)]</label>
-							<onclick>$INFO[Skin.String(SubMenu_TV_opt5_run)]</onclick>
-							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(SubMenu_TV_opt5)</visible>
-						</item>
-						<item id="116">
-							<description>SubMenu Opt 6</description>
-							<label>$INFO[Skin.String(SubMenu_TV_opt6_lab)]</label>
-							<onclick>$INFO[Skin.String(SubMenu_TV_opt6_run)]</onclick>
-							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(SubMenu_TV_opt6)</visible>
+							<label>$INFO[Skin.String(SubMenu_TvShows_opt4_lab)]</label>
+							<onclick>$INFO[Skin.String(SubMenu_TvShows_opt4_run)]</onclick>
+							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(SubMenu_TvShows_opt4)</visible>
 						</item>
 <!-- TV end -->
 <!-- Movies -->
@@ -720,39 +708,27 @@
 						</item>
 						<item id="211">
 							<description>SubMenu Opt 1</description>
-							<label>$INFO[Skin.String(SubMenu_Movie_opt1_lab)]</label>
-							<onclick>$INFO[Skin.String(SubMenu_Movie_opt1_run)]</onclick>
-							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(SubMenu_Movie_opt1)</visible>
+							<label>$INFO[Skin.String(SubMenu_Movies_opt1_lab)]</label>
+							<onclick>$INFO[Skin.String(SubMenu_Movies_opt1_run)]</onclick>
+							<visible>Container(9000).HasFocus(10) + Skin.HasSetting(SubMenu_Movies_opt1)</visible>
 						</item>
 						<item id="212">
 							<description>SubMenu Opt 2</description>
-							<label>$INFO[Skin.String(SubMenu_Movie_opt2_lab)]</label>
-							<onclick>$INFO[Skin.String(SubMenu_Movie_opt2_run)]</onclick>
-							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(SubMenu_Movie_opt2)</visible>
+							<label>$INFO[Skin.String(SubMenu_Movies_opt2_lab)]</label>
+							<onclick>$INFO[Skin.String(SubMenu_Movies_opt2_run)]</onclick>
+							<visible>Container(9000).HasFocus(10) + Skin.HasSetting(SubMenu_Movies_opt2)</visible>
 						</item>
 						<item id="213">
 							<description>SubMenu Opt 3</description>
-							<label>$INFO[Skin.String(SubMenu_Movie_opt3_lab)]</label>
-							<onclick>$INFO[Skin.String(SubMenu_Movie_opt3_run)]</onclick>
-							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(SubMenu_Movie_opt3)</visible>
+							<label>$INFO[Skin.String(SubMenu_Movies_opt3_lab)]</label>
+							<onclick>$INFO[Skin.String(SubMenu_Movies_opt3_run)]</onclick>
+							<visible>Container(9000).HasFocus(10) + Skin.HasSetting(SubMenu_Movies_opt3)</visible>
 						</item>
 						<item id="214">
 							<description>SubMenu Opt 4</description>
-							<label>$INFO[Skin.String(SubMenu_Movie_opt4_lab)]</label>
-							<onclick>$INFO[Skin.String(SubMenu_Movie_opt4_run)]</onclick>
-							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(SubMenu_Movie_opt4)</visible>
-						</item>
-						<item id="215">
-							<description>SubMenu Opt 5</description>
-							<label>$INFO[Skin.String(SubMenu_Movie_opt5_lab)]</label>
-							<onclick>$INFO[Skin.String(SubMenu_Movie_opt5_run)]</onclick>
-							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(SubMenu_Movie_opt5)</visible>
-						</item>
-						<item id="216">
-							<description>SubMenu Opt 6</description>
-							<label>$INFO[Skin.String(SubMenu_Movie_opt6_lab)]</label>
-							<onclick>$INFO[Skin.String(SubMenu_Movie_opt6_run)]</onclick>
-							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(SubMenu_Movie_opt6)</visible>
+							<label>$INFO[Skin.String(SubMenu_Movies_opt4_lab)]</label>
+							<onclick>$INFO[Skin.String(SubMenu_Movies_opt4_run)]</onclick>
+							<visible>Container(9000).HasFocus(10) + Skin.HasSetting(SubMenu_Movies_opt4)</visible>
 						</item>
 <!-- Movies End -->
 <!-- Music -->
@@ -814,37 +790,25 @@
 							<description>SubMenu Opt 1</description>
 							<label>$INFO[Skin.String(SubMenu_Music_opt1_lab)]</label>
 							<onclick>$INFO[Skin.String(SubMenu_Music_opt1_run)]</onclick>
-							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(SubMenu_Music_opt1)</visible>
+							<visible>Container(9000).HasFocus(3) + Skin.HasSetting(SubMenu_Music_opt1)</visible>
 						</item>
 						<item id="312">
 							<description>SubMenu Opt 2</description>
 							<label>$INFO[Skin.String(SubMenu_Music_opt2_lab)]</label>
 							<onclick>$INFO[Skin.String(SubMenu_Music_opt2_run)]</onclick>
-							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(SubMenu_Music_opt2)</visible>
+							<visible>Container(9000).HasFocus(3) + Skin.HasSetting(SubMenu_Music_opt2)</visible>
 						</item>
 						<item id="313">
 							<description>SubMenu Opt 3</description>
 							<label>$INFO[Skin.String(SubMenu_Music_opt3_lab)]</label>
 							<onclick>$INFO[Skin.String(SubMenu_Music_opt3_run)]</onclick>
-							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(SubMenu_Music_opt3)</visible>
+							<visible>Container(9000).HasFocus(3) + Skin.HasSetting(SubMenu_Music_opt3)</visible>
 						</item>
 						<item id="314">
 							<description>SubMenu Opt 4</description>
 							<label>$INFO[Skin.String(SubMenu_Music_opt4_lab)]</label>
 							<onclick>$INFO[Skin.String(SubMenu_Music_opt4_run)]</onclick>
-							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(SubMenu_Music_opt4)</visible>
-						</item>
-						<item id="315">
-							<description>SubMenu Opt 5</description>
-							<label>$INFO[Skin.String(SubMenu_Music_opt5_lab)]</label>
-							<onclick>$INFO[Skin.String(SubMenu_Music_opt5_run)]</onclick>
-							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(SubMenu_Music_opt5)</visible>
-						</item>
-						<item id="316">
-							<description>SubMenu Opt 6</description>
-							<label>$INFO[Skin.String(SubMenu_Music_opt6_lab)]</label>
-							<onclick>$INFO[Skin.String(SubMenu_Music_opt6_run)]</onclick>
-							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(SubMenu_Music_opt6)</visible>
+							<visible>Container(9000).HasFocus(3) + Skin.HasSetting(SubMenu_Music_opt4)</visible>
 						</item>
 <!-- Music end -->
 <!-- Video -->
@@ -888,37 +852,25 @@
 							<description>SubMenu Opt 1</description>
 							<label>$INFO[Skin.String(SubMenu_Video_opt1_lab)]</label>
 							<onclick>$INFO[Skin.String(SubMenu_Video_opt1_run)]</onclick>
-							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(SubMenu_Video_opt1)</visible>
+							<visible>Container(9000).HasFocus(2) + Skin.HasSetting(SubMenu_Video_opt1)</visible>
 						</item>
 						<item id="512">
 							<description>SubMenu Opt 2</description>
 							<label>$INFO[Skin.String(SubMenu_Video_opt2_lab)]</label>
 							<onclick>$INFO[Skin.String(SubMenu_Video_opt2_run)]</onclick>
-							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(SubMenu_Video_opt2)</visible>
+							<visible>Container(9000).HasFocus(2) + Skin.HasSetting(SubMenu_Video_opt2)</visible>
 						</item>
 						<item id="513">
 							<description>SubMenu Opt 3</description>
 							<label>$INFO[Skin.String(SubMenu_Video_opt3_lab)]</label>
 							<onclick>$INFO[Skin.String(SubMenu_Video_opt3_run)]</onclick>
-							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(SubMenu_Video_opt3)</visible>
+							<visible>Container(9000).HasFocus(2) + Skin.HasSetting(SubMenu_Video_opt3)</visible>
 						</item>
 						<item id="514">
 							<description>SubMenu Opt 4</description>
 							<label>$INFO[Skin.String(SubMenu_Video_opt4_lab)]</label>
 							<onclick>$INFO[Skin.String(SubMenu_Video_opt4_run)]</onclick>
-							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(SubMenu_Video_opt4)</visible>
-						</item>
-						<item id="515">
-							<description>SubMenu Opt 5</description>
-							<label>$INFO[Skin.String(SubMenu_Video_opt5_lab)]</label>
-							<onclick>$INFO[Skin.String(SubMenu_Video_opt5_run)]</onclick>
-							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(SubMenu_Video_opt5)</visible>
-						</item>
-						<item id="516">
-							<description>SubMenu Opt 6</description>
-							<label>$INFO[Skin.String(SubMenu_Video_opt6_lab)]</label>
-							<onclick>$INFO[Skin.String(SubMenu_Video_opt6_run)]</onclick>
-							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(SubMenu_Video_opt6)</visible>
+							<visible>Container(9000).HasFocus(2) + Skin.HasSetting(SubMenu_Video_opt4)</visible>
 						</item>
 <!-- Video End -->
 <!-- Settings -->
