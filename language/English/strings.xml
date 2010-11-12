@@ -67,7 +67,7 @@
   <string id="31116">Addon Scripts</string>
   <string id="31117">Show Recently added Videos</string>
   <string id="31118">Home Page Submenu</string>
-  <string id="31119">Enable Custom Script Button</string>
+  <string id="31119">Enable Custom Submenu</string>
   <string id="31120">BUTTON LABEL</string>
   <string id="31121">PATH TO SCRIPT</string>
   <string id="31122">Weather Page</string>
@@ -136,4 +136,9 @@
 
   <string id="31420">[B][COLOR=white]XBMC has not detected a Disc.[/COLOR][/B][CR][CR]Please Insert a disc into your drive and try again or Cancel</string>
   <string id="31421">Select your XBMC user Profile[CR]to login and continue</string>
+
+  <!-- Influence -->
+  <string id="35000">Use Horizontal Menu<string>
+  <string id="35001">   - Raise Menu<string>
+  <string id="35002">   - Raise RSS News Feed<string
 </strings>

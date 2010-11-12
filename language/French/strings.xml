@@ -67,7 +67,7 @@
   <string id="31116">Scripts Addon</string>
   <string id="31117">Afficher les vidéos récemment ajoutées</string>
   <string id="31118">Sous-menu de la page d'accueil</string>
-  <string id="31119">Activer le bouton du script personnalisé</string>
+  <string id="31119">Activer le sous-menu personnalisé</string>
   <string id="31120">ÉTIQUETTE DU BOUTON</string>
   <string id="31121">CHEMIN DU SCRIPT</string>
   <string id="31122">Page météo</string>
@@ -135,4 +135,9 @@
   <string id="31407">[B]CONFIGURATION DES PARAMÈTRES THÈME[/B][CR][CR]Configuration du skin Confluence · Ajouter et supprimer des éléments du menu d'accueil[CR]Changer les arrière-plans du skin</string>
   <string id="31420">[B][COLOR=white]XBMC n'a pas détecté de disque.[/COLOR][/B][CR][CR]S'il vous plaît insérez un disque dans votre lecteur et essayez à nouveau ou annuler</string>
   <string id="31421">Sélectionnez le profil d'utilisateur de votre XBMC[CR]pour vous connecter et continuer</string>
-  </strings>
+
+  <!-- Influence -->
+  <string id="35000">Utiliser le menu horizontal</string>
+  <string id="35001">   - Centrer le Menu</string>
+  <string id="35002">   - Centrer les flux RSS</string>
+</strings>
