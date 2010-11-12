@@ -541,7 +541,7 @@
 			
 			<control type="group" id="303">
 				<control type="button" id="305">
-					<visible>[Container(9000).HasFocus(11) | Container(9000).HasFocus(10) | Container(9000).HasFocus(1) | Container(9000).HasFocus(2) | Container(9000).HasFocus(3) | Container(9000).HasFocus(5)]</visible>
+					<visible>[Container(9000).HasFocus(11) | Container(9000).HasFocus(10) | Container(9000).HasFocus(20) | Container(9000).HasFocus(21) |  Container(9000).HasFocus(22) |  Container(9000).HasFocus(23)| Container(9000).HasFocus(2) | Container(9000).HasFocus(3) | Container(9000).HasFocus(5)]</visible>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<onfocus>SetFocus(9001)</onfocus>
@@ -551,7 +551,7 @@
 			<control type="group" id="9001">
 				<posx>207</posx>
 				<posy>668</posy>
-				<visible>[Container(9000).HasFocus(11) | Container(9000).HasFocus(10) | Container(9000).HasFocus(1) | Container(9000).HasFocus(2) | Container(9000).HasFocus(3) | Container(9000).HasFocus(5)]</visible>
+				<visible>[Container(9000).HasFocus(11) | Container(9000).HasFocus(10) | Container(9000).HasFocus(20) | Container(9000).HasFocus(21) |  Container(9000).HasFocus(22) |  Container(9000).HasFocus(23)| Container(9000).HasFocus(2) | Container(9000).HasFocus(3) | Container(9000).HasFocus(5)]</visible>
 				<animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(9001).HasFocus">conditional</animation>
 				<animation effect="fade" start="0" end="100" delay="300" time="200" condition="ControlGroup(9001).HasFocus">conditional</animation>
 				<animation effect="fade" start="100" end="0" time="0" condition="ControlGroup(9001).HasFocus">WindowClose</animation>
@@ -911,50 +911,182 @@
 							<visible>Container(9000).HasFocus(5)</visible>
 						</item>
 <!-- Settings End -->
-<!-- programs -->
+<!-- Custom Menu 1 -->
 						<item id="1001">
 							<description>Men1Button1</description>
-							<label>$INFO[Skin.String(Men1Button1_label)]</label>
+							<label>$INFO[Skin.String(SubMenu_Men1_opt1_lab)]</label>
 							<onclick>Setfocus(9000)</onclick>
-							<onclick>>$INFO[Skin.String(Men1Button1_run)]</onclick>
-							<visible>Container(9000).HasFocus(1) + [Skin.HasSetting(Men1Button1) + !IsEmpty(Skin.String(Men1Button1_label))]</visible>
+							<onclick>$INFO[Skin.String(SubMenu_Men1_opt1_run)]</onclick>
+							<visible>Container(9000).HasFocus(20) + [Skin.HasSetting(SubMenu_Men1_opt1) + !IsEmpty(Skin.String(SubMenu_Men1_opt1_lab))]</visible>
 						</item>
 						<item id="1002">
 							<description>Men1Button2</description>
-							<label>$INFO[Skin.String(Men1Button2_label)]</label>
+							<label>$INFO[Skin.String(SubMenu_Men1_opt2_lab)]</label>
 							<onclick>Setfocus(9000)</onclick>
-							<onclick>>$INFO[Skin.String(Men1Button2_run)]</onclick>
-							<visible>Container(9000).HasFocus(1) + [Skin.HasSetting(Men1Button2) + !IsEmpty(Skin.String(Men1Button2_label))]</visible>
+							<onclick>$INFO[Skin.String(SubMenu_Men1_opt2_run)]</onclick>
+							<visible>Container(9000).HasFocus(20) + [Skin.HasSetting(SubMenu_Men1_opt2) + !IsEmpty(Skin.String(SubMenu_Men1_opt2_lab))]</visible>
 						</item>
 						<item id="1003">
 							<description>Men1Button3</description>
-							<label>$INFO[Skin.String(Men1Button3_label)]</label>
+							<label>$INFO[Skin.String(SubMenu_Men1_opt3_lab)]</label>
 							<onclick>Setfocus(9000)</onclick>
-							<onclick>>$INFO[Skin.String(Men1Button3_run)]</onclick>
-							<visible>Container(9000).HasFocus(1) + [Skin.HasSetting(Men1Button3) + !IsEmpty(Skin.String(Men1Button3_label))]</visible>
+							<onclick>$INFO[Skin.String(SubMenu_Men1_opt3_run)]</onclick>
+							<visible>Container(9000).HasFocus(20) + [Skin.HasSetting(SubMenu_Men1_opt3) + !IsEmpty(Skin.String(SubMenu_Men1_opt3_lab))]</visible>
 						</item>
 						<item id="1004">
 							<description>Men1Button4</description>
-							<label>$INFO[Skin.String(Men1Button4_label)]</label>
+							<label>$INFO[Skin.String(SubMenu_Men1_opt4_lab)]</label>
 							<onclick>Setfocus(9000)</onclick>
-							<onclick>>$INFO[Skin.String(Men1Button4_run)]</onclick>
-							<visible>Container(9000).HasFocus(1) + [Skin.HasSetting(Men1Button4) + !IsEmpty(Skin.String(Men1Button4_label))]</visible>
+							<onclick>$INFO[Skin.String(SubMenu_Men1_opt4_run)]</onclick>
+							<visible>Container(9000).HasFocus(20) + [Skin.HasSetting(SubMenu_Men1_opt4) + !IsEmpty(Skin.String(SubMenu_Men1_opt4_lab))]</visible>
 						</item>
 						<item id="1005">
 							<description>Men1Button5</description>
-							<label>$INFO[Skin.String(Men1Button5_label)]</label>
+							<label>$INFO[Skin.String(SubMenu_Men1_opt5_lab)]</label>
 							<onclick>Setfocus(9000)</onclick>
-							<onclick>>$INFO[Skin.String(Men1Button5_run)]</onclick>
-							<visible>Container(9000).HasFocus(1) + [Skin.HasSetting(Men1Button5) + !IsEmpty(Skin.String(Men1Button5_label))]</visible>
+							<onclick>$INFO[Skin.String(SubMenu_Men1_opt5_run)]</onclick>
+							<visible>Container(9000).HasFocus(20) + [Skin.HasSetting(SubMenu_Men1_opt5) + !IsEmpty(Skin.String(SubMenu_Men1_opt5_lab))]</visible>
 						</item>
 						<item id="1006">
 							<description>Men1Button6</description>
-							<label>$INFO[Skin.String(Men1Button6_label)]</label>
+							<label>$INFO[Skin.String(SubMenu_Men1_opt6_lab)]</label>
 							<onclick>Setfocus(9000)</onclick>
-							<onclick>>$INFO[Skin.String(Men1Button6_run)]</onclick>
-							<visible>Container(9000).HasFocus(1) + [Skin.HasSetting(Men1Button6) + !IsEmpty(Skin.String(Men1Button6_label))]</visible>
+							<onclick>$INFO[Skin.String(SubMenu_Men1_opt6_run)]</onclick>
+							<visible>Container(9000).HasFocus(20) + [Skin.HasSetting(SubMenu_Men1_opt6) + !IsEmpty(Skin.String(SubMenu_Men1_opt6_lab))]</visible>
 						</item>
-<!-- programs End -->
+<!-- Custom Menu 1 End -->
+<!-- Custom Menu 2 -->
+						<item id="1001">
+							<description>Men2Button1</description>
+							<label>$INFO[Skin.String(SubMenu_Men2_opt1_lab)]</label>
+							<onclick>Setfocus(9000)</onclick>
+							<onclick>$INFO[Skin.String(SubMenu_Men2_opt1_run)]</onclick>
+							<visible>Container(9000).HasFocus(21) + [Skin.HasSetting(SubMenu_Men2_opt1) + !IsEmpty(Skin.String(SubMenu_Men2_opt1_lab))]</visible>
+						</item>
+						<item id="1002">
+							<description>Men2Button2</description>
+							<label>$INFO[Skin.String(SubMenu_Men2_opt2_lab)]</label>
+							<onclick>Setfocus(9000)</onclick>
+							<onclick>$INFO[Skin.String(SubMenu_Men2_opt2_run)]</onclick>
+							<visible>Container(9000).HasFocus(21) + [Skin.HasSetting(SubMenu_Men2_opt2) + !IsEmpty(Skin.String(SubMenu_Men2_opt2_lab))]</visible>
+						</item>
+						<item id="1003">
+							<description>Men2Button3</description>
+							<label>$INFO[Skin.String(SubMenu_Men2_opt3_lab)]</label>
+							<onclick>Setfocus(9000)</onclick>
+							<onclick>$INFO[Skin.String(SubMenu_Men2_opt3_run)]</onclick>
+							<visible>Container(9000).HasFocus(21) + [Skin.HasSetting(SubMenu_Men2_opt3) + !IsEmpty(Skin.String(SubMenu_Men2_opt3_lab))]</visible>
+						</item>
+						<item id="1004">
+							<description>Men2Button4</description>
+							<label>$INFO[Skin.String(SubMenu_Men2_opt4_lab)]</label>
+							<onclick>Setfocus(9000)</onclick>
+							<onclick>$INFO[Skin.String(SubMenu_Men2_opt4_run)]</onclick>
+							<visible>Container(9000).HasFocus(21) + [Skin.HasSetting(SubMenu_Men2_opt4) + !IsEmpty(Skin.String(SubMenu_Men2_opt4_lab))]</visible>
+						</item>
+						<item id="1005">
+							<description>Men2Button5</description>
+							<label>$INFO[Skin.String(SubMenu_Men2_opt5_lab)]</label>
+							<onclick>Setfocus(9000)</onclick>
+							<onclick>$INFO[Skin.String(SubMenu_Men2_opt5_run)]</onclick>
+							<visible>Container(9000).HasFocus(21) + [Skin.HasSetting(SubMenu_Men2_opt5) + !IsEmpty(Skin.String(SubMenu_Men2_opt5_lab))]</visible>
+						</item>
+						<item id="1006">
+							<description>Men2Button6</description>
+							<label>$INFO[Skin.String(SubMenu_Men2_opt6_lab)]</label>
+							<onclick>Setfocus(9000)</onclick>
+							<onclick>$INFO[Skin.String(SubMenu_Men2_opt6_run)]</onclick>
+							<visible>Container(9000).HasFocus(21) + [Skin.HasSetting(SubMenu_Men2_opt6) + !IsEmpty(Skin.String(SubMenu_Men2_opt6_lab))]</visible>
+						</item>
+<!-- Custom Menu 2 End -->
+<!-- Custom Menu 3 -->
+						<item id="1001">
+							<description>Men3Button1</description>
+							<label>$INFO[Skin.String(SubMenu_Men3_opt1_lab)]</label>
+							<onclick>Setfocus(9000)</onclick>
+							<onclick>$INFO[Skin.String(SubMenu_Men3_opt1_run)]</onclick>
+							<visible>Container(9000).HasFocus(22) + [Skin.HasSetting(SubMenu_Men3_opt1) + !IsEmpty(Skin.String(SubMenu_Men3_opt1_lab))]</visible>
+						</item>
+						<item id="1002">
+							<description>Men3Button2</description>
+							<label>$INFO[Skin.String(SubMenu_Men3_opt2_lab)]</label>
+							<onclick>Setfocus(9000)</onclick>
+							<onclick>$INFO[Skin.String(SubMenu_Men3_opt2_run)]</onclick>
+							<visible>Container(9000).HasFocus(22) + [Skin.HasSetting(SubMenu_Men3_opt2) + !IsEmpty(Skin.String(SubMenu_Men3_opt2_lab))]</visible>
+						</item>
+						<item id="1003">
+							<description>Men3Button3</description>
+							<label>$INFO[Skin.String(SubMenu_Men3_opt3_lab)]</label>
+							<onclick>Setfocus(9000)</onclick>
+							<onclick>$INFO[Skin.String(SubMenu_Men3_opt3_run)]</onclick>
+							<visible>Container(9000).HasFocus(22) + [Skin.HasSetting(SubMenu_Men3_opt3) + !IsEmpty(Skin.String(SubMenu_Men3_opt3_lab))]</visible>
+						</item>
+						<item id="1004">
+							<description>Men3Button4</description>
+							<label>$INFO[Skin.String(SubMenu_Men3_opt4_lab)]</label>
+							<onclick>Setfocus(9000)</onclick>
+							<onclick>$INFO[Skin.String(SubMenu_Men3_opt4_run)]</onclick>
+							<visible>Container(9000).HasFocus(22) + [Skin.HasSetting(SubMenu_Men3_opt4) + !IsEmpty(Skin.String(SubMenu_Men3_opt4_lab))]</visible>
+						</item>
+						<item id="1005">
+							<description>Men3Button5</description>
+							<label>$INFO[Skin.String(SubMenu_Men3_opt5_lab)]</label>
+							<onclick>Setfocus(9000)</onclick>
+							<onclick>$INFO[Skin.String(SubMenu_Men3_opt5_run)]</onclick>
+							<visible>Container(9000).HasFocus(22) + [Skin.HasSetting(SubMenu_Men3_opt5) + !IsEmpty(Skin.String(SubMenu_Men3_opt5_lab))]</visible>
+						</item>
+						<item id="1006">
+							<description>Men3Button6</description>
+							<label>$INFO[Skin.String(SubMenu_Men3_opt6_lab)]</label>
+							<onclick>Setfocus(9000)</onclick>
+							<onclick>$INFO[Skin.String(SubMenu_Men3_opt6_run)]</onclick>
+							<visible>Container(9000).HasFocus(22) + [Skin.HasSetting(SubMenu_Men3_opt6) + !IsEmpty(Skin.String(SubMenu_Men3_opt6_lab))]</visible>
+						</item>
+<!-- Custom Menu 3 End -->
+<!-- Custom Menu 4 -->
+						<item id="1001">
+							<description>Men4Button1</description>
+							<label>$INFO[Skin.String(SubMenu_Men4_opt1_lab)]</label>
+							<onclick>Setfocus(9000)</onclick>
+							<onclick>$INFO[Skin.String(SubMenu_Men4_opt1_run)]</onclick>
+							<visible>Container(9000).HasFocus(23) + [Skin.HasSetting(SubMenu_Men4_opt1) + !IsEmpty(Skin.String(SubMenu_Men4_opt1_lab))]</visible>
+						</item>
+						<item id="1002">
+							<description>Men4Button2</description>
+							<label>$INFO[Skin.String(SubMenu_Men4_opt2_lab)]</label>
+							<onclick>Setfocus(9000)</onclick>
+							<onclick>$INFO[Skin.String(SubMenu_Men4_opt2_run)]</onclick>
+							<visible>Container(9000).HasFocus(23) + [Skin.HasSetting(SubMenu_Men4_opt2) + !IsEmpty(Skin.String(SubMenu_Men4_opt2_lab))]</visible>
+						</item>
+						<item id="1003">
+							<description>Men4Button3</description>
+							<label>$INFO[Skin.String(SubMenu_Men4_opt3_lab)]</label>
+							<onclick>Setfocus(9000)</onclick>
+							<onclick>$INFO[Skin.String(SubMenu_Men4_opt3_run)]</onclick>
+							<visible>Container(9000).HasFocus(23) + [Skin.HasSetting(SubMenu_Men4_opt3) + !IsEmpty(Skin.String(SubMenu_Men4_opt3_lab))]</visible>
+						</item>
+						<item id="1004">
+							<description>Men4Button4</description>
+							<label>$INFO[Skin.String(SubMenu_Men4_opt4_lab)]</label>
+							<onclick>Setfocus(9000)</onclick>
+							<onclick>$INFO[Skin.String(SubMenu_Men4_opt4_run)]</onclick>
+							<visible>Container(9000).HasFocus(23) + [Skin.HasSetting(SubMenu_Men4_opt4) + !IsEmpty(Skin.String(SubMenu_Men4_opt4_lab))]</visible>
+						</item>
+						<item id="1005">
+							<description>Men4Button5</description>
+							<label>$INFO[Skin.String(SubMenu_Men4_opt5_lab)]</label>
+							<onclick>Setfocus(9000)</onclick>
+							<onclick>$INFO[Skin.String(SubMenu_Men4_opt5_run)]</onclick>
+							<visible>Container(9000).HasFocus(23) + [Skin.HasSetting(SubMenu_Men4_opt5) + !IsEmpty(Skin.String(SubMenu_Men4_opt5_lab))]</visible>
+						</item>
+						<item id="1006">
+							<description>Men4Button6</description>
+							<label>$INFO[Skin.String(SubMenu_Men4_opt6_lab)]</label>
+							<onclick>Setfocus(9000)</onclick>
+							<onclick>$INFO[Skin.String(SubMenu_Men4_opt6_run)]</onclick>
+							<visible>Container(9000).HasFocus(23) + [Skin.HasSetting(SubMenu_Men4_opt6) + !IsEmpty(Skin.String(SubMenu_Men4_opt6_lab))]</visible>
+						</item>
+<!-- Custom Menu 4 End -->
 
 					</content>
 				</control>
@@ -1098,12 +1230,33 @@
 						<visible>Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)</visible>
 					</item>
 <-- Custom Home -->					
-					<item id="1">
-						<label>0</label>
-						<onclick>ActivateWindow(Programs,Addons,return)</onclick>
-						<icon>special://skin/backgrounds/programs.jpg</icon>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+					<item id="20">
+						<label>$INFO[Skin.String(Menu_Men1_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Men1_run)]</onclick>
+						<icon>special://skin/backgrounds/menu1.jpg</icon>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Menu1_Folder)]</thumb>
+						<visible>Skin.HasSetting(Menu_Men1_act)</visible>
+					</item>
+					<item id="21">
+						<label>$INFO[Skin.String(Menu_Men2_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Men2_run)]</onclick>
+						<icon>special://skin/backgrounds/menu2.jpg</icon>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Menu2_Folder)]</thumb>
+						<visible>Skin.HasSetting(Menu_Men2_act)</visible>
+					</item>
+					<item id="22">
+						<label>$INFO[Skin.String(Menu_Men3_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Men3_run)]</onclick>
+						<icon>special://skin/backgrounds/menu3.jpg</icon>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Menu3_Folder)]</thumb>
+						<visible>Skin.HasSetting(Menu_Men3_act)</visible>
+					</item>
+					<item id="23">
+						<label>$INFO[Skin.String(Menu_Men4_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Men4_run)]</onclick>
+						<icon>special://skin/backgrounds/menu4.jpg</icon>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Menu4_Folder)]</thumb>
+						<visible>Skin.HasSetting(Menu_Men4_act)</visible>
 					</item>
 					<item id="5">
 						<label>13000</label>
