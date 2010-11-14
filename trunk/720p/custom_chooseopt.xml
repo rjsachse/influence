@@ -1,0 +1,86 @@
+<window type="dialog" id="2114">
+	<defaultcontrol>1000</defaultcontrol>
+	<include>dialogeffect</include>
+	<coordinates>
+		<system>1</system>
+		<posx>400</posx>
+		<posy>200</posy>
+	</coordinates>
+	<controls>
+		<control type="image" id="999">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>300</width>
+			<height>200</height>
+			<texture border="45,0,45,0">DialogContextMiddle.png</texture>
+		</control>
+		
+		<control type="list" id="1000">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>297</width>
+			<height>225</height>
+			<onleft>9010</onleft>
+			<onright>9010</onright>
+			<onup>1000</onup>
+			<ondown>1000</ondown>
+			<pagecontrol>-</pagecontrol>
+			<scrolltime>300</scrolltime>
+			<itemlayout height="30" width="297">
+				<control type="label">
+					<posx>150</posx>
+					<posy>0</posy>
+					<width>297</width>
+					<height>25</height>
+					<font>font24caps_title</font>
+					<textcolor>grey3</textcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="30" width="297">
+				<control type="label">
+					<posx>150</posx>
+					<posy>0</posy>
+					<width>297</width>
+					<height>25</height>
+					<font>font24caps_title</font>
+					<textcolor>white</textcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="1">
+					<label>Favori</label>
+					<onclick>-</onclick>
+					<onclick>Skin.SetString($INFO[Skin.String(RunOpt)])</onclick>
+					<onclick>Dialog.Close(1114)</onclick>
+				</item>
+				<item id="2">
+					<label>Playlist Musical</label>
+					<onclick>Skin.SetFile($INFO[Skin.String(RunOpt)],.xsp,special://musicplaylists)</onclick>
+					<onclick>Dialog.Close(1114)</onclick>
+				</item>
+				<item id="3">
+					<label>Playliste Video</label>
+					<onclick>Skin.SetFile($INFO[Skin.String(RunOpt)],.xsp,special://videoplaylists)</onclick>
+					<onclick>Dialog.Close(1114)</onclick>
+				</item>
+				<item id="4">
+					<label>Script/Addon</label>
+					<onclick>Skin.SetAddon($INFO[Skin.String(RunOpt)],xbmc.python.script)</onclick>
+					<onclick>Dialog.Close(1114)</onclick>
+				</item>
+				<item id="5">
+					<label>Saisie libre</label>
+					<onclick>Skin.SetString($INFO[Skin.String(RunOpt)])</onclick>
+					<onclick>Dialog.Close(1114)</onclick>
+				</item>
+			</content>
+		</control>
+	</controls>
+</window>
