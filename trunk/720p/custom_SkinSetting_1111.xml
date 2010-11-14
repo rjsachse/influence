@@ -137,11 +137,13 @@
 						<label2>31115</label2>
 						<onclick>-</onclick>
 					</item>
+					<!--
 					<item id="4">
 						<label>31116</label>
 						<label2>31200</label2>
 						<onclick>-</onclick>
 					</item>
+					-->
 					<item id="5">
 						<label>Menu</label>
 						<label2>31115</label2>
