@@ -147,11 +147,13 @@
 						<label2>31115</label2>
 						<onclick>-</onclick>
 					</item>
+					<!--
 					<item id="6">
 						<label>Test</label>
 						<label2>31115</label2>
 						<onclick>-</onclick>
 					</item>
+					-->
 				</content>
 			</control>
 			<control type="image">
