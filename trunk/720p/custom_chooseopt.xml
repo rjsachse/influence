@@ -1,92 +1,147 @@
 <window type="dialog" id="2114">
-	<defaultcontrol>1000</defaultcontrol>
-	<include>dialogeffect</include>
-	<coordinates>
-		<system>1</system>
-		<posx>400</posx>
-		<posy>200</posy>
-	</coordinates>
+	<defaultcontrol always="true">450</defaultcontrol>
+	<include>Animation_Bartowski_Context_Zoom</include>
 	<controls>
-		<control type="image" id="999">
-			<description>background image</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>300</width>
-			<height>200</height>
-			<texture border="45,0,45,0">DialogContextMiddle.png</texture>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>common/7000_focus.png</texture>
+			<animation effect="fade" start="0" end="100" time="600">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
 		</control>
-		
-		<control type="list" id="1000">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>297</width>
-			<height>225</height>
-			<onleft>9010</onleft>
-			<onright>9010</onright>
-			<onup>1000</onup>
-			<ondown>1000</ondown>
-			<pagecontrol>-</pagecontrol>
-			<scrolltime>300</scrolltime>
-			<itemlayout height="30" width="297">
-				<control type="label">
-					<posx>150</posx>
-					<posy>0</posy>
-					<width>297</width>
-					<height>25</height>
-					<font>font24caps_title</font>
-					<textcolor>grey3</textcolor>
-					<align>center</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label]</label>
-				</control>
-			</itemlayout>
-			<focusedlayout height="30" width="297">
-				<control type="label">
-					<posx>150</posx>
-					<posy>0</posy>
-					<width>297</width>
-					<height>25</height>
-					<font>font24caps_title</font>
-					<textcolor>white</textcolor>
-					<align>center</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label]</label>
-				</control>
-			</focusedlayout>
-			<content>
+		<control type="group">
+			<animation effect="slide" start="400,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="400,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<control type="image">
+				<posx>400r</posx>
+				<posy>0</posy>
+				<width>400</width>
+				<height>720</height>
+				<texture border="15,0,0,0" flipx="true">HomeBladeSub.png</texture>
+			</control>
+			<control type="button">
+				<description>Close Window button</description>
+				<posx>380r</posx>
+				<posy>0</posy>
+				<width>64</width>
+				<height>32</height>
+				<label>-</label>
+				<font>-</font>
+				<onclick>PreviousMenu</onclick>
+				<texturefocus>DialogCloseButton-focus.png</texturefocus>
+				<texturenofocus>DialogCloseButton.png</texturenofocus>
+				<onleft>450</onleft>
+				<onright>450</onright>
+				<onup>450</onup>
+				<ondown>450</ondown>
+				<visible>system.getbool(input.enablemouse)</visible>
+			</control>
+			<control type="image">
+				<posx>370r</posx>
+				<posy>30</posy>
+				<width>200</width>
+				<height>200</height>
+				<aspectratio align="center">keep</aspectratio>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<texture>$INFO[ListItem.Icon]</texture>
+				<bordertexture border="8">ThumbShadow.png</bordertexture>
+				<bordersize>8</bordersize>
+			</control>
+			<control type="list" id="450">
+				<posx>390r</posx>
+				<posy>250</posy>
+				<width>450</width>
+				<height>380</height>
+				<onup>450</onup>
+				<onleft>Dialog.Close(2114)</onleft>
+				<onright>450</onright>
+				<ondown>450</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="40">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>370</width>
+						<height>40</height>
+						<texture border="5">button-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>350</width>
+						<height>40</height>
+						<font>font12_title</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<selectedcolor>selected</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="40">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>370</width>
+						<height>40</height>
+						<visible>!Control.HasFocus(450)</visible>
+						<texture border="3">button-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>370</width>
+						<height>40</height>
+						<visible>Control.HasFocus(450)</visible>
+						<texture border="3">button-focus.png</texture>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>350</width>
+						<height>40</height>
+						<font>font12_title</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<selectedcolor>selected</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+			
+				<content>
 				<item id="1">
 					<label>Favori</label>
 					<onclick>-</onclick>
-					<onclick>ActivateWindow(1114)</onclick>
 					<onclick>Dialog.Close(2114)</onclick>
+					<onclick>ActivateWindow(1114)</onclick>
 				</item>
 				<item id="2">
 					<label>Playlist Musical</label>
 
+					<onclick>Dialog.Close(2114)</onclick>
 					<onclick>Skin.SetFile($INFO[Skin.String(RunOpt)],.m3u,special://musicplaylists/)</onclick>
 					<!--
 					<onclick>Skin.SetFile($INFO[Skin.String(RunOpt)],.m3u)</onclick>
 					-->
-					<onclick>Dialog.Close(2114)</onclick>
 				</item>
 				<item id="3">
 					<label>Playliste Video</label>
+					<onclick>Dialog.Close(2114)</onclick>
 					<onclick>Skin.SetFile($INFO[Skin.String(RunOpt)],.xsp,special://videoplaylists/)</onclick>
 					<!--
 					<onclick>Skin.SetFile($INFO[Skin.String(RunOpt)],.xsp)</onclick>
 					-->
-					<onclick>Dialog.Close(2114)</onclick>
 				</item>
 				<item id="4">
 					<label>Script</label>
 					<!--
 					<onclick>Skin.Setfile($INFO[Skin.String(RunOpt)],.py,special://script)</onclick>
 					-->
+					<onclick>Dialog.Close(2114)</onclick>
 					<onclick>Skin.Setfile($INFO[Skin.String(RunOpt)],.py)</onclick>
+					<onclick>Skin.SetString($INFO[Skin.String(RunOpt)], RunScript( $INFO[Skin.String(RunOpt)] ) )</onclick>
 <!--
 RunScript(script[,args]*)	 Runs the python script. You must specify the full path to the script, (or use Q:\Scripts\Scriptname.py on Xbox). If the script is an add-on, you can also execute it using its add-on id. As of 2007/02/24, all extra parameters are passed to the script as arguments and can be accessed by python using sys.argv
 -->
-					<onclick>Dialog.Close(2114)</onclick>
 				</item>
 				<item id="5">
 					<label>Addon</label>
@@ -96,15 +151,21 @@ RunScript(script[,args]*)	 Runs the python script. You must specify the full pat
 <!--
 RunPlugin(plugin)	 Runs the plugin. Full path must be specified. Does not work for folder plugins
 -->
-					<onclick>Skin.SetAddon($INFO[Skin.String(RunOpt)])></onclick>
 					<onclick>Dialog.Close(2114)</onclick>
+					<onclick>Skin.SetAddon($INFO[Skin.String(RunOpt)])></onclick>
+					<onclick>Skin.SetString($INFO[Skin.String(RunOpt)], RunPlugin( $INFO[Skin.String(RunOpt)] ) )</onclick>
 				</item>
 				<item id="6">
 					<label>Saisie libre</label>
-					<onclick>Skin.SetString($INFO[Skin.String(RunOpt)])</onclick>
 					<onclick>Dialog.Close(2114)</onclick>
+					<onclick>Skin.SetString($INFO[Skin.String(RunOpt)])</onclick>
+					<!--
+					<onclick>Skin.SetString($INFO[Skin.String(RunOpt)], BLABLABLA $INFO[Skin.String(RunOpt)] BLABLABLA )</onclick>
+					-->
 				</item>
-			</content>
+				</content>
+			</control>
+			<include>SideBladeRight</include>
 		</control>
 	</controls>
 </window>

@@ -655,42 +655,31 @@
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(Menu_Videos_sub1_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_Videos_sub1_run)]</onclick>
-						<visible>Library.HasContent(Movies)</visible>
+						<visible>Library.HasContent(Movies) + Skin.HasSetting(Menu_Videos_sub1_act)</visible>
 					</control>
 					<control type="button" id="190102">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(Menu_Videos_sub2_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_Videos_sub2_run)]</onclick>
-						<visible>Library.HasContent(TVShows)</visible>
+						<visible>Library.HasContent(TVShows) + Skin.HasSetting(Menu_Videos_sub2_act)</visible>
 					</control>
 					<control type="button" id="190103">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(Menu_Videos_sub3_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_Videos_sub3_run)]</onclick>
-						<visible>Library.HasContent(MusicVideos)</visible>
+						<visible>Library.HasContent(MusicVideos) + Skin.HasSetting(Menu_Videos_sub3_act)</visible>
 					</control>
 					<control type="button" id="190104">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(Menu_Videos_sub4_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_Videos_sub4_run)]</onclick>
+						<visible>Skin.HasSetting(Menu_Videos_sub1_act) + Skin.HasSetting(Menu_Videos_sub4_act)</visible>
 					</control>
 					<control type="button" id="190105">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(Menu_Videos_sub5_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_Videos_sub5_run)]</onclick>
-						<visible>Library.HasContent(Video)</visible>
-					</control>
-					<control type="button" id="190106">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(Menu_Videos_sub5_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Videos_sub5_run)]</onclick>
-						<visible>Library.HasContent(Video)</visible>
-					</control>
-					<control type="button" id="190107">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(Menu_Videos_sub5_lab)]</label>
-						<onclick>ActivateWindow(VideoFiles,Addons,return)</onclick>
-						<visible>!Library.HasContent(Video)</visible>
+						<visible>Library.HasContent(Video) + Skin.HasSetting(Menu_Videos_sub5_act)</visible>
 					</control>
 					<control type="button" id="190108">
 						<include>ButtonHomeSubCommonValues</include>
@@ -735,30 +724,31 @@
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(Menu_Music_sub1_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_Music_sub1_run]</onclick>
-						<visible>Library.HasContent(Music)</visible>
+						<visible>Library.HasContent(Music) + Skin.HasSetting(Menu_Music_sub1_act)</visible>
 					</control>
 					<control type="button" id="190112">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(Menu_Music_sub2_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_Music_sub2_run]</onclick>
-						<visible>Library.HasContent(Music)</visible>
+						<visible>Library.HasContent(Music) + Skin.HasSetting(Menu_Music_sub2_act)</visible>
 					</control>
 					<control type="button" id="190113">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(Menu_Music_sub3_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_Music_sub3_run]</onclick>
-						<visible>Library.HasContent(Music)</visible>
+						<visible>Library.HasContent(Music) + Skin.HasSetting(Menu_Music_sub3_act)</visible>
 					</control>
 					<control type="button" id="190114">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(Menu_Music_sub4_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_Music_sub4_run]</onclick>
+						<visible>Skin.HasSetting(Menu_Music_sub4_act)</visible>
 					</control>
 					<control type="button" id="190115">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(Menu_Music_sub5_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_Music_sub5_run]</onclick>
-						<visible>Library.HasContent(Music)</visible>
+						<visible>Library.HasContent(Music) + Skin.HasSetting(Menu_Music_sub5_act)</visible>
 					</control>
 					<control type="button" id="190118">
 						<include>ButtonHomeSubCommonValues</include>
@@ -849,31 +839,37 @@
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(Menu_Movie_sub1_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_Movie_sub1_run)]</onclick>
+						<visible>Skin.HasSetting(Menu_Movie_sub1_act)</visible>
 					</control>
 					<control type="button" id="190162">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(Menu_Movie_sub2_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_Movie_sub2_run)]</onclick>
+						<visible>Skin.HasSetting(Menu_Movie_sub2_act)</visible>
 					</control>
 					<control type="button" id="190163">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(Menu_Movie_sub3_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_Movie_sub3_run)]</onclick>
+						<visible>Skin.HasSetting(Menu_Movie_sub3_act)</visible>
 					</control>
 					<control type="button" id="190164">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(Menu_Movie_sub4_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_Movie_sub4_run)]</onclick>
+						<visible>Skin.HasSetting(Menu_Movie_sub4_act)</visible>
 					</control>
 					<control type="button" id="190165">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(Menu_Movie_sub5_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_Movie_sub5_run)]</onclick>
+						<visible>Skin.HasSetting(Menu_Movie_sub5_act)</visible>
 					</control>
 					<control type="button" id="190166">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(Menu_Movie_sub6_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_Movie_sub6_run)]</onclick>
+						<visible>Skin.HasSetting(Menu_Movie_sub6_act)</visible>
 					</control>
 					<control type="button" id="190167">
 						<include>ButtonHomeSubCommonValues</include>
@@ -918,26 +914,31 @@
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(Menu_TVShows_sub1_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_TVShows_sub1_run)]</onclick>
+						<visible>Skin.HasSetting(Menu_TVShows_sub1_act)</visible>
 					</control>
 					<control type="button" id="190172">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(Menu_TVShows_sub2_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_TVShows_sub2_run)]</onclick>
+						<visible>Skin.HasSetting(Menu_TVShows_sub2_act)</visible>
 					</control>
 					<control type="button" id="190173">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(Menu_TVShows_sub3_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_TVShows_sub3_run)]</onclick>
+						<visible>Skin.HasSetting(Menu_TVShows_sub3_act)</visible>
 					</control>
 					<control type="button" id="190174">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(Menu_TVShows_sub4_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_TVShows_sub4_run)]</onclick>
+						<visible>Skin.HasSetting(Menu_TVShows_sub4_act)</visible>
 					</control>
 					<control type="button" id="190175">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(Menu_TVShows_sub5_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_TVShows_sub5_run)]</onclick>
+						<visible>Skin.HasSetting(Menu_TVShows_sub5_act)</visible>
 					</control>
 					<control type="button" id="190176">
 						<include>ButtonHomeSubCommonValues</include>
