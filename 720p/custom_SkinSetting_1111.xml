@@ -156,6 +156,11 @@
 						<onclick>-</onclick>
 					</item>
 					-->
+					<item id="7">
+						<label>Skin</label>
+						<label2>Reinitialiser</label2>
+						<onclick>Skin.ResetSettings</onclick>
+					</item>
 				</content>
 			</control>
 			<control type="image">
