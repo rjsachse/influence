@@ -16,7 +16,7 @@
 				<posy>0</posy>
 				<width>400</width>
 				<height>720</height>
-				<texture border="15,0,0,0" flipx="true">HomeBladeSub.png</texture>
+				<texture border="15,0,0,0" flipx="true">HomeBladeSubBlack.png</texture>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
