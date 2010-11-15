@@ -420,7 +420,6 @@
 <!-- Home Statistics START-->
 					<control type="radiobutton" id="220">
 						<description>Show Library Stats</description>
-						<include>SettingsLabel</include>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -436,7 +435,6 @@
 <!-- CDart START-->
 					<control type="radiobutton" id="221">
 						<description>Show CDart</description>
-						<include>SettingsLabel</include>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -452,7 +450,6 @@
 <!-- Next Five Songs START-->
 					<control type="radiobutton" id="222">
 						<description>Show Next Five Songs</description>
-						<include>SettingsLabel</include>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -1511,7 +1508,9 @@
 						<textcolor>white</textcolor>
 					</control>
 				</control>
+				<!--
 				<include>CustomMenu2</include>
+				-->
 				<control type="group">
 					<control type="grouplist" id="9004">
 						<visible>Container(9000).Hasfocus(4)</visible>
