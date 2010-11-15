@@ -7,12 +7,12 @@
 			<width>750</width>
 			<height>530</height>
 			<itemgap>-1</itemgap>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>70</pagecontrol>
 			<onleft>9000</onleft>
-			<onright>60</onright>
+			<onright>70</onright>
 			<onup>9005</onup>
 			<ondown>9005</ondown>
-			<control type="label" id="099">
+			<control type="label" >
 				<width>750</width>
 				<height>45</height>
 				<font>font13caps_title</font>
@@ -84,9 +84,8 @@
 				<onclick>Skin.Reset(Menu_Men2)</onclick>
 				<onclick>Skin.Reset(Menu_Men3)</onclick>
 				<onclick>Skin.Reset(Menu_Men4)</onclick>
-				<selected>Skin.HasSetting(HomeMenu)</selected>
 			</control>
-			<control type="radiobutton" id="104">
+			<control type="radiobutton" id="1031">
 				<description>Hide Videos Button</description>
 				<width>750</width>
 				<height>40</height>
@@ -100,7 +99,7 @@
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<visible>Skin.HasSetting(HomeMenu)</visible>
 			</control>
-			<control type="radiobutton" id="105">
+			<control type="radiobutton" id="1032">
 				<description>Hide Movies Button</description>
 				<width>750</width>
 				<height>40</height>
@@ -115,7 +114,7 @@
 				<enable>Library.HasContent(Movies)</enable>
 				<visible>Skin.HasSetting(HomeMenu)</visible>
 			</control>
-			<control type="radiobutton" id="106">
+			<control type="radiobutton" id="1033">
 				<description>Hide TV Shows Button</description>
 				<width>750</width>
 				<height>40</height>
@@ -130,7 +129,7 @@
 				<enable>Library.HasContent(TVShows)</enable>
 				<visible>Skin.HasSetting(HomeMenu)</visible>
 			</control>
-			<control type="radiobutton" id="107">
+			<control type="radiobutton" id="1034">
 				<description>Hide Music Button</description>
 				<width>750</width>
 				<height>40</height>
@@ -144,7 +143,7 @@
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<visible>Skin.HasSetting(HomeMenu)</visible>
 			</control>
-			<control type="radiobutton" id="108">
+			<control type="radiobutton" id="1035">
 				<description>Hide Pictures Button</description>
 				<width>750</width>
 				<height>40</height>
@@ -158,7 +157,7 @@
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<visible>Skin.HasSetting(HomeMenu)</visible>
 			</control>
-			<control type="radiobutton" id="109">
+			<control type="radiobutton" id="1036">
 				<description>Hide Programs Button</description>
 				<width>750</width>
 				<height>40</height>
@@ -172,7 +171,7 @@
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<visible>Skin.HasSetting(HomeMenu)</visible>
 			</control>
-			<control type="radiobutton" id="110">
+			<control type="radiobutton" id="1037">
 				<description>Hide Scripts Button</description>
 				<width>750</width>
 				<height>40</height>
@@ -186,7 +185,7 @@
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<visible>Skin.HasSetting(HomeMenu)</visible>
 			</control>
-			<control type="radiobutton" id="111">
+			<control type="radiobutton" id="1038">
 				<description>Hide Weather Button</description>
 				<width>750</width>
 				<height>40</height>
@@ -202,7 +201,7 @@
 			</control>
 <!-- Paramétrage menu -->
 <!-- Menu Video -->
-			<control type="button" id="200">
+			<control type="button" id="104">
 				<width>750</width>
 				<height>45</height>
 				<font>font13caps_title</font>
@@ -222,7 +221,7 @@
 				<onclick>Skin.Reset(Menu_Men4)</onclick>
 				<selected>Skin.HasSetting(SubMenu_Video)</selected>
 			</control>
-			<control type="radiobutton" id="201">
+			<control type="radiobutton" id="10400">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -235,7 +234,7 @@
 				<selected>Skin.HasSetting(SubMenu_Video_opt1)</selected>
 				<visible>Skin.HasSetting(SubMenu_Video)</visible>
 			</control>
-			<control type="button" id="202">
+			<control type="button" id="10401">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -248,7 +247,7 @@
 				<onclick>Skin.SetString(SubMenu_Video_opt1_lab)</onclick>
 				<visible>Skin.HasSetting(SubMenu_Video_opt1) + Skin.HasSetting(SubMenu_Video)</visible>
 			</control>
-			<control type="button" id="203">
+			<control type="button" id="10402">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -263,7 +262,7 @@
 				<onclick>Skin.SetString(SubMenu_Video_opt1_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(SubMenu_Video_opt1) + Skin.HasSetting(SubMenu_Video)</visible>
 			</control>
-			<control type="radiobutton" id="204">
+			<control type="radiobutton" id="10403">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -276,7 +275,7 @@
 				<selected>Skin.HasSetting(SubMenu_Video_opt2)</selected>
 				<visible>Skin.HasSetting(SubMenu_Video_opt1) + Skin.HasSetting(SubMenu_Video)</visible>
 			</control>
-			<control type="button" id="205">
+			<control type="button" id="10404">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -289,7 +288,7 @@
 				<onclick>Skin.SetString(SubMenu_Video_opt2_lab)</onclick>
 				<visible>Skin.HasSetting(SubMenu_Video_opt2) + Skin.HasSetting(SubMenu_Video)</visible>
 			</control>
-			<control type="button" id="206">
+			<control type="button" id="10405">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -304,7 +303,7 @@
 				<onclick>Skin.SetString(SubMenu_Video_opt2_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(SubMenu_Video_opt2) + Skin.HasSetting(SubMenu_Video)</visible>
 			</control>
-			<control type="radiobutton" id="207">
+			<control type="radiobutton" id="10406">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -317,7 +316,7 @@
 				<selected>Skin.HasSetting(SubMenu_Video_opt3)</selected>
 				<visible>Skin.HasSetting(SubMenu_Video_opt2) + Skin.HasSetting(SubMenu_Video)</visible>
 			</control>
-			<control type="button" id="208">
+			<control type="button" id="10407">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -330,7 +329,7 @@
 				<onclick>Skin.SetString(SubMenu_Video_opt3_lab)</onclick>
 				<visible>Skin.HasSetting(SubMenu_Video_opt3) + Skin.HasSetting(SubMenu_Video)</visible>
 			</control>
-			<control type="button" id="209">
+			<control type="button" id="10408">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -345,7 +344,7 @@
 				<onclick>Skin.SetString(SubMenu_Video_opt3_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(SubMenu_Video_opt3) + Skin.HasSetting(SubMenu_Video)</visible>
 			</control>
-			<control type="radiobutton" id="210">
+			<control type="radiobutton" id="10409">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -358,7 +357,7 @@
 				<selected>Skin.HasSetting(SubMenu_Video_opt4)</selected>
 				<visible>Skin.HasSetting(SubMenu_Video_opt3) + Skin.HasSetting(SubMenu_Video)</visible>
 			</control>
-			<control type="button" id="211">
+			<control type="button" id="10410">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -371,7 +370,7 @@
 				<onclick>Skin.SetString(SubMenu_Video_opt4_lab)</onclick>
 				<visible>Skin.HasSetting(SubMenu_Video_opt4) + Skin.HasSetting(SubMenu_Video)</visible>
 			</control>
-			<control type="button" id="212">
+			<control type="button" id="10412">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -386,7 +385,7 @@
 				<onclick>Skin.SetString(SubMenu_Video_opt4_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(SubMenu_Video_opt4) + Skin.HasSetting(SubMenu_Video)</visible>
 			</control>
-			<control type="radiobutton" id="213">
+			<control type="radiobutton" id="10413">
 				<description>Hide Submenu Video Movies-Title</description>
 				<width>750</width>
 				<height>40</height>
@@ -400,7 +399,7 @@
 				<selected>Skin.HasSetting(VideoMoviesTitlesHide)</selected>
 				<visible>Skin.HasSetting(SubMenu_Video)</visible>
 			</control>
-			<control type="radiobutton" id="214">
+			<control type="radiobutton" id="10414">
 				<description>Hide Submenu Video TvShow-Title</description>
 				<width>750</width>
 				<height>40</height>
@@ -414,7 +413,7 @@
 				<selected>Skin.HasSetting(VideoTVShowTitlesHide)</selected>
 				<visible>Skin.HasSetting(SubMenu_Video)</visible>
 			</control>
-			<control type="radiobutton" id="215">
+			<control type="radiobutton" id="10415">
 				<description>Hide Submenu Video Music Videos</description>
 				<width>750</width>
 				<height>40</height>
@@ -428,7 +427,7 @@
 				<selected>Skin.HasSetting(VideoMusicVideosHide)</selected>
 				<visible>Skin.HasSetting(SubMenu_Video)</visible>
 			</control>
-			<control type="radiobutton" id="216">
+			<control type="radiobutton" id="10416">
 				<description>Hide Submenu Video Files</description>
 				<width>750</width>
 				<height>40</height>
@@ -442,7 +441,7 @@
 				<selected>Skin.HasSetting(VideoFilesHide)</selected>
 				<visible>Skin.HasSetting(SubMenu_Video)</visible>
 			</control>
-			<control type="radiobutton" id="217">
+			<control type="radiobutton" id="10417">
 				<description>Hide Submenu Video Library</description>
 				<width>750</width>
 				<height>40</height>
@@ -456,7 +455,7 @@
 				<selected>Skin.HasSetting(VideoLibraryHide)</selected>
 				<visible>Skin.HasSetting(SubMenu_Video)</visible>
 			</control>
-			<control type="radiobutton" id="218">
+			<control type="radiobutton" id="10418">
 				<description>Hide Submenu Video Addons</description>
 				<width>750</width>
 				<height>40</height>
@@ -492,7 +491,7 @@
 				<onclick>Skin.Reset(Menu_Men4)</onclick>
 				<selected>Skin.HasSetting(SubMenu_Movies)</selected>
 			</control>
-			<control type="radiobutton" id="301">
+			<control type="radiobutton" id="30001">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -505,7 +504,7 @@
 				<selected>Skin.HasSetting(SubMenu_Movies_opt1)</selected>
 				<visible>Skin.HasSetting(SubMenu_Movies)</visible>
 			</control>
-			<control type="button" id="302">
+			<control type="button" id="30002">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -518,7 +517,7 @@
 				<onclick>Skin.SetString(SubMenu_Movies_opt1_lab)</onclick>
 				<visible>Skin.HasSetting(SubMenu_Movies_opt1) + Skin.HasSetting(SubMenu_Movies)</visible>
 			</control>
-			<control type="button" id="303">
+			<control type="button" id="30003">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -533,7 +532,7 @@
 				<onclick>Skin.SetString(SubMenu_Movies_opt1_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(SubMenu_Movies_opt1) + Skin.HasSetting(SubMenu_Movies)</visible>
 			</control>
-			<control type="radiobutton" id="304">
+			<control type="radiobutton" id="30004">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -546,7 +545,7 @@
 				<selected>Skin.HasSetting(SubMenu_Movies_opt2)</selected>
 				<visible>Skin.HasSetting(SubMenu_Movies_opt1) + Skin.HasSetting(SubMenu_Movies)</visible>
 			</control>
-			<control type="button" id="305">
+			<control type="button" id="30005">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -559,7 +558,7 @@
 				<onclick>Skin.SetString(SubMenu_Movies_opt2_lab)</onclick>
 				<visible>Skin.HasSetting(SubMenu_Movies_opt2) + Skin.HasSetting(SubMenu_Movies)</visible>
 			</control>
-			<control type="button" id="306">
+			<control type="button" id="30006">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -574,7 +573,7 @@
 				<onclick>Skin.SetString(SubMenu_Movies_opt2_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(SubMenu_Movies_opt2) + Skin.HasSetting(SubMenu_Movies)</visible>
 			</control>
-			<control type="radiobutton" id="307">
+			<control type="radiobutton" id="30007">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -587,7 +586,7 @@
 				<selected>Skin.HasSetting(SubMenu_Movies_opt3)</selected>
 				<visible>Skin.HasSetting(SubMenu_Movies_opt2) + Skin.HasSetting(SubMenu_Movies)</visible>
 			</control>
-			<control type="button" id="308">
+			<control type="button" id="30008">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -600,7 +599,7 @@
 				<onclick>Skin.SetString(SubMenu_Movies_opt3_lab)</onclick>
 				<visible>Skin.HasSetting(SubMenu_Movies_opt3) + Skin.HasSetting(SubMenu_Movies)</visible>
 			</control>
-			<control type="button" id="309">
+			<control type="button" id="30009">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -615,7 +614,7 @@
 				<onclick>Skin.SetString(SubMenu_Movies_opt3_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(SubMenu_Movies_opt3) + Skin.HasSetting(SubMenu_Movies)</visible>
 			</control>
-			<control type="radiobutton" id="310">
+			<control type="radiobutton" id="30010">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -628,7 +627,7 @@
 				<selected>Skin.HasSetting(SubMenu_Movies_opt4)</selected>
 				<visible>Skin.HasSetting(SubMenu_Movies_opt3) + Skin.HasSetting(SubMenu_Movies)</visible>
 			</control>
-			<control type="button" id="311">
+			<control type="button" id="30011">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -641,7 +640,7 @@
 				<onclick>Skin.SetString(SubMenu_Movies_opt4_lab)</onclick>
 				<visible>Skin.HasSetting(SubMenu_Movies_opt4) + Skin.HasSetting(SubMenu_Movies)</visible>
 			</control>
-			<control type="button" id="312">
+			<control type="button" id="30012">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -656,7 +655,7 @@
 				<onclick>Skin.SetString(SubMenu_Movies_opt4_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(SubMenu_Movies_opt4) + Skin.HasSetting(SubMenu_Movies)</visible>
 			</control>
-			<control type="radiobutton" id="313">
+			<control type="radiobutton" id="30013">
 				<description>Hide Submenu Movies By Genre</description>
 				<width>750</width>
 				<height>40</height>
@@ -670,7 +669,7 @@
 				<selected>Skin.HasSetting(MoviesByGenreHide)</selected>
 				<visible>Skin.HasSetting(SubMenu_Movies)</visible>
 			</control>
-			<control type="radiobutton" id="314">
+			<control type="radiobutton" id="30014">
 				<description>Hide Submenu Movies By Year</description>
 				<width>750</width>
 				<height>40</height>
@@ -684,7 +683,7 @@
 				<selected>Skin.HasSetting(MoviesByYearHide)</selected>
 				<visible>Skin.HasSetting(SubMenu_Movies)</visible>
 			</control>
-			<control type="radiobutton" id="315">
+			<control type="radiobutton" id="30015">
 				<description>Hide Submenu Movies Recently Added</description>
 				<width>750</width>
 				<height>40</height>
@@ -698,7 +697,7 @@
 				<selected>Skin.HasSetting(MoviesRecAddHide)</selected>
 				<visible>Skin.HasSetting(SubMenu_Movies)</visible>
 			</control>
-			<control type="radiobutton" id="316">
+			<control type="radiobutton" id="30016">
 				<description>Hide Submenu Movies Titles</description>
 				<width>750</width>
 				<height>40</height>
@@ -712,7 +711,7 @@
 				<selected>Skin.HasSetting(MoviesTitlesHide)</selected>
 				<visible>Skin.HasSetting(SubMenu_Movies)</visible>
 			</control>
-			<control type="radiobutton" id="317">
+			<control type="radiobutton" id="30017">
 				<description>Hide Submenu Movies By Actor</description>
 				<width>750</width>
 				<height>40</height>
@@ -726,7 +725,7 @@
 				<selected>Skin.HasSetting(MoviesByActorHide)</selected>
 				<visible>Skin.HasSetting(SubMenu_Movies)</visible>
 			</control>
-			<control type="radiobutton" id="318">
+			<control type="radiobutton" id="30018">
 				<description>Hide Submenu Movies By Director</description>
 				<width>750</width>
 				<height>40</height>
@@ -740,7 +739,7 @@
 				<selected>Skin.HasSetting(MoviesByDirectorHide)</selected>
 				<visible>Skin.HasSetting(SubMenu_Movies)</visible>
 			</control>
-			<control type="radiobutton" id="319">
+			<control type="radiobutton" id="30019">
 				<description>Hide Submenu Movies By Studio</description>
 				<width>750</width>
 				<height>40</height>
@@ -776,7 +775,7 @@
 				<onclick>Skin.Reset(Menu_Men4)</onclick>
 				<selected>Skin.HasSetting(SubMenu_TvShows)</selected>
 			</control>
-			<control type="radiobutton" id="401">
+			<control type="radiobutton" id="40001">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -789,7 +788,7 @@
 				<selected>Skin.HasSetting(SubMenu_TvShows_opt1)</selected>
 				<visible>Skin.HasSetting(SubMenu_TvShows)</visible>
 			</control>
-			<control type="button" id="402">
+			<control type="button" id="40002">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -802,7 +801,7 @@
 				<onclick>Skin.SetString(SubMenu_TvShows_opt1_lab)</onclick>
 				<visible>Skin.HasSetting(SubMenu_TvShows_opt1) + Skin.HasSetting(SubMenu_TvShows)</visible>
 			</control>
-			<control type="button" id="403">
+			<control type="button" id="40003">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -817,7 +816,7 @@
 				<onclick>Skin.SetString(SubMenu_TvShows_opt1_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(SubMenu_TvShows_opt1) + Skin.HasSetting(SubMenu_TvShows)</visible>
 			</control>
-			<control type="radiobutton" id="404">
+			<control type="radiobutton" id="40004">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -830,7 +829,7 @@
 				<selected>Skin.HasSetting(SubMenu_TvShows_opt2)</selected>
 				<visible>Skin.HasSetting(SubMenu_TvShows_opt1) + Skin.HasSetting(SubMenu_TvShows)</visible>
 			</control>
-			<control type="button" id="405">
+			<control type="button" id="40005">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -843,7 +842,7 @@
 				<onclick>Skin.SetString(SubMenu_TvShows_opt2_lab)</onclick>
 				<visible>Skin.HasSetting(SubMenu_TvShows_opt2) + Skin.HasSetting(SubMenu_TvShows)</visible>
 			</control>
-			<control type="button" id="406">
+			<control type="button" id="40006">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -858,7 +857,7 @@
 				<onclick>Skin.SetString(SubMenu_TvShows_opt2_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(SubMenu_TvShows_opt2) + Skin.HasSetting(SubMenu_TvShows)</visible>
 			</control>
-			<control type="radiobutton" id="407">
+			<control type="radiobutton" id="40007">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -871,7 +870,7 @@
 				<selected>Skin.HasSetting(SubMenu_TvShows_opt3)</selected>
 				<visible>Skin.HasSetting(SubMenu_TvShows_opt2) + Skin.HasSetting(SubMenu_TvShows)</visible>
 			</control>
-			<control type="button" id="408">
+			<control type="button" id="40008">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -884,7 +883,7 @@
 				<onclick>Skin.SetString(SubMenu_TvShows_opt3_lab)</onclick>
 				<visible>Skin.HasSetting(SubMenu_TvShows_opt3) + Skin.HasSetting(SubMenu_TvShows)</visible>
 			</control>
-			<control type="button" id="409">
+			<control type="button" id="40009">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -899,7 +898,7 @@
 				<onclick>Skin.SetString(SubMenu_TvShows_opt3_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(SubMenu_TvShows_opt3) + Skin.HasSetting(SubMenu_TvShows)</visible>
 			</control>
-			<control type="radiobutton" id="410">
+			<control type="radiobutton" id="40010">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -912,7 +911,7 @@
 				<selected>Skin.HasSetting(SubMenu_TvShows_opt4)</selected>
 				<visible>Skin.HasSetting(SubMenu_TvShows_opt3) + Skin.HasSetting(SubMenu_TvShows)</visible>
 			</control>
-			<control type="button" id="411">
+			<control type="button" id="40011">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -925,7 +924,7 @@
 				<onclick>Skin.SetString(SubMenu_TvShows_opt4_lab)</onclick>
 				<visible>Skin.HasSetting(SubMenu_TvShows_opt4) + Skin.HasSetting(SubMenu_TvShows)</visible>
 			</control>
-			<control type="button" id="412">
+			<control type="button" id="40012">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -940,7 +939,7 @@
 				<onclick>Skin.SetString(SubMenu_TvShows_opt4_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(SubMenu_TvShows_opt4) + Skin.HasSetting(SubMenu_TvShows)</visible>
 			</control>
-			<control type="radiobutton" id="413">
+			<control type="radiobutton" id="40013">
 				<description>Hide Submenu TVShows By Title</description>
 				<width>750</width>
 				<height>40</height>
@@ -954,7 +953,7 @@
 				<selected>Skin.HasSetting(TVByTitleHide)</selected>
 				<visible>Skin.HasSetting(SubMenu_TvShows)</visible>
 			</control>
-			<control type="radiobutton" id="414">
+			<control type="radiobutton" id="40014">
 				<description>Hide Submenu TVShows By Genre</description>
 				<width>750</width>
 				<height>40</height>
@@ -968,7 +967,7 @@
 				<selected>Skin.HasSetting(TVByGenreHide)</selected>
 				<visible>Skin.HasSetting(SubMenu_TvShows)</visible>
 			</control>
-			<control type="radiobutton" id="415">
+			<control type="radiobutton" id="40015">
 				<description>Hide Submenu TVShows Recently added</description>
 				<width>750</width>
 				<height>40</height>
@@ -982,7 +981,7 @@
 				<selected>Skin.HasSetting(TVByRecAddHide)</selected>
 				<visible>Skin.HasSetting(SubMenu_TvShows)</visible>
 			</control>
-			<control type="radiobutton" id="416">
+			<control type="radiobutton" id="40016">
 				<description>Hide Submenu TVShows By Year</description>
 				<width>750</width>
 				<height>40</height>
@@ -996,7 +995,7 @@
 				<selected>Skin.HasSetting(TVByYearHide)</selected>
 				<visible>Skin.HasSetting(SubMenu_TvShows)</visible>
 			</control>
-			<control type="radiobutton" id="417">
+			<control type="radiobutton" id="40017">
 				<description>Hide Submenu TVShows By Actor</description>
 				<width>750</width>
 				<height>40</height>
@@ -1010,7 +1009,7 @@
 				<selected>Skin.HasSetting(TVByActorHide)</selected>
 				<visible>Skin.HasSetting(SubMenu_TvShows)</visible>
 			</control>
-			<control type="radiobutton" id="418">
+			<control type="radiobutton" id="40018">
 				<description>Hide Submenu TVShows By Studio</description>
 				<width>750</width>
 				<height>40</height>
@@ -1046,7 +1045,7 @@
 				<onclick>Skin.Reset(Menu_Men4)</onclick>
 				<selected>Skin.HasSetting(SubMenu_Music)</selected>
 			</control>
-			<control type="radiobutton" id="501">
+			<control type="radiobutton" id="50001">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1059,7 +1058,7 @@
 				<selected>Skin.HasSetting(SubMenu_Music_opt1)</selected>
 				<visible>Skin.HasSetting(SubMenu_Music)</visible>
 			</control>
-			<control type="button" id="502">
+			<control type="button" id="50002">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1072,7 +1071,7 @@
 				<onclick>Skin.SetString(SubMenu_Music_opt1_lab)</onclick>
 				<visible>Skin.HasSetting(SubMenu_Music_opt1) + Skin.HasSetting(SubMenu_Music)</visible>
 			</control>
-			<control type="button" id="503">
+			<control type="button" id="50003">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1087,7 +1086,7 @@
 				<onclick>Skin.SetString(SubMenu_Music_opt1_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(SubMenu_Music_opt1) + Skin.HasSetting(SubMenu_Music)</visible>
 			</control>
-			<control type="radiobutton" id="504">
+			<control type="radiobutton" id="50004">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1100,7 +1099,7 @@
 				<selected>Skin.HasSetting(SubMenu_Music_opt2)</selected>
 				<visible>Skin.HasSetting(SubMenu_Music_opt1) + Skin.HasSetting(SubMenu_Music)</visible>
 			</control>
-			<control type="button" id="505">
+			<control type="button" id="50005">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1113,7 +1112,7 @@
 				<onclick>Skin.SetString(SubMenu_Music_opt2_lab)</onclick>
 				<visible>Skin.HasSetting(SubMenu_Music_opt2) + Skin.HasSetting(SubMenu_Music)</visible>
 			</control>
-			<control type="button" id="506">
+			<control type="button" id="50006">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1128,7 +1127,7 @@
 				<onclick>Skin.SetString(SubMenu_Music_opt2_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(SubMenu_Music_opt2) + Skin.HasSetting(SubMenu_Music)</visible>
 			</control>
-			<control type="radiobutton" id="507">
+			<control type="radiobutton" id="50007">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1141,7 +1140,7 @@
 				<selected>Skin.HasSetting(SubMenu_Music_opt3)</selected>
 				<visible>Skin.HasSetting(SubMenu_Music_opt2) + Skin.HasSetting(SubMenu_Music)</visible>
 			</control>
-			<control type="button" id="508">
+			<control type="button" id="50008">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1154,7 +1153,7 @@
 				<onclick>Skin.SetString(SubMenu_Music_opt3_lab)</onclick>
 				<visible>Skin.HasSetting(SubMenu_Music_opt3) + Skin.HasSetting(SubMenu_Music)</visible>
 			</control>
-			<control type="button" id="509">
+			<control type="button" id="50009">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1169,7 +1168,7 @@
 				<onclick>Skin.SetString(SubMenu_Music_opt3_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(SubMenu_Music_opt3) + Skin.HasSetting(SubMenu_Music)</visible>
 			</control>
-			<control type="radiobutton" id="510">
+			<control type="radiobutton" id="50010">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1182,7 +1181,7 @@
 				<selected>Skin.HasSetting(SubMenu_Music_opt4)</selected>
 				<visible>Skin.HasSetting(SubMenu_Music_opt3) + Skin.HasSetting(SubMenu_Music)</visible>
 			</control>
-			<control type="button" id="511">
+			<control type="button" id="50011">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1195,7 +1194,7 @@
 				<onclick>Skin.SetString(SubMenu_Music_opt4_lab)</onclick>
 				<visible>Skin.HasSetting(SubMenu_Music_opt4) + Skin.HasSetting(SubMenu_Music)</visible>
 			</control>
-			<control type="button" id="512">
+			<control type="button" id="50012">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1231,7 +1230,7 @@
 				<onclick>Skin.Reset(Menu_Men3)</onclick>
 				<onclick>Skin.Reset(Menu_Men4)</onclick>
 			</control>
-			<control type="radiobutton" id="701">
+			<control type="radiobutton" id="70001">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1244,7 +1243,7 @@
 				<selected>Skin.HasSetting(Menu_Men1_act)</selected>
 				<visible>Skin.HasSetting(Menu_Men1)</visible>
 			</control>
-			<control type="button" id="702">
+			<control type="button" id="70002">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1257,7 +1256,7 @@
 				<onclick>Skin.SetString(Menu_Men1_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(Menu_Men1_act)</visible>
 			</control>
-			<control type="button" id="703">
+			<control type="button" id="70003">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1272,7 +1271,7 @@
 				<onclick>Skin.SetString(Menu_Men1_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(Menu_Men1_act)</visible>
 			</control>
-			<control type="radiobutton" id="704">
+			<control type="radiobutton" id="70004">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1285,7 +1284,7 @@
 				<selected>Skin.HasSetting(SubMenu_Men1_opt1)</selected>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(Menu_Men1_act)</visible>
 			</control>
-			<control type="button" id="705">
+			<control type="button" id="70005">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1298,7 +1297,7 @@
 				<onclick>Skin.SetString(SubMenu_Men1_opt1_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(SubMenu_Men1_opt1) + Skin.HasSetting(Menu_Men1_act)</visible>
 			</control>
-			<control type="button" id="706">
+			<control type="button" id="70006">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1313,7 +1312,7 @@
 				<onclick>Skin.SetString(SubMenu_Men1_opt1_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(SubMenu_Men1_opt1) + Skin.HasSetting(Menu_Men1_act)</visible>
 			</control>
-			<control type="radiobutton" id="707">
+			<control type="radiobutton" id="70007">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1326,7 +1325,7 @@
 				<selected>Skin.HasSetting(SubMenu_Men1_opt2)</selected>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(SubMenu_Men1_opt1) + Skin.HasSetting(Menu_Men1_act)</visible>
 			</control>
-			<control type="button" id="708">
+			<control type="button" id="70008">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1339,7 +1338,7 @@
 				<onclick>Skin.SetString(SubMenu_Men1_opt2_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(SubMenu_Men1_opt1) + Skin.HasSetting(SubMenu_Men1_opt2) + Skin.HasSetting(Menu_Men1_act)</visible>
 			</control>
-			<control type="button" id="709">
+			<control type="button" id="70009">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1354,7 +1353,7 @@
 				<onclick>Skin.SetString(SubMenu_Men1_opt2_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(SubMenu_Men1_opt1) + Skin.HasSetting(SubMenu_Men1_opt2) + Skin.HasSetting(Menu_Men1_act)</visible>
 			</control>
-			<control type="radiobutton" id="710">
+			<control type="radiobutton" id="70010">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1367,7 +1366,7 @@
 				<selected>Skin.HasSetting(SubMenu_Men1_opt3)</selected>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(SubMenu_Men1_opt1) + Skin.HasSetting(SubMenu_Men1_opt2) +  Skin.HasSetting(Menu_Men1_act)</visible>
 			</control>
-			<control type="button" id="711">
+			<control type="button" id="70011">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1380,7 +1379,7 @@
 				<onclick>Skin.SetString(SubMenu_Men1_opt3_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(SubMenu_Men1_opt1) + Skin.HasSetting(SubMenu_Men1_opt2) + Skin.HasSetting(SubMenu_Men1_opt3) + Skin.HasSetting(Menu_Men1_act)</visible>
 			</control>
-			<control type="button" id="712">
+			<control type="button" id="70012">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1395,7 +1394,7 @@
 				<onclick>Skin.SetString(SubMenu_Men1_opt3_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(SubMenu_Men1_opt1) + Skin.HasSetting(SubMenu_Men1_opt2) + Skin.HasSetting(SubMenu_Men1_opt3) + Skin.HasSetting(Menu_Men1_act)</visible>
 			</control>
-			<control type="radiobutton" id="713">
+			<control type="radiobutton" id="70013">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1408,7 +1407,7 @@
 				<selected>Skin.HasSetting(SubMenu_Men1_opt4)</selected>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(SubMenu_Men1_opt1) + Skin.HasSetting(SubMenu_Men1_opt2) + Skin.HasSetting(SubMenu_Men1_opt3) + Skin.HasSetting(Menu_Men1_act)</visible>
 			</control>
-			<control type="button" id="714">
+			<control type="button" id="70014">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1421,7 +1420,7 @@
 				<onclick>Skin.SetString(SubMenu_Men1_opt4_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(SubMenu_Men1_opt1) + Skin.HasSetting(SubMenu_Men1_opt2) + Skin.HasSetting(SubMenu_Men1_opt3) + Skin.HasSetting(SubMenu_Men1_opt4) + Skin.HasSetting(Menu_Men1_act)</visible>
 			</control>
-			<control type="button" id="715">
+			<control type="button" id="70015">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1436,7 +1435,7 @@
 				<onclick>Skin.SetString(SubMenu_Men1_opt4_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(SubMenu_Men1_opt1) + Skin.HasSetting(SubMenu_Men1_opt2) + Skin.HasSetting(SubMenu_Men1_opt3) + Skin.HasSetting(SubMenu_Men1_opt4) + Skin.HasSetting(Menu_Men1_act)</visible>
 			</control>
-			<control type="radiobutton" id="716">
+			<control type="radiobutton" id="70016">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1449,7 +1448,7 @@
 				<selected>Skin.HasSetting(SubMenu_Men1_opt5)</selected>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(SubMenu_Men1_opt1) + Skin.HasSetting(SubMenu_Men1_opt2) + Skin.HasSetting(SubMenu_Men1_opt3) + Skin.HasSetting(SubMenu_Men1_opt4) + Skin.HasSetting(Menu_Men1_act)</visible>
 			</control>
-			<control type="button" id="717">
+			<control type="button" id="70017">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1462,7 +1461,7 @@
 				<onclick>Skin.SetString(SubMenu_Men1_opt5_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(SubMenu_Men1_opt1) + Skin.HasSetting(SubMenu_Men1_opt2) + Skin.HasSetting(SubMenu_Men1_opt3) + Skin.HasSetting(SubMenu_Men1_opt4) + Skin.HasSetting(SubMenu_Men1_opt5) + Skin.HasSetting(Menu_Men1_act)</visible>
 			</control>
-			<control type="button" id="718">
+			<control type="button" id="70018">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1477,7 +1476,7 @@
 				<onclick>Skin.SetString(SubMenu_Men1_opt5_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(SubMenu_Men1_opt1) + Skin.HasSetting(SubMenu_Men1_opt2) + Skin.HasSetting(SubMenu_Men1_opt3) + Skin.HasSetting(SubMenu_Men1_opt4)  + Skin.HasSetting(SubMenu_Men1_opt5) + Skin.HasSetting(Menu_Men1_act)</visible>
 			</control>
-			<control type="radiobutton" id="713">
+			<control type="radiobutton" id="70019">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1490,7 +1489,7 @@
 				<selected>Skin.HasSetting(SubMenu_Men1_opt6)</selected>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(SubMenu_Men1_opt1) + Skin.HasSetting(SubMenu_Men1_opt2) + Skin.HasSetting(SubMenu_Men1_opt3) + Skin.HasSetting(SubMenu_Men1_opt4) + Skin.HasSetting(SubMenu_Men1_opt5) + Skin.HasSetting(Menu_Men1_act)</visible>
 			</control>
-			<control type="button" id="714">
+			<control type="button" id="70020">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1505,7 +1504,7 @@
 			</control>
 <!-- Menu custom 1 END -->
 <!-- Menu custom 2 -->
-			<control type="button" id="700">
+			<control type="button" id="800">
 				<width>750</width>
 				<height>45</height>
 				<font>font13caps_title</font>
@@ -1524,7 +1523,7 @@
 				<onclick>Skin.Reset(Menu_Men3)</onclick>
 				<onclick>Skin.Reset(Menu_Men4)</onclick>
 			</control>
-			<control type="radiobutton" id="701">
+			<control type="radiobutton" id="80001">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1537,7 +1536,7 @@
 				<selected>Skin.HasSetting(Menu_Men2_act)</selected>
 				<visible>Skin.HasSetting(Menu_Men2)</visible>
 			</control>
-			<control type="button" id="702">
+			<control type="button" id="80002">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1550,7 +1549,7 @@
 				<onclick>Skin.SetString(Menu_Men2_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(Menu_Men2_act)</visible>
 			</control>
-			<control type="button" id="703">
+			<control type="button" id="80003">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1565,7 +1564,7 @@
 				<onclick>Skin.SetString(Menu_Men2_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(Menu_Men2_act)</visible>
 			</control>
-			<control type="radiobutton" id="704">
+			<control type="radiobutton" id="80004">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1578,7 +1577,7 @@
 				<selected>Skin.HasSetting(SubMenu_Men2_opt1)</selected>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(Menu_Men2_act)</visible>
 			</control>
-			<control type="button" id="705">
+			<control type="button" id="80005">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1591,7 +1590,7 @@
 				<onclick>Skin.SetString(SubMenu_Men2_opt1_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(SubMenu_Men2_opt1) + Skin.HasSetting(Menu_Men2_act)</visible>
 			</control>
-			<control type="button" id="706">
+			<control type="button" id="80006">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1606,7 +1605,7 @@
 				<onclick>Skin.SetString(SubMenu_Men2_opt1_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(SubMenu_Men2_opt1) + Skin.HasSetting(Menu_Men2_act)</visible>
 			</control>
-			<control type="radiobutton" id="707">
+			<control type="radiobutton" id="80007">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1619,7 +1618,7 @@
 				<selected>Skin.HasSetting(SubMenu_Men2_opt2)</selected>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(SubMenu_Men2_opt1) + Skin.HasSetting(Menu_Men2_act)</visible>
 			</control>
-			<control type="button" id="708">
+			<control type="button" id="80008">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1632,7 +1631,7 @@
 				<onclick>Skin.SetString(SubMenu_Men2_opt2_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(SubMenu_Men2_opt1) + Skin.HasSetting(SubMenu_Men2_opt2) + Skin.HasSetting(Menu_Men2_act)</visible>
 			</control>
-			<control type="button" id="709">
+			<control type="button" id="80009">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1647,7 +1646,7 @@
 				<onclick>Skin.SetString(SubMenu_Men2_opt2_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(SubMenu_Men2_opt1) + Skin.HasSetting(SubMenu_Men2_opt2) + Skin.HasSetting(Menu_Men2_act)</visible>
 			</control>
-			<control type="radiobutton" id="710">
+			<control type="radiobutton" id="80010">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1660,7 +1659,7 @@
 				<selected>Skin.HasSetting(SubMenu_Men2_opt3)</selected>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(SubMenu_Men2_opt1) + Skin.HasSetting(SubMenu_Men2_opt2) +  Skin.HasSetting(Menu_Men2_act)</visible>
 			</control>
-			<control type="button" id="711">
+			<control type="button" id="80011">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1673,7 +1672,7 @@
 				<onclick>Skin.SetString(SubMenu_Men2_opt3_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(SubMenu_Men2_opt1) + Skin.HasSetting(SubMenu_Men2_opt2) + Skin.HasSetting(SubMenu_Men2_opt3) + Skin.HasSetting(Menu_Men2_act)</visible>
 			</control>
-			<control type="button" id="712">
+			<control type="button" id="80012">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1688,7 +1687,7 @@
 				<onclick>Skin.SetString(SubMenu_Men2_opt3_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(SubMenu_Men2_opt1) + Skin.HasSetting(SubMenu_Men2_opt2) + Skin.HasSetting(SubMenu_Men2_opt3) + Skin.HasSetting(Menu_Men2_act)</visible>
 			</control>
-			<control type="radiobutton" id="713">
+			<control type="radiobutton" id="80013">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1701,7 +1700,7 @@
 				<selected>Skin.HasSetting(SubMenu_Men2_opt4)</selected>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(SubMenu_Men2_opt1) + Skin.HasSetting(SubMenu_Men2_opt2) + Skin.HasSetting(SubMenu_Men2_opt3) + Skin.HasSetting(Menu_Men2_act)</visible>
 			</control>
-			<control type="button" id="714">
+			<control type="button" id="80014">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1714,7 +1713,7 @@
 				<onclick>Skin.SetString(SubMenu_Men2_opt4_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(SubMenu_Men2_opt1) + Skin.HasSetting(SubMenu_Men2_opt2) + Skin.HasSetting(SubMenu_Men2_opt3) + Skin.HasSetting(SubMenu_Men2_opt4) + Skin.HasSetting(Menu_Men2_act)</visible>
 			</control>
-			<control type="button" id="715">
+			<control type="button" id="80015">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1729,7 +1728,7 @@
 				<onclick>Skin.SetString(SubMenu_Men2_opt4_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(SubMenu_Men2_opt1) + Skin.HasSetting(SubMenu_Men2_opt2) + Skin.HasSetting(SubMenu_Men2_opt3) + Skin.HasSetting(SubMenu_Men2_opt4) + Skin.HasSetting(Menu_Men2_act)</visible>
 			</control>
-			<control type="radiobutton" id="716">
+			<control type="radiobutton" id="80016">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1742,7 +1741,7 @@
 				<selected>Skin.HasSetting(SubMenu_Men2_opt5)</selected>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(SubMenu_Men2_opt1) + Skin.HasSetting(SubMenu_Men2_opt2) + Skin.HasSetting(SubMenu_Men2_opt3) + Skin.HasSetting(SubMenu_Men2_opt4) + Skin.HasSetting(Menu_Men2_act)</visible>
 			</control>
-			<control type="button" id="717">
+			<control type="button" id="80017">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1755,7 +1754,7 @@
 				<onclick>Skin.SetString(SubMenu_Men2_opt5_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(SubMenu_Men2_opt1) + Skin.HasSetting(SubMenu_Men2_opt2) + Skin.HasSetting(SubMenu_Men2_opt3) + Skin.HasSetting(SubMenu_Men2_opt4) + Skin.HasSetting(SubMenu_Men2_opt5) + Skin.HasSetting(Menu_Men2_act)</visible>
 			</control>
-			<control type="button" id="718">
+			<control type="button" id="80018">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1770,7 +1769,7 @@
 				<onclick>Skin.SetString(SubMenu_Men2_opt5_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(SubMenu_Men2_opt1) + Skin.HasSetting(SubMenu_Men2_opt2) + Skin.HasSetting(SubMenu_Men2_opt3) + Skin.HasSetting(SubMenu_Men2_opt4)  + Skin.HasSetting(SubMenu_Men2_opt5) + Skin.HasSetting(Menu_Men2_act)</visible>
 			</control>
-			<control type="radiobutton" id="713">
+			<control type="radiobutton" id="80019">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1783,7 +1782,7 @@
 				<selected>Skin.HasSetting(SubMenu_Men2_opt6)</selected>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(SubMenu_Men2_opt1) + Skin.HasSetting(SubMenu_Men2_opt2) + Skin.HasSetting(SubMenu_Men2_opt3) + Skin.HasSetting(SubMenu_Men2_opt4) + Skin.HasSetting(SubMenu_Men2_opt5) + Skin.HasSetting(Menu_Men2_act)</visible>
 			</control>
-			<control type="button" id="714">
+			<control type="button" id="80020">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1798,7 +1797,7 @@
 			</control>
 <!-- Menu custom 2 END -->
 <!-- Menu custom 3 -->
-			<control type="button" id="800">
+			<control type="button" id="900">
 				<width>750</width>
 				<height>45</height>
 				<font>font13caps_title</font>
@@ -1817,7 +1816,7 @@
 				<onclick>Skin.Reset(Menu_Men2)</onclick>
 				<onclick>Skin.Reset(Menu_Men4)</onclick>
 			</control>
-			<control type="radiobutton" id="801">
+			<control type="radiobutton" id="90001">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1830,7 +1829,7 @@
 				<selected>Skin.HasSetting(Menu_Men3_act)</selected>
 				<visible>Skin.HasSetting(Menu_Men3)</visible>
 			</control>
-			<control type="button" id="802">
+			<control type="button" id="90002">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1843,7 +1842,7 @@
 				<onclick>Skin.SetString(Menu_Men3_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(Menu_Men3_act)</visible>
 			</control>
-			<control type="button" id="803">
+			<control type="button" id="90003">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1858,7 +1857,7 @@
 				<onclick>Skin.SetString(Menu_Men3_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(Menu_Men3_act)</visible>
 			</control>
-			<control type="radiobutton" id="804">
+			<control type="radiobutton" id="90004">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1871,7 +1870,7 @@
 				<selected>Skin.HasSetting(SubMenu_Men3_opt1)</selected>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(Menu_Men3_act)</visible>
 			</control>
-			<control type="button" id="805">
+			<control type="button" id="90005">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1884,7 +1883,7 @@
 				<onclick>Skin.SetString(SubMenu_Men3_opt1_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(SubMenu_Men3_opt1) + Skin.HasSetting(Menu_Men3_act)</visible>
 			</control>
-			<control type="button" id="806">
+			<control type="button" id="90006">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1899,7 +1898,7 @@
 				<onclick>Skin.SetString(SubMenu_Men3_opt1_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(SubMenu_Men3_opt1) + Skin.HasSetting(Menu_Men3_act)</visible>
 			</control>
-			<control type="radiobutton" id="807">
+			<control type="radiobutton" id="90007">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1912,7 +1911,7 @@
 				<selected>Skin.HasSetting(SubMenu_Men3_opt2)</selected>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(SubMenu_Men3_opt1) + Skin.HasSetting(Menu_Men3_act)</visible>
 			</control>
-			<control type="button" id="808">
+			<control type="button" id="90008">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1925,7 +1924,7 @@
 				<onclick>Skin.SetString(SubMenu_Men3_opt2_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(SubMenu_Men3_opt1) + Skin.HasSetting(SubMenu_Men3_opt2) + Skin.HasSetting(Menu_Men3_act)</visible>
 			</control>
-			<control type="button" id="809">
+			<control type="button" id="90009">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1940,7 +1939,7 @@
 				<onclick>Skin.SetString(SubMenu_Men3_opt2_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(SubMenu_Men3_opt1) + Skin.HasSetting(SubMenu_Men3_opt2) + Skin.HasSetting(Menu_Men3_act)</visible>
 			</control>
-			<control type="radiobutton" id="810">
+			<control type="radiobutton" id="90010">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1953,7 +1952,7 @@
 				<selected>Skin.HasSetting(SubMenu_Men3_opt3)</selected>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(SubMenu_Men3_opt1) + Skin.HasSetting(SubMenu_Men3_opt2) +  Skin.HasSetting(Menu_Men3_act)</visible>
 			</control>
-			<control type="button" id="811">
+			<control type="button" id="90011">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1966,7 +1965,7 @@
 				<onclick>Skin.SetString(SubMenu_Men3_opt3_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(SubMenu_Men3_opt1) + Skin.HasSetting(SubMenu_Men3_opt2) + Skin.HasSetting(SubMenu_Men3_opt3) + Skin.HasSetting(Menu_Men3_act)</visible>
 			</control>
-			<control type="button" id="812">
+			<control type="button" id="90012">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1981,7 +1980,7 @@
 				<onclick>Skin.SetString(SubMenu_Men3_opt3_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(SubMenu_Men3_opt1) + Skin.HasSetting(SubMenu_Men3_opt2) + Skin.HasSetting(SubMenu_Men3_opt3) + Skin.HasSetting(Menu_Men3_act)</visible>
 			</control>
-			<control type="radiobutton" id="813">
+			<control type="radiobutton" id="90013">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1994,7 +1993,7 @@
 				<selected>Skin.HasSetting(SubMenu_Men3_opt4)</selected>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(SubMenu_Men3_opt1) + Skin.HasSetting(SubMenu_Men3_opt2) + Skin.HasSetting(SubMenu_Men3_opt3) + Skin.HasSetting(Menu_Men3_act)</visible>
 			</control>
-			<control type="button" id="814">
+			<control type="button" id="90014">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -2007,7 +2006,7 @@
 				<onclick>Skin.SetString(SubMenu_Men3_opt4_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(SubMenu_Men3_opt1) + Skin.HasSetting(SubMenu_Men3_opt2) + Skin.HasSetting(SubMenu_Men3_opt3) + Skin.HasSetting(SubMenu_Men3_opt4) + Skin.HasSetting(Menu_Men3_act)</visible>
 			</control>
-			<control type="button" id="815">
+			<control type="button" id="90015">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -2022,7 +2021,7 @@
 				<onclick>Skin.SetString(SubMenu_Men3_opt4_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(SubMenu_Men3_opt1) + Skin.HasSetting(SubMenu_Men3_opt2) + Skin.HasSetting(SubMenu_Men3_opt3) + Skin.HasSetting(SubMenu_Men3_opt4) + Skin.HasSetting(Menu_Men3_act)</visible>
 			</control>
-			<control type="radiobutton" id="816">
+			<control type="radiobutton" id="90016">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -2035,7 +2034,7 @@
 				<selected>Skin.HasSetting(SubMenu_Men3_opt5)</selected>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(SubMenu_Men3_opt1) + Skin.HasSetting(SubMenu_Men3_opt2) + Skin.HasSetting(SubMenu_Men3_opt3) + Skin.HasSetting(SubMenu_Men3_opt4) + Skin.HasSetting(Menu_Men3_act)</visible>
 			</control>
-			<control type="button" id="817">
+			<control type="button" id="90017">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -2048,7 +2047,7 @@
 				<onclick>Skin.SetString(SubMenu_Men3_opt5_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(SubMenu_Men3_opt1) + Skin.HasSetting(SubMenu_Men3_opt2) + Skin.HasSetting(SubMenu_Men3_opt3) + Skin.HasSetting(SubMenu_Men3_opt4) + Skin.HasSetting(SubMenu_Men3_opt5) + Skin.HasSetting(Menu_Men3_act)</visible>
 			</control>
-			<control type="button" id="818">
+			<control type="button" id="90018">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -2063,7 +2062,7 @@
 				<onclick>Skin.SetString(SubMenu_Men3_opt5_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(SubMenu_Men3_opt1) + Skin.HasSetting(SubMenu_Men3_opt2) + Skin.HasSetting(SubMenu_Men3_opt3) + Skin.HasSetting(SubMenu_Men3_opt4)  + Skin.HasSetting(SubMenu_Men3_opt5) + Skin.HasSetting(Menu_Men3_act)</visible>
 			</control>
-			<control type="radiobutton" id="813">
+			<control type="radiobutton" id="90019">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -2076,7 +2075,7 @@
 				<selected>Skin.HasSetting(SubMenu_Men3_opt6)</selected>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(SubMenu_Men3_opt1) + Skin.HasSetting(SubMenu_Men3_opt2) + Skin.HasSetting(SubMenu_Men3_opt3) + Skin.HasSetting(SubMenu_Men3_opt4) + Skin.HasSetting(SubMenu_Men3_opt5) + Skin.HasSetting(Menu_Men3_act)</visible>
 			</control>
-			<control type="button" id="814">
+			<control type="button" id="90020">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -2091,7 +2090,7 @@
 			</control>
 <!-- Menu custom 3 END -->
 <!-- Menu custom 4 -->
-			<control type="button" id="900">
+			<control type="button" id="905">
 				<width>750</width>
 				<height>45</height>
 				<font>font13caps_title</font>
@@ -2110,7 +2109,7 @@
 				<onclick>Skin.Reset(Menu_Men2)</onclick>
 				<onclick>Skin.Reset(Menu_Men3)</onclick>
 			</control>
-			<control type="radiobutton" id="901">
+			<control type="radiobutton" id="90501">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -2123,7 +2122,7 @@
 				<selected>Skin.HasSetting(Menu_Men4_act)</selected>
 				<visible>Skin.HasSetting(Menu_Men4)</visible>
 			</control>
-			<control type="button" id="902">
+			<control type="button" id="90502">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -2136,7 +2135,7 @@
 				<onclick>Skin.SetString(Menu_Men4_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(Menu_Men4_act)</visible>
 			</control>
-			<control type="button" id="903">
+			<control type="button" id="90503">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -2151,7 +2150,7 @@
 				<onclick>Skin.SetString(Menu_Men4_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(Menu_Men4_act)</visible>
 			</control>
-			<control type="radiobutton" id="904">
+			<control type="radiobutton" id="90504">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -2164,7 +2163,7 @@
 				<selected>Skin.HasSetting(SubMenu_Men4_opt1)</selected>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(Menu_Men4_act)</visible>
 			</control>
-			<control type="button" id="905">
+			<control type="button" id="90505">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -2177,7 +2176,7 @@
 				<onclick>Skin.SetString(SubMenu_Men4_opt1_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(SubMenu_Men4_opt1) + Skin.HasSetting(Menu_Men4_act)</visible>
 			</control>
-			<control type="button" id="906">
+			<control type="button" id="90506">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -2192,7 +2191,7 @@
 				<onclick>Skin.SetString(SubMenu_Men4_opt1_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(SubMenu_Men4_opt1) + Skin.HasSetting(Menu_Men4_act)</visible>
 			</control>
-			<control type="radiobutton" id="907">
+			<control type="radiobutton" id="90507">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -2205,7 +2204,7 @@
 				<selected>Skin.HasSetting(SubMenu_Men4_opt2)</selected>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(SubMenu_Men4_opt1) + Skin.HasSetting(Menu_Men4_act)</visible>
 			</control>
-			<control type="button" id="908">
+			<control type="button" id="90508">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -2218,7 +2217,7 @@
 				<onclick>Skin.SetString(SubMenu_Men4_opt2_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(SubMenu_Men4_opt1) + Skin.HasSetting(SubMenu_Men4_opt2) + Skin.HasSetting(Menu_Men4_act)</visible>
 			</control>
-			<control type="button" id="909">
+			<control type="button" id="90509">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -2233,7 +2232,7 @@
 				<onclick>Skin.SetString(SubMenu_Men4_opt2_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(SubMenu_Men4_opt1) + Skin.HasSetting(SubMenu_Men4_opt2) + Skin.HasSetting(Menu_Men4_act)</visible>
 			</control>
-			<control type="radiobutton" id="910">
+			<control type="radiobutton" id="90510">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -2246,7 +2245,7 @@
 				<selected>Skin.HasSetting(SubMenu_Men4_opt3)</selected>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(SubMenu_Men4_opt1) + Skin.HasSetting(SubMenu_Men4_opt2) +  Skin.HasSetting(Menu_Men4_act)</visible>
 			</control>
-			<control type="button" id="911">
+			<control type="button" id="90511">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -2259,7 +2258,7 @@
 				<onclick>Skin.SetString(SubMenu_Men4_opt3_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(SubMenu_Men4_opt1) + Skin.HasSetting(SubMenu_Men4_opt2) + Skin.HasSetting(SubMenu_Men4_opt3) + Skin.HasSetting(Menu_Men4_act)</visible>
 			</control>
-			<control type="button" id="912">
+			<control type="button" id="90512">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -2274,7 +2273,7 @@
 				<onclick>Skin.SetString(SubMenu_Men4_opt3_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(SubMenu_Men4_opt1) + Skin.HasSetting(SubMenu_Men4_opt2) + Skin.HasSetting(SubMenu_Men4_opt3) + Skin.HasSetting(Menu_Men4_act)</visible>
 			</control>
-			<control type="radiobutton" id="913">
+			<control type="radiobutton" id="90513">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -2287,7 +2286,7 @@
 				<selected>Skin.HasSetting(SubMenu_Men4_opt4)</selected>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(SubMenu_Men4_opt1) + Skin.HasSetting(SubMenu_Men4_opt2) + Skin.HasSetting(SubMenu_Men4_opt3) + Skin.HasSetting(Menu_Men4_act)</visible>
 			</control>
-			<control type="button" id="914">
+			<control type="button" id="90514">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -2300,7 +2299,7 @@
 				<onclick>Skin.SetString(SubMenu_Men4_opt4_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(SubMenu_Men4_opt1) + Skin.HasSetting(SubMenu_Men4_opt2) + Skin.HasSetting(SubMenu_Men4_opt3) + Skin.HasSetting(SubMenu_Men4_opt4) + Skin.HasSetting(Menu_Men4_act)</visible>
 			</control>
-			<control type="button" id="915">
+			<control type="button" id="90515">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -2315,7 +2314,7 @@
 				<onclick>Skin.SetString(SubMenu_Men4_opt4_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(SubMenu_Men4_opt1) + Skin.HasSetting(SubMenu_Men4_opt2) + Skin.HasSetting(SubMenu_Men4_opt3) + Skin.HasSetting(SubMenu_Men4_opt4) + Skin.HasSetting(Menu_Men4_act)</visible>
 			</control>
-			<control type="radiobutton" id="916">
+			<control type="radiobutton" id="90516">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -2328,7 +2327,7 @@
 				<selected>Skin.HasSetting(SubMenu_Men4_opt5)</selected>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(SubMenu_Men4_opt1) + Skin.HasSetting(SubMenu_Men4_opt2) + Skin.HasSetting(SubMenu_Men4_opt3) + Skin.HasSetting(SubMenu_Men4_opt4) + Skin.HasSetting(Menu_Men4_act)</visible>
 			</control>
-			<control type="button" id="917">
+			<control type="button" id="90517">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -2341,7 +2340,7 @@
 				<onclick>Skin.SetString(SubMenu_Men4_opt5_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(SubMenu_Men4_opt1) + Skin.HasSetting(SubMenu_Men4_opt2) + Skin.HasSetting(SubMenu_Men4_opt3) + Skin.HasSetting(SubMenu_Men4_opt4) + Skin.HasSetting(SubMenu_Men4_opt5) + Skin.HasSetting(Menu_Men4_act)</visible>
 			</control>
-			<control type="button" id="918">
+			<control type="button" id="90518">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -2356,7 +2355,7 @@
 				<onclick>Skin.SetString(SubMenu_Men4_opt5_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(SubMenu_Men4_opt1) + Skin.HasSetting(SubMenu_Men4_opt2) + Skin.HasSetting(SubMenu_Men4_opt3) + Skin.HasSetting(SubMenu_Men4_opt4)  + Skin.HasSetting(SubMenu_Men4_opt5) + Skin.HasSetting(Menu_Men4_act)</visible>
 			</control>
-			<control type="radiobutton" id="913">
+			<control type="radiobutton" id="90519">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -2369,7 +2368,7 @@
 				<selected>Skin.HasSetting(SubMenu_Men4_opt6)</selected>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(SubMenu_Men4_opt1) + Skin.HasSetting(SubMenu_Men4_opt2) + Skin.HasSetting(SubMenu_Men4_opt3) + Skin.HasSetting(SubMenu_Men4_opt4) + Skin.HasSetting(SubMenu_Men4_opt5) + Skin.HasSetting(Menu_Men4_act)</visible>
 			</control>
-			<control type="button" id="914">
+			<control type="button" id="90520">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>

@@ -638,6 +638,7 @@
 				<animation effect="slide" end="0,-102" time="300" condition="Container(19000).Row(2)">conditional</animation>
 				<animation effect="slide" end="0,102" time="300" condition="Container(19000).Row(4)">conditional</animation>
 				<animation effect="slide" end="0,204" time="300" condition="Container(19000).Row(5)">conditional</animation>
+<!-- SubMenu Video  -->
 				<control type="grouplist" id="19010">
 					<posx>10</posx>
 					<posy>0</posy>
@@ -691,7 +692,33 @@
 						<onclick>ActivateWindow(VideoFiles,Addons,return)</onclick>
 						<visible>!Library.HasContent(Video)</visible>
 					</control>
+					<control type="button" id="190108">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(SubMenu_Video_opt1_lab)]</label>
+						<onclick>>$INFO[Skin.String(SubMenu_Video_opt1_run]</onclick>
+						<visible>!Library.HasContent(Video) + Skin.HasSetting(SubMenu_Video_opt1)</visible>
+					</control>
+					<control type="button" id="190109">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(SubMenu_Video_opt2_lab)]</label>
+						<onclick>>$INFO[Skin.String(SubMenu_Video_opt2_run]</onclick>
+						<visible>!Library.HasContent(Video) + Skin.HasSetting(SubMenu_Video_opt2)</visible>
+					</control>
+					<control type="button" id="190110">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(SubMenu_Video_opt3_lab)]</label>
+						<onclick>>$INFO[Skin.String(SubMenu_Video_opt3_run]</onclick>
+						<visible>!Library.HasContent(Video) + Skin.HasSetting(SubMenu_Video_opt3)</visible>
+					</control>
+					<control type="button" id="190111">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(SubMenu_Video_opt4_lab)]</label>
+						<onclick>>$INFO[Skin.String(SubMenu_Video_opt4_run]</onclick>
+						<visible>!Library.HasContent(Video) + Skin.HasSetting(SubMenu_Video_opt4)</visible>
+					</control>
 				</control>
+<!-- SubMenu Video (END) -->
+<!-- SubMenu Music -->
 				<control type="grouplist" id="19011">
 					<posx>10</posx>
 					<posy>0</posy>
@@ -745,7 +772,33 @@
 						<onclick>ActivateWindow(MusicFiles,Addons,return)</onclick>
 						<visible>!Library.HasContent(Music)</visible>
 					</control>
+					<control type="button" id="190118">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(SubMenu_Music_opt1_lab)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Music_opt1_run)]</onclick>
+						<visible>!Library.HasContent(Music) + Skin.HasSetting(SubMenu_Music_opt1)</visible>
+					</control>
+					<control type="button" id="190119">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(SubMenu_Music_opt2_lab)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Music_opt2_run)]</onclick>
+						<visible>!Library.HasContent(Music) + Skin.HasSetting(SubMenu_Music_opt2)</visible>
+					</control>
+					<control type="button" id="190120">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(SubMenu_Music_opt3_lab)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Music_opt3_run)]</onclick>
+						<visible>!Library.HasContent(Music) + Skin.HasSetting(SubMenu_Music_opt3)</visible>
+					</control>
+					<control type="button" id="190121">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(SubMenu_Music_opt4_lab)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Music_opt4_run)]</onclick>
+						<visible>!Library.HasContent(Music) + Skin.HasSetting(SubMenu_Music_opt4)</visible>
+					</control>
 				</control>
+<!-- SubMenu Music (END)-->
+<!-- SubMenu System -->
 				<control type="grouplist" id="19014">
 					<posx>10</posx>
 					<posy>0</posy>
@@ -790,6 +843,8 @@
 						<visible>False</visible>
 					</control>
 				</control>
+<!-- SubMenu System (END) -->
+<!-- SubMenu Movie -->
 				<control type="grouplist" id="19016">
 					<posx>10</posx>
 					<posy>0</posy>
@@ -832,7 +887,33 @@
 						<label>31328</label>
 						<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</onclick>
 					</control>
+					<control type="button" id="190167">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(SubMenu_Movies_opt1_lab)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Movies_opt1_run)]</onclick>
+						<visible>!Library.HasContent(Music) + Skin.HasSetting(SubMenu_Movies_opt1)</visible>
+					</control>
+					<control type="button" id="190168">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(SubMenu_Movies_opt2_lab)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Movies_opt2_run)]</onclick>
+						<visible>!Library.HasContent(Music) + Skin.HasSetting(SubMenu_Movies_opt2)</visible>
+					</control>
+					<control type="button" id="190169">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(SubMenu_Movies_opt3_lab)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Movies_opt3_run)]</onclick>
+						<visible>!Library.HasContent(Music) + Skin.HasSetting(SubMenu_Movies_opt3)</visible>
+					</control>
+					<control type="button" id="190170">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(SubMenu_Movies_opt4_lab)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Movies_opt4_run)]</onclick>
+						<visible>!Library.HasContent(Music) + Skin.HasSetting(SubMenu_Movies_opt4)</visible>
+					</control>
 				</control>
+<!-- SubMenu Movie (END) -->
+<!-- SubMenu TvShow -->
 				<control type="grouplist" id="19017">
 					<posx>10</posx>
 					<posy>0</posy>
@@ -870,7 +951,33 @@
 						<label>31328</label>
 						<onclick>ActivateWindow(VideoLibrary,RecentlyAddedEpisodes,return)</onclick>
 					</control>
+					<control type="button" id="190176">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(SubMenu_TvShows_opt1_lab)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_TvShows_opt1_run)]</onclick>
+						<visible>Skin.HasSetting(SubMenu_TvShows_opt1)</visible>
+					</control>
+					<control type="button" id="190177">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(SubMenu_TvShows_opt2_lab)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_TvShows_opt2_run)]</onclick>
+						<visible>Skin.HasSetting(SubMenu_TvShows_opt2)</visible>
+					</control>
+					<control type="button" id="190178">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(SubMenu_TvShows_opt3_lab)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_TvShows_opt3_run)]</onclick>
+						<visible>Skin.HasSetting(SubMenu_TvShows_opt3)</visible>
+					</control>
+					<control type="button" id="190179">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(SubMenu_TvShows_opt4_lab)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_TvShows_opt4_run)]</onclick>
+						<visible>Skin.HasSetting(SubMenu_TvShows_opt4)</visible>
+					</control>
 				</control>
+<!-- SubMenu TvShow (END) -->
+<!-- Custom Menu 1  -->
 				<control type="grouplist" id="19020">
 					<posx>10</posx>
 					<posy>0</posy>
@@ -932,6 +1039,8 @@
 						<visible>[Skin.HasSetting(SubMenu_Men1_opt6) + !IsEmpty(Skin.String(SubMenu_Men1_opt6_lab))]</visible>
 					</control>
 				</control>
+<!-- Custom Menu 1 (END) -->
+<!-- Custom Menu 2  -->
 				<control type="grouplist" id="19021">
 					<posx>10</posx>
 					<posy>0</posy>
@@ -993,6 +1102,8 @@
 						<visible>[Skin.HasSetting(SubMenu_Men2_opt6) + !IsEmpty(Skin.String(SubMenu_Men2_opt6_lab))]</visible>
 					</control>
 				</control>
+<!-- Custom Menu 2 (END) -->
+<!-- Custom Menu 3  -->
 				<control type="grouplist" id="19022">
 					<posx>10</posx>
 					<posy>0</posy>
@@ -1054,6 +1165,8 @@
 						<visible>[Skin.HasSetting(SubMenu_Men3_opt6) + !IsEmpty(Skin.String(SubMenu_Men3_opt6_lab))]</visible>
 					</control>
 				</control>
+<!-- Custom Menu 3 (END) -->
+<!-- Custom Menu 4 -->
 				<control type="grouplist" id="19023">
 					<posx>10</posx>
 					<posy>0</posy>
@@ -1115,6 +1228,7 @@
 						<visible>[Skin.HasSetting(SubMenu_Men4_opt6) + !IsEmpty(Skin.String(SubMenu_Men4_opt6_lab))]</visible>
 					</control>
 				</control>
+<!-- Custom Menu 4 (END) -->
 			</control>
 			<control type="image">
 				<posx>-450</posx>
