@@ -653,67 +653,67 @@
 					<visible>Container(19000).HasFocus(2)</visible>
 					<control type="button" id="190101">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>342</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieTitles,return)</onclick>
+						<label>$INFO[Skin.String(Menu_Videos_sub1_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Videos_sub1_run)]</onclick>
 						<visible>Library.HasContent(Movies)</visible>
 					</control>
 					<control type="button" id="190102">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>20343</label>
-						<onclick>ActivateWindow(VideoLibrary,TvShowTitles,return)</onclick>
+						<label>$INFO[Skin.String(Menu_Videos_sub2_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Videos_sub2_run)]</onclick>
 						<visible>Library.HasContent(TVShows)</visible>
 					</control>
 					<control type="button" id="190103">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>20389</label>
-						<onclick>ActivateWindow(VideoLibrary,MusicVideoTitles,return)</onclick>
+						<label>$INFO[Skin.String(Menu_Videos_sub3_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Videos_sub3_run)]</onclick>
 						<visible>Library.HasContent(MusicVideos)</visible>
 					</control>
 					<control type="button" id="190104">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>744</label>
-						<onclick>ActivateWindow(VideoFiles)</onclick>
+						<label>$INFO[Skin.String(Menu_Videos_sub4_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Videos_sub4_run)]</onclick>
 					</control>
 					<control type="button" id="190105">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>14022</label>
-						<onclick>ActivateWindow(VideoLibrary)</onclick>
+						<label>$INFO[Skin.String(Menu_Videos_sub5_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Videos_sub5_run)]</onclick>
 						<visible>Library.HasContent(Video)</visible>
 					</control>
 					<control type="button" id="190106">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>24001</label>
-						<onclick>ActivateWindow(VideoLibrary,Addons,return)</onclick>
+						<label>$INFO[Skin.String(Menu_Videos_sub5_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Videos_sub5_run)]</onclick>
 						<visible>Library.HasContent(Video)</visible>
 					</control>
 					<control type="button" id="190107">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>24001</label>
+						<label>$INFO[Skin.String(Menu_Videos_sub5_lab)]</label>
 						<onclick>ActivateWindow(VideoFiles,Addons,return)</onclick>
 						<visible>!Library.HasContent(Video)</visible>
 					</control>
 					<control type="button" id="190108">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(SubMenu_Video_opt1_lab)]</label>
-						<onclick>>$INFO[Skin.String(SubMenu_Video_opt1_run]</onclick>
+						<onclick>$INFO[Skin.String(SubMenu_Video_opt1_run]</onclick>
 						<visible>!Library.HasContent(Video) + Skin.HasSetting(SubMenu_Video_opt1)</visible>
 					</control>
 					<control type="button" id="190109">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(SubMenu_Video_opt2_lab)]</label>
-						<onclick>>$INFO[Skin.String(SubMenu_Video_opt2_run]</onclick>
+						<onclick>$INFO[Skin.String(SubMenu_Video_opt2_run]</onclick>
 						<visible>!Library.HasContent(Video) + Skin.HasSetting(SubMenu_Video_opt2)</visible>
 					</control>
 					<control type="button" id="190110">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(SubMenu_Video_opt3_lab)]</label>
-						<onclick>>$INFO[Skin.String(SubMenu_Video_opt3_run]</onclick>
+						<onclick>$INFO[Skin.String(SubMenu_Video_opt3_run]</onclick>
 						<visible>!Library.HasContent(Video) + Skin.HasSetting(SubMenu_Video_opt3)</visible>
 					</control>
 					<control type="button" id="190111">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(SubMenu_Video_opt4_lab)]</label>
-						<onclick>>$INFO[Skin.String(SubMenu_Video_opt4_run]</onclick>
+						<onclick>$INFO[Skin.String(SubMenu_Video_opt4_run]</onclick>
 						<visible>!Library.HasContent(Video) + Skin.HasSetting(SubMenu_Video_opt4)</visible>
 					</control>
 				</control>
@@ -733,44 +733,32 @@
 					<visible>Container(19000).HasFocus(3)</visible>
 					<control type="button" id="190111">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>133</label>
-						<onclick>ActivateWindow(MusicLibrary,Artists,return)</onclick>
+						<label>$INFO[Skin.String(Menu_Music_sub1_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Music_sub1_run]</onclick>
 						<visible>Library.HasContent(Music)</visible>
 					</control>
 					<control type="button" id="190112">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>132</label>
-						<onclick>ActivateWindow(MusicLibrary,Albums,return)</onclick>
+						<label>$INFO[Skin.String(Menu_Music_sub2_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Music_sub2_run]</onclick>
 						<visible>Library.HasContent(Music)</visible>
 					</control>
 					<control type="button" id="190113">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>134</label>
-						<onclick>ActivateWindow(MusicLibrary,Songs,return)</onclick>
+						<label>$INFO[Skin.String(Menu_Music_sub3_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Music_sub3_run]</onclick>
 						<visible>Library.HasContent(Music)</visible>
 					</control>
 					<control type="button" id="190114">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>744</label>
-						<onclick>ActivateWindow(MusicFiles)</onclick>
+						<label>$INFO[Skin.String(Menu_Music_sub4_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Music_sub4_run]</onclick>
 					</control>
 					<control type="button" id="190115">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>14022</label>
-						<onclick>ActivateWindow(MusicLibrary)</onclick>
+						<label>$INFO[Skin.String(Menu_Music_sub5_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Music_sub5_run]</onclick>
 						<visible>Library.HasContent(Music)</visible>
-					</control>
-					<control type="button" id="190116">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>24001</label>
-						<onclick>ActivateWindow(MusicLibrary,Addons,return)</onclick>
-						<visible>Library.HasContent(Music)</visible>
-					</control>
-					<control type="button" id="190117">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>24001</label>
-						<onclick>ActivateWindow(MusicFiles,Addons,return)</onclick>
-						<visible>!Library.HasContent(Music)</visible>
 					</control>
 					<control type="button" id="190118">
 						<include>ButtonHomeSubCommonValues</include>
@@ -859,33 +847,33 @@
 					<visible>Container(19000).HasFocus(10)</visible>
 					<control type="button" id="190161">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>369</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieTitles,return)</onclick>
+						<label>$INFO[Skin.String(Menu_Movie_sub1_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Movie_sub1_run)]</onclick>
 					</control>
 					<control type="button" id="190162">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>135</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieGenres,return)</onclick>
+						<label>$INFO[Skin.String(Menu_Movie_sub2_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Movie_sub2_run)]</onclick>
 					</control>
 					<control type="button" id="190163">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>652</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieYears,return)</onclick>
+						<label>$INFO[Skin.String(Menu_Movie_sub3_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Movie_sub3_run)]</onclick>
 					</control>
 					<control type="button" id="190164">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>344</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieActors,return)</onclick>
+						<label>$INFO[Skin.String(Menu_Movie_sub4_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Movie_sub4_run)]</onclick>
 					</control>
 					<control type="button" id="190165">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>20348</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieDirectors,return)</onclick>
+						<label>$INFO[Skin.String(Menu_Movie_sub5_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Movie_sub5_run)]</onclick>
 					</control>
 					<control type="button" id="190166">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>31328</label>
-						<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</onclick>
+						<label>$INFO[Skin.String(Menu_Movie_sub6_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Movie_sub6_run)]</onclick>
 					</control>
 					<control type="button" id="190167">
 						<include>ButtonHomeSubCommonValues</include>
@@ -928,28 +916,28 @@
 					<visible>Container(19000).HasFocus(11)</visible>
 					<control type="button" id="190171">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>369</label>
-						<onclick>ActivateWindow(VideoLibrary,TVShowTitles,return)</onclick>
+						<label>$INFO[Skin.String(Menu_TVShows_sub1_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_TVShows_sub1_run)]</onclick>
 					</control>
 					<control type="button" id="190172">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>135</label>
-						<onclick>ActivateWindow(VideoLibrary,TVShowGenres,return)</onclick>
+						<label>$INFO[Skin.String(Menu_TVShows_sub2_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_TVShows_sub2_run)]</onclick>
 					</control>
 					<control type="button" id="190173">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>652</label>
-						<onclick>ActivateWindow(VideoLibrary,TVShowYears,return)</onclick>
+						<label>$INFO[Skin.String(Menu_TVShows_sub3_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_TVShows_sub3_run)]</onclick>
 					</control>
 					<control type="button" id="190174">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>344</label>
-						<onclick>ActivateWindow(VideoLibrary,TVShowActors,return)</onclick>
+						<label>$INFO[Skin.String(Menu_TVShows_sub4_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_TVShows_sub4_run)]</onclick>
 					</control>
 					<control type="button" id="190175">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>31328</label>
-						<onclick>ActivateWindow(VideoLibrary,RecentlyAddedEpisodes,return)</onclick>
+						<label>$INFO[Skin.String(Menu_TVShows_sub5_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_TVShows_sub5_run)]</onclick>
 					</control>
 					<control type="button" id="190176">
 						<include>ButtonHomeSubCommonValues</include>
@@ -1324,36 +1312,38 @@
 				</focusedlayout>
 				<content>
 					<item id="6">
-						<label>8</label>
-						<onclick>ActivateWindow(Weather)</onclick>
+						<label>$INFO[Skin.String(Menu_Weather_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Weather_run)]</onclick>
 						<icon>special://skin/backgrounds/weather.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
 						<visible>!Skin.HasSetting(ShowWeatherFanart) | IsEmpty(Skin.String(WeatherFanartDir))</visible>
 					</item>
 					<item id="6">
-						<label>8</label>
-						<onclick>ActivateWindow(Weather)</onclick>
+						<label>$INFO[Skin.String(Menu_Weather_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Weather_run)]</onclick>
 						<icon>special://skin/backgrounds/weather.jpg</icon>
 						<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
 						<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
 					</item>
 					<item id="4">
-						<label>1</label>
-						<onclick>ActivateWindow(Pictures)</onclick>
+						<label>$INFO[Skin.String(Menu_Pictures_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Pictures_run)]</onclick>
 						<icon>special://skin/backgrounds/pictures.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
 					</item>
 					<item id="3">
-						<label>2</label>
-						<onclick>ActivateWindow(Music)</onclick>
+						<label>$INFO[Skin.String(Menu_Music_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Music_run)]</onclick>
 						<icon>special://skin/backgrounds/music.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
 					</item>
 					<item id="2">
+						<label>$INFO[Skin.String(Menu_Videos_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Video_run)]</onclick>
 						<label>3</label>
 						<onclick>ActivateWindow(Videos)</onclick>
 						<icon>special://skin/backgrounds/videos.jpg</icon>
@@ -1361,22 +1351,22 @@
 						<visible>!Skin.HasSetting(HomeMenuNoVideosButton) + ![Skin.HasSetting(HomeMenuNoMoviesButton) + Skin.HasSetting(HomeMenuNoTVShowsButton)]</visible>
 					</item>
 					<item id="2">
-						<label>3</label>
+						<label>$INFO[Skin.String(Menu_Videos_lab)]</label>
 						<onclick>ActivateWindow(VideoFiles)</onclick>
 						<icon>special://skin/backgrounds/videos.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoVideosButton) + [Skin.HasSetting(HomeMenuNoMoviesButton) + Skin.HasSetting(HomeMenuNoTVShowsButton)]</visible>
 					</item>
 					<item id="10">
-						<label>20342</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieTitles,return)</onclick>
+						<label>$INFO[Skin.String(Menu_Movie_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Movie_run)]</onclick>
 						<icon>special://skin/backgrounds/videos.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</thumb>
 						<visible>Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)</visible>
 					</item>
 					<item id="11">
-						<label>20343</label>
-						<onclick>ActivateWindow(VideoLibrary,TVShowTitles,return)</onclick>
+						<label>$INFO[Skin.String(Menu_TVShows_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_TVShows_run)]</onclick>
 						<icon>special://skin/backgrounds/videos.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</thumb>
 						<visible>Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)</visible>
