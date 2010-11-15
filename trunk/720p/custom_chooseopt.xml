@@ -57,33 +57,52 @@
 				<item id="1">
 					<label>Favori</label>
 					<onclick>-</onclick>
-					<onclick>Skin.SetString($INFO[Skin.String(RunOpt)])</onclick>
-					<onclick>Dialog.Close(1114)</onclick>
+					<onclick>ActivateWindow(1114)</onclick>
+					<onclick>Dialog.Close(2114)</onclick>
 				</item>
 				<item id="2">
 					<label>Playlist Musical</label>
-					<onclick>Skin.SetFile($INFO[Skin.String(RunOpt)],.m3u,special://musicplaylists)</onclick>
-					<onclick>Dialog.Close(1114)</onclick>
+
+					<onclick>Skin.SetFile($INFO[Skin.String(RunOpt)],.m3u,special://musicplaylists/)</onclick>
+					<!--
+					<onclick>Skin.SetFile($INFO[Skin.String(RunOpt)],.m3u)</onclick>
+					-->
+					<onclick>Dialog.Close(2114)</onclick>
 				</item>
 				<item id="3">
 					<label>Playliste Video</label>
-					<onclick>Skin.SetFile($INFO[Skin.String(RunOpt)],.xsp,special://videoplaylists)</onclick>
-					<onclick>Dialog.Close(1114)</onclick>
+					<onclick>Skin.SetFile($INFO[Skin.String(RunOpt)],.xsp,special://videoplaylists/)</onclick>
+					<!--
+					<onclick>Skin.SetFile($INFO[Skin.String(RunOpt)],.xsp)</onclick>
+					-->
+					<onclick>Dialog.Close(2114)</onclick>
 				</item>
 				<item id="4">
 					<label>Script</label>
+					<!--
 					<onclick>Skin.Setfile($INFO[Skin.String(RunOpt)],.py,special://script)</onclick>
-					<onclick>Dialog.Close(1114)</onclick>
+					-->
+					<onclick>Skin.Setfile($INFO[Skin.String(RunOpt)],.py)</onclick>
+<!--
+RunScript(script[,args]*)	 Runs the python script. You must specify the full path to the script, (or use Q:\Scripts\Scriptname.py on Xbox). If the script is an add-on, you can also execute it using its add-on id. As of 2007/02/24, all extra parameters are passed to the script as arguments and can be accessed by python using sys.argv
+-->
+					<onclick>Dialog.Close(2114)</onclick>
 				</item>
 				<item id="5">
 					<label>Addon</label>
-					<onclick>Skin.SetAddon($INFO[Skin.String(RunOpt)],xbmc.python.pluginsource)</onclick>
-					<onclick>Dialog.Close(1114)</onclick>
+					<!--
+					<onclick>Skin.SetAddon($INFO[Skin.String(RunOpt)],xbmc.python.script)></onclick>
+					-->
+<!--
+RunPlugin(plugin)	 Runs the plugin. Full path must be specified. Does not work for folder plugins
+-->
+					<onclick>Skin.SetAddon($INFO[Skin.String(RunOpt)])></onclick>
+					<onclick>Dialog.Close(2114)</onclick>
 				</item>
 				<item id="6">
 					<label>Saisie libre</label>
 					<onclick>Skin.SetString($INFO[Skin.String(RunOpt)])</onclick>
-					<onclick>Dialog.Close(1114)</onclick>
+					<onclick>Dialog.Close(2114)</onclick>
 				</item>
 			</content>
 		</control>
