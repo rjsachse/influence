@@ -62,7 +62,7 @@
 				</item>
 				<item id="2">
 					<label>Playlist Musical</label>
-					<onclick>Skin.SetFile($INFO[Skin.String(RunOpt)],.xsp,special://musicplaylists)</onclick>
+					<onclick>Skin.SetFile($INFO[Skin.String(RunOpt)],.m3u,special://musicplaylists)</onclick>
 					<onclick>Dialog.Close(1114)</onclick>
 				</item>
 				<item id="3">
@@ -71,11 +71,16 @@
 					<onclick>Dialog.Close(1114)</onclick>
 				</item>
 				<item id="4">
-					<label>Script/Addon</label>
-					<onclick>Skin.SetAddon($INFO[Skin.String(RunOpt)],xbmc.python.script)</onclick>
+					<label>Script</label>
+					<onclick>Skin.Setfile($INFO[Skin.String(RunOpt)],.py,special://script)</onclick>
 					<onclick>Dialog.Close(1114)</onclick>
 				</item>
 				<item id="5">
+					<label>Addon</label>
+					<onclick>Skin.SetAddon($INFO[Skin.String(RunOpt)],xbmc.python.pluginsource)</onclick>
+					<onclick>Dialog.Close(1114)</onclick>
+				</item>
+				<item id="6">
 					<label>Saisie libre</label>
 					<onclick>Skin.SetString($INFO[Skin.String(RunOpt)])</onclick>
 					<onclick>Dialog.Close(1114)</onclick>
