@@ -873,27 +873,27 @@
 					</control>
 					<control type="button" id="190167">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Movies_opt1_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Movies_opt1_run)]</onclick>
-						<visible>!Library.HasContent(Music) + Skin.HasSetting(SubMenu_Movies_opt1)</visible>
+						<label>$INFO[Skin.String(SubMenu_Movie_opt1_lab)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Movie_opt1_run)]</onclick>
+						<visible>!Library.HasContent(Music) + Skin.HasSetting(SubMenu_Movie_opt1)</visible>
 					</control>
 					<control type="button" id="190168">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Movies_opt2_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Movies_opt2_run)]</onclick>
-						<visible>!Library.HasContent(Music) + Skin.HasSetting(SubMenu_Movies_opt2)</visible>
+						<label>$INFO[Skin.String(SubMenu_Movie_opt2_lab)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Movie_opt2_run)]</onclick>
+						<visible>!Library.HasContent(Music) + Skin.HasSetting(SubMenu_Movie_opt2)</visible>
 					</control>
 					<control type="button" id="190169">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Movies_opt3_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Movies_opt3_run)]</onclick>
-						<visible>!Library.HasContent(Music) + Skin.HasSetting(SubMenu_Movies_opt3)</visible>
+						<label>$INFO[Skin.String(SubMenu_Movie_opt3_lab)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Movie_opt3_run)]</onclick>
+						<visible>!Library.HasContent(Music) + Skin.HasSetting(SubMenu_Movie_opt3)</visible>
 					</control>
 					<control type="button" id="190170">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Movies_opt4_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Movies_opt4_run)]</onclick>
-						<visible>!Library.HasContent(Music) + Skin.HasSetting(SubMenu_Movies_opt4)</visible>
+						<label>$INFO[Skin.String(SubMenu_Movie_opt4_lab)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Movie_opt4_run)]</onclick>
+						<visible>!Library.HasContent(Music) + Skin.HasSetting(SubMenu_Movie_opt4)</visible>
 					</control>
 				</control>
 <!-- SubMenu Movie (END) -->
@@ -966,6 +966,84 @@
 					</control>
 				</control>
 <!-- SubMenu TvShow (END) -->
+<!-- SubMenu Pictures -->
+				<control type="grouplist" id="19018">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>240</width>
+					<height>240</height>
+					<align>center</align>
+					<onleft>19000</onleft>
+					<onright>Control.SetFocus(8001,0)</onright>
+					<onup>19018</onup>
+					<ondown>19018</ondown>
+					<itemgap>0</itemgap>
+					<visible>Container(19000).HasFocus(4)</visible>
+					<control type="button" id="190186">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(SubMenu_Pictures_opt1_lab)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Pictures_opt1_run)]</onclick>
+						<visible>Skin.HasSetting(SubMenu_Pictures_opt1)</visible>
+					</control>
+					<control type="button" id="190187">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(SubMenu_Pictures_opt2_lab)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Pictures_opt2_run)]</onclick>
+						<visible>Skin.HasSetting(SubMenu_Pictures_opt2)</visible>
+					</control>
+					<control type="button" id="190188">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(SubMenu_Pictures_opt3_lab)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Pictures_opt3_run)]</onclick>
+						<visible>Skin.HasSetting(SubMenu_Pictures_opt3)</visible>
+					</control>
+					<control type="button" id="190189">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(SubMenu_Pictures_opt4_lab)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Pictures_opt4_run)]</onclick>
+						<visible>Skin.HasSetting(SubMenu_Pictures_opt4)</visible>
+					</control>
+				</control>
+<!-- SubMenu Pictures (END) -->
+<!-- SubMenu Weather -->
+				<control type="grouplist" id="19018">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>240</width>
+					<height>240</height>
+					<align>center</align>
+					<onleft>19000</onleft>
+					<onright>Control.SetFocus(8001,0)</onright>
+					<onup>19018</onup>
+					<ondown>19018</ondown>
+					<itemgap>0</itemgap>
+					<visible>Container(19000).HasFocus(6)</visible>
+					<control type="button" id="190186">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(SubMenu_Weather_opt1_lab)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Weather_opt1_run)]</onclick>
+						<visible>Skin.HasSetting(SubMenu_Weather_opt1)</visible>
+					</control>
+					<control type="button" id="190187">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(SubMenu_Weather_opt2_lab)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Weather_opt2_run)]</onclick>
+						<visible>Skin.HasSetting(SubMenu_Weather_opt2)</visible>
+					</control>
+					<control type="button" id="190188">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(SubMenu_Weather_opt3_lab)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Weather_opt3_run)]</onclick>
+						<visible>Skin.HasSetting(SubMenu_Weather_opt3)</visible>
+					</control>
+					<control type="button" id="190189">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(SubMenu_Weather_opt4_lab)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Weather_opt4_run)]</onclick>
+						<visible>Skin.HasSetting(SubMenu_Weather_opt4)</visible>
+					</control>
+				</control>
+<!-- SubMenu Weather (END) -->
 <!-- Custom Menu 1  -->
 				<control type="grouplist" id="19020">
 					<posx>10</posx>
@@ -1306,7 +1384,7 @@
 						<width>18</width>
 						<height>18</height>
 						<texture>HomeHasSub.png</texture>
-						<visible>Container(19000).HasFocus(2) | Container(19000).HasFocus(3) | Container(19000).HasFocus(5) | Container(19000).HasFocus(7) | Container(19000).HasFocus(9) | [Container(19000).HasFocus(1) + [[Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))] | [Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))] | [Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))] | [Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))] | [Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))] | [Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))]]] | Container(19000).HasFocus(10) | Container(19000).HasFocus(11)</visible>
+						<visible> Container(19000).HasFocus(1)  | Container(19000).HasFocus(2)  + [Skin.HasSetting(Menu_Videos_sub1_act) | Skin.HasSetting(Menu_Videos_sub2_act) | Skin.HasSetting(Menu_Videos_sub3_act) | Skin.HasSetting(Menu_Videos_sub4_act) | Skin.HasSetting(Menu_Videos_sub5_act) | Skin.HasSetting(SubMenu_Video_opt1) | Skin.HasSetting(SubMenu_Video_opt2) | Skin.HasSetting(SubMenu_Video_opt3) | Skin.HasSetting(SubMenu_Video_opt4)] | Container(19000).HasFocus(3)  + [Skin.HasSetting(Menu_Music_sub1_act) | Skin.HasSetting(Menu_Music_sub2_act) | Skin.HasSetting(Menu_Music_sub3_act) | Skin.HasSetting(Menu_Music_sub4_act) | Skin.HasSetting(Menu_Music_sub5_act) | Skin.HasSetting(SubMenu_Music_opt1) | Skin.HasSetting(SubMenu_Music_opt2) | Skin.HasSetting(SubMenu_Music_opt3) | Skin.HasSetting(SubMenu_Music_opt4)] | Container(19000).HasFocus(4)  + [Skin.HasSetting(SubMenu_Pictures_opt1) | Skin.HasSetting(SubMenu_Pictures_opt2) | Skin.HasSetting(SubMenu_Pictures_opt3) | Skin.HasSetting(SubMenu_Pictures_opt4)] | Container(19000).HasFocus(5)  | Container(19000).HasFocus(6)  + [Skin.HasSetting(SubMenu_Weather_opt1) | Skin.HasSetting(SubMenu_Weather_opt2) | Skin.HasSetting(SubMenu_Weather_opt3) | Skin.HasSetting(SubMenu_Weather_opt4)] | Container(19000).HasFocus(7)  | Container(19000).HasFocus(9)  | Container(19000).HasFocus(10)  + [Skin.HasSetting(Menu_Movie_sub1_act) | Skin.HasSetting(Menu_Movie_sub2_act) | Skin.HasSetting(Menu_Movie_sub3_act) | Skin.HasSetting(Menu_Movie_sub4_act) | Skin.HasSetting(Menu_Movie_sub5_act)  | Skin.HasSetting(Menu_Movie_sub6_act) | Skin.HasSetting(SubMenu_Movie_opt1) | Skin.HasSetting(SubMenu_Movie_opt2) | Skin.HasSetting(SubMenu_Movie_opt3) | Skin.HasSetting(SubMenu_Movie_opt4)] | Container(19000).HasFocus(11)  + [Skin.HasSetting(Menu_TVShows_sub1_act) | Skin.HasSetting(Menu_TVShows_sub2_act) | Skin.HasSetting(Menu_TVShows_sub3_act) | Skin.HasSetting(Menu_TVShows_sub4_act) | Skin.HasSetting(Menu_TVShows_sub5_act)  | Skin.HasSetting(Menu_TVShows_sub6_act) | Skin.HasSetting(SubMenu_TVShows_opt1) | Skin.HasSetting(SubMenu_TVShows_opt2) | Skin.HasSetting(SubMenu_TVShows_opt3) | Skin.HasSetting(SubMenu_TVShows_opt4)] | Container(19000).HasFocus(20)  + Skin.HasSetting(SubMenu_Men1_opt1) | Container(19000).HasFocus(21)  + Skin.HasSetting(SubMenu_Men2_opt1) | Container(19000).HasFocus(22)  + Skin.HasSetting(SubMenu_Men3_opt1) | Container(19000).HasFocus(23)  + Skin.HasSetting(SubMenu_Men4_opt1) </visible>
 						<animation effect="fade" start="0" end="100" time="200">Focus</animation>
 						<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
 					</control>
@@ -1317,7 +1395,7 @@
 						<onclick>$INFO[Skin.String(Menu_Weather_run)]</onclick>
 						<icon>special://skin/backgrounds/weather.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+						<visible>Skin.HasSetting(Menu_Weather_act)</visible>
 						<visible>!Skin.HasSetting(ShowWeatherFanart) | IsEmpty(Skin.String(WeatherFanartDir))</visible>
 					</item>
 					<item id="6">
@@ -1325,7 +1403,7 @@
 						<onclick>$INFO[Skin.String(Menu_Weather_run)]</onclick>
 						<icon>special://skin/backgrounds/weather.jpg</icon>
 						<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+						<visible>Skin.HasSetting(Menu_Weather_act)</visible>
 						<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
 					</item>
 					<item id="4">
@@ -1333,44 +1411,35 @@
 						<onclick>$INFO[Skin.String(Menu_Pictures_run)]</onclick>
 						<icon>special://skin/backgrounds/pictures.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
+						<visible>Skin.HasSetting(Menu_Pictures_act)</visible>
 					</item>
 					<item id="3">
 						<label>$INFO[Skin.String(Menu_Music_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_Music_run)]</onclick>
 						<icon>special://skin/backgrounds/music.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
+						<visible>Skin.HasSetting(Menu_Music_act)</visible>
 					</item>
 					<item id="2">
 						<label>$INFO[Skin.String(Menu_Videos_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_Video_run)]</onclick>
-						<label>3</label>
-						<onclick>ActivateWindow(Videos)</onclick>
 						<icon>special://skin/backgrounds/videos.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoVideosButton) + ![Skin.HasSetting(HomeMenuNoMoviesButton) + Skin.HasSetting(HomeMenuNoTVShowsButton)]</visible>
-					</item>
-					<item id="2">
-						<label>$INFO[Skin.String(Menu_Videos_lab)]</label>
-						<onclick>ActivateWindow(VideoFiles)</onclick>
-						<icon>special://skin/backgrounds/videos.jpg</icon>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoVideosButton) + [Skin.HasSetting(HomeMenuNoMoviesButton) + Skin.HasSetting(HomeMenuNoTVShowsButton)]</visible>
+						<visible>Skin.HasSetting(Menu_Videos_act)</visible>
 					</item>
 					<item id="10">
 						<label>$INFO[Skin.String(Menu_Movie_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_Movie_run)]</onclick>
 						<icon>special://skin/backgrounds/videos.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</thumb>
-						<visible>Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)</visible>
+						<visible>Skin.HasSetting(Menu_Movie_act) + Library.HasContent(Movies)</visible>
 					</item>
 					<item id="11">
 						<label>$INFO[Skin.String(Menu_TVShows_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_TVShows_run)]</onclick>
 						<icon>special://skin/backgrounds/videos.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</thumb>
-						<visible>Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)</visible>
+						<visible>Skin.HasSetting(Menu_TVShows_act) + Library.HasContent(TVShows)</visible>
 					</item>
 <!-- Custom Home --> 	
 					<item id="20">

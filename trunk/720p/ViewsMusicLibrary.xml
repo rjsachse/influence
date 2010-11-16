@@ -31,6 +31,7 @@
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
+						<shadowcolor>black</shadowcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -43,6 +44,7 @@
 						<height>40</height>
 						<font>font12</font>
 						<textcolor>grey2</textcolor>
+						<shadowcolor>black</shadowcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -83,6 +85,7 @@
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -95,6 +98,7 @@
 						<height>40</height>
 						<font>font12</font>
 						<textcolor>grey2</textcolor>
+						<shadowcolor>black</shadowcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -216,6 +220,7 @@
 					<aligny>center</aligny>
 					<font>font13caps_title</font>
 					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
 					<visible>!Container.Content(Albums)</visible>
 				</control>
 				<control type="label">
@@ -229,6 +234,7 @@
 					<aligny>center</aligny>
 					<font>font13caps_title</font>
 					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="image">
 					<description>Rating value</description>
@@ -412,6 +418,7 @@
 						<height>40</height>
 						<font>font12</font>
 						<textcolor>grey2</textcolor>
+						<shadowcolor>black</shadowcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -459,6 +466,7 @@
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -471,6 +479,7 @@
 						<height>40</height>
 						<font>font12</font>
 						<textcolor>grey2</textcolor>
+						<shadowcolor>black</shadowcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -607,6 +616,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font13caps_title</font>
+					<shadowcolor>black</shadowcolor>
 					<textcolor>white</textcolor>
 				</control>
 				<control type="image">
@@ -684,6 +694,7 @@
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -782,6 +793,7 @@
 						<aligny>center</aligny>
 						<font>font13caps_title</font>
 						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
 						<visible>!IsEmpty(ListItem.Property(Artist_Born))</visible>
 					</control>
 					<control type="label">
@@ -794,6 +806,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>font13</font>
+						<shadowcolor>black</shadowcolor>
 						<scroll>true</scroll>
 						<visible>!IsEmpty(ListItem.Property(Artist_Born))</visible>
 					</control>
@@ -808,6 +821,7 @@
 						<aligny>center</aligny>
 						<font>font13caps_title</font>
 						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
 						<visible>!IsEmpty(ListItem.Property(Artist_Formed))</visible>
 					</control>
 					<control type="label">
@@ -820,6 +834,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>font13</font>
+						<shadowcolor>black</shadowcolor>
 						<scroll>true</scroll>
 						<visible>!IsEmpty(ListItem.Property(Artist_Formed))</visible>
 					</control>
@@ -834,6 +849,7 @@
 						<aligny>center</aligny>
 						<font>font13caps_title</font>
 						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
 					</control>
 					<control type="label">
 						<description>Genre Value</description>
@@ -845,6 +861,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>font13</font>
+						<shadowcolor>black</shadowcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="image">
@@ -863,6 +880,7 @@
 						<font>font12</font>
 						<align>justify</align>
 						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
 						<label>$INFO[ListItem.Property(Artist_Description)]</label>
 						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
@@ -902,6 +920,7 @@
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
+						<shadowcolor>black</shadowcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -914,6 +933,7 @@
 						<height>40</height>
 						<font>font12</font>
 						<textcolor>grey2</textcolor>
+						<shadowcolor>black</shadowcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -954,6 +974,7 @@
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -966,6 +987,7 @@
 						<height>40</height>
 						<font>font12</font>
 						<textcolor>grey2</textcolor>
+						<shadowcolor>black</shadowcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -1086,6 +1108,7 @@
 					<aligny>center</aligny>
 					<font>font13caps_title</font>
 					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="image">
 					<description>Rating value</description>
@@ -1123,6 +1146,7 @@
 					<width>750</width>
 					<height>165</height>
 					<font>font12</font>
+					<shadowcolor>black</shadowcolor>
 					<align>justify</align>
 					<pagecontrol>51361</pagecontrol>
 					<textcolor>white</textcolor>

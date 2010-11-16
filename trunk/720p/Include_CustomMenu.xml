@@ -70,7 +70,7 @@
 				<width>750</width>
 				<height>45</height>
 				<font>font13caps_title</font>
-				<label>Paramétrer le menu $INFO[Skin.String(Menu_Pictures_lab)]</label>
+				<label>$LOCALIZE[35020] $INFO[Skin.String(Menu_Pictures_lab)]</label>
 				<textcolor>blue</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<align>left</align>
@@ -296,7 +296,7 @@
 				<width>750</width>
 				<height>45</height>
 				<font>font13caps_title</font>
-				<label>Paramétrer le menu $INFO[Skin.String(Menu_Weather_lab)]</label>
+				<label>$LOCALIZE[35020] $INFO[Skin.String(Menu_Weather_lab)]</label>
 				<textcolor>blue</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<align>left</align>
@@ -522,7 +522,7 @@
 				<width>750</width>
 				<height>45</height>
 				<font>font13caps_title</font>
-				<label>Paramétrer le menu $INFO[Skin.String(Menu_Videos_lab)]</label>
+				<label>$LOCALIZE[35020] $INFO[Skin.String(Menu_Videos_lab)]</label>
 				<textcolor>blue</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<align>left</align>
@@ -953,7 +953,7 @@
 				<width>750</width>
 				<height>45</height>
 				<font>font13caps_title</font>
-				<label>Paramétrer le menu $INFO[Skin.String(Menu_Movie_lab)]</label>
+				<label>$LOCALIZE[35020] $INFO[Skin.String(Menu_Movie_lab)]</label>
 				<textcolor>blue</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<align>left</align>
@@ -1425,7 +1425,7 @@
 				<width>750</width>
 				<height>45</height>
 				<font>font13caps_title</font>
-				<label>Paramétrer le menu $INFO[Skin.String(Menu_Music_lab)]</label>
+				<label>$LOCALIZE[35020] $INFO[Skin.String(Menu_Music_lab)]</label>
 				<textcolor>blue</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<align>left</align>
@@ -1856,7 +1856,7 @@
 				<width>750</width>
 				<height>45</height>
 				<font>font13caps_title</font>
-				<label>Paramétrer le menu $INFO[Skin.String(Menu_TVShows_lab)]</label>
+				<label>$LOCALIZE[35020] $INFO[Skin.String(Menu_TVShows_lab)]</label>
 				<textcolor>blue</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<align>left</align>
@@ -2288,7 +2288,7 @@
 				<width>750</width>
 				<height>45</height>
 				<font>font13caps_title</font>
-				<label>Paramétrer le menu $INFO[Skin.String(Menu_Men1_lab)]</label>
+				<label>$LOCALIZE[35020] $INFO[Skin.String(Menu_Men1_lab)]</label>
 				<textcolor>blue</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<align>left</align>
@@ -2582,7 +2582,7 @@
 				<width>750</width>
 				<height>45</height>
 				<font>font13caps_title</font>
-				<label>Paramétrer le menu $INFO[Skin.String(Menu_Men2_lab)]</label>
+				<label>$LOCALIZE[35020] $INFO[Skin.String(Menu_Men2_lab)]</label>
 				<textcolor>blue</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<align>left</align>
@@ -2876,7 +2876,7 @@
 				<width>750</width>
 				<height>45</height>
 				<font>font13caps_title</font>
-				<label>Paramétrer le menu $INFO[Skin.String(Menu_Men3_lab)]</label>
+				<label>$LOCALIZE[35020] $INFO[Skin.String(Menu_Men3_lab)]</label>
 				<textcolor>blue</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<align>left</align>
@@ -3170,7 +3170,7 @@
 				<width>750</width>
 				<height>45</height>
 				<font>font13caps_title</font>
-				<label>Paramétrer le menu $INFO[Skin.String(Menu_Men4_lab)]</label>
+				<label>$LOCALIZE[35020] $INFO[Skin.String(Menu_Men4_lab)]</label>
 				<textcolor>blue</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<align>left</align>
