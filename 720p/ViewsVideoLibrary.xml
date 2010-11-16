@@ -236,6 +236,7 @@
 				<height>35</height>
 				<font>font12caps</font>
 				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
 				<scroll>true</scroll>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -287,6 +288,7 @@
 				<height>35</height>
 				<font>font12caps</font>
 				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
 				<scroll>true</scroll>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -727,6 +729,7 @@
 					<font>font12</font>
 					<align>justify</align>
 					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
 					<label>$INFO[ListItem.Plot]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
@@ -800,6 +803,8 @@
 						<height>40</height>
 						<font>font12</font>
 						<textcolor>grey2</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<shadowcolor>black</shadowcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -859,6 +864,7 @@
 						<height>40</height>
 						<font>font12</font>
 						<textcolor>grey2</textcolor>
+						<shadowcolor>black</shadowcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -1018,6 +1024,7 @@
 					<font>font12</font>
 					<align>justify</align>
 					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
 					<label>$INFO[ListItem.Plot]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
@@ -1298,6 +1305,7 @@
 					<font>font12</font>
 					<align>justify</align>
 					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
 					<label>$INFO[ListItem.Plot]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
@@ -1362,6 +1370,7 @@
 					<font>font12</font>
 					<align>justify</align>
 					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
 					<label>$INFO[ListItem.Plot]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
@@ -1412,6 +1421,7 @@
 						<height>40</height>
 						<font>font12</font>
 						<textcolor>grey2</textcolor>
+						<shadowcolor>black</shadowcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -1471,6 +1481,7 @@
 						<height>40</height>
 						<font>font12</font>
 						<textcolor>grey2</textcolor>
+						<shadowcolor>black</shadowcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -1647,6 +1658,7 @@
 						<font>font12</font>
 						<align>justify</align>
 						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
 						<label>$INFO[ListItem.Plot]</label>
 						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
@@ -1742,6 +1754,7 @@
 						<font>font12</font>
 						<align>justify</align>
 						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
 						<label>$INFO[ListItem.Plot]</label>
 						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
@@ -1813,6 +1826,7 @@
 						<font>font12</font>
 						<align>justify</align>
 						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
 						<label>$INFO[ListItem.Plot]</label>
 						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
@@ -1957,6 +1971,7 @@
 						<font>font12</font>
 						<align>justify</align>
 						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
 						<label>$INFO[ListItem.Plot]</label>
 						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
@@ -2225,6 +2240,7 @@
 						<font>font12</font>
 						<align>justify</align>
 						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
 						<label>$INFO[ListItem.Plot]</label>
 						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>

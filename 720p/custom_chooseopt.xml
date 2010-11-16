@@ -109,13 +109,15 @@
 			
 				<content>
 				<item id="1">
-					<label>Favori</label>
+					<description>Favori</description>
+					<label>35030</label>
 					<onclick>-</onclick>
 					<onclick>Dialog.Close(2114)</onclick>
 					<onclick>ActivateWindow(1114)</onclick>
 				</item>
 				<item id="2">
-					<label>Playlist Musical</label>
+					<description>Playlist Musical</description>
+					<label>35031</label>
 
 					<onclick>Dialog.Close(2114)</onclick>
 					<onclick>Skin.SetFile($INFO[Skin.String(RunOpt)],.m3u,special://musicplaylists/)</onclick>
@@ -124,7 +126,8 @@
 					-->
 				</item>
 				<item id="3">
-					<label>Playliste Video</label>
+					<description>Playlist Video</description>
+					<label>35032</label>
 					<onclick>Dialog.Close(2114)</onclick>
 					<onclick>Skin.SetFile($INFO[Skin.String(RunOpt)],.xsp,special://videoplaylists/)</onclick>
 					<!--
@@ -132,7 +135,8 @@
 					-->
 				</item>
 				<item id="4">
-					<label>Script</label>
+					<description>Script</description>
+					<label>35033</label>
 					<!--
 					<onclick>Skin.Setfile($INFO[Skin.String(RunOpt)],.py,special://script)</onclick>
 					-->
@@ -144,10 +148,8 @@ RunScript(script[,args]*)	 Runs the python script. You must specify the full pat
 -->
 				</item>
 				<item id="5">
-					<label>Addon</label>
-					<!--
-					<onclick>Skin.SetAddon($INFO[Skin.String(RunOpt)],xbmc.python.script)></onclick>
-					-->
+					<description>Addon</description>
+					<label>35034</label>
 <!--
 RunPlugin(plugin)	 Runs the plugin. Full path must be specified. Does not work for folder plugins
 -->
@@ -156,7 +158,8 @@ RunPlugin(plugin)	 Runs the plugin. Full path must be specified. Does not work f
 					<onclick>Skin.SetString($INFO[Skin.String(RunOpt)], RunPlugin( $INFO[Skin.String(RunOpt)] ) )</onclick>
 				</item>
 				<item id="6">
-					<label>Saisie libre</label>
+					<description>Saisie libre</description>
+					<label>35036</label>
 					<onclick>Dialog.Close(2114)</onclick>
 					<onclick>Skin.SetString($INFO[Skin.String(RunOpt)])</onclick>
 					<!--
