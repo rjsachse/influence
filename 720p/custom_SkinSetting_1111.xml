@@ -160,6 +160,7 @@
 						<label>35021</label>
 						<label2>35022</label2>
 						<onclick>Skin.ResetSettings</onclick>
+						<onclick>quit</onclick>
 					</item>
 				</content>
 			</control>
