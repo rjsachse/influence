@@ -22,8 +22,74 @@
 				<align>left</align>
 				<aligny>center</aligny>
 			</control>
-<!-- Horizontral Menu -->
+<!-- Horizontal Menu -->
 			<control type="radiobutton" id="100">
+				<description>Use Vertical Menu</description>
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<label>35004</label>
+				<onclick>Skin.ToggleSetting(VerticalMenu)</onclick>
+				<onclick>Skin.SetBool(HorizontalMenu)</onclick>
+				<onclick>Skin.Reset(CarouselMenu)</onclick>
+				<selected>Skin.HasSetting(VerticalMenu)</selected>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<visible>Skin.HasSetting(VerticalMenu)</visible>
+			</control>
+			<control type="radiobutton" id="101">
+				<description>Use Vertical Menu</description>
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<label>35004</label>
+				<onclick>Skin.ToggleSetting(VerticalMenu)</onclick>
+				<onclick>Skin.Reset(HorizontalMenu)</onclick>
+				<onclick>Skin.Reset(CarouselMenu)</onclick>
+				<selected>Skin.HasSetting(VerticalMenu)</selected>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<visible>!Skin.HasSetting(VerticalMenu)</visible>
+			</control>
+			<!--
+			<control type="radiobutton" id="102">
+				<description>Use Carousel Menu</description>
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<label>35003</label>
+				<onclick>Skin.ToggleSetting(CarouselMenu)</onclick>
+				<onclick>Skin.SetBool(VerticalMenu)</onclick>
+				<onclick>Skin.Reset(HorizontalMenu)</onclick>
+				<selected>Skin.HasSetting(CarouselMenu)</selected>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<visible>Skin.HasSetting(CarouselMenu)</visible>
+			</control>
+			<control type="radiobutton" id="103">
+				<description>Use Carousel Menu</description>
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<label>35003</label>
+				<onclick>Skin.ToggleSetting(CarouselMenu)</onclick>
+				<onclick>Skin.Reset(VerticalMenu)</onclick>
+				<onclick>Skin.Reset(HorizontalMenu)</onclick>
+				<selected>Skin.HasSetting(CarouselMenu)</selected>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<visible>!Skin.HasSetting(CarouselMenu)</visible>
+			</control>
+			-->
+			<control type="radiobutton" id="104">
 				<description>Use Horizontal Menu</description>
 				<width>750</width>
 				<height>40</height>
@@ -32,11 +98,30 @@
 				<focusedcolor>white</focusedcolor>
 				<label>35000</label>
 				<onclick>Skin.ToggleSetting(HorizontalMenu)</onclick>
+				<onclick>Skin.SetBool(VerticalMenu)</onclick>
+				<onclick>Skin.Reset(CarouselMenu)</onclick>
 				<selected>Skin.HasSetting(HorizontalMenu)</selected>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<visible>Skin.HasSetting(HorizontalMenu)</visible>
 			</control>
-			<control type="radiobutton" id="101">
+			<control type="radiobutton" id="105">
+				<description>Use Horizontal Menu</description>
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<label>35000</label>
+				<onclick>Skin.ToggleSetting(HorizontalMenu)</onclick>
+				<onclick>Skin.Reset(VerticalMenu)</onclick>
+				<onclick>Skin.Reset(CarouselMenu)</onclick>
+				<selected>Skin.HasSetting(HorizontalMenu)</selected>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<visible>!Skin.HasSetting(HorizontalMenu)</visible>
+			</control>
+			<control type="radiobutton" id="106">
 				<description>Raise Horizontal Menu</description>
 				<visible>Skin.HasSetting(HorizontalMenu)</visible>
 				<width>750</width>
@@ -50,9 +135,9 @@
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 			</control>
-			<control type="radiobutton" id="102">
+			<control type="radiobutton" id="107">
+				<description>Raise Rss News</description>
 				<visible>Skin.HasSetting(HorizontalMenu)</visible>
-				<description>Raise Horizontal Menu</description>
 				<width>750</width>
 				<height>40</height>
 				<font>font12caps</font>
@@ -66,7 +151,7 @@
 				<enable>Skin.HasSetting(RaiseHorizontalMenu)</enable>
 			</control>
 <!-- Menu Pictures -->
-			<control type="button" id="103">
+			<control type="button" id="109">
 				<width>750</width>
 				<height>45</height>
 				<font>font13caps_title</font>
@@ -86,7 +171,7 @@
 				<onclick>Skin.Reset(Menu_Men3)</onclick>
 				<onclick>Skin.Reset(Menu_Men4)</onclick>
 			</control>
-			<control type="radiobutton" id="10301">
+			<control type="radiobutton" id="10901">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -99,7 +184,7 @@
 				<selected>Skin.HasSetting(Menu_Pictures_act)</selected>
 				<visible>Skin.HasSetting(Menu_Pictures)</visible>
 			</control>
-			<control type="button" id="10302">
+			<control type="button" id="10902">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -112,7 +197,7 @@
 				<onclick>Skin.SetString(Menu_Pictures_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act)</visible>
 			</control>
-			<control type="button" id="10303">
+			<control type="button" id="10903">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -126,7 +211,7 @@
 				<onclick>Skin.SetString(Menu_Pictures_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act)</visible>
 			</control>
-			<control type="radiobutton" id="10304">
+			<control type="radiobutton" id="10904">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -139,7 +224,7 @@
 				<selected>Skin.HasSetting(SubMenu_Pictures_opt1)</selected>
 				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act)</visible>
 			</control>
-			<control type="button" id="10305">
+			<control type="button" id="10905">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -152,7 +237,7 @@
 				<onclick>Skin.SetString(SubMenu_Pictures_opt1_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(SubMenu_Pictures_opt1)</visible>
 			</control>
-			<control type="button" id="10306">
+			<control type="button" id="10906">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -166,7 +251,7 @@
 				<onclick>Skin.SetString(SubMenu_Pictures_opt1_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(SubMenu_Pictures_opt1)</visible>
 			</control>
-			<control type="radiobutton" id="10307">
+			<control type="radiobutton" id="10907">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -179,7 +264,7 @@
 				<selected>Skin.HasSetting(SubMenu_Pictures_opt2)</selected>
 				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act)</visible>
 			</control>
-			<control type="button" id="10308">
+			<control type="button" id="10908">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -192,7 +277,7 @@
 				<onclick>Skin.SetString(SubMenu_Pictures_opt2_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(SubMenu_Pictures_opt2)</visible>
 			</control>
-			<control type="button" id="10309">
+			<control type="button" id="10909">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -206,7 +291,7 @@
 				<onclick>Skin.SetString(SubMenu_Pictures_opt2_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(SubMenu_Pictures_opt2)</visible>
 			</control>
-			<control type="radiobutton" id="10310">
+			<control type="radiobutton" id="10910">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -219,7 +304,7 @@
 				<selected>Skin.HasSetting(SubMenu_Pictures_opt3)</selected>
 				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act)</visible>
 			</control>
-			<control type="button" id="10311">
+			<control type="button" id="10911">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -232,7 +317,7 @@
 				<onclick>Skin.SetString(SubMenu_Pictures_opt3_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(SubMenu_Pictures_opt3)</visible>
 			</control>
-			<control type="button" id="10312">
+			<control type="button" id="10912">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -245,7 +330,7 @@
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(SubMenu_Pictures_opt3)</visible>
 			</control>
-			<control type="radiobutton" id="10313">
+			<control type="radiobutton" id="10913">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -258,7 +343,7 @@
 				<selected>Skin.HasSetting(SubMenu_Pictures_opt4)</selected>
 				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act)</visible>
 			</control>
-			<control type="button" id="10314">
+			<control type="button" id="10914">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -271,7 +356,7 @@
 				<onclick>Skin.SetString(SubMenu_Pictures_opt4_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(SubMenu_Pictures_opt4)</visible>
 			</control>
-			<control type="button" id="10315">
+			<control type="button" id="10915">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>

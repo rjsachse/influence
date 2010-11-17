@@ -140,6 +140,8 @@
   <string id="35000">Utiliser le menu horizontal</string>
   <string id="35001">   - Centrer le Menu</string>
   <string id="35002">   - Centrer les flux RSS</string>
+  <string id="35003">Utiliser le menu carousel</string>
+  <string id="35004">Utiliser le menu vertical</string>
   <string id="35010">Afficher les statistiques</string>
   <string id="35011">Afficher les CDart</string>
   <string id="35012">Afficher les 5 prochains titres</string>

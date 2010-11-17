@@ -1,10 +1,9 @@
 <window type="dialog" id="1114">
 	<defaultcontrol always="true">451</defaultcontrol>
+	<include>Animation_Bartowski_Context_Zoom</include>
 	<controls>
 		<control type="image">
-			<!--
 			<include>Dimensions_Fullscreen</include>
-			-->
 			<texture>common/7000_focus.png</texture>
 			<animation effect="fade" start="0" end="100" time="600">Visible</animation>
 			<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
@@ -17,7 +16,7 @@
 				<posy>0</posy>
 				<width>400</width>
 				<height>720</height>
-				<texture border="15,0,0,0" flipx="true">HomeBladeSubBlack.png</texture>
+				<texture border="15,0,0,0" flipx="true">HomeBladeSub.png</texture>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
