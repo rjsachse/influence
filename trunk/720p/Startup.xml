@@ -40,6 +40,7 @@
 			<onfocus>Skin.SetString(Menu_Men2_lab,Menu 2)</onfocus>
 			<onfocus>Skin.SetString(Menu_Men3_lab,Menu 3)</onfocus>
 			<onfocus>Skin.SetString(Menu_Men4_lab,Menu 4)</onfocus>
+			<onfocus>Skin.ToggleSetting(VerticalMenu)</onfocus>
 			<!-- Weather -->
 			<onfocus>Skin.ToggleSetting(Menu_Weather_act)</onfocus>
 			<onfocus>Skin.SetString(Menu_Weather_lab,$LOCALIZE[8])</onfocus>

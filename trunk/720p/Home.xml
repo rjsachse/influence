@@ -24,7 +24,19 @@
 			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-		 	<visible>!Skin.HasSetting(HorizontalMenu)</visible>  
+		 	<visible>Skin.HasSetting(VerticalMenu)</visible>  
+		</control>
+		<!--  Carousel   -->
+		<control type="multiimage">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<imagepath background="true">$INFO[Container(29000).ListItem.Icon]</imagepath>
+			<timeperimage>8000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>1000</fadetime>
+		 	<visible>Skin.HasSetting(CarouselMenu)</visible>  
 		</control>
 		<include>CommonMediaPlayingBackground</include>
 		<include condition="Skin.HasSetting(homepageHideRecentlyAdded)">HomeRecentlyAddedInfo</include>
@@ -68,11 +80,13 @@
 		</control>
 		<!-- weather Info -->
 		<control type="group">
-			<visible>[Container(9000).HasFocus(6) + Skin.HasSetting(HorizontalMenu)| Container(19000).HasFocus(6) + !Skin.HasSetting(HorizontalMenu)] + !Skin.HasSetting(homepageWeatherinfo)</visible>
+			<visible>[Container(9000).HasFocus(6) + Skin.HasSetting(HorizontalMenu)| Container(19000).HasFocus(6) + Skin.HasSetting(VerticalMenu) | Container(29000).HasFocus(6) + Skin.HasSetting(CarouselMenu)] + !Skin.HasSetting(homepageWeatherinfo)</visible>
 	            <include>CurrentWeather</include>
 		</control>
-		<include condition="!Skin.HasSetting(HorizontalMenu)">IncludeHomeVertical</include>
+		<include condition="!Skin.HasSetting(VerticalMenu)+!Skin.HasSetting(HorizontalMenu)+!Skin.HasSetting(CarouselMenu)">IncludeHomeVertical</include>
+		<include condition="Skin.HasSetting(VerticalMenu)">IncludeHomeVertical</include>
 		<include condition="Skin.HasSetting(HorizontalMenu)">IncludeHomeHorizontal</include>
+		<include condition="Skin.HasSetting(CarouselMenu)">IncludeHomeCarousel</include>
 		<control type="group">
 			<posx>390r</posx>
 			<posy>0</posy>
