@@ -1,9 +1,10 @@
 <window type="dialog" id="2114">
 	<defaultcontrol always="true">450</defaultcontrol>
-	<include>Animation_Bartowski_Context_Zoom</include>
 	<controls>
 		<control type="image">
+			<!--
 			<include>Dimensions_Fullscreen</include>
+			-->
 			<texture>common/7000_focus.png</texture>
 			<animation effect="fade" start="0" end="100" time="600">Visible</animation>
 			<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
@@ -112,59 +113,44 @@
 					<description>Favori</description>
 					<label>35030</label>
 					<onclick>-</onclick>
-					<onclick>Dialog.Close(2114)</onclick>
 					<onclick>ActivateWindow(1114)</onclick>
+					<onclick>Skin.SetString(RunOpt,$INFO[Skin.String(RunOpt)])</onclick>
+					<onclick>Dialog.Close(2114)</onclick>
 				</item>
 				<item id="2">
 					<description>Playlist Musical</description>
 					<label>35031</label>
 
+					<onclick>Skin.SetFile(RunOpt,.m3u,special://musicplaylists/)</onclick>
+					<onclick>Skin.SetString(RunOpt,PlayMedia($INFO[Skin.String(RunOpt)]))</onclick>
 					<onclick>Dialog.Close(2114)</onclick>
-					<onclick>Skin.SetFile($INFO[Skin.String(RunOpt)],.m3u,special://musicplaylists/)</onclick>
-					<!--
-					<onclick>Skin.SetFile($INFO[Skin.String(RunOpt)],.m3u)</onclick>
-					-->
 				</item>
 				<item id="3">
 					<description>Playlist Video</description>
 					<label>35032</label>
+					<onclick>Skin.SetFile(RunOpt,.xsp,special://videoplaylists/)</onclick>
+					<onclick>Skin.SetString(RunOpt,PlayMedia($INFO[Skin.String(RunOpt)]))</onclick>
 					<onclick>Dialog.Close(2114)</onclick>
-					<onclick>Skin.SetFile($INFO[Skin.String(RunOpt)],.xsp,special://videoplaylists/)</onclick>
-					<!--
-					<onclick>Skin.SetFile($INFO[Skin.String(RunOpt)],.xsp)</onclick>
-					-->
 				</item>
 				<item id="4">
 					<description>Script</description>
 					<label>35033</label>
-					<!--
-					<onclick>Skin.Setfile($INFO[Skin.String(RunOpt)],.py,special://script)</onclick>
-					-->
+					<onclick>Skin.Setfile(RunOpt,.py,special://home)</onclick>
+					<onclick>Skin.SetString(RunOpt,RunScript($INFO[Skin.String(RunOpt)]))</onclick>
 					<onclick>Dialog.Close(2114)</onclick>
-					<onclick>Skin.Setfile($INFO[Skin.String(RunOpt)],.py)</onclick>
-					<onclick>Skin.SetString($INFO[Skin.String(RunOpt)], RunScript( $INFO[Skin.String(RunOpt)] ) )</onclick>
-<!--
-RunScript(script[,args]*)	 Runs the python script. You must specify the full path to the script, (or use Q:\Scripts\Scriptname.py on Xbox). If the script is an add-on, you can also execute it using its add-on id. As of 2007/02/24, all extra parameters are passed to the script as arguments and can be accessed by python using sys.argv
--->
 				</item>
 				<item id="5">
 					<description>Addon</description>
 					<label>35034</label>
-<!--
-RunPlugin(plugin)	 Runs the plugin. Full path must be specified. Does not work for folder plugins
--->
+					<onclick>Skin.SetAddon(RunOpt)</onclick>
+					<onclick>Skin.SetString(RunOpt,RunAddon($INFO[Skin.String(RunOpt)]))</onclick>
 					<onclick>Dialog.Close(2114)</onclick>
-					<onclick>Skin.SetAddon($INFO[Skin.String(RunOpt)])></onclick>
-					<onclick>Skin.SetString($INFO[Skin.String(RunOpt)], RunPlugin( $INFO[Skin.String(RunOpt)] ) )</onclick>
 				</item>
 				<item id="6">
 					<description>Saisie libre</description>
 					<label>35036</label>
+					<onclick>Skin.SetString(RunOpt)</onclick>
 					<onclick>Dialog.Close(2114)</onclick>
-					<onclick>Skin.SetString($INFO[Skin.String(RunOpt)])</onclick>
-					<!--
-					<onclick>Skin.SetString($INFO[Skin.String(RunOpt)], BLABLABLA $INFO[Skin.String(RunOpt)] BLABLABLA )</onclick>
-					-->
 				</item>
 				</content>
 			</control>
