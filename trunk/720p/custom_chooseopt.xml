@@ -112,9 +112,7 @@
 				<item id="1">
 					<description>Favori</description>
 					<label>35030</label>
-					<onclick>-</onclick>
 					<onclick>ActivateWindow(1114)</onclick>
-					<onclick>Skin.SetString(RunOpt,$INFO[Skin.String(RunOpt)])</onclick>
 					<onclick>Dialog.Close(2114)</onclick>
 				</item>
 				<item id="2">
@@ -142,7 +140,7 @@
 				<item id="5">
 					<description>Addon</description>
 					<label>35034</label>
-					<onclick>Skin.SetAddon(RunOpt)</onclick>
+					<onclick>Skin.Setfile(RunOpt,.py,special://home)</onclick>
 					<onclick>Skin.SetString(RunOpt,RunAddon($INFO[Skin.String(RunOpt)]))</onclick>
 					<onclick>Dialog.Close(2114)</onclick>
 				</item>
