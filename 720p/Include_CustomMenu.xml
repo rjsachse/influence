@@ -122,7 +122,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_Pictures_Run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_Pictures_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act)</visible>
@@ -163,7 +162,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Pictures_opt1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Pictures_opt1_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(SubMenu_Pictures_opt1)</visible>
@@ -204,7 +202,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Pictures_opt2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Pictures_opt2_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(SubMenu_Pictures_opt2)</visible>
@@ -245,7 +242,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Pictures_opt3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(SubMenu_Pictures_opt3)</visible>
 			</control>
@@ -285,7 +281,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Pictures_opt4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Pictures_opt4_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(SubMenu_Pictures_opt4)</visible>
@@ -348,7 +343,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_Weather_Run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_Weather_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Weather) + Skin.HasSetting(Menu_Weather_act)</visible>
@@ -389,7 +383,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Weather_opt1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Weather_opt1_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Weather) + Skin.HasSetting(Menu_Weather_act) + Skin.HasSetting(SubMenu_Weather_opt1)</visible>
@@ -430,7 +423,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Weather_opt2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Weather_opt2_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Weather) + Skin.HasSetting(Menu_Weather_act) + Skin.HasSetting(SubMenu_Weather_opt2)</visible>
@@ -471,7 +463,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Weather_opt3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Weather) + Skin.HasSetting(Menu_Weather_act) + Skin.HasSetting(SubMenu_Weather_opt3)</visible>
 			</control>
@@ -511,7 +502,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Weather_opt4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Weather_opt4_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Weather) + Skin.HasSetting(Menu_Weather_act) + Skin.HasSetting(SubMenu_Weather_opt4)</visible>
@@ -574,9 +564,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_Videos_Run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_Videos_run,$INFO[Skin.String(RunOpt)]</onclick>
+				<onclick>Skin.SetString(Menu_Videos_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Videos) + Skin.HasSetting(Menu_Videos_act)</visible>
 			</control>
 			<control type="radiobutton" id="40004">
@@ -615,7 +604,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_Videos_sub1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_Videos_sub1_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Videos) + Skin.HasSetting(Menu_Videos_act)  + Skin.HasSetting(Menu_Videos_sub1_act) </visible>
@@ -656,7 +644,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_Videos_sub2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_Videos_sub2_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Videos) + Skin.HasSetting(Menu_Videos_act)  + Skin.HasSetting(Menu_Videos_sub2_act) </visible>
@@ -697,7 +684,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_Videos_sub3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_Videos_sub3_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Videos) + Skin.HasSetting(Menu_Videos_act)  + Skin.HasSetting(Menu_Videos_sub3_act) </visible>
@@ -738,7 +724,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_Videos_sub4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_Videos_sub4_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Videos) + Skin.HasSetting(Menu_Videos_act)  + Skin.HasSetting(Menu_Videos_sub4_act)</visible>
@@ -779,7 +764,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_Videos_sub5_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_Videos_sub5_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Videos) + Skin.HasSetting(Menu_Videos_act)  + Skin.HasSetting(Menu_Videos_sub5_act)</visible>
@@ -820,7 +804,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Videos_opt1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Videos_opt1_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Videos) + Skin.HasSetting(Menu_Videos_act) + Skin.HasSetting(SubMenu_Videos_opt1)</visible>
@@ -861,7 +844,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Videos_opt2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Videos_opt2_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Videos) + Skin.HasSetting(Menu_Videos_act) + Skin.HasSetting(SubMenu_Videos_opt2)</visible>
@@ -902,7 +884,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Videos_opt3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Videos) + Skin.HasSetting(Menu_Videos_act) + Skin.HasSetting(SubMenu_Videos_opt3)</visible>
 			</control>
@@ -942,7 +923,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Videos_opt4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Videos_opt4_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Videos) + Skin.HasSetting(Menu_Videos_act) + Skin.HasSetting(SubMenu_Videos_opt4)</visible>
@@ -1005,7 +985,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_Movie_Run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_Movie_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)</visible>
@@ -1046,7 +1025,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_Movie_sub1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_Movie_sub1_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)  + Skin.HasSetting(Menu_Movie_sub1_act) </visible>
@@ -1087,7 +1065,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_Movie_sub2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_Movie_sub2_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)  + Skin.HasSetting(Menu_Movie_sub2_act) </visible>
@@ -1128,7 +1105,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_Movie_sub3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_Movie_sub3_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)  + Skin.HasSetting(Menu_Movie_sub3_act) </visible>
@@ -1169,7 +1145,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_Movie_sub4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_Movie_sub4_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)  + Skin.HasSetting(Menu_Movie_sub4_act)</visible>
@@ -1210,7 +1185,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_Movie_sub5_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_Movie_sub5_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)  + Skin.HasSetting(Menu_Movie_sub5_act)</visible>
@@ -1251,7 +1225,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_Movie_sub6_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_Movie_sub6_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)  + Skin.HasSetting(Menu_Movie_sub6_act)</visible>
@@ -1292,7 +1265,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Movie_opt1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Movie_opt1_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act) + Skin.HasSetting(SubMenu_Movie_opt1)</visible>
@@ -1333,7 +1305,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Movie_opt2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Movie_opt2_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act) + Skin.HasSetting(SubMenu_Movie_opt2)</visible>
@@ -1374,7 +1345,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Movie_opt3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act) + Skin.HasSetting(SubMenu_Movie_opt3)</visible>
 			</control>
@@ -1414,7 +1384,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Movie_opt4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Movie_opt4_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act) + Skin.HasSetting(SubMenu_Movie_opt4)</visible>
@@ -1477,7 +1446,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_Music_Run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_Music_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Music) + Skin.HasSetting(Menu_Music_act)</visible>
@@ -1518,7 +1486,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_Music_sub1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_Music_sub1_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Music) + Skin.HasSetting(Menu_Music_act)  + Skin.HasSetting(Menu_Music_sub1_act) </visible>
@@ -1559,7 +1526,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_Music_sub2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_Music_sub2_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Music) + Skin.HasSetting(Menu_Music_act)  + Skin.HasSetting(Menu_Music_sub2_act) </visible>
@@ -1600,7 +1566,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_Music_sub3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_Music_sub3_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Music) + Skin.HasSetting(Menu_Music_act)  + Skin.HasSetting(Menu_Music_sub3_act) </visible>
@@ -1641,7 +1606,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_Music_sub4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_Music_sub4_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Music) + Skin.HasSetting(Menu_Music_act)  + Skin.HasSetting(Menu_Music_sub4_act)</visible>
@@ -1682,7 +1646,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_Music_sub5_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_Music_sub5_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Music) + Skin.HasSetting(Menu_Music_act)  + Skin.HasSetting(Menu_Music_sub5_act)</visible>
@@ -1723,7 +1686,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Music_opt1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Music_opt1_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Music) + Skin.HasSetting(Menu_Music_act) + Skin.HasSetting(SubMenu_Music_opt1)</visible>
@@ -1764,7 +1726,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Music_opt2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Music_opt2_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Music) + Skin.HasSetting(Menu_Music_act) + Skin.HasSetting(SubMenu_Music_opt2)</visible>
@@ -1805,7 +1766,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Music_opt3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Music) + Skin.HasSetting(Menu_Music_act) + Skin.HasSetting(SubMenu_Music_opt3)</visible>
 			</control>
@@ -1845,7 +1805,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Music_opt4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Music_opt4_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Music) + Skin.HasSetting(Menu_Music_act) + Skin.HasSetting(SubMenu_Music_opt4)</visible>
@@ -1909,7 +1868,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_TVShows_Run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_TVShows_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_TVShows) + Skin.HasSetting(Menu_TVShows_act)</visible>
@@ -1950,7 +1908,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_TVShows_sub1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_TVShows_sub1_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_TVShows) + Skin.HasSetting(Menu_TVShows_act)  + Skin.HasSetting(Menu_TVShows_sub1_act) </visible>
@@ -1991,7 +1948,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_TVShows_sub2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_TVShows_sub2_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_TVShows) + Skin.HasSetting(Menu_TVShows_act)  + Skin.HasSetting(Menu_TVShows_sub2_act) </visible>
@@ -2032,7 +1988,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_TVShows_sub3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_TVShows_sub3_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_TVShows) + Skin.HasSetting(Menu_TVShows_act)  + Skin.HasSetting(Menu_TVShows_sub3_act) </visible>
@@ -2073,7 +2028,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_TVShows_sub4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_TVShows_sub4_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_TVShows) + Skin.HasSetting(Menu_TVShows_act)  + Skin.HasSetting(Menu_TVShows_sub4_act)</visible>
@@ -2114,7 +2068,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_TVShows_sub5_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_TVShows_sub5_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_TVShows) + Skin.HasSetting(Menu_TVShows_act)  + Skin.HasSetting(Menu_TVShows_sub5_act)</visible>
@@ -2155,7 +2108,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_TVShows_opt1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_TVShows_opt1_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_TVShows) + Skin.HasSetting(Menu_TVShows_act) + Skin.HasSetting(SubMenu_TVShows_opt1)</visible>
@@ -2196,7 +2148,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_TVShows_opt2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_TVShows_opt2_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_TVShows) + Skin.HasSetting(Menu_TVShows_act) + Skin.HasSetting(SubMenu_TVShows_opt2)</visible>
@@ -2237,7 +2188,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_TVShows_opt3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_TVShows) + Skin.HasSetting(Menu_TVShows_act) + Skin.HasSetting(SubMenu_TVShows_opt3)</visible>
 			</control>
@@ -2277,7 +2227,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_TVShows_opt4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_TVShows_opt4_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_TVShows) + Skin.HasSetting(Menu_TVShows_act) + Skin.HasSetting(SubMenu_TVShows_opt4)</visible>
@@ -2340,7 +2289,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_Men1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_Men1_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(Menu_Men1_act)</visible>
@@ -2381,7 +2329,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Men1_opt1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Men1_opt1_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(SubMenu_Men1_opt1) + Skin.HasSetting(Menu_Men1_act)</visible>
@@ -2422,7 +2369,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Men1_opt2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Men1_opt2_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(SubMenu_Men1_opt1) + Skin.HasSetting(SubMenu_Men1_opt2) + Skin.HasSetting(Menu_Men1_act)</visible>
@@ -2463,7 +2409,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Men1_opt3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Men1_opt3_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(SubMenu_Men1_opt1) + Skin.HasSetting(SubMenu_Men1_opt2) + Skin.HasSetting(SubMenu_Men1_opt3) + Skin.HasSetting(Menu_Men1_act)</visible>
@@ -2504,7 +2449,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Men1_opt4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Men1_opt4_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(SubMenu_Men1_opt1) + Skin.HasSetting(SubMenu_Men1_opt2) + Skin.HasSetting(SubMenu_Men1_opt3) + Skin.HasSetting(SubMenu_Men1_opt4) + Skin.HasSetting(Menu_Men1_act)</visible>
@@ -2545,7 +2489,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Men1_opt5_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Men1_opt5_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(SubMenu_Men1_opt1) + Skin.HasSetting(SubMenu_Men1_opt2) + Skin.HasSetting(SubMenu_Men1_opt3) + Skin.HasSetting(SubMenu_Men1_opt4)  + Skin.HasSetting(SubMenu_Men1_opt5) + Skin.HasSetting(Menu_Men1_act)</visible>
@@ -2634,7 +2577,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_Men2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_Men2_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(Menu_Men2_act)</visible>
@@ -2675,7 +2617,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Men2_opt1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Men2_opt1_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(SubMenu_Men2_opt1) + Skin.HasSetting(Menu_Men2_act)</visible>
@@ -2716,7 +2657,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Men2_opt2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Men2_opt2_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(SubMenu_Men2_opt1) + Skin.HasSetting(SubMenu_Men2_opt2) + Skin.HasSetting(Menu_Men2_act)</visible>
@@ -2757,7 +2697,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Men2_opt3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Men2_opt3_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(SubMenu_Men2_opt1) + Skin.HasSetting(SubMenu_Men2_opt2) + Skin.HasSetting(SubMenu_Men2_opt3) + Skin.HasSetting(Menu_Men2_act)</visible>
@@ -2798,7 +2737,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Men2_opt4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Men2_opt4_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(SubMenu_Men2_opt1) + Skin.HasSetting(SubMenu_Men2_opt2) + Skin.HasSetting(SubMenu_Men2_opt3) + Skin.HasSetting(SubMenu_Men2_opt4) + Skin.HasSetting(Menu_Men2_act)</visible>
@@ -2839,7 +2777,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Men2_opt5_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Men2_opt5_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(SubMenu_Men2_opt1) + Skin.HasSetting(SubMenu_Men2_opt2) + Skin.HasSetting(SubMenu_Men2_opt3) + Skin.HasSetting(SubMenu_Men2_opt4)  + Skin.HasSetting(SubMenu_Men2_opt5) + Skin.HasSetting(Menu_Men2_act)</visible>
@@ -2928,7 +2865,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_Men3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_Men3_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(Menu_Men3_act)</visible>
@@ -2969,7 +2905,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Men3_opt1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Men3_opt1_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(SubMenu_Men3_opt1) + Skin.HasSetting(Menu_Men3_act)</visible>
@@ -3010,7 +2945,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Men3_opt2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Men3_opt2_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(SubMenu_Men3_opt1) + Skin.HasSetting(SubMenu_Men3_opt2) + Skin.HasSetting(Menu_Men3_act)</visible>
@@ -3051,7 +2985,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Men3_opt3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Men3_opt3_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(SubMenu_Men3_opt1) + Skin.HasSetting(SubMenu_Men3_opt2) + Skin.HasSetting(SubMenu_Men3_opt3) + Skin.HasSetting(Menu_Men3_act)</visible>
@@ -3092,7 +3025,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Men3_opt4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Men3_opt4_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(SubMenu_Men3_opt1) + Skin.HasSetting(SubMenu_Men3_opt2) + Skin.HasSetting(SubMenu_Men3_opt3) + Skin.HasSetting(SubMenu_Men3_opt4) + Skin.HasSetting(Menu_Men3_act)</visible>
@@ -3133,7 +3065,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Men3_opt5_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Men3_opt5_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(SubMenu_Men3_opt1) + Skin.HasSetting(SubMenu_Men3_opt2) + Skin.HasSetting(SubMenu_Men3_opt3) + Skin.HasSetting(SubMenu_Men3_opt4)  + Skin.HasSetting(SubMenu_Men3_opt5) + Skin.HasSetting(Menu_Men3_act)</visible>
@@ -3223,7 +3154,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,Menu_Men4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_Men4_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(Menu_Men4_act)</visible>
@@ -3264,7 +3194,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Men4_opt1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Men4_opt1_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(SubMenu_Men4_opt1) + Skin.HasSetting(Menu_Men4_act)</visible>
@@ -3305,7 +3234,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Men4_opt2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Men4_opt2_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(SubMenu_Men4_opt1) + Skin.HasSetting(SubMenu_Men4_opt2) + Skin.HasSetting(Menu_Men4_act)</visible>
@@ -3346,7 +3274,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Men4_opt3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Men4_opt3_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(SubMenu_Men4_opt1) + Skin.HasSetting(SubMenu_Men4_opt2) + Skin.HasSetting(SubMenu_Men4_opt3) + Skin.HasSetting(Menu_Men4_act)</visible>
@@ -3387,7 +3314,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Men4_opt4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Men4_opt4_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(SubMenu_Men4_opt1) + Skin.HasSetting(SubMenu_Men4_opt2) + Skin.HasSetting(SubMenu_Men4_opt3) + Skin.HasSetting(SubMenu_Men4_opt4) + Skin.HasSetting(Menu_Men4_act)</visible>
@@ -3428,7 +3354,6 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt,SubMenu_Men4_opt5_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(SubMenu_Men4_opt5_run,$INFO[Skin.String(RunOpt)]</onclick>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(SubMenu_Men4_opt1) + Skin.HasSetting(SubMenu_Men4_opt2) + Skin.HasSetting(SubMenu_Men4_opt3) + Skin.HasSetting(SubMenu_Men4_opt4)  + Skin.HasSetting(SubMenu_Men4_opt5) + Skin.HasSetting(Menu_Men4_act)</visible>

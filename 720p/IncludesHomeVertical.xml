@@ -1422,7 +1422,7 @@
 					</item>
 					<item id="2">
 						<label>$INFO[Skin.String(Menu_Videos_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Video_run)]</onclick>
+						<onclick>$INFO[Skin.String(Menu_Videos_run)]</onclick>
 						<icon>special://skin/backgrounds/videos.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</thumb>
 						<visible>Skin.HasSetting(Menu_Videos_act)</visible>

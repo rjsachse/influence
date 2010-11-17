@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+  id="skin.influence"
+  version="1.1.0"
+  name="Influence"
+  provider-name="Jezz_X, Yiarkyiark, Team Passion XBMC">
+  <requires>
+    <import addon="xbmc.gui" version="2.11"/>
+    <import addon="script.recentlyadded" version="1.0.4"/>
+	<import addon="script.logo-downloader" version="2.1.1"/>
+  </requires>
+  <extension
+    point="xbmc.gui.skin"
+    defaultresolution="720p"
+    defaultresolutionwide="720p"
+    defaultthemename="textures.xbt"
+    effectslowdown="0.75"
+    debugging="false"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Influence skin by Jezz_X, Yiarkyiark Team Passion XBMC. </summary>
+    <summary lang="fr">Skin Influence par Jezz_X, Yiarkyiark, Team Passion XBMC.</summary>
+    <description lang="en">Influence</description>
+    <description lang="fr">Influence</description>
+    <platform>all</platform>
+  </extension>
+</addon>
