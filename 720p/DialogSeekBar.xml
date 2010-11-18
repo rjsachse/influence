@@ -10,14 +10,12 @@
 	</coordinates>
 	<controls>
 		<control type="group">
-			<animation effect="slide" end="0,80" start="0,0" time="100" condition="Window.IsVisible(FullscreenInfo) | [Window.IsVisible(Visualisation) + Player.ShowInfo]">Conditional</animation>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>370</width>
 				<height>80</height>
 				<texture border="20,20,20,2">InfoMessagePanel.png</texture>
-				<colordiffuse>EEFFFFFF</colordiffuse>
 				<visible>!player.chaptercount</visible>
 			</control>
 			<control type="image">
@@ -26,7 +24,6 @@
 				<width>450</width>
 				<height>80</height>
 				<texture border="20,20,20,2">InfoMessagePanel.png</texture>
-				<colordiffuse>EEFFFFFF</colordiffuse>
 				<visible>player.chaptercount</visible>
 			</control>
 			<control type="group">
@@ -163,10 +160,10 @@
 				<height>20</height>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>font12caps_title</font>
+				<font>font12_title</font>
 				<textcolor>blue</textcolor>
-				<label>31042</label>
-				<visible>Player.Playing + !Player.Seeking</visible>
+				<label>$LOCALIZE[31042]</label>
+				<visible>Player.Playing + !Player.Seeking + !Player.DisplayAfterSeek</visible>
 			</control>
 			<control type="label">
 				<description>Paused Label</description>
@@ -176,10 +173,10 @@
 				<height>20</height>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>font12caps_title</font>
+				<font>font12_title</font>
 				<textcolor>blue</textcolor>
 				<label>31043</label>
-				<visible>[Player.Paused + !Player.Caching] + !Player.Seeking</visible>
+				<visible>[Player.Paused + !Player.Caching] + !Player.Seeking + !Player.DisplayAfterSeek</visible>
 			</control>
 			<control type="label">
 				<description>Cache Label</description>
@@ -189,7 +186,7 @@
 				<height>20</height>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>font12caps_title</font>
+				<font>font12_title</font>
 				<textcolor>blue</textcolor>
 				<label>$LOCALIZE[15107] $INFO[Player.CacheLevel]%</label>
 				<visible>[Player.Paused + Player.Caching] + !Player.Seeking</visible>
@@ -202,10 +199,23 @@
 				<height>20</height>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>font12caps_title</font>
+				<font>font12_title</font>
 				<textcolor>blue</textcolor>
 				<label>[UPPERCASE]$LOCALIZE[773][/UPPERCASE]</label>
 				<visible>Player.Seeking</visible>
+			</control>
+			<control type="label">
+				<description>Final Seek amount Label</description>
+				<posx>20</posx>
+				<posy>8</posy>
+				<width>240</width>
+				<height>20</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font12_title</font>
+				<textcolor>blue</textcolor>
+				<label>[UPPERCASE]$LOCALIZE[773][/UPPERCASE][COLOR=grey] $INFO[Player.SeekOffset][/COLOR]</label>
+				<visible>Player.DisplayAfterSeek + ![player.forwarding | player.rewinding]</visible>
 			</control>
 			<control type="label">
 				<description>FF Label</description>
@@ -215,7 +225,7 @@
 				<height>20</height>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>font12caps_title</font>
+				<font>font12_title</font>
 				<textcolor>blue</textcolor>
 				<label>31044</label>
 				<visible>Player.Forwarding</visible>
@@ -228,7 +238,7 @@
 				<height>20</height>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>font12caps_title</font>
+				<font>font12_title</font>
 				<textcolor>blue</textcolor>
 				<label>31045</label>
 				<visible>Player.Rewinding</visible>
@@ -239,7 +249,7 @@
 				<posy>27</posy>
 				<width>240</width>
 				<height>20</height>
-				<font>font13caps_title</font>
+				<font>font13_title</font>
 				<textcolor>white</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -252,7 +262,7 @@
 				<posy>27</posy>
 				<width>240</width>
 				<height>20</height>
-				<font>font13caps_title</font>
+				<font>font13_title</font>
 				<textcolor>white</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -291,7 +301,7 @@
 				<height>20</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<font>font12caps_title</font>
+				<font>font12_title</font>
 				<textcolor>blue</textcolor>
 				<label>$LOCALIZE[21396]</label>
 				<visible>player.chaptercount</visible>
@@ -304,7 +314,7 @@
 				<height>20</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<font>font13caps_title</font>
+				<font>font13_title</font>
 				<textcolor>grey2</textcolor>
 				<label>$INFO[player.chapter]$INFO[player.chaptercount, / ]</label>
 				<visible>player.chaptercount</visible>

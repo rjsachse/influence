@@ -29,7 +29,7 @@
 				<posy>50</posy>
 				<width>570</width>
 				<height>30</height>
-				<font>font35caps_title</font>
+				<font>font35_title</font>
 				<label>A</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -52,14 +52,14 @@
 			<control type="label">
 				<description>number of files/pages in left list text label</description>
 				<posx>35</posx>
-				<posy>650</posy>
+				<posy>670</posy>
 				<width>570</width>
-				<font>font13_title</font>
+				<font>font12</font>
 				<align>left</align>
 				<scroll>true</scroll>
-				<textcolor>white</textcolor>
+				<textcolor>grey</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<label>($INFO[Container(20).NumItems]) $LOCALIZE[31025] - $LOCALIZE[31024] ($INFO[Container(20).CurrentPage]/$INFO[Container(20).NumPages])</label>
+				<label>([COLOR=blue]$INFO[Container(20).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(20).CurrentPage]/$INFO[Container(20).NumPages][/COLOR])</label>
 			</control>
 			<control type="scrollbar" id="30">
 				<posx>25</posx>
@@ -192,7 +192,7 @@
 				<posy>50</posy>
 				<width>570</width>
 				<height>30</height>
-				<font>font35caps_title</font>
+				<font>font35_title</font>
 				<label>B</label>
 				<align>right</align>
 				<aligny>center</aligny>
@@ -214,14 +214,14 @@
 			<control type="label">
 				<description>number of files/pages in left list text label</description>
 				<posx>35r</posx>
-				<posy>650</posy>
+				<posy>670</posy>
 				<width>570</width>
-				<font>font13_title</font>
+				<font>font12</font>
 				<align>right</align>
 				<scroll>true</scroll>
-				<textcolor>white</textcolor>
+				<textcolor>grey</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<label>($INFO[Container(21).NumItems]) $LOCALIZE[31025] - $LOCALIZE[31024] ($INFO[Container(21).CurrentPage]/$INFO[Container(21).NumPages])</label>
+				<label>([COLOR=blue]$INFO[Container(21).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(21).CurrentPage]/$INFO[Container(21).NumPages][/COLOR])</label>
 			</control>
 			<control type="scrollbar" id="31">
 				<posx>50r</posx>
@@ -327,20 +327,6 @@
 					</control>
 				</focusedlayout>
 			</control>
-		</control>
-		<control type="image">
-			<posx>-820</posx>
-			<posy>0</posy>
-			<width>846</width>
-			<height>720</height>
-			<texture>HomeBlade.png</texture>
-		</control>
-		<control type="image">
-			<posx>26r</posx>
-			<posy>0</posy>
-			<width>846</width>
-			<height>720</height>
-			<texture flipx="true">HomeBlade.png</texture>
 		</control>
 		<control type="group">
 			<posx>60</posx>

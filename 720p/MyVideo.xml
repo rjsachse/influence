@@ -1,7 +1,7 @@
 <window id="6">
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<views>50,51,500,501,508,505</views>
+	<views>50,51,550,560,500,501,508,505</views>
 	<controls>
 		<include>CommonVideoBackground</include>
 		<control type="image">
@@ -83,6 +83,15 @@
 					<texture diffuse="diffuse_mirror3.png" flipy="true" border="20">ContentPanel.png</texture>
 				</control>
 			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>-5</posy>
+				<width>1280</width>
+				<height>725</height>
+				<texture border="0,5,0,0">ContentPanel4.png</texture>
+				<include>VisibleFadeEffect</include>
+				<visible>Control.IsVisible(550) | Control.IsVisible(560)</visible>
+			</control>
 		</control>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>		
@@ -92,6 +101,8 @@
 			<include>PosterWrapView</include> <!-- view id = 501 -->
 			<include>PosterWrapView2_Fanart</include> <!-- view id = 508 -->
 			<include>WideIconView</include> <!-- view id = 505 -->
+			<include>AddonInfoListView1</include> <!-- view id = 550 -->
+			<include>LiveTVView1</include> <!-- view id = 560 -->
 		</control>
 		<include>CommonPageCount</include>
 		<include>BehindDialogFadeOut</include>
@@ -100,7 +111,8 @@
 			<animation effect="slide" start="0,0" end="250,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="-250,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus">WindowClose</animation>
 			<control type="group">
-				<animation effect="slide" end="-228,0" time="300" tween="quadratic" easing="out">WindowClose</animation>
+				<animation effect="slide" end="-240,0" time="300" tween="quadratic" easing="out">WindowClose</animation>
+				<animation effect="slide" start="-15,0" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -156,6 +168,7 @@
 					<itemgap>0</itemgap>
 					<control type="radiobutton" id="7">
 						<description>Stack Toggle</description>
+						<textwidth>170</textwidth>
 						<include>ButtonMediaSubCommonValues</include>
 						<label>346</label>
 					</control>
@@ -170,6 +183,7 @@
 					</control>
 					<control type="radiobutton" id="201">
 						<description>Toggle Fanart</description>
+						<textwidth>170</textwidth>
 						<include>ButtonMediaSubCommonValues</include>
 						<label>31307</label>
 						<onclick>Skin.ToggleSetting(VideoFilesFanart)</onclick>
@@ -190,13 +204,7 @@
 				<texturefocus>-</texturefocus>
 				<visible>true</visible>
 			</control>
-			<control type="image">
-				<posx>-820</posx>
-				<posy>0</posy>
-				<width>846</width>
-				<height>720</height>
-				<texture>HomeBlade.png</texture>
-			</control>
+			<include>SideBladeLeft</include>
 			<control type="image">
 				<description>LOGO</description>
 				<posx>-230</posx>
@@ -292,13 +300,6 @@
 					<visible>false</visible>
 				</control>
 			</control>
-		</control>
-		<control type="image">
-			<posx>26r</posx>
-			<posy>0</posy>
-			<width>846</width>
-			<height>720</height>
-			<texture flipx="true">HomeBlade.png</texture>
 		</control>
 		<control type="group">
 			<posx>60</posx>

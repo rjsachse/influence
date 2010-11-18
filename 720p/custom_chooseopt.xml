@@ -140,8 +140,10 @@
 				<item id="5">
 					<description>Addon</description>
 					<label>35034</label>
-					<onclick>Skin.Setfile(RunOpt,.py,special://home)</onclick>
+					<onclick>Skin.SetAddon(RunOpt,xbmc.python.pluginsource)</onclick>
+					<!--
 					<onclick>Skin.SetString(RunOpt,RunAddon($INFO[Skin.String(RunOpt)]))</onclick>
+					-->
 					<onclick>Dialog.Close(2114)</onclick>
 				</item>
 				<item id="6">
