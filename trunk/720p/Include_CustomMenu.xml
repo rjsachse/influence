@@ -15,7 +15,7 @@
 			<control type="label" >
 				<width>750</width>
 				<height>45</height>
-				<font>font13caps_title</font>
+				<font>font13</font>
 				<label>31101</label>
 				<textcolor>blue</textcolor>
 				<shadowcolor>black</shadowcolor>
@@ -154,7 +154,7 @@
 			<control type="button" id="109">
 				<width>750</width>
 				<height>45</height>
-				<font>font13caps_title</font>
+				<font>font13</font>
 				<label>$LOCALIZE[35020] $INFO[Skin.String(Menu_Pictures_lab)]</label>
 				<textcolor>blue</textcolor>
 				<shadowcolor>black</shadowcolor>
@@ -328,6 +328,7 @@
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>ActivateWindow(2114)</onclick>
+				<onclick>Skin.SetString(SubMenu_Pictures_opt3_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(SubMenu_Pictures_opt3)</visible>
 			</control>
 			<control type="radiobutton" id="10913">
@@ -375,7 +376,7 @@
 			<control type="button" id="300">
 				<width>750</width>
 				<height>45</height>
-				<font>font13caps_title</font>
+				<font>font13</font>
 				<label>$LOCALIZE[35020] $INFO[Skin.String(Menu_Weather_lab)]</label>
 				<textcolor>blue</textcolor>
 				<shadowcolor>black</shadowcolor>
@@ -596,7 +597,7 @@
 			<control type="button" id="400">
 				<width>750</width>
 				<height>45</height>
-				<font>font13caps_title</font>
+				<font>font13</font>
 				<label>$LOCALIZE[35020] $INFO[Skin.String(Menu_Videos_lab)]</label>
 				<textcolor>blue</textcolor>
 				<shadowcolor>black</shadowcolor>
@@ -1017,7 +1018,7 @@
 			<control type="button" id="500">
 				<width>750</width>
 				<height>45</height>
-				<font>font13caps_title</font>
+				<font>font13</font>
 				<label>$LOCALIZE[35020] $INFO[Skin.String(Menu_Movie_lab)]</label>
 				<textcolor>blue</textcolor>
 				<shadowcolor>black</shadowcolor>
@@ -1478,7 +1479,7 @@
 			<control type="button" id="600">
 				<width>750</width>
 				<height>45</height>
-				<font>font13caps_title</font>
+				<font>font13</font>
 				<label>$LOCALIZE[35020] $INFO[Skin.String(Menu_Music_lab)]</label>
 				<textcolor>blue</textcolor>
 				<shadowcolor>black</shadowcolor>
@@ -1899,7 +1900,7 @@
 			<control type="button" id="700">
 				<width>750</width>
 				<height>45</height>
-				<font>font13caps_title</font>
+				<font>font13</font>
 				<label>$LOCALIZE[35020] $INFO[Skin.String(Menu_TVShows_lab)]</label>
 				<textcolor>blue</textcolor>
 				<shadowcolor>black</shadowcolor>
@@ -2321,7 +2322,7 @@
 			<control type="button" id="800">
 				<width>750</width>
 				<height>45</height>
-				<font>font13caps_title</font>
+				<font>font13</font>
 				<label>$LOCALIZE[35020] $INFO[Skin.String(Menu_Men1_lab)]</label>
 				<textcolor>blue</textcolor>
 				<shadowcolor>black</shadowcolor>
@@ -2609,7 +2610,7 @@
 			<control type="button" id="810">
 				<width>750</width>
 				<height>45</height>
-				<font>font13caps_title</font>
+				<font>font13</font>
 				<label>$LOCALIZE[35020] $INFO[Skin.String(Menu_Men2_lab)]</label>
 				<textcolor>blue</textcolor>
 				<shadowcolor>black</shadowcolor>
@@ -2897,7 +2898,7 @@
 			<control type="button" id="820">
 				<width>750</width>
 				<height>45</height>
-				<font>font13caps_title</font>
+				<font>font13</font>
 				<label>$LOCALIZE[35020] $INFO[Skin.String(Menu_Men3_lab)]</label>
 				<textcolor>blue</textcolor>
 				<shadowcolor>black</shadowcolor>
@@ -3185,7 +3186,7 @@
 			<control type="button" id="830">
 				<width>750</width>
 				<height>45</height>
-				<font>font13caps_title</font>
+				<font>font13</font>
 				<label>$LOCALIZE[35020] $INFO[Skin.String(Menu_Men4_lab)]</label>
 				<textcolor>blue</textcolor>
 				<shadowcolor>black</shadowcolor>

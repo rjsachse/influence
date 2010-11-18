@@ -1314,7 +1314,7 @@
 				<label>-</label>
 				<font>-</font>
 				<onfocus>Skin.Reset(LibraryUpdated)</onfocus>
-				<onfocus>XBMC.RunScript(script.recentlyadded,limit=4&amp;albums=True&amp;totals=True)</onfocus>
+				<onfocus>XBMC.RunScript(script.recentlyadded,limit=4;albums=True;totals=True)</onfocus>
 				<onfocus>SetFocus(19000)</onfocus>
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>-</texturefocus>
@@ -1440,6 +1440,13 @@
 						<icon>special://skin/backgrounds/videos.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</thumb>
 						<visible>Skin.HasSetting(Menu_TVShows_act) + Library.HasContent(TVShows)</visible>
+					</item>
+					<item id="1">
+						<label>0</label>
+						<onclick>ActivateWindow(Programs,Addons,return)</onclick>
+						<icon>special://skin/backgrounds/programs.jpg</icon>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</thumb>
+						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
 					</item>
 <!-- Custom Home --> 	
 					<item id="20">

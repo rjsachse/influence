@@ -42,7 +42,7 @@
 					<posy>60</posy>
 					<width>440</width>
 					<height>30</height>
-					<font>font24caps_title</font>
+					<font>font24_title</font>
 					<label>-</label>
 					<align>right</align>
 					<aligny>bottom</aligny>
@@ -142,9 +142,9 @@
 					<height>30</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<textcolor>blue</textcolor>
-					<font>font12caps</font>
-					<label>($INFO[Container(503).NumItems]) $LOCALIZE[31025] - $LOCALIZE[31024] ($INFO[Container(503).CurrentPage]/$INFO[Container(503).NumPages])</label>
+					<textcolor>grey</textcolor>
+					<font>font12</font>
+					<label>([COLOR=blue]$INFO[Container(503).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(503).CurrentPage]/$INFO[Container(503).NumPages][/COLOR])</label>
 					<visible>Control.IsVisible(503)</visible>
 				</control>
 				<!-- ** Required ** Do not change <id> or <type> -->
@@ -217,20 +217,14 @@
 					<height>30</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<textcolor>blue</textcolor>
-					<font>font12caps</font>
-					<label>($INFO[Container(504).NumItems]) $LOCALIZE[31025] - $LOCALIZE[31024] ($INFO[Container(504).CurrentPage]/$INFO[Container(504).NumPages])</label>
+					<textcolor>grey</textcolor>
+					<font>font12</font>
+					<label>([COLOR=blue]$INFO[Container(504).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(504).CurrentPage]/$INFO[Container(504).NumPages][/COLOR])</label>
 					<visible>Control.IsVisible(504)</visible>
 				</control>
 			</control>
 		</control>
-		<control type="image">
-			<posx>26r</posx>
-			<posy>0</posy>
-			<width>846</width>
-			<height>720</height>
-			<texture flipx="true">HomeBlade.png</texture>
-		</control>
+		<include>SideBladeRight</include>
 		<include>Clock</include>
 
 		<!-- ** Required ** Do not change <description> -->

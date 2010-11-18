@@ -40,6 +40,7 @@
 		</control>
 		<include>CommonMediaPlayingBackground</include>
 		<include condition="Skin.HasSetting(homepageHideRecentlyAdded)">HomeRecentlyAddedInfo</include>
+		<!-- weather Info -->
 		<control type="group">
 			<posx>520r</posx>
 			<posy>0</posy>
@@ -116,6 +117,4 @@
 			</control>
 		</control>
 	</controls>	
-	
 </window>
-
