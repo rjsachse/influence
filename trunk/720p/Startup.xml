@@ -70,6 +70,9 @@
 			<onfocus>Skin.ToggleSetting(Menu_Music_sub5_act)</onfocus>
 			<onfocus>Skin.SetString(Menu_Music_sub5_lab,$LOCALIZE[14022])</onfocus>
 			<onfocus>Skin.SetString(Menu_Music_sub5_run,ActivateWindow(MusicLibrary))</onfocus>
+			<onfocus>Skin.ToggleSetting(Menu_Music_sub6_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Music_sub6_lab,$LOCALIZE[24001])</onfocus>
+			<onfocus>Skin.SetString(Menu_Music_sub6_run,ActivateWindow(MusicLibrary,Addons,return))</onfocus>
 
 			<!-- Videos -->
 			<onfocus>Skin.ToggleSetting(Menu_Videos_act)</onfocus>
@@ -91,6 +94,9 @@
 			<onfocus>Skin.ToggleSetting(Menu_Videos_sub5_act)</onfocus>
 			<onfocus>Skin.SetString(Menu_Videos_sub5_lab,$LOCALIZE[14022])</onfocus>
 			<onfocus>Skin.SetString(Menu_Videos_sub5_run,ActivateWindow(Video))</onfocus>
+			<onfocus>Skin.ToggleSetting(Menu_Videos_sub6_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Videos_sub6_lab,$LOCALIZE[24001])</onfocus>
+			<onfocus>Skin.SetString(Menu_Videos_sub6_run,ActivateWindow(MusicLibrary,Addons,return))</onfocus>
 
 			<!-- Movie -->
 			<onfocus>Skin.ToggleSetting(Menu_Movie_act)</onfocus>
