@@ -11,6 +11,7 @@
 	<include file="IncludesHomeHorizontal.xml" />
 	<include file="IncludesHomeCarousel.xml" />
 	<include file="Include_CustomMenu.xml" />
+	<include file="IncludesInitSkin.xml" />
 	<include file="ViewsAddonBrowser.xml" />
 	<include file="ViewsLiveTV.xml" />
 	<include file="IncludesCodecFlagging.xml" />

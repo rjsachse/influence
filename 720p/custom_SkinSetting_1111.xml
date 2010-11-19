@@ -155,8 +155,8 @@
 					</item>
 					-->
 					<item id="7">
-						<label>35021</label>
-						<label2>35022</label2>
+						<label>Reset Skin</label>
+						<label2>and exit</label2>
 						<onclick>Skin.ResetSettings</onclick>
 						<onclick>quit</onclick>
 					</item>
@@ -440,6 +440,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
+					<!--
 					<control type="label" id="206">
 						<width>750</width>
 						<height>45</height>
@@ -543,6 +544,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
+					-->
 				</control>
 				<control type="scrollbar" id="60">
 					<posx>1060</posx>
