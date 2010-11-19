@@ -681,6 +681,12 @@
 						<onclick>$INFO[Skin.String(Menu_Videos_sub5_run)]</onclick>
 						<visible>Library.HasContent(Video) + Skin.HasSetting(Menu_Videos_sub5_act)</visible>
 					</control>
+					<control type="button" id="190106">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(Menu_Videos_sub6_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Videos_sub6_run)]</onclick>
+						<visible>Library.HasContent(Video) + Skin.HasSetting(Menu_Videos_sub6_act)</visible>
+					</control>
 					<control type="button" id="190108">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(SubMenu_Video_opt1_lab)]</label>
@@ -749,6 +755,12 @@
 						<label>$INFO[Skin.String(Menu_Music_sub5_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_Music_sub5_run]</onclick>
 						<visible>Library.HasContent(Music) + Skin.HasSetting(Menu_Music_sub5_act)</visible>
+					</control>
+					<control type="button" id="190116">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(Menu_Music_sub6_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Music_sub6_run]</onclick>
+						<visible>Library.HasContent(Music) + Skin.HasSetting(Menu_Music_sub6_act)</visible>
 					</control>
 					<control type="button" id="190118">
 						<include>ButtonHomeSubCommonValues</include>
