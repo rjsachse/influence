@@ -1447,6 +1447,7 @@
 						<icon>special://skin/backgrounds/programs.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+						<visible>Skin.HasSetting(Influence_SkinInit)</visible>
 					</item>
 <!-- Custom Home --> 	
 					<item id="20">
@@ -1478,12 +1479,21 @@
 						<visible>Skin.HasSetting(Menu_Men4_act)</visible>
 					</item>
 <!-- Custom Home END --> 	
+					<item id="24">
+						<label>Init Skin and restart</label>
+						<onclick>$INFO[Skin.String(Menu_Men4_run)]</onclick>
+						<icon>special://skin/backgrounds/settings.jpg</icon>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</thumb>
+						<onclick>Quit</onclick>
+						<visible>!Skin.HasSetting(Influence_SkinInit)</visible>
+					</item>
 					<item id="5">
 						<label>13000</label>
 						<onclick>ActivateWindow(Settings)</onclick>
 						<icon>special://skin/backgrounds/settings.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoSettingsButton)</visible>
+						<visible>Skin.HasSetting(Influence_SkinInit)</visible>
 					</item>
 				</content>
 			</control>

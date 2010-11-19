@@ -113,6 +113,7 @@
 					<description>Favori</description>
 					<label>35030</label>
 					<onclick>ActivateWindow(1114)</onclick>
+					<onclick>SetFocus(100)</onclick>
 					<onclick>Dialog.Close(2114)</onclick>
 				</item>
 				<item id="2">
@@ -121,6 +122,7 @@
 
 					<onclick>Skin.SetFile(RunOpt,.m3u,special://musicplaylists/)</onclick>
 					<onclick>Skin.SetString(RunOpt,PlayMedia($INFO[Skin.String(RunOpt)]))</onclick>
+					<onclick>SetFocus(100)</onclick>
 					<onclick>Dialog.Close(2114)</onclick>
 				</item>
 				<item id="3">
@@ -128,6 +130,7 @@
 					<label>35032</label>
 					<onclick>Skin.SetFile(RunOpt,.xsp,special://videoplaylists/)</onclick>
 					<onclick>Skin.SetString(RunOpt,PlayMedia($INFO[Skin.String(RunOpt)]))</onclick>
+					<onclick>SetFocus(100)</onclick>
 					<onclick>Dialog.Close(2114)</onclick>
 				</item>
 				<item id="4">
@@ -135,26 +138,57 @@
 					<label>35033</label>
 					<onclick>Skin.Setfile(RunOpt,.py,special://home)</onclick>
 					<onclick>Skin.SetString(RunOpt,RunScript($INFO[Skin.String(RunOpt)]))</onclick>
+					<onclick>SetFocus(100)</onclick>
 					<onclick>Dialog.Close(2114)</onclick>
 				</item>
 				<item id="5">
-					<description>Addon</description>
-					<label>35034</label>
+					<description>Add-Ons</description>
+					<label>Add-Ons</label>
 					<onclick>Skin.SetAddon(RunOpt,xbmc.python.pluginsource)</onclick>
-					<!--
-					<onclick>Skin.SetString(RunOpt,RunAddon($INFO[Skin.String(RunOpt)]))</onclick>
-					-->
+					<onclick>SetFocus(100)</onclick>
 					<onclick>Dialog.Close(2114)</onclick>
 				</item>
-				<item id="6">
+				<item id="10">
 					<description>Saisie libre</description>
 					<label>35036</label>
 					<onclick>Skin.SetString(RunOpt)</onclick>
+					<onclick>SetFocus(100)</onclick>
 					<onclick>Dialog.Close(2114)</onclick>
 				</item>
 				</content>
 			</control>
 			<include>SideBladeRight</include>
 		</control>
+			<!--
+		<control type="button" id="100">
+			<description>Trigger</description>
+			<onfocus>Skin.SetString(RunOpt,Audio($INFO[Skin.String(RunOpt)]))</onfocus>
+			<onfocus>SetFocus(10)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+		        <visible>SubString(RunOpt,plugin.audio)</visible>
+		</control>
+			-->
+		<control type="button" id="100">
+			<description>Trigger</description>
+			<onfocus>Skin.SetString(RunOpt,Video($INFO[Skin.String(RunOpt)]))</onfocus>
+			<onfocus>SetFocus(10)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<!--
+		        <visible>SubString(RunOpt,plugin.video)</visible>
+			-->
+		        <visible>SubString(RunOpt,plugin)</visible>
+		</control>
+			<!--
+		<control type="button" id="100">
+			<description>Trigger</description>
+			<onfocus>Skin.SetString(RunOpt,Prog($INFO[Skin.String(RunOpt)]))</onfocus>
+			<onfocus>SetFocus(10)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+		        <visible>SubString(RunOpt,plugin.program)</visible>
+		</control>
 	</controls>
+			-->
 </window>
