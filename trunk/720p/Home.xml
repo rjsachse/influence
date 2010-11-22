@@ -2,7 +2,6 @@
 	<defaultcontrol always="true">8999</defaultcontrol>
 	<allowoverlay>no</allowoverlay>	
 	<controls>
-		<!--  Horizontal  -->
 		<control type="multiimage">
 			<posx>0</posx>
 			<posy>0</posy>
@@ -12,31 +11,6 @@
 			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-		 	<visible>Skin.HasSetting(HorizontalMenu)</visible>  
-		</control>
-		<!--  Vertical   -->
-		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<imagepath background="true">$INFO[Container(19000).ListItem.Icon]</imagepath>
-			<timeperimage>8000</timeperimage>
-			<randomize>true</randomize>
-			<fadetime>1000</fadetime>
-		 	<visible>Skin.HasSetting(VerticalMenu)</visible>  
-		</control>
-		<!--  Carousel   -->
-		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<imagepath background="true">$INFO[Container(29000).ListItem.Icon]</imagepath>
-			<timeperimage>8000</timeperimage>
-			<randomize>true</randomize>
-			<fadetime>1000</fadetime>
-		 	<visible>Skin.HasSetting(CarouselMenu)</visible>  
 		</control>
 		<include>CommonMediaPlayingBackground</include>
 		<include condition="Skin.HasSetting(homepageHideRecentlyAdded)">HomeRecentlyAddedInfo</include>

@@ -4,20 +4,21 @@
 	<include file="ViewsMusicLibrary.xml" />
 	<include file="ViewsFileMode.xml" />
 	<include file="ViewsPictures.xml" />
-	<include file="InfluenceWeather.xml" />
-	<include file="IncludesCodecFlagging.xml" />
-	<include file="IncludesHomeRecentlyAdded.xml" />
-	<include file="IncludesHomeVertical.xml" />
-	<include file="IncludesHomeHorizontal.xml" />
-	<include file="IncludesHomeCarousel.xml" />
-	<include file="Include_CustomMenu.xml" />
-	<include file="IncludesInitSkin.xml" />
 	<include file="ViewsAddonBrowser.xml" />
 	<include file="ViewsLiveTV.xml" />
 	<include file="IncludesCodecFlagging.xml" />
+	<include file="IncludesHomeRecentlyAdded.xml" />
 
 	<constant name="FanartCrossfadeTime">500</constant>
 	<constant name="IconCrossfadeTime">400</constant>
+
+	<include file="InfluenceWeather.xml" />
+	<include file="IncludesHomeVertical.xml" />
+	<include file="IncludesHomeHorizontal.xml" />
+	<include file="IncludesHomeCarousel.xml" />
+	<include file="Carousel.xml" />
+	<include file="Include_CustomMenu.xml" />
+	<include file="IncludesInitSkin.xml" />
 
 	<include name="CommonMediaPlayingBackground">
 		<control type="image">
@@ -26,14 +27,14 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>special://skin/backgrounds/media-overlay.png</texture>
-			<visible>Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)</visible>
+			<visible>Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)+ !SubString(Window(10025).Property(TvTunesIsAlive),True)</visible>
 		</control>
 		<control type="visualisation">
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<visible>Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis)</visible>
+			<visible>Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis)+ !SubString(Window(10025).Property(TvTunesIsAlive),True)</visible>
 		</control>
 		<control type="videowindow">
 			<posx>0</posx>
@@ -930,4 +931,3 @@
 		<animation effect="fade" time="300">Hidden</animation>
 	</include>
 </includes>
-
