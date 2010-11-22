@@ -55,7 +55,6 @@
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<visible>!Skin.HasSetting(VerticalMenu)</visible>
 			</control>
-			<!--
 			<control type="radiobutton" id="102">
 				<description>Use Carousel Menu</description>
 				<width>750</width>
@@ -88,7 +87,6 @@
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<visible>!Skin.HasSetting(CarouselMenu)</visible>
 			</control>
-			-->
 			<control type="radiobutton" id="104">
 				<description>Use Horizontal Menu</description>
 				<width>750</width>
@@ -1015,6 +1013,7 @@
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.SetString(RunOpt_var,Menu_Videos_opt3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
+				<visible>Skin.HasSetting(Menu_Videos) + Skin.HasSetting(Menu_Videos_act) + Skin.HasSetting(SubMenu_Videos_opt3)</visible>
 			</control>
 			<control type="radiobutton" id="40032">
 				<width>750</width>
@@ -2401,6 +2400,7 @@
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.SetString(RunOpt_var,SubMenu_TVShows_opt3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
+				<visible>Skin.HasSetting(Menu_TVShows) + Skin.HasSetting(Menu_TVShows_act) + Skin.HasSetting(SubMenu_TVShows_opt3)</visible>
 			</control>
 			<control type="radiobutton" id="70029">
 				<width>750</width>
