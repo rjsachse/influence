@@ -1,6 +1,6 @@
 <includes>
 	<include name="InitDefaultSkin">
-		<onfocus>Skin.ToggleSetting(Influence_SkinInit)</onfocus>
+		<onfocus>Skin.ToggleSetting(Influence_SkinInit2)</onfocus>
 		<onfocus>Skin.SetString(Menu_Men1_lab,Menu 1)</onfocus>
 		<onfocus>Skin.SetString(Menu_Men2_lab,Menu 2)</onfocus>
 		<onfocus>Skin.SetString(Menu_Men3_lab,Menu 3)</onfocus>

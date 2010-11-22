@@ -141,7 +141,7 @@
 	                                <description>Add-Ons</description>
 	                                <label>Add-Ons</label>
 	                                <onclick>Skin.SetAddon(RunOpt,xbmc.python.pluginsource)</onclick>
- 					<onclick>RunScript(special://skin/scripts/custom_optformat.py,RunOpt=$INFO[Skin.String(RunOpt)])</onclick>
+ 					<onclick>RunScript(special://skin/scripts/custom_optformat.py,RunOpt=$INFO[Skin.String(RunOpt)]&amp;RunOpt_var=$INFO[Skin.String(RunOpt_var)])</onclick>
 	                                <onclick>Dialog.Close(2114)</onclick>
 	                        </item>
 	                        <item id="10">

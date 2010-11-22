@@ -247,8 +247,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Pictures_opt1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Pictures_opt1_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(SubMenu_Pictures_opt1)</visible>
 			</control>
 			<control type="radiobutton" id="10907">
@@ -287,8 +287,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Pictures_opt2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Pictures_opt2_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(SubMenu_Pictures_opt2)</visible>
 			</control>
 			<control type="radiobutton" id="10910">
@@ -327,8 +327,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Pictures_opt3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Pictures_opt3_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(SubMenu_Pictures_opt3)</visible>
 			</control>
 			<control type="radiobutton" id="10913">
@@ -367,8 +367,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Pictures_opt4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Pictures_opt4_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(SubMenu_Pictures_opt4)</visible>
 			</control>
 <!-- Menu Pictures END -->
@@ -429,6 +429,7 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Weather_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<onclick>Skin.SetString(Menu_Weather_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Weather) + Skin.HasSetting(Menu_Weather_act)</visible>
@@ -469,8 +470,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Weather_opt1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Weather_opt1_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Weather) + Skin.HasSetting(Menu_Weather_act) + Skin.HasSetting(SubMenu_Weather_opt1)</visible>
 			</control>
 			<control type="radiobutton" id="30307">
@@ -509,8 +510,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Weather_opt2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Weather_opt2_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Weather) + Skin.HasSetting(Menu_Weather_act) + Skin.HasSetting(SubMenu_Weather_opt2)</visible>
 			</control>
 			<control type="radiobutton" id="30310">
@@ -549,6 +550,7 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Weather_opt3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Weather) + Skin.HasSetting(Menu_Weather_act) + Skin.HasSetting(SubMenu_Weather_opt3)</visible>
 			</control>
@@ -588,8 +590,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Weather_opt4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Weather_opt4_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Weather) + Skin.HasSetting(Menu_Weather_act) + Skin.HasSetting(SubMenu_Weather_opt4)</visible>
 			</control>
 <!-- Menu Weather END -->
@@ -650,8 +652,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Videos_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_Videos_run,$INFO[Skin.String(RunOpt)]))</onclick>
 				<visible>Skin.HasSetting(Menu_Videos) + Skin.HasSetting(Menu_Videos_act)</visible>
 			</control>
 			<control type="radiobutton" id="40004">
@@ -690,8 +692,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Videos_sub1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_Videos_sub1_run, $INFO[Window.Property(NAME_OF_BUTTON)]</onclick>
 				
 				<visible>Skin.HasSetting(Menu_Videos) + Skin.HasSetting(Menu_Videos_act)  + Skin.HasSetting(Menu_Videos_sub1_act) </visible>
 			</control>
@@ -731,8 +733,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Videos_sub2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_Videos_sub2_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Videos) + Skin.HasSetting(Menu_Videos_act)  + Skin.HasSetting(Menu_Videos_sub2_act) </visible>
 			</control>
 			<control type="radiobutton" id="40010">
@@ -771,8 +773,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Videos_sub3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_Videos_sub3_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Videos) + Skin.HasSetting(Menu_Videos_act)  + Skin.HasSetting(Menu_Videos_sub3_act) </visible>
 			</control>
 			<control type="radiobutton" id="40014">
@@ -811,8 +813,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Videos_sub4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_Videos_sub4_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Videos) + Skin.HasSetting(Menu_Videos_act)  + Skin.HasSetting(Menu_Videos_sub4_act)</visible>
 			</control>
 			<control type="radiobutton" id="40017">
@@ -851,8 +853,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Videos_sub5_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_Videos_sub5_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Videos) + Skin.HasSetting(Menu_Videos_act)  + Skin.HasSetting(Menu_Videos_sub5_act)</visible>
 			</control>
 			<control type="radiobutton" id="40020">
@@ -891,8 +893,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Videos_sub6_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_Videos_sub5_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Videos) + Skin.HasSetting(Menu_Videos_act)  + Skin.HasSetting(Menu_Videos_sub6_act)</visible>
 			</control>
 			<control type="radiobutton" id="40023">
@@ -931,8 +933,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Videos_opt1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Videos_opt1_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Videos) + Skin.HasSetting(Menu_Videos_act) + Skin.HasSetting(SubMenu_Videos_opt1)</visible>
 			</control>
 			<control type="radiobutton" id="40026">
@@ -971,8 +973,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Videos_opt2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Videos_opt2_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Videos) + Skin.HasSetting(Menu_Videos_act) + Skin.HasSetting(SubMenu_Videos_opt2)</visible>
 			</control>
 			<control type="radiobutton" id="40029">
@@ -1011,8 +1013,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Videos_opt3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<visible>Skin.HasSetting(Menu_Videos) + Skin.HasSetting(Menu_Videos_act) + Skin.HasSetting(SubMenu_Videos_opt3)</visible>
 			</control>
 			<control type="radiobutton" id="40032">
 				<width>750</width>
@@ -1050,8 +1052,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Videos_opt4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Videos_opt4_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Videos) + Skin.HasSetting(Menu_Videos_act) + Skin.HasSetting(SubMenu_Videos_opt4)</visible>
 			</control>
 <!-- Menu VIDEO END -->
@@ -1112,8 +1114,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Movie_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_Movie_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)</visible>
 			</control>
 			<control type="radiobutton" id="50004">
@@ -1152,8 +1154,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Movie_sub1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_Movie_sub1_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)  + Skin.HasSetting(Menu_Movie_sub1_act) </visible>
 			</control>
 			<control type="radiobutton" id="50007">
@@ -1192,8 +1194,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Movie_sub2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_Movie_sub2_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)  + Skin.HasSetting(Menu_Movie_sub2_act) </visible>
 			</control>
 			<control type="radiobutton" id="50010">
@@ -1232,8 +1234,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Movie_sub3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_Movie_sub3_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)  + Skin.HasSetting(Menu_Movie_sub3_act) </visible>
 			</control>
 			<control type="radiobutton" id="50014">
@@ -1272,11 +1274,51 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Movie_sub4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_Movie_sub4_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)  + Skin.HasSetting(Menu_Movie_sub4_act)</visible>
 			</control>
 			<control type="radiobutton" id="50017">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$LOCALIZE[31119] [B]$INFO[Skin.String(Menu_Movie_sub5_lab)][/B]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_Movie_sub5_act)</onclick>
+				<selected>Skin.HasSetting(Menu_Movie_sub5_act)</selected>
+				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)</visible>
+			</control>
+			<control type="button" id="50018">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[31120]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Movie_sub5_lab)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(Menu_Movie_sub5_lab)</onclick>
+				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)  + Skin.HasSetting(Menu_Movie_sub5_act) </visible>
+			</control>
+			<control type="button" id="50019">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[31121]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Movie_sub5_run)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Movie_sub5_run)</onclick>
+				<onclick>ActivateWindow(2114)</onclick>
+				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)  + Skin.HasSetting(Menu_Movie_sub5_act)</visible>
+			</control>
+			<control type="radiobutton" id="50020">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1289,7 +1331,7 @@
 				<selected>Skin.HasSetting(Menu_Movie_sub6_act)</selected>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)</visible>
 			</control>
-			<control type="button" id="50018">
+			<control type="button" id="50021">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1302,7 +1344,7 @@
 				<onclick>Skin.SetString(Menu_Movie_sub6_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)  + Skin.HasSetting(Menu_Movie_sub6_act) </visible>
 			</control>
-			<control type="button" id="50019">
+			<control type="button" id="50022">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1312,11 +1354,11 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Movie_sub6_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_Movie_sub6_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)  + Skin.HasSetting(Menu_Movie_sub6_act)</visible>
 			</control>
-			<control type="radiobutton" id="50020">
+			<control type="radiobutton" id="50023">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1329,7 +1371,7 @@
 				<selected>Skin.HasSetting(Menu_Movie_sub7_act)</selected>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)</visible>
 			</control>
-			<control type="button" id="50021">
+			<control type="button" id="50024">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1342,7 +1384,7 @@
 				<onclick>Skin.SetString(Menu_Movie_sub7_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)  + Skin.HasSetting(Menu_Movie_sub7_act) </visible>
 			</control>
-			<control type="button" id="50022">
+			<control type="button" id="50025">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1352,11 +1394,11 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Movie_sub7_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_Movie_sub7_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)  + Skin.HasSetting(Menu_Movie_sub7_act)</visible>
 			</control>
-			<control type="radiobutton" id="50023">
+			<control type="radiobutton" id="50026">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1369,7 +1411,7 @@
 				<selected>Skin.HasSetting(SubMenu_Movie_opt1)</selected>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)</visible>
 			</control>
-			<control type="button" id="50024">
+			<control type="button" id="50027">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1382,7 +1424,7 @@
 				<onclick>Skin.SetString(SubMenu_Movie_opt1_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act) + Skin.HasSetting(SubMenu_Movie_opt1)</visible>
 			</control>
-			<control type="button" id="50025">
+			<control type="button" id="50028">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1392,11 +1434,11 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Movie_opt1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Movie_opt1_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act) + Skin.HasSetting(SubMenu_Movie_opt1)</visible>
 			</control>
-			<control type="radiobutton" id="50026">
+			<control type="radiobutton" id="50029">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1409,7 +1451,7 @@
 				<selected>Skin.HasSetting(SubMenu_Movie_opt2)</selected>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)</visible>
 			</control>
-			<control type="button" id="50027">
+			<control type="button" id="50030">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1422,7 +1464,7 @@
 				<onclick>Skin.SetString(SubMenu_Movie_opt2_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act) + Skin.HasSetting(SubMenu_Movie_opt2)</visible>
 			</control>
-			<control type="button" id="50028">
+			<control type="button" id="50031">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1432,11 +1474,11 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Movie_opt2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Movie_opt2_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act) + Skin.HasSetting(SubMenu_Movie_opt2)</visible>
 			</control>
-			<control type="radiobutton" id="50029">
+			<control type="radiobutton" id="50032">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1449,7 +1491,7 @@
 				<selected>Skin.HasSetting(SubMenu_Movie_opt3)</selected>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)</visible>
 			</control>
-			<control type="button" id="50030">
+			<control type="button" id="50033">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1462,7 +1504,7 @@
 				<onclick>Skin.SetString(SubMenu_Movie_opt3_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act) + Skin.HasSetting(SubMenu_Movie_opt3)</visible>
 			</control>
-			<control type="button" id="50031">
+			<control type="button" id="50034">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1472,10 +1514,11 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Movie_opt3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act) + Skin.HasSetting(SubMenu_Movie_opt3)</visible>
 			</control>
-			<control type="radiobutton" id="50032">
+			<control type="radiobutton" id="50035">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1488,7 +1531,7 @@
 				<selected>Skin.HasSetting(SubMenu_Movie_opt4)</selected>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)</visible>
 			</control>
-			<control type="button" id="50033">
+			<control type="button" id="50036">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1501,7 +1544,7 @@
 				<onclick>Skin.SetString(SubMenu_Movie_opt4_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act) + Skin.HasSetting(SubMenu_Movie_opt4)</visible>
 			</control>
-			<control type="button" id="50034">
+			<control type="button" id="50037">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -1511,8 +1554,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Movie_opt4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Movie_opt4_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act) + Skin.HasSetting(SubMenu_Movie_opt4)</visible>
 			</control>
 <!-- Menu Movies END -->
@@ -1573,8 +1616,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Music_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_Music_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Music) + Skin.HasSetting(Menu_Music_act)</visible>
 			</control>
 			<control type="radiobutton" id="60004">
@@ -1613,8 +1656,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Music_sub1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_Music_sub1_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Music) + Skin.HasSetting(Menu_Music_act)  + Skin.HasSetting(Menu_Music_sub1_act) </visible>
 			</control>
 			<control type="radiobutton" id="60007">
@@ -1653,8 +1696,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Music_sub2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_Music_sub2_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Music) + Skin.HasSetting(Menu_Music_act)  + Skin.HasSetting(Menu_Music_sub2_act) </visible>
 			</control>
 			<control type="radiobutton" id="60010">
@@ -1693,8 +1736,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Music_sub3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_Music_sub3_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Music) + Skin.HasSetting(Menu_Music_act)  + Skin.HasSetting(Menu_Music_sub3_act) </visible>
 			</control>
 			<control type="radiobutton" id="60014">
@@ -1733,8 +1776,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Music_sub4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_Music_sub4_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Music) + Skin.HasSetting(Menu_Music_act)  + Skin.HasSetting(Menu_Music_sub4_act)</visible>
 			</control>
 			<control type="radiobutton" id="60017">
@@ -1773,8 +1816,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Music_sub5_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_Music_sub5_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Music) + Skin.HasSetting(Menu_Music_act)  + Skin.HasSetting(Menu_Music_sub5_act)</visible>
 			</control>
 			<control type="radiobutton" id="60020">
@@ -1813,8 +1856,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Music_sub6_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_Music_sub6_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Music) + Skin.HasSetting(Menu_Music_act)  + Skin.HasSetting(Menu_Music_sub6_act)</visible>
 			</control>
 			<control type="radiobutton" id="60023">
@@ -1853,8 +1896,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Music_opt1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Music_opt1_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Music) + Skin.HasSetting(Menu_Music_act) + Skin.HasSetting(SubMenu_Music_opt1)</visible>
 			</control>
 			<control type="radiobutton" id="60026">
@@ -1893,8 +1936,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Music_opt2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Music_opt2_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Music) + Skin.HasSetting(Menu_Music_act) + Skin.HasSetting(SubMenu_Music_opt2)</visible>
 			</control>
 			<control type="radiobutton" id="60029">
@@ -1933,6 +1976,7 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Music_opt3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Music) + Skin.HasSetting(Menu_Music_act) + Skin.HasSetting(SubMenu_Music_opt3)</visible>
 			</control>
@@ -1972,8 +2016,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Music_opt4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Music_opt4_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Music) + Skin.HasSetting(Menu_Music_act) + Skin.HasSetting(SubMenu_Music_opt4)</visible>
 			</control>
 <!-- Menu MUSIC END -->
@@ -2035,8 +2079,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_TVShows_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_TVShows_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_TVShows) + Skin.HasSetting(Menu_TVShows_act)</visible>
 			</control>
 			<control type="radiobutton" id="70004">
@@ -2075,8 +2119,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_TVShows_sub1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_TVShows_sub1_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_TVShows) + Skin.HasSetting(Menu_TVShows_act)  + Skin.HasSetting(Menu_TVShows_sub1_act) </visible>
 			</control>
 			<control type="radiobutton" id="70007">
@@ -2115,8 +2159,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_TVShows_sub2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_TVShows_sub2_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_TVShows) + Skin.HasSetting(Menu_TVShows_act)  + Skin.HasSetting(Menu_TVShows_sub2_act) </visible>
 			</control>
 			<control type="radiobutton" id="70010">
@@ -2155,8 +2199,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_TVShows_sub3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_TVShows_sub3_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_TVShows) + Skin.HasSetting(Menu_TVShows_act)  + Skin.HasSetting(Menu_TVShows_sub3_act) </visible>
 			</control>
 			<control type="radiobutton" id="70014">
@@ -2195,8 +2239,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_TVShows_sub4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_TVShows_sub4_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_TVShows) + Skin.HasSetting(Menu_TVShows_act)  + Skin.HasSetting(Menu_TVShows_sub4_act)</visible>
 			</control>
 			<control type="radiobutton" id="70017">
@@ -2235,8 +2279,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_TVShows_sub5_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_TVShows_sub5_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_TVShows) + Skin.HasSetting(Menu_TVShows_act)  + Skin.HasSetting(Menu_TVShows_sub5_act)</visible>
 			</control>
 			<control type="radiobutton" id="70020">
@@ -2275,8 +2319,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_TVShows_opt1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_TVShows_opt1_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_TVShows) + Skin.HasSetting(Menu_TVShows_act) + Skin.HasSetting(SubMenu_TVShows_opt1)</visible>
 			</control>
 			<control type="radiobutton" id="70023">
@@ -2315,8 +2359,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_TVShows_opt2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_TVShows_opt2_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_TVShows) + Skin.HasSetting(Menu_TVShows_act) + Skin.HasSetting(SubMenu_TVShows_opt2)</visible>
 			</control>
 			<control type="radiobutton" id="70026">
@@ -2355,8 +2399,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_TVShows_opt3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<visible>Skin.HasSetting(Menu_TVShows) + Skin.HasSetting(Menu_TVShows_act) + Skin.HasSetting(SubMenu_TVShows_opt3)</visible>
 			</control>
 			<control type="radiobutton" id="70029">
 				<width>750</width>
@@ -2394,8 +2438,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_TVShows_opt4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_TVShows_opt4_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_TVShows) + Skin.HasSetting(Menu_TVShows_act) + Skin.HasSetting(SubMenu_TVShows_opt4)</visible>
 			</control>
 <!-- Menu TVSHOWS END -->
@@ -2456,8 +2500,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Men1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_Men1_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(Menu_Men1_act)</visible>
 			</control>
 			<control type="radiobutton" id="80004">
@@ -2496,8 +2540,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Men1_opt1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Men1_opt1_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(SubMenu_Men1_opt1) + Skin.HasSetting(Menu_Men1_act)</visible>
 			</control>
 			<control type="radiobutton" id="80007">
@@ -2536,8 +2580,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Men1_opt2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Men1_opt2_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(SubMenu_Men1_opt1) + Skin.HasSetting(SubMenu_Men1_opt2) + Skin.HasSetting(Menu_Men1_act)</visible>
 			</control>
 			<control type="radiobutton" id="80010">
@@ -2576,8 +2620,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Men1_opt3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Men1_opt3_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(SubMenu_Men1_opt1) + Skin.HasSetting(SubMenu_Men1_opt2) + Skin.HasSetting(SubMenu_Men1_opt3) + Skin.HasSetting(Menu_Men1_act)</visible>
 			</control>
 			<control type="radiobutton" id="80013">
@@ -2616,8 +2660,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Men1_opt4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Men1_opt4_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(SubMenu_Men1_opt1) + Skin.HasSetting(SubMenu_Men1_opt2) + Skin.HasSetting(SubMenu_Men1_opt3) + Skin.HasSetting(SubMenu_Men1_opt4) + Skin.HasSetting(Menu_Men1_act)</visible>
 			</control>
 			<control type="radiobutton" id="80016">
@@ -2656,8 +2700,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Men1_opt5_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Men1_opt5_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(SubMenu_Men1_opt1) + Skin.HasSetting(SubMenu_Men1_opt2) + Skin.HasSetting(SubMenu_Men1_opt3) + Skin.HasSetting(SubMenu_Men1_opt4)  + Skin.HasSetting(SubMenu_Men1_opt5) + Skin.HasSetting(Menu_Men1_act)</visible>
 			</control>
 			<control type="radiobutton" id="80019">
@@ -2744,8 +2788,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Men2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_Men2_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(Menu_Men2_act)</visible>
 			</control>
 			<control type="radiobutton" id="81004">
@@ -2784,8 +2828,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Men2_opt1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Men2_opt1_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(SubMenu_Men2_opt1) + Skin.HasSetting(Menu_Men2_act)</visible>
 			</control>
 			<control type="radiobutton" id="81007">
@@ -2824,8 +2868,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Men2_opt2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Men2_opt2_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(SubMenu_Men2_opt1) + Skin.HasSetting(SubMenu_Men2_opt2) + Skin.HasSetting(Menu_Men2_act)</visible>
 			</control>
 			<control type="radiobutton" id="81010">
@@ -2864,8 +2908,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Men2_opt3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Men2_opt3_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(SubMenu_Men2_opt1) + Skin.HasSetting(SubMenu_Men2_opt2) + Skin.HasSetting(SubMenu_Men2_opt3) + Skin.HasSetting(Menu_Men2_act)</visible>
 			</control>
 			<control type="radiobutton" id="81013">
@@ -2904,8 +2948,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Men2_opt4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Men2_opt4_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(SubMenu_Men2_opt1) + Skin.HasSetting(SubMenu_Men2_opt2) + Skin.HasSetting(SubMenu_Men2_opt3) + Skin.HasSetting(SubMenu_Men2_opt4) + Skin.HasSetting(Menu_Men2_act)</visible>
 			</control>
 			<control type="radiobutton" id="81016">
@@ -2944,8 +2988,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Men2_opt5_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Men2_opt5_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(SubMenu_Men2_opt1) + Skin.HasSetting(SubMenu_Men2_opt2) + Skin.HasSetting(SubMenu_Men2_opt3) + Skin.HasSetting(SubMenu_Men2_opt4)  + Skin.HasSetting(SubMenu_Men2_opt5) + Skin.HasSetting(Menu_Men2_act)</visible>
 			</control>
 			<control type="radiobutton" id="81019">
@@ -3032,8 +3076,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Men3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_Men3_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(Menu_Men3_act)</visible>
 			</control>
 			<control type="radiobutton" id="82004">
@@ -3072,8 +3116,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Men3_opt1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Men3_opt1_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(SubMenu_Men3_opt1) + Skin.HasSetting(Menu_Men3_act)</visible>
 			</control>
 			<control type="radiobutton" id="82007">
@@ -3112,8 +3156,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Men3_opt2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Men3_opt2_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(SubMenu_Men3_opt1) + Skin.HasSetting(SubMenu_Men3_opt2) + Skin.HasSetting(Menu_Men3_act)</visible>
 			</control>
 			<control type="radiobutton" id="82010">
@@ -3152,8 +3196,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Men3_opt3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Men3_opt3_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(SubMenu_Men3_opt1) + Skin.HasSetting(SubMenu_Men3_opt2) + Skin.HasSetting(SubMenu_Men3_opt3) + Skin.HasSetting(Menu_Men3_act)</visible>
 			</control>
 			<control type="radiobutton" id="82013">
@@ -3192,8 +3236,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Men3_opt4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Men3_opt4_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(SubMenu_Men3_opt1) + Skin.HasSetting(SubMenu_Men3_opt2) + Skin.HasSetting(SubMenu_Men3_opt3) + Skin.HasSetting(SubMenu_Men3_opt4) + Skin.HasSetting(Menu_Men3_act)</visible>
 			</control>
 			<control type="radiobutton" id="82016">
@@ -3232,8 +3276,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Men3_opt5_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Men3_opt5_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(SubMenu_Men3_opt1) + Skin.HasSetting(SubMenu_Men3_opt2) + Skin.HasSetting(SubMenu_Men3_opt3) + Skin.HasSetting(SubMenu_Men3_opt4)  + Skin.HasSetting(SubMenu_Men3_opt5) + Skin.HasSetting(Menu_Men3_act)</visible>
 			</control>
 			<control type="radiobutton" id="82019">
@@ -3321,8 +3365,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Men4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_Men4_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(Menu_Men4_act)</visible>
 			</control>
 			<control type="radiobutton" id="83004">
@@ -3361,8 +3405,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Men4_opt1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Men4_opt1_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(SubMenu_Men4_opt1) + Skin.HasSetting(Menu_Men4_act)</visible>
 			</control>
 			<control type="radiobutton" id="83007">
@@ -3401,8 +3445,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Men4_opt2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Men4_opt2_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(SubMenu_Men4_opt1) + Skin.HasSetting(SubMenu_Men4_opt2) + Skin.HasSetting(Menu_Men4_act)</visible>
 			</control>
 			<control type="radiobutton" id="83010">
@@ -3441,8 +3485,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Men4_opt3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Men4_opt3_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(SubMenu_Men4_opt1) + Skin.HasSetting(SubMenu_Men4_opt2) + Skin.HasSetting(SubMenu_Men4_opt3) + Skin.HasSetting(Menu_Men4_act)</visible>
 			</control>
 			<control type="radiobutton" id="83013">
@@ -3481,8 +3525,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Men4_opt4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Men4_opt4_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(SubMenu_Men4_opt1) + Skin.HasSetting(SubMenu_Men4_opt2) + Skin.HasSetting(SubMenu_Men4_opt3) + Skin.HasSetting(SubMenu_Men4_opt4) + Skin.HasSetting(Menu_Men4_act)</visible>
 			</control>
 			<control type="radiobutton" id="83016">
@@ -3521,8 +3565,8 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,SubMenu_Men4_opt5_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(SubMenu_Men4_opt5_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(SubMenu_Men4_opt1) + Skin.HasSetting(SubMenu_Men4_opt2) + Skin.HasSetting(SubMenu_Men4_opt3) + Skin.HasSetting(SubMenu_Men4_opt4)  + Skin.HasSetting(SubMenu_Men4_opt5) + Skin.HasSetting(Menu_Men4_act)</visible>
 			</control>
 			<control type="radiobutton" id="83019">

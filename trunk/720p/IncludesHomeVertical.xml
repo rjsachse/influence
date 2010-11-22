@@ -1459,7 +1459,7 @@
 						<icon>special://skin/backgrounds/programs.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
-						<visible>Skin.HasSetting(Influence_SkinInit)</visible>
+						<visible>Skin.HasSetting(Influence_SkinInit2)</visible>
 					</item>
 <!-- Custom Home --> 	
 					<item id="20">
@@ -1497,7 +1497,7 @@
 						<icon>special://skin/backgrounds/settings.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</thumb>
 						<onclick>Quit</onclick>
-						<visible>!Skin.HasSetting(Influence_SkinInit)</visible>
+						<visible>!Skin.HasSetting(Influence_SkinInit2)</visible>
 					</item>
 					<item id="5">
 						<label>13000</label>
@@ -1505,7 +1505,7 @@
 						<icon>special://skin/backgrounds/settings.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoSettingsButton)</visible>
-						<visible>Skin.HasSetting(Influence_SkinInit)</visible>
+						<visible>Skin.HasSetting(Influence_SkinInit2)</visible>
 					</item>
 				</content>
 			</control>
