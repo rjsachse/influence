@@ -21,22 +21,17 @@ class Main:
     def __init__( self ):
         # parse argv for any preferences
         self._parse_argv()
-	print "- PATH:" + self.RunOpt
+	print self.RunOpt_var + "-> PATH:" + self.RunOpt
         if re.match('plugin.video',self.RunOpt):
-                xbmc.executebuiltin ("Skin.SetString(Menu_Pictures_run, ActivateWindow(10024,"+ self.RunOpt +" ))")
-                print "plugin.video OK :" + self.RunOpt
+		xbmc.executebuiltin ("Skin.SetString(" + self.RunOpt_var + ", ActivateWindow(10024,plugin://"+ self.RunOpt +"/))")
         elif re.match('plugin.audio',self.RunOpt):
-                xbmc.executebuiltin ("Skin.SetString(Menu_Pictures_run, ActivateWindow(10501,"+ self.RunOpt +" ))")
-                print "plugin.audio OK :" + self.RunOpt
+		xbmc.executebuiltin ("Skin.SetString(" + self.RunOpt_var + ", ActivateWindow(10501,plugin://"+ self.RunOpt +"/))")
         elif re.match('plugin.program',self.RunOpt):
-                xbmc.executebuiltin ("Skin.SetString(Menu_Pictures_run, ActivateWindow(10001,"+ self.RunOpt +" ))")
-                print "plugin.program OK :" + self.RunOpt
+		xbmc.executebuiltin ("Skin.SetString(" + self.RunOpt_var + ", ActivateWindow(10001,plugin://"+ self.RunOpt +"/))")
         elif re.match('plugin.games',self.RunOpt):
-                xbmc.executebuiltin ("Skin.SetString(Menu_Pictures_run, ActivateWindow(10001,"+ self.RunOpt +" ))")
-                print "plugin.games OK :" + self.RunOpt
+		xbmc.executebuiltin ("Skin.SetString(" + self.RunOpt_var + ", ActivateWindow(10001,plugin://"+ self.RunOpt +"/))")
         elif re.match('script',self.RunOpt):
-                xbmc.executebuiltin ("Skin.SetString(Menu_Pictures_run, runscript("+ self.RunOpt +" ))")
-                print "script OK :" + self.RunOpt
+                xbmc.executebuiltin ("Skin.SetString(" + self.RunOpt_var + ", runscript("+ self.RunOpt +" ))")
         print self.RunOpt
         
 

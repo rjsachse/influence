@@ -35,7 +35,7 @@
 		</control>
 		<control type="button" id="11">
 			<description>Trigger to Auto run the Latest media python after a 1 min delay if scan on startup is enabled</description>
-			<onfocus>Skin.ToggleSetting(Influence_SkinInit)</onfocus>
+			<onfocus>Skin.ToggleSetting(Influence_SkinInit2)</onfocus>
 			<onfocus>Skin.SetString(Menu_Men1_lab,Menu 1)</onfocus>
 			<onfocus>Skin.SetString(Menu_Men2_lab,Menu 2)</onfocus>
 			<onfocus>Skin.SetString(Menu_Men3_lab,Menu 3)</onfocus>
@@ -146,7 +146,7 @@
 			<onfocus>ReplaceWindow(Home)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<visible>!Skin.HasSetting(Influence_SkinInit)</visible>
+			<visible>!Skin.HasSetting(Influence_SkinInit2)</visible>
 		</control>
 		<control type="button" id="11">
 			<description>Don't run anything</description>
@@ -154,7 +154,7 @@
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 			<visible>!system.getbool(videolibrary.updateonstartup) | Skin.HasSetting(homepageHideRecentlyAdded)</visible>
-			<visible>Skin.HasSetting(Influence_SkinInit)</visible>
+			<visible>Skin.HasSetting(Influence_SkinInit2)</visible>
 		</control>
 		<include>CommonVideoBackground</include>
 	</controls>
