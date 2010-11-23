@@ -54,7 +54,10 @@
 			</control>
 		</control>
 		<!-- weather Info -->
+		<control type="group">
+		<visible>Container(9000).HasFocus(6)+Weather.IsFetched</visible>
 	        <include>CurrentWeather</include>
+		</control>
 		<include condition="!Skin.HasSetting(VerticalMenu)+!Skin.HasSetting(HorizontalMenu)+!Skin.HasSetting(CarouselMenu)">IncludeHomeVertical</include>
 		<include condition="Skin.HasSetting(VerticalMenu)">IncludeHomeVertical</include>
 		<include condition="Skin.HasSetting(HorizontalMenu)">IncludeHomeHorizontal</include>
