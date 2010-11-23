@@ -2,6 +2,7 @@
 	<defaultcontrol always="true">9999</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<views>50,500,550,560,501,508,504,503,505,511</views>
+	<visible>!Skin.HasSetting(kiosk)</visible>
 	<controls>
 	    <control type="button" id="9999">
             <description>trigger</description>

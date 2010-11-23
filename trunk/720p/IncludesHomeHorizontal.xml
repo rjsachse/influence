@@ -411,7 +411,7 @@
 <!-- Horizontal Statistics -->
 		<control type="group">
 			<posx>0</posx>
-			<posy>581</posy>
+			<posy>561</posy>
 			<visible>Skin.HasSetting(HomeStats)</visible>
 			<animation effect="slide" end="-650,0" time="900" tween="quadratic" easing="out">WindowClose</animation>
 			<animation effect="slide" start="-650,0" time="900" tween="quadratic" easing="out">WindowOpen</animation>
@@ -550,17 +550,31 @@
 <!-- Alternate Submenu -->
 			<control type="group" id="9001">
 				<posx>207</posx>
-				<posy>668</posy>
+				<posy>648</posy>
+				<!--
 				<visible>[Container(9000).HasFocus(11) | Container(9000).HasFocus(10) | Container(9000).HasFocus(20) | Container(9000).HasFocus(21) |  Container(9000).HasFocus(22) |  Container(9000).HasFocus(23)| Container(9000).HasFocus(2) | Container(9000).HasFocus(3) | Container(9000).HasFocus(5) | Container(9000).HasFocus(1) | Container(9000).HasFocus(4) | Container(9000).HasFocus(6)]</visible>
+				-->
+				<visible> Container(9000).HasFocus(1)  | Container(9000).HasFocus(2)  + [Skin.HasSetting(Menu_Videos_sub1_act) | Skin.HasSetting(Menu_Videos_sub2_act) | Skin.HasSetting(Menu_Videos_sub3_act) | Skin.HasSetting(Menu_Videos_sub4_act) | Skin.HasSetting(Menu_Videos_sub5_act) | Skin.HasSetting(SubMenu_Video_opt1) | Skin.HasSetting(SubMenu_Video_opt2) | Skin.HasSetting(SubMenu_Video_opt3) | Skin.HasSetting(SubMenu_Video_opt4)] | Container(9000).HasFocus(3)  + [Skin.HasSetting(Menu_Music_sub1_act) | Skin.HasSetting(Menu_Music_sub2_act) | Skin.HasSetting(Menu_Music_sub3_act) | Skin.HasSetting(Menu_Music_sub4_act) | Skin.HasSetting(Menu_Music_sub5_act) | Skin.HasSetting(SubMenu_Music_opt1) | Skin.HasSetting(SubMenu_Music_opt2) | Skin.HasSetting(SubMenu_Music_opt3) | Skin.HasSetting(SubMenu_Music_opt4)] | Container(9000).HasFocus(4)  + [Skin.HasSetting(SubMenu_Pictures_opt1) | Skin.HasSetting(SubMenu_Pictures_opt2) | Skin.HasSetting(SubMenu_Pictures_opt3) | Skin.HasSetting(SubMenu_Pictures_opt4)] | Container(9000).HasFocus(5)  | Container(9000).HasFocus(6)  + [Skin.HasSetting(SubMenu_Weather_opt1) | Skin.HasSetting(SubMenu_Weather_opt2) | Skin.HasSetting(SubMenu_Weather_opt3) | Skin.HasSetting(SubMenu_Weather_opt4)] | Container(9000).HasFocus(7)  | Container(9000).HasFocus(9)  | Container(9000).HasFocus(10)  + [Skin.HasSetting(Menu_Movie_sub1_act) | Skin.HasSetting(Menu_Movie_sub2_act) | Skin.HasSetting(Menu_Movie_sub3_act) | Skin.HasSetting(Menu_Movie_sub4_act) | Skin.HasSetting(Menu_Movie_sub5_act)  | Skin.HasSetting(Menu_Movie_sub6_act) | Skin.HasSetting(SubMenu_Movie_opt1) | Skin.HasSetting(SubMenu_Movie_opt2) | Skin.HasSetting(SubMenu_Movie_opt3) | Skin.HasSetting(SubMenu_Movie_opt4)] | Container(9000).HasFocus(11)  + [Skin.HasSetting(Menu_TVShows_sub1_act) | Skin.HasSetting(Menu_TVShows_sub2_act) | Skin.HasSetting(Menu_TVShows_sub3_act) | Skin.HasSetting(Menu_TVShows_sub4_act) | Skin.HasSetting(Menu_TVShows_sub5_act)  | Skin.HasSetting(Menu_TVShows_sub6_act) | Skin.HasSetting(SubMenu_TVShows_opt1) | Skin.HasSetting(SubMenu_TVShows_opt2) | Skin.HasSetting(SubMenu_TVShows_opt3) | Skin.HasSetting(SubMenu_TVShows_opt4)] | Container(9000).HasFocus(20)  + Skin.HasSetting(SubMenu_Men1_opt1) | Container(9000).HasFocus(21)  + Skin.HasSetting(SubMenu_Men2_opt1) | Container(9000).HasFocus(22)  + Skin.HasSetting(SubMenu_Men3_opt1) | Container(9000).HasFocus(23)  + Skin.HasSetting(SubMenu_Men4_opt1) </visible>
+				<!--
 				<animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(9001).HasFocus">conditional</animation>
 				<animation effect="fade" start="0" end="100" delay="300" time="200" condition="ControlGroup(9001).HasFocus">conditional</animation>
 				<animation effect="fade" start="100" end="0" time="0" condition="ControlGroup(9001).HasFocus">WindowClose</animation>
+				-->
 				<control type="image">
 					<posx>80</posx>
 					<width>700</width>
 					<height>35</height>
 					<colordiffuse>DAFFFFFF</colordiffuse>
 					<texture>home/alternatesubmenubar.png</texture>
+					<visible>!ControlGroup(9001).HasFocus</visible>
+				</control>
+				<control type="image">
+					<posx>80</posx>
+					<width>700</width>
+					<height>35</height>
+					<colordiffuse>DAFFFFFF</colordiffuse>
+					<texture>home/alternatesubmenubarFocus.png</texture>
+					<visible>ControlGroup(9001).HasFocus</visible>
 				</control>
 				<control type="wraplist" id="945">
 					<posx>100</posx>
@@ -1092,7 +1106,6 @@
 							<visible>Container(9000).HasFocus(23) + [Skin.HasSetting(SubMenu_Men4_opt6) + !IsEmpty(Skin.String(SubMenu_Men4_opt6_lab))]</visible>
 						</item>
 <!-- Custom Menu 4 End -->
-
 					</content>
 				</control>
 			</control>		
@@ -1100,7 +1113,7 @@
 
 			<control type="image">
 				<posx>-235</posx>
-				<posy>138r</posy>
+				<posy>158r</posy>
 				<width>1950</width>
 				<height>125</height>
 				<colordiffuse>DAFFFFFF</colordiffuse>
@@ -1136,7 +1149,7 @@
 			</control>
 			<control type="wraplist" id="9000">
 				<posx>-175</posx>
-				<posy>120r</posy>
+				<posy>140r</posy>
 				<width>1515</width>
 				<height>100</height>
 				<onleft>9000</onleft>
@@ -1181,7 +1194,7 @@
 						<onclick>$INFO[Skin.String(Menu_Weather_run)]</onclick>
 						<icon>special://skin/backgrounds/weather.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+						<visible>Skin.HasSetting(Menu_Weather_act)</visible>
 						<visible>!Skin.HasSetting(ShowWeatherFanart) | IsEmpty(Skin.String(WeatherFanartDir))</visible>
 					</item>
 					<item id="6">
@@ -1189,7 +1202,7 @@
 						<onclick>$INFO[Skin.String(Menu_Weather_run)]</onclick>
 						<icon>special://skin/backgrounds/weather.jpg</icon>
 						<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+						<visible>Skin.HasSetting(Menu_Weather_act)</visible>
 						<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
 					</item>
 					<item id="4">
@@ -1197,42 +1210,35 @@
 						<onclick>$INFO[Skin.String(Menu_Pictures_run)]</onclick>
 						<icon>special://skin/backgrounds/pictures.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
+						<visible>Skin.HasSetting(Menu_Pictures_act)</visible>
 					</item>
 					<item id="3">
 						<label>$INFO[Skin.String(Menu_Music_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_Music_run)]</onclick>
 						<icon>special://skin/backgrounds/music.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
+						<visible>Skin.HasSetting(Menu_Music_act)</visible>
 					</item>
 					<item id="2">
 						<label>$INFO[Skin.String(Menu_Videos_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_Video_run)]</onclick>
 						<icon>special://skin/backgrounds/videos.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoVideosButton) + ![Skin.HasSetting(HomeMenuNoMoviesButton) + Skin.HasSetting(HomeMenuNoTVShowsButton)]</visible>
-					</item>
-					<item id="2">
-						<label>$INFO[Skin.String(Menu_Videos_lab)]</label>
-						<onclick>ActivateWindow(VideoFiles)</onclick>
-						<icon>special://skin/backgrounds/videos.jpg</icon>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoVideosButton) + [Skin.HasSetting(HomeMenuNoMoviesButton) + Skin.HasSetting(HomeMenuNoTVShowsButton)]</visible>
+						<visible>Skin.HasSetting(Menu_Videos_act)</visible>
 					</item>
 					<item id="10">
 						<label>$INFO[Skin.String(Menu_Movie_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_Movie_run)]</onclick>
 						<icon>special://skin/backgrounds/videos.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</thumb>
-						<visible>Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)</visible>
+						<visible>Skin.HasSetting(Menu_Movie_act) + Library.HasContent(Movies)</visible>
 					</item>
 					<item id="11">
 						<label>$INFO[Skin.String(Menu_TVShows_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_TVShows_run)]</onclick>
 						<icon>special://skin/backgrounds/videos.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</thumb>
-						<visible>Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)</visible>
+						<visible>Skin.HasSetting(Menu_TVShows_act) + Library.HasContent(TVShows)</visible>
 					</item>
 <-- Custom Home -->					
 					<item id="20">

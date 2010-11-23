@@ -2,8 +2,8 @@
 	<include name="IncludeHomeVertical">
 		<!-- Vertical Video Statistics -->
 		<control type="group">
-			<posx>600r</posx>
-			<posy>50</posy>
+			<posx>275r</posx>
+			<posy>358</posy>
 			<visible>Skin.HasSetting(HomeStats) + !Window.IsVisible(Favourites)</visible>
 			<include>VisibleFadeEffect</include>
 			<animation effect="fade" time="300" delay="1000">WindowOpen</animation>
@@ -14,7 +14,7 @@
 					<description>background</description>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>260</width>
+					<width>250</width>
 					<height>130</height>
 					<texture border="10">RecentAddedNF.png</texture>
 				</control>
@@ -78,7 +78,7 @@
 					<description>background</description>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>260</width>
+					<width>250</width>
 					<height>130</height>
 					<texture border="10">RecentAddedNF.png</texture>
 				</control>
@@ -142,7 +142,7 @@
 					<description>background</description>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>260</width>
+					<width>250</width>
 					<height>130</height>
 					<texture border="10">RecentAddedNF.png</texture>
 				</control>
@@ -209,7 +209,7 @@
 					<description>background</description>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>260</width>
+					<width>250</width>
 					<height>130</height>
 					<texture border="10">RecentAddedNF.png</texture>
 				</control>
@@ -1326,7 +1326,7 @@
 				<label>-</label>
 				<font>-</font>
 				<onfocus>Skin.Reset(LibraryUpdated)</onfocus>
-				<onfocus>XBMC.RunScript(script.recentlyadded,limit=4;albums=True;totals=True)</onfocus>
+				<onfocus>XBMC.RunScript(script.recentlyadded,limit=4&amp;albums=True&amp;totals=True)</onfocus>
 				<onfocus>SetFocus(9000)</onfocus>
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>-</texturefocus>
@@ -1459,7 +1459,7 @@
 						<icon>special://skin/backgrounds/programs.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
-						<visible>Skin.HasSetting(Influence_SkinInit2)</visible>
+						<visible>Skin.HasSetting(Influence_SkinInit_b1)</visible>
 					</item>
 <!-- Custom Home --> 	
 					<item id="20">
@@ -1497,7 +1497,7 @@
 						<icon>special://skin/backgrounds/settings.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</thumb>
 						<onclick>Quit</onclick>
-						<visible>!Skin.HasSetting(Influence_SkinInit2)</visible>
+						<visible>!Skin.HasSetting(Influence_SkinInit_b1)</visible>
 					</item>
 					<item id="5">
 						<label>13000</label>
@@ -1505,7 +1505,7 @@
 						<icon>special://skin/backgrounds/settings.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoSettingsButton)</visible>
-						<visible>Skin.HasSetting(Influence_SkinInit2)</visible>
+						<visible>Skin.HasSetting(Influence_SkinInit_b1)</visible>
 					</item>
 				</content>
 			</control>
