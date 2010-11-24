@@ -145,8 +145,10 @@
   <string id="35010">Afficher les statistiques</string>
   <string id="35011">Afficher les CDart</string>
   <string id="35012">Afficher les 5 prochains titres</string>
+  <string id="35020">Modifier le menu</string>
   <string id="35021">Skin</string>
   <string id="35022">Valeur par défaut</string>
+  <string id="35023">Activer le mode Kiosk (Désactive la barre latérale)</string>
   <string id="35030">Favori</string>
   <string id="35031">Playlist Musical</string>
   <string id="35032">Playlist Vidéo</string>

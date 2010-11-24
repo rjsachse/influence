@@ -429,7 +429,6 @@
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.SetString(RunOpt_var,Menu_Weather_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<onclick>Skin.SetString(Menu_Weather_run,$INFO[Skin.String(RunOpt)])</onclick>
 				<visible>Skin.HasSetting(Menu_Weather) + Skin.HasSetting(Menu_Weather_act)</visible>
 			</control>
 			<control type="radiobutton" id="30304">
@@ -692,7 +691,6 @@
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.SetString(RunOpt_var,Menu_Videos_sub1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				
 				<visible>Skin.HasSetting(Menu_Videos) + Skin.HasSetting(Menu_Videos_act)  + Skin.HasSetting(Menu_Videos_sub1_act) </visible>
 			</control>
 			<control type="radiobutton" id="40007">
