@@ -118,7 +118,7 @@
 			<onfocus>Skin.SetString(Menu_Movie_lab,$LOCALIZE[20342])</onfocus>
 			<onfocus>Skin.SetString(Menu_Movie_run,ActivateWindow(VideoLibrary,MovieTitles,return))</onfocus>
 <!--icone-->		<onfocus>Skin.SetString(Menu_Movie_Ico,Carousel/films.png)</onfocus>
-<!--background-->       <onfocus>Skin.SetString(Menu_Movie_Back,special://skin/backgrounds/videos.jpg)</onfocus>
+<!--background-->       <onfocus>Skin.SetString(Menu_Movie_Back,special://skin/backgrounds/movies.jpg)</onfocus>
 			<onfocus>Skin.SetBool(Menu_Movie_sub1_act)</onfocus>
 			<onfocus>Skin.SetString(Menu_Movie_sub1_lab,$LOCALIZE[369])</onfocus>
 			<onfocus>Skin.SetString(Menu_Movie_sub1_run,ActivateWindow(VideoLibrary,MovieTitles,return))</onfocus>

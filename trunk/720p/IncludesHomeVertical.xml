@@ -1442,14 +1442,14 @@
 					<item id="10">
 						<label>$INFO[Skin.String(Menu_Movie_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_Movie_run)]</onclick>
-						<icon>special://skin/backgrounds/videos.jpg</icon>
+						<icon>special://skin/backgrounds/movies.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</thumb>
 						<visible>Skin.HasSetting(Menu_Movie_act) + Library.HasContent(Movies)</visible>
 					</item>
 					<item id="11">
 						<label>$INFO[Skin.String(Menu_TVShows_lab)]</label>
 						<onclick>$INFO[Skin.String(Menu_TVShows_run)]</onclick>
-						<icon>special://skin/backgrounds/videos.jpg</icon>
+						<icon>special://skin/backgrounds/tvshows.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</thumb>
 						<visible>Skin.HasSetting(Menu_TVShows_act) + Library.HasContent(TVShows)</visible>
 					</item>

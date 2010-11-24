@@ -279,7 +279,8 @@
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
-						<label>Enable Kiosk Mode (disable slideout menu)</label>
+						<description>Enable Kiosk Mode (disable slideout menu)</description>
+						<label>35023</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
@@ -649,16 +650,16 @@
 							<item id="10">
 								<label>$INFO[Skin.String(Menu_Movie_lab)]</label>
 								<onclick>-</onclick>
-								<icon>special://skin/backgrounds/videos.jpg</icon>
+								<icon>special://skin/backgrounds/movies.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</thumb>
-								<visible>Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)</visible>
+								<visible>Skin.HasSetting(Menu_Movie_act) + Library.HasContent(Movies)</visible>
 							</item>
 							<item id="11">
 								<label>$INFO[Skin.String(Menu_TVShows_lab)]</label>
 								<onclick>-</onclick>
-								<icon>special://skin/backgrounds/videos.jpg</icon>
+								<icon>special://skin/backgrounds/tvshows.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</thumb>
-								<visible>Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)</visible>
+								<visible>Skin.HasSetting(Menu_TVShows_act) + Library.HasContent(TVShows)</visible>
 							</item>
 							<item id="2">
 								<label>$INFO[Skin.String(Menu_Music_lab)]</label>
@@ -684,12 +685,14 @@
 								<icon>special://skin/backgrounds/weather.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>
 							</item>
+							<!--
 							<item id="6">
 								<label>247</label>
 								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/scripts.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Custom_Back_Scripts_Folder)]</thumb>
 							</item>
+							-->
 							<item id="7">
 								<label>13000</label>
 								<onclick>-</onclick>
@@ -1544,6 +1547,18 @@
 						<haspath>yes</haspath>
 						<label fallback="571">$INFO[Container(9003).ListItem.Thumb]</label>
 						<textcolor>white</textcolor>
+					</control>
+				</control>
+				<control type="group">
+					<posx>290</posx>
+					<posy>60</posy>
+					<visible>Container(9000).Hasfocus(7)</visible>
+					<control type="image">
+						<posx>85</posx>
+						<posy>100</posy>
+						<width>580</width>
+						<height>435</height>
+						<texture>Danger.png</texture>
 					</control>
 				</control>
 				<control type="scrollbar" id="61">
