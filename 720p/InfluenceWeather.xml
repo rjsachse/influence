@@ -9,6 +9,15 @@
 				<width>500</width>
 				<height>620</height>
 				<texture border="20">ContentPanel.png</texture>
+				<visible>!Skin.HasSetting(HorizontalMenu) | Window.IsActive(weather)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>500</width>
+				<height>545</height>
+				<texture border="20">ContentPanel.png</texture>
+				<visible>Skin.HasSetting(HorizontalMenu) + !Window.IsActive(weather)</visible>
 			</control>
 			<control type="image">
 				<posx>20</posx>
@@ -176,6 +185,7 @@
 				<label>$LOCALIZE[404] :</label>
 				<textcolor>grey2</textcolor>
 				<shadowcolor>black</shadowcolor>
+				<visible>!Skin.HasSetting(HorizontalMenu) | Window.IsActive(weather)</visible>
 			</control>
 			<control type="label">
 				<description>current feels like Value</description>
@@ -241,6 +251,7 @@
 				<info>Window(2600).Property(Current.Wind)</info>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
+				<visible>!Skin.HasSetting(HorizontalMenu) + Window.IsActive(weather)</visible>
 			</control>
 		</control>
 	</include>
