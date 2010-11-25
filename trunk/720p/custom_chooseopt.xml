@@ -112,9 +112,9 @@
 	                        <item id="1">
 	                                <description>Favori</description>
 	                                <label>35030</label>
+	                                <onclick>Dialog.Close(2114)</onclick>
 	                                <onclick>ActivateWindow(1114)</onclick>
 	                                <onclick>Skin.SetString($INFO[Skin.String(RunOpt_var)],$INFO[Skin.String(RunOpt)])</onclick>
-	                                <onclick>Dialog.Close(2114)</onclick>
 	                        </item>
 	                        <item id="2">
 	                                <description>Playlist Musical</description>
