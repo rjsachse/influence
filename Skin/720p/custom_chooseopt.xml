@@ -114,13 +114,14 @@
 	                                <label>35030</label>
 	                                <onclick>Dialog.Close(2114)</onclick>
 	                                <onclick>ActivateWindow(1114)</onclick>
-	                                <onclick>Skin.SetString($INFO[Skin.String(RunOpt_var)],$INFO[Skin.String(RunOpt)])</onclick>
+					<onclick>Skin.Reset(RunOpt)</onclick>
 	                        </item>
 	                        <item id="2">
 	                                <description>Playlist Musical</description>
 	                                <label>35031</label>
 	                                <onclick>Skin.SetFile(RunOpt,.m3u,special://musicplaylists/)</onclick>
 	                                <onclick>Skin.SetString($INFO[Skin.String(RunOpt_var)],PlayMedia($INFO[Skin.String(RunOpt)]))</onclick>
+					<onclick>Skin.Reset(RunOpt)</onclick>
 	                                <onclick>Dialog.Close(2114)</onclick>
 	                        </item>
 	                        <item id="3">
@@ -128,6 +129,7 @@
 	                                <label>35032</label>
 	                                <onclick>Skin.SetFile(RunOpt,.xsp,special://videoplaylists/)</onclick>
 	                                <onclick>Skin.SetString($INFO[Skin.String(RunOpt_var)],PlayMedia($INFO[Skin.String(RunOpt)]))</onclick>
+					<onclick>Skin.Reset(RunOpt)</onclick>
 	                                <onclick>Dialog.Close(2114)</onclick>
 	                        </item>
 	                        <item id="4">
@@ -135,6 +137,7 @@
 	                                <label>35033</label>
 	                                <onclick>Skin.Setfile(RunOpt,.py,special://home)</onclick>
 	                                <onclick>Skin.SetString($INFO[Skin.String(RunOpt_var)],RunScript($INFO[Skin.String(RunOpt)]))</onclick>
+					<onclick>Skin.Reset(RunOpt)</onclick>
 	                                <onclick>Dialog.Close(2114)</onclick>
 	                        </item>
 	                        <item id="5">
@@ -142,6 +145,7 @@
 	                                <label>Add-Ons</label>
 	                                <onclick>Skin.SetAddon(RunOpt,xbmc.python.pluginsource)</onclick>
  					<onclick>RunScript(special://skin/scripts/custom_optformat.py,RunOpt=$INFO[Skin.String(RunOpt)]&amp;RunOpt_var=$INFO[Skin.String(RunOpt_var)])</onclick>
+					<onclick>Skin.Reset(RunOpt)</onclick>
 	                                <onclick>Dialog.Close(2114)</onclick>
 	                        </item>
 	                        <item id="10">
