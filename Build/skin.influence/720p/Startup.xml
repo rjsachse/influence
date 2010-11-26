@@ -1,0 +1,187 @@
+<window>
+	<defaultcontrol always="true">9</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="button" id="9">
+			<description>Trigger to Auto run the Latest media python after a 1 min delay if scan on startup is enabled</description>
+			<onfocus>XBMC.AlarmClock(UpdateRecentAdded,XBMC.RunScript(special://skin/scripts/RecentlyAdded.py,limit=4),1,true)</onfocus>
+			<onfocus>SetFocus(10)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>system.getbool(videolibrary.updateonstartup) + !Skin.HasSetting(homepageHideRecentlyAdded)</visible>
+		</control>
+		<control type="button" id="9">
+			<description>Don't run anything is scan on startup is Disabled and jump to the startup playlist</description>
+			<onfocus>SetFocus(10)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>!system.getbool(videolibrary.updateonstartup) | Skin.HasSetting(homepageHideRecentlyAdded)</visible>
+		</control>
+
+		<control type="button" id="10">
+			<description>trigger</description>
+			<onfocus>SetFocus(11)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>!Skin.HasSetting(Use_Startup_Playlist)</visible>
+		</control>
+		<control type="button" id="10">
+			<description>trigger with startup Playlist</description>
+			<onfocus>XBMC.PlayMedia($INFO[Skin.String(Startup_Playlist_Path)])</onfocus>
+			<onfocus>SetFocus(11)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>Skin.HasSetting(Use_Startup_Playlist)</visible>
+		</control>
+		<control type="button" id="11">
+			<description>Trigger to Auto run the Latest media python after a 1 min delay if scan on startup is enabled</description>
+			<onfocus>Skin.SetBool(Influence_SkinInit_b1)</onfocus>
+			<onfocus>Skin.SetString(Menu_Men1_lab,Menu 1)</onfocus>
+<!--icone-->		<onfocus>Skin.SetString(Menu_Men1_Ico,Carousel/default.png)</onfocus>
+<!--background-->       <onfocus>Skin.SetString(Menu_Men1_Back,special://skin/backgrounds/menu1.jpg)</onfocus>
+			<onfocus>Skin.SetString(Menu_Men2_lab,Menu 2)</onfocus>
+<!--icone-->		<onfocus>Skin.SetString(Menu_Men2_Ico,Carousel/default.png)</onfocus>
+<!--background-->       <onfocus>Skin.SetString(Menu_Men1_Back,special://skin/backgrounds/menu2.jpg)</onfocus>
+			<onfocus>Skin.SetString(Menu_Men3_lab,Menu 3)</onfocus>
+<!--icone-->		<onfocus>Skin.SetString(Menu_Men3_Ico,Carousel/default.png)</onfocus>
+<!--background-->       <onfocus>Skin.SetString(Menu_Men1_Back,special://skin/backgrounds/menu3.jpg)</onfocus>
+			<onfocus>Skin.SetString(Menu_Men4_lab,Menu 4)</onfocus>
+<!--icone-->		<onfocus>Skin.SetString(Menu_Men4_Ico,Carousel/default.png)</onfocus>
+<!--background-->       <onfocus>Skin.SetString(Menu_Men1_Back,special://skin/backgrounds/menu4.jpg)</onfocus>
+			<onfocus>Skin.SetBool(VerticalMenu)</onfocus>
+			<!-- Weather -->
+			<onfocus>Skin.SetBool(Menu_Weather_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Weather_lab,$LOCALIZE[8])</onfocus>
+			<onfocus>Skin.SetString(Menu_Weather_run,ActivateWindow(Weather))</onfocus>
+<!--icone-->		<onfocus>Skin.SetString(Menu_Weather_Ico,Carousel/meteo.png)</onfocus>
+<!--background-->		<onfocus>Skin.SetString(Menu_Weather_Back,special://skin/backgrounds/weather.jpg)</onfocus>
+
+			<!-- Pictures -->
+			<onfocus>Skin.SetBool(Menu_Pictures_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Pictures_lab,$LOCALIZE[1])</onfocus>
+			<onfocus>Skin.SetString(Menu_Pictures_run,ActivateWindow(Pictures))</onfocus>
+<!--icone-->		<onfocus>Skin.SetString(Menu_Pictures_Ico,Carousel/photos.png)</onfocus>
+<!--background-->       <onfocus>Skin.SetString(Menu_Pictures_Back,special://skin/backgrounds/pictures.jpg)</onfocus>
+
+			<!-- Music -->
+			<onfocus>Skin.SetBool(Menu_Music_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Music_lab,$LOCALIZE[2])</onfocus>
+			<onfocus>Skin.SetString(Menu_Music_run,ActivateWindow(Music))</onfocus>
+<!--icone-->		<onfocus>Skin.SetString(Menu_Music_Ico,Carousel/musiques.png)</onfocus>
+<!--background-->       <onfocus>Skin.SetString(Menu_Music_Back,special://skin/backgrounds/music.jpg)</onfocus>
+			<onfocus>Skin.SetBool(Menu_Music_sub1_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Music_sub1_lab,$LOCALIZE[133])</onfocus>
+			<onfocus>Skin.SetString(Menu_Music_sub1_run,ActivateWindow(MusicLibrary,Artists,return))</onfocus>
+			<onfocus>Skin.SetBool(Menu_Music_sub2_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Music_sub2_lab,$LOCALIZE[132])</onfocus>
+			<onfocus>Skin.SetString(Menu_Music_sub2_run,ActivateWindow(MusicLibrary,Albums,return))</onfocus>
+			<onfocus>Skin.SetBool(Menu_Music_sub3_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Music_sub3_lab,$LOCALIZE[134])</onfocus>
+			<onfocus>Skin.SetString(Menu_Music_sub3_run,ActivateWindow(MusicLibrary,Songs,return))</onfocus>
+			<onfocus>Skin.SetBool(Menu_Music_sub4_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Music_sub4_lab,$LOCALIZE[744])</onfocus>
+			<onfocus>Skin.SetString(Menu_Music_sub4_run,ActivateWindow(MusicFiles))</onfocus>
+			<onfocus>Skin.SetBool(Menu_Music_sub5_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Music_sub5_lab,$LOCALIZE[14022])</onfocus>
+			<onfocus>Skin.SetString(Menu_Music_sub5_run,ActivateWindow(MusicLibrary))</onfocus>
+			<onfocus>Skin.SetBool(Menu_Music_sub6_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Music_sub6_lab,$LOCALIZE[24001])</onfocus>
+			<onfocus>Skin.SetString(Menu_Music_sub6_run,ActivateWindow(MusicLibrary,Addons,return))</onfocus>
+
+			<!-- Videos -->
+			<onfocus>Skin.SetBool(Menu_Videos_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Videos_lab,$LOCALIZE[3])</onfocus>
+			<onfocus>Skin.SetString(Menu_Videos_run,ActivateWindow(Videos))</onfocus>
+<!--icone-->		<onfocus>Skin.SetString(Menu_Videos_Ico,Carousel/videos.png)</onfocus>
+<!--background-->       <onfocus>Skin.SetString(Menu_Videos_Back,special://skin/backgrounds/videos.jpg)</onfocus>
+			<onfocus>Skin.SetBool(Menu_Videos_sub1_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Videos_sub1_lab,$LOCALIZE[342])</onfocus>
+			<onfocus>Skin.SetString(Menu_Videos_sub1_run,ActivateWindow(VideoLibrary,MovieTitles,return))</onfocus>
+			<onfocus>Skin.SetBool(Menu_Videos_sub2_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Videos_sub2_lab,$LOCALIZE[20343])</onfocus>
+			<onfocus>Skin.SetString(Menu_Videos_sub2_run,ActivateWindow(VideoLibrary,TvShowTitles,return))</onfocus>
+			<onfocus>Skin.SetBool(Menu_Videos_sub3_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Videos_sub3_lab,$LOCALIZE[20389])</onfocus>
+			<onfocus>Skin.SetString(Menu_Videos_sub3_run,ActivateWindow(VideoLibrary,MusicVideoTitles,return))</onfocus>
+			<onfocus>Skin.SetBool(Menu_Videos_sub4_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Videos_sub4_lab,$LOCALIZE[744])</onfocus>
+			<onfocus>Skin.SetString(Menu_Videos_sub4_run,ActivateWindow(VideoFiles))</onfocus>
+			<onfocus>Skin.SetBool(Menu_Videos_sub5_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Videos_sub5_lab,$LOCALIZE[14022])</onfocus>
+			<onfocus>Skin.SetString(Menu_Videos_sub5_run,ActivateWindow(Video))</onfocus>
+			<onfocus>Skin.SetBool(Menu_Videos_sub6_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Videos_sub6_lab,$LOCALIZE[24001])</onfocus>
+			<onfocus>Skin.SetString(Menu_Videos_sub6_run,ActivateWindow(MusicLibrary,Addons,return))</onfocus>
+
+			<!-- Movie -->
+			<onfocus>Skin.SetBool(Menu_Movie_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Movie_lab,$LOCALIZE[20342])</onfocus>
+			<onfocus>Skin.SetString(Menu_Movie_run,ActivateWindow(VideoLibrary,MovieTitles,return))</onfocus>
+<!--icone-->		<onfocus>Skin.SetString(Menu_Movie_Ico,Carousel/films.png)</onfocus>
+<!--background-->       <onfocus>Skin.SetString(Menu_Movie_Back,special://skin/backgrounds/movies.jpg)</onfocus>
+			<onfocus>Skin.SetBool(Menu_Movie_sub1_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Movie_sub1_lab,$LOCALIZE[369])</onfocus>
+			<onfocus>Skin.SetString(Menu_Movie_sub1_run,ActivateWindow(VideoLibrary,MovieTitles,return))</onfocus>
+			<onfocus>Skin.SetBool(Menu_Movie_sub2_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Movie_sub2_lab,$LOCALIZE[135])</onfocus>
+			<onfocus>Skin.SetString(Menu_Movie_sub2_run,ActivateWindow(VideoLibrary,MovieGenres,return))</onfocus>
+			<onfocus>Skin.SetBool(Menu_Movie_sub3_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Movie_sub3_lab,$LOCALIZE[652])</onfocus>
+			<onfocus>Skin.SetString(Menu_Movie_sub3_run,ActivateWindow(VideoLibrary,MovieYears,return))</onfocus>
+			<onfocus>Skin.SetBool(Menu_Movie_sub4_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Movie_sub4_lab,$LOCALIZE[344])</onfocus>
+			<onfocus>Skin.SetString(Menu_Movie_sub4_run,ActivateWindow(VideoLibrary,MovieActors,return))</onfocus>
+			<onfocus>Skin.SetBool(Menu_Movie_sub5_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Movie_sub5_lab,$LOCALIZE[20348])</onfocus>
+			<onfocus>Skin.SetString(Menu_Movie_sub5_run,ActivateWindow(VideoLibrary,MovieDirectors,return))</onfocus>
+			<onfocus>Skin.SetBool(Menu_Movie_sub6_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Movie_sub6_lab,$LOCALIZE[31328])</onfocus>
+			<onfocus>Skin.SetString(Menu_Movie_sub6_run,ActivateWindow(VideoLibrary,RecentlyAddedMovies,return))</onfocus>
+
+			<!-- TVShows -->
+			<onfocus>Skin.SetBool(Menu_TVShows_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_TVShows_lab,$LOCALIZE[20343])</onfocus>
+			<onfocus>Skin.SetString(Menu_TVShows_run,ActivateWindow(VideoLibrary,TVShowTitles,return))</onfocus>
+<!--icone-->		<onfocus>Skin.SetString(Menu_TVShows_Ico,Carousel/tv.png)</onfocus>
+<!--background-->       <onfocus>Skin.SetString(Menu_TVShows_Back,special://skin/backgrounds/videos.jpg)</onfocus>
+			<onfocus>Skin.SetBool(Menu_TVShows_sub1_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_TVShows_sub1_lab,$LOCALIZE[369])</onfocus>
+			<onfocus>Skin.SetString(Menu_TVShows_sub1_run,ActivateWindow(VideoLibrary,TVShowTitles,return))</onfocus>
+			<onfocus>Skin.SetBool(Menu_TVShows_sub2_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_TVShows_sub2_lab,$LOCALIZE[135])</onfocus>
+			<onfocus>Skin.SetString(Menu_TVShows_sub2_run,ActivateWindow(VideoLibrary,TVShowGenres,return))</onfocus>
+			<onfocus>Skin.SetBool(Menu_TVShows_sub3_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_TVShows_sub3_lab,$LOCALIZE[652])</onfocus>
+			<onfocus>Skin.SetString(Menu_TVShows_sub3_run,ActivateWindow(VideoLibrary,TVShowYears,return))</onfocus>
+			<onfocus>Skin.SetBool(Menu_TVShows_sub4_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_TVShows_sub4_lab,$LOCALIZE[344])</onfocus>
+			<onfocus>Skin.SetString(Menu_TVShows_sub4_run,ActivateWindow(VideoLibrary,TVShowActors,return))</onfocus>
+			<onfocus>Skin.SetBool(Menu_TVShows_sub5_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_TVShows_sub5_lab,$LOCALIZE[31328])</onfocus>
+			<onfocus>Skin.SetString(Menu_TVShows_sub5_run,ActivateWindow(VideoLibrary,RecentlyAddedEpisodes,return))</onfocus>
+ 			
+			<!-- Programs -->
+			<onfocus>Skin.SetBool(Menu_Programs_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Programs_lab,$LOCALIZE[0])</onfocus>
+			<onfocus>Skin.SetString(Menu_Programs_run,ActivateWindow(Programs,Addons,return))</onfocus>
+<!--icone-->		<onfocus>Skin.SetString(Menu_Programs_Ico,Carousel/programs.png)</onfocus>
+<!--background-->       <onfocus>Skin.SetString(Menu_Programs_Back,special://skin/backgrounds/programs.jpg)</onfocus>
+
+			
+
+			<onfocus>ReplaceWindow(Home)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>!Skin.HasSetting(Influence_SkinInit_b1)</visible>
+		</control>
+		<control type="button" id="11">
+			<description>Don't run anything</description>
+			<onfocus>ReplaceWindow(Home)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>!system.getbool(videolibrary.updateonstartup) | Skin.HasSetting(homepageHideRecentlyAdded)</visible>
+			<visible>Skin.HasSetting(Influence_SkinInit_b1)</visible>
+		</control>
+		<include>CommonVideoBackground</include>
+	</controls>
+</window>
