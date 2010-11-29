@@ -206,30 +206,30 @@
 	<control type="button" id="211">
              <description>SubMenu Opt 1</description>
              <include>ButtonHomeSubCommonValues</include>
-	     <label>$INFO[Skin.String(SubMenu_Movies_opt1_lab)]</label>
-	     <onclick>$INFO[Skin.String(SubMenu_Movies_opt1_run)]</onclick>
-             <visible>Container(9000).HasFocus(10) + Skin.HasSetting(SubMenu_Movies_opt1)</visible>
+	     <label>$INFO[Skin.String(SubMenu_Movie_opt1_lab)]</label>
+	     <onclick>$INFO[Skin.String(SubMenu_Movie_opt1_run)]</onclick>
+             <visible>Container(9000).HasFocus(10) + Skin.HasSetting(SubMenu_Movie_opt1)</visible>
 	</control>
 	<control type="button" id="212">
              <description>SubMenu Opt 2</description>
              <include>ButtonHomeSubCommonValues</include>
-	     <label>$INFO[Skin.String(SubMenu_Movies_opt2_lab)]</label>
-	     <onclick>$INFO[Skin.String(SubMenu_Movies_opt2_run)]</onclick>
-             <visible>Container(9000).HasFocus(10) + Skin.HasSetting(SubMenu_Movies_opt2)</visible>
+	     <label>$INFO[Skin.String(SubMenu_Movie_opt2_lab)]</label>
+	     <onclick>$INFO[Skin.String(SubMenu_Movie_opt2_run)]</onclick>
+             <visible>Container(9000).HasFocus(10) + Skin.HasSetting(SubMenu_Movie_opt2)</visible>
 	</control>
 	<control type="button" id="213">
              <description>SubMenu Opt 3</description>
              <include>ButtonHomeSubCommonValues</include>
-	     <label>$INFO[Skin.String(SubMenu_Movies_opt3_lab)]</label>
-	     <onclick>$INFO[Skin.String(SubMenu_Movies_opt3_run)]</onclick>
-             <visible>Container(9000).HasFocus(10) + Skin.HasSetting(SubMenu_Movies_opt3)</visible>
+	     <label>$INFO[Skin.String(SubMenu_Movie_opt3_lab)]</label>
+	     <onclick>$INFO[Skin.String(SubMenu_Movie_opt3_run)]</onclick>
+             <visible>Container(9000).HasFocus(10) + Skin.HasSetting(SubMenu_Movie_opt3)</visible>
 	</control>
 	<control type="button" id="214">
              <description>SubMenu Opt 4</description>
              <include>ButtonHomeSubCommonValues</include>
-	     <label>$INFO[Skin.String(SubMenu_Movies_opt4_lab)]</label>
-	     <onclick>$INFO[Skin.String(SubMenu_Movies_opt4_run)]</onclick>
-             <visible>Container(9000).HasFocus(10) + Skin.HasSetting(SubMenu_Movies_opt4)</visible>
+	     <label>$INFO[Skin.String(SubMenu_Movie_opt4_lab)]</label>
+	     <onclick>$INFO[Skin.String(SubMenu_Movie_opt4_run)]</onclick>
+             <visible>Container(9000).HasFocus(10) + Skin.HasSetting(SubMenu_Movie_opt4)</visible>
 	</control>
      </control>
 <!-- Movies End -->
@@ -352,30 +352,30 @@
 	<control type="button" id="511">
              <description>SubMenu Opt 1</description>
              <include>ButtonHomeSubCommonValues</include>
-	     <label>$INFO[Skin.String(SubMenu_Video_opt1_lab)]</label>
-	     <onclick>$INFO[Skin.String(SubMenu_Video_opt1_run)]</onclick>
-	     <visible>Container(9000).HasFocus(2) + Skin.HasSetting(SubMenu_Video_opt1)</visible>
+	     <label>$INFO[Skin.String(SubMenu_Videos_opt1_lab)]</label>
+	     <onclick>$INFO[Skin.String(SubMenu_Videos_opt1_run)]</onclick>
+	     <visible>Container(9000).HasFocus(2) + Skin.HasSetting(SubMenu_Videos_opt1)</visible>
 	</control>
 	<control type="button" id="512">
              <description>SubMenu Opt 2</description>
              <include>ButtonHomeSubCommonValues</include>
-	     <label>$INFO[Skin.String(SubMenu_Video_opt2_lab)]</label>
-	     <onclick>$INFO[Skin.String(SubMenu_Video_opt2_run)]</onclick>
-	     <visible>Container(9000).HasFocus(2) + Skin.HasSetting(SubMenu_Video_opt2)</visible>
+	     <label>$INFO[Skin.String(SubMenu_Videos_opt2_lab)]</label>
+	     <onclick>$INFO[Skin.String(SubMenu_Videos_opt2_run)]</onclick>
+	     <visible>Container(9000).HasFocus(2) + Skin.HasSetting(SubMenu_Videos_opt2)</visible>
 	</control>
 	<control type="button" id="513">
              <description>SubMenu Opt 3</description>
              <include>ButtonHomeSubCommonValues</include>
-	     <label>$INFO[Skin.String(SubMenu_Video_opt3_lab)]</label>
-	     <onclick>$INFO[Skin.String(SubMenu_Video_opt3_run)]</onclick>
-	     <visible>Container(9000).HasFocus(2) + Skin.HasSetting(SubMenu_Video_opt3)</visible>
+	     <label>$INFO[Skin.String(SubMenu_Videos_opt3_lab)]</label>
+	     <onclick>$INFO[Skin.String(SubMenu_Videos_opt3_run)]</onclick>
+	     <visible>Container(9000).HasFocus(2) + Skin.HasSetting(SubMenu_Videos_opt3)</visible>
 	</control>
 	<control type="button" id="514">
              <description>SubMenu Opt 4</description>
              <include>ButtonHomeSubCommonValues</include>
-	     <label>$INFO[Skin.String(SubMenu_Video_opt4_lab)]</label>
-	     <onclick>$INFO[Skin.String(SubMenu_Video_opt4_run)]</onclick>
-	     <visible>Container(9000).HasFocus(2) + Skin.HasSetting(SubMenu_Video_opt4)</visible>
+	     <label>$INFO[Skin.String(SubMenu_Videos_opt4_lab)]</label>
+	     <onclick>$INFO[Skin.String(SubMenu_Videos_opt4_run)]</onclick>
+	     <visible>Container(9000).HasFocus(2) + Skin.HasSetting(SubMenu_Videos_opt4)</visible>
 	</control>
      </control>
 <!-- Video End -->
