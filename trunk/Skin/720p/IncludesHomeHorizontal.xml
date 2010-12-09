@@ -1345,7 +1345,10 @@
 		</control>
 <!-- Horizontal Lowered -->
 		<control type="group">
+			<!--
 			<visible>!Skin.HasSetting(RaiseRSSNewsFeed) + [!Skin.HasSetting(RaiseHorizontalMenu) | !Skin.HasSetting(RaiseHorizontalMenu) + !ControlGroup(9001).HasFocus |  Skin.HasSetting(RaiseHorizontalMenu)]</visible>
+			-->
+			<visible>[!Skin.HasSetting(RaiseHorizontalMenu) | !Skin.HasSetting(RaiseHorizontalMenu) + !ControlGroup(9001).HasFocus |  Skin.HasSetting(RaiseHorizontalMenu)]</visible>
 			<posx>420</posx>
 			<posy>35r</posy>
 			<animation effect="slide" end="0,35" time="300" tween="quadratic" easing="out">WindowClose</animation>
@@ -1384,6 +1387,7 @@
 		</control>
 <!-- Horizontal Lowered END -->
 <!-- Horizontal Raised -->
+<!-- Pas terrible le flux rss en mode centré, se superpose avec les sous-menus
 		<control type="group">
 			<visible>Skin.HasSetting(RaiseHorizontalMenu) + Skin.HasSetting(RaiseRSSNewsFeed) | Skin.HasSetting(RaiseHorizontalMenu) + Skin.HasSetting(RaiseRSSNewsFeed) + !ControlGroup(9001).HasFocus</visible>
 			<posx>565</posx>
@@ -1424,6 +1428,7 @@
 				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
 			</control>
 		</control>
+-->
 <!-- Horizontal Raised END -->
 	</include>
 </includes>
