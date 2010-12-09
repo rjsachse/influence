@@ -133,6 +133,7 @@
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 			</control>
+			<!--
 			<control type="radiobutton" id="107">
 				<description>Raise Rss News</description>
 				<visible>Skin.HasSetting(HorizontalMenu)</visible>
@@ -148,6 +149,7 @@
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<enable>Skin.HasSetting(RaiseHorizontalMenu)</enable>
 			</control>
+			-->
 <!-- Menu Pictures -->
 			<control type="button" id="109">
 				<width>750</width>

@@ -55,7 +55,7 @@
 		</control>
 		<!-- weather Info -->
 		<control type="group">
-		<visible>Container(9000).HasFocus(6)+Weather.IsFetched</visible>
+		<visible>Container(9000).HasFocus(6)+Weather.IsFetched+![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)] + ![Player.HasAudio + Skin.HasSetting(Next5Songs)]</visible>
 	        <include>CurrentWeather</include>
 		</control>
 		<include condition="!Skin.HasSetting(VerticalMenu)+!Skin.HasSetting(HorizontalMenu)+!Skin.HasSetting(CarouselMenu)">IncludeHomeVertical</include>
