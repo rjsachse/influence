@@ -9,9 +9,6 @@
 	<include file="IncludesCodecFlagging.xml" />
 	<include file="IncludesHomeRecentlyAdded.xml" />
 
-	<constant name="FanartCrossfadeTime">500</constant>
-	<constant name="IconCrossfadeTime">400</constant>
-
 	<include file="InfluenceWeather.xml" />
 	<include file="IncludesHomeVertical.xml" />
 	<include file="IncludesHomeHorizontal.xml" />
@@ -19,6 +16,21 @@
 	<include file="Carousel.xml" />
 	<include file="Include_CustomMenu.xml" />
 	<include file="IncludesInitSkin.xml" />
+	<include file="Viewtype_Showcase.xml" />
+	<include file="Viewtype_Wallstream.xml" />
+	<include file="Viewtype_Musicwallstream.xml" />
+	<include file="Viewtype_PicShowcase.xml" />
+	<include file="Viewtype_Lowlist.xml" />
+	<include file="Viewtype_RightList.xml" />
+	<include file="Viewtype_HalfWall.xml" />
+	<include file="Viewtype_HalfWall2.xml" />
+	<include file="Viewtype_Episode.xml" />
+	<include file="Viewtype_Poster.xml" />
+	<include file="Viewtype_Logo.xml" />
+	<include file="Viewtype_Logo2.xml" />
+
+	<constant name="FanartCrossfadeTime">500</constant>
+	<constant name="IconCrossfadeTime">400</constant>
 
 	<include name="CommonMediaPlayingBackground">
 		<control type="image">
