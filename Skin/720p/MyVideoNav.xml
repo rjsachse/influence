@@ -1,7 +1,7 @@
 <window id="25">
 	<defaultcontrol always="true">9999</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<views>50,500,550,560,501,508,504,503,505,511</views>
+	<views>50,500,550,560,501,508,504,503,505,511,720,513,514,723,724,725,726,727,728,729,730,731</views>
 	<visible>!Skin.HasSetting(kiosk)</visible>
 	<controls>
 	    <control type="button" id="9999">
@@ -159,6 +159,19 @@
 			<include>MusicVideoInfoListView</include> <!-- view id = 511 -->
 			<include>AddonInfoListView1</include> <!-- view id = 550 -->
 			<include>LiveTVView1</include> <!-- view id = 560 -->
+			<include condition="Skin.HasSetting(EnableShowcaseView)">Showcase</include> <!-- view id = 720 -->
+			<include condition="Skin.HasSetting(EnableWallStreamView)">WallStreamView</include> <!-- view id = 514 -->
+			<include condition="Skin.HasSetting(EnableWallStreamView2)">WallStreamView2</include> <!-- view id = 513 -->
+			<include condition="Skin.HasSetting(EnableLandscape)">Landscape</include> <!-- view id = 723 -->
+			<include condition="Skin.HasSetting(EnableLowlist)">Lowlist</include> <!-- view id = 724 -->
+			<include condition="Skin.HasSetting(EnableRightList)">RightList</include> <!-- view id = 725 -->
+			<include condition="Skin.HasSetting(EnableHalfWall)">HalfWall</include> <!-- view id = 726 -->
+			<include condition="Skin.HasSetting(EnableHalfWall2)">HalfWall2</include> <!-- view id = 727 -->
+			<include condition="Skin.HasSetting(EnableEpisode)">Episode</include> <!-- view id = 728 -->
+			<include condition="Skin.HasSetting(EnablePoster)">Poster</include> <!-- view id = 729 -->
+			<include condition="Skin.HasSetting(EnableLogo)">Logo</include> <!-- view id = 730 -->
+			<include condition="Skin.HasSetting(EnableLogo2)">Logo2</include> <!-- view id = 731 -->
+
 		</control>
 		<include>CommonPageCount</include>
 		<include>BehindDialogFadeOut</include>
@@ -309,6 +322,47 @@
 						<selected>Skin.HasSetting(View508HideInfo)</selected>
 						<visible>Control.IsVisible(508)</visible>
 					</control>
+<!-- Toggle Cases Start -->
+					<control type="radiobutton" id="206">
+						<description>Toggle Media Cases View Wall Stream</description>
+						<include>ButtonMediaSubCommonValues</include>
+						<label>Toggle Cases</label>
+						<onclick>Skin.ToggleSetting(View513HideCases)</onclick>
+						<selected>Skin.HasSetting(View513HideCases)</selected>
+						<visible>Control.IsVisible(513) | Control.IsVisible(514) | Control.IsVisible(725) + Container.Content(Movies) | Control.IsVisible(724) + Container.Content(Movies)</visible>
+					</control>
+<!-- Toggle Cases End -->
+<!--Showcase -->
+					<control type="radiobutton" id="300">
+						<description>Show Back Art</description>
+						<textwidth>170</textwidth>
+						<include>ButtonMediaSubCommonValues</include>
+						<label>Show Back Art</label>
+						<onclick>Skin.ToggleSetting(ShowBackArtView720)</onclick>
+						<selected>Skin.HasSetting(ShowBackArtView720)</selected>
+						<visible>[Control.IsVisible(720) + [Container.Content(Movies) | Container.Content(TVShows)]]</visible>
+					</control>
+					<control type="radiobutton" id="302">
+						<description>Show Back Art</description>
+						<textwidth>170</textwidth>
+						<include>ButtonMediaSubCommonValues</include>
+						<label>Coverflow</label>
+						<onclick>Skin.ToggleSetting(CoverFlow)</onclick>
+						<selected>Skin.HasSetting(CoverFlow)</selected>
+						<visible>[Control.IsVisible(720) + [Container.Content(Movies) | Container.Content(TVShows)]]</visible>
+					</control>
+<!--Showcase -->
+<!-- UK/US Ratings -->
+					<control type="radiobutton" id="301">
+						<description>Show US/UK ratings</description>
+						<textwidth>170</textwidth>
+						<include>ButtonMediaSubCommonValues</include>
+						<label>UK ratings</label>
+						<onclick>Skin.ToggleSetting(UKMovieRating)</onclick>
+						<selected>Skin.HasSetting(UKMovieRating)</selected>
+						<visible>Container.Content(Movies) + [Control.IsVisible(513) | Control.IsVisible(514) | Control.IsVisible(508)]</visible>
+					</control>
+<!-- UK/US Ratings -->
 				</control>
 			</control>
 			<control type="button" id="8999">
