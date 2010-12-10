@@ -834,6 +834,45 @@
 					</control>
 				</control>
 <!-- SubMenu System (END) -->
+<!-- SubMenu Programs -->
+				<control type="grouplist" id="9015">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>240</width>
+					<height>240</height>
+					<align>center</align>
+					<onleft>9000</onleft>
+					<onright>Control.SetFocus(8001,0)</onright>
+					<onup>9015</onup>
+					<ondown>9015</ondown>
+					<itemgap>0</itemgap>
+					<visible>Container(9000).HasFocus(1)</visible>
+					<control type="button" id="90156">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(SubMenu_Programs_opt1_lab)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Programs_opt1_run)]</onclick>
+						<visible>Skin.HasSetting(SubMenu_Programs_opt1)</visible>
+					</control>
+					<control type="button" id="90157">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(SubMenu_Programs_opt2_lab)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Programs_opt2_run)]</onclick>
+						<visible>Skin.HasSetting(SubMenu_Programs_opt2)</visible>
+					</control>
+					<control type="button" id="90158">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(SubMenu_Programs_opt3_lab)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Programs_opt3_run)]</onclick>
+						<visible>Skin.HasSetting(SubMenu_Programs_opt3)</visible>
+					</control>
+					<control type="button" id="90159">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(SubMenu_Programs_opt4_lab)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Programs_opt4_run)]</onclick>
+						<visible>Skin.HasSetting(SubMenu_Programs_opt4)</visible>
+					</control>
+				</control>
+<!-- SubMenu Programs(END) -->
 <!-- SubMenu Movie -->
 				<control type="grouplist" id="9016">
 					<posx>10</posx>
@@ -1396,7 +1435,7 @@
 						<width>18</width>
 						<height>18</height>
 						<texture>HomeHasSub.png</texture>
-						<visible> Container(9000).HasFocus(1)  | Container(9000).HasFocus(2)  + [Skin.HasSetting(Menu_Videos_sub1_act) | Skin.HasSetting(Menu_Videos_sub2_act) | Skin.HasSetting(Menu_Videos_sub3_act) | Skin.HasSetting(Menu_Videos_sub4_act) | Skin.HasSetting(Menu_Videos_sub5_act) | Skin.HasSetting(SubMenu_Videos_opt1) | Skin.HasSetting(SubMenu_Videos_opt2) | Skin.HasSetting(SubMenu_Videos_opt3) | Skin.HasSetting(SubMenu_Videos_opt4)] | Container(9000).HasFocus(3)  + [Skin.HasSetting(Menu_Music_sub1_act) | Skin.HasSetting(Menu_Music_sub2_act) | Skin.HasSetting(Menu_Music_sub3_act) | Skin.HasSetting(Menu_Music_sub4_act) | Skin.HasSetting(Menu_Music_sub5_act) | Skin.HasSetting(SubMenu_Music_opt1) | Skin.HasSetting(SubMenu_Music_opt2) | Skin.HasSetting(SubMenu_Music_opt3) | Skin.HasSetting(SubMenu_Music_opt4)] | Container(9000).HasFocus(4)  + [Skin.HasSetting(SubMenu_Pictures_opt1) | Skin.HasSetting(SubMenu_Pictures_opt2) | Skin.HasSetting(SubMenu_Pictures_opt3) | Skin.HasSetting(SubMenu_Pictures_opt4)] | Container(9000).HasFocus(5)  | Container(9000).HasFocus(6)  + [Skin.HasSetting(SubMenu_Weather_opt1) | Skin.HasSetting(SubMenu_Weather_opt2) | Skin.HasSetting(SubMenu_Weather_opt3) | Skin.HasSetting(SubMenu_Weather_opt4)] | Container(9000).HasFocus(7)  | Container(9000).HasFocus(9)  | Container(9000).HasFocus(10)  + [Skin.HasSetting(Menu_Movie_sub1_act) | Skin.HasSetting(Menu_Movie_sub2_act) | Skin.HasSetting(Menu_Movie_sub3_act) | Skin.HasSetting(Menu_Movie_sub4_act) | Skin.HasSetting(Menu_Movie_sub5_act)  | Skin.HasSetting(Menu_Movie_sub6_act) | Skin.HasSetting(SubMenu_Movie_opt1) | Skin.HasSetting(SubMenu_Movie_opt2) | Skin.HasSetting(SubMenu_Movie_opt3) | Skin.HasSetting(SubMenu_Movie_opt4)] | Container(9000).HasFocus(11)  + [Skin.HasSetting(Menu_TVShows_sub1_act) | Skin.HasSetting(Menu_TVShows_sub2_act) | Skin.HasSetting(Menu_TVShows_sub3_act) | Skin.HasSetting(Menu_TVShows_sub4_act) | Skin.HasSetting(Menu_TVShows_sub5_act)  | Skin.HasSetting(Menu_TVShows_sub6_act) | Skin.HasSetting(SubMenu_TVShows_opt1) | Skin.HasSetting(SubMenu_TVShows_opt2) | Skin.HasSetting(SubMenu_TVShows_opt3) | Skin.HasSetting(SubMenu_TVShows_opt4)] | Container(9000).HasFocus(20)  + Skin.HasSetting(SubMenu_Men1_opt1) | Container(9000).HasFocus(21)  + Skin.HasSetting(SubMenu_Men2_opt1) | Container(9000).HasFocus(22)  + Skin.HasSetting(SubMenu_Men3_opt1) | Container(9000).HasFocus(23)  + Skin.HasSetting(SubMenu_Men4_opt1) </visible>
+						<visible> Container(9000).HasFocus(1)  + [Skin.HasSetting(SubMenu_Programs_opt1) | Skin.HasSetting(SubMenu_Programs_opt2) | Skin.HasSetting(SubMenu_Programs_opt3) | Skin.HasSetting(SubMenu_Programs_opt4)] | Container(9000).HasFocus(2)  + [Skin.HasSetting(Menu_Videos_sub1_act) | Skin.HasSetting(Menu_Videos_sub2_act) | Skin.HasSetting(Menu_Videos_sub3_act) | Skin.HasSetting(Menu_Videos_sub4_act) | Skin.HasSetting(Menu_Videos_sub5_act) | Skin.HasSetting(SubMenu_Videos_opt1) | Skin.HasSetting(SubMenu_Videos_opt2) | Skin.HasSetting(SubMenu_Videos_opt3) | Skin.HasSetting(SubMenu_Videos_opt4)] | Container(9000).HasFocus(3)  + [Skin.HasSetting(Menu_Music_sub1_act) | Skin.HasSetting(Menu_Music_sub2_act) | Skin.HasSetting(Menu_Music_sub3_act) | Skin.HasSetting(Menu_Music_sub4_act) | Skin.HasSetting(Menu_Music_sub5_act) | Skin.HasSetting(SubMenu_Music_opt1) | Skin.HasSetting(SubMenu_Music_opt2) | Skin.HasSetting(SubMenu_Music_opt3) | Skin.HasSetting(SubMenu_Music_opt4)] | Container(9000).HasFocus(4)  + [Skin.HasSetting(SubMenu_Pictures_opt1) | Skin.HasSetting(SubMenu_Pictures_opt2) | Skin.HasSetting(SubMenu_Pictures_opt3) | Skin.HasSetting(SubMenu_Pictures_opt4)] | Container(9000).HasFocus(5)  | Container(9000).HasFocus(6)  + [Skin.HasSetting(SubMenu_Weather_opt1) | Skin.HasSetting(SubMenu_Weather_opt2) | Skin.HasSetting(SubMenu_Weather_opt3) | Skin.HasSetting(SubMenu_Weather_opt4)] | Container(9000).HasFocus(7)  | Container(9000).HasFocus(9)  | Container(9000).HasFocus(10)  + [Skin.HasSetting(Menu_Movie_sub1_act) | Skin.HasSetting(Menu_Movie_sub2_act) | Skin.HasSetting(Menu_Movie_sub3_act) | Skin.HasSetting(Menu_Movie_sub4_act) | Skin.HasSetting(Menu_Movie_sub5_act)  | Skin.HasSetting(Menu_Movie_sub6_act) | Skin.HasSetting(SubMenu_Movie_opt1) | Skin.HasSetting(SubMenu_Movie_opt2) | Skin.HasSetting(SubMenu_Movie_opt3) | Skin.HasSetting(SubMenu_Movie_opt4)] | Container(9000).HasFocus(11)  + [Skin.HasSetting(Menu_TVShows_sub1_act) | Skin.HasSetting(Menu_TVShows_sub2_act) | Skin.HasSetting(Menu_TVShows_sub3_act) | Skin.HasSetting(Menu_TVShows_sub4_act) | Skin.HasSetting(Menu_TVShows_sub5_act)  | Skin.HasSetting(Menu_TVShows_sub6_act) | Skin.HasSetting(SubMenu_TVShows_opt1) | Skin.HasSetting(SubMenu_TVShows_opt2) | Skin.HasSetting(SubMenu_TVShows_opt3) | Skin.HasSetting(SubMenu_TVShows_opt4)] | Container(9000).HasFocus(20)  + Skin.HasSetting(SubMenu_Men1_opt1) | Container(9000).HasFocus(21)  + Skin.HasSetting(SubMenu_Men2_opt1) | Container(9000).HasFocus(22)  + Skin.HasSetting(SubMenu_Men3_opt1) | Container(9000).HasFocus(23)  + Skin.HasSetting(SubMenu_Men4_opt1) </visible>
 						<animation effect="fade" start="0" end="100" time="200">Focus</animation>
 						<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
 					</control>
@@ -1454,12 +1493,11 @@
 						<visible>Skin.HasSetting(Menu_TVShows_act) + Library.HasContent(TVShows)</visible>
 					</item>
 					<item id="1">
-						<label>0</label>
-						<onclick>ActivateWindow(Programs,Addons,return)</onclick>
+						<label>$INFO[Skin.String(Menu_Programs_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Programs_run)]</onclick>
 						<icon>special://skin/backgrounds/programs.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
-						<visible>Skin.HasSetting(Influence_SkinInit_b1)</visible>
+						<visible>Skin.HasSetting(Menu_Programs_act)</visible>
 					</item>
 <!-- Custom Home --> 	
 					<item id="20">
