@@ -494,7 +494,7 @@
 					<posy>270</posy>
 					<width>320</width>
 					<height>25</height>
-					<label>$INFO[ListItem.Year,[COLOR=blue]Year:[/COLOR] ]</label>
+					<label>$INFO[ListItem.Year,[COLOR=blue]$LOCALIZE[652]:[/COLOR] ]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font13caps_title</font>
@@ -507,7 +507,7 @@
 					<posy>295</posy>
 					<width>320</width>
 					<height>25</height>
-					<label>$INFO[ListItem.Genre,[COLOR=blue]Genre:[/COLOR] ]</label>
+					<label>$INFO[ListItem.Genre,[COLOR=blue]$LOCALIZE[515]:[/COLOR] ]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font13caps_title</font>
@@ -520,7 +520,7 @@
 					<posy>320</posy>
 					<width>320</width>
 					<height>25</height>
-					<label>$INFO[ListItem.Duration,[COLOR=blue]Runtime:[/COLOR] ]</label>
+					<label>$INFO[ListItem.Duration,[COLOR=blue]$LOCALIZE[2050]:[/COLOR] ]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font13caps_title</font>
@@ -533,7 +533,7 @@
 					<posy>345</posy>
 					<width>320</width>
 					<height>25</height>
-					<label>$INFO[ListItem.Mpaa,[COLOR=blue]MPAA Rating:[/COLOR] ]</label>
+					<label>$INFO[ListItem.Mpaa,[COLOR=blue]$LOCALIZE[20074]:[/COLOR] ]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font13caps_title</font>
@@ -753,7 +753,7 @@
 					<posy>270</posy>
 					<width>320</width>
 					<height>25</height>
-					<label>$INFO[ListItem.Year,[COLOR=blue]Year:[/COLOR] ]</label>
+					<label>$INFO[ListItem.Year,[COLOR=blue]$LOCALIZE[345]:[/COLOR] ]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font13caps_title</font>
@@ -766,7 +766,7 @@
 					<posy>295</posy>
 					<width>320</width>
 					<height>25</height>
-					<label>$INFO[ListItem.Genre,[COLOR=blue]Genre:[/COLOR] ]</label>
+					<label>$INFO[ListItem.Genre,[COLOR=blue]$LOCALIZE[515]:[/COLOR] ]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font13caps_title</font>
@@ -802,7 +802,7 @@
 					<posy>345</posy>
 					<width>320</width>
 					<height>25</height>
-					<label>$INFO[ListItem.Mpaa,[COLOR=blue]MPAA Rating:[/COLOR] ]</label>
+					<label>$INFO[ListItem.Mpaa,[COLOR=blue]$LOCALIZE[20074]:[/COLOR] ]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font13caps_title</font>

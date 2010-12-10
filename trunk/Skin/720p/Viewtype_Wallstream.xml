@@ -82,7 +82,7 @@
 							<aspectratio>stretch</aspectratio>
 							<fadetime>200</fadetime>
 							<texture background="true">$INFO[Listitem.Icon]</texture> 
-							<visible>Skin.HasSetting(View513HideCases) +  !substring(Container.Listitem.Label,..,left)</visible>
+							<visible>Skin.HasSetting(View513HideCases) +  !substring(Listitem.Icon,Default,left)</visible>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -93,10 +93,10 @@
 							<aspectratio>stretch</aspectratio>
 							<fadetime>200</fadetime>
 							<texture background="true">cases/$INFO[ListItem.videoresolution]case.png</texture>
-							<visible>Skin.HasSetting(View513HideCases) +  !substring(Container.Listitem.Label,..,left)</visible>
+							<visible>Skin.HasSetting(View513HideCases) +  !substring(Listitem.Icon,Default,left)</visible>
 						</control>
 						<control type="image">
-							<visible>IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + Container.Content(movies)+Skin.HasSetting(View513HideCases)</visible>
+							<visible>IsEmpty(ListItem.foldername) + !substring(Listitem.Icon,Default,left) + Container.Content(movies)+Skin.HasSetting(View513HideCases)</visible>
 							<aspectratio>keep</aspectratio>
 							<posx>100</posx>
 							<posy>2</posy>
@@ -126,7 +126,7 @@
 							<aspectratio>stretch</aspectratio>
 							<fadetime>200</fadetime>
 							<texture background="true" >UF_$INFO[Listitem.Icon]</texture> 
-							<visible>substring(Container.Listitem.Label,..,left)</visible>
+							<visible>substring(Listitem.Icon,Default,left)</visible>
 						</control>	
 					</control>		
 				</itemlayout>
@@ -148,7 +148,7 @@
 							<aspectratio>stretch</aspectratio>
 							<fadetime>200</fadetime>
 							<texture background="true">$INFO[Listitem.Icon]</texture>
-							<visible>Skin.HasSetting(View513HideCases) +  !substring(Container.Listitem.Label,..,left)</visible>
+							<visible>Skin.HasSetting(View513HideCases) +  !substring(Listitem.Icon,Default,left)</visible>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -158,10 +158,10 @@
 							<aspectratio>stretch</aspectratio>
 							<fadetime>200</fadetime>
 							<texture background="true">cases/$INFO[ListItem.videoresolution]case.png</texture>
-							<visible>Skin.HasSetting(View513HideCases) +  !substring(Container.Listitem.Label,..,left)</visible>
+							<visible>Skin.HasSetting(View513HideCases) +  !substring(Listitem.Icon,Default,left)</visible>
 						</control>
 						<control type="image">
-							<visible>IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + Container.Content(movies)+Skin.HasSetting(View513HideCases)</visible> 
+							<visible>IsEmpty(ListItem.foldername) + !substring(Listitem.Icon,Default,left) + Container.Content(movies)+Skin.HasSetting(View513HideCases)</visible> 
 							<aspectratio>keep</aspectratio>
 							<posx>100</posx>
 							<posy>0</posy>
@@ -180,7 +180,7 @@
 							<bordersize>8</bordersize>
 							<texture background="true">$INFO[Listitem.Icon]</texture>
 							<bordertexture border="8">ThumbBorder.png</bordertexture>
-							<visible>!Skin.HasSetting(View513HideCases) | substring(Container.Listitem.Label,..,left)</visible>
+							<visible>!Skin.HasSetting(View513HideCases) | substring(Listitem.Icon,Default,left)</visible>
 						</control>
 					</control>
 				</focusedlayout>
@@ -352,7 +352,7 @@
 						<aspectratio>stretch</aspectratio>
 						<fadetime>200</fadetime>
 						<texture background="true">$INFO[Listitem.Icon]</texture> 
-						<visible>Skin.HasSetting(View513HideCases) +  !substring(Container.Listitem.Label,..,left)</visible>
+						<visible>Skin.HasSetting(View513HideCases) +  !substring(Listitem.Icon,Default,left)</visible>
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -363,7 +363,7 @@
 						<aspectratio>stretch</aspectratio>
 						<fadetime>200</fadetime>
 						<texture background="true">cases/$INFO[ListItem.videoresolution]case.png</texture>
-						<visible>Skin.HasSetting(View513HideCases) +  !substring(Container.Listitem.Label,..,left)</visible>
+						<visible>Skin.HasSetting(View513HideCases) +  !substring(Listitem.Icon,Default,left)</visible>
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -386,7 +386,7 @@
 						<aspectratio>stretch</aspectratio>
 						<fadetime>200</fadetime>
 						<texture background="true" >UF_$INFO[Listitem.Icon]</texture> 
-						<visible>substring(Container.Listitem.Label,..,left)</visible>
+						<visible>substring(Listitem.Icon,Default,left)</visible>
 					</control>	
 				</itemlayout>
 				<focusedlayout height="323" width="225">
@@ -407,7 +407,7 @@
 							<aspectratio>stretch</aspectratio>
 							<fadetime>200</fadetime>
 							<texture background="true">$INFO[Listitem.Icon]</texture>
-							<visible>Skin.HasSetting(View513HideCases) +  !substring(Container.Listitem.Label,..,left)</visible>
+							<visible>Skin.HasSetting(View513HideCases) +  !substring(Listitem.Icon,Default,left)</visible>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -417,7 +417,7 @@
 							<aspectratio>stretch</aspectratio>
 							<fadetime>200</fadetime>
 							<texture background="true">cases/$INFO[ListItem.videoresolution]case.png</texture>
-							<visible>Skin.HasSetting(View513HideCases) +  !substring(Container.Listitem.Label,..,left)</visible>
+							<visible>Skin.HasSetting(View513HideCases) +  !substring(Listitem.Icon,Default,left)</visible>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -429,7 +429,7 @@
 							<bordersize>6</bordersize>
 							<texture background="true">$INFO[Listitem.Icon]</texture>
 							<bordertexture border="8">ThumbBorder.png</bordertexture>
-							<visible>!Skin.HasSetting(View513HideCases) | substring(Container.Listitem.Label,..,left)</visible>
+							<visible>!Skin.HasSetting(View513HideCases) | substring(Listitem.Icon,Default,left)</visible>
 						</control>
 					</control>
 				</focusedlayout>
@@ -445,7 +445,7 @@
 					<posy>343</posy>
 					<width>140</width>
 					<height>25</height>
-					<label>[COLOR blue]Year: [/COLOR]$INFO[ListItem.Year]</label>
+					<label>[COLOR blue]$LOCALIZE[345]: [/COLOR]$INFO[ListItem.Year]</label>
 					<align>Right</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -457,7 +457,7 @@
 					<posy>363</posy>
 					<width>140</width>
 					<height>25</height>
-					<label>[COLOR blue]Runtime: [/COLOR]$INFO[ListItem.Duration]</label>
+					<label>[COLOR blue]$LOCALIZE[2050]: [/COLOR]$INFO[ListItem.Duration]</label>
 					<align>Right</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -469,7 +469,7 @@
 					<posy>343</posy>
 					<width>400</width>
 					<height>25</height>
-					<label>[COLOR blue]Director: [/COLOR]$INFO[ListItem.Director]</label>
+					<label>[COLOR blue]$LOCALIZE[20339]: [/COLOR]$INFO[ListItem.Director]</label>
 					<align>Right</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -481,7 +481,7 @@
 					<posy>363</posy>
 					<width>390</width>
 					<height>25</height>
-					<label>[COLOR blue]Writer: [/COLOR]$INFO[ListItem.Writer]</label>
+					<label>[COLOR blue]$LOCALIZE[20417]: [/COLOR]$INFO[ListItem.Writer]</label>
 					<align>Right</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -507,7 +507,7 @@
 					<align>justify</align>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<label>[COLOR blue]Plot: [/COLOR]$INFO[ListItem.Plot]</label>
+					<label>[COLOR blue]$LOCALIZE[207]: [/COLOR]$INFO[ListItem.Plot]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000"></autoscroll>
 				</control>			
 				<control type="label">
@@ -535,7 +535,7 @@
 					<posy>343</posy>
 					<width>140</width>
 					<height>25</height>
-					<label>[COLOR blue]Year: [/COLOR]$INFO[ListItem.Year]</label>
+					<label>[COLOR blue]$LOCALIZE[345]: [/COLOR]$INFO[ListItem.Year]</label>
 					<align>Right</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -547,7 +547,7 @@
 					<posy>363</posy>
 					<width>140</width>
 					<height>25</height>
-					<label>[COLOR blue]Episodes: [/COLOR]$INFO[ListItem.Episode]</label>
+					<label>[COLOR blue]$LOCALIZE[20360]: [/COLOR]$INFO[ListItem.Episode]</label>
 					<align>Right</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -559,7 +559,7 @@
 					<posy>343</posy>
 					<width>400</width>
 					<height>25</height>
-					<label>[COLOR blue]Watched: [/COLOR]$INFO[ListItem.Property(WatchedEpisodes)]</label>
+					<label>[COLOR blue]$LOCALIZE[16102]: [/COLOR]$INFO[ListItem.Property(WatchedEpisodes)]</label>
 					<align>Right</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -571,7 +571,7 @@
 					<posy>363</posy>
 					<width>390</width>
 					<height>25</height>
-					<label>[COLOR blue]Unwatched: [/COLOR]$INFO[ListItem.Property(UnwatchedEpisodes)]</label>
+					<label>[COLOR blue]$LOCALIZE[16101]: [/COLOR]$INFO[ListItem.Property(UnwatchedEpisodes)]</label>
 					<align>Right</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -597,7 +597,7 @@
 					<align>justify</align>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<label>[COLOR blue]Plot: [/COLOR]$INFO[ListItem.Plot]</label>
+					<label>[COLOR blue]$LOCALIZE[207]: [/COLOR]$INFO[ListItem.Plot]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000"></autoscroll>
 				</control>			
 				<control type="label">
@@ -626,7 +626,7 @@
 					<posy>363</posy>
 					<width>140</width>
 					<height>25</height>
-					<label>[COLOR blue]Episodes: [/COLOR]$INFO[ListItem.Episode]</label>
+					<label>[COLOR blue]$LOCALIZE[20360]: [/COLOR]$INFO[ListItem.Episode]</label>
 					<align>Right</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -638,7 +638,7 @@
 					<posy>343</posy>
 					<width>400</width>
 					<height>25</height>
-					<label>[COLOR blue]Watched: [/COLOR]$INFO[ListItem.Property(WatchedEpisodes)]</label>
+					<label>[COLOR blue]$LOCALIZE[16102]: [/COLOR]$INFO[ListItem.Property(WatchedEpisodes)]</label>
 					<align>Right</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -650,7 +650,7 @@
 					<posy>363</posy>
 					<width>390</width>
 					<height>25</height>
-					<label>[COLOR blue]Unwatched: [/COLOR]$INFO[ListItem.Property(UnwatchedEpisodes)]</label>
+					<label>[COLOR blue]$LOCALIZE[16101]: [/COLOR]$INFO[ListItem.Property(UnwatchedEpisodes)]</label>
 					<align>Right</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -676,7 +676,7 @@
 					<align>justify</align>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<label>[COLOR blue]Plot: [/COLOR]$INFO[Container.ShowPlot]</label>
+					<label>[COLOR blue]$LOCALIZE[207]: [/COLOR]$INFO[Container.ShowPlot]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000"></autoscroll>
 				</control>			
 				<control type="label">
@@ -706,7 +706,7 @@
 					<posy>343</posy>
 					<width>240</width>
 					<height>25</height>
-					<label>[COLOR blue]First Aired: [/COLOR]$INFO[ListItem.Date]</label>
+					<label>[COLOR blue]$LOCALIZE[20416]: [/COLOR]$INFO[ListItem.Date]</label>
 					<align>Right</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -718,7 +718,7 @@
 					<posy>343</posy>
 					<width>300</width>
 					<height>25</height>
-					<label>[COLOR blue]Writer: [/COLOR]$INFO[ListItem.Writer]</label>
+					<label>[COLOR blue]$LOCALIZE[20417]: [/COLOR]$INFO[ListItem.Writer]</label>
 					<align>Right</align>
 					<aligny>center</aligny>
 					<scroll>true</scroll>
@@ -731,7 +731,7 @@
 					<posy>363</posy>
 					<width>390</width>
 					<height>25</height>
-					<label>[COLOR blue]Director: [/COLOR]$INFO[ListItem.Director]</label>
+					<label>[COLOR blue]$LOCALIZE[20339]: [/COLOR]$INFO[ListItem.Director]</label>
 					<align>Right</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -757,7 +757,7 @@
 					<align>justify</align>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<label>[COLOR blue]Plot: [/COLOR]$INFO[Container.ShowPlot]</label>
+					<label>[COLOR blue]$LOCALIZE[207]: [/COLOR]$INFO[Container.ShowPlot]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000"></autoscroll>
 				</control>			
 			</control>

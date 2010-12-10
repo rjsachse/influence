@@ -205,7 +205,7 @@
 					<scroll>true</scroll>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>TV show information</label>
+					<label>20351</label>
 				</control>
 				<control type="fadelabel">
 					<posx>320</posx>
@@ -263,7 +263,7 @@
 					<scroll>true</scroll>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>Episodes</label>
+					<label>20360</label>
 				</control>
 				<control type="label">
 					<posx>320</posx>
@@ -383,7 +383,7 @@
 					<scroll>true</scroll>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>Episodes</label>
+					<label>35100</label>
 				</control>
 				<control type="label">
 					<posx>320</posx>
@@ -435,7 +435,7 @@
 					<scroll>true</scroll>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>Plot</label>
+					<label>207</label>
 				</control>
 				<control type="textbox">
 					<description>Description Value The Movie</description>
@@ -568,7 +568,7 @@
 					<scroll>true</scroll>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>Plot</label>
+					<label>35102</label>
 				</control>
 				<control type="textbox">
 					<description>Description Value The Movie</description>

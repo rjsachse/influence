@@ -291,7 +291,7 @@
 					<posy>455</posy> 
 					<width>140</width> 
 					<height>25</height>
-					<label>Born:</label> 
+					<label>$LOCALIZE[35104]:</label> 
 					<align>right</align> 
 					<aligny>center</aligny> 
 					<font>font13_title</font>
@@ -317,7 +317,7 @@
 					<posy>455</posy> 
 					<width>140</width> 
 					<height>25</height>
-					<label>Formed:</label> 
+					<label>$LOCALIZE[35105]:</label> 
 					<align>right</align> 
 					<aligny>center</aligny> 
 					<font>font13_title</font>
@@ -343,7 +343,7 @@
 					<posy>490</posy> 
 					<width>140</width> 
 					<height>25</height>
-					<label>Died:</label> 
+					<label>$LOCALIZE[21897]:</label> 
 					<align>right</align> 
 					<aligny>center</aligny> 
 					<font>font13_title</font>
@@ -369,7 +369,7 @@
 					<posy>490</posy> 
 					<width>140</width> 
 					<height>25</height>
-					<label>Disbanded:</label> 
+					<label>$LOCALIZE[21896]:</label> 
 					<align>right</align> 
 					<aligny>center</aligny> 
 					<font>font13_title</font>

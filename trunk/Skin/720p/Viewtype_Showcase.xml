@@ -1393,7 +1393,7 @@
 				<posy>50</posy> 
 				<width>140</width> 
 				<height>35</height> 
-				<label>Born:</label> 
+				<label>$LOCALIZE[35104]:</label> 
 				<align>left</align> 
 				<aligny>center</aligny> 
 				<font>font13</font> 
@@ -1419,7 +1419,7 @@
 				<posy>50</posy> 
 				<width>140</width> 
 				<height>35</height> 
-				<label>Formed:</label> 
+				<label>$LOCALIZE[35105]:</label> 
 				<align>left</align> 
 				<aligny>center</aligny> 
 				<font>font13</font> 
@@ -1445,7 +1445,7 @@
 				<posy>85</posy> 
 				<width>140</width> 
 				<height>35</height> 
-				<label>Died:</label> 
+				<label>$LOCALIZE[21897]:</label> 
 				<align>left</align> 
 				<aligny>center</aligny> 
 				<font>font13</font> 
@@ -1471,7 +1471,7 @@
 				<posy>85</posy> 
 				<width>140</width> 
 				<height>35</height> 
-				<label>Disbanded:</label> 
+				<label>$LOCALIZE[21896]:</label> 
 				<align>left</align> 
 				<aligny>center</aligny> 
 				<font>font13</font> 
@@ -1502,7 +1502,7 @@
 				<scroll>true</scroll>
 				<align>left</align>
 				<aligny>center</aligny>
-				<label>Genre: </label>
+				<label>$LOCALIZE[515]: </label>
 			</control>
 			<control type="label">
 				<posx>115</posx>
@@ -1626,7 +1626,7 @@
 				<scroll>true</scroll>
 				<align>left</align>
 				<aligny>center</aligny>
-				<label>[COLOR blue]Genre: [/COLOR]</label>
+				<label>[COLOR blue]$LOCALIZE[515]: [/COLOR]</label>
 			</control>
 			<control type="label">
 				<posx>110</posx>
@@ -1676,7 +1676,7 @@
 				<font>font13</font>
 				<align>justify</align>
 				<textcolor>white</textcolor>
-				<label>$INFO[ListItem.Property(Album_Description),[COLOR blue]Biography: [/COLOR]]</label>
+				<label>$INFO[ListItem.Property(Album_Description),[COLOR blue]$LOCALIZE[21887]: [/COLOR]]</label>
 				<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 			</control>
 		</control>

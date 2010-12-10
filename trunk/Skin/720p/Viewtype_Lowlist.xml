@@ -778,7 +778,7 @@
 					<posy>255</posy>
 					<width>420</width>
 					<height>25</height>
-					<label>[COLOR blue]Born: [/COLOR]$INFO[ListItem.Property(Artist_Born)]</label>
+					<label>[COLOR blue]$LOCALIZE[35104]: [/COLOR]$INFO[ListItem.Property(Artist_Born)]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<scroll>true</scroll>
@@ -793,7 +793,7 @@
 					<posy>255</posy>
 					<width>420</width>
 					<height>25</height>
-					<label>[COLOR blue]Formed: [/COLOR]$INFO[ListItem.Property(Artist_Formed)]</label>
+					<label>[COLOR blue]$LOCALIZE[35105]: [/COLOR]$INFO[ListItem.Property(Artist_Formed)]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<scroll>true</scroll>
@@ -808,7 +808,7 @@
 					<posy>290</posy>
 					<width>420</width>
 					<height>25</height>
-					<label>[COLOR blue]Died: [/COLOR]$INFO[ListItem.Property(Artist_Died)]</label>
+					<label>[COLOR blue]$LOCALIZE[21897]: [/COLOR]$INFO[ListItem.Property(Artist_Died)]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<scroll>true</scroll>
@@ -823,7 +823,7 @@
 					<posy>290</posy>
 					<width>420</width>
 					<height>25</height>
-					<label>[COLOR blue]Disbanded: [/COLOR]$INFO[ListItem.Property(Artist_Disbanded)]</label>
+					<label>[COLOR blue]$LOCALIZE[21896]: [/COLOR]$INFO[ListItem.Property(Artist_Disbanded)]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<scroll>true</scroll>
@@ -838,7 +838,7 @@
 					<posy>330</posy>
 					<width>422</width>
 					<height>25</height>
-					<label>[COLOR blue]Genre: [/COLOR]$INFO[ListItem.Property(Artist_Genre)]</label>
+					<label>[COLOR blue]$LOCALIZE[35108]: [/COLOR]$INFO[ListItem.Property(Artist_Genre)]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12</font>
@@ -851,7 +851,7 @@
 					<posy>370</posy>
 					<width>422</width>
 					<height>25</height>
-					<label>[COLOR blue]Mood: [/COLOR]$INFO[ListItem.Property(Artist_Mood)]</label>
+					<label>[COLOR blue]$LOCALIZE[175]: [/COLOR]$INFO[ListItem.Property(Artist_Mood)]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12</font>
@@ -868,7 +868,7 @@
 					<align>justify</align>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<label>[COLOR blue]Plot Outline: [/COLOR]$INFO[ListItem.Property(Artist_Description)]</label>
+					<label>[COLOR blue]$LOCALIZE[203]: [/COLOR]$INFO[ListItem.Property(Artist_Description)]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 			</control>
@@ -942,7 +942,7 @@
 					<posy>255</posy>
 					<width>422</width>
 					<height>25</height>
-					<label>[COLOR blue]Artist: [/COLOR]$INFO[ListItem.Artist]</label>
+					<label>[COLOR blue]$LOCALIZE[557]: [/COLOR]$INFO[ListItem.Artist]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12</font>
@@ -968,7 +968,7 @@
 					<posy>330</posy>
 					<width>422</width>
 					<height>25</height>
-					<label>[COLOR blue]Genre: [/COLOR]$INFO[ListItem.Genre]</label>
+					<label>[COLOR blue]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12</font>
@@ -981,7 +981,7 @@
 					<posy>370</posy>
 					<width>422</width>
 					<height>25</height>
-					<label>[COLOR blue]Year: [/COLOR]$INFO[ListItem.Year]</label>
+					<label>[COLOR blue]$LOCALIZE[562]: [/COLOR]$INFO[ListItem.Year]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12</font>
@@ -998,7 +998,7 @@
 					<align>justify</align>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<label>[COLOR blue]Plot Outline: [/COLOR]$INFO[ListItem.Property(Album_Description)]</label>
+					<label>[COLOR blue]$LOCALIZE[203]: [/COLOR]$INFO[ListItem.Property(Album_Description)]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 			</control>
@@ -1081,7 +1081,7 @@
 					<posy>255</posy>
 					<width>422</width>
 					<height>25</height>
-					<label>[COLOR blue]Artist: [/COLOR]$INFO[ListItem.Artist]</label>
+					<label>[COLOR blue]$LOCALIZE[557]: [/COLOR]$INFO[ListItem.Artist]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12</font>
@@ -1094,7 +1094,7 @@
 					<posy>290</posy>
 					<width>250</width>
 					<height>25</height>
-					<label>[COLOR blue]Album: [/COLOR]$INFO[ListItem.Album]</label>
+					<label>[COLOR blue]$LOCALIZE[558]: [/COLOR]$INFO[ListItem.Album]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12</font>
@@ -1107,7 +1107,7 @@
 					<posy>330</posy>
 					<width>422</width>
 					<height>25</height>
-					<label>[COLOR blue]Genre: [/COLOR]$INFO[ListItem.Genre]</label>
+					<label>[COLOR blue]$LOCALIZE[135]: [/COLOR]$INFO[ListItem.Genre]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12</font>
@@ -1120,7 +1120,7 @@
 					<posy>370</posy>
 					<width>422</width>
 					<height>25</height>
-					<label>[COLOR blue]Year: [/COLOR]$INFO[ListItem.Year]</label>
+					<label>[COLOR blue]$LOCALIZE[345]: [/COLOR]$INFO[ListItem.Year]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12</font>
