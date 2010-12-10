@@ -322,7 +322,7 @@
 				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
 				<posx>275r</posx>
 				<visible>Library.HasContent(Music)</visible>
-				<visible>Container(9000).Hasfocus(3) + Skin.HasSetting(HorizontalMenu) | Container(19000).Hasfocus(3) + !Skin.HasSetting(HorizontalMenu)</visible>
+				<visible>Container(9000).Hasfocus(3)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="image">
 					<description>background</description>
