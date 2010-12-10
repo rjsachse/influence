@@ -23,11 +23,11 @@
 					<posy>5</posy>
 					<height>30</height>
 					<width>355</width>
-					<label>Library Statistics</label>
+					<label>35113</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
-					<textcolor>blue</textcolor>
+					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<scrollout>false</scrollout>
 					<pauseatend>2000</pauseatend>
@@ -40,7 +40,7 @@
 					<label>$LOCALIZE[20342]: $INFO[Window.Property(Movies.Count)]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>font12_title</font>
+					<font>font12</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<scrollout>false</scrollout>
@@ -54,7 +54,7 @@
 					<width>355</width>
 					<label>$LOCALIZE[20343]: $INFO[Window.Property(TVShows.Count)]</label>
 					<aligny>center</aligny>
-					<font>font12_title</font>
+					<font>font12</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -63,10 +63,10 @@
 					<posy>90</posy>
 					<height>30</height>
 					<width>355</width>
-					<label>Music Videos: $INFO[Window.Property(MusicVideos.Count)]</label>
+					<label>$LOCALIZE[20389] Videos: $INFO[Window.Property(MusicVideos.Count)]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>font12_title</font>
+					<font>font12</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -87,11 +87,11 @@
 					<posy>5</posy>
 					<height>30</height>
 					<width>355</width>
-					<label>Library Statistics</label>
+					<label>35113</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
-					<textcolor>blue</textcolor>
+					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<scrollout>false</scrollout>
 					<pauseatend>2000</pauseatend>
@@ -104,7 +104,7 @@
 					<label>$LOCALIZE[20342]: $INFO[Window.Property(Movies.Count)]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>font12_title</font>
+					<font>font12</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<scrollout>false</scrollout>
@@ -118,7 +118,7 @@
 					<width>355</width>
 					<label>$LOCALIZE[16102]: $INFO[Window.Property(Movies.Watched)]</label>
 					<aligny>center</aligny>
-					<font>font12_title</font>
+					<font>font12</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -130,7 +130,7 @@
 					<label>$LOCALIZE[16101]: $INFO[Window.Property(Movies.UnWatched)]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>font12_title</font>
+					<font>font12</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -151,11 +151,11 @@
 					<posy>5</posy>
 					<height>30</height>
 					<width>355</width>
-					<label>Library Statistics</label>
+					<label>35113</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
-					<textcolor>blue</textcolor>
+					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<scrollout>false</scrollout>
 					<pauseatend>2000</pauseatend>
@@ -169,7 +169,7 @@
 					<label>$LOCALIZE[132]: $INFO[Window.Property(Music.AlbumsCount)]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>font12_title</font>
+					<font>font12</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<scrollout>false</scrollout>
@@ -184,7 +184,7 @@
 					<width>355</width>
 					<label>$LOCALIZE[134]: $INFO[Window.Property(Music.SongsCount)]</label>
 					<aligny>center</aligny>
-					<font>font12_title</font>
+					<font>font12</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -197,7 +197,7 @@
 					<label>$LOCALIZE[16101]: $INFO[Window.Property(Episodes.UnWatched)]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>font12_title</font>
+					<font>font12</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -218,11 +218,11 @@
 					<posy>5</posy>
 					<height>30</height>
 					<width>355</width>
-					<label>Library Statistics</label>
+					<label>35113</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
-					<textcolor>blue</textcolor>
+					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<scrollout>false</scrollout>
 					<pauseatend>2000</pauseatend>
@@ -236,7 +236,7 @@
 					<label>$LOCALIZE[20343]: $INFO[Window.Property(TVShows.Count)]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>font12_title</font>
+					<font>font12</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<scrollout>false</scrollout>
@@ -251,7 +251,7 @@
 					<width>355</width>
 					<label>$LOCALIZE[20360]: $INFO[Window.Property(Episodes.Count)]</label>
 					<aligny>center</aligny>
-					<font>font12_title</font>
+					<font>font12</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -264,7 +264,7 @@
 					<label>$LOCALIZE[16101]: $INFO[Window.Property(Episodes.UnWatched)]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>font12_title</font>
+					<font>font12</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -275,7 +275,7 @@
 		
 		<control type="group">
 			<posx>0</posx>
-			<posy>400r</posy>
+			<posy>380r</posy>
 			<visible>Player.HasAudio + !Skin.HasSetting(homepageMusicinfo)</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
@@ -690,25 +690,25 @@
 					<control type="button" id="90108">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(SubMenu_Videos_opt1_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Videos_opt1_run]</onclick>
+						<onclick>$INFO[Skin.String(SubMenu_Videos_opt1_run)]</onclick>
 						<visible>!Library.HasContent(Video) + Skin.HasSetting(SubMenu_Videos_opt1)</visible>
 					</control>
 					<control type="button" id="90109">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(SubMenu_Videos_opt2_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Videos_opt2_run]</onclick>
+						<onclick>$INFO[Skin.String(SubMenu_Videos_opt2_run)]</onclick>
 						<visible>!Library.HasContent(Video) + Skin.HasSetting(SubMenu_Videos_opt2)</visible>
 					</control>
 					<control type="button" id="90110">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(SubMenu_Videos_opt3_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Videos_opt3_run]</onclick>
+						<onclick>$INFO[Skin.String(SubMenu_Videos_opt3_run)]</onclick>
 						<visible>!Library.HasContent(Video) + Skin.HasSetting(SubMenu_Videos_opt3)</visible>
 					</control>
 					<control type="button" id="90111">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(SubMenu_Videos_opt4_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Videos_opt4_run]</onclick>
+						<onclick>$INFO[Skin.String(SubMenu_Videos_opt4_run)]</onclick>
 						<visible>!Library.HasContent(Video) + Skin.HasSetting(SubMenu_Videos_opt4)</visible>
 					</control>
 				</control>
@@ -729,37 +729,37 @@
 					<control type="button" id="90111">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(Menu_Music_sub1_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Music_sub1_run]</onclick>
+						<onclick>$INFO[Skin.String(Menu_Music_sub1_run)]</onclick>
 						<visible>Library.HasContent(Music) + Skin.HasSetting(Menu_Music_sub1_act)</visible>
 					</control>
 					<control type="button" id="90112">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(Menu_Music_sub2_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Music_sub2_run]</onclick>
+						<onclick>$INFO[Skin.String(Menu_Music_sub2_run)]</onclick>
 						<visible>Library.HasContent(Music) + Skin.HasSetting(Menu_Music_sub2_act)</visible>
 					</control>
 					<control type="button" id="90113">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(Menu_Music_sub3_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Music_sub3_run]</onclick>
+						<onclick>$INFO[Skin.String(Menu_Music_sub3_run)]</onclick>
 						<visible>Library.HasContent(Music) + Skin.HasSetting(Menu_Music_sub3_act)</visible>
 					</control>
 					<control type="button" id="90114">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(Menu_Music_sub4_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Music_sub4_run]</onclick>
+						<onclick>$INFO[Skin.String(Menu_Music_sub4_run)]</onclick>
 						<visible>Skin.HasSetting(Menu_Music_sub4_act)</visible>
 					</control>
 					<control type="button" id="90115">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(Menu_Music_sub5_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Music_sub5_run]</onclick>
+						<onclick>$INFO[Skin.String(Menu_Music_sub5_run)]</onclick>
 						<visible>Library.HasContent(Music) + Skin.HasSetting(Menu_Music_sub5_act)</visible>
 					</control>
 					<control type="button" id="90116">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(Menu_Music_sub6_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Music_sub6_run]</onclick>
+						<onclick>$INFO[Skin.String(Menu_Music_sub6_run)]</onclick>
 						<visible>Library.HasContent(Music) + Skin.HasSetting(Menu_Music_sub6_act)</visible>
 					</control>
 					<control type="button" id="90118">

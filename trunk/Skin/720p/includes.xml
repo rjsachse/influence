@@ -48,6 +48,19 @@
 			<height>720</height>
 			<visible>Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis)+ !SubString(Window(10025).Property(TvTunesIsAlive),True)</visible>
 		</control>
+                <control type="image">
+                        <description>visualisation background</description>
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>1280</width>
+                        <height>720</height>
+                        <visible>Player.HasAudio + Skin.HasSetting(ShowBackgroundVis)</visible>
+			<!--
+                        <visible>Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis) + Skin.HasSetting(VisualisationFanart)</visible>
+                        <texture fallback="OSD/Music/DefaultFanart.jpg">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
+			-->
+                        <texture>$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
+                </control>
 		<control type="videowindow">
 			<posx>0</posx>
 			<posy>0</posy>
