@@ -150,8 +150,8 @@
 						<onclick>-</onclick>
 					</item>
 					<item id="6">
-						<label>View</label>
-						<label2>Activate/Desactivate</label2>
+						<label>35111</label>
+						<label2>35112</label2>
 						<onclick>-</onclick>
 					</item>
 					<item id="7">
@@ -395,163 +395,163 @@
 						<width>750</width>
 						<height>45</height>
 						<font>font13_title</font>
-						<label>View options</label>
+						<label>35110</label>
 						<textcolor>blue</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
 					<control type="radiobutton" id="202">
-						<description>Activate Showcase view</description>
+						<description>Activate Showcase</description>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>Activate Showcase view</label>
+						<label>Showcase</label>
 						<onclick>Skin.ToggleSetting(EnableShowcaseView)</onclick>
 						<selected>Skin.HasSetting(EnableShowcaseView)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
 					<control type="radiobutton" id="203">
-						<description>Activate WallStreamView view</description>
+						<description>Activate WallStreamView</description>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>Activate WallStreamView view</label>
+						<label>WallStreamView</label>
 						<onclick>Skin.ToggleSetting(EnableWallStreamView)</onclick>
 						<selected>Skin.HasSetting(EnableWallStreamView)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
 					<control type="radiobutton" id="204">
-						<description>Activate WallStreamView2 view</description>
+						<description>Activate WallStreamView2</description>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>Activate WallStreamView2 view</label>
+						<label>WallStreamView2</label>
 						<onclick>Skin.ToggleSetting(EnableWallStreamView2)</onclick>
 						<selected>Skin.HasSetting(EnableWallStreamView2)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
 					<control type="radiobutton" id="205">
-						<description>Activate Landscape view</description>
+						<description>Activate Landscape</description>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>Activate Landscape view</label>
+						<label>Landscape</label>
 						<onclick>Skin.ToggleSetting(EnableLandscape)</onclick>
 						<selected>Skin.HasSetting(EnableLandscape)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
 					<control type="radiobutton" id="206">
-						<description>Activate Lowlist view</description>
+						<description>Activate Lowlist</description>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>Activate Lowlist view</label>
+						<label>Lowlist</label>
 						<onclick>Skin.ToggleSetting(EnableLowlist)</onclick>
 						<selected>Skin.HasSetting(EnableLowlist)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
 					<control type="radiobutton" id="207">
-						<description>Activate RightList view</description>
+						<description>Activate RightList</description>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>Activate RightList view</label>
+						<label>RightList</label>
 						<onclick>Skin.ToggleSetting(EnableRightList)</onclick>
 						<selected>Skin.HasSetting(EnableRightList)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
 					<control type="radiobutton" id="208">
-						<description>Activate HalfWall view</description>
+						<description>Activate HalfWall</description>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>Activate HalfWall view</label>
+						<label>HalfWall</label>
 						<onclick>Skin.ToggleSetting(EnableHalfWall)</onclick>
 						<selected>Skin.HasSetting(EnableHalfWall)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
 					<control type="radiobutton" id="209">
-						<description>Activate HalfWall2 view</description>
+						<description>Activate HalfWall2</description>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>Activate HalfWall2 view</label>
+						<label>HalfWall2</label>
 						<onclick>Skin.ToggleSetting(EnableHalfWall2)</onclick>
 						<selected>Skin.HasSetting(EnableHalfWall2)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
 					<control type="radiobutton" id="210">
-						<description>Activate Episode view</description>
+						<description>Activate Episode</description>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>Activate Episode view</label>
+						<label>Episode</label>
 						<onclick>Skin.ToggleSetting(EnableEpisode)</onclick>
 						<selected>Skin.HasSetting(EnableEpisode)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
 					<control type="radiobutton" id="211">
-						<description>Activate Poster view</description>
+						<description>Activate Poster</description>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>Activate Poster view</label>
+						<label>Poster</label>
 						<onclick>Skin.ToggleSetting(EnablePoster)</onclick>
 						<selected>Skin.HasSetting(EnablePoster)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
 					<control type="radiobutton" id="212">
-						<description>Activate Logo view</description>
+						<description>Activate Logo</description>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>Activate Logo view</label>
+						<label>Logo</label>
 						<onclick>Skin.ToggleSetting(EnableLogo)</onclick>
 						<selected>Skin.HasSetting(EnableLogo)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
 					<control type="radiobutton" id="213">
-						<description>Activate Logo2 view</description>
+						<description>Activate Logo2</description>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>Activate Logo2 view</label>
+						<label>Logo2</label>
 						<onclick>Skin.ToggleSetting(EnableLogo2)</onclick>
 						<selected>Skin.HasSetting(EnableLogo2)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
@@ -851,14 +851,12 @@
 								<icon>special://skin/backgrounds/pictures.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</thumb>
 							</item>
-							<!--
 							<item id="4">
-								<label>0</label>
+								<label>$INFO[Skin.String(Menu_Programs_lab)]</label>
 								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/programs.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</thumb>
 							</item>
-							-->
 							<item id="5">
 								<label>$INFO[Skin.String(Menu_Weather_lab)]</label>
 								<onclick>-</onclick>
