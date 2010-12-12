@@ -1675,7 +1675,7 @@
 				<description>RSS background</description>
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>100</width>
+				<width>860</width>
 				<height>35</height>
 				<texture border="32,0,0,0">Rss_Back_Overlay.png</texture>
 				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
