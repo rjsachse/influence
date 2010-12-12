@@ -135,7 +135,7 @@
 	                        <item id="4">
 	                                <description>Script</description>
 	                                <label>35033</label>
-	                                <onclick>Skin.Setfile(RunOpt,.py,special://home)</onclick>
+	                                <onclick>Skin.SetAddon(RunOpt,xbmc.python.script)</onclick>
 	                                <onclick>Skin.SetString($INFO[Skin.String(RunOpt_var)],RunScript($INFO[Skin.String(RunOpt)]))</onclick>
 					<onclick>Skin.Reset(RunOpt)</onclick>
 	                                <onclick>Dialog.Close(2114)</onclick>
