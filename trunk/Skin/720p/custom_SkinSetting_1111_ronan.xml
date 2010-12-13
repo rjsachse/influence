@@ -474,7 +474,19 @@
 						<onclick>Skin.ToggleSetting(TVShowsUsePosters)</onclick>
 						<selected>Skin.HasSetting(TVShowsUsePosters)</selected>
 					</control>
-					<control type="label" id="120">
+					<control type="radiobutton" id="120">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>35114</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(TvTunesIsEnable)</onclick>
+						<selected>Skin.HasSetting(TvTuneIsEnable)</selected>
+					</control>
+					<control type="label" id="121">
 						<width>750</width>
 						<height>45</height>
 						<font>font13_title</font>
@@ -484,7 +496,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="121">
+					<control type="radiobutton" id="122">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -496,7 +508,7 @@
 						<onclick>Skin.ToggleSetting(Use_Startup_Playlist)</onclick>
 						<selected>Skin.HasSetting(Use_Startup_Playlist)</selected>
 					</control>
-					<control type="button" id="122">
+					<control type="button" id="123">
 						<description>Startup Playlist Path</description>
 						<width>750</width>
 						<height>40</height>
@@ -510,7 +522,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
 					</control>
-					<control type="label" id="123">
+					<control type="label" id="124">
 						<width>750</width>
 						<height>45</height>
 						<font>font13_title</font>
@@ -520,7 +532,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="124">
+					<control type="radiobutton" id="125">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -532,7 +544,7 @@
 						<onclick>Skin.ToggleSetting(ShowBackgroundVideo)</onclick>
 						<selected>!Skin.HasSetting(ShowBackgroundVideo)</selected>
 					</control>
-					<control type="radiobutton" id="125">
+					<control type="radiobutton" id="126">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -847,6 +859,19 @@
 						<label>35012</label>
 						<onclick>Skin.ToggleSetting(Next5Songs)</onclick>
 						<selected>Skin.HasSetting(Next5Songs)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="209">
+						<description>Show Fanart</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>35115</label>
+						<onclick>Skin.ToggleSetting(MusicFanArtIsEnable)</onclick>
+						<selected>Skin.HasSetting(MusicFanArtIsEnable)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
