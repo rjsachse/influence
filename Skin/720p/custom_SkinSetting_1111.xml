@@ -249,7 +249,7 @@
 						<onclick>Skin.ToggleSetting(No_Media_Titles_In_Scanner)</onclick>
 						<selected>!Skin.HasSetting(No_Media_Titles_In_Scanner)</selected>
 					</control>
-					<control type="radiobutton" id="112">
+					<control type="radiobutton" id="104">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -261,7 +261,7 @@
 						<onclick>Skin.ToggleSetting(WindowedTrailer)</onclick>
 						<selected>Skin.HasSetting(WindowedTrailer)</selected>
 					</control>
-					<control type="radiobutton" id="113">
+					<control type="radiobutton" id="105">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -273,7 +273,7 @@
 						<onclick>Skin.ToggleSetting(HideFilenameFlagging)</onclick>
 						<selected>Skin.HasSetting(HideFilenameFlagging)</selected>
 					</control>
-					<control type="radiobutton" id="114">
+					<control type="radiobutton" id="106">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -286,7 +286,44 @@
 						<onclick>Skin.ToggleSetting(kiosk)</onclick>
 						<selected>Skin.HasSetting(kiosk)</selected>
 					</control>	
-					<control type="label" id="104">
+					<control type="label" id="107">
+						<width>750</width>
+						<height>45</height>
+						<font>font13_title</font>
+						<label>Option Movie</label>
+						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="radiobutton" id="108">
+						<description>Enable Movie Theater Experience Script</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>Activer le script "Movie Theater Experience"</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(TheaterScript_Enable)</onclick>
+						<selected>Skin.HasSetting(TheaterScript_Enable)</selected>
+					</control>
+					<control type="button" id="109">
+						<description>Theater Experience Script Path</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>- Selection script:</label>
+						<label2>$INFO[Skin.String(TheaterScript_Path)</label2>
+						<onclick>Skin.SetAddon(TheaterScript_Path,xbmc.python.script)</onclick>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<visible>Skin.HasSetting(TheaterScript_Enable)</visible>
+					</control>
+					<control type="label" id="110">
 						<width>750</width>
 						<height>45</height>
 						<font>font13_title</font>
@@ -296,7 +333,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="105">
+					<control type="radiobutton" id="111">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -308,7 +345,8 @@
 						<onclick>Skin.ToggleSetting(TVShowsUsePosters)</onclick>
 						<selected>Skin.HasSetting(TVShowsUsePosters)</selected>
 					</control>
-					<control type="radiobutton" id="106">
+					<control type="radiobutton" id="112">
+						<description>Enable TvTunes Script</description>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -318,9 +356,23 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(TvTunesIsEnable)</onclick>
-						<selected>Skin.HasSetting(TvTuneIsEnable)</selected>
+						<selected>Skin.HasSetting(TvTunesIsEnable)</selected>
 					</control>
-					<control type="label" id="107">
+					<control type="button" id="113">
+						<description>TvTunes Path</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>- Selection script:</label>
+						<label2>$INFO[Skin.String(TvTunesScript_Path)</label2>
+						<onclick>Skin.SetAddon(TvTunesScript_Path,xbmc.python.script)</onclick>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<visible>Skin.HasSetting(TvTunesIsEnable)</visible>
+					</control>
+					<control type="label" id="114">
 						<width>750</width>
 						<height>45</height>
 						<font>font13_title</font>
@@ -330,7 +382,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="108">
+					<control type="radiobutton" id="115">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -342,7 +394,7 @@
 						<onclick>Skin.ToggleSetting(Use_Startup_Playlist)</onclick>
 						<selected>Skin.HasSetting(Use_Startup_Playlist)</selected>
 					</control>
-					<control type="button" id="109">
+					<control type="button" id="116">
 						<description>Startup Playlist Path</description>
 						<width>750</width>
 						<height>40</height>
@@ -356,7 +408,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
 					</control>
-					<control type="label" id="110">
+					<control type="label" id="117">
 						<width>750</width>
 						<height>45</height>
 						<font>font13_title</font>
@@ -366,7 +418,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="111">
+					<control type="radiobutton" id="118">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -378,7 +430,7 @@
 						<onclick>Skin.ToggleSetting(ShowBackgroundVideo)</onclick>
 						<selected>!Skin.HasSetting(ShowBackgroundVideo)</selected>
 					</control>
-					<control type="radiobutton" id="112">
+					<control type="radiobutton" id="119">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>

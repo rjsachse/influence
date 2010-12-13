@@ -1119,6 +1119,15 @@
 						<label>20410</label>
 						<visible>!IsEmpty(ListItem.Trailer) + !Skin.HasSetting(WindowedTrailer)</visible>
 					</control>
+					<control type="button" id="13">
+						<description>Home Theater Experience</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<visible>Container.Content(Movies) + Skin.HasSetting(TheaterScript_Enable)</visible>
+						<label>Theater</label>
+						<onclick>Dialog.Close(MovieInformation)</onclick>
+						<onclick>Playlist.Clear</onclick>
+						<onclick>RunScript($INFO[Skin.String(TheaterScript_Path)])</onclick>
+					</control>
 					<control type="button" id="15">
 						<description>Play Trailer Windowed</description>
 						<include>ButtonInfoDialogsCommonValues</include>
