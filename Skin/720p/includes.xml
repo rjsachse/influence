@@ -54,11 +54,7 @@
                         <posy>0</posy>
                         <width>1280</width>
                         <height>720</height>
-                        <visible>Player.HasAudio + Skin.HasSetting(ShowBackgroundVis)</visible>
-			<!--
-                        <visible>Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis) + Skin.HasSetting(VisualisationFanart)</visible>
-                        <texture fallback="OSD/Music/DefaultFanart.jpg">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
-			-->
+                        <visible>Player.HasAudio + Skin.HasSetting(ShowBackgroundVis) + Skin.HasSetting(MusicFanArtIsEnable)</visible>
                         <texture>$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
                 </control>
 		<control type="videowindow">

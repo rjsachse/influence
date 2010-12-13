@@ -4,13 +4,14 @@
 	<views>50,500,550,560,501,508,504,503,505,511,720,513,514,723,724,725,726,727,728,729,730,731</views>
 	<visible>!Skin.HasSetting(kiosk)</visible>
 	<controls>
-	    <control type="button" id="9999">
-            <description>trigger</description>
-            <onfocus>XBMC.RunScript(script.TvTunes,backend=True&amploop=False)</onfocus>
-            <onfocus>SetFocus(50)</onfocus>
-            <texturenofocus>-</texturenofocus>
-            <texturefocus>-</texturefocus>
-        </control>	
+		<control type="button" id="9999">
+			<description>trigger</description>
+			<onfocus>XBMC.RunScript(script.TvTunes,backend=True&amploop=False)</onfocus>
+			<onfocus>SetFocus(50)</onfocus>
+			<visible>Skin.HasSetting(TvTunesIsEnable)</visible>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+		</control>	
 		<include>CommonVideoBackground</include>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>	
