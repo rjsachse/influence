@@ -10,7 +10,7 @@ Echo Thumbs.db>>exclude.txt
 Echo Desktop.ini>>exclude.txt
 Echo dsstdfx.bin>>exclude.txt
 Echo Build>>exclude.txt
-Echo media>>exclude.txt
+#Echo media>>exclude.txt
 Echo exclude.txt>>exclude.txt
 
 ECHO ----------------------------------------
