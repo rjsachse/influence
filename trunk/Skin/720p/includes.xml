@@ -8,11 +8,19 @@
 	<include file="ViewsLiveTV.xml" />
 	<include file="IncludesCodecFlagging.xml" />
 	<include file="IncludesHomeRecentlyAdded.xml" />
-
+	<!-- include pour setting carousel et autres-->
+	<include file="Include_CustomMenuCarousel.xml" />
+	<include file="CustomCarousel.xml" />
+	<include file="InfluenceSystem.xml" />
+	<include file="InfluenceVideos.xml" />
+	<include file="InfluenceMusic.xml" />
+	<include file="IncludesFanartMedia.xml" />
+	<!-- end -->
 	<include file="InfluenceWeather.xml" />
 	<include file="IncludesHomeVertical.xml" />
 	<include file="IncludesHomeHorizontal.xml" />
 	<include file="IncludesHomeCarousel.xml" />
+	<include file="IncludesHomeStat.xml" />
 	<include file="Carousel.xml" />
 	<include file="Include_CustomMenu.xml" />
 	<include file="IncludesInitSkin.xml" />

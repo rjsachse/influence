@@ -155,6 +155,9 @@
   <string id="35033">Script</string>
   <string id="35034">Addon</string>
   <string id="35036">Saisie libre</string>
+  <string id="35037">Afficher un fond transparent</string>
+  <string id="35038">Utiliser des icones pour les sous-menus</string>
+  <string id="35039">Utiliser le paramétrage en mode Carousel</string>
   <string id="35040">Derniers albums</string>
   <string id="35103">IMDB Rating</string>
   <string id="35104">Born</string>
@@ -163,4 +166,6 @@
   <string id="35111">Vues</string>
   <string id="35112">Activer/Desactiver</string>
   <string id="35113">Médiathéque</string>
+  <string id="35114">Activer le script TvTunes</string>
+  <string id="35115">Afficher les fanart musicaux</string>
 </strings>

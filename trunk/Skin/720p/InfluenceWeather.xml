@@ -9,7 +9,7 @@
 				<width>500</width>
 				<height>620</height>
 				<texture border="20">ContentPanel.png</texture>
-				<visible>Skin.HasSetting(VerticalMenu) +  [!Player.HasVideo + !Player.HasAudio] | Window.IsActive(weather)</visible>
+				<visible>!Skin.HasSetting(HorizontalMenu) +  [!Player.HasVideo + !Player.HasAudio] | Window.IsActive(weather)</visible>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -17,7 +17,7 @@
 				<width>500</width>
 				<height>400</height>
 				<texture border="20">ContentPanel.png</texture>
-				<visible>Skin.HasSetting(VerticalMenu)  + [ Player.HasVideo | Player.HasAudio] +  !Window.IsActive(weather)</visible>
+				<visible>!Skin.HasSetting(HorizontalMenu)  + [ Player.HasVideo | Player.HasAudio] +  !Window.IsActive(weather)</visible>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -128,7 +128,7 @@
 				<width>460</width>
 				<height>4</height>
 				<texture>separator.png</texture>
-				<visible>![Skin.HasSetting(VerticalMenu) +  [Player.HasVideo | Player.HasAudio ]] |  Window.IsActive(weather)</visible>
+				<visible>![!Skin.HasSetting(HorizontalMenu) +  [Player.HasVideo | Player.HasAudio ]] |  Window.IsActive(weather)</visible>
 			</control>
 			<control type="label">
 				<description>current feels like label</description>
@@ -142,7 +142,7 @@
 				<label>$LOCALIZE[402] :</label>
 				<textcolor>grey2</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<visible>![Skin.HasSetting(VerticalMenu) +  [Player.HasVideo | Player.HasAudio ]] |  Window.IsActive(weather)</visible>
+				<visible>![!Skin.HasSetting(HorizontalMenu) +  [Player.HasVideo | Player.HasAudio ]] |  Window.IsActive(weather)</visible>
 			</control>
 			<control type="label">
 				<description>current dew label</description>
@@ -156,7 +156,7 @@
 				<label>$LOCALIZE[405] :</label>
 				<textcolor>grey2</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<visible>![Skin.HasSetting(VerticalMenu) +  [Player.HasVideo | Player.HasAudio ]] |  Window.IsActive(weather)</visible>
+				<visible>![!Skin.HasSetting(HorizontalMenu) +  [Player.HasVideo | Player.HasAudio ]] |  Window.IsActive(weather)</visible>
 			</control>
 			<control type="label">
 				<description>current humidity label</description>
@@ -170,7 +170,7 @@
 				<label>$LOCALIZE[406] :</label>
 				<textcolor>grey2</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<visible>![Skin.HasSetting(VerticalMenu) +  [Player.HasVideo | Player.HasAudio ]] |  Window.IsActive(weather)</visible>
+				<visible>![!Skin.HasSetting(HorizontalMenu) +  [Player.HasVideo | Player.HasAudio ]] |  Window.IsActive(weather)</visible>
 			</control>
 			<control type="label">
 				<description>current UV Index label</description>
@@ -184,7 +184,7 @@
 				<label>$LOCALIZE[403] :</label>
 				<textcolor>grey2</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<visible>![Skin.HasSetting(VerticalMenu) +  [Player.HasVideo | Player.HasAudio ]] |  Window.IsActive(weather)</visible>
+				<visible>![!Skin.HasSetting(HorizontalMenu) +  [Player.HasVideo | Player.HasAudio ]] |  Window.IsActive(weather)</visible>
 			</control>
 			<control type="label">
 				<description>current Wind label</description>
@@ -199,7 +199,7 @@
 				<textcolor>grey2</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<visible>!Skin.HasSetting(HorizontalMenu) | Window.IsActive(weather)</visible>
-				<visible>![Skin.HasSetting(VerticalMenu) +  [Player.HasVideo | Player.HasAudio ]] |  Window.IsActive(weather)</visible>
+				<visible>![!Skin.HasSetting(HorizontalMenu) +  [Player.HasVideo | Player.HasAudio ]] |  Window.IsActive(weather)</visible>
 			</control>
 			<control type="label">
 				<description>current feels like Value</description>
@@ -213,7 +213,7 @@
 				<label>$INFO[Window(2600).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits]</label>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<visible>![Skin.HasSetting(VerticalMenu) +  [Player.HasVideo | Player.HasAudio ]] |  Window.IsActive(weather)</visible>
+				<visible>![!Skin.HasSetting(HorizontalMenu) +  [Player.HasVideo | Player.HasAudio ]] |  Window.IsActive(weather)</visible>
 			</control>
 			<control type="label">
 				<description>current dew Value</description>
@@ -227,7 +227,7 @@
 				<label>$INFO[Window(2600).Property(Current.DewPoint)]$INFO[System.TemperatureUnits]</label>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<visible>![Skin.HasSetting(VerticalMenu) +  [Player.HasVideo | Player.HasAudio ]] |  Window.IsActive(weather)</visible>
+				<visible>![!Skin.HasSetting(HorizontalMenu) +  [Player.HasVideo | Player.HasAudio ]] |  Window.IsActive(weather)</visible>
 			</control>
 			<control type="label">
 				<description>current humidity Value</description>
@@ -241,7 +241,7 @@
 				<info>Window(2600).Property(Current.Humidity)</info>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<visible>![Skin.HasSetting(VerticalMenu) +  [Player.HasVideo | Player.HasAudio ]] |  Window.IsActive(weather)</visible>
+				<visible>![!Skin.HasSetting(HorizontalMenu) +  [Player.HasVideo | Player.HasAudio ]] |  Window.IsActive(weather)</visible>
 			</control>
 			<control type="label">
 				<description>current UV Index Value</description>
@@ -255,7 +255,7 @@
 				<info>Window(2600).Property(Current.UVIndex)</info>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<visible>![Skin.HasSetting(VerticalMenu) +  [Player.HasVideo | Player.HasAudio ]] |  Window.IsActive(weather)</visible>
+				<visible>![!Skin.HasSetting(HorizontalMenu) +  [Player.HasVideo | Player.HasAudio ]] |  Window.IsActive(weather)</visible>
 			</control>
 			<control type="label">
 				<description>current Wind Value</description>
@@ -269,7 +269,7 @@
 				<info>Window(2600).Property(Current.Wind)</info>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<visible>[Skin.HasSetting(VerticalMenu) + !Player.HasVideo + !Player.HasAudio] |  Window.IsActive(weather)</visible>
+				<visible>[!Skin.HasSetting(HorizontalMenu) + !Player.HasVideo + !Player.HasAudio] |  Window.IsActive(weather)</visible>
 			</control>
 		</control>
 	</include>

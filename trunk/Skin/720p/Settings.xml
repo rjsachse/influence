@@ -131,11 +131,21 @@
 						<onclick>ActivateWindow(SystemSettings)</onclick>
 						<icon>special://skin/backgrounds/system.jpg</icon>
 					</item>
+					<!-- remet à zero EditButtonExtra pour avoir tjs le carousel affiché et pas le sous menu-->
+					<item id="9">
+						<label>166</label>
+						<label2>31407</label2>
+						<onclick>ActivateWindow(1111)</onclick>
+						<onclick>skin.ToggleSetting(EditButtonExtra)</onclick>
+						<icon>special://skin/backgrounds/skinsetting.jpg</icon>
+					<visible>Skin.HasSetting(EditButtonExtra)</visible>
+					</item>
 					<item id="9">
 						<label>166</label>
 						<label2>31407</label2>
 						<onclick>ActivateWindow(1111)</onclick>
 						<icon>special://skin/backgrounds/skinsetting.jpg</icon>
+					<visible>!Skin.HasSetting(EditButtonExtra)</visible>
 					</item>
 				</content>
 			</control>
