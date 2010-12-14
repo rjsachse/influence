@@ -1,3 +1,4 @@
+<!--
 <colors>
 	<color name="white">FFFFFFFF</color>
 	<color name="grey">FFb4b4b4</color>
@@ -5,6 +6,17 @@
 	<color name="grey3">33FFFFFF</color>
 	<color name="black">FF000000</color>
 	<color name="blue">FF0055be</color>
+	<color name="selected">FFEB9E17</color>
+	<color name="dialogheader">DDced8da</color>
+</colors>
+-->
+<colors>
+	<color name="white">FFFFFFFF</color>
+	<color name="grey">FFb4b4b4</color>
+	<color name="grey2">88FFFFFF</color>
+	<color name="grey3">33FFFFFF</color>
+	<color name="black">FF000000</color>
+	<color name="blue">FF99D8FF</color>
 	<color name="selected">FFEB9E17</color>
 	<color name="dialogheader">DDced8da</color>
 </colors>
