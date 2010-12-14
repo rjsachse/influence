@@ -203,7 +203,9 @@
 					<onright>60</onright>
 					<onup>9001</onup>
 					<ondown>9001</ondown>
-					<control type="label" id="100">
+
+
+					<control type="label" id="110">
 						<width>750</width>
 						<height>45</height>
 						<font>font13_title</font>
@@ -213,7 +215,20 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="101">
+					<control type="radiobutton" id="111">
+						<description>Use Carousel For Custom</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>35039</label>
+						<onclick>Skin.ToggleSetting(CarouselCustomMenu)</onclick>
+						<selected>Skin.HasSetting(CarouselCustomMenu)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="112">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -225,7 +240,7 @@
 						<onclick>Skin.ToggleSetting(AutoScroll)</onclick>
 						<selected>Skin.HasSetting(AutoScroll)</selected>
 					</control>
-					<control type="radiobutton" id="102">
+					<control type="radiobutton" id="113">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -237,7 +252,7 @@
 						<onclick>Skin.ToggleSetting(Show_SlideShow_Paused)</onclick>
 						<selected>!Skin.HasSetting(Show_SlideShow_Paused)</selected>
 					</control>
-					<control type="radiobutton" id="103">
+					<control type="radiobutton" id="114">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -249,7 +264,7 @@
 						<onclick>Skin.ToggleSetting(No_Media_Titles_In_Scanner)</onclick>
 						<selected>!Skin.HasSetting(No_Media_Titles_In_Scanner)</selected>
 					</control>
-					<control type="radiobutton" id="104">
+					<control type="radiobutton" id="115">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -261,7 +276,7 @@
 						<onclick>Skin.ToggleSetting(WindowedTrailer)</onclick>
 						<selected>Skin.HasSetting(WindowedTrailer)</selected>
 					</control>
-					<control type="radiobutton" id="105">
+					<control type="radiobutton" id="116">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -273,20 +288,19 @@
 						<onclick>Skin.ToggleSetting(HideFilenameFlagging)</onclick>
 						<selected>Skin.HasSetting(HideFilenameFlagging)</selected>
 					</control>
-					<control type="radiobutton" id="106">
+					<control type="radiobutton" id="117">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
-						<description>Enable Kiosk Mode (disable slideout menu)</description>
-						<label>35023</label>
+						<label>Enable Kiosk Mode (disable slideout menu)</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(kiosk)</onclick>
 						<selected>Skin.HasSetting(kiosk)</selected>
-					</control>	
-					<control type="label" id="107">
+					</control>
+					<control type="label" id="118">
 						<width>750</width>
 						<height>45</height>
 						<font>font13_title</font>
@@ -296,7 +310,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="108">
+					<control type="radiobutton" id="119">
 						<description>Enable Movie Theater Experience Script</description>
 						<width>750</width>
 						<height>40</height>
@@ -309,7 +323,7 @@
 						<onclick>Skin.ToggleSetting(TheaterScript_Enable)</onclick>
 						<selected>Skin.HasSetting(TheaterScript_Enable)</selected>
 					</control>
-					<control type="button" id="109">
+					<control type="button" id="120">
 						<description>Theater Experience Script Path</description>
 						<width>750</width>
 						<height>40</height>
@@ -323,7 +337,8 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<visible>Skin.HasSetting(TheaterScript_Enable)</visible>
 					</control>
-					<control type="label" id="110">
+
+					<control type="label" id="121">
 						<width>750</width>
 						<height>45</height>
 						<font>font13_title</font>
@@ -333,7 +348,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="111">
+					<control type="radiobutton" id="122">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -345,7 +360,7 @@
 						<onclick>Skin.ToggleSetting(TVShowsUsePosters)</onclick>
 						<selected>Skin.HasSetting(TVShowsUsePosters)</selected>
 					</control>
-					<control type="radiobutton" id="112">
+					<control type="radiobutton" id="123">
 						<description>Enable TvTunes Script</description>
 						<width>750</width>
 						<height>40</height>
@@ -358,11 +373,10 @@
 						<onclick>Skin.ToggleSetting(TvTunesIsEnable)</onclick>
 						<selected>Skin.HasSetting(TvTunesIsEnable)</selected>
 					</control>
-					<control type="button" id="113">
+					<control type="button" id="124">
 						<description>TvTunes Path</description>
 						<width>750</width>
 						<height>40</height>
-						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<label>- Selection script:</label>
@@ -372,7 +386,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<visible>Skin.HasSetting(TvTunesIsEnable)</visible>
 					</control>
-					<control type="label" id="114">
+					<control type="label" id="125">
 						<width>750</width>
 						<height>45</height>
 						<font>font13_title</font>
@@ -382,7 +396,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="115">
+					<control type="radiobutton" id="126">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -394,7 +408,7 @@
 						<onclick>Skin.ToggleSetting(Use_Startup_Playlist)</onclick>
 						<selected>Skin.HasSetting(Use_Startup_Playlist)</selected>
 					</control>
-					<control type="button" id="116">
+					<control type="button" id="127">
 						<description>Startup Playlist Path</description>
 						<width>750</width>
 						<height>40</height>
@@ -408,7 +422,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
 					</control>
-					<control type="label" id="117">
+					<control type="label" id="128">
 						<width>750</width>
 						<height>45</height>
 						<font>font13_title</font>
@@ -418,7 +432,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="118">
+					<control type="radiobutton" id="129">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -430,7 +444,7 @@
 						<onclick>Skin.ToggleSetting(ShowBackgroundVideo)</onclick>
 						<selected>!Skin.HasSetting(ShowBackgroundVideo)</selected>
 					</control>
-					<control type="radiobutton" id="119">
+					<control type="radiobutton" id="130">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -441,6 +455,19 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(ShowBackgroundVis)</onclick>
 						<selected>!Skin.HasSetting(ShowBackgroundVis)</selected>
+					</control>
+					<control type="radiobutton" id="131">
+						<description>Show Fanart</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>35115</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(MusicFanArtIsEnable)</onclick>
+						<selected>Skin.HasSetting(MusicFanArtIsEnable)</selected>
 					</control>
 				</control>
 				<control type="grouplist" id="9005">
@@ -645,7 +672,164 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
+					<!-- Horizontal Menu -->
+					<control type="radiobutton" id="201">
+						<description>Use Vertical Menu</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>35004</label>
+						<onclick>Skin.ToggleSetting(VerticalMenu)</onclick>
+						<onclick>Skin.SetBool(HorizontalMenu)</onclick>
+						<onclick>Skin.Reset(CarouselMenu)</onclick>
+						<selected>Skin.HasSetting(VerticalMenu)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<visible>Skin.HasSetting(VerticalMenu)</visible>
+					</control>
 					<control type="radiobutton" id="202">
+						<description>Use Vertical Menu</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>35004</label>
+						<onclick>Skin.ToggleSetting(VerticalMenu)</onclick>
+						<onclick>Skin.Reset(HorizontalMenu)</onclick>
+						<onclick>Skin.Reset(CarouselMenu)</onclick>
+						<selected>Skin.HasSetting(VerticalMenu)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<visible>!Skin.HasSetting(VerticalMenu)</visible>
+					</control>
+
+					<control type="radiobutton" id="203">
+						<description>Use Carousel Menu</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>35003</label>
+						<onclick>Skin.ToggleSetting(CarouselMenu)</onclick>
+						<onclick>Skin.SetBool(VerticalMenu)</onclick>
+						<onclick>Skin.Reset(HorizontalMenu)</onclick>
+						<selected>Skin.HasSetting(CarouselMenu)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<visible>Skin.HasSetting(CarouselMenu)</visible>
+					</control>
+					<control type="radiobutton" id="204">
+						<description>Use Carousel Menu</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>35003</label>
+						<onclick>Skin.ToggleSetting(CarouselMenu)</onclick>
+						<onclick>Skin.Reset(VerticalMenu)</onclick>
+						<onclick>Skin.Reset(HorizontalMenu)</onclick>
+						<selected>Skin.HasSetting(CarouselMenu)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<visible>!Skin.HasSetting(CarouselMenu)</visible>
+					</control>
+					<control type="radiobutton" id="205">
+						<description>Use Carousel background</description>
+						<visible>Skin.HasSetting(CarouselMenu)</visible>
+						<width>750</width>
+						<height>40</height>
+						<font>font12caps</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>35037</label>
+						<onclick>Skin.ToggleSetting(CarouselBackMenu)</onclick>
+						<selected>Skin.HasSetting(CarouselBackMenu)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="206">
+						<description>Use Carousel Icons</description>
+						<visible>Skin.HasSetting(CarouselMenu)</visible>
+						<width>750</width>
+						<height>40</height>
+						<font>font12caps</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>35038</label>
+						<onclick>Skin.ToggleSetting(CarouselIconeMenu)</onclick>
+						<selected>!Skin.HasSetting(CarouselIconeMenu)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+
+
+					<control type="radiobutton" id="207">
+						<description>Use Horizontal Menu</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>35000</label>
+						<onclick>Skin.ToggleSetting(HorizontalMenu)</onclick>
+						<onclick>Skin.SetBool(VerticalMenu)</onclick>
+						<onclick>Skin.Reset(CarouselMenu)</onclick>
+						<selected>Skin.HasSetting(HorizontalMenu)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<visible>Skin.HasSetting(HorizontalMenu)</visible>
+					</control>
+					<control type="radiobutton" id="208">
+						<description>Use Horizontal Menu</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>35000</label>
+						<onclick>Skin.ToggleSetting(HorizontalMenu)</onclick>
+						<onclick>Skin.Reset(VerticalMenu)</onclick>
+						<onclick>Skin.Reset(CarouselMenu)</onclick>
+						<selected>Skin.HasSetting(HorizontalMenu)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<visible>!Skin.HasSetting(HorizontalMenu)</visible>
+					</control>
+					<control type="radiobutton" id="209">
+						<description>Raise Horizontal Menu</description>
+						<visible>Skin.HasSetting(HorizontalMenu)</visible>
+						<width>750</width>
+						<height>40</height>
+						<font>font12caps</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>35001</label>
+						<onclick>Skin.ToggleSetting(RaiseHorizontalMenu)</onclick>
+						<selected>Skin.HasSetting(RaiseHorizontalMenu)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="210">
+						<description>Raise Rss News</description>
+						<visible>Skin.HasSetting(HorizontalMenu)</visible>
+						<width>750</width>
+						<height>40</height>
+						<font>font12caps</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>35002</label>
+						<onclick>Skin.ToggleSetting(RaiseRSSNewsFeed)</onclick>
+						<selected>Skin.HasSetting(RaiseRSSNewsFeed)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<enable>Skin.HasSetting(RaiseHorizontalMenu)</enable>
+					</control>
+					<control type="radiobutton" id="211">
 						<description>enable video info</description>
 						<width>750</width>
 						<height>40</height>
@@ -658,7 +842,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="203">
+					<control type="radiobutton" id="212">
 						<description>enable music info</description>
 						<width>750</width>
 						<height>40</height>
@@ -671,7 +855,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="204">
+					<control type="radiobutton" id="213">
 						<description>enable weather info</description>
 						<width>750</width>
 						<height>40</height>
@@ -684,7 +868,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="205">
+					<control type="radiobutton" id="214">
 						<description>Show Recently added info</description>
 						<width>750</width>
 						<height>40</height>
@@ -697,7 +881,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="206">
+					<control type="radiobutton" id="215">
 						<description>Show Library Stats</description>
 						<width>750</width>
 						<height>40</height>
@@ -710,7 +894,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="207">
+					<control type="radiobutton" id="216">
 						<description>Show CDArt</description>
 						<width>750</width>
 						<height>40</height>
@@ -723,7 +907,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="208">
+					<control type="radiobutton" id="217">
 						<description>Show Next Five Songs</description>
 						<width>750</width>
 						<height>40</height>
@@ -733,19 +917,6 @@
 						<label>35012</label>
 						<onclick>Skin.ToggleSetting(Next5Songs)</onclick>
 						<selected>Skin.HasSetting(Next5Songs)</selected>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
-					<control type="radiobutton" id="209">
-						<description>Show Fanart</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>35115</label>
-						<onclick>Skin.ToggleSetting(MusicFanArtIsEnable)</onclick>
-						<selected>Skin.HasSetting(MusicFanArtIsEnable)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
@@ -765,7 +936,9 @@
 					<onright>9000</onright>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
+					<!--
 					<visible>Container(9000).Hasfocus(2)</visible>
+					-->
 				</control>
 				<control type="group">
 					<posx>290</posx>
@@ -798,6 +971,7 @@
 						<onright>305</onright>
 						<onup>300</onup>
 						<ondown>300</ondown>
+						<visible>!skin.HasSetting(CarouselCustomMenu)</visible>
 					</control>
 					<control type="button" id="305">
 						<description>Menu Item Prev Button</description>
@@ -814,8 +988,10 @@
 						<onright>9000</onright>
 						<onup>300</onup>
 						<ondown>300</ondown>
+						<visible>!skin.HasSetting(CarouselCustomMenu)</visible>
 					</control>
 					<control type="list" id="9003">
+						<visible>!skin.HasSetting(CarouselCustomMenu)</visible>
 						<hitrect x="0" y="0" w="0" h="0" />
 						<posx>0</posx>
 						<posy>45</posy>
@@ -896,100 +1072,10 @@
 							</control>
 						</focusedlayout>
 						<content>
-							<item id="1">
-								<label>$INFO[Skin.String(Menu_Videos_lab)]</label>
-								<onclick>-</onclick>
-								<icon>special://skin/backgrounds/videos.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</thumb>
-							</item>
-							<item id="10">
-								<label>$INFO[Skin.String(Menu_Movie_lab)]</label>
-								<onclick>-</onclick>
-								<icon>special://skin/backgrounds/movies.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</thumb>
-								<visible>Skin.HasSetting(Menu_Movie_act) + Library.HasContent(Movies)</visible>
-							</item>
-							<item id="11">
-								<label>$INFO[Skin.String(Menu_TVShows_lab)]</label>
-								<onclick>-</onclick>
-								<icon>special://skin/backgrounds/tvshows.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</thumb>
-								<visible>Skin.HasSetting(Menu_TVShows_act) + Library.HasContent(TVShows)</visible>
-							</item>
-							<item id="2">
-								<label>$INFO[Skin.String(Menu_Music_lab)]</label>
-								<onclick>-</onclick>
-								<icon>special://skin/backgrounds/music.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</thumb>
-							</item>
-							<item id="3">
-								<label>$INFO[Skin.String(Menu_Pictures_lab)]</label>
-								<onclick>-</onclick>
-								<icon>special://skin/backgrounds/pictures.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</thumb>
-							</item>
-							<item id="4">
-								<label>$INFO[Skin.String(Menu_Programs_lab)]</label>
-								<onclick>-</onclick>
-								<icon>special://skin/backgrounds/programs.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</thumb>
-							</item>
-							<item id="5">
-								<label>$INFO[Skin.String(Menu_Weather_lab)]</label>
-								<onclick>-</onclick>
-								<icon>special://skin/backgrounds/weather.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>
-							</item>
-							<!--
-							<item id="6">
-								<label>247</label>
-								<onclick>-</onclick>
-								<icon>special://skin/backgrounds/scripts.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_Scripts_Folder)]</thumb>
-							</item>
-							-->
-							<item id="7">
-								<label>13000</label>
-								<onclick>-</onclick>
-								<icon>special://skin/backgrounds/settings.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</thumb>
-							</item>
-							<item id="8">
-								<label>24001</label>
-								<onclick>-</onclick>
-								<icon>special://skin/backgrounds/Addons.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_Addons_Folder)]</thumb>
-							</item>
-							<item id="12">
-								<label>$INFO[Skin.String(Menu_Men1_lab)]</label>
-								<visible>Skin.HasSetting(Menu_Men1_act)</visible>
-								<onclick>-</onclick>
-								<icon>special://skin/backgrounds/menu1.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_Menu1_Folder)]</thumb>
-							</item>
-							<item id="13">
-								<label>$INFO[Skin.String(Menu_Men2_lab)]</label>
-								<visible>Skin.HasSetting(Menu_Men2_act)</visible>
-								<onclick>-</onclick>
-								<icon>special://skin/backgrounds/menu2.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_Menu2_Folder)]</thumb>
-							</item>
-							<item id="14">
-								<label>$INFO[Skin.String(Menu_Men3_lab)]</label>
-								<visible>Skin.HasSetting(Menu_Men3_act)</visible>
-								<onclick>-</onclick>
-								<icon>special://skin/backgrounds/menu3.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_Menu3_Folder)]</thumb>
-							</item>
-							<item id="15">
-								<label>$INFO[Skin.String(Menu_Men4_lab)]</label>
-								<visible>Skin.HasSetting(Menu_Men4_act)</visible>
-								<onclick>-</onclick>
-								<icon>special://skin/backgrounds/menu4.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_Menu4_Folder)]</thumb>
-							</item>
+							<include>ListBack</include>
 						</content>
 					</control>
+
 					<control type="image">
 						<posx>85</posx>
 						<posy>100</posy>
@@ -1001,7 +1087,7 @@
 						<posx>95</posx>
 						<posy>110</posy>
 						<control type="group">
-							<visible>Container(9003).HasFocus(1)</visible>
+							<visible>Container(9003).HasFocus(1)+ !skin.HasSetting(CarouselCustomMenu)</visible>
 							<control type="button" id="300">
 								<description>Single Image button</description>
 								<posx>5</posx>
@@ -1061,7 +1147,7 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>Container(9003).HasFocus(2)</visible>
+							<visible>Container(9003).HasFocus(2)+ !skin.HasSetting(CarouselCustomMenu)</visible>
 							<control type="button" id="300">
 								<description>Single Image button</description>
 								<posx>5</posx>
@@ -1110,6 +1196,7 @@
 								<font>font12_title</font>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
+
 								<align>center</align>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<texturefocus border="5">button-focus.png</texturefocus>
@@ -1121,7 +1208,7 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>Container(9003).HasFocus(3)</visible>
+							<visible>Container(9003).HasFocus(3)+ !skin.HasSetting(CarouselCustomMenu)</visible>
 							<control type="button" id="300">
 								<description>Single Image button</description>
 								<posx>5</posx>
@@ -1181,7 +1268,7 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>Container(9003).HasFocus(4)</visible>
+							<visible>Container(9003).HasFocus(4)+ !skin.HasSetting(CarouselCustomMenu)</visible>
 							<control type="button" id="300">
 								<description>Single Image button</description>
 								<posx>5</posx>
@@ -1241,7 +1328,7 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>Container(9003).HasFocus(5)</visible>
+							<visible>Container(9003).HasFocus(5)+ !skin.HasSetting(CarouselCustomMenu)</visible>
 							<control type="button" id="300">
 								<description>Single Image button</description>
 								<posx>5</posx>
@@ -1301,7 +1388,7 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>Container(9003).HasFocus(7)</visible>
+							<visible>Container(9003).HasFocus(7)+ !skin.HasSetting(CarouselCustomMenu)</visible>
 							<control type="button" id="300">
 								<description>Single Image button</description>
 								<posx>5</posx>
@@ -1360,68 +1447,9 @@
 								<ondown>304</ondown>
 							</control>
 						</control>
+
 						<control type="group">
-							<visible>Container(9003).HasFocus(8)</visible>
-							<control type="button" id="300">
-								<description>Single Image button</description>
-								<posx>5</posx>
-								<posy>0</posy>
-								<width>180</width>
-								<height>40</height>
-								<label>31113</label>
-								<font>font12_title</font>
-								<textcolor>grey2</textcolor>
-								<focusedcolor>white</focusedcolor>
-								<align>center</align>
-								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<texturefocus border="5">button-focus.png</texturefocus>
-								<onclick>Skin.SetImage(Home_Custom_Back_Addons_Folder)</onclick>
-								<onleft>302</onleft>
-								<onright>301</onright>
-								<onup>304</onup>
-								<ondown>304</ondown>
-							</control>
-							<control type="button" id="301">
-								<description>Multi Image button</description>
-								<posx>190</posx>
-								<posy>0</posy>
-								<width>180</width>
-								<height>40</height>
-								<label>31114</label>
-								<font>font12_title</font>
-								<textcolor>grey2</textcolor>
-								<focusedcolor>white</focusedcolor>
-								<align>center</align>
-								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<texturefocus border="5">button-focus.png</texturefocus>
-								<onclick>Skin.SetPath(Home_Custom_Back_Addons_Folder)</onclick>
-								<onleft>300</onleft>
-								<onright>302</onright>
-								<onup>304</onup>
-								<ondown>304</ondown>
-							</control>
-							<control type="button" id="302">
-								<description>Default Image button</description>
-								<posx>375</posx>
-								<posy>0</posy>
-								<width>180</width>
-								<height>40</height>
-								<label>571</label>
-								<font>font12_title</font>
-								<textcolor>grey2</textcolor>
-								<focusedcolor>white</focusedcolor>
-								<align>center</align>
-								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<texturefocus border="5">button-focus.png</texturefocus>
-								<onclick>Skin.Reset(Home_Custom_Back_Addons_Folder)</onclick>
-								<onleft>301</onleft>
-								<onright>300</onright>
-								<onup>304</onup>
-								<ondown>304</ondown>
-							</control>
-						</control>
-						<control type="group">
-							<visible>Container(9003).HasFocus(10)</visible>
+							<visible>Container(9003).HasFocus(10)+ !skin.HasSetting(CarouselCustomMenu)</visible>
 							<control type="button" id="300">
 								<description>Single Image button</description>
 								<posx>5</posx>
@@ -1481,7 +1509,7 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>Container(9003).HasFocus(11)</visible>
+							<visible>Container(9003).HasFocus(11)+ !skin.HasSetting(CarouselCustomMenu)</visible>
 							<control type="button" id="300">
 								<description>Single Image button</description>
 								<posx>5</posx>
@@ -1541,7 +1569,7 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>Container(9003).HasFocus(12)</visible>
+							<visible>Container(9003).HasFocus(12)+ !skin.HasSetting(CarouselCustomMenu)</visible>
 							<control type="button" id="300">
 								<description>Single Image button</description>
 								<posx>5</posx>
@@ -1592,6 +1620,7 @@
 								<focusedcolor>white</focusedcolor>
 								<align>center</align>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+
 								<texturefocus border="5">button-focus.png</texturefocus>
 								<onclick>Skin.Reset(Home_Custom_Back_Menu1_Folder)</onclick>
 								<onleft>301</onleft>
@@ -1601,7 +1630,7 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>Container(9003).HasFocus(13)</visible>
+							<visible>Container(9003).HasFocus(13)+ !skin.HasSetting(CarouselCustomMenu)</visible>
 							<control type="button" id="300">
 								<description>Single Image button</description>
 								<posx>5</posx>
@@ -1661,7 +1690,7 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>Container(9003).HasFocus(14)</visible>
+							<visible>Container(9003).HasFocus(14)+ !skin.HasSetting(CarouselCustomMenu)</visible>
 							<control type="button" id="300">
 								<description>Single Image button</description>
 								<posx>5</posx>
@@ -1721,7 +1750,729 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>Container(9003).HasFocus(15)</visible>
+							<visible>Container(9003).HasFocus(15) + !skin.HasSetting(CarouselCustomMenu)</visible>
+							<control type="button" id="300">
+								<description>Single Image button</description>
+								<posx>5</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31113</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.SetImage(Home_Custom_Back_Menu4_Folder)</onclick>
+								<onleft>302</onleft>
+								<onright>301</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="301">
+								<description>Multi Image button</description>
+								<posx>190</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31114</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.SetPath(Home_Custom_Back_Menu4_Folder)</onclick>
+								<onleft>300</onleft>
+								<onright>302</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="302">
+								<description>Default Image button</description>
+								<posx>375</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>571</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.Reset(Home_Custom_Back_Menu4_Folder)</onclick>
+								<onleft>301</onleft>
+								<onright>300</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(304).HasFocus(1)+ skin.HasSetting(CarouselCustomMenu)</visible>
+							<control type="button" id="300">
+								<description>Single Image button</description>
+								<posx>5</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31113</label>
+								<font>font12_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.SetImage(Home_Custom_Back_Video_Folder)</onclick>
+								<onleft>302</onleft>
+								<onright>301</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="301">
+								<description>Multi Image button</description>
+								<posx>190</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31114</label>
+								<font>font12_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.SetPath(Home_Custom_Back_Video_Folder)</onclick>
+								<onleft>300</onleft>
+								<onright>302</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="302">
+								<description>Default Image button</description>
+								<posx>375</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>571</label>
+								<font>font12_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.Reset(Home_Custom_Back_Video_Folder)</onclick>
+								<onleft>301</onleft>
+								<onright>300</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(304).HasFocus(2)+ skin.HasSetting(CarouselCustomMenu)</visible>
+							<control type="button" id="300">
+								<description>Single Image button</description>
+								<posx>5</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31113</label>
+								<font>font12_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.SetImage(Home_Custom_Back_Music_Folder)</onclick>
+								<onleft>302</onleft>
+								<onright>301</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="301">
+								<description>Multi Image button</description>
+								<posx>190</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31114</label>
+								<font>font12_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.SetPath(Home_Custom_Back_Music_Folder)</onclick>
+								<onleft>300</onleft>
+								<onright>302</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="302">
+								<description>Default Image button</description>
+								<posx>375</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>571</label>
+								<font>font12_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.Reset(Home_Custom_Back_Music_Folder)</onclick>
+								<onleft>301</onleft>
+								<onright>300</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(304).HasFocus(3)+ skin.HasSetting(CarouselCustomMenu)</visible>
+							<control type="button" id="300">
+								<description>Single Image button</description>
+								<posx>5</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31113</label>
+								<font>font12_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.SetImage(Home_Custom_Back_Pictures_Folder)</onclick>
+								<onleft>302</onleft>
+								<onright>301</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="301">
+								<description>Multi Image button</description>
+								<posx>190</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31114</label>
+								<font>font12_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.SetPath(Home_Custom_Back_Pictures_Folder)</onclick>
+								<onleft>300</onleft>
+								<onright>302</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="302">
+								<description>Default Image button</description>
+								<posx>375</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>571</label>
+								<font>font12_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.Reset(Home_Custom_Back_Pictures_Folder)</onclick>
+								<onleft>301</onleft>
+								<onright>300</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(304).HasFocus(4)+ skin.HasSetting(CarouselCustomMenu)</visible>
+							<control type="button" id="300">
+								<description>Single Image button</description>
+								<posx>5</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31113</label>
+								<font>font12_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.SetImage(Home_Custom_Back_Programs_Folder)</onclick>
+								<onleft>302</onleft>
+								<onright>301</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="301">
+								<description>Multi Image button</description>
+								<posx>190</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31114</label>
+								<font>font12_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.SetPath(Home_Custom_Back_Programs_Folder)</onclick>
+								<onleft>300</onleft>
+								<onright>302</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="302">
+								<description>Default Image button</description>
+								<posx>375</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>571</label>
+								<font>font12_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.Reset(Home_Custom_Back_Programs_Folder)</onclick>
+								<onleft>301</onleft>
+								<onright>300</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(304).HasFocus(5)+ skin.HasSetting(CarouselCustomMenu)</visible>
+							<control type="button" id="300">
+								<description>Single Image button</description>
+								<posx>5</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31113</label>
+								<font>font12_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.SetImage(Home_Custom_Back_Weather_Folder)</onclick>
+								<onleft>302</onleft>
+								<onright>301</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="301">
+								<description>Multi Image button</description>
+								<posx>190</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31114</label>
+								<font>font12_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.SetPath(Home_Custom_Back_Weather_Folder)</onclick>
+								<onleft>300</onleft>
+								<onright>302</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="302">
+								<description>Default Image button</description>
+								<posx>375</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>571</label>
+								<font>font12_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.Reset(Home_Custom_Back_Weather_Folder)</onclick>
+								<onleft>301</onleft>
+								<onright>300</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(304).HasFocus(7)+ skin.HasSetting(CarouselCustomMenu)</visible>
+							<control type="button" id="300">
+								<description>Single Image button</description>
+								<posx>5</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31113</label>
+								<font>font12_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.SetImage(Home_Custom_Back_Settings_Folder)</onclick>
+								<onleft>302</onleft>
+								<onright>301</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="301">
+								<description>Multi Image button</description>
+								<posx>190</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31114</label>
+								<font>font12_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.SetPath(Home_Custom_Back_Settings_Folder)</onclick>
+								<onleft>300</onleft>
+								<onright>302</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="302">
+								<description>Default Image button</description>
+								<posx>375</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>571</label>
+								<font>font12_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.Reset(Home_Custom_Back_Settings_Folder)</onclick>
+								<onleft>301</onleft>
+								<onright>300</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+						</control>
+
+						<control type="group">
+							<visible>Container(304).HasFocus(10)+ skin.HasSetting(CarouselCustomMenu)</visible>
+							<control type="button" id="300">
+								<description>Single Image button</description>
+								<posx>5</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31113</label>
+								<font>font12_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.SetImage(Home_Custom_Back_Movies_Folder)</onclick>
+								<onleft>302</onleft>
+								<onright>301</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="301">
+								<description>Multi Image button</description>
+								<posx>190</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31114</label>
+								<font>font12_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.SetPath(Home_Custom_Back_Movies_Folder)</onclick>
+								<onleft>300</onleft>
+								<onright>302</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="302">
+								<description>Default Image button</description>
+								<posx>375</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>571</label>
+								<font>font12_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.Reset(Home_Custom_Back_Movies_Folder)</onclick>
+								<onleft>301</onleft>
+								<onright>300</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(304).HasFocus(11)+ skin.HasSetting(CarouselCustomMenu)</visible>
+							<control type="button" id="300">
+								<description>Single Image button</description>
+								<posx>5</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31113</label>
+								<font>font12_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.SetImage(Home_Custom_Back_TVShow_Folder)</onclick>
+								<onleft>302</onleft>
+								<onright>301</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="301">
+								<description>Multi Image button</description>
+								<posx>190</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31114</label>
+								<font>font12_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.SetPath(Home_Custom_Back_TVShow_Folder)</onclick>
+								<onleft>300</onleft>
+								<onright>302</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="302">
+								<description>Default Image button</description>
+								<posx>375</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>571</label>
+								<font>font12_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.Reset(Home_Custom_Back_TVShow_Folder)</onclick>
+								<onleft>301</onleft>
+								<onright>300</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(304).HasFocus(12)+ skin.HasSetting(CarouselCustomMenu)</visible>
+							<control type="button" id="300">
+								<description>Single Image button</description>
+								<posx>5</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31113</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.SetImage(Home_Custom_Back_Menu1_Folder)</onclick>
+								<onleft>302</onleft>
+								<onright>301</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="301">
+								<description>Multi Image button</description>
+								<posx>190</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31114</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.SetPath(Home_Custom_Back_Menu1_Folder)</onclick>
+								<onleft>300</onleft>
+								<onright>302</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="302">
+								<description>Default Image button</description>
+								<posx>375</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>571</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.Reset(Home_Custom_Back_Menu1_Folder)</onclick>
+								<onleft>301</onleft>
+								<onright>300</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(304).HasFocus(13)+ skin.HasSetting(CarouselCustomMenu)</visible>
+							<control type="button" id="300">
+								<description>Single Image button</description>
+								<posx>5</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31113</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.SetImage(Home_Custom_Back_Menu2_Folder)</onclick>
+								<onleft>302</onleft>
+								<onright>301</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="301">
+								<description>Multi Image button</description>
+								<posx>190</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31114</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.SetPath(Home_Custom_Back_Menu2_Folder)</onclick>
+								<onleft>300</onleft>
+								<onright>302</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="302">
+								<description>Default Image button</description>
+								<posx>375</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>571</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.Reset(Home_Custom_Back_Menu2_Folder)</onclick>
+								<onleft>301</onleft>
+								<onright>300</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(304).HasFocus(14)+ skin.HasSetting(CarouselCustomMenu)</visible>
+							<control type="button" id="300">
+								<description>Single Image button</description>
+								<posx>5</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31113</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.SetImage(Home_Custom_Back_Menu3_Folder)</onclick>
+								<onleft>302</onleft>
+								<onright>301</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="301">
+								<description>Multi Image button</description>
+								<posx>190</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31114</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.SetPath(Home_Custom_Back_Menu3_Folder)</onclick>
+								<onleft>300</onleft>
+								<onright>302</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="302">
+								<description>Default Image button</description>
+								<posx>375</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>571</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.Reset(Home_Custom_Back_Menu3_Folder)</onclick>
+								<onleft>301</onleft>
+								<onright>300</onright>
+								<onup>304</onup>
+
+								<ondown>304</ondown>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(304).HasFocus(15) + skin.HasSetting(CarouselCustomMenu)</visible>
 							<control type="button" id="300">
 								<description>Single Image button</description>
 								<posx>5</posx>
@@ -1782,6 +2533,7 @@
 						</control>
 					</control>
 					<control type="multiimage">
+						<visible>!skin.HasSetting(CarouselCustomMenu)</visible>
 						<posx>95</posx>
 						<posy>160</posy>
 						<width>560</width>
@@ -1791,9 +2543,21 @@
 						<randomize>true</randomize>
 						<fadetime>500</fadetime>
 					</control>
-					<control type="label">
+					<control type="multiimage">
+						<visible>skin.HasSetting(CarouselCustomMenu)</visible>
 						<posx>95</posx>
-						<posy>505</posy>
+						<posy>160</posy>
+						<width>560</width>
+						<height>335</height>
+						<imagepath background="true">$INFO[Container(304).ListItem.Icon]</imagepath>
+						<timeperimage>6000</timeperimage>
+						<randomize>true</randomize>
+						<fadetime>500</fadetime>
+					</control>
+					<control type="label">
+						<visible>!skin.HasSetting(CarouselCustomMenu)</visible>
+						<posx>80</posx>
+						<posy>500</posy>
 						<width>560</width>
 						<height>20</height>
 						<align>center</align>
@@ -1803,7 +2567,29 @@
 						<label fallback="571">$INFO[Container(9003).ListItem.Thumb]</label>
 						<textcolor>white</textcolor>
 					</control>
+					<control type="wraplist" id="304">
+						<visible>skin.HasSetting(CarouselCustomMenu)</visible>
+						<posx>37</posx>
+						<posy>197</posy>
+						<width>666</width>
+						<height>368</height>
+						<onleft>304</onleft>
+						<onright>304</onright>
+						<onup>300</onup>
+						<ondown>9000</ondown>
+						<scrolltime>200</scrolltime>
+						<pagecontrol>-</pagecontrol>
+						<focusposition>0</focusposition>
+						<orientation>horizontal</orientation>
+						<itemlayout height="1" width="1" />
+						<focusedlayout height="368" width="666" />
+						<content>
+							<include>ListBack</include>
+						</content>
+					</control>
+					<include condition="skin.HasSetting(CarouselCustomMenu)">BackCarousel</include>
 				</control>
+
 				<control type="group">
 					<posx>290</posx>
 					<posy>60</posy>
@@ -1832,7 +2618,10 @@
 					<orientation>vertical</orientation>
 					<visible>Container(9000).Hasfocus(4)</visible>
 				</control>
-				<include>CustomMenu</include>
+				<!-- choix du type de setting pour les entrées normal ou carousel -->
+				<include condition="!Skin.HasSetting(CarouselCustomMenu)">CustomMenu</include>
+				<include condition="Skin.HasSetting(CarouselCustomMenu)">CustomMenuCarousel</include>
+<!-- end -->
 			</control>
 		</control>
 		<include>BehindDialogFadeOut</include>

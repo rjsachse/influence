@@ -168,6 +168,9 @@
   <string id="35033">Script</string>
   <string id="35034">Addon</string>
   <string id="35036">Free</string>
+  <string id="35037">Use transparent background</string>
+  <string id="35038">Use icons for sub-menu</string>
+  <string id="35039">Use Carousel Mod for customize Menu</string>
   <string id="35040">Latest albums</string>
   <string id="35103">IMDB Rating:</string>
   <string id="35104">Born</string>
@@ -176,4 +179,6 @@
   <string id="35111">Views</string>
   <string id="35112">Activate/Desactivate</string>
   <string id="35113">Library Statistics</string>
+  <string id="35114">Activate TvTunes script</string>
+  <string id="35115">Show musical fanart</string>
 </strings>
