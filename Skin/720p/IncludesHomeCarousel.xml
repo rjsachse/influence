@@ -1,120 +1,150 @@
 <includes>
-	<include name="IncludeHomeCarousel">
+
+
+    <include name="IncludeHomeCarousel">
+<include>IncludesHomeStat</include>
 <!-- Next 5 Songs-->
-		<include>IncludesHomeStat</include>
-		<control type="group">
-			<posx>0</posx>
-			<posy>400r</posy>
-			<visible>Skin.HasSetting(Next5Songs)</visible>
-			<animation type="Conditional" reversible="false" condition="true" loop="true">
-				<effect type="slide" start="0,400" end="0,0" time="500" delay="21500" />
-				<effect type="slide" start="0,0" end="0,400" time="500" delay="28000" />
-				<!--<effect delay="15000" type="fade" start="100" end="0" time="5000"  /> -->
-			</animation>
-			<control type="label">
-				<posx>10r</posx>
-				<posy>200</posy>
-				<height>30</height>
-				<width>660</width>
-				<label>Next Tracks:</label>
-				<textcolor>blue</textcolor>
-				<font>font12_title</font>
-				<align>right</align>
-				<aligny>center</aligny>
-				<shadowcolor>black</shadowcolor>
-				<visible>!IsEmpty(MusicPlayer.offset(1).Artist)</visible>
-			</control>
 			<control type="group">
+				<posx>0</posx>
+				<posy>400r</posy>
+				<visible>Skin.HasSetting(Next5Songs)</visible>
+				<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<effect type="fade" start="0" end="100" time="500" delay="22000" />
+					<effect type="fade" start="100" end="0" time="500" delay="29000" />
+
+				</animation>
 				<control type="label">
+					<posx>10r</posx>
+					<posy>200</posy>
+					<height>30</height>
+					<width>660</width>
+					<label>Next Tracks:</label>
+					<textcolor>blue</textcolor>
+					<font>font12_title</font>
+					<align>right</align>
+				        <aligny>center</aligny>
+					<shadowcolor>black</shadowcolor>
 					<visible>!IsEmpty(MusicPlayer.offset(1).Artist)</visible>
-					<posx>10r</posx>
-					<posy>235</posy>
-					<width>410</width>
-					<label>[COLOR blue]1:[/COLOR] $INFO[MusicPlayer.offset(1).Artist]: $INFO[MusicPlayer.offset(1).Title]</label>
-					<align>right</align>
-					<aligny>center</aligny>
-					<font>font12_title</font>
-					<shadowcolor>black</shadowcolor>
-
 				</control>
-				<control type="label">
-					<visible>!IsEmpty(MusicPlayer.offset(2).Artist)</visible>
-					<posx>10r</posx>
-					<posy>260</posy>
-					<width>410</width>
-					<label>[COLOR blue]2:[/COLOR] $INFO[MusicPlayer.offset(2).Artist]: $INFO[MusicPlayer.offset(2).Title]</label>
-					<align>right</align>
-					<aligny>center</aligny>
-					<font>font12_title</font>
-					<shadowcolor>black</shadowcolor>
-
-				</control>
-				<control type="label">
-					<visible>!IsEmpty(MusicPlayer.offset(3).Artist)</visible>
-					<posx>10r</posx>
-					<posy>285</posy>
-					<width>410</width>
-					<label>[COLOR blue]3:[/COLOR] $INFO[MusicPlayer.offset(3).Artist]: $INFO[MusicPlayer.offset(3).Title]</label>
-					<align>right</align>
-					<aligny>center</aligny>
-					<font>font12_title</font>
-					<shadowcolor>black</shadowcolor>
-
-				</control>
-				<control type="label">
-					<visible>!IsEmpty(MusicPlayer.offset(4).Artist)</visible>
-					<posx>10r</posx>
-					<posy>310</posy>
-					<width>410</width>
-					<label>[COLOR blue]4:[/COLOR] $INFO[MusicPlayer.offset(4).Artist]: $INFO[MusicPlayer.offset(4).Title]</label>
-					<align>right</align>
-					<aligny>center</aligny>
-					<font>font12_title</font>
-					<shadowcolor>black</shadowcolor>
-
-				</control>
-				<control type="label">
-
-					<visible>!IsEmpty(MusicPlayer.offset(5).Artist)</visible>
-					<posx>10r</posx>
-					<posy>335</posy>
-					<width>410</width>
-					<label>[COLOR blue]5:[/COLOR] $INFO[MusicPlayer.offset(5).Artist]: $INFO[MusicPlayer.offset(5).Title]</label>
-					<align>right</align>
-					<aligny>center</aligny>
-					<font>font12_title</font>
-					<shadowcolor>black</shadowcolor>
+				<control type="group">
+					<control type="label">
+						<visible>!IsEmpty(MusicPlayer.offset(1).Artist)</visible>
+						<posx>10r</posx>
+						<posy>235</posy>
+						<width>410</width>
+						<label>[COLOR blue]1:[/COLOR] $INFO[MusicPlayer.offset(1).Artist]: $INFO[MusicPlayer.offset(1).Title]</label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>font12_title</font>
+						<shadowcolor>black</shadowcolor>
+						
+					</control>
+					<control type="label">
+						<visible>!IsEmpty(MusicPlayer.offset(2).Artist)</visible>
+						<posx>10r</posx>
+						<posy>260</posy>
+						<width>410</width>
+						<label>[COLOR blue]2:[/COLOR] $INFO[MusicPlayer.offset(2).Artist]: $INFO[MusicPlayer.offset(2).Title]</label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>font12_title</font>
+						<shadowcolor>black</shadowcolor>
+						
+					</control>
+					<control type="label">
+						<visible>!IsEmpty(MusicPlayer.offset(3).Artist)</visible>
+						<posx>10r</posx>
+						<posy>285</posy>
+						<width>410</width>
+						<label>[COLOR blue]3:[/COLOR] $INFO[MusicPlayer.offset(3).Artist]: $INFO[MusicPlayer.offset(3).Title]</label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>font12_title</font>
+						<shadowcolor>black</shadowcolor>
+						
+					</control>
+					<control type="label">
+						<visible>!IsEmpty(MusicPlayer.offset(4).Artist)</visible>
+						<posx>10r</posx>
+						<posy>310</posy>
+						<width>410</width>
+						<label>[COLOR blue]4:[/COLOR] $INFO[MusicPlayer.offset(4).Artist]: $INFO[MusicPlayer.offset(4).Title]</label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>font12_title</font>
+						<shadowcolor>black</shadowcolor>
+						
+					</control>
+					<control type="label">
+						
+						<visible>!IsEmpty(MusicPlayer.offset(5).Artist)</visible>
+						<posx>10r</posx>
+						<posy>335</posy>
+						<width>410</width>
+						<label>[COLOR blue]5:[/COLOR] $INFO[MusicPlayer.offset(5).Artist]: $INFO[MusicPlayer.offset(5).Title]</label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>font12_title</font>
+						<shadowcolor>black</shadowcolor>
+					</control>
 				</control>
 			</control>
-		</control>
 <!-- Next 5 Songs END -->
 
-
+		
 		<!-- Music Info Carousel -->
+		
 
 		<control type="group">
 			<posx>0</posx>
-			<posy>400r</posy>
+			<posy>380r</posy>
 			<visible>Player.HasAudio + !Skin.HasSetting(homepageMusicinfo)</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
 			<animation type="Conditional" reversible="false" condition="Skin.HasSetting(Next5Songs)" loop="true">
 
-				<effect type="slide" start="0,400" end="0,0" time="500" delay="0" />
-				<effect type="slide" start="0,0" end="0,400" time="500" delay="21000" />
-				<effect type="slide" start="0,0" end="0,400" time="500" delay="28000" />
-
-
-
+				<effect type="fade" start="0" end="100" time="1000" delay="0" />
+				<effect type="fade" start="100" end="0" time="1000" delay="21000" />
+				<effect type="fade" start="100" end="0" time="1000" delay="29000" />
+				
+				
+			
 			</animation>
-			<animation type="Conditional" reversible="false" condition="!Skin.HasSetting(Next5Songs)" loop="true">
-				<animation effect="slide" end="0,30" time="0" condition="!system.getbool(lookandfeel.enablerssfeeds)">conditional</animation>
-				<animation effect="slide" end="-70,0" condition="Skin.HasSetting(CDart)">Conditional</animation>
-			</animation>
-
+			<animation effect="slide" end="0,30" time="0" condition="!system.getbool(lookandfeel.enablerssfeeds)">conditional</animation>
+			<animation effect="slide" end="-70,0" condition="Skin.HasSetting(CDart)">Conditional</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>150</posy>
+				<width>1380</width>
+				<height>250</height>
+				<texture>HomeNowPlayingBack.png</texture>
+			</control>
+			<control type="image">
+				<description>Cd overlay</description>
+				<posx>110r</posx>
+				<posy>171</posy>
+				<animation effect="slide" start="-70" end="0" time="900" tween="cubic" easing="out" delay="2000">WindowOpen</animation>
+				<animation effect="rotate" end="-360" center="auto" time="2250" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+				<width>160</width>
+				<height>165</height>
+				<texture fallback="cdart/default.png">$INFO[Player.FolderPath]/cdart.png</texture>
+				<aspectratio align="bottom">keep</aspectratio>
+				<visible>Skin.HasSetting(CDart)</visible>
+			</control>
+			<control type="image">
+				<description>Cover image</description>
+				<posx>200r</posx>
+				<posy>163</posy>
+				<width>180</width>
+				<height>180</height>
+				<aspectratio aligny="bottom">stretch</aspectratio>
+				<texture>$INFO[MusicPlayer.Cover]</texture>
+				<bordertexture border="8">ThumbBorder.png</bordertexture>
+				<bordersize>5</bordersize>
+			</control>
 			<control type="label">
 				<description>NowPlaying label</description>
-				<posx>10r</posx>
+				<posx>210r</posx>
 				<posy>210</posy>
 				<height>30</height>
 				<width>660</width>
@@ -127,7 +157,7 @@
 			</control>
 			<control type="label">
 				<description>Artist label</description>
-				<posx>10r</posx>
+				<posx>210r</posx>
 				<posy>235</posy>
 				<height>30</height>
 				<width>660</width>
@@ -140,7 +170,7 @@
 			</control>
 			<control type="label">
 				<description>Album Label</description>
-				<posx>10r</posx>
+				<posx>210r</posx>
 				<posy>260</posy>
 				<height>30</height>
 				<width>660</width>
@@ -153,7 +183,7 @@
 			</control>
 			<control type="label">
 				<description>Title label</description>
-				<posx>10r</posx>
+				<posx>210r</posx>
 				<posy>285</posy>
 				<height>30</height>
 				<width>660</width>
@@ -166,7 +196,7 @@
 			</control>
 			<control type="label">
 				<description>Time Label</description>
-				<posx>10r</posx>
+				<posx>210r</posx>
 				<posy>310</posy>
 				<height>30</height>
 				<width>325</width>
@@ -195,7 +225,7 @@
 			</control>
 			<control type="group">
 				<visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes)</visible>
-
+				
 				<control type="label">
 					<description>NowPlaying label</description>
 					<posx>10r</posx>
@@ -238,7 +268,7 @@
 			</control>
 			<control type="group">
 				<visible>VideoPlayer.Content(Movies)</visible>
-
+				
 				<control type="label">
 					<description>NowPlaying label</description>
 					<posx>10r</posx>
@@ -307,7 +337,7 @@
 			</control>
 			<control type="group">
 				<visible>VideoPlayer.Content(Episodes)</visible>
-
+				
 				<control type="label">
 					<description>NowPlaying label</description>
 					<posx>10r</posx>
@@ -380,7 +410,14 @@
 			<control type="group" id="9001">
 				<posx>0</posx>
 				<posy>548</posy>
-
+				<animation effect="fade" time="500">Visible</animation>
+        <animation effect="fade" time="500">Hidden</animation>
+        <animation condition="System.IdleTime(16)" type="Conditional" loop="true" reversible="false">
+            <effect type="rotatex" tween="sine" easing="inout" acceleration="-1" center="auto" start="0" end="3600" time="180000" />
+            <effect type="rotatey" tween="sine" easing="inout" acceleration="-1" center="auto" start="0" end="3600" time="18000" />
+            <effect type="rotatey" tween="sine" easing="inout" acceleration="-1" center="auto" start="0" end="-3600" time="18000" delay="89000" />
+            <effect type="rotatex" tween="sine" easing="inout" acceleration="-1" center="auto" start="0" end="-3600" time="180000" delay="89000" />
+        </animation>
 				<!--
 				<visible>[Container(9000).HasFocus(11) | Container(9000).HasFocus(10) | Container(9000).HasFocus(20) | Container(9000).HasFocus(21) |  Container(9000).HasFocus(22) |  Container(9000).HasFocus(23)| Container(9000).HasFocus(2) | Container(9000).HasFocus(3) | Container(9000).HasFocus(5) | Container(9000).HasFocus(1) | Container(9000).HasFocus(4) | Container(9000).HasFocus(6)]</visible>
 				-->
@@ -390,11 +427,11 @@
 				<animation effect="fade" start="0" end="100" delay="300" time="200" condition="ControlGroup(9001).HasFocus">conditional</animation>
 				<animation effect="fade" start="100" end="0" time="0" condition="ControlGroup(9001).HasFocus">WindowClose</animation>
 				-->
-
+			
 				<control type="wraplist" id="945">
-					<posx>40</posx>
+					<posx>10</posx>
 					<height>205</height>
-					<width>660</width>
+					<width>665</width>
 					<onleft>945</onleft>
 					<onright>945</onright>
 					<onup>9000</onup>
@@ -406,7 +443,7 @@
 					<itemlayout width="129" height="33">
 						<control type="label">
 							<posx>74</posx>
-							<posy>0</posy>
+							<posy>15</posy>
 							<height>130</height>
 							<width>129</width>
 							<align>center</align>
@@ -430,7 +467,7 @@
 					<focusedlayout width="129" height="83">
 						<control type="label">
 							<posx>74</posx>
-							<posy>10</posy>
+							<posy>5</posy>
 							<height>130</height>
 							<width>129</width>
 							<align>center</align>
@@ -484,7 +521,7 @@
 <!-- Programs End  -->
 <!-- TV -->
 						<item id="101">
-
+							
 							<label>$INFO[Skin.String(Menu_TVShows_sub1_lab)]</label>
 							<label2>$INFO[Skin.String(Menu_TVShows_sub1_Ico)]</label2>
 							<onclick>$INFO[Skin.String(Menu_TVShows_sub1_run)]</onclick>
@@ -502,7 +539,7 @@
 							<onclick>$INFO[Skin.String(Menu_TVShows_sub3_run)]</onclick>
 							<visible>Container(9000).HasFocus(11) + Skin.HasSetting(Menu_TVShows_sub3_act)</visible>
 						</item>
-
+						
 						<item id="104">
 							<label>$INFO[Skin.String(Menu_TVShows_sub4_lab)]</label>
 							<label2>$INFO[Skin.String(Menu_TVShows_sub4_Ico)]</label2>
@@ -1042,286 +1079,286 @@
 <!-- Custom Menu 4 End -->
 					</content>
 				</control>
-
+					
 <!-- Alternate Submenu END -->
 </control>
 
-<control type="button" id="8999">
-	<description>Run Recently added</description>
-	<posx>-20</posx>
-	<posy>-20</posy>
-	<width>1</width>
-	<height>1</height>
-	<label>-</label>
-	<font>-</font>
-	<onfocus>Skin.Reset(LibraryUpdated)</onfocus>
-	<onfocus>XBMC.RunScript(script.recentlyadded,limit=4&amp;albums=True&amp;totals=True)</onfocus>
-	<onfocus>SetFocus(9000)</onfocus>
-	<texturenofocus>-</texturenofocus>
-	<texturefocus>-</texturefocus>
-	<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
-</control>
-<control type="button" id="8999">
-	<description>Don't run Recently added</description>
-	<posx>-20</posx>
-	<posy>-20</posy>
-	<width>1</width>
-	<height>1</height>
-	<label>-</label>
-	<font>-</font>
-	<onfocus>SetFocus(9000)</onfocus>
-	<texturenofocus>-</texturenofocus>
-	<texturefocus>-</texturefocus>
-	<visible>!Skin.HasSetting(homepageHideRecentlyAdded)</visible>
-</control>
+			<control type="button" id="8999">
+				<description>Run Recently added</description>
+				<posx>-20</posx>
+				<posy>-20</posy>
+				<width>1</width>
+				<height>1</height>
+				<label>-</label>
+				<font>-</font>
+				<onfocus>Skin.Reset(LibraryUpdated)</onfocus>
+				<onfocus>XBMC.RunScript(script.recentlyadded,limit=4&amp;albums=True&amp;totals=True)</onfocus>
+				<onfocus>SetFocus(9000)</onfocus>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
+			</control>
+			<control type="button" id="8999">
+				<description>Don't run Recently added</description>
+				<posx>-20</posx>
+				<posy>-20</posy>
+				<width>1</width>
+				<height>1</height>
+				<label>-</label>
+				<font>-</font>
+				<onfocus>SetFocus(9000)</onfocus>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<visible>!Skin.HasSetting(homepageHideRecentlyAdded)</visible>
+			</control>
+	
 
+	 <control type="wraplist" id="9000">
+	
+            <posx>27</posx>
+            <posy>207</posy>
+            <width>666</width>
+            <height>368</height>
+            <onleft>9000</onleft>
+            <onright>9000</onright>
+            <onup>300</onup>
+            <ondown>9001</ondown>
+            <scrolltime>200</scrolltime>
+            <pagecontrol>-</pagecontrol>
+            <focusposition>0</focusposition>
+            <orientation>horizontal</orientation>
+            <itemlayout height="1" width="1" />
+            <focusedlayout height="368" width="666" />
+           		 <content>
+                			<item id="6">
+						<label>$INFO[Skin.String(Menu_Weather_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Weather_run)]</onclick>
+						<icon>$INFO[Skin.String(Menu_Weather_Back)]</icon>
+					        <label2>$INFO[Skin.String(Menu_Weather_Ico)]</label2>				
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>
+						<visible>Skin.HasSetting(Menu_Weather_act)</visible>
+						<visible>!Skin.HasSetting(ShowWeatherFanart) | IsEmpty(Skin.String(WeatherFanartDir))</visible>
+					</item>
+					<item id="6">
+						<label>$INFO[Skin.String(Menu_Weather_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Weather_run)]</onclick>
+						<icon>$INFO[Skin.String(Menu_Weather_Back)]</icon>
+						<label2>$INFO[Skin.String(Menu_Weather_Ico)]</label2>
+						<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</thumb>
+						<visible>Skin.HasSetting(Menu_Weather_act)</visible>
+						<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
+					</item>
+					<item id="4">
+						<label>$INFO[Skin.String(Menu_Pictures_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Pictures_run)]</onclick>
+						 <label2>$INFO[Skin.String(Menu_Pictures_Ico)]</label2>
+						<icon>$INFO[Skin.String(Menu_Pictures_Back)]</icon>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</thumb>
+						<visible>Skin.HasSetting(Menu_Pictures_act)</visible>
+					</item>
+					<item id="3">
+						<label>$INFO[Skin.String(Menu_Music_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Music_run)]</onclick>
+						<icon>$INFO[Skin.String(Menu_Music_Back)]</icon>
+						<label2>$INFO[Skin.String(Menu_Music_Ico)]</label2>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</thumb>
+						<visible>Skin.HasSetting(Menu_Music_act)</visible>
+					</item>
+					<item id="2">
+						<label>$INFO[Skin.String(Menu_Videos_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Videos_run)]</onclick>
+						<icon>$INFO[Skin.String(Menu_Videos_Back)]</icon>
+						<label2>$INFO[Skin.String(Menu_Videos_Ico)]</label2>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</thumb>
+						<visible>Skin.HasSetting(Menu_Videos_act)</visible>
+					</item>
+					
+					<item id="10">
+						<label>$INFO[Skin.String(Menu_Movie_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Movie_run)]</onclick>
+						<icon>$INFO[Skin.String(Menu_Movie_Back)]</icon>
+						<label2>$INFO[Skin.String(Menu_Movie_Ico)]</label2>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</thumb>
+						<visible>Skin.HasSetting(Menu_Movie_act) + Library.HasContent(Movies)</visible>
+					</item>
+					<item id="11">
+						<label>$INFO[Skin.String(Menu_TVShows_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_TVShows_run)]</onclick>
+						<icon>$INFO[Skin.String(Menu_TVShows_Back)]</icon>
+						<label2>$INFO[Skin.String(Menu_TVShows_Ico)]</label2>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</thumb>
+						<visible>Skin.HasSetting(Menu_TVShows_act) + Library.HasContent(TVShows)</visible>
+					</item>
+<!-- Custom Home -->					
+					<item id="20">
+						<label>$INFO[Skin.String(Menu_Men1_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Men1_run)]</onclick>
+						<icon>$INFO[Skin.String(Menu_Men1_Back)]</icon>
+						<label2>$INFO[Skin.String(Menu_Men1_Ico)]</label2>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Menu1_Folder)]</thumb>
+						<visible>Skin.HasSetting(Menu_Men1_act)</visible>
+					</item>
+					<item id="21">
+						<label>$INFO[Skin.String(Menu_Men2_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Men2_run)]</onclick>
+						<icon>$INFO[Skin.String(Menu_Men2_Back)]</icon>
+						<label2>$INFO[Skin.String(Menu_Men2_Ico)]</label2>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Menu2_Folder)]</thumb>
+						<visible>Skin.HasSetting(Menu_Men2_act)</visible>
+					</item>
+					<item id="22">
+						<label>$INFO[Skin.String(Menu_Men3_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Men3_run)]</onclick>
+						<icon>$INFO[Skin.String(Menu_Men3_Back)]</icon>
+						<label2>$INFO[Skin.String(Menu_Men3_Ico)]</label2>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Menu3_Folder)]</thumb>
+						<visible>Skin.HasSetting(Menu_Men3_act)</visible>
+					</item>
+					<item id="23">
+						<label>$INFO[Skin.String(Menu_Men4_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Men4_run)]</onclick>
+						<icon>$INFO[Skin.String(Menu_Men4_Back)]</icon>
+						<label2>$INFO[Skin.String(Menu_Men4_Ico)]</label2>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Menu4_Folder)]</thumb>
+						<visible>Skin.HasSetting(Menu_Men4_act)</visible>
+					</item>
+					<item id="1">
+						<label>$INFO[Skin.String(Menu_Programs_lab)]</label>
+						<onclick>$INFO[Skin.String(Menu_Programs_run)]</onclick>
+						<icon>$INFO[Skin.String(Menu_Programs_Back)]</icon>
+						<label2>$INFO[Skin.String(Menu_Programs_Ico)]</label2>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</thumb>
+						<visible>Skin.HasSetting(Menu_Programs_act)</visible>
+					</item>
+					<item id="5">
+						<label>13000</label>
+						<onclick>ActivateWindow(Settings)</onclick>
+						<icon>special://skin/backgrounds/settings.jpg</icon>
+						<label2>Carousel/parametres.png</label2>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</thumb>
+						<visible>!Skin.HasSetting(HomeMenuNoSettingsButton)</visible>
+					</item>
+            </content>
 
-<control type="wraplist" id="9000">
-
-	<posx>27</posx>
-	<posy>207</posy>
-	<width>666</width>
-	<height>368</height>
-	<onleft>9000</onleft>
-	<onright>9000</onright>
-	<onup>300</onup>
-	<ondown>9001</ondown>
-	<scrolltime>200</scrolltime>
-	<pagecontrol>-</pagecontrol>
-	<focusposition>0</focusposition>
-	<orientation>horizontal</orientation>
-	<itemlayout height="1" width="1" />
-	<focusedlayout height="368" width="666" />
-	<content>
-		<item id="6">
-			<label>$INFO[Skin.String(Menu_Weather_lab)]</label>
-			<onclick>$INFO[Skin.String(Menu_Weather_run)]</onclick>
-			<icon>$INFO[Skin.String(Menu_Weather_Back)]</icon>
-			<label2>$INFO[Skin.String(Menu_Weather_Ico)]</label2>				
-			<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>
-			<visible>Skin.HasSetting(Menu_Weather_act)</visible>
-			<visible>!Skin.HasSetting(ShowWeatherFanart) | IsEmpty(Skin.String(WeatherFanartDir))</visible>
-		</item>
-		<item id="6">
-			<label>$INFO[Skin.String(Menu_Weather_lab)]</label>
-			<onclick>$INFO[Skin.String(Menu_Weather_run)]</onclick>
-			<icon>$INFO[Skin.String(Menu_Weather_Back)]</icon>
-			<label2>$INFO[Skin.String(Menu_Weather_Ico)]</label2>
-			<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</thumb>
-			<visible>Skin.HasSetting(Menu_Weather_act)</visible>
-			<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
-		</item>
-		<item id="4">
-			<label>$INFO[Skin.String(Menu_Pictures_lab)]</label>
-			<onclick>$INFO[Skin.String(Menu_Pictures_run)]</onclick>
-			<label2>$INFO[Skin.String(Menu_Pictures_Ico)]</label2>
-			<icon>$INFO[Skin.String(Menu_Pictures_Back)]</icon>
-			<thumb>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</thumb>
-			<visible>Skin.HasSetting(Menu_Pictures_act)</visible>
-		</item>
-		<item id="3">
-			<label>$INFO[Skin.String(Menu_Music_lab)]</label>
-			<onclick>$INFO[Skin.String(Menu_Music_run)]</onclick>
-			<icon>$INFO[Skin.String(Menu_Music_Back)]</icon>
-			<label2>$INFO[Skin.String(Menu_Music_Ico)]</label2>
-			<thumb>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</thumb>
-			<visible>Skin.HasSetting(Menu_Music_act)</visible>
-		</item>
-		<item id="2">
-			<label>$INFO[Skin.String(Menu_Videos_lab)]</label>
-			<onclick>$INFO[Skin.String(Menu_Videos_run)]</onclick>
-			<icon>$INFO[Skin.String(Menu_Videos_Back)]</icon>
-			<label2>$INFO[Skin.String(Menu_Videos_Ico)]</label2>
-			<thumb>$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</thumb>
-			<visible>Skin.HasSetting(Menu_Videos_act)</visible>
-		</item>
-
-		<item id="10">
-			<label>$INFO[Skin.String(Menu_Movie_lab)]</label>
-			<onclick>$INFO[Skin.String(Menu_Movie_run)]</onclick>
-			<icon>$INFO[Skin.String(Menu_Movie_Back)]</icon>
-			<label2>$INFO[Skin.String(Menu_Movie_Ico)]</label2>
-			<thumb>$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</thumb>
-			<visible>Skin.HasSetting(Menu_Movie_act) + Library.HasContent(Movies)</visible>
-		</item>
-		<item id="11">
-			<label>$INFO[Skin.String(Menu_TVShows_lab)]</label>
-			<onclick>$INFO[Skin.String(Menu_TVShows_run)]</onclick>
-			<icon>$INFO[Skin.String(Menu_TVShows_Back)]</icon>
-			<label2>$INFO[Skin.String(Menu_TVShows_Ico)]</label2>
-			<thumb>$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</thumb>
-			<visible>Skin.HasSetting(Menu_TVShows_act) + Library.HasContent(TVShows)</visible>
-		</item>
-		<!-- Custom Home -->					
-		<item id="20">
-			<label>$INFO[Skin.String(Menu_Men1_lab)]</label>
-			<onclick>$INFO[Skin.String(Menu_Men1_run)]</onclick>
-			<icon>$INFO[Skin.String(Menu_Men1_Back)]</icon>
-			<label2>$INFO[Skin.String(Menu_Men1_Ico)]</label2>
-			<thumb>$INFO[Skin.String(Home_Custom_Back_Menu1_Folder)]</thumb>
-			<visible>Skin.HasSetting(Menu_Men1_act)</visible>
-		</item>
-		<item id="21">
-			<label>$INFO[Skin.String(Menu_Men2_lab)]</label>
-			<onclick>$INFO[Skin.String(Menu_Men2_run)]</onclick>
-			<icon>$INFO[Skin.String(Menu_Men2_Back)]</icon>
-			<label2>$INFO[Skin.String(Menu_Men2_Ico)]</label2>
-			<thumb>$INFO[Skin.String(Home_Custom_Back_Menu2_Folder)]</thumb>
-			<visible>Skin.HasSetting(Menu_Men2_act)</visible>
-		</item>
-		<item id="22">
-			<label>$INFO[Skin.String(Menu_Men3_lab)]</label>
-			<onclick>$INFO[Skin.String(Menu_Men3_run)]</onclick>
-			<icon>$INFO[Skin.String(Menu_Men3_Back)]</icon>
-			<label2>$INFO[Skin.String(Menu_Men3_Ico)]</label2>
-			<thumb>$INFO[Skin.String(Home_Custom_Back_Menu3_Folder)]</thumb>
-			<visible>Skin.HasSetting(Menu_Men3_act)</visible>
-		</item>
-		<item id="23">
-			<label>$INFO[Skin.String(Menu_Men4_lab)]</label>
-			<onclick>$INFO[Skin.String(Menu_Men4_run)]</onclick>
-			<icon>$INFO[Skin.String(Menu_Men4_Back)]</icon>
-			<label2>$INFO[Skin.String(Menu_Men4_Ico)]</label2>
-			<thumb>$INFO[Skin.String(Home_Custom_Back_Menu4_Folder)]</thumb>
-			<visible>Skin.HasSetting(Menu_Men4_act)</visible>
-		</item>
-		<item id="1">
-			<label>$INFO[Skin.String(Menu_Programs_lab)]</label>
-			<onclick>$INFO[Skin.String(Menu_Programs_run)]</onclick>
-			<icon>$INFO[Skin.String(Menu_Programs_Back)]</icon>
-			<label2>$INFO[Skin.String(Menu_Programs_Ico)]</label2>
-			<thumb>$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</thumb>
-			<visible>Skin.HasSetting(Menu_Programs_act)</visible>
-		</item>
-		<item id="5">
-			<label>13000</label>
-			<onclick>ActivateWindow(Settings)</onclick>
-			<icon>special://skin/backgrounds/settings.jpg</icon>
-			<label2>Carousel/parametres.png</label2>
-			<thumb>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</thumb>
-			<visible>!Skin.HasSetting(HomeMenuNoSettingsButton)</visible>
-		</item>
-	</content>
-
-</control>
-
-<include>Carousel</include>
-<control type="image">
-	<description>LOGO</description>
-	<posx>10</posx>
-	<posy>10</posy>
-	<width>140</width>
-	<height>40</height>
-	<texture>XBMC_Logo.png</texture>
-</control>
-<control type="image">
-	<description>LOGO Mirror</description>
-	<posx>10</posx>
-	<posy>42</posy>
-	<width>140</width>
-	<height>40</height>
-	<texture diffuse="diffuse_mirror.png" flipy="true">XBMC_Logo.png</texture>
-</control>
-<control type="image">
-	<posx>0</posx>
-	<posy>100r</posy>
-	<width>256</width>
-	<height>100</height>
-	<texture>HomeButtonsBack.png</texture>
-</control>
-<control type="group" id="10">
-	<posx>15</posx>
-	<posy>55r</posy>
-	<control type="button" id="20">
-		<description>Power push button</description>
-		<posx>90</posx>
-		<posy>0</posy>
-		<width>43</width>
-		<height>43</height>
-		<label>31003</label>
-		<font>-</font>
-		<aligny>-</aligny>
-		<onclick>ActivateWindow(ShutdownMenu)</onclick>
-		<texturefocus>home-power-FO.png</texturefocus>
-		<texturenofocus>home-power.png</texturenofocus>
-		<onleft>21</onleft>
-		<onright>9000</onright>
-		<onup>9000</onup>
-		<ondown>9000</ondown>
-	</control>
-	<control type="button" id="21">
-		<description>Favourites push button</description>
-		<posx>45</posx>
-		<posy>0</posy>
-		<width>43</width>
-		<height>43</height>
-		<label>1036</label>
-		<font>-</font>
-		<aligny>-</aligny>
-		<onclick>ActivateWindow(Favourites)</onclick>
-		<texturefocus>home-favourites-FO.png</texturefocus>
-		<texturenofocus>home-favourites.png</texturenofocus>
-		<onleft>22</onleft>
-		<onright>20</onright>
-		<onup>9000</onup>
-		<ondown>9000</ondown>
-	</control>
-	<control type="button" id="22">
-		<description>Play Disc Media push button</description>
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>43</width>
-		<height>43</height>
-		<label>16004</label>
-		<font>-</font>
-		<aligny>-</aligny>
-		<onclick>ActivateWindow(1113)</onclick>
-		<texturefocus>home-playmedia-FO.png</texturefocus>
-		<texturenofocus>home-playmedia.png</texturenofocus>
-		<onleft>9000</onleft>
-		<onright>21</onright>
-		<onup>9000</onup>
-		<ondown>9000</ondown>
-	</control>
-</control>
-
-<control type="group">
-	<posx>420</posx>
-	<posy>35r</posy>
-	<animation effect="slide" end="0,35" time="300" tween="quadratic" easing="out">WindowClose</animation>
-	<animation effect="slide" start="0,35" time="300" tween="quadratic" easing="out">WindowOpen</animation>
-	<control type="image">
-		<description>RSS background</description>
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>860</width>
-		<height>35</height>
-		<texture border="32,0,0,0">Rss_Back.png</texture>
-		<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
-	</control>
-	<control type="rss">
-		<description>RSS feed</description>
-		<posx>35</posx>
-		<posy>6</posy>
-		<height>35</height>
-		<width>825</width>
-		<font>font12</font>
-		<urlset>1</urlset>
-		<textcolor>blue</textcolor>
-		<titlecolor>blue</titlecolor>
-		<headlinecolor>white</headlinecolor>
-		<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
-	</control>
-	<control type="image">
-		<description>RSS background</description>
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>100</width>
-		<height>35</height>
-		<texture border="32,0,0,0">Rss_Back_Overlay.png</texture>
-		<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
-	</control>
-</control>
+        </control>
+	
+        <include>Carousel</include>
+  <control type="image">
+				<description>LOGO</description>
+				<posx>10</posx>
+				<posy>10</posy>
+				<width>140</width>
+				<height>40</height>
+				<texture>XBMC_Logo.png</texture>
+			</control>
+			<control type="image">
+				<description>LOGO Mirror</description>
+				<posx>10</posx>
+				<posy>42</posy>
+				<width>140</width>
+				<height>40</height>
+				<texture diffuse="diffuse_mirror.png" flipy="true">XBMC_Logo.png</texture>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>100r</posy>
+				<width>256</width>
+				<height>100</height>
+				<texture>HomeButtonsBack.png</texture>
+			</control>
+			<control type="group" id="10">
+				<posx>15</posx>
+				<posy>55r</posy>
+				<control type="button" id="20">
+					<description>Power push button</description>
+					<posx>90</posx>
+					<posy>0</posy>
+					<width>43</width>
+					<height>43</height>
+					<label>31003</label>
+					<font>-</font>
+					<aligny>-</aligny>
+					<onclick>ActivateWindow(ShutdownMenu)</onclick>
+					<texturefocus>home-power-FO.png</texturefocus>
+					<texturenofocus>home-power.png</texturenofocus>
+					<onleft>21</onleft>
+					<onright>9000</onright>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+				</control>
+				<control type="button" id="21">
+					<description>Favourites push button</description>
+					<posx>45</posx>
+					<posy>0</posy>
+					<width>43</width>
+					<height>43</height>
+					<label>1036</label>
+					<font>-</font>
+					<aligny>-</aligny>
+					<onclick>ActivateWindow(Favourites)</onclick>
+					<texturefocus>home-favourites-FO.png</texturefocus>
+					<texturenofocus>home-favourites.png</texturenofocus>
+					<onleft>22</onleft>
+					<onright>20</onright>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+				</control>
+				<control type="button" id="22">
+					<description>Play Disc Media push button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>43</width>
+					<height>43</height>
+					<label>16004</label>
+					<font>-</font>
+					<aligny>-</aligny>
+					<onclick>ActivateWindow(1113)</onclick>
+					<texturefocus>home-playmedia-FO.png</texturefocus>
+					<texturenofocus>home-playmedia.png</texturenofocus>
+					<onleft>9000</onleft>
+					<onright>21</onright>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+				</control>
+			</control>
+		
+		<control type="group">
+			<posx>420</posx>
+			<posy>35r</posy>
+			<animation effect="slide" end="0,35" time="300" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="0,35" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+			<control type="image">
+				<description>RSS background</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>860</width>
+				<height>35</height>
+				<texture border="32,0,0,0">Rss_Back.png</texture>
+				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			</control>
+			<control type="rss">
+				<description>RSS feed</description>
+				<posx>35</posx>
+				<posy>6</posy>
+				<height>35</height>
+				<width>825</width>
+				<font>font12</font>
+				<urlset>1</urlset>
+				<textcolor>blue</textcolor>
+				<titlecolor>blue</titlecolor>
+				<headlinecolor>white</headlinecolor>
+				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			</control>
+			<control type="image">
+				<description>RSS background</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>35</height>
+				<texture border="32,0,0,0">Rss_Back_Overlay.png</texture>
+				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			</control>
+		</control>
 	</include>
 
 </includes>

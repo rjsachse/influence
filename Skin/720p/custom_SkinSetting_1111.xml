@@ -137,13 +137,11 @@
 						<label2>31115</label2>
 						<onclick>-</onclick>
 					</item>
-					<!--
 					<item id="4">
 						<label>24000</label>
 						<label2>31200</label2>
 						<onclick>-</onclick>
 					</item>
-					-->
 					<item id="5">
 						<label>Menu</label>
 						<label2>31115</label2>
@@ -300,44 +298,6 @@
 						<onclick>Skin.ToggleSetting(kiosk)</onclick>
 						<selected>Skin.HasSetting(kiosk)</selected>
 					</control>
-					<control type="label" id="118">
-						<width>750</width>
-						<height>45</height>
-						<font>font13_title</font>
-						<label>Option Movie</label>
-						<textcolor>blue</textcolor>
-						<shadowcolor>black</shadowcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-					</control>
-					<control type="radiobutton" id="119">
-						<description>Enable Movie Theater Experience Script</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<label>Activer le script "Movie Theater Experience"</label>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(TheaterScript_Enable)</onclick>
-						<selected>Skin.HasSetting(TheaterScript_Enable)</selected>
-					</control>
-					<control type="button" id="120">
-						<description>Theater Experience Script Path</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>- Selection script:</label>
-						<label2>$INFO[Skin.String(TheaterScript_Path)</label2>
-						<onclick>Skin.SetAddon(TheaterScript_Path,xbmc.python.script)</onclick>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<visible>Skin.HasSetting(TheaterScript_Enable)</visible>
-					</control>
-
 					<control type="label" id="121">
 						<width>750</width>
 						<height>45</height>
@@ -359,32 +319,6 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(TVShowsUsePosters)</onclick>
 						<selected>Skin.HasSetting(TVShowsUsePosters)</selected>
-					</control>
-					<control type="radiobutton" id="123">
-						<description>Enable TvTunes Script</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<label>35114</label>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(TvTunesIsEnable)</onclick>
-						<selected>Skin.HasSetting(TvTunesIsEnable)</selected>
-					</control>
-					<control type="button" id="124">
-						<description>TvTunes Path</description>
-						<width>750</width>
-						<height>40</height>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>- Selection script:</label>
-						<label2>$INFO[Skin.String(TvTunesScript_Path)</label2>
-						<onclick>Skin.SetAddon(TvTunesScript_Path,xbmc.python.script)</onclick>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<visible>Skin.HasSetting(TvTunesIsEnable)</visible>
 					</control>
 					<control type="label" id="125">
 						<width>750</width>
@@ -2590,6 +2524,197 @@
 					<include condition="skin.HasSetting(CarouselCustomMenu)">BackCarousel</include>
 				</control>
 
+				<control type="group">
+					<control type="grouplist" id="9004">
+						<visible>Container(9000).Hasfocus(4)</visible>
+						<posx>290</posx>
+						<posy>60</posy>
+						<width>750</width>
+						<height>530</height>
+						<itemgap>-1</itemgap>
+						<pagecontrol>61</pagecontrol>
+						<onleft>9000</onleft>
+						<onright>61</onright>
+						<onup>9004</onup>
+						<ondown>9004</ondown>
+						<control type="label" id="419">
+							<width>750</width>
+							<height>45</height>
+							<font>font13_title</font>
+							<label>Météo</label>
+							<textcolor>blue</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+						</control>
+
+						<control type="radiobutton" id="420">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>$LOCALIZE[31119]</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(WeatherScript_Enable)</onclick>
+							<selected>Skin.HasSetting(WeatherScript_Enable)</selected>
+						</control>
+						<control type="button" id="421">
+							<width>750</width>
+							<height>40</height>
+							<font>font12</font>
+							<label> - $LOCALIZE[31120]</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(WeatherScript_Label)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetString(WeatherScript_Label)</onclick>
+							<visible>Skin.HasSetting(WeatherScript_Enable)</visible>
+						</control>
+						<control type="button" id="422">
+							<width>750</width>
+							<height>40</height>
+							<font>font12</font>
+							<label> - $LOCALIZE[31121]</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(WeatherScript_Path)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetAddon(WeatherScript_Path,xbmc.python.script)</onclick>
+							<visible>Skin.HasSetting(WeatherScript_Enable)</visible>
+						</control>
+
+						<control type="label" id="423">
+							<width>750</width>
+							<height>45</height>
+							<font>font13_title</font>
+							<label>Musique</label>
+							<textcolor>blue</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+						</control>
+
+						<control type="radiobutton" id="424">
+							<width>750</width>
+							<height>35</height>
+							<font>font13</font>
+							<label>$LOCALIZE[31126]</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(LyricScript_Enable)</onclick>
+							<selected>Skin.HasSetting(LyricScript_Enable)</selected>
+						</control>
+						<control type="button" id="425">
+							<width>750</width>
+							<height>35</height>
+							<font>font12</font>
+							<label>- $LOCALIZE[31127]</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(LyricScript_Path)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</onclick>
+							<visible>Skin.HasSetting(LyricScript_Enable)</visible>
+						</control>
+
+						<control type="label" id="426">
+							<width>750</width>
+							<height>45</height>
+							<font>font13_title</font>
+							<label>Video</label>
+							<textcolor>blue</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+						</control>
+
+						<control type="radiobutton" id="427">
+							<width>750</width>
+							<height>35</height>
+							<font>font13</font>
+							<label>$LOCALIZE[31129]</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(SubtitleDownload_Enable)</onclick>
+							<selected>Skin.HasSetting(SubtitleDownload_Enable)</selected>
+						</control>
+						<control type="button" id="428">
+							<width>750</width>
+							<height>35</height>
+							<font>font12</font>
+							<label>- $LOCALIZE[31130]</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(SubtitleScript_Path)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</onclick>
+							<visible>Skin.HasSetting(SubtitleDownload_Enable)</visible>
+						</control>
+						<control type="radiobutton" id="429">
+							<description>Enable Movie Theater Experience Script</description>
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>Activer le script "Movie Theater Experience"</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(TheaterScript_Enable)</onclick>
+							<selected>Skin.HasSetting(TheaterScript_Enable)</selected>
+						</control>
+						<control type="button" id="430">
+							<description>Theater Experience Script Path</description>
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label>- Selection script:</label>
+							<label2>$INFO[Skin.String(TheaterScript_Path)</label2>
+							<onclick>Skin.SetAddon(TheaterScript_Path,xbmc.python.script)</onclick>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<visible>Skin.HasSetting(TheaterScript_Enable)</visible>
+						</control>
+						<control type="radiobutton" id="432">
+							<description>Enable TvTunes Script</description>
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>35114</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(TvTunesIsEnable)</onclick>
+							<selected>Skin.HasSetting(TvTunesIsEnable)</selected>
+						</control>
+						<control type="button" id="433">
+							<description>TvTunes Path</description>
+							<width>750</width>
+							<height>40</height>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label>- Selection script:</label>
+							<label2>$INFO[Skin.String(TvTunesScript_Path)</label2>
+							<onclick>Skin.SetAddon(TvTunesScript_Path,xbmc.python.script)</onclick>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<visible>Skin.HasSetting(TvTunesIsEnable)</visible>
+						</control>
+					</control>
+				</control>
 				<control type="group">
 					<posx>290</posx>
 					<posy>60</posy>

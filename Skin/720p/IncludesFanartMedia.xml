@@ -1,0 +1,67 @@
+<includes>
+	<include name="FanartMusic">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<!--
+			<include>Animation_BackdropFade</include>
+			-->
+			<texture background="true">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
+			<aspectratio>scale</aspectratio>
+			<fadetime>1000</fadetime>
+			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_slide)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_slide)">Conditional</animation>
+			<colordiffuse>88FFFFFF</colordiffuse>	
+			<visible>!Skin.HasSetting(ShowBackgroundVis) + Skin.HasSetting(MusicFanArtIsEnable) + Player.HasAudio</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<!--
+			<include>Animation_BackdropFade</include>
+			-->
+			<texture background="true">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
+			<aspectratio>scale</aspectratio>
+			<fadetime>1000</fadetime>
+			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_slide)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_slide)">Conditional</animation>
+			<visible>Skin.HasSetting(ShowBackgroundVis) + Skin.HasSetting(MusicFanArtIsEnable) + Player.HasAudio</visible>
+		</control>
+		<control type="multiimage">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<!--
+			<include>Animation_BackdropFade</include>
+			-->
+			<imagepath background="true">$INFO[Player.FolderPath,,../extrafanart/]</imagepath>
+			<timeperimage>7000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>1000</fadetime>
+			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_slide)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_slide)">Conditional</animation>
+			<visible>!Skin.HasSetting(ShowBackgroundVis) + Skin.HasSetting(MusicFanArtIsEnable) + Player.HasAudio</visible>
+		</control>
+		<control type="multiimage">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<!--
+			<include>Animation_BackdropFade</include>
+			-->
+			<imagepath background="true">$INFO[Player.FolderPath,,../extrafanart/]</imagepath>
+			<timeperimage>7000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>1000</fadetime>
+			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_slide)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_slide)">Conditional</animation>
+			<visible>Skin.HasSetting(ShowBackgroundVis) + Skin.HasSetting(MusicFanArtIsEnable) + Player.HasAudio</visible>
+		</control>
+	</include>
+</includes>

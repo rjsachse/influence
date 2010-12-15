@@ -1,6 +1,7 @@
 <!-- Carousel by Frost -->
 <includes>
     <include name="Carousel">
+ <control type="group">
   <!-- Music Info -->
 	<control type="group">
 			<include>Window_OpenClose_Left_Panel_Animation</include>
@@ -32,8 +33,13 @@
 	<!-- Music Info -->
 	<control type="image">			
 			<description>Cd overlay</description>
+<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<effect type="fade" start="0" end="100" time="500" delay="22000" />
+					<effect type="fade" start="100" end="0" time="500" delay="29000" />
+
+				</animation>
 			<animation effect="slide" start="-70" end="0" time="900" tween="cubic" easing="out" delay="2000">WindowOpen</animation>
-			<animation effect="rotate" end="-360" center="auto" time="250" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+				<animation effect="rotate" end="-360" center="auto" time="2250" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
 			<width>110</width>			
 			<height>110</height>			
 			<posx>1015r</posx>			
@@ -43,11 +49,16 @@
 			<visible>Skin.HasSetting(CDart) + Player.HasAudio</visible>
 			</control>
 	 <control type="image">
+<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<effect type="fade" start="0" end="100" time="500" delay="22000" />
+					<effect type="fade" start="100" end="0" time="500" delay="29000" />
+
+				</animation>
                 <description>Cover image</description>
                 <posx>1075r</posx>
-                <posy>275</posy>
-                <width>120</width>
-                <height>120</height>
+                <posy>270</posy>
+                <width>135</width>
+                <height>135</height>
 	        <visible>Player.HasAudio + !Skin.HasSetting(homepageMusicinfo)</visible>
                 <aspectratio aligny="bottom">keep</aspectratio>
                 <texture diffuse="thumbs/cdcover_mask.png">$INFO[MusicPlayer.Cover]</texture>
@@ -55,13 +66,17 @@
                 <bordersize>5</bordersize>
             </control>
 		<control type="image">
-			
+		<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<effect type="fade" start="0" end="100" time="500" delay="22000" />
+					<effect type="fade" start="100" end="0" time="500" delay="29000" />
+
+				</animation>	
 <description>Cover image overlay</description>
 			
 <posx>1075r</posx>
-<posy>275</posy>
-<width>120</width>
-<height>120</height>			
+<posy>270</posy>
+<width>135</width>
+<height>135</height>			
 <texture>home/nowplaying_overlay.png</texture>			
 <aspectratio align="bottom">stretch</aspectratio>
  <visible>Player.HasAudio + !Skin.HasSetting(homepageMusicinfo)</visible>					
@@ -69,6 +84,11 @@
 	  <!-- Video Info -->
 
 	 <control type="image">
+<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<effect type="fade" start="0" end="100" time="500" delay="22000" />
+					<effect type="fade" start="100" end="0" time="500" delay="29000" />
+
+				</animation>
                     <description>Cover image</description>
                     <posx>1050r</posx>
                     <posy>280</posy>
@@ -79,238 +99,18 @@
                     <bordertexture border="8">ThumbBorder.png</bordertexture>
                     <bordersize>5</bordersize>
                 </control>
-<!--  Video Statistics -->
-		<control type="group">
-		<visible>!Player.HasAudio</visible>
-			<posx>180</posx>
-			<posy>270</posy>
-			<visible>Skin.HasSetting(HomeStats) + !Window.IsVisible(Favourites)</visible>
-			<include>VisibleFadeEffect</include>
-			<animation effect="fade" time="300" delay="1000">WindowOpen</animation>
-			<animation effect="fade" time="200">WindowClose</animation>
-			<control type="group">
-				<visible>Container(9000).HasFocus(2) + !Player.HasVideo</visible>
-				<control type="image">
-					<visible>!Skin.HasSetting(CarouselBackMenu)</visible>
-					<description>background</description>
-					<posx>0</posx>
-					<posy>30</posy>
-					<width>200</width>
-					<height>100</height>
-					<texture border="10">RecentAddedNF.png</texture>
-				</control>
-				
-				<control type="label">
-					<posx>30</posx>
-					<posy>35</posy>
-					<height>30</height>
-					<width>335</width>
-					<label>$LOCALIZE[20342]: $INFO[Window.Property(Movies.Count)]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>font12_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<scrollout>false</scrollout>
-					<pauseatend>2000</pauseatend>
-				</control>
-				<control type="label">
-					<posx>30</posx>
-					<posy>65</posy>
-					<height>25</height>
-					<align>left</align>
-					<width>355</width>
-					<label>$LOCALIZE[20343]: $INFO[Window.Property(TVShows.Count)]</label>
-					<aligny>center</aligny>
-					<font>font12_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-				<control type="label">
-					<posx>30</posx>
-					<posy>90</posy>
-					<height>30</height>
-					<width>355</width>
-					<label>Music Videos: $INFO[Window.Property(MusicVideos.Count)]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>font12_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-			</control>
-			<!--  Movie Statistics -->
-			<control type="group">
-				<visible>Container(9000).HasFocus(10) + !Player.HasVideo</visible>
-				<control type="image">
-					<description>background</description>
-					<visible>!Skin.HasSetting(CarouselBackMenu)</visible>
-					<posx>0</posx>
-					<posy>30</posy>
-					<width>200</width>
-					<height>100</height>
-					<texture border="10">RecentAddedNF.png</texture>
-				</control>
-				
-				<control type="label">
-					<posx>30</posx>
-					<posy>35</posy>
-					<height>30</height>
-					<width>335</width>
-					<label>$LOCALIZE[20342]: $INFO[Window.Property(Movies.Count)]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>font12_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<scrollout>false</scrollout>
-					<pauseatend>2000</pauseatend>
-				</control>
-				<control type="label">
-					<posx>30</posx>
-					<posy>65</posy>
-					<height>25</height>
-					<align>left</align>
-					<width>355</width>
-					<label>$LOCALIZE[16102]: $INFO[Window.Property(Movies.Watched)]</label>
-					<aligny>center</aligny>
-					<font>font12_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-				<control type="label">
-					<posx>30</posx>
-					<posy>90</posy>
-					<height>30</height>
-					<width>355</width>
-					<label>$LOCALIZE[16101]: $INFO[Window.Property(Movies.UnWatched)]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>font12_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-			</control>
-			<!--  Music Statistics -->
-			<control type="group">
-				<visible>Container(9000).HasFocus(3) + !Player.HasVideo</visible>
-				<control type="image">
-					<description>background</description>
-					<visible>!Skin.HasSetting(CarouselBackMenu)</visible>
-					<posx>0</posx>
-					<posy>30</posy>
-					<width>200</width>
-					<height>100</height>
-					<texture border="10">RecentAddedNF.png</texture>
-				</control>
-				
-				<control type="label">
-					<description></description>
-					<posx>30</posx>
-					<posy>35</posy>
-					<height>30</height>
-					<width>335</width>
-					<label>$LOCALIZE[132]: $INFO[Window.Property(Music.AlbumsCount)]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>font12_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<scrollout>false</scrollout>
-					<pauseatend>2000</pauseatend>
-				</control>
-				<control type="label">
-					<description></description>
-					<posx>30</posx>
-					<posy>65</posy>
-					<height>25</height>
-					<align>left</align>
-					<width>355</width>
-					<label>$LOCALIZE[134]: $INFO[Window.Property(Music.SongsCount)]</label>
-					<aligny>center</aligny>
-					<font>font12_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-				<control type="label">
-					<description></description>
-					<posx>30</posx>
-					<posy>90</posy>
-					<height>30</height>
-					<width>355</width>
-					<label>$LOCALIZE[16101]: $INFO[Window.Property(Episodes.UnWatched)]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>font12_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-			</control>
-			<!--  TV Show Statistics -->
-			<control type="group">
-				<visible>Container(9000).HasFocus(11) + !Player.HasVideo</visible>
-				<control type="image">
-					<description>background</description>
-					<visible>!Skin.HasSetting(CarouselBackMenu)</visible>
-					<posx>0</posx>
-					<posy>30</posy>
-					<width>200</width>
-					<height>100</height>
-					<texture border="10">RecentAddedNF.png</texture>
-				</control>
-				
-				<control type="label">
-					<description></description>
-					<posx>30</posx>
-					<posy>35</posy>
-					<height>30</height>
-					<width>335</width>
-					<label>$LOCALIZE[20343]: $INFO[Window.Property(TVShows.Count)]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>font12_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<scrollout>false</scrollout>
-					<pauseatend>2000</pauseatend>
-				</control>
-				<control type="label">
-					<description></description>
-					<posx>30</posx>
-					<posy>65</posy>
-					<height>25</height>
-					<align>left</align>
-					<width>355</width>
-					<label>$LOCALIZE[20360]: $INFO[Window.Property(Episodes.Count)]</label>
-					<aligny>center</aligny>
-					<font>font12_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-				<control type="label">
-					<description></description>
-					<posx>30</posx>
-					<posy>90</posy>
-					<height>30</height>
-					<width>355</width>
-					<label>$LOCALIZE[16101]: $INFO[Window.Property(Episodes.UnWatched)]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>font12_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-			</control>
-		</control>
-       <animation effect="fade" time="500">Visible</animation>
-        <animation effect="fade" time="500">Hidden</animation>
 
+
+   	
+       
+	<animation effect="fade" time="500">Visible</animation>
+        <animation effect="fade" time="500">Hidden</animation>
         <animation condition="System.IdleTime(15)" type="Conditional" loop="true" reversible="false">
             <effect type="rotatex" tween="sine" easing="inout" acceleration="-1" center="auto" start="0" end="3600" time="180000" />
             <effect type="rotatey" tween="sine" easing="inout" acceleration="-1" center="auto" start="0" end="3600" time="18000" />
             <effect type="rotatey" tween="sine" easing="inout" acceleration="-1" center="auto" start="0" end="-3600" time="18000" delay="89000" />
             <effect type="rotatex" tween="sine" easing="inout" acceleration="-1" center="auto" start="0" end="-3600" time="180000" delay="89000" />
-        </animation> 
+        </animation>
 
 	<control type="image">
 				<posx>20</posx>
@@ -1116,7 +916,7 @@
                 <colordiffuse>90ffffff</colordiffuse>
             </control>
         </control>
-
+</control>
         <!-- END STATIC ICONS -->
         <!-- CAROUSEL-LIST -->
     </include>

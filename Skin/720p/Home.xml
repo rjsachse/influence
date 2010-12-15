@@ -13,6 +13,7 @@
 			<fadetime>1000</fadetime>
 		</control>
 		<include>CommonMediaPlayingBackground</include>
+		<include>FanartMusic</include>
 		<include condition="Skin.HasSetting(homepageHideRecentlyAdded)">HomeRecentlyAddedInfo</include>
 		<!-- weather Info -->
 		<control type="group">
@@ -54,6 +55,7 @@
 			</control>
 		</control>
 		<!-- weather Info -->
+		
 		<control type="group">
 		<visible>Container(9000).HasFocus(6)+Weather.IsFetched+![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)] + ![Player.HasAudio + Skin.HasSetting(Next5Songs)]</visible>
 	        <include>CurrentWeather</include>
@@ -62,6 +64,7 @@
 		<include condition="Skin.HasSetting(VerticalMenu)">IncludeHomeVertical</include>
 		<include condition="Skin.HasSetting(HorizontalMenu)">IncludeHomeHorizontal</include>
 		<include condition="Skin.HasSetting(CarouselMenu)">IncludeHomeCarousel</include>
+
 		<control type="group">
 			<posx>390r</posx>
 			<posy>0</posy>
