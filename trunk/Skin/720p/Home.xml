@@ -15,7 +15,7 @@
 		<include>CommonMediaPlayingBackground</include>
 		<include>FanartMusic</include>
 		<include condition="Skin.HasSetting(homepageHideRecentlyAdded)">HomeRecentlyAddedInfo</include>
-		<!-- weather Info -->
+<!-- weather Info -->
 		<control type="group">
 			<posx>520r</posx>
 			<posy>0</posy>
@@ -54,11 +54,10 @@
 				<label>[B]$INFO[Weather.Temperature][/B]</label>
 			</control>
 		</control>
-		<!-- weather Info -->
-		
+<!-- weather Info -->
 		<control type="group">
-		<visible>Container(9000).HasFocus(6)+Weather.IsFetched+![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)] + ![Player.HasAudio + Skin.HasSetting(Next5Songs)]</visible>
-	        <include>CurrentWeather</include>
+			<visible>Container(9000).HasFocus(6)+Weather.IsFetched+![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)] + ![Player.HasAudio + Skin.HasSetting(Next5Songs)]</visible>
+	        	<include>CurrentWeather</include>
 		</control>
 		<include condition="!Skin.HasSetting(VerticalMenu)+!Skin.HasSetting(HorizontalMenu)+!Skin.HasSetting(CarouselMenu)">IncludeHomeVertical</include>
 		<include condition="Skin.HasSetting(VerticalMenu)">IncludeHomeVertical</include>
@@ -91,6 +90,197 @@
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<label>[COLOR=grey]$INFO[System.Date][/COLOR] | $INFO[System.Time]</label>
+			</control>
+		</control>
+<!-- Next 5 Songs-->
+		<control type="group">
+			<posx>0</posx>
+			<posy>400r</posy>
+			<visible>!Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(Next5Songs)</visible>
+			<animation type="Conditional" reversible="false" condition="true" loop="true">
+				<effect type="fade" start="0" end="100" time="500" delay="22000" />
+				<effect type="fade" start="100" end="0" time="500" delay="29000" />
+			</animation>
+			<control type="label">
+				<posx>10r</posx>
+				<posy>200</posy>
+				<height>30</height>
+				<width>660</width>
+				<label>Next Tracks:</label>
+				<textcolor>blue</textcolor>
+				<font>font12_title</font>
+				<align>right</align>
+				<aligny>center</aligny>
+				<shadowcolor>black</shadowcolor>
+				<visible>!IsEmpty(MusicPlayer.offset(1).Artist)</visible>
+			</control>
+			<control type="group">
+				<control type="label">
+					<visible>!IsEmpty(MusicPlayer.offset(1).Artist)</visible>
+					<posx>10r</posx>
+					<posy>235</posy>
+					<width>410</width>
+					<label>[COLOR blue]1:[/COLOR] $INFO[MusicPlayer.offset(1).Artist]: $INFO[MusicPlayer.offset(1).Title]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<visible>!IsEmpty(MusicPlayer.offset(2).Artist)</visible>
+					<posx>10r</posx>
+					<posy>260</posy>
+					<width>410</width>
+					<label>[COLOR blue]2:[/COLOR] $INFO[MusicPlayer.offset(2).Artist]: $INFO[MusicPlayer.offset(2).Title]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<visible>!IsEmpty(MusicPlayer.offset(3).Artist)</visible>
+					<posx>10r</posx>
+					<posy>285</posy>
+					<width>410</width>
+					<label>[COLOR blue]3:[/COLOR] $INFO[MusicPlayer.offset(3).Artist]: $INFO[MusicPlayer.offset(3).Title]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<visible>!IsEmpty(MusicPlayer.offset(4).Artist)</visible>
+					<posx>10r</posx>
+					<posy>310</posy>
+					<width>410</width>
+					<label>[COLOR blue]4:[/COLOR] $INFO[MusicPlayer.offset(4).Artist]: $INFO[MusicPlayer.offset(4).Title]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<visible>!IsEmpty(MusicPlayer.offset(5).Artist)</visible>
+					<posx>10r</posx>
+					<posy>335</posy>
+					<width>410</width>
+					<label>[COLOR blue]5:[/COLOR] $INFO[MusicPlayer.offset(5).Artist]: $INFO[MusicPlayer.offset(5).Title]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+		</control>
+<!-- Next 5 Songs END -->
+<!-- Music Info Vertical/Carousel -->
+		<control type="group">
+			<posx>0</posx>
+			<posy>380r</posy>
+			<visible>!Skin.HasSetting(HorizontalMenu) + Player.HasAudio + !Skin.HasSetting(homepageMusicinfo)</visible>
+			<include>VisibleFadeEffect</include>
+			<include>Window_OpenClose_Animation</include>
+			<animation type="Conditional" reversible="false" condition="Skin.HasSetting(Next5Songs)" loop="true">
+				<effect type="fade" start="0" end="100" time="1000" delay="0" />
+				<effect type="fade" start="100" end="0" time="1000" delay="21000" />
+				<effect type="fade" start="100" end="0" time="1000" delay="29000" />
+			</animation>
+			<animation effect="slide" end="0,30" time="0" condition="!system.getbool(lookandfeel.enablerssfeeds)">conditional</animation>
+			<animation effect="slide" end="-70,0" condition="Skin.HasSetting(CDart)">Conditional</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>150</posy>
+				<width>1380</width>
+				<height>250</height>
+				<texture>HomeNowPlayingBack.png</texture>
+			</control>
+			<control type="image">
+				<description>Cd overlay</description>
+				<posx>110r</posx>
+				<posy>171</posy>
+				<animation effect="slide" start="-70" end="0" time="900" tween="cubic" easing="out" delay="2000">WindowOpen</animation>
+				<animation effect="rotate" end="-360" center="auto" time="2250" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+				<width>160</width>
+				<height>165</height>
+				<texture fallback="cdart/default.png">$INFO[Player.FolderPath]/cdart.png</texture>
+				<aspectratio align="bottom">keep</aspectratio>
+				<visible>Skin.HasSetting(CDart)</visible>
+			</control>
+			<control type="image">
+				<description>Cover image</description>
+				<posx>200r</posx>
+				<posy>163</posy>
+				<width>180</width>
+				<height>180</height>
+				<aspectratio aligny="bottom">stretch</aspectratio>
+				<texture>$INFO[MusicPlayer.Cover]</texture>
+				<bordertexture border="8">ThumbBorder.png</bordertexture>
+				<bordersize>5</bordersize>
+			</control>
+			<control type="label">
+				<description>NowPlaying label</description>
+				<posx>210r</posx>
+				<posy>210</posy>
+				<height>30</height>
+				<width>660</width>
+				<label>$LOCALIZE[31040]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font12_title</font>
+				<textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Artist label</description>
+				<posx>210r</posx>
+				<posy>235</posy>
+				<height>30</height>
+				<width>660</width>
+				<label>$INFO[MusicPlayer.Artist]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font12_title</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Album Label</description>
+				<posx>210r</posx>
+				<posy>260</posy>
+				<height>30</height>
+				<width>660</width>
+				<label>$INFO[MusicPlayer.Album]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Title label</description>
+				<posx>210r</posx>
+				<posy>285</posy>
+				<height>30</height>
+				<width>660</width>
+				<label>$INFO[MusicPlayer.Title]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font13_title</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Time Label</description>
+				<posx>210r</posx>
+				<posy>310</posy>
+				<height>30</height>
+				<width>325</width>
+				<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
 			</control>
 		</control>
 	</controls>	
