@@ -8,18 +8,8 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-<!--			<visible>IsEmpty(MusicPlayer.Property(Fanart_Image)</visible>
 		</control>
-		<control type="image">
-			<description>Fanart image</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<texture>$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
-			<visible>!IsEmpty(MusicPlayer.Property(Fanart_Image))</visible>
--->		</control>
-
+	<include>FanartMusic</include>
 		<control type="group">
 			<visible>Player.ShowInfo + ![Window.IsVisible(VisualisationSettings) | Window.IsVisible(VisualisationPresetList)]</visible>
 			<animation effect="fade" start="0" end="100" time="300" tween="quadratic" easing="out">WindowOpen</animation>

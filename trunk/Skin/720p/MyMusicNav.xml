@@ -5,6 +5,8 @@
 	<visible>!Skin.HasSetting(kiosk)</visible>
 	<controls>
 		<include>CommonMusicBackground</include>
+		
+		
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>		
 			<control type="image">
@@ -29,6 +31,7 @@
 			</control>
 		</control>
 		<include>CommonMediaPlayingBackground</include>
+		<include>FanartMusic</include>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>		
 			<control type="image">
