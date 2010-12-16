@@ -56,7 +56,10 @@
 		</control>
 <!-- weather Info -->
 		<control type="group">
+			<!--
 			<visible>Container(9000).HasFocus(6)+Weather.IsFetched+![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)] + ![Player.HasAudio + Skin.HasSetting(Next5Songs)]</visible>
+			-->
+			<visible>Container(9000).HasFocus(6)+Weather.IsFetched+![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)] + [!Skin.HasSetting(HorizontalMenu) +  [Player.HasAudio + Skin.HasSetting(Next5Songs)]]</visible>
 	        	<include>CurrentWeather</include>
 		</control>
 		<include condition="!Skin.HasSetting(VerticalMenu)+!Skin.HasSetting(HorizontalMenu)+!Skin.HasSetting(CarouselMenu)">IncludeHomeVertical</include>
@@ -98,8 +101,8 @@
 			<posy>400r</posy>
 			<visible>!Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(Next5Songs)</visible>
 			<animation type="Conditional" reversible="false" condition="true" loop="true">
-				<effect type="fade" start="0" end="100" time="500" delay="22000" />
-				<effect type="fade" start="100" end="0" time="500" delay="29000" />
+				<effect type="fade" start="0" end="100" time="2000" delay="38000" />
+				<effect type="fade" start="100" end="0" time="2000" delay="80000" />
 			</animation>
 			<control type="label">
 				<posx>10r</posx>
@@ -181,9 +184,9 @@
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
 			<animation type="Conditional" reversible="false" condition="Skin.HasSetting(Next5Songs)" loop="true">
-				<effect type="fade" start="0" end="100" time="1000" delay="0" />
-				<effect type="fade" start="100" end="0" time="1000" delay="21000" />
-				<effect type="fade" start="100" end="0" time="1000" delay="29000" />
+				<effect type="fade" start="0" end="100" time="1950" delay="0" />
+				<effect type="fade" start="100" end="0" time="2000" delay="40000" />
+				<effect type="fade" start="100" end="0" time="50" delay="80000" />
 			</animation>
 			<animation effect="slide" end="0,30" time="0" condition="!system.getbool(lookandfeel.enablerssfeeds)">conditional</animation>
 			<animation effect="slide" end="-70,0" condition="Skin.HasSetting(CDart)">Conditional</animation>
