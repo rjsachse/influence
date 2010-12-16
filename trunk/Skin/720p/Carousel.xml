@@ -34,8 +34,8 @@
 	<control type="image">			
 			<description>Cd overlay</description>
 <animation type="Conditional" reversible="false" condition="true" loop="true">
-					<effect type="fade" start="0" end="100" time="500" delay="22000" />
-					<effect type="fade" start="100" end="0" time="500" delay="29000" />
+					<effect type="fade" start="0" end="100" time="2000" delay="38000" />
+					<effect type="fade" start="100" end="0" time="2000" delay="80000" />
 
 				</animation>
 			<animation effect="slide" start="-70" end="0" time="900" tween="cubic" easing="out" delay="2000">WindowOpen</animation>
@@ -50,8 +50,8 @@
 			</control>
 	 <control type="image">
 <animation type="Conditional" reversible="false" condition="true" loop="true">
-					<effect type="fade" start="0" end="100" time="500" delay="22000" />
-					<effect type="fade" start="100" end="0" time="500" delay="29000" />
+					<effect type="fade" start="0" end="100" time="2000" delay="38000" />
+					<effect type="fade" start="100" end="0" time="2000" delay="80000" />
 
 				</animation>
                 <description>Cover image</description>
@@ -67,10 +67,10 @@
             </control>
 		<control type="image">
 		<animation type="Conditional" reversible="false" condition="true" loop="true">
-					<effect type="fade" start="0" end="100" time="500" delay="22000" />
-					<effect type="fade" start="100" end="0" time="500" delay="29000" />
+					<effect type="fade" start="0" end="100" time="2000" delay="38000" />
+					<effect type="fade" start="100" end="0" time="2000" delay="80000" />
 
-				</animation>	
+				</animation>
 <description>Cover image overlay</description>
 			
 <posx>1075r</posx>
@@ -85,8 +85,8 @@
 
 	 <control type="image">
 <animation type="Conditional" reversible="false" condition="true" loop="true">
-					<effect type="fade" start="0" end="100" time="500" delay="22000" />
-					<effect type="fade" start="100" end="0" time="500" delay="29000" />
+					<effect type="fade" start="0" end="100" time="2000" delay="38000" />
+					<effect type="fade" start="100" end="0" time="2000" delay="80000" />
 
 				</animation>
                     <description>Cover image</description>
@@ -105,10 +105,10 @@
        
 	<animation effect="fade" time="500">Visible</animation>
         <animation effect="fade" time="500">Hidden</animation>
-        <animation condition="System.IdleTime(15)" type="Conditional" loop="true" reversible="false">
+        <animation condition="System.IdleTime(30)" type="Conditional" loop="true" reversible="false">
             <effect type="rotatex" tween="sine" easing="inout" acceleration="-1" center="auto" start="0" end="3600" time="180000" />
-            <effect type="rotatey" tween="sine" easing="inout" acceleration="-1" center="auto" start="0" end="3600" time="18000" />
-            <effect type="rotatey" tween="sine" easing="inout" acceleration="-1" center="auto" start="0" end="-3600" time="18000" delay="89000" />
+            <effect type="rotatey" tween="sine" easing="inout" acceleration="-1" center="auto" start="0" end="3600" time="42000" />
+            <effect type="rotatey" tween="sine" easing="inout" acceleration="-1" center="auto" start="0" end="-3600" time="42000" delay="89000" />
             <effect type="rotatex" tween="sine" easing="inout" acceleration="-1" center="auto" start="0" end="-3600" time="180000" delay="89000" />
         </animation>
 
