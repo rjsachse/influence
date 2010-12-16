@@ -176,7 +176,7 @@
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
-				<label>Activer le Menu [B]$INFO[Skin.String(Menu_Pictures_lab)][/B]</label>
+				<label>$LOCALIZE[35117] [B]$INFO[Skin.String(Menu_Pictures_lab)][/B]</label>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
@@ -399,7 +399,7 @@
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
-				<label>Activer le Menu [B]$INFO[Skin.String(Menu_Weather_lab)][/B]</label>
+				<label>$LOCALIZE[35117] [B]$INFO[Skin.String(Menu_Weather_lab)][/B]</label>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
@@ -622,7 +622,7 @@
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
-				<label>Activer le Menu [B]$INFO[Skin.String(Menu_Videos_lab)][/B]</label>
+				<label>$LOCALIZE[35117] [B]$INFO[Skin.String(Menu_Videos_lab)][/B]</label>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
@@ -1085,7 +1085,7 @@
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
-				<label>Activer le Menu [B]$INFO[Skin.String(Menu_Movie_lab)][/B]</label>
+				<label>$LOCALIZE[35117] [B]$INFO[Skin.String(Menu_Movie_lab)][/B]</label>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
@@ -1588,7 +1588,7 @@
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
-				<label>Activer le Menu [B]$INFO[Skin.String(Menu_Music_lab)][/B]</label>
+				<label>$LOCALIZE[35117] [B]$INFO[Skin.String(Menu_Music_lab)][/B]</label>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
@@ -2052,7 +2052,7 @@
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
-				<label>Activer le Menu [B]$INFO[Skin.String(Menu_TVShows_lab)][/B]</label>
+				<label>$LOCALIZE[35117] [B]$INFO[Skin.String(Menu_TVShows_lab)][/B]</label>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
@@ -2476,7 +2476,7 @@
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
-				<label>Activer le Menu [B]$INFO[Skin.String(Menu_Programs_lab)][/B]</label>
+				<label>$LOCALIZE[35117] [B]$INFO[Skin.String(Menu_Programs_lab)][/B]</label>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
@@ -2699,7 +2699,7 @@
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
-				<label>Activer le Menu [B]1[/B]</label>
+				<label>$LOCALIZE[35117] [B]1[/B]</label>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
@@ -3002,7 +3002,7 @@
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
-				<label>Activer le Menu [B]2[/B]</label>
+				<label>$LOCALIZE[35117] [B]2[/B]</label>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
@@ -3305,7 +3305,7 @@
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
-				<label>Activer le Menu [B]3[/B]</label>
+				<label>$LOCALIZE[35117] [B]3[/B]</label>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
@@ -3609,7 +3609,7 @@
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
-				<label>Activer le Menu [B]4[/B]</label>
+				<label>$LOCALIZE[35117] [B]4[/B]</label>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
