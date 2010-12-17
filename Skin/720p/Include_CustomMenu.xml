@@ -1361,46 +1361,6 @@
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)  + Skin.HasSetting(Menu_Movie_sub6_act)</visible>
 			</control>
-			<control type="radiobutton" id="50023">
-				<width>750</width>
-				<height>40</height>
-				<font>font13</font>
-				<label>$LOCALIZE[31119] [B]$INFO[Skin.String(Menu_Movie_sub7_lab)][/B]</label>
-				<textcolor>grey2</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<texturefocus>MenuItemFO.png</texturefocus>
-				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.ToggleSetting(Menu_Movie_sub7_act)</onclick>
-				<selected>Skin.HasSetting(Menu_Movie_sub7_act)</selected>
-				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)</visible>
-			</control>
-			<control type="button" id="50024">
-				<width>750</width>
-				<height>40</height>
-				<font>font12</font>
-				<label> - $LOCALIZE[31120]</label>
-				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Movie_sub7_lab)][/COLOR]</label2>
-				<textcolor>grey2</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<texturefocus>MenuItemFO.png</texturefocus>
-				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(Menu_Movie_sub7_lab)</onclick>
-				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)  + Skin.HasSetting(Menu_Movie_sub7_act) </visible>
-			</control>
-			<control type="button" id="50025">
-				<width>750</width>
-				<height>40</height>
-				<font>font12</font>
-				<label> - $LOCALIZE[31121]</label>
-				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Movie_sub7_run)][/COLOR]</label2>
-				<textcolor>grey2</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<texturefocus>MenuItemFO.png</texturefocus>
-				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.SetString(RunOpt_var,Menu_Movie_sub7_run)</onclick>
-				<onclick>ActivateWindow(2114)</onclick>
-				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)  + Skin.HasSetting(Menu_Movie_sub7_act)</visible>
-			</control>
 			<control type="radiobutton" id="50026">
 				<width>750</width>
 				<height>40</height>
