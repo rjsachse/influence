@@ -550,25 +550,25 @@
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(SubMenu_Movie_opt1_lab)]</label>
 						<onclick>$INFO[Skin.String(SubMenu_Movie_opt1_run)]</onclick>
-						<visible>!Library.HasContent(Music) + Skin.HasSetting(SubMenu_Movie_opt1)</visible>
+						<visible>Skin.HasSetting(SubMenu_Movie_opt1)</visible>
 					</control>
 					<control type="button" id="90168">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(SubMenu_Movie_opt2_lab)]</label>
 						<onclick>$INFO[Skin.String(SubMenu_Movie_opt2_run)]</onclick>
-						<visible>!Library.HasContent(Music) + Skin.HasSetting(SubMenu_Movie_opt2)</visible>
+						<visible>Skin.HasSetting(SubMenu_Movie_opt2)</visible>
 					</control>
 					<control type="button" id="90169">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(SubMenu_Movie_opt3_lab)]</label>
 						<onclick>$INFO[Skin.String(SubMenu_Movie_opt3_run)]</onclick>
-						<visible>!Library.HasContent(Music) + Skin.HasSetting(SubMenu_Movie_opt3)</visible>
+						<visible>Skin.HasSetting(SubMenu_Movie_opt3)</visible>
 					</control>
 					<control type="button" id="90170">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(SubMenu_Movie_opt4_lab)]</label>
 						<onclick>$INFO[Skin.String(SubMenu_Movie_opt4_run)]</onclick>
-						<visible>!Library.HasContent(Music) + Skin.HasSetting(SubMenu_Movie_opt4)</visible>
+						<visible>Skin.HasSetting(SubMenu_Movie_opt4)</visible>
 					</control>
 				</control>
 <!-- SubMenu Movie (END) -->
