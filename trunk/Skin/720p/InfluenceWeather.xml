@@ -1,7 +1,7 @@
 <includes>
 	<include name="CurrentWeather">
 		<control type="group">
-			<posx>680</posx>
+			<posx>715</posx>
 			<posy>50</posy>
 			<control type="image">
 				<posx>0</posx>

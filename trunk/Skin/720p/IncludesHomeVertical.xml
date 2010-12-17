@@ -267,7 +267,7 @@
 					<posx>10</posx>
 					<posy>0</posy>
 					<width>240</width>
-					<height>240</height>
+					<height>400</height>
 					<align>center</align>
 					<onleft>9000</onleft>
 					<onright>9010</onright>
@@ -342,12 +342,12 @@
 					<posx>10</posx>
 					<posy>0</posy>
 					<width>240</width>
-					<height>240</height>
+					<height>400</height>
 					<align>center</align>
 					<onleft>9000</onleft>
 					<onright>8002</onright>
-					<onup>19001</onup>
-					<ondown>19001</ondown>
+					<onup>9011</onup>
+					<ondown>9011</ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(9000).HasFocus(3)</visible>
 					<control type="button" id="90111">
@@ -390,25 +390,25 @@
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(SubMenu_Music_opt1_lab)]</label>
 						<onclick>$INFO[Skin.String(SubMenu_Music_opt1_run)]</onclick>
-						<visible>!Library.HasContent(Music) + Skin.HasSetting(SubMenu_Music_opt1)</visible>
+						<visible>Library.HasContent(Music) + Skin.HasSetting(SubMenu_Music_opt1)</visible>
 					</control>
 					<control type="button" id="90119">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(SubMenu_Music_opt2_lab)]</label>
 						<onclick>$INFO[Skin.String(SubMenu_Music_opt2_run)]</onclick>
-						<visible>!Library.HasContent(Music) + Skin.HasSetting(SubMenu_Music_opt2)</visible>
+						<visible>Library.HasContent(Music) + Skin.HasSetting(SubMenu_Music_opt2)</visible>
 					</control>
 					<control type="button" id="90120">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(SubMenu_Music_opt3_lab)]</label>
 						<onclick>$INFO[Skin.String(SubMenu_Music_opt3_run)]</onclick>
-						<visible>!Library.HasContent(Music) + Skin.HasSetting(SubMenu_Music_opt3)</visible>
+						<visible>Library.HasContent(Music) + Skin.HasSetting(SubMenu_Music_opt3)</visible>
 					</control>
 					<control type="button" id="90121">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(SubMenu_Music_opt4_lab)]</label>
 						<onclick>$INFO[Skin.String(SubMenu_Music_opt4_run)]</onclick>
-						<visible>!Library.HasContent(Music) + Skin.HasSetting(SubMenu_Music_opt4)</visible>
+						<visible>Library.HasContent(Music) + Skin.HasSetting(SubMenu_Music_opt4)</visible>
 					</control>
 				</control>
 <!-- SubMenu Music (END)-->
@@ -417,7 +417,7 @@
 					<posx>10</posx>
 					<posy>0</posy>
 					<width>240</width>
-					<height>240</height>
+					<height>400</height>
 					<align>center</align>
 					<onleft>9000</onleft>
 					<onright>19001</onright>
@@ -463,7 +463,7 @@
 					<posx>10</posx>
 					<posy>0</posy>
 					<width>240</width>
-					<height>240</height>
+					<height>400</height>
 					<align>center</align>
 					<onleft>9000</onleft>
 					<onright>Control.SetFocus(8001,0)</onright>
@@ -502,7 +502,7 @@
 					<posx>10</posx>
 					<posy>0</posy>
 					<width>240</width>
-					<height>240</height>
+					<height>400</height>
 					<align>center</align>
 					<onleft>9000</onleft>
 					<onright>Control.SetFocus(8000,0)</onright>
@@ -577,7 +577,7 @@
 					<posx>10</posx>
 					<posy>0</posy>
 					<width>240</width>
-					<height>240</height>
+					<height>400</height>
 					<align>center</align>
 					<onleft>9000</onleft>
 					<onright>Control.SetFocus(8001,0)</onright>
@@ -646,7 +646,7 @@
 					<posx>10</posx>
 					<posy>0</posy>
 					<width>240</width>
-					<height>240</height>
+					<height>400</height>
 					<align>center</align>
 					<onleft>9000</onleft>
 					<onright>Control.SetFocus(8001,0)</onright>
@@ -685,7 +685,7 @@
 					<posx>10</posx>
 					<posy>0</posy>
 					<width>240</width>
-					<height>240</height>
+					<height>400</height>
 					<align>center</align>
 					<onleft>9000</onleft>
 					<onright>Control.SetFocus(8001,0)</onright>
@@ -724,12 +724,12 @@
 					<posx>10</posx>
 					<posy>0</posy>
 					<width>240</width>
-					<height>240</height>
+					<height>400</height>
 					<align>center</align>
 					<onleft>9000</onleft>
 					<onright>19001</onright>
-					<onup>9015</onup>
-					<ondown>9015</ondown>
+					<onup>9020</onup>
+					<ondown>9020</ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(9000).HasFocus(20) + Skin.HasSetting(SubMenu_Men1_opt1)</visible>
 					<control type="button" id="90201">
@@ -787,12 +787,12 @@
 					<posx>10</posx>
 					<posy>0</posy>
 					<width>240</width>
-					<height>240</height>
+					<height>400</height>
 					<align>center</align>
 					<onleft>9000</onleft>
 					<onright>19001</onright>
-					<onup>9015</onup>
-					<ondown>9015</ondown>
+					<onup>9021</onup>
+					<ondown>9021</ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(9000).HasFocus(21) + Skin.HasSetting(SubMenu_Men2_opt1)</visible>
 					<control type="button" id="90211">
@@ -850,12 +850,12 @@
 					<posx>10</posx>
 					<posy>0</posy>
 					<width>240</width>
-					<height>240</height>
+					<height>400</height>
 					<align>center</align>
 					<onleft>9000</onleft>
 					<onright>19001</onright>
-					<onup>9015</onup>
-					<ondown>9015</ondown>
+					<onup>9022</onup>
+					<ondown>9022</ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(9000).HasFocus(22) + Skin.HasSetting(SubMenu_Men3_opt1)</visible>
 					<control type="button" id="90221">
@@ -913,12 +913,12 @@
 					<posx>10</posx>
 					<posy>0</posy>
 					<width>240</width>
-					<height>240</height>
+					<height>400</height>
 					<align>center</align>
 					<onleft>9000</onleft>
 					<onright>19001</onright>
-					<onup>9015</onup>
-					<ondown>9015</ondown>
+					<onup>9022</onup>
+					<ondown>9022</ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(9000).HasFocus(23) + Skin.HasSetting(SubMenu_Men4_opt1)</visible>
 					<control type="button" id="90231">

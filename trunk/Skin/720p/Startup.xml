@@ -161,7 +161,9 @@
 			<onfocus>Skin.SetString(Menu_Music_sub6_run,ActivateWindow(MusicLibrary,Addons,return))</onfocus>
 <!--icone-->		<onfocus>Skin.SetString(Menu_Music_sub6_Ico,Carousel/MusicAddons.png)</onfocus>
 <!--icone-->		<onfocus>Skin.SetString(SubMenu_Music_opt1_Ico,Carousel/Music1.png)</onfocus>
-			<onfocus>Skin.SetString(SubMenu_Music_opt1_lab,Menu 1)</onfocus>
+			<onfocus>Skin.SetString(SubMenu_Music_opt1_lab,$LOCALIZE[589])</onfocus>
+			<onfocus>Skin.SetString(SubMenu_Music_opt1_run,PlayerControl(Partymode(music)))</onfocus>
+			<onfocus>Skin.SetBool(SubMenu_Music_opt1)</onfocus>
 	<!--icone-->	<onfocus>Skin.SetString(SubMenu_Music_opt2_Ico,Carousel/Music2.png)</onfocus>
 			<onfocus>Skin.SetString(SubMenu_Music_opt2_lab,Menu 2)</onfocus>
 	<!--icone-->	<onfocus>Skin.SetString(SubMenu_Music_opt3_Ico,Carousel/Music3.png)</onfocus>
