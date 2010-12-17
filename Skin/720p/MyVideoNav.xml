@@ -8,7 +8,9 @@
 			<description>trigger</description>
 			<onfocus>XBMC.RunScript(script.TvTunes,backend=True&amploop=False)</onfocus>
 			<onfocus>SetFocus(50)</onfocus>
+			<!--
 			<visible>Skin.HasSetting(TvTunesIsEnable)</visible>
+			-->
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 		</control>	
