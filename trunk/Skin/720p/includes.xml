@@ -173,6 +173,18 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
+			<imagepath background="true">$INFO[Skin.String(Menu_Weather_Back)]$INFO[Weather.FanartCode]</imagepath>
+			<timeperimage>10000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>1000</fadetime>
+			<visible>Skin.HasSetting(ShowWeatherFanart) + !Skin.HasSetting(WeatheCustomFanart)</visible>
+			<animation effect="fade" time="200">WindowClose</animation>
+		</control>
+		<control type="multiimage">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
 			<imagepath background="true">$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</imagepath>
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>

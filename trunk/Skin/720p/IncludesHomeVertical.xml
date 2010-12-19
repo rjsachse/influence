@@ -228,7 +228,7 @@
 				</control>
 			</control>
 		</control>
-		<!-- Vertical -->
+<!-- Vertical -->
 		<control type="group">
 			<animation effect="slide" end="-400,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
 			<animation effect="slide" start="-400,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>

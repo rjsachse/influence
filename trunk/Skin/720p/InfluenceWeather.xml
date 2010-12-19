@@ -99,13 +99,17 @@
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
-			<control type="image">
+			<control type="multiimage">
 				<description>current weather icon</description>
 				<posx>230</posx>
 				<posy>135</posy>
 				<width>230</width>
 				<height>180</height>
-				<info>Window(2600).Property(Current.ConditionIcon)</info>
+				<imagepath>Weather/Icons/$INFO[Weather.FanartCode]</imagepath>
+				<timeperimage>100</timeperimage>
+				<randomize>false</randomize>
+				<fadetime>0</fadetime>
+				<colordiffuse>BFFFFFFF</colordiffuse>
 				<aspectratio>keep</aspectratio>
 			</control>
 			<control type="label">

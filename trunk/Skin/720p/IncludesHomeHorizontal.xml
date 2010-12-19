@@ -492,7 +492,6 @@
 		</control>
 <!-- Horizontal Statistics END -->
 
-
 <!-- Horizontal -->
 		<control type="group">
 			<animation effect="fade" time="700" tween="quadratic" easing="out">WindowClose</animation>
