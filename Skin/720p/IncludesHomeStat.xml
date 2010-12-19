@@ -1,6 +1,5 @@
 <includes>
 	<include name="IncludesHomeStat">
-		<!-- DEBUT INCLUDE>
 		<!-- Vertical Video Statistics -->
 		<control type="group">
 			<posx>275r</posx>

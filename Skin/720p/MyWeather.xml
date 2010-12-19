@@ -64,14 +64,16 @@
 						<textcolor>white</textcolor>
 						<shadowcolor>black</shadowcolor>
 					</control>
-					<control type="image">
+					<control type="multiimage">
 						<description>day icon</description>
 						<posx>370</posx>
 						<posy>40</posy>
 						<height>80</height>
 						<width>80</width>
-						<info>Window.Property(Day0.OutlookIcon)</info>
-						<aspectratio align="right">keep</aspectratio>
+						<imagepath>Weather/Icons/$INFO[Window.Property(Day0.FanartCode)]</imagepath>
+						<timeperimage>100</timeperimage>
+						<randomize>false</randomize>
+						<fadetime>0</fadetime>
 					</control>
 					<control type="label">
 						<description>high label</description>
@@ -163,14 +165,16 @@
 						<textcolor>white</textcolor>
 						<shadowcolor>black</shadowcolor>
 					</control>
-					<control type="image">
+					<control type="multiimage">
 						<description>day icon</description>
 						<posx>370</posx>
 						<posy>40</posy>
 						<height>80</height>
 						<width>80</width>
-						<info>Window.Property(Day1.OutlookIcon)</info>
-						<aspectratio align="right">keep</aspectratio>
+						<imagepath>Weather/Icons/$INFO[Window.Property(Day1.FanartCode)]</imagepath>
+						<timeperimage>100</timeperimage>
+						<randomize>false</randomize>
+						<fadetime>0</fadetime>
 					</control>
 					<control type="label">
 						<description>high label</description>
@@ -262,14 +266,16 @@
 						<textcolor>white</textcolor>
 						<shadowcolor>black</shadowcolor>
 					</control>
-					<control type="image">
+					<control type="multiimage">
 						<description>day icon</description>
 						<posx>370</posx>
 						<posy>40</posy>
 						<height>80</height>
 						<width>80</width>
-						<info>Window.Property(Day2.OutlookIcon)</info>
-						<aspectratio align="right">keep</aspectratio>
+						<imagepath>Weather/Icons/$INFO[Window.Property(Day2.FanartCode)]</imagepath>
+						<timeperimage>100</timeperimage>
+						<randomize>false</randomize>
+						<fadetime>0</fadetime>
 					</control>
 					<control type="label">
 						<description>high label</description>
@@ -361,14 +367,16 @@
 						<textcolor>white</textcolor>
 						<shadowcolor>black</shadowcolor>
 					</control>
-					<control type="image">
+					<control type="multiimage">
 						<description>day icon</description>
 						<posx>370</posx>
 						<posy>40</posy>
 						<height>80</height>
 						<width>80</width>
-						<info>Window.Property(Day3.OutlookIcon)</info>
-						<aspectratio align="right">keep</aspectratio>
+						<imagepath>Weather/Icons/$INFO[Window.Property(Day3.FanartCode)]</imagepath>
+						<timeperimage>100</timeperimage>
+						<randomize>false</randomize>
+						<fadetime>0</fadetime>
 					</control>
 					<control type="label">
 						<description>high label</description>
@@ -503,15 +511,9 @@
 						<include>ButtonMediaSubCommonValues</include>
 						<label>31307</label>
 						<onclick>Skin.ToggleSetting(ShowWeatherFanart)</onclick>
+						<onclick>Skin.SetBool(WeatherCustomFanart)</onclick>
+						<onclick>Skin.SetString(WeatherFanartDir,special://skin/backgrounds/FanartMeteo/)</onclick>
 						<selected>!Skin.HasSetting(ShowWeatherFanart)</selected>
-					</control>
-					<control type="button" id="201">
-						<description>Search</description>
-						<textwidth>170</textwidth>
-						<include>ButtonMediaSubCommonValues</include>
-						<label>31317</label>
-						<onclick>Skin.SetPath(WeatherFanartDir)</onclick>
-						<enable>Skin.HasSetting(ShowWeatherFanart)</enable>
 					</control>
 				</control>
 			</control>

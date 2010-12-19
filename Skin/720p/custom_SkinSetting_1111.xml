@@ -222,6 +222,7 @@
 						<focusedcolor>white</focusedcolor>
 						<label>35039</label>
 						<onclick>Skin.ToggleSetting(CarouselCustomMenu)</onclick>
+						<onclick>ActivateWindow(1111)</onclick>
 						<selected>Skin.HasSetting(CarouselCustomMenu)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
@@ -290,7 +291,7 @@
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
-						<label>Enable Kiosk Mode (disable slideout menu)</label>
+						<label>35023</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
@@ -787,7 +788,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="214">
+					<control type="radiobutton" id="215">
 						<description>Show Recently added info</description>
 						<width>750</width>
 						<height>40</height>
@@ -800,7 +801,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="215">
+					<control type="radiobutton" id="216">
 						<description>Show Library Stats</description>
 						<width>750</width>
 						<height>40</height>
@@ -813,7 +814,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="216">
+					<control type="radiobutton" id="217">
 						<description>Show CDArt</description>
 						<width>750</width>
 						<height>40</height>
@@ -826,7 +827,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="217">
+					<control type="radiobutton" id="218">
 						<description>Show Next Five Songs</description>
 						<width>750</width>
 						<height>40</height>
@@ -2522,56 +2523,6 @@
 						<onright>61</onright>
 						<onup>9004</onup>
 						<ondown>9004</ondown>
-						<control type="label" id="419">
-							<width>750</width>
-							<height>45</height>
-							<font>font13_title</font>
-							<label>Météo</label>
-							<textcolor>blue</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<align>left</align>
-							<aligny>center</aligny>
-						</control>
-
-						<control type="radiobutton" id="420">
-							<width>750</width>
-							<height>40</height>
-							<font>font13</font>
-							<label>$LOCALIZE[31119]</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>MenuItemFO.png</texturefocus>
-							<texturenofocus>MenuItemNF.png</texturenofocus>
-							<onclick>Skin.ToggleSetting(WeatherScript_Enable)</onclick>
-							<selected>Skin.HasSetting(WeatherScript_Enable)</selected>
-						</control>
-						<control type="button" id="421">
-							<width>750</width>
-							<height>40</height>
-							<font>font12</font>
-							<label> - $LOCALIZE[31120]</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(WeatherScript_Label)][/COLOR]</label2>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>MenuItemFO.png</texturefocus>
-							<texturenofocus>MenuItemNF.png</texturenofocus>
-							<onclick>Skin.SetString(WeatherScript_Label)</onclick>
-							<visible>Skin.HasSetting(WeatherScript_Enable)</visible>
-						</control>
-						<control type="button" id="422">
-							<width>750</width>
-							<height>40</height>
-							<font>font12</font>
-							<label> - $LOCALIZE[31121]</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(WeatherScript_Path)][/COLOR]</label2>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>MenuItemFO.png</texturefocus>
-							<texturenofocus>MenuItemNF.png</texturenofocus>
-							<onclick>Skin.SetAddon(WeatherScript_Path,xbmc.python.script)</onclick>
-							<visible>Skin.HasSetting(WeatherScript_Enable)</visible>
-						</control>
-
 						<control type="label" id="423">
 							<width>750</width>
 							<height>45</height>
@@ -2666,7 +2617,7 @@
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<label>- Selection script:</label>
-							<label2>$INFO[Skin.String(TheaterScript_Path)</label2>
+							<label2>[COLOR=selected]$INFO[Skin.String(TheaterScript_Path)][/COLOR]</label2>
 							<onclick>Skin.SetAddon(TheaterScript_Path,xbmc.python.script)</onclick>
 							<texturefocus>MenuItemFO.png</texturefocus>
 							<texturenofocus>MenuItemNF.png</texturenofocus>
@@ -2684,19 +2635,6 @@
 							<texturenofocus>MenuItemNF.png</texturenofocus>
 							<onclick>Skin.ToggleSetting(TvTunesIsEnable)</onclick>
 							<selected>Skin.HasSetting(TvTunesIsEnable)</selected>
-						</control>
-						<control type="button" id="433">
-							<description>TvTunes Path</description>
-							<width>750</width>
-							<height>40</height>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<label>- Selection script:</label>
-							<label2>$INFO[Skin.String(TvTunesScript_Path)</label2>
-							<onclick>Skin.SetAddon(TvTunesScript_Path,xbmc.python.script)</onclick>
-							<texturefocus>MenuItemFO.png</texturefocus>
-							<texturenofocus>MenuItemNF.png</texturenofocus>
-							<visible>Skin.HasSetting(TvTunesIsEnable)</visible>
 						</control>
 					</control>
 				</control>

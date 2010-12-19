@@ -860,10 +860,10 @@
 						<onclick>$INFO[Skin.String(SubMenu_Men4_opt6_run)]</onclick>
 						<visible>Container(9000).HasFocus(23) + [Skin.HasSetting(SubMenu_Men4_opt6) + !IsEmpty(Skin.String(SubMenu_Men4_opt6_lab))]</visible>
 					</item>
-	<!-- Custom Menu 4 End -->
+<!-- Custom Menu 4 End -->
 				</content>
 			</control>
-	<!-- Alternate Submenu END -->
+<!-- Alternate Submenu END -->
 		</control>
 		<control type="button" id="8999">
 			<description>Run Recently added</description>
