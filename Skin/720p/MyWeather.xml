@@ -70,7 +70,7 @@
 						<posy>40</posy>
 						<height>80</height>
 						<width>80</width>
-						<imagepath>Weather/Icons/$INFO[Window.Property(Day0.FanartCode)]</imagepath>
+						<imagepath>special://skin/backgrounds/Weather/Icons/$INFO[Window.Property(Day0.FanartCode)]</imagepath>
 						<timeperimage>100</timeperimage>
 						<randomize>false</randomize>
 						<fadetime>0</fadetime>
@@ -171,7 +171,7 @@
 						<posy>40</posy>
 						<height>80</height>
 						<width>80</width>
-						<imagepath>Weather/Icons/$INFO[Window.Property(Day1.FanartCode)]</imagepath>
+						<imagepath>special://skin/backgrounds/Weather/Icons/$INFO[Window.Property(Day1.FanartCode)]</imagepath>
 						<timeperimage>100</timeperimage>
 						<randomize>false</randomize>
 						<fadetime>0</fadetime>
@@ -272,7 +272,7 @@
 						<posy>40</posy>
 						<height>80</height>
 						<width>80</width>
-						<imagepath>Weather/Icons/$INFO[Window.Property(Day2.FanartCode)]</imagepath>
+						<imagepath>special://skin/backgrounds/Weather/Icons/$INFO[Window.Property(Day2.FanartCode)]</imagepath>
 						<timeperimage>100</timeperimage>
 						<randomize>false</randomize>
 						<fadetime>0</fadetime>
@@ -373,7 +373,7 @@
 						<posy>40</posy>
 						<height>80</height>
 						<width>80</width>
-						<imagepath>Weather/Icons/$INFO[Window.Property(Day3.FanartCode)]</imagepath>
+						<imagepath>special://skin/backgrounds/Weather/Icons/$INFO[Window.Property(Day3.FanartCode)]</imagepath>
 						<timeperimage>100</timeperimage>
 						<randomize>false</randomize>
 						<fadetime>0</fadetime>
@@ -512,7 +512,7 @@
 						<label>31307</label>
 						<onclick>Skin.ToggleSetting(ShowWeatherFanart)</onclick>
 						<onclick>Skin.SetBool(WeatherCustomFanart)</onclick>
-						<onclick>Skin.SetString(WeatherFanartDir,special://skin/backgrounds/FanartMeteo/)</onclick>
+						<onclick>Skin.SetString(WeatherFanartDir,special://skin/backgrounds/Weather/FanartMeteo/)</onclick>
 						<selected>!Skin.HasSetting(ShowWeatherFanart)</selected>
 					</control>
 				</control>
