@@ -105,7 +105,7 @@
 				<posy>135</posy>
 				<width>230</width>
 				<height>180</height>
-				<imagepath>Weather/Icons/$INFO[Weather.FanartCode]</imagepath>
+				<imagepath>special://skin/backgrounds/Weather/Icons/$INFO[Weather.FanartCode]</imagepath>
 				<timeperimage>100</timeperimage>
 				<randomize>false</randomize>
 				<fadetime>0</fadetime>
