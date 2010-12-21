@@ -1,26 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="skin.influence"
-  version="V1.00"
+  version="1.0.0"
   name="Influence"
-  provider-name="Jezz_X, Yiarkyiark, Team Passion XBMC">
+  provider-name="Yiarkyiark, Team Passion XBMC">
   <requires>
     <import addon="xbmc.gui" version="2.11"/>
-    <import addon="script.recentlyadded" version="1.0.4"/>
-	<import addon="script.logo-downloader" version="2.1.1"/>
-  </requires>
-  <extension
+    <import addon="script.recentlyadded" version="1.0.5"/> 
+    <import addon="script.xbmc.subtitles" version="1.8.0"/>
+	<import addon="script.logo-downloader" version="2.0.0"/> 
+	</requires>
+  <extension 
     point="xbmc.gui.skin"
-    defaultresolution="720p"
+    defaultresolution="720p" 
     defaultresolutionwide="720p"
-    defaultthemename="textures.xbt"
+    defaultthemename="textures.xbt" 
     effectslowdown="0.75"
     debugging="false"/>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">Influence skin by Jezz_X, Yiarkyiark Team Passion XBMC. </summary>
-    <summary lang="fr">Skin Influence par Jezz_X, Yiarkyiark, Team Passion XBMC.</summary>
-    <description lang="en">Influence</description>
-    <description lang="fr">Influence</description>
+    <summary lang="en">Influence by Yiarkyiark and the team Passion XBMC</summary>
+    <summary lang="fr">Influence par Yiarkyiark et l'équipe Team Passion XBMC</summary>
+    <description lang="en">Influence is a skin based on Confluence, It includes all its features but have a slightly different approach based on texture transparency enhancement in order to highlight fanarts. The other main feature of this skin is to have fully customizable menus, modifying, deleting or adding some with an intuitive interface. It also carries most of the successfull skin features (logo, clearart, fanart, ...)</description>
+   <description lang="fr">Influence est un skin dérivé de Confluence, il en reprend toutes les caractéristiques mais avec une approche basée sur la transparence des textures pour mettre en valeur les fanarts.  L'autre caractéristique de ce skin est d'avoir des menus entièrement paramétrable, modification, suppression ou rajout, ceci avec une interface intuitive. Il intègre également la plupart des fonctionnalités des skins a succès, (logo, clearart, fanart, ...)</description>
     <platform>all</platform>
   </extension>
 </addon>
