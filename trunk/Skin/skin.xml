@@ -1,4 +1,4 @@
-<skin>
+﻿<skin>
 	<defaultresolution>720p</defaultresolution>
 	<defaultresolutionwide>720p</defaultresolutionwide>
 	<defaultthemename>textures.xpr</defaultthemename>
@@ -6,6 +6,6 @@
 	<effectslowdown>.75</effectslowdown>
 	<credits>
 		<skinname>Influence </skinname>
-		<name>Based on Confluence (by Jezz_X), modify by Yiarkyiark</name>
+		<name>By Yiarkyiark</name>
 	</credits>
 </skin>
