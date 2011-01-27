@@ -140,4 +140,54 @@
   <string id="31407">[B]KONFIGURIERE SKIN EINSTELLUNGEN[/B][CR][CR]Einrichten des Confluence Skin · Hinzufügen und entfernen der Home Menü Einträge[CR]Wechseln der Skin Hintergründe</string>
   <string id="31408">[B]KONFIGURIERE ADD-ONS[/B][CR][CR]Organisiere die installierten Add-ons · Installiere Add-ons von xbmc.org[CR]Add-on Einstellungen anpassen</string>
   <string id="31421">Wähle Dein XBMC Benutzer Profil[CR]Zum Anmelden und Weitermachen</string>
+<!-- Extra Unified PVR labels -->
+  <string id="31500">Aufnahme Timer</string>
+  <string id="31501">Geplante Zeit</string>
+  <string id="31502">Fernsehen</string>
+  <string id="31503">Gruppe hinzufügen</string>
+  <string id="31504">Gruppe umbenennen</string>
+  <string id="31505">Gruppe löschen</string>
+  <string id="31506">Verfügbare[CR]Gruppen</string>
+  <string id="31507">Nicht gruppierte[CR]Kanäle</string>
+  <string id="31508">Kanäle in Gruppe</string>
+  <string id="31509">Kanal Gruppe</string>
+  <string id="31510">Timer gesetzt</string>
+
+  <!-- Influence  -->
+  <string id="35000">Horizontale Menüs</string>
+  <string id="35001">   - hervorgehobenes Menu</string>
+  <string id="35002">   - hervorgehobene RSS Anzeige</string>
+  <string id="35003">Karussell Menüs</string>
+  <string id="35004">Verikale Menüs</string>
+  <string id="35010">Statistiken anzeigen</string>
+  <string id="35011">CDart anzeigen</string>
+  <string id="35012">Nächsten fünf Lieder anzeigen</string>
+  <string id="35020">Menüs anpassen</string>
+  <string id="35021">Skin</string>
+  <string id="35022">Standard Werte</string>
+  <string id="35023">Kiosk Modus aktivieren</string>
+  <string id="35030">Favoriten</string>
+  <string id="35031">Musik Wiedergabeliste</string>
+  <string id="35032">Video Wiedergabeliste</string>
+  <string id="35033">Skript</string>
+  <string id="35034">Addon</string>
+  <string id="35036">Frei</string>
+  <string id="35037">   - Transparente Hintergründe verwenden</string>
+  <string id="35038">   - Symbole für Untermenüs verwenden</string>
+  <string id="35039">Karusselländerung für angepasste Menüs</string>
+  <string id="35040">Neueste Alben</string>
+  <string id="35103">IMDB Bewertung:</string>
+  <string id="35104">Geboren</string>
+  <string id="35105">Bearbeitet</string>
+  <string id="35110">Ansichten aktivieren</string>
+  <string id="35111">Ansichten</string>
+  <string id="35112">Aktivieren/Deaktivieren</string>
+  <string id="35113">Bibliothek's Statistik</string>
+  <string id="35114">TvTunes Skripit aktivieren</string>
+  <string id="35115">Musik Fankunst anzeigen</string>
+  <string id="35116">"Movie theater Experience" Skript aktivieren</string>
+  <string id="35117">Menü aktivieren</string>
+  <string id="35119">DVD</string>
+  <string id="35120">Favoriten</string>
 </strings>
+

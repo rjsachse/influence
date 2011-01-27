@@ -1,3 +1,4 @@
+<!-- OK -->
 <includes>
 	<include name="IncludeHomeVertical">
 		<include>IncludesHomeStat</include>	
@@ -69,6 +70,7 @@
 					<shadowcolor>black</shadowcolor>
 				</control>
 			</control>
+<!-- OK -->
 			<control type="group">
 				<visible>VideoPlayer.Content(Movies)</visible>
 				<control type="image">
@@ -148,6 +150,7 @@
 					<shadowcolor>black</shadowcolor>
 				</control>
 			</control>
+<!-- OK -->
 			<control type="group">
 				<visible>VideoPlayer.Content(Episodes)</visible>
 				<control type="image">
@@ -228,750 +231,122 @@
 				</control>
 			</control>
 		</control>
+<!-- OK -->
 <!-- Vertical -->
 		<control type="group">
 			<animation effect="slide" end="-400,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
 			<animation effect="slide" start="-400,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
-			<control type="group">
-				<animation effect="slide" end="-228,0" time="300" tween="quadratic" easing="out">WindowClose</animation>
-				<control type="image">
-					<posx>379</posx>
-					<posy>0</posy>
-					<width>1</width>
-					<height>720</height>
-					<texture>HomeBladeSub_Part1.png</texture>
-					<animation effect="zoom" start="379,0,1,720" end="379,0,229,720" time="300" tween="quadratic" easing="out" condition="ControlGroup(19001).HasFocus">Conditional</animation>
+			
+			<control type="group" id="300">
+				<control type="button" id="302">
+					<visible>Container(9000).HasFocus(3)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8002)</onfocus>
 				</control>
-				<control type="image">
-					<posx>380</posx>
-					<posy>0</posy>
-					<width>12</width>
-					<height>720</height>
-					<texture>HomeBladeSub_Part2.png</texture>
-					<animation effect="slide" end="228,0" time="300" tween="quadratic" easing="out" condition="ControlGroup(19001).HasFocus">Conditional</animation>
+				
+				<control type="button" id="306">
+					<visible>Container(9000).HasFocus(10)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8000)</onfocus>
+				</control>
+				<control type="button" id="307">
+					<visible>Container(9000).HasFocus(11) | Container(9000).HasFocus(2)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8001)</onfocus>
 				</control>
 			</control>
-			<control type="group" id="19001">
+			
+			<control type="group" id="9001">
+				<include>HomeBigVisible</include>
 				<posx>170</posx>
 				<posy>240</posy>
-				<animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(19001).HasFocus">conditional</animation>
-				<animation effect="fade" start="0" end="100" delay="300" time="200" condition="ControlGroup(19001).HasFocus">conditional</animation>
-				<animation effect="fade" start="100" end="0" time="0" condition="ControlGroup(19001).HasFocus">WindowClose</animation>
-				<animation effect="slide" end="210,0" time="300" tween="quadratic" easing="out" condition="ControlGroup(19001).HasFocus">conditional</animation>
+				<animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(9001).HasFocus">conditional</animation>
+				<animation effect="fade" start="0" end="100" delay="300" time="200" condition="ControlGroup(9001).HasFocus">conditional</animation>
+				<animation effect="fade" start="100" end="0" time="0" condition="ControlGroup(9001).HasFocus">WindowClose</animation>
+				<animation effect="slide" end="210,0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus">conditional</animation>
 				<animation effect="slide" end="0,-204" time="300" condition="Container(9000).Row(1)">conditional</animation>
 				<animation effect="slide" end="0,-102" time="300" condition="Container(9000).Row(2)">conditional</animation>
 				<animation effect="slide" end="0,102" time="300" condition="Container(9000).Row(4)">conditional</animation>
 				<animation effect="slide" end="0,204" time="300" condition="Container(9000).Row(5)">conditional</animation>
+				
 <!-- SubMenu Video  -->
-				<control type="grouplist" id="9010">
-					<posx>10</posx>
+				<control type="fixedlist" id="945">
+					<posx>0</posx>
 					<posy>0</posy>
-					<width>240</width>
+					<width>200</width>
 					<height>400</height>
 					<align>center</align>
 					<onleft>9000</onleft>
-					<onright>9010</onright>
-					<onup>9010</onup>
-					<ondown>9010</ondown>
-					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(2)</visible>
-					<control type="button" id="90101">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(Menu_Videos_sub1_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Videos_sub1_run)]</onclick>
-						<visible>Library.HasContent(Movies) + Skin.HasSetting(Menu_Videos_sub1_act)</visible>
-					</control>
-					<control type="button" id="90102">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(Menu_Videos_sub2_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Videos_sub2_run)]</onclick>
-						<visible>Library.HasContent(TVShows) + Skin.HasSetting(Menu_Videos_sub2_act)</visible>
-					</control>
-					<control type="button" id="90103">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(Menu_Videos_sub3_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Videos_sub3_run)]</onclick>
-						<visible>Library.HasContent(MusicVideos) + Skin.HasSetting(Menu_Videos_sub3_act)</visible>
-					</control>
-					<control type="button" id="90104">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(Menu_Videos_sub4_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Videos_sub4_run)]</onclick>
-						<visible>Skin.HasSetting(Menu_Videos_sub1_act) + Skin.HasSetting(Menu_Videos_sub4_act)</visible>
-					</control>
-					<control type="button" id="90105">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(Menu_Videos_sub5_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Videos_sub5_run)]</onclick>
-						<visible>Library.HasContent(Video) + Skin.HasSetting(Menu_Videos_sub5_act)</visible>
-					</control>
-					<control type="button" id="90106">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(Menu_Videos_sub6_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Videos_sub6_run)]</onclick>
-						<visible>Library.HasContent(Video) + Skin.HasSetting(Menu_Videos_sub6_act)</visible>
-					</control>
-					<control type="button" id="90108">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Videos_opt1_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Videos_opt1_run)]</onclick>
-						<visible>!Library.HasContent(Video) + Skin.HasSetting(SubMenu_Videos_opt1)</visible>
-					</control>
-					<control type="button" id="90109">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Videos_opt2_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Videos_opt2_run)]</onclick>
-						<visible>!Library.HasContent(Video) + Skin.HasSetting(SubMenu_Videos_opt2)</visible>
-					</control>
-					<control type="button" id="90110">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Videos_opt3_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Videos_opt3_run)]</onclick>
-						<visible>!Library.HasContent(Video) + Skin.HasSetting(SubMenu_Videos_opt3)</visible>
-					</control>
-					<control type="button" id="90111">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Videos_opt4_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Videos_opt4_run)]</onclick>
-						<visible>!Library.HasContent(Video) + Skin.HasSetting(SubMenu_Videos_opt4)</visible>
-					</control>
-				</control>
-<!-- SubMenu Video (END) -->
-<!-- SubMenu Music -->
-				<control type="grouplist" id="9011">
-					<posx>10</posx>
-					<posy>0</posy>
-					<width>240</width>
-					<height>400</height>
-					<align>center</align>
-					<onleft>9000</onleft>
-					<onright>8002</onright>
-					<onup>9011</onup>
-					<ondown>9011</ondown>
-					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(3)</visible>
-					<control type="button" id="90111">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(Menu_Music_sub1_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Music_sub1_run)]</onclick>
-						<visible>Library.HasContent(Music) + Skin.HasSetting(Menu_Music_sub1_act)</visible>
-					</control>
-					<control type="button" id="90112">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(Menu_Music_sub2_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Music_sub2_run)]</onclick>
-						<visible>Library.HasContent(Music) + Skin.HasSetting(Menu_Music_sub2_act)</visible>
-					</control>
-					<control type="button" id="90113">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(Menu_Music_sub3_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Music_sub3_run)]</onclick>
-						<visible>Library.HasContent(Music) + Skin.HasSetting(Menu_Music_sub3_act)</visible>
-					</control>
-					<control type="button" id="90114">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(Menu_Music_sub4_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Music_sub4_run)]</onclick>
-						<visible>Skin.HasSetting(Menu_Music_sub4_act)</visible>
-					</control>
-					<control type="button" id="90115">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(Menu_Music_sub5_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Music_sub5_run)]</onclick>
-						<visible>Library.HasContent(Music) + Skin.HasSetting(Menu_Music_sub5_act)</visible>
-					</control>
-					<control type="button" id="90116">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(Menu_Music_sub6_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Music_sub6_run)]</onclick>
-						<visible>Library.HasContent(Music) + Skin.HasSetting(Menu_Music_sub6_act)</visible>
-					</control>
-					<control type="button" id="90118">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Music_opt1_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Music_opt1_run)]</onclick>
-						<visible>Library.HasContent(Music) + Skin.HasSetting(SubMenu_Music_opt1)</visible>
-					</control>
-					<control type="button" id="90119">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Music_opt2_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Music_opt2_run)]</onclick>
-						<visible>Library.HasContent(Music) + Skin.HasSetting(SubMenu_Music_opt2)</visible>
-					</control>
-					<control type="button" id="90120">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Music_opt3_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Music_opt3_run)]</onclick>
-						<visible>Library.HasContent(Music) + Skin.HasSetting(SubMenu_Music_opt3)</visible>
-					</control>
-					<control type="button" id="90121">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Music_opt4_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Music_opt4_run)]</onclick>
-						<visible>Library.HasContent(Music) + Skin.HasSetting(SubMenu_Music_opt4)</visible>
-					</control>
-				</control>
-<!-- SubMenu Music (END)-->
-<!-- SubMenu System -->
-				<control type="grouplist" id="9014">
-					<posx>10</posx>
-					<posy>0</posy>
-					<width>240</width>
-					<height>400</height>
-					<align>center</align>
-					<onleft>9000</onleft>
-					<onright>19001</onright>
-					<onup>9014</onup>
-					<ondown>9014</ondown>
-					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(5)</visible>
-					<control type="button" id="90141">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>5</label>
-						<onclick>ActivateWindow(Settings)</onclick>
-					</control>
-					<control type="button" id="90146">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>24001</label>
-						<onclick>ActivateWindow(AddonBrowser)</onclick>
-					</control>
-					<control type="button" id="90142">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>7</label>
-						<onclick>ActivateWindow(FileManager)</onclick>
-					</control>
-					<control type="button" id="90143">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>13200</label>
-						<onclick>ActivateWindow(Profiles)</onclick>
-					</control>
-					<control type="button" id="90144">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>130</label>
-						<onclick>ActivateWindow(SystemInfo)</onclick>
-					</control>
-					<control type="button" id="90145">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>Credits</label>
-						<onclick>ActivateWindow(Credits)</onclick>
-						<visible>False</visible>
-					</control>
-				</control>
-<!-- SubMenu System (END) -->
-<!-- SubMenu Programs -->
-				<control type="grouplist" id="9015">
-					<posx>10</posx>
-					<posy>0</posy>
-					<width>240</width>
-					<height>400</height>
-					<align>center</align>
-					<onleft>9000</onleft>
-					<onright>Control.SetFocus(8001,0)</onright>
-					<onup>9015</onup>
-					<ondown>9015</ondown>
-					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(1)</visible>
-					<control type="button" id="90156">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Programs_opt1_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Programs_opt1_run)]</onclick>
-						<visible>Skin.HasSetting(SubMenu_Programs_opt1)</visible>
-					</control>
-					<control type="button" id="90157">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Programs_opt2_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Programs_opt2_run)]</onclick>
-						<visible>Skin.HasSetting(SubMenu_Programs_opt2)</visible>
-					</control>
-					<control type="button" id="90158">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Programs_opt3_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Programs_opt3_run)]</onclick>
-						<visible>Skin.HasSetting(SubMenu_Programs_opt3)</visible>
-					</control>
-					<control type="button" id="90159">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Programs_opt4_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Programs_opt4_run)]</onclick>
-						<visible>Skin.HasSetting(SubMenu_Programs_opt4)</visible>
-					</control>
-				</control>
-<!-- SubMenu Programs(END) -->
-<!-- SubMenu Movie -->
-				<control type="grouplist" id="9016">
-					<posx>10</posx>
-					<posy>0</posy>
-					<width>240</width>
-					<height>400</height>
-					<align>center</align>
-					<onleft>9000</onleft>
-					<onright>Control.SetFocus(8000,0)</onright>
-					<onup>9016</onup>
-					<ondown>9016</ondown>
-					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(10)</visible>
-					<control type="button" id="90161">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(Menu_Movie_sub1_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Movie_sub1_run)]</onclick>
-						<visible>Skin.HasSetting(Menu_Movie_sub1_act)</visible>
-					</control>
-					<control type="button" id="90162">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(Menu_Movie_sub2_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Movie_sub2_run)]</onclick>
-						<visible>Skin.HasSetting(Menu_Movie_sub2_act)</visible>
-					</control>
-					<control type="button" id="90163">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(Menu_Movie_sub3_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Movie_sub3_run)]</onclick>
-						<visible>Skin.HasSetting(Menu_Movie_sub3_act)</visible>
-					</control>
-					<control type="button" id="90164">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(Menu_Movie_sub4_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Movie_sub4_run)]</onclick>
-						<visible>Skin.HasSetting(Menu_Movie_sub4_act)</visible>
-					</control>
-					<control type="button" id="90165">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(Menu_Movie_sub5_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Movie_sub5_run)]</onclick>
-						<visible>Skin.HasSetting(Menu_Movie_sub5_act)</visible>
-					</control>
-					<control type="button" id="90166">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(Menu_Movie_sub6_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Movie_sub6_run)]</onclick>
-						<visible>Skin.HasSetting(Menu_Movie_sub6_act)</visible>
-					</control>
-					<control type="button" id="90167">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Movie_opt1_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Movie_opt1_run)]</onclick>
-						<visible>Skin.HasSetting(SubMenu_Movie_opt1)</visible>
-					</control>
-					<control type="button" id="90168">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Movie_opt2_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Movie_opt2_run)]</onclick>
-						<visible>Skin.HasSetting(SubMenu_Movie_opt2)</visible>
-					</control>
-					<control type="button" id="90169">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Movie_opt3_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Movie_opt3_run)]</onclick>
-						<visible>Skin.HasSetting(SubMenu_Movie_opt3)</visible>
-					</control>
-					<control type="button" id="90170">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Movie_opt4_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Movie_opt4_run)]</onclick>
-						<visible>Skin.HasSetting(SubMenu_Movie_opt4)</visible>
-					</control>
-				</control>
-<!-- SubMenu Movie (END) -->
-<!-- SubMenu TvShow -->
-				<control type="grouplist" id="9017">
-					<posx>10</posx>
-					<posy>0</posy>
-					<width>240</width>
-					<height>400</height>
-					<align>center</align>
-					<onleft>9000</onleft>
-					<onright>Control.SetFocus(8001,0)</onright>
-					<onup>9017</onup>
-					<ondown>9017</ondown>
-					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(11)</visible>
-					<control type="button" id="90171">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(Menu_TVShows_sub1_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_TVShows_sub1_run)]</onclick>
-						<visible>Skin.HasSetting(Menu_TVShows_sub1_act)</visible>
-					</control>
-					<control type="button" id="90172">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(Menu_TVShows_sub2_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_TVShows_sub2_run)]</onclick>
-						<visible>Skin.HasSetting(Menu_TVShows_sub2_act)</visible>
-					</control>
-					<control type="button" id="90173">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(Menu_TVShows_sub3_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_TVShows_sub3_run)]</onclick>
-						<visible>Skin.HasSetting(Menu_TVShows_sub3_act)</visible>
-					</control>
-					<control type="button" id="90174">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(Menu_TVShows_sub4_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_TVShows_sub4_run)]</onclick>
-						<visible>Skin.HasSetting(Menu_TVShows_sub4_act)</visible>
-					</control>
-					<control type="button" id="90175">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(Menu_TVShows_sub5_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_TVShows_sub5_run)]</onclick>
-						<visible>Skin.HasSetting(Menu_TVShows_sub5_act)</visible>
-					</control>
-					<control type="button" id="90176">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_TvShows_opt1_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_TvShows_opt1_run)]</onclick>
-						<visible>Skin.HasSetting(SubMenu_TvShows_opt1)</visible>
-					</control>
-					<control type="button" id="90177">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_TvShows_opt2_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_TvShows_opt2_run)]</onclick>
-						<visible>Skin.HasSetting(SubMenu_TvShows_opt2)</visible>
-					</control>
-					<control type="button" id="90178">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_TvShows_opt3_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_TvShows_opt3_run)]</onclick>
-						<visible>Skin.HasSetting(SubMenu_TvShows_opt3)</visible>
-					</control>
-					<control type="button" id="90179">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_TvShows_opt4_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_TvShows_opt4_run)]</onclick>
-						<visible>Skin.HasSetting(SubMenu_TvShows_opt4)</visible>
-					</control>
-				</control>
-<!-- SubMenu TvShow (END) -->
-<!-- SubMenu Pictures -->
-				<control type="grouplist" id="9018">
-					<posx>10</posx>
-					<posy>0</posy>
-					<width>240</width>
-					<height>400</height>
-					<align>center</align>
-					<onleft>9000</onleft>
-					<onright>Control.SetFocus(8001,0)</onright>
-					<onup>9018</onup>
-					<ondown>9018</ondown>
-					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(4)</visible>
-					<control type="button" id="90186">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Pictures_opt1_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Pictures_opt1_run)]</onclick>
-						<visible>Skin.HasSetting(SubMenu_Pictures_opt1)</visible>
-					</control>
-					<control type="button" id="90187">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Pictures_opt2_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Pictures_opt2_run)]</onclick>
-						<visible>Skin.HasSetting(SubMenu_Pictures_opt2)</visible>
-					</control>
-					<control type="button" id="90188">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Pictures_opt3_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Pictures_opt3_run)]</onclick>
-						<visible>Skin.HasSetting(SubMenu_Pictures_opt3)</visible>
-					</control>
-					<control type="button" id="90189">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Pictures_opt4_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Pictures_opt4_run)]</onclick>
-						<visible>Skin.HasSetting(SubMenu_Pictures_opt4)</visible>
-					</control>
-				</control>
-<!-- SubMenu Pictures (END) -->
-<!-- SubMenu Weather -->
-				<control type="grouplist" id="9018">
-					<posx>10</posx>
-					<posy>0</posy>
-					<width>240</width>
-					<height>400</height>
-					<align>center</align>
-					<onleft>9000</onleft>
-					<onright>Control.SetFocus(8001,0)</onright>
-					<onup>9018</onup>
-					<ondown>9018</ondown>
-					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(6)</visible>
-					<control type="button" id="90186">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Weather_opt1_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Weather_opt1_run)]</onclick>
-						<visible>Skin.HasSetting(SubMenu_Weather_opt1)</visible>
-					</control>
-					<control type="button" id="90187">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Weather_opt2_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Weather_opt2_run)]</onclick>
-						<visible>Skin.HasSetting(SubMenu_Weather_opt2)</visible>
-					</control>
-					<control type="button" id="90188">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Weather_opt3_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Weather_opt3_run)]</onclick>
-						<visible>Skin.HasSetting(SubMenu_Weather_opt3)</visible>
-					</control>
-					<control type="button" id="90189">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Weather_opt4_lab)]</label>
-						<onclick>$INFO[Skin.String(SubMenu_Weather_opt4_run)]</onclick>
-						<visible>Skin.HasSetting(SubMenu_Weather_opt4)</visible>
-					</control>
-				</control>
-<!-- SubMenu Weather (END) -->
-<!-- Custom Menu 1  -->
-				<control type="grouplist" id="9020">
-					<posx>10</posx>
-					<posy>0</posy>
-					<width>240</width>
-					<height>400</height>
-					<align>center</align>
-					<onleft>9000</onleft>
-					<onright>19001</onright>
-					<onup>9020</onup>
-					<ondown>9020</ondown>
-					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(20) + Skin.HasSetting(SubMenu_Men1_opt1)</visible>
-					<control type="button" id="90201">
-						<description>Button1</description>
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Men1_opt1_lab)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>$INFO[Skin.String(SubMenu_Men1_opt1_run)]</onclick>
-						<visible>[Skin.HasSetting(SubMenu_Men1_opt1) + !IsEmpty(Skin.String(SubMenu_Men1_opt1_lab))]</visible>
-					</control>
-					<control type="button" id="90202">
-						<description>Button2</description>
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Men1_opt2_lab)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>$INFO[Skin.String(SubMenu_Men1_opt2_run)]</onclick>
-						<visible>[Skin.HasSetting(SubMenu_Men1_opt2) + !IsEmpty(Skin.String(SubMenu_Men1_opt2_lab))]</visible>
-					</control>
-					<control type="button" id="90203">
-						<description>Button3</description>
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Men1_opt3_lab)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>$INFO[Skin.String(SubMenu_Men1_opt3_run)]</onclick>
-						<visible>[Skin.HasSetting(SubMenu_Men1_opt3) + !IsEmpty(Skin.String(SubMenu_Men1_opt3_lab))]</visible>
-					</control>
-					<control type="button" id="90204">
-						<description>Button4</description>
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Men1_opt4_lab)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>$INFO[Skin.String(SubMenu_Men1_opt4_run)]</onclick>
-						<visible>[Skin.HasSetting(SubMenu_Men1_opt4) + !IsEmpty(Skin.String(SubMenu_Men1_opt4_lab))]</visible>
-					</control>
-					<control type="button" id="90205">
-						<description>Button5</description>
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Men1_opt5_lab)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>$INFO[Skin.String(SubMenu_Men1_opt5_run)]</onclick>
-						<visible>[Skin.HasSetting(SubMenu_Men1_opt5) + !IsEmpty(Skin.String(SubMenu_Men1_opt5_lab))]</visible>
-					</control>
-					<control type="button" id="90206">
-						<description>Button6</description>
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Men1_opt6_lab)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>$INFO[Skin.String(SubMenu_Men1_opt6_run)]</onclick>
-						<visible>[Skin.HasSetting(SubMenu_Men1_opt6) + !IsEmpty(Skin.String(SubMenu_Men1_opt6_lab))]</visible>
-					</control>
-				</control>
-<!-- Custom Menu 1 (END) -->
-<!-- Custom Menu 2  -->
-				<control type="grouplist" id="9021">
-					<posx>10</posx>
-					<posy>0</posy>
-					<width>240</width>
-					<height>400</height>
-					<align>center</align>
-					<onleft>9000</onleft>
-					<onright>19001</onright>
-					<onup>9021</onup>
-					<ondown>9021</ondown>
-					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(21) + Skin.HasSetting(SubMenu_Men2_opt1)</visible>
-					<control type="button" id="90211">
-						<description>Button1</description>
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Men2_opt1_lab)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>$INFO[Skin.String(SubMenu_Men2_opt1_run)]</onclick>
-						<visible>[Skin.HasSetting(SubMenu_Men2_opt1) + !IsEmpty(Skin.String(SubMenu_Men2_opt1_lab))]</visible>
-					</control>
-					<control type="button" id="90212">
-						<description>Button2</description>
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Men2_opt2_lab)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>$INFO[Skin.String(SubMenu_Men2_opt2_run)]</onclick>
-						<visible>[Skin.HasSetting(SubMenu_Men2_opt2) + !IsEmpty(Skin.String(SubMenu_Men2_opt2_lab))]</visible>
-					</control>
-					<control type="button" id="90213">
-						<description>Button3</description>
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Men2_opt3_lab)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>$INFO[Skin.String(SubMenu_Men2_opt3_run)]</onclick>
-						<visible>[Skin.HasSetting(SubMenu_Men2_opt3) + !IsEmpty(Skin.String(SubMenu_Men2_opt3_lab))]</visible>
-					</control>
-					<control type="button" id="90214">
-						<description>Button4</description>
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Men2_opt4_lab)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>$INFO[Skin.String(SubMenu_Men2_opt4_run)]</onclick>
-						<visible>[Skin.HasSetting(SubMenu_Men2_opt4) + !IsEmpty(Skin.String(SubMenu_Men2_opt4_lab))]</visible>
-					</control>
-					<control type="button" id="90215">
-						<description>Button5</description>
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Men2_opt5_lab)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>$INFO[Skin.String(SubMenu_Men2_opt5_run)]</onclick>
-						<visible>[Skin.HasSetting(SubMenu_Men2_opt5) + !IsEmpty(Skin.String(SubMenu_Men2_opt5_lab))]</visible>
-					</control>
-					<control type="button" id="90216">
-						<description>Button6</description>
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Men2_opt6_lab)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>$INFO[Skin.String(SubMenu_Men2_opt6_run)]</onclick>
-						<visible>[Skin.HasSetting(SubMenu_Men2_opt6) + !IsEmpty(Skin.String(SubMenu_Men2_opt6_lab))]</visible>
-					</control>
-				</control>
-<!-- Custom Menu 2 (END) -->
-<!-- Custom Menu 3  -->
-				<control type="grouplist" id="9022">
-					<posx>10</posx>
-					<posy>0</posy>
-					<width>240</width>
-					<height>400</height>
-					<align>center</align>
-					<onleft>9000</onleft>
-					<onright>19001</onright>
-					<onup>9022</onup>
-					<ondown>9022</ondown>
-					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(22) + Skin.HasSetting(SubMenu_Men3_opt1)</visible>
-					<control type="button" id="90221">
-						<description>Button1</description>
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Men3_opt1_lab)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>$INFO[Skin.String(SubMenu_Men3_opt1_run)]</onclick>
-						<visible>[Skin.HasSetting(SubMenu_Men3_opt1) + !IsEmpty(Skin.String(SubMenu_Men3_opt1_lab))]</visible>
-					</control>
-					<control type="button" id="90222">
-						<description>Button2</description>
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Men3_opt2_lab)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>$INFO[Skin.String(SubMenu_Men3_opt2_run)]</onclick>
-						<visible>[Skin.HasSetting(SubMenu_Men3_opt2) + !IsEmpty(Skin.String(SubMenu_Men3_opt2_lab))]</visible>
-					</control>
-					<control type="button" id="90223">
-						<description>Button3</description>
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Men3_opt3_lab)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>$INFO[Skin.String(SubMenu_Men3_opt3_run)]</onclick>
-						<visible>[Skin.HasSetting(SubMenu_Men3_opt3) + !IsEmpty(Skin.String(SubMenu_Men3_opt3_lab))]</visible>
-					</control>
-					<control type="button" id="90224">
-						<description>Button4</description>
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Men3_opt4_lab)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>$INFO[Skin.String(SubMenu_Men3_opt4_run)]</onclick>
-						<visible>[Skin.HasSetting(SubMenu_Men3_opt4) + !IsEmpty(Skin.String(SubMenu_Men3_opt4_lab))]</visible>
-					</control>
-					<control type="button" id="90225">
-						<description>Button5</description>
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Men3_opt5_lab)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>$INFO[Skin.String(SubMenu_Men3_opt5_run)]</onclick>
-						<visible>[Skin.HasSetting(SubMenu_Men3_opt5) + !IsEmpty(Skin.String(SubMenu_Men3_opt5_lab))]</visible>
-					</control>
-					<control type="button" id="90226">
-						<description>Button6</description>
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Men3_opt6_lab)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>$INFO[Skin.String(SubMenu_Men3_opt6_run)]</onclick>
-						<visible>[Skin.HasSetting(SubMenu_Men3_opt6) + !IsEmpty(Skin.String(SubMenu_Men3_opt6_lab))]</visible>
-					</control>
-				</control>
-<!-- Custom Menu 3 (END) -->
-<!-- Custom Menu 4 -->
-				<control type="grouplist" id="9023">
-					<posx>10</posx>
-					<posy>0</posy>
-					<width>240</width>
-					<height>400</height>
-					<align>center</align>
-					<onleft>9000</onleft>
-					<onright>19001</onright>
-					<onup>9022</onup>
-					<ondown>9022</ondown>
-					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(23) + Skin.HasSetting(SubMenu_Men4_opt1)</visible>
-					<control type="button" id="90231">
-						<description>Button1</description>
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Men4_opt1_lab)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>$INFO[Skin.String(SubMenu_Men4_opt1_run)]</onclick>
-						<visible>[Skin.HasSetting(SubMenu_Men4_opt1) + !IsEmpty(Skin.String(SubMenu_Men4_opt1_lab))]</visible>
-					</control>
-					<control type="button" id="90232">
-						<description>Button2</description>
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Men4_opt2_lab)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>$INFO[Skin.String(SubMenu_Men4_opt2_run)]</onclick>
-						<visible>[Skin.HasSetting(SubMenu_Men4_opt2) + !IsEmpty(Skin.String(SubMenu_Men4_opt2_lab))]</visible>
-					</control>
-					<control type="button" id="90233">
-						<description>Button3</description>
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Men4_opt3_lab)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>$INFO[Skin.String(SubMenu_Men4_opt3_run)]</onclick>
-						<visible>[Skin.HasSetting(SubMenu_Men4_opt3) + !IsEmpty(Skin.String(SubMenu_Men4_opt3_lab))]</visible>
-					</control>
-					<control type="button" id="90234">
-						<description>Button4</description>
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Men4_opt4_lab)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>$INFO[Skin.String(SubMenu_Men4_opt4_run)]</onclick>
-						<visible>[Skin.HasSetting(SubMenu_Men4_opt4) + !IsEmpty(Skin.String(SubMenu_Men4_opt4_lab))]</visible>
-					</control>
-					<control type="button" id="90235">
-						<description>Button5</description>
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Men4_opt5_lab)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>$INFO[Skin.String(SubMenu_Men4_opt5_run)]</onclick>
-						<visible>[Skin.HasSetting(SubMenu_Men4_opt5) + !IsEmpty(Skin.String(SubMenu_Men4_opt5_lab))]</visible>
-					</control>
-					<control type="button" id="90236">
-						<description>Button6</description>
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(SubMenu_Men4_opt6_lab)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>$INFO[Skin.String(SubMenu_Men4_opt6_run)]</onclick>
-						<visible>[Skin.HasSetting(SubMenu_Men4_opt6) + !IsEmpty(Skin.String(SubMenu_Men4_opt6_lab))]</visible>
-					</control>
-				</control>
-<!-- Custom Menu 4 (END) -->
+					<onright>300</onright>
+					<onup>945</onup>
+					<ondown>945</ondown>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>300</scrolltime>
+					<focusposition>1</focusposition>
+					<movement>10</movement>
+				<itemlayout height="40" width="550">
+					<control type="image">
+						<posx>6</posx>
+						<posy>11</posy>
+						<height>40</height>
+						<width>261</width>
+						<texture border="5">button-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<posx>20</posx>
+						<posy>11</posy>
+						<height>40</height>
+						<width>201</width>
+						<font>font12_title</font>
+						<textcolor>white</textcolor>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					
+				</itemlayout>
+				<focusedlayout height="40" width="550">
+					<control type="image">
+						<posx>6</posx>
+						<posy>11</posy>
+						<height>40</height>
+						<width>261</width>
+						<texture border="5">button-focus.png</texture>
+					</control>
+					<control type="label">
+						<posx>20</posx>
+						<posy>11</posy>
+						<height>40</height>
+						<width>201</width>
+						<font>font12_title</font>
+						<textcolor>white</textcolor>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+				<content>
+					<include>IncludeCommonSubMenu</include>
+				</content>
 			</control>
+			<control type="image">
+				
+				<posx>0</posx>
+				<posy>-555</posy>
+				<width>205</width>
+				<height>1800</height>
+				<texture>HomeBlade_middle.png</texture>
+			</control>
+			<control type="image">
+				
+				<posx>-630</posx>
+				<posy>-250</posy>
+				<width>846</width>
+				<height>720</height>
+				<texture>HomeBlade_top.png</texture>
+			</control>
+		</control>
 			<control type="image">
 				<posx>-450</posx>
 				<posy>0</posy>
@@ -1008,6 +383,7 @@
 				<texturefocus>-</texturefocus>
 				<visible>!Skin.HasSetting(homepageHideRecentlyAdded)</visible>
 			</control>
+<!-- OK -->
 			<control type="fixedlist" id="9000">
 				<hitrect x="50" y="50" w="330" h="620" />
 				<posx>-20</posx>
@@ -1015,15 +391,16 @@
 				<width>400</width>
 				<height>720</height>
 				<onleft>10</onleft>
-				<onright>19001</onright>
+				<onright>9001</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>300</scrolltime>
-				<focusposition>3</focusposition>
+				<focusposition>2</focusposition>
 				<movement>2</movement>
 				<animation effect="fade" start="0" end="100" time="200">Visible</animation>
-				<animation effect="fade" start="100" end="30" time="200" condition="Window.IsVisible(1113) | ControlGroup(19001).HasFocus | ControlGroup(10).HasFocus | Control.HasFocus(8000) | Control.HasFocus(8001)">conditional</animation>
+				<animation effect="fade" start="100" end="30" time="200" condition="Window.IsVisible(1113) | ControlGroup(9001).HasFocus | ControlGroup(10).HasFocus | Control.HasFocus(8000) | Control.HasFocus(8001)">conditional</animation>
+<!-- OK -->
 				<itemlayout height="102" width="380">
 					<control type="label">
 						<posx>380</posx>
@@ -1036,7 +413,7 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 						<animation effect="zoom" start="65" end="65" center="380,51" time="0" condition="true">Conditional</animation>
-						<animation effect="fade" start="100" end="30" time="200" condition="Window.IsVisible(1113) | ControlGroup(19001).HasFocus | ControlGroup(10).HasFocus">conditional</animation>
+						<animation effect="fade" start="100" end="30" time="200" condition="Window.IsVisible(1113) | ControlGroup(9001).HasFocus | ControlGroup(10).HasFocus">conditional</animation>
 					</control>
 				</itemlayout>
 				<focusedlayout height="102" width="380">
@@ -1059,118 +436,24 @@
 						<width>18</width>
 						<height>18</height>
 						<texture>HomeHasSub.png</texture>
-						<visible> Container(9000).HasFocus(1)  + [Skin.HasSetting(SubMenu_Programs_opt1) | Skin.HasSetting(SubMenu_Programs_opt2) | Skin.HasSetting(SubMenu_Programs_opt3) | Skin.HasSetting(SubMenu_Programs_opt4)] | Container(9000).HasFocus(2)  + [Skin.HasSetting(Menu_Videos_sub1_act) | Skin.HasSetting(Menu_Videos_sub2_act) | Skin.HasSetting(Menu_Videos_sub3_act) | Skin.HasSetting(Menu_Videos_sub4_act) | Skin.HasSetting(Menu_Videos_sub5_act) | Skin.HasSetting(SubMenu_Videos_opt1) | Skin.HasSetting(SubMenu_Videos_opt2) | Skin.HasSetting(SubMenu_Videos_opt3) | Skin.HasSetting(SubMenu_Videos_opt4)] | Container(9000).HasFocus(3)  + [Skin.HasSetting(Menu_Music_sub1_act) | Skin.HasSetting(Menu_Music_sub2_act) | Skin.HasSetting(Menu_Music_sub3_act) | Skin.HasSetting(Menu_Music_sub4_act) | Skin.HasSetting(Menu_Music_sub5_act) | Skin.HasSetting(SubMenu_Music_opt1) | Skin.HasSetting(SubMenu_Music_opt2) | Skin.HasSetting(SubMenu_Music_opt3) | Skin.HasSetting(SubMenu_Music_opt4)] | Container(9000).HasFocus(4)  + [Skin.HasSetting(SubMenu_Pictures_opt1) | Skin.HasSetting(SubMenu_Pictures_opt2) | Skin.HasSetting(SubMenu_Pictures_opt3) | Skin.HasSetting(SubMenu_Pictures_opt4)] | Container(9000).HasFocus(5)  | Container(9000).HasFocus(6)  + [Skin.HasSetting(SubMenu_Weather_opt1) | Skin.HasSetting(SubMenu_Weather_opt2) | Skin.HasSetting(SubMenu_Weather_opt3) | Skin.HasSetting(SubMenu_Weather_opt4)] | Container(9000).HasFocus(7)  | Container(9000).HasFocus(9)  | Container(9000).HasFocus(10)  + [Skin.HasSetting(Menu_Movie_sub1_act) | Skin.HasSetting(Menu_Movie_sub2_act) | Skin.HasSetting(Menu_Movie_sub3_act) | Skin.HasSetting(Menu_Movie_sub4_act) | Skin.HasSetting(Menu_Movie_sub5_act)  | Skin.HasSetting(Menu_Movie_sub6_act) | Skin.HasSetting(SubMenu_Movie_opt1) | Skin.HasSetting(SubMenu_Movie_opt2) | Skin.HasSetting(SubMenu_Movie_opt3) | Skin.HasSetting(SubMenu_Movie_opt4)] | Container(9000).HasFocus(11)  + [Skin.HasSetting(Menu_TVShows_sub1_act) | Skin.HasSetting(Menu_TVShows_sub2_act) | Skin.HasSetting(Menu_TVShows_sub3_act) | Skin.HasSetting(Menu_TVShows_sub4_act) | Skin.HasSetting(Menu_TVShows_sub5_act)  | Skin.HasSetting(Menu_TVShows_sub6_act) | Skin.HasSetting(SubMenu_TVShows_opt1) | Skin.HasSetting(SubMenu_TVShows_opt2) | Skin.HasSetting(SubMenu_TVShows_opt3) | Skin.HasSetting(SubMenu_TVShows_opt4)] | Container(9000).HasFocus(20)  + Skin.HasSetting(SubMenu_Men1_opt1) | Container(9000).HasFocus(21)  + Skin.HasSetting(SubMenu_Men2_opt1) | Container(9000).HasFocus(22)  + Skin.HasSetting(SubMenu_Men3_opt1) | Container(9000).HasFocus(23)  + Skin.HasSetting(SubMenu_Men4_opt1) </visible>
+						<include>HomeBigVisible</include>
 						<animation effect="fade" start="0" end="100" time="200">Focus</animation>
 						<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
 					</control>
 				</focusedlayout>
 				<content>
-					<item id="6">
-						<label>$INFO[Skin.String(Menu_Weather_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Weather_run)]</onclick>
-						<icon>special://skin/backgrounds/weather.jpg</icon>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>
-						<visible>Skin.HasSetting(Menu_Weather_act)</visible>
-						<visible>!Skin.HasSetting(ShowWeatherFanart) | IsEmpty(Skin.String(WeatherFanartDir))</visible>
-					</item>
-					<item id="6">
-						<label>$INFO[Skin.String(Menu_Weather_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Weather_run)]</onclick>
-						<icon>special://skin/backgrounds/weather.jpg</icon>
-						<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</thumb>
-						<visible>Skin.HasSetting(Menu_Weather_act)</visible>
-						<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
-					</item>
-					<item id="4">
-						<label>$INFO[Skin.String(Menu_Pictures_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Pictures_run)]</onclick>
-						<icon>special://skin/backgrounds/pictures.jpg</icon>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</thumb>
-						<visible>Skin.HasSetting(Menu_Pictures_act)</visible>
-					</item>
-					<item id="3">
-						<label>$INFO[Skin.String(Menu_Music_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Music_run)]</onclick>
-						<icon>special://skin/backgrounds/music.jpg</icon>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</thumb>
-						<visible>Skin.HasSetting(Menu_Music_act)</visible>
-					</item>
-					<item id="2">
-						<label>$INFO[Skin.String(Menu_Videos_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Videos_run)]</onclick>
-						<icon>special://skin/backgrounds/videos.jpg</icon>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</thumb>
-						<visible>Skin.HasSetting(Menu_Videos_act)</visible>
-					</item>
-					<item id="10">
-						<label>$INFO[Skin.String(Menu_Movie_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Movie_run)]</onclick>
-						<icon>special://skin/backgrounds/movies.jpg</icon>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</thumb>
-						<visible>Skin.HasSetting(Menu_Movie_act) + Library.HasContent(Movies)</visible>
-					</item>
-					<item id="11">
-						<label>$INFO[Skin.String(Menu_TVShows_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_TVShows_run)]</onclick>
-						<icon>special://skin/backgrounds/tvshows.jpg</icon>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</thumb>
-						<visible>Skin.HasSetting(Menu_TVShows_act) + Library.HasContent(TVShows)</visible>
-					</item>
-					<item id="1">
-						<label>$INFO[Skin.String(Menu_Programs_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Programs_run)]</onclick>
-						<icon>special://skin/backgrounds/programs.jpg</icon>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</thumb>
-						<visible>Skin.HasSetting(Menu_Programs_act)</visible>
-					</item>
-<!-- Custom Home --> 	
-					<item id="20">
-						<label>$INFO[Skin.String(Menu_Men1_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Men1_run)]</onclick>
-						<icon>special://skin/backgrounds/menu1.jpg</icon>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_Menu1_Folder)]</thumb>
-						<visible>Skin.HasSetting(Menu_Men1_act)</visible>
-					</item>
-					<item id="21">
-						<label>$INFO[Skin.String(Menu_Men2_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Men2_run)]</onclick>
-						<icon>special://skin/backgrounds/menu2.jpg</icon>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_Menu2_Folder)]</thumb>
-						<visible>Skin.HasSetting(Menu_Men2_act)</visible>
-					</item>
-					<item id="22">
-						<label>$INFO[Skin.String(Menu_Men3_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Men3_run)]</onclick>
-						<icon>special://skin/backgrounds/menu3.jpg</icon>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_Menu3_Folder)]</thumb>
-						<visible>Skin.HasSetting(Menu_Men3_act)</visible>
-					</item>
-					<item id="23">
-						<label>$INFO[Skin.String(Menu_Men4_lab)]</label>
-						<onclick>$INFO[Skin.String(Menu_Men4_run)]</onclick>
-						<icon>special://skin/backgrounds/menu4.jpg</icon>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_Menu4_Folder)]</thumb>
-						<visible>Skin.HasSetting(Menu_Men4_act)</visible>
-					</item>
-<!-- Custom Home END --> 	
+					<include condition="Skin.HasSetting(Influence_SkinInit_b2)">IncludeCommonMenu</include>
 					<item id="24">
 						<label>Init Skin and restart</label>
 						<onclick>$INFO[Skin.String(Menu_Men4_run)]</onclick>
 						<icon>special://skin/backgrounds/settings.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</thumb>
 						<onclick>Quit</onclick>
-						<visible>!Skin.HasSetting(Influence_SkinInit_b1)</visible>
-					</item>
-					<item id="5">
-						<label>13000</label>
-						<onclick>ActivateWindow(Settings)</onclick>
-						<icon>special://skin/backgrounds/settings.jpg</icon>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoSettingsButton)</visible>
-						<visible>Skin.HasSetting(Influence_SkinInit_b1)</visible>
+						<visible>!Skin.HasSetting(Influence_SkinInit_b2)</visible>
 					</item>
 				</content>
 			</control>
+<!-- OK -->
 			<control type="image">
 				<posx>0</posx>
 				<posy>-205</posy>
@@ -1182,6 +465,19 @@
 				<animation effect="slide" end="0,102" time="300" condition="Container(9000).Row(4)">conditional</animation>
 				<animation effect="slide" end="0,204" time="300" condition="Container(9000).Row(5)">conditional</animation>
 			</control>
+<!-- OK -->		<control type="button" id="24">
+			<description>fake button</description>
+				<posx>390</posx>
+				<posy>0</posy>
+				<width>25</width>
+				<height>1130</height>
+				<onfocus>SetFocus(9001)</onfocus>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<aligny>-</aligny>
+				<onclick>-</onclick>
+				<visible>!Skin.HasSetting(SlideFake)</visible>
+			</control>
 			<control type="image">
 				<posx>-450</posx>
 				<posy>0</posy>
@@ -1189,85 +485,10 @@
 				<height>720</height>
 				<texture>HomeBlade_top.png</texture>
 			</control>
-			<control type="image">
-				<description>LOGO</description>
-				<posx>10</posx>
-				<posy>10</posy>
-				<width>140</width>
-				<height>40</height>
-				<texture>XBMC_Logo.png</texture>
-			</control>
-			<control type="image">
-				<description>LOGO Mirror</description>
-				<posx>10</posx>
-				<posy>42</posy>
-				<width>140</width>
-				<height>40</height>
-				<texture diffuse="diffuse_mirror.png" flipy="true">XBMC_Logo.png</texture>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>100r</posy>
-				<width>256</width>
-				<height>100</height>
-				<texture>HomeButtonsBack.png</texture>
-			</control>
-			<control type="group" id="10">
-				<posx>15</posx>
-				<posy>55r</posy>
-				<control type="button" id="20">
-					<description>Power push button</description>
-					<posx>90</posx>
-					<posy>0</posy>
-					<width>43</width>
-					<height>43</height>
-					<label>31003</label>
-					<font>-</font>
-					<aligny>-</aligny>
-					<onclick>ActivateWindow(ShutdownMenu)</onclick>
-					<texturefocus>home-power-FO.png</texturefocus>
-					<texturenofocus>home-power.png</texturenofocus>
-					<onleft>21</onleft>
-					<onright>9000</onright>
-					<onup>9000</onup>
-					<ondown>9000</ondown>
-				</control>
-				<control type="button" id="21">
-					<description>Favourites push button</description>
-					<posx>45</posx>
-					<posy>0</posy>
-					<width>43</width>
-					<height>43</height>
-					<label>1036</label>
-					<font>-</font>
-					<aligny>-</aligny>
-					<onclick>ActivateWindow(Favourites)</onclick>
-					<texturefocus>home-favourites-FO.png</texturefocus>
-					<texturenofocus>home-favourites.png</texturenofocus>
-					<onleft>22</onleft>
-					<onright>20</onright>
-					<onup>9000</onup>
-					<ondown>9000</ondown>
-				</control>
-				<control type="button" id="22">
-					<description>Play Disc Media push button</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>43</width>
-					<height>43</height>
-					<label>16004</label>
-					<font>-</font>
-					<aligny>-</aligny>
-					<onclick>ActivateWindow(1113)</onclick>
-					<texturefocus>home-playmedia-FO.png</texturefocus>
-					<texturenofocus>home-playmedia.png</texturenofocus>
-					<onleft>9000</onleft>
-					<onright>21</onright>
-					<onup>9000</onup>
-					<ondown>9000</ondown>
-				</control>
-			</control>
+			<include>HomeLogo</include>
+			<include condition="!Skin.HasSetting(HideHomeButton)">HomeButton</include>
 		</control>
+<!-- OK -->
 		<control type="group">
 			<posx>420</posx>
 			<posy>35r</posy>
@@ -1305,5 +526,7 @@
 				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
 			</control>
 		</control>
+<!-- OK -->
+		
 	</include>
 </includes>

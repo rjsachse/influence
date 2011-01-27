@@ -1,0 +1,2143 @@
+<includes>
+<include name="IncludeCommonMenu">
+	<item id="6">
+		<label>$INFO[Skin.String(Menu_Weather_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Weather_Ico)]</label2>				
+		<icon>$INFO[Skin.String(Menu_Weather_Back)]</icon>
+		<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>
+		<onclick>Skin.SetString(CurrentBackground,$INFO[Skin.String(Home_Custom_Back_Weather_Folder)])</onclick>
+		<onclick>$INFO[Skin.String(Menu_Weather_run)]</onclick>
+		<visible>Skin.HasSetting(Menu_Weather_act)</visible>
+		<visible>!Skin.HasSetting(ShowWeatherFanart) | IsEmpty(Skin.String(WeatherFanartDir))</visible>
+	</item>
+	<item id="6">
+		<label>$INFO[Skin.String(Menu_Weather_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Weather_Ico)]</label2>
+		<icon>$INFO[Skin.String(Menu_Weather_Back)]</icon>
+		<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</thumb>
+		<onclick>Skin.SetString(CurrentBackground,$INFO[Skin.String(Home_Custom_Back_Weather_Folder)])</onclick>
+		<onclick>$INFO[Skin.String(Menu_Weather_run)]</onclick>
+		<visible>Skin.HasSetting(Menu_Weather_act)</visible>
+		<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
+	</item>
+	<item id="4">
+		<label>$INFO[Skin.String(Menu_Pictures_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Pictures_Ico)]</label2>
+		<icon>$INFO[Skin.String(Menu_Pictures_Back)]</icon>
+		<thumb>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</thumb>
+		<onclick>Skin.SetString(CurrentBackground,$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)])</onclick>
+		<onclick>$INFO[Skin.String(Menu_Pictures_run)]</onclick>
+		<visible>Skin.HasSetting(Menu_Pictures_act)</visible>
+	</item>
+	<item id="3">
+		<label>$INFO[Skin.String(Menu_Music_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Music_Ico)]</label2>
+		<icon>$INFO[Skin.String(Menu_Music_Back)]</icon>
+		<thumb>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</thumb>
+		<onclick>Skin.SetString(CurrentBackground,$INFO[Skin.String(Home_Custom_Back_Music_Folder)])</onclick>
+		<onclick>$INFO[Skin.String(Menu_Music_run)]</onclick>
+		<visible>Skin.HasSetting(Menu_Music_act)</visible>
+	</item>
+	<item id="2">
+		<label>$INFO[Skin.String(Menu_Videos_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Videos_Ico)]</label2>
+		<icon>$INFO[Skin.String(Menu_Videos_Back)]</icon>
+		<thumb>$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]</thumb>
+		<onclick>Skin.SetString(CurrentBackground,$INFO[Skin.String(Home_Custom_Back_Videos_Folder)])</onclick>
+		<onclick>$INFO[Skin.String(Menu_Videos_run)]</onclick>
+		<visible>Skin.HasSetting(Menu_Videos_act)</visible>
+	</item>
+	<item id="10">
+		<label>$INFO[Skin.String(Menu_Movie_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Movie_Ico)]</label2>
+		<icon>$INFO[Skin.String(Menu_Movie_Back)]</icon>
+		<thumb>$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]</thumb>
+		<onclick>Skin.SetString(CurrentBackground,$INFO[Skin.String(Home_Custom_Back_Movie_Folder)])</onclick>
+		<onclick>$INFO[Skin.String(Menu_Movie_run)]</onclick>
+		<visible>Skin.HasSetting(Menu_Movie_act) + Library.HasContent(Movies)</visible>
+	</item>
+	<item id="11">
+		<label>$INFO[Skin.String(Menu_TVShows_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_TVShows_Ico)]</label2>
+		<icon>$INFO[Skin.String(Menu_TVShows_Back)]</icon>
+		<thumb>$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]</thumb>
+		<onclick>Skin.SetString(CurrentBackground,$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)])</onclick>
+		<onclick>$INFO[Skin.String(Menu_TVShows_run)]</onclick>
+		<visible>Skin.HasSetting(Menu_TVShows_act) + Library.HasContent(TVShows)</visible>
+	</item>
+	<item id="12">
+		<label>$INFO[Skin.String(Menu_Dvd_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_DvdEmpty_Ico)]</label2>
+		<onclick>$INFO[Skin.String(Menu_DvdEmpty_run)]</onclick>
+		<icon>special://skin/backgrounds/playdisc.jpg</icon>
+		<thumb>$INFO[Skin.String(Home_Custom_Back_Dvd_Folder)]</thumb>
+		<visible>Skin.HasSetting(Menu_Dvd_act) + !System.HasMediaDVD</visible>
+	</item>
+	<item id="12">
+		<label>$INFO[Skin.String(Menu_Dvd_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_DvdFull_Ico)]</label2>
+		<onclick>$INFO[Skin.String(Menu_DvdFull_run)]</onclick>
+		<icon>special://skin/backgrounds/playdisc.jpg</icon>
+		<thumb>$INFO[Skin.String(Home_Custom_Back_Dvd_Folder)]</thumb>
+		<visible>Skin.HasSetting(Menu_Dvd_act) + System.HasMediaDVD</visible>
+	</item>
+	<item id="13">
+		<label>$INFO[Skin.String(Menu_Exit_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Exit_Ico)]</label2>
+		<onclick>$INFO[Skin.String(Menu_Exit_run)]</onclick>
+		<icon>special://skin/backgrounds/shutdown.jpg</icon>
+		<thumb>$INFO[Skin.String(Home_Custom_Back_Exit_Folder)]</thumb>
+		<visible>Skin.HasSetting(Menu_Exit_act)</visible>
+	</item>
+	<item id="14">
+		<label>$INFO[Skin.String(Menu_Favorites_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Favorites_Ico)]</label2>
+		<onclick>$INFO[Skin.String(Menu_Favorites_run)]</onclick>
+		<icon>special://skin/backgrounds/Favoris.jpg</icon>
+		<thumb>$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]</thumb>
+		<visible>Skin.HasSetting(Menu_Favorites_act)</visible>
+	</item>
+	<item id="15">
+		<label>$INFO[Skin.String(Menu_LiveTv_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_LiveTv_Ico)]</label2>
+		<icon>$INFO[Skin.String(Menu_LiveTv_Back)]</icon>
+		<thumb>$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]</thumb>
+		<onclick>Skin.SetString(CurrentBackground,$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)])</onclick>
+		<onclick>$INFO[Skin.String(Menu_LiveTv_run)]</onclick>
+		<visible>Skin.HasSetting(Menu_LiveTv_act)</visible>
+	</item>
+	<!-- Custom Home -->					
+	<item id="20">
+		<label>$INFO[Skin.String(Menu_Men1_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Men1_Ico)]</label2>
+		<icon>$INFO[Skin.String(Menu_Men1_Back)]</icon>
+		<thumb>$INFO[Skin.String(Home_Custom_Back_Men1_Folder)]</thumb>
+		<onclick>Skin.SetString(CurrentBackground,$INFO[Skin.String(Home_Custom_Back_Men1_Folder)])</onclick>
+		<onclick>$INFO[Skin.String(Menu_Men1_run)]</onclick>
+		<visible>Skin.HasSetting(Menu_Men1_act)</visible>
+	</item>
+	<item id="21">
+		<label>$INFO[Skin.String(Menu_Men2_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Men2_Ico)]</label2>
+		<icon>$INFO[Skin.String(Menu_Men2_Back)]</icon>
+		<thumb>$INFO[Skin.String(Home_Custom_Back_Men2_Folder)]</thumb>
+		<onclick>Skin.SetString(CurrentBackground,$INFO[Skin.String(Home_Custom_Back_Men2_Folder)])</onclick>
+		<onclick>$INFO[Skin.String(Menu_Men2_run)]</onclick>
+		<visible>Skin.HasSetting(Menu_Men2_act)</visible>
+	</item>
+	<item id="22">
+		<label>$INFO[Skin.String(Menu_Men3_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Men3_Ico)]</label2>
+		<icon>$INFO[Skin.String(Menu_Men3_Back)]</icon>
+		<thumb>$INFO[Skin.String(Home_Custom_Back_Men3_Folder)]</thumb>
+		<onclick>Skin.SetString(CurrentBackground,$INFO[Skin.String(Home_Custom_Back_Men3_Folder)])</onclick>
+		<onclick>$INFO[Skin.String(Menu_Men3_run)]</onclick>
+		<visible>Skin.HasSetting(Menu_Men3_act)</visible>
+	</item>
+	<item id="23">
+		<label>$INFO[Skin.String(Menu_Men4_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Men4_Ico)]</label2>
+		<icon>$INFO[Skin.String(Menu_Men4_Back)]</icon>
+		<thumb>$INFO[Skin.String(Home_Custom_Back_Men4_Folder)]</thumb>
+		<onclick>Skin.SetString(CurrentBackground,$INFO[Skin.String(Home_Custom_Back_Men4_Folder)])</onclick>
+		<onclick>$INFO[Skin.String(Menu_Men4_run)]</onclick>
+		<visible>Skin.HasSetting(Menu_Men4_act)</visible>
+	</item>
+	<item id="1">
+		<label>$INFO[Skin.String(Menu_Programs_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Programs_Ico)]</label2>
+		<icon>$INFO[Skin.String(Menu_Programs_Back)]</icon>
+		<thumb>$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</thumb>
+		<onclick>Skin.SetString(CurrentBackground,$INFO[Skin.String(Home_Custom_Back_Programs_Folder)])</onclick>
+		<onclick>$INFO[Skin.String(Menu_Programs_run)]</onclick>
+		<visible>Skin.HasSetting(Menu_Programs_act)</visible>
+	</item>
+	<item id="5">
+		<label>13000</label>
+		<label2>Carousel/parametres.png</label2>
+		<icon>special://skin/backgrounds/settings.jpg</icon>
+		<thumb>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</thumb>
+		<onclick>Skin.SetString(CurrentBackground,$INFO[Skin.String(Home_Custom_Back_Settings_Folder)])</onclick>
+		<onclick>ActivateWindow(Settings)</onclick>
+		<visible>!Skin.HasSetting(HomeMenuNoSettingsButton)</visible>
+	</item>
+</include>
+
+<include name="IncludeCommonSubMenu">
+<!-- Programs  -->
+	<item id="101">
+		<description>SubMenu Sub 1</description>
+		<label>$INFO[Skin.String(Menu_Programs_Sub1_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Programs_Sub1_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Programs_Sub1_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Programs_sub1_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]&amp;run=$INFO[Skin.String(Menu_Programs_sub1_run)])</onclick>
+		<visible>Container(9000).HasFocus(1) + Skin.HasSetting(Menu_Programs_sub1_act)</visible>
+	</item>
+	<item id="102">
+		<description>SubMenu Sub 2</description>
+		<label>$INFO[Skin.String(Menu_Programs_Sub2_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Programs_Sub2_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Programs_Sub2_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Programs_sub2_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]&amp;run=$INFO[Skin.String(Menu_Programs_sub2_run)])</onclick>
+		<visible>Container(9000).HasFocus(1) + Skin.HasSetting(Menu_Programs_sub2_act)</visible>
+	</item>
+	<item id="103">
+		<description>SubMenu Sub 3</description>
+		<label>$INFO[Skin.String(Menu_Programs_Sub3_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Programs_Sub3_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Programs_Sub3_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Programs_sub3_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]&amp;run=$INFO[Skin.String(Menu_Programs_sub3_run)])</onclick>
+		<visible>Container(9000).HasFocus(1) + Skin.HasSetting(Menu_Programs_sub3_act)</visible>
+	</item>
+	<item id="104">
+		<description>SubMenu Sub 4</description>
+		<label>$INFO[Skin.String(Menu_Programs_Sub4_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Programs_Sub4_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Programs_Sub4_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Programs_sub4_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]&amp;run=$INFO[Skin.String(Menu_Programs_sub4_run)])</onclick>
+		<visible>Container(9000).HasFocus(1) + Skin.HasSetting(Menu_Programs_sub4_act)</visible>
+	</item>
+<!-- Programs End  -->
+<!-- TV Shows-->
+	<item id="1101">
+		<label>$INFO[Skin.String(Menu_TVShows_sub1_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_TVShows_sub1_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_TVShows_sub1_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_TVShows_sub1_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]&amp;run=$INFO[Skin.String(Menu_TVShows_sub1_run)])</onclick>
+		<visible>Container(9000).HasFocus(11) + Skin.HasSetting(Menu_TVShows_sub1_act)</visible>
+	</item>
+	<item id="1102">
+		<label>$INFO[Skin.String(Menu_TVShows_sub2_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_TVShows_sub2_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_TVShows_sub2_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_TVShows_sub2_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]&amp;run=$INFO[Skin.String(Menu_TVShows_sub2_run)])</onclick>
+		<visible>Container(9000).HasFocus(11) + Skin.HasSetting(Menu_TVShows_sub1_act)</visible>
+	</item>
+	<item id="1103">
+		<label>$INFO[Skin.String(Menu_TVShows_sub3_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_TVShows_sub3_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_TVShows_sub3_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_TVShows_sub3_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]&amp;run=$INFO[Skin.String(Menu_TVShows_sub3_run)])</onclick>
+		<visible>Container(9000).HasFocus(11) + Skin.HasSetting(Menu_TVShows_sub3_act)</visible>
+	</item>
+	<item id="1104">
+		<label>$INFO[Skin.String(Menu_TVShows_sub4_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_TVShows_sub4_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_TVShows_sub4_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_TVShows_sub4_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]&amp;run=$INFO[Skin.String(Menu_TVShows_sub4_run)])</onclick>
+		<visible>Container(9000).HasFocus(11) + Skin.HasSetting(Menu_TVShows_sub4_act)</visible>
+	</item>
+	<item id="1105">
+		<label>$INFO[Skin.String(Menu_TVShows_sub5_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_TVShows_sub5_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_TVShows_sub5_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_TVShows_sub5_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]&amp;run=$INFO[Skin.String(Menu_TVShows_sub5_run)])</onclick>
+		<visible>Container(9000).HasFocus(11) + Skin.HasSetting(Menu_TVShows_sub5_act)</visible>
+	</item>
+	<item id="1106">
+		<description>SubMenu Opt 1</description>
+		<label>$INFO[Skin.String(Menu_TvShows_sub6_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_TvShows_sub6_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_TVShows_sub6_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_TVShows_sub6_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]&amp;run=$INFO[Skin.String(Menu_TVShows_sub6_run)])</onclick>
+		<visible>Container(9000).HasFocus(11) + Skin.HasSetting(Menu_TvShows_sub6_act)</visible>
+	</item>
+	<item id="1107">
+		<description>SubMenu Opt 2</description>
+		<label>$INFO[Skin.String(Menu_TvShows_sub7_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_TvShows_sub7_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_TVShows_sub7_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_TVShows_sub7_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]&amp;run=$INFO[Skin.String(Menu_TVShows_sub7_run)])</onclick>
+		<visible>Container(9000).HasFocus(11) + Skin.HasSetting(Menu_TvShows_sub7_act)</visible>
+	</item>
+	<item id="1108">
+		<description>SubMenu Opt 3</description>
+		<label>$INFO[Skin.String(Menu_TvShows_sub8_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_TvShows_sub8_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_TVShows_sub8_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_TVShows_sub8_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]&amp;run=$INFO[Skin.String(Menu_TVShows_sub8_run)])</onclick>
+		<visible>Container(9000).HasFocus(11) + Skin.HasSetting(Menu_TvShows_sub8_act)</visible>
+	</item>
+	<item id="1109">
+		<description>SubMenu Opt 4</description>
+		<label>$INFO[Skin.String(Menu_TvShows_sub9_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_TvShows_sub9_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_TVShows_sub9_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_TVShows_sub9_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]&amp;run=$INFO[Skin.String(Menu_TVShows_sub9_run)])</onclick>
+		<visible>Container(9000).HasFocus(11) + Skin.HasSetting(Menu_TvShows_sub9_act)</visible>
+	</item>
+<!-- TV Shows end -->
+<!-- DVD -->
+	<item id="1201">
+		<label>$INFO[Skin.String(Menu_Dvd_sub1_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Dvd_sub1_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Dvd_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Dvd_sub1_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Dvd_sub1_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Dvd_Folder)]&amp;run=$INFO[Skin.String(Menu_Dvd_sub1_run)])</onclick>
+		<visible>Container(9000).HasFocus(12) + Skin.HasSetting(Menu_Dvd_sub1_act)</visible>
+	</item>
+	<item id="1202">
+		<label>$INFO[Skin.String(Menu_Dvd_sub2_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Dvd_sub2_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Dvd_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Dvd_sub2_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Dvd_sub2_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Dvd_Folder)]&amp;run=$INFO[Skin.String(Menu_Dvd_sub2_run)])</onclick>
+		<visible>Container(9000).HasFocus(12) + Skin.HasSetting(Menu_Dvd_sub2_act)</visible>
+	</item>
+	<item id="1203">
+		<label>$INFO[Skin.String(Menu_Dvd_sub3_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Dvd_sub3_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Dvd_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Dvd_sub3_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Dvd_sub3_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Dvd_Folder)]&amp;run=$INFO[Skin.String(Menu_Dvd_sub3_run)])</onclick>
+		<visible>Container(9000).HasFocus(12) + Skin.HasSetting(Menu_Dvd_sub3_act)</visible>
+	</item>
+	<item id="1204">
+		<label>$INFO[Skin.String(Menu_Dvd_sub4_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Dvd_sub4_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Dvd_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Dvd_sub4_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Dvd_sub4_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Dvd_Folder)]&amp;run=$INFO[Skin.String(Menu_Dvd_sub4_run)])</onclick>
+		<visible>Container(9000).HasFocus(12) + Skin.HasSetting(Menu_Dvd_sub4_act)</visible>
+	</item>
+<!-- DVD end -->
+<!-- Favorites -->
+	<item id="1401">
+		<label>$INFO[Skin.String(Menu_Favorites_sub1_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Favorites_sub1_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Favorites_sub1_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Favorites_sub1_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]&amp;run=$INFO[Skin.String(Menu_Favorites_sub1_run)])</onclick>
+		<visible>Container(9000).HasFocus(14) + Skin.HasSetting(Menu_Favorites_sub1_act)</visible>
+	</item>
+	<item id="1402">
+		<label>$INFO[Skin.String(Menu_Favorites_sub2_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Favorites_sub2_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Favorites_sub2_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Favorites_sub2_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]&amp;run=$INFO[Skin.String(Menu_Favorites_sub2_run)])</onclick>
+		<visible>Container(9000).HasFocus(14) + Skin.HasSetting(Menu_Favorites_sub2_act)</visible>
+	</item>
+	<item id="1403">
+		<label>$INFO[Skin.String(Menu_Favorites_sub3_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Favorites_sub3_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Favorites_sub3_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Favorites_sub3_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]&amp;run=$INFO[Skin.String(Menu_Favorites_sub3_run)])</onclick>
+		<visible>Container(9000).HasFocus(14) + Skin.HasSetting(Menu_Favorites_sub3_act)</visible>
+	</item>
+	<item id="1404">
+		<label>$INFO[Skin.String(Menu_Favorites_sub4_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Favorites_sub4_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Favorites_sub4_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Favorites_sub4_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]&amp;run=$INFO[Skin.String(Menu_Favorites_sub4_run)])</onclick>
+		<visible>Container(9000).HasFocus(14) + Skin.HasSetting(Menu_Favorites_sub4_act)</visible>
+	</item>
+	<item id="1405">
+		<label>$INFO[Skin.String(Menu_Favorites_sub5_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Favorites_sub5_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Favorites_sub5_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Favorites_sub5_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]&amp;run=$INFO[Skin.String(Menu_Favorites_sub5_run)])</onclick>
+		<visible>Container(9000).HasFocus(14) + Skin.HasSetting(Menu_Favorites_sub5_act)</visible>
+	</item>
+	<item id="1406">
+		<label>$INFO[Skin.String(Menu_Favorites_sub6_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Favorites_sub6_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Favorites_sub6_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Favorites_sub6_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]&amp;run=$INFO[Skin.String(Menu_Favorites_sub6_run)])</onclick>
+		<visible>Container(9000).HasFocus(14) + Skin.HasSetting(Menu_Favorites_sub6_act)</visible>
+	</item>
+	<item id="1407">
+		<description>SubMenu Sub 7</description>
+		<label>$INFO[Skin.String(Menu_Favorites_sub7_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Favorites_sub7_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Favorites_sub7_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Favorites_sub7_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]&amp;run=$INFO[Skin.String(Menu_Favorites_sub7_run)])</onclick>
+		<visible>Container(9000).HasFocus(14) + Skin.HasSetting(Menu_Favorites_sub7_act)</visible>
+	</item>
+	<item id="1408">
+		<description>SubMenu Sub 8</description>
+		<label>$INFO[Skin.String(Menu_Favorites_sub8_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Favorites_sub8_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Favorites_sub8_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Favorites_sub8_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]&amp;run=$INFO[Skin.String(Menu_Favorites_sub8_run)])</onclick>
+		<visible>Container(9000).HasFocus(14) + Skin.HasSetting(Menu_Favorites_sub8_act)</visible>
+	</item>
+	<item id="1409">
+		<description>SubMenu Sub 9</description>
+		<label>$INFO[Skin.String(Menu_Favorites_sub9_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Favorites_sub9_Ico)]</label2>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Favorites_sub9_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]&amp;run=$INFO[Skin.String(Menu_Favorites_sub9_run)])</onclick>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Favorites_sub9_back)]</thumb>
+		<visible>Container(9000).HasFocus(14) + Skin.HasSetting(Menu_Favorites_sub9_act)</visible>
+	</item>
+	<item id="1410">
+		<description>SubMenu Sub 10</description>
+		<label>$INFO[Skin.String(Menu_Favorites_sub10_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Favorites_sub10_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Favorites_sub10_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Favorites_sub10_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]&amp;run=$INFO[Skin.String(Menu_Favorites_sub10_run)])</onclick>
+		<visible>Container(9000).HasFocus(14) + Skin.HasSetting(Menu_Favorites_sub10_act)</visible>
+	</item>
+<!-- Favorites End -->
+<!-- Exit -->
+	<item id="1301">
+		<label>$INFO[Skin.String(Menu_Exit_sub1_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Exit_sub1_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Exit_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Exit_sub1_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Exit_sub1_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Exit_Folder)]&amp;run=$INFO[Skin.String(Menu_Exit_sub1_run)])</onclick>
+		<visible>Container(9000).HasFocus(13) + Skin.HasSetting(Menu_Exit_sub1_act)</visible>
+	</item>
+	<item id="1302">
+		<label>$INFO[Skin.String(Menu_Exit_sub2_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Exit_sub2_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Exit_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Exit_sub2_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Exit_sub2_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Exit_Folder)]&amp;run=$INFO[Skin.String(Menu_Exit_sub2_run)])</onclick>
+		<visible>Container(9000).HasFocus(13) + Skin.HasSetting(Menu_Exit_sub2_act)</visible>
+	</item>
+	<item id="1303">
+		<label>$INFO[Skin.String(Menu_Exit_sub3_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Exit_sub3_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Exit_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Exit_sub3_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Exit_sub3_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Exit_Folder)]&amp;run=$INFO[Skin.String(Menu_Exit_sub3_run)])</onclick>
+		<visible>Container(9000).HasFocus(13) + Skin.HasSetting(Menu_Exit_sub3_act)</visible>
+	</item>
+	<item id="1304">
+		<label>$INFO[Skin.String(Menu_Exit_sub4_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Exit_sub4_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Exit_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Exit_sub4_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Exit_sub4_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Exit_Folder)]&amp;run=$INFO[Skin.String(Menu_Exit_sub4_run)])</onclick>
+		<visible>Container(9000).HasFocus(13) + Skin.HasSetting(Menu_Exit_sub4_act)</visible>
+	</item>
+<!-- Exit end -->
+<!-- Movies -->
+	<item id="1001">
+		<label>$INFO[Skin.String(Menu_Movie_sub1_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Movie_sub1_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Movie_sub1_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Movie_sub1_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]&amp;run=$INFO[Skin.String(Menu_Movie_sub1_run)])</onclick>
+		<visible>Container(9000).HasFocus(10) + Skin.HasSetting(Menu_Movie_sub1_act)</visible>
+	</item>
+	<item id="1002">
+		<label>$INFO[Skin.String(Menu_Movie_sub2_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Movie_sub2_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Movie_sub2_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Movie_sub2_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]&amp;run=$INFO[Skin.String(Menu_Movie_sub2_run)])</onclick>
+		<visible>Container(9000).HasFocus(10) + Skin.HasSetting(Menu_Movie_sub2_act)</visible>
+	</item>
+	<item id="1003">
+		<label>$INFO[Skin.String(Menu_Movie_sub3_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Movie_sub3_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Movie_sub3_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Movie_sub3_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]&amp;run=$INFO[Skin.String(Menu_Movie_sub3_run)])</onclick>
+		<visible>Container(9000).HasFocus(10) + Skin.HasSetting(Menu_Movie_sub3_act)</visible>
+	</item>
+	<item id="1004">
+		<label>$INFO[Skin.String(Menu_Movie_sub4_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Movie_sub4_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Movie_sub4_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Movie_sub4_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]&amp;run=$INFO[Skin.String(Menu_Movie_sub4_run)])</onclick>
+		<visible>Container(9000).HasFocus(10) + Skin.HasSetting(Menu_Movie_sub4_act)</visible>
+	</item>
+	<item id="1005">
+		<label>$INFO[Skin.String(Menu_Movie_sub5_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Movie_sub5_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Movie_sub5_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Movie_sub5_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]&amp;run=$INFO[Skin.String(Menu_Movie_sub5_run)])</onclick>
+		<visible>Container(9000).HasFocus(10) + Skin.HasSetting(Menu_Movie_sub5_act)</visible>
+	</item>
+	<item id="1006">
+		<label>$INFO[Skin.String(Menu_Movie_sub6_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Movie_sub6_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Movie_sub6_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Movie_sub6_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]&amp;run=$INFO[Skin.String(Menu_Movie_sub6_run)])</onclick>
+		<visible>Container(9000).HasFocus(10) + Skin.HasSetting(Menu_Movie_sub6_act)</visible>
+	</item>
+	<item id="1007">
+		<description>SubMenu Opt 1</description>
+		<label>$INFO[Skin.String(Menu_Movie_sub7_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Movie_sub7_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Movie_sub7_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Movie_sub7_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]&amp;run=$INFO[Skin.String(Menu_Movie_sub7_run)])</onclick>
+		<visible>Container(9000).HasFocus(10) + Skin.HasSetting(Menu_Movie_sub7_act)</visible>
+	</item>
+	<item id="1008">
+		<description>SubMenu Opt 2</description>
+		<label>$INFO[Skin.String(Menu_Movie_sub8_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Movie_sub8_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Movie_sub8_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Movie_sub8_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]&amp;run=$INFO[Skin.String(Menu_Movie_sub8_run)])</onclick>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Movie_sub8_back)])</onclick>
+		<visible>Container(9000).HasFocus(10) + Skin.HasSetting(Menu_Movie_sub8_act)</visible>
+	</item>
+	<item id="1009">
+		<description>SubMenu Opt 3</description>
+		<label>$INFO[Skin.String(Menu_Movie_sub9_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Movie_sub9_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Movie_sub9_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Movie_sub9_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]&amp;run=$INFO[Skin.String(Menu_Movie_sub9_run)])</onclick>
+		<visible>Container(9000).HasFocus(10) + Skin.HasSetting(Menu_Movie_sub9_act)</visible>
+	</item>
+	<item id="1010">
+		<description>SubMenu Opt 4</description>
+		<label>$INFO[Skin.String(Menu_Movie_sub10_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Movie_sub10_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Movie_sub10_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Movie_sub1_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]&amp;run=$INFO[Skin.String(Menu_Movie_sub1_run)])0</onclick>
+		<visible>Container(9000).HasFocus(10) + Skin.HasSetting(Menu_Movie_sub10_act)</visible>
+	</item>
+<!-- Movies End -->
+<!-- Music -->
+	<item id="301">
+		<label>$INFO[Skin.String(Menu_Music_sub1_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Music_sub1_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Music_sub1_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Music_sub1_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Music_Folder)]&amp;run=$INFO[Skin.String(Menu_Music_sub1_run)])</onclick>
+		<visible>Container(9000).HasFocus(3) + Skin.HasSetting(Menu_Music_sub1_act)</visible>
+	</item>
+	<item id="302">
+		<label>$INFO[Skin.String(Menu_Music_sub2_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Music_sub2_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Music_sub2_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Music_sub2_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Music_Folder)]&amp;run=$INFO[Skin.String(Menu_Music_sub2_run)])</onclick>
+		<visible>Container(9000).HasFocus(3) + Skin.HasSetting(Menu_Music_sub2_act)</visible>
+	</item>
+	<item id="303">
+		<label>$INFO[Skin.String(Menu_Music_sub3_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Music_sub3_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Music_sub3_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Music_sub3_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Music_Folder)]&amp;run=$INFO[Skin.String(Menu_Music_sub3_run)])</onclick>
+		<visible>Container(9000).HasFocus(3) + Skin.HasSetting(Menu_Music_sub3_act)</visible>
+	</item>
+	<item id="304">
+		<label>$INFO[Skin.String(Menu_Music_sub4_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Music_sub4_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Music_sub4_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Music_sub4_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Music_Folder)]&amp;run=$INFO[Skin.String(Menu_Music_sub4_run)])</onclick>
+		<visible>Container(9000).HasFocus(3) + Skin.HasSetting(Menu_Music_sub4_act)</visible>
+	</item>
+	<item id="305">
+		<label>$INFO[Skin.String(Menu_Music_sub5_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Music_sub5_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Music_sub5_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Music_sub5_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Music_Folder)]&amp;run=$INFO[Skin.String(Menu_Music_sub5_run)])</onclick>
+		<visible>Container(9000).HasFocus(3) + Skin.HasSetting(Menu_Music_sub5_act)</visible>
+	</item>
+	<item id="306">
+		<label>$INFO[Skin.String(Menu_Music_sub6_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Music_sub6_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Music_sub6_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Music_sub6_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Music_Folder)]&amp;run=$INFO[Skin.String(Menu_Music_sub6_run)])</onclick>
+		<visible>Container(9000).HasFocus(3) + Skin.HasSetting(Menu_Music_sub6_act)</visible>
+	</item>
+	<item id="307">
+		<description>SubMenu Sub 7</description>
+		<label>$INFO[Skin.String(Menu_Music_sub7_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Music_sub7_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Music_sub7_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Music_sub7_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Music_Folder)]&amp;run=$INFO[Skin.String(Menu_Music_sub7_run)])</onclick>
+		<visible>Container(9000).HasFocus(3) + Skin.HasSetting(Menu_Music_sub7_act)</visible>
+	</item>
+	<item id="308">
+		<description>SubMenu Sub 8</description>
+		<label>$INFO[Skin.String(Menu_Music_sub8_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Music_sub8_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Music_sub8_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Music_sub8_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Music_Folder)]&amp;run=$INFO[Skin.String(Menu_Music_sub8_run)])</onclick>
+		<visible>Container(9000).HasFocus(3) + Skin.HasSetting(Menu_Music_sub8_act)</visible>
+	</item>
+	<item id="309">
+		<description>SubMenu Sub 9</description>
+		<label>$INFO[Skin.String(Menu_Music_sub9_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Music_sub9_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Music_sub9_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Music_sub9_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Music_Folder)]&amp;run=$INFO[Skin.String(Menu_Music_sub9_run)])</onclick>
+		<visible>Container(9000).HasFocus(3) + Skin.HasSetting(Menu_Music_sub9_act)</visible>
+	</item>
+	<item id="310">
+		<description>SubMenu Sub 10</description>
+		<label>$INFO[Skin.String(Menu_Music_sub10_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Music_sub10_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Music_sub10_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Music_sub1_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Music_Folder)]&amp;run=$INFO[Skin.String(Menu_Music_sub1_run)])0</onclick>
+		<visible>Container(9000).HasFocus(3) + Skin.HasSetting(Menu_Music_sub10_act)</visible>
+	</item>
+<!-- Music end -->
+<!-- Videos -->
+	<item id="201">
+		<label>$INFO[Skin.String(Menu_Videos_sub1_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Videos_sub1_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Videos_sub1_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Videos_sub1_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]&amp;run=$INFO[Skin.String(Menu_Videos_sub1_run)])</onclick>
+		<visible>Container(9000).HasFocus(2) + Skin.HasSetting(Menu_Videos_sub1_act)</visible>
+	</item>
+	<item id="202">
+		<label>$INFO[Skin.String(Menu_Videos_sub2_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Videos_sub2_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Videos_sub2_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Videos_sub2_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]&amp;run=$INFO[Skin.String(Menu_Videos_sub2_run)])</onclick>
+		<visible>Container(9000).HasFocus(2) + Skin.HasSetting(Menu_Videos_sub2_act)</visible>
+	</item>
+	<item id="203">
+		<label>$INFO[Skin.String(Menu_Videos_sub3_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Videos_sub3_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Videos_sub3_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Videos_sub3_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]&amp;run=$INFO[Skin.String(Menu_Videos_sub3_run)])</onclick>
+		<visible>Container(9000).HasFocus(2) + Skin.HasSetting(Menu_Videos_sub3_act)</visible>
+	</item>
+	<item id="204">
+		<label>$INFO[Skin.String(Menu_Videos_sub4_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Videos_sub4_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Videos_sub4_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Videos_sub4_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]&amp;run=$INFO[Skin.String(Menu_Videos_sub4_run)])</onclick>
+		<visible>Container(9000).HasFocus(2) + Skin.HasSetting(Menu_Videos_sub4_act)</visible>
+	</item>
+	<item id="205">
+		<label>$INFO[Skin.String(Menu_Videos_sub5_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Videos_sub5_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Videos_sub5_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Videos_sub5_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]&amp;run=$INFO[Skin.String(Menu_Videos_sub5_run)])</onclick>
+		<visible>Container(9000).HasFocus(2) + Skin.HasSetting(Menu_Videos_sub5_act)</visible>
+	</item>
+	<item id="206">
+		<label>$INFO[Skin.String(Menu_Videos_sub6_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Videos_sub6_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Videos_sub6_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Videos_sub6_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]&amp;run=$INFO[Skin.String(Menu_Videos_sub6_run)])</onclick>
+		<visible>Container(9000).HasFocus(2) + Skin.HasSetting(Menu_Videos_sub6_act)</visible>
+	</item>
+	<item id="207">
+		<description>SubMenu Sub 7</description>
+		<label>$INFO[Skin.String(Menu_Videos_sub7_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Videos_sub7_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Videos_sub7_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Videos_sub7_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]&amp;run=$INFO[Skin.String(Menu_Videos_sub7_run)])</onclick>
+		<visible>Container(9000).HasFocus(2) + Skin.HasSetting(Menu_Videos_sub7_act)</visible>
+	</item>
+	<item id="208">
+		<description>SubMenu Sub 8</description>
+		<label>$INFO[Skin.String(Menu_Videos_sub8_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Videos_sub8_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Videos_sub8_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Videos_sub8_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]&amp;run=$INFO[Skin.String(Menu_Videos_sub8_run)])</onclick>
+		<visible>Container(9000).HasFocus(2) + Skin.HasSetting(Menu_Videos_sub8_act)</visible>
+	</item>
+	<item id="209">
+		<description>SubMenu Sub 9</description>
+		<label>$INFO[Skin.String(Menu_Videos_sub9_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Videos_sub9_Ico)]</label2>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Videos_sub9_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]&amp;run=$INFO[Skin.String(Menu_Videos_sub9_run)])</onclick>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Videos_sub9_back)]</thumb>
+		<visible>Container(9000).HasFocus(2) + Skin.HasSetting(Menu_Videos_sub9_act)</visible>
+	</item>
+	<item id="210">
+		<description>SubMenu Sub 10</description>
+		<label>$INFO[Skin.String(Menu_Videos_sub10_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Videos_sub10_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Videos_sub10_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Videos_sub10_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]&amp;run=$INFO[Skin.String(Menu_Videos_sub10_run)])</onclick>
+		<visible>Container(9000).HasFocus(2) + Skin.HasSetting(Menu_Videos_sub10_act)</visible>
+	</item>
+<!-- Video End -->
+<!-- Settings -->
+	<item id="501">
+		<label>35021</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Settings_sub1_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Settings_sub1_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]&amp;run=$INFO[Skin.String(Menu_Settings_sub1_run)])</onclick>
+		<onclick>ActivateWindow(1111)</onclick>
+		<visible>Container(9000).HasFocus(5)</visible>
+	</item>
+	<item id="502">
+		<label>5</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Settings_sub2_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Settings_sub2_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]&amp;run=$INFO[Skin.String(Menu_Settings_sub2_run)])</onclick>
+		<onclick>ActivateWindow(Settings)</onclick>
+		<visible>Container(9000).HasFocus(5)</visible>
+	</item>
+	<item id="503">
+		<label>480</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Settings_sub3_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Settings_sub2_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]&amp;run=$INFO[Skin.String(Menu_Settings_sub2_run)])</onclick>
+		<onclick>ActivateWindow(appearancesettings)</onclick>
+		<visible>Container(9000).HasFocus(5)</visible>
+	</item>
+	<item id="504">
+		<label>7</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Settings_sub4_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Settings_sub4_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]&amp;run=$INFO[Skin.String(Menu_Settings_sub4_run)])</onclick>
+		<onclick>ActivateWindow(FileManager)</onclick>
+		<visible>Container(9000).HasFocus(5)</visible>
+	</item>
+	<item id="505">
+		<label>13200</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Settings_sub5_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Settings_sub5_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]&amp;run=$INFO[Skin.String(Menu_Settings_sub5_run)])</onclick>
+		<onclick>ActivateWindow(Profiles)</onclick>
+		<visible>Container(9000).HasFocus(5)</visible>
+	</item>
+	<item id="506">
+		<label>130</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Settings_sub6_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Settings_sub6_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]&amp;run=$INFO[Skin.String(Menu_Settings_sub6_run)])</onclick>
+		<onclick>ActivateWindow(SystemInfo)</onclick>
+		<visible>Container(9000).HasFocus(5)</visible>
+	</item>
+	<item id="507">
+		<label>24001</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Settings_sub7_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Settings_sub7_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]&amp;run=$INFO[Skin.String(Menu_Settings_sub7_run)])</onclick>
+		<onclick>ActivateWindow(AddonBrowser)</onclick>
+		<visible>Container(9000).HasFocus(5)</visible>
+	</item>
+<!-- Settings End -->
+<!-- Pictures -->
+	<item id="401">
+		<label>$INFO[Skin.String(Menu_Pictures_sub1_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Pictures_sub1_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Pictures_sub1_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Pictures_sub1_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]&amp;run=$INFO[Skin.String(Menu_Pictures_sub1_run)])</onclick>
+		<visible>Container(9000).HasFocus(4) + Skin.HasSetting(Menu_Pictures_sub1_act)</visible>
+	</item>
+	<item id="402">
+		<label>$INFO[Skin.String(Menu_Pictures_sub2_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Pictures_sub2_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Pictures_sub2_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Pictures_sub2_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]&amp;run=$INFO[Skin.String(Menu_Pictures_sub2_run)])</onclick>
+		<visible>Container(9000).HasFocus(4) + Skin.HasSetting(Menu_Pictures_sub2_act)</visible>
+	</item>
+	<item id="403">
+		<label>$INFO[Skin.String(Menu_Pictures_sub3_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Pictures_sub3_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Pictures_sub3_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Pictures_sub3_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]&amp;run=$INFO[Skin.String(Menu_Pictures_sub3_run)])</onclick>
+		<visible>Container(9000).HasFocus(4) + Skin.HasSetting(Menu_Pictures_sub3_act)</visible>
+	</item>
+	<item id="404">
+		<label>$INFO[Skin.String(Menu_Pictures_sub4_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Pictures_sub4_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Pictures_sub4_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Pictures_sub4_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]&amp;run=$INFO[Skin.String(Menu_Pictures_sub4_run)])</onclick>
+		<visible>Container(9000).HasFocus(4) + Skin.HasSetting(Menu_Pictures_sub4_act)</visible>
+	</item>
+	<item id="405">
+		<label>$INFO[Skin.String(Menu_Pictures_sub5_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Pictures_sub5_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Pictures_sub5_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Pictures_sub5_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]&amp;run=$INFO[Skin.String(Menu_Pictures_sub5_run)])</onclick>
+		<visible>Container(9000).HasFocus(4) + Skin.HasSetting(Menu_Pictures_sub5_act)</visible>
+	</item>
+	<item id="406">
+		<label>$INFO[Skin.String(Menu_Pictures_sub6_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Pictures_sub6_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Pictures_sub6_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Pictures_sub6_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]&amp;run=$INFO[Skin.String(Menu_Pictures_sub6_run)])</onclick>
+		<visible>Container(9000).HasFocus(4) + Skin.HasSetting(Menu_Pictures_sub6_act)</visible>
+	</item>
+	<item id="407">
+		<description>SubMenu Sub 7</description>
+		<label>$INFO[Skin.String(Menu_Pictures_sub7_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Pictures_sub7_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Pictures_sub7_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Pictures_sub7_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]&amp;run=$INFO[Skin.String(Menu_Pictures_sub7_run)])</onclick>
+		<visible>Container(9000).HasFocus(4) + Skin.HasSetting(Menu_Pictures_sub7_act)</visible>
+	</item>
+	<item id="408">
+		<description>SubMenu Sub 8</description>
+		<label>$INFO[Skin.String(Menu_Pictures_sub8_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Pictures_sub8_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Pictures_sub8_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Pictures_sub8_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]&amp;run=$INFO[Skin.String(Menu_Pictures_sub8_run)])</onclick>
+		<visible>Container(9000).HasFocus(4) + Skin.HasSetting(Menu_Pictures_sub8_act)</visible>
+	</item>
+	<item id="409">
+		<description>SubMenu Sub 9</description>
+		<label>$INFO[Skin.String(Menu_Pictures_sub9_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Pictures_sub9_Ico)]</label2>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Pictures_sub9_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]&amp;run=$INFO[Skin.String(Menu_Pictures_sub9_run)])</onclick>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Pictures_sub9_back)]</thumb>
+		<visible>Container(9000).HasFocus(4) + Skin.HasSetting(Menu_Pictures_sub9_act)</visible>
+	</item>
+	<item id="410">
+		<description>SubMenu Sub 10</description>
+		<label>$INFO[Skin.String(Menu_Pictures_sub10_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Pictures_sub10_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Pictures_sub10_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Pictures_sub10_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]&amp;run=$INFO[Skin.String(Menu_Pictures_sub10_run)])</onclick>
+		<visible>Container(9000).HasFocus(4) + Skin.HasSetting(Menu_Pictures_sub10_act)</visible>
+	</item>
+<!-- Pictures End -->
+<!-- Weather -->
+	<item id="601">
+		<label>$INFO[Skin.String(Menu_Weather_sub1_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Weather_sub1_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Weather_sub1_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Weather_sub1_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]&amp;run=$INFO[Skin.String(Menu_Weather_sub1_run)])</onclick>
+		<visible>Container(9000).HasFocus(6) + Skin.HasSetting(Menu_Weather_sub1_act)</visible>
+	</item>
+	<item id="602">
+		<label>$INFO[Skin.String(Menu_Weather_sub2_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Weather_sub2_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Weather_sub2_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Weather_sub2_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]&amp;run=$INFO[Skin.String(Menu_Weather_sub2_run)])</onclick>
+		<visible>Container(9000).HasFocus(6) + Skin.HasSetting(Menu_Weather_sub2_act)</visible>
+	</item>
+	<item id="603">
+		<label>$INFO[Skin.String(Menu_Weather_sub3_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Weather_sub3_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Weather_sub3_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Weather_sub3_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]&amp;run=$INFO[Skin.String(Menu_Weather_sub3_run)])</onclick>
+		<visible>Container(9000).HasFocus(6) + Skin.HasSetting(Menu_Weather_sub3_act)</visible>
+	</item>
+	<item id="604">
+		<label>$INFO[Skin.String(Menu_Weather_sub4_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Weather_sub4_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Weather_sub4_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Weather_sub4_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]&amp;run=$INFO[Skin.String(Menu_Weather_sub4_run)])</onclick>
+		<visible>Container(9000).HasFocus(6) + Skin.HasSetting(Menu_Weather_sub4_act)</visible>
+	</item>
+	<item id="605">
+		<label>$INFO[Skin.String(Menu_Weather_sub5_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Weather_sub5_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Weather_sub5_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Weather_sub5_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]&amp;run=$INFO[Skin.String(Menu_Weather_sub5_run)])</onclick>
+		<visible>Container(9000).HasFocus(6) + Skin.HasSetting(Menu_Weather_sub5_act)</visible>
+	</item>
+	<item id="606">
+		<label>$INFO[Skin.String(Menu_Weather_sub6_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Weather_sub6_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Weather_sub6_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Weather_sub6_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]&amp;run=$INFO[Skin.String(Menu_Weather_sub6_run)])</onclick>
+		<visible>Container(9000).HasFocus(6) + Skin.HasSetting(Menu_Weather_sub6_act)</visible>
+	</item>
+	<item id="607">
+		<description>SubMenu Sub 7</description>
+		<label>$INFO[Skin.String(Menu_Weather_sub7_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Weather_sub7_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Weather_sub7_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Weather_sub7_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]&amp;run=$INFO[Skin.String(Menu_Weather_sub7_run)])</onclick>
+		<visible>Container(9000).HasFocus(6) + Skin.HasSetting(Menu_Weather_sub7_act)</visible>
+	</item>
+	<item id="608">
+		<description>SubMenu Sub 8</description>
+		<label>$INFO[Skin.String(Menu_Weather_sub8_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Weather_sub8_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Weather_sub8_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Weather_sub8_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]&amp;run=$INFO[Skin.String(Menu_Weather_sub8_run)])</onclick>
+		<visible>Container(9000).HasFocus(6) + Skin.HasSetting(Menu_Weather_sub8_act)</visible>
+	</item>
+	<item id="609">
+		<description>SubMenu Sub 9</description>
+		<label>$INFO[Skin.String(Menu_Weather_sub9_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Weather_sub9_Ico)]</label2>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Weather_sub9_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]&amp;run=$INFO[Skin.String(Menu_Weather_sub9_run)])</onclick>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Weather_sub9_back)]</thumb>
+		<visible>Container(9000).HasFocus(6) + Skin.HasSetting(Menu_Weather_sub9_act)</visible>
+	</item>
+	<item id="610">
+		<description>SubMenu Sub 10</description>
+		<label>$INFO[Skin.String(Menu_Weather_sub10_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Weather_sub10_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Weather_sub10_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Weather_sub10_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]&amp;run=$INFO[Skin.String(Menu_Weather_sub10_run)])</onclick>
+		<visible>Container(9000).HasFocus(6) + Skin.HasSetting(Menu_Weather_sub10_act)</visible>
+	</item>
+<!-- Weather End -->
+<!-- LiveTv -->
+	<item id="1501">
+		<label>$INFO[Skin.String(Menu_LiveTv_sub1_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_LiveTv_sub1_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_LiveTv_sub1_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_LiveTv_sub1_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]&amp;run=$INFO[Skin.String(Menu_LiveTv_sub1_run)])</onclick>
+		<visible>Container(9000).HasFocus(15) + Skin.HasSetting(Menu_LiveTv_sub1_act)</visible>
+	</item>
+	<item id="1502">
+		<label>$INFO[Skin.String(Menu_LiveTv_sub2_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_LiveTv_sub2_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_LiveTv_sub2_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_LiveTv_sub2_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]&amp;run=$INFO[Skin.String(Menu_LiveTv_sub2_run)])</onclick>
+		<visible>Container(9000).HasFocus(15) + Skin.HasSetting(Menu_LiveTv_sub2_act)</visible>
+	</item>
+	<item id="1503">
+		<label>$INFO[Skin.String(Menu_LiveTv_sub3_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_LiveTv_sub3_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_LiveTv_sub3_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_LiveTv_sub3_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]&amp;run=$INFO[Skin.String(Menu_LiveTv_sub3_run)])</onclick>
+		<visible>Container(9000).HasFocus(15) + Skin.HasSetting(Menu_LiveTv_sub3_act)</visible>
+	</item>
+	<item id="1504">
+		<label>$INFO[Skin.String(Menu_LiveTv_sub4_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_LiveTv_sub4_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_LiveTv_sub4_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_LiveTv_sub4_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]&amp;run=$INFO[Skin.String(Menu_LiveTv_sub4_run)])</onclick>
+		<visible>Container(9000).HasFocus(15) + Skin.HasSetting(Menu_LiveTv_sub4_act)</visible>
+	</item>
+	<item id="1505">
+		<label>$INFO[Skin.String(Menu_LiveTv_sub5_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_LiveTv_sub5_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_LiveTv_sub5_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_LiveTv_sub5_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]&amp;run=$INFO[Skin.String(Menu_LiveTv_sub5_run)])</onclick>
+		<visible>Container(9000).HasFocus(15) + Skin.HasSetting(Menu_LiveTv_sub5_act)</visible>
+	</item>
+	<item id="1506">
+		<label>$INFO[Skin.String(Menu_LiveTv_sub6_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_LiveTv_sub6_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_LiveTv_sub6_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_LiveTv_sub6_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]&amp;run=$INFO[Skin.String(Menu_LiveTv_sub6_run)])</onclick>
+		<visible>Container(9000).HasFocus(15) + Skin.HasSetting(Menu_LiveTv_sub6_act)</visible>
+	</item>
+	<item id="1507">
+		<description>SubMenu Sub 7</description>
+		<label>$INFO[Skin.String(Menu_LiveTv_sub7_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_LiveTv_sub7_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_LiveTv_sub7_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_LiveTv_sub7_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]&amp;run=$INFO[Skin.String(Menu_LiveTv_sub7_run)])</onclick>
+		<visible>Container(9000).HasFocus(15) + Skin.HasSetting(Menu_LiveTv_sub7_act)</visible>
+	</item>
+	<item id="1508">
+		<description>SubMenu Sub 8</description>
+		<label>$INFO[Skin.String(Menu_LiveTv_sub8_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_LiveTv_sub8_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_LiveTv_sub8_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_LiveTv_sub8_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]&amp;run=$INFO[Skin.String(Menu_LiveTv_sub8_run)])</onclick>
+		<visible>Container(9000).HasFocus(15) + Skin.HasSetting(Menu_LiveTv_sub8_act)</visible>
+	</item>
+	<item id="1509">
+		<description>SubMenu Sub 9</description>
+		<label>$INFO[Skin.String(Menu_LiveTv_sub9_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_LiveTv_sub9_Ico)]</label2>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_LiveTv_sub9_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]&amp;run=$INFO[Skin.String(Menu_LiveTv_sub9_run)])</onclick>
+		<icon>$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_LiveTv_sub9_back)]</thumb>
+		<visible>Container(9000).HasFocus(15) + Skin.HasSetting(Menu_LiveTv_sub9_act)</visible>
+	</item>
+	<item id="1510">
+		<description>SubMenu Sub 10</description>
+		<label>$INFO[Skin.String(Menu_LiveTv_sub10_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_LiveTv_sub10_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_LiveTv_sub10_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_LiveTv_sub10_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]&amp;run=$INFO[Skin.String(Menu_LiveTv_sub10_run)])</onclick>
+		<visible>Container(9000).HasFocus(15) + Skin.HasSetting(Menu_LiveTv_sub10_act)</visible>
+	</item>
+<!-- LiveTv End -->
+<!-- Custom Menu 1 -->
+	<item id="2001">
+		<description>Men1Button1</description>
+		<label>$INFO[Skin.String(Menu_Men1_sub1_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Men1_sub1_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men1_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men1_sub1_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Men1_sub1_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Men1_Folder)]&amp;run=$INFO[Skin.String(Menu_Men1_sub1_run)])</onclick>
+		<visible>Container(9000).HasFocus(20) + [Skin.HasSetting(Menu_Men1_sub1_act) + !IsEmpty(Skin.String(Menu_Men1_sub1_lab))]</visible>
+	</item>
+	<item id="2002">
+		<description>Men1Button2</description>
+		<label>$INFO[Skin.String(Menu_Men1_sub2_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Men1_sub2_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men1_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men1_sub2_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Men1_sub2_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Men1_Folder)]&amp;run=$INFO[Skin.String(Menu_Men1_sub2_run)])</onclick>
+		<visible>Container(9000).HasFocus(20) + [Skin.HasSetting(Menu_Men1_sub2_act) + !IsEmpty(Skin.String(Menu_Men1_sub2_lab))]</visible>
+	</item>
+	<item id="2003">
+		<description>Men1Button3</description>
+		<label>$INFO[Skin.String(Menu_Men1_sub3_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Men1_sub3_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men1_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men1_sub3_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Men1_sub3_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Men1_Folder)]&amp;run=$INFO[Skin.String(Menu_Men1_sub3_run)])</onclick>
+		<visible>Container(9000).HasFocus(20) + [Skin.HasSetting(Menu_Men1_sub3_act) + !IsEmpty(Skin.String(Menu_Men1_sub3_lab))]</visible>
+	</item>
+	<item id="2004">
+		<description>Men1Button4</description>
+		<label>$INFO[Skin.String(Menu_Men1_sub4_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Men1_sub4_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men1_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men1_sub4_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Men1_sub4_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Men1_Folder)]&amp;run=$INFO[Skin.String(Menu_Men1_sub4_run)])</onclick>
+		<visible>Container(9000).HasFocus(20) + [Skin.HasSetting(Menu_Men1_sub4_act) + !IsEmpty(Skin.String(Menu_Men1_sub4_lab))]</visible>
+	</item>
+	<item id="2005">
+		<description>Men1Button5</description>
+		<label>$INFO[Skin.String(Menu_Men1_sub5_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Men1_sub5_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men1_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men1_sub5_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Men1_sub5_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Men1_Folder)]&amp;run=$INFO[Skin.String(Menu_Men1_sub5_run)])</onclick>
+		<visible>Container(9000).HasFocus(20) + [Skin.HasSetting(Menu_Men1_sub5_act) + !IsEmpty(Skin.String(Menu_Men1_sub5_lab))]</visible>
+	</item>
+	<item id="2006">
+		<description>Men1Button6</description>
+		<label>$INFO[Skin.String(Menu_Men1_sub6_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Men1_sub6_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men1_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men1_sub6_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Men1_sub6_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Men1_Folder)]&amp;run=$INFO[Skin.String(Menu_Men1_sub6_run)])</onclick>
+		<visible>Container(9000).HasFocus(20) + [Skin.HasSetting(Menu_Men1_sub6_act) + !IsEmpty(Skin.String(Menu_Men1_sub6_lab))]</visible>
+	</item>
+<!-- Custom Menu 1 End -->
+<!-- Custom Menu 2 -->
+	<item id="2101">
+		<description>Men2Button1</description>
+		<label>$INFO[Skin.String(Menu_Men2_sub1_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Men2_sub1_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men2_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men2_sub1_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Men2_sub1_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Men2_Folder)]&amp;run=$INFO[Skin.String(Menu_Men2_sub1_run)])</onclick>
+		<visible>Container(9000).HasFocus(21) + [Skin.HasSetting(Menu_Men2_sub1_act) + !IsEmpty(Skin.String(Menu_Men2_sub1_lab))]</visible>
+	</item>
+	<item id="2102">
+		<description>Men2Button2</description>
+		<label>$INFO[Skin.String(Menu_Men2_sub2_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Men2_sub2_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men2_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men2_sub2_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Men2_sub2_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Men2_Folder)]&amp;run=$INFO[Skin.String(Menu_Men2_sub2_run)])</onclick>
+		<visible>Container(9000).HasFocus(21) + [Skin.HasSetting(Menu_Men2_sub2_act) + !IsEmpty(Skin.String(Menu_Men2_sub2_lab))]</visible>
+	</item>
+	<item id="2103">
+		<description>Men2Button3</description>
+		<label>$INFO[Skin.String(Menu_Men2_sub3_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Men2_sub3_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men2_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men2_sub3_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Men2_sub3_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Men2_Folder)]&amp;run=$INFO[Skin.String(Menu_Men2_sub3_run)])</onclick>
+		<visible>Container(9000).HasFocus(21) + [Skin.HasSetting(Menu_Men2_sub3_act) + !IsEmpty(Skin.String(Menu_Men2_sub3_lab))]</visible>
+	</item>
+	<item id="2104">
+		<description>Men2Button4</description>
+		<label>$INFO[Skin.String(Menu_Men2_sub4_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Men2_sub4_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men2_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men2_sub4_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Men2_sub4_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Men2_Folder)]&amp;run=$INFO[Skin.String(Menu_Men2_sub4_run)])</onclick>
+		<visible>Container(9000).HasFocus(21) + [Skin.HasSetting(Menu_Men2_sub4_act) + !IsEmpty(Skin.String(Menu_Men2_sub4_lab))]</visible>
+	</item>
+	<item id="2105">
+		<description>Men2Button5</description>
+		<label>$INFO[Skin.String(Menu_Men2_sub5_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Men2_sub5_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men2_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men2_sub5_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Men2_sub5_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Men2_Folder)]&amp;run=$INFO[Skin.String(Menu_Men2_sub5_run)])</onclick>
+		<visible>Container(9000).HasFocus(21) + [Skin.HasSetting(Menu_Men2_sub5_act) + !IsEmpty(Skin.String(Menu_Men2_sub5_lab))]</visible>
+	</item>
+	<item id="2106">
+		<description>Men2Button6</description>
+		<label>$INFO[Skin.String(Menu_Men2_sub6_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Men2_sub6_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men2_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men2_sub6_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Men2_sub6_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Men2_Folder)]&amp;run=$INFO[Skin.String(Menu_Men2_sub6_run)])</onclick>
+		<visible>Container(9000).HasFocus(21) + [Skin.HasSetting(Menu_Men2_sub6_act) + !IsEmpty(Skin.String(Menu_Men2_sub6_lab))]</visible>
+	</item>
+<!-- Custom Menu 2 End -->
+<!-- Custom Menu 3 -->
+	<item id="2301">
+		<description>Men3Button1</description>
+		<label>$INFO[Skin.String(Menu_Men3_sub1_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Men3_sub1_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men3_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men3_sub1_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Men3_sub1_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Men3_Folder)]&amp;run=$INFO[Skin.String(Menu_Men3_sub1_run)])</onclick>
+		<visible>Container(9000).HasFocus(22) + [Skin.HasSetting(Menu_Men3_sub1_act) + !IsEmpty(Skin.String(Menu_Men3_sub1_lab))]</visible>
+	</item>
+	<item id="2302">
+		<description>Men3Button2</description>
+		<label>$INFO[Skin.String(Menu_Men3_sub2_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Men3_sub2_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men3_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men3_sub2_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Men3_sub2_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Men3_Folder)]&amp;run=$INFO[Skin.String(Menu_Men3_sub2_run)])</onclick>
+		<visible>Container(9000).HasFocus(22) + [Skin.HasSetting(Menu_Men3_sub2_act) + !IsEmpty(Skin.String(Menu_Men3_sub2_lab))]</visible>
+	</item>
+	<item id="2303">
+		<description>Men3Button3</description>
+		<label>$INFO[Skin.String(Menu_Men3_sub3_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Men3_sub3_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men3_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men3_sub3_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Men3_sub3_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Men3_Folder)]&amp;run=$INFO[Skin.String(Menu_Men3_sub3_run)])</onclick>
+		<visible>Container(9000).HasFocus(22) + [Skin.HasSetting(Menu_Men3_sub3_act) + !IsEmpty(Skin.String(Menu_Men3_sub3_lab))]</visible>
+	</item>
+	<item id="2304">
+		<description>Men3Button4</description>
+		<label>$INFO[Skin.String(Menu_Men3_sub4_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Men3_sub4_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men3_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men3_sub4_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Men3_sub4_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Men3_Folder)]&amp;run=$INFO[Skin.String(Menu_Men3_sub4_run)])</onclick>
+		<visible>Container(9000).HasFocus(22) + [Skin.HasSetting(Menu_Men3_sub4_act) + !IsEmpty(Skin.String(Menu_Men3_sub4_lab))]</visible>
+	</item>
+	<item id="2305">
+		<description>Men3Button5</description>
+		<label>$INFO[Skin.String(Menu_Men3_sub5_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Men3_sub5_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men3_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men3_sub5_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Men3_sub5_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Men3_Folder)]&amp;run=$INFO[Skin.String(Menu_Men3_sub5_run)])</onclick>
+		<visible>Container(9000).HasFocus(22) + [Skin.HasSetting(Menu_Men3_sub5_act) + !IsEmpty(Skin.String(Menu_Men3_sub5_lab))]</visible>
+	</item>
+	<item id="2306">
+		<description>Men3Button6</description>
+		<label>$INFO[Skin.String(Menu_Men3_sub6_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Men3_sub6_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men3_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men3_sub6_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Men3_sub6_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Men3_Folder)]&amp;run=$INFO[Skin.String(Menu_Men3_sub6_run)])</onclick>
+		<visible>Container(9000).HasFocus(22) + [Skin.HasSetting(Menu_Men3_sub6_act) + !IsEmpty(Skin.String(Menu_Men3_sub6_lab))]</visible>
+	</item>
+<!-- Custom Menu 3 End -->
+<!-- Custom Menu 4 -->
+	<item id="2401">
+		<description>Men4Button1</description>
+		<label>$INFO[Skin.String(Menu_Men4_sub1_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Men4_sub1_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men4_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men4_sub1_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Men4_sub1_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Men4_Folder)]&amp;run=$INFO[Skin.String(Menu_Men4_sub1_run)])</onclick>
+		<visible>Container(9000).HasFocus(23) + [Skin.HasSetting(Menu_Men4_sub1_act) + !IsEmpty(Skin.String(Menu_Men4_sub1_lab))]</visible>
+	</item>
+	<item id="2402">
+		<description>Men4Button2</description>
+		<label>$INFO[Skin.String(Menu_Men4_sub2_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Men4_sub2_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men4_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men4_sub2_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Men4_sub2_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Men4_Folder)]&amp;run=$INFO[Skin.String(Menu_Men4_sub2_run)])</onclick>
+		<visible>Container(9000).HasFocus(23) + [Skin.HasSetting(Menu_Men4_sub2_act) + !IsEmpty(Skin.String(Menu_Men4_sub2_lab))]</visible>
+	</item>
+	<item id="2403">
+		<description>Men4Button3</description>
+		<label>$INFO[Skin.String(Menu_Men4_sub3_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Men4_sub3_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men4_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men4_sub3_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Men4_sub3_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Men4_Folder)]&amp;run=$INFO[Skin.String(Menu_Men4_sub3_run)])</onclick>
+		<visible>Container(9000).HasFocus(23) + [Skin.HasSetting(Menu_Men4_sub3_act) + !IsEmpty(Skin.String(Menu_Men4_sub3_lab))]</visible>
+	</item>
+	<item id="2404">
+		<description>Men4Button4</description>
+		<label>$INFO[Skin.String(Menu_Men4_sub4_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Men4_sub4_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men4_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men4_sub4_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Men4_sub4_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Men4_Folder)]&amp;run=$INFO[Skin.String(Menu_Men4_sub4_run)])</onclick>
+		<visible>Container(9000).HasFocus(23) + [Skin.HasSetting(Menu_Men4_sub4_act) + !IsEmpty(Skin.String(Menu_Men4_sub4_lab))]</visible>
+	</item>
+	<item id="2405">
+		<description>Men4Button5</description>
+		<label>$INFO[Skin.String(Menu_Men4_sub5_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Men4_sub5_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men4_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men4_sub5_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Men4_sub5_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Men4_Folder)]&amp;run=$INFO[Skin.String(Menu_Men4_sub5_run)])</onclick>
+		<visible>Container(9000).HasFocus(23) + [Skin.HasSetting(Menu_Men4_sub5_act) + !IsEmpty(Skin.String(Menu_Men4_sub5_lab))]</visible>
+	</item>
+	<item id="2406">
+		<description>Men4Button6</description>
+		<label>$INFO[Skin.String(Menu_Men4_sub6_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Men4_sub6_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men4_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men4_sub6_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,bg=$INFO[Skin.String(Menu_Men4_sub6_back)]&amp;bgmen=$INFO[Skin.String(Home_Custom_Back_Men4_Folder)]&amp;run=$INFO[Skin.String(Menu_Men4_sub6_run)])</onclick>
+		<visible>Container(9000).HasFocus(23) + [Skin.HasSetting(Menu_Men4_sub6_act) + !IsEmpty(Skin.String(Menu_Men4_sub6_lab))]</visible>
+	</item>
+<!-- Custom Menu 4 End -->
+</include>
+<include name="IncludeBackSubMenu">
+<!-- Programs  -->
+	<item id="101">
+		<description>SubMenu Opt 1</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Programs_lab)][/COLOR]-$INFO[Skin.String(Menu_Programs_Sub1_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Programs_Sub1_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Programs_sub1_act)</visible>
+	</item>
+	<item id="102">
+		<description>SubMenu Opt 2</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Programs_lab)][/COLOR]-$INFO[Skin.String(Menu_Programs_Sub2_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Programs_Sub2_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Programs_sub2_act)</visible>
+	</item>
+	<item id="103">
+		<description>SubMenu Opt 3</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Programs_lab)][/COLOR]-$INFO[Skin.String(Menu_Programs_Sub3_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Programs_Sub3_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Programs_sub3_act)</visible>
+	</item>
+	<item id="104">
+		<description>SubMenu Opt 4</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Programs_lab)][/COLOR]-$INFO[Skin.String(Menu_Programs_Sub4_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Programs_Sub4_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Programs_sub4_act)</visible>
+	</item>
+<!-- Programs End  -->
+<!-- TV Shows-->
+	<item id="1101">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_TVShows_lab)][/COLOR]-$INFO[Skin.String(Menu_TVShows_sub1_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_TVShows_sub1_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_TVShows_sub1_act)</visible>
+	</item>
+	<item id="1102">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_TVShows_lab)][/COLOR]-$INFO[Skin.String(Menu_TVShows_sub2_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_TVShows_sub2_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_TVShows_sub1_act)</visible>
+	</item>
+	<item id="1103">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_TVShows_lab)][/COLOR]-$INFO[Skin.String(Menu_TVShows_sub3_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_TVShows_sub3_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_TVShows_sub3_act)</visible>
+	</item>
+	<item id="1104">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_TVShows_lab)][/COLOR]-$INFO[Skin.String(Menu_TVShows_sub4_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_TVShows_sub4_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_TVShows_sub4_act)</visible>
+	</item>
+	<item id="1105">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_TVShows_lab)][/COLOR]-$INFO[Skin.String(Menu_TVShows_sub5_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_TVShows_sub5_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_TVShows_sub5_act)</visible>
+	</item>
+	<item id="1106">
+		<description>SubMenu Opt 1</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_TVShows_lab)][/COLOR]-$INFO[Skin.String(Menu_TvShows_sub6_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_TVShows_sub6_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_TvShows_sub6_act)</visible>
+	</item>
+	<item id="1107">
+		<description>SubMenu Opt 2</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_TVShows_lab)][/COLOR]-$INFO[Skin.String(Menu_TvShows_sub7_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_TVShows_sub7_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_TvShows_sub7_act)</visible>
+	</item>
+	<item id="1108">
+		<description>SubMenu Opt 3</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_TVShows_lab)][/COLOR]-$INFO[Skin.String(Menu_TvShows_sub8_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_TVShows_sub8_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_TvShows_sub8_act)</visible>
+	</item>
+	<item id="1109">
+		<description>SubMenu Opt 4</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_TVShows_lab)][/COLOR]-$INFO[Skin.String(Menu_TvShows_sub9_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_TVShows_sub9_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_TvShows_sub9_act)</visible>
+	</item>
+<!-- TV Shows end -->
+<!-- Movies -->
+	<item id="1001">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Movie_lab)][/COLOR]-$INFO[Skin.String(Menu_Movie_sub1_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Movie_sub1_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Movie_sub1_act)</visible>
+	</item>
+	<item id="1002">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Movie_lab)][/COLOR]-$INFO[Skin.String(Menu_Movie_sub2_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Movie_sub2_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Movie_sub2_act)</visible>
+	</item>
+	<item id="1003">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Movie_lab)][/COLOR]-$INFO[Skin.String(Menu_Movie_sub3_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Movie_sub3_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Movie_sub3_act)</visible>
+	</item>
+	<item id="1004">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Movie_lab)][/COLOR]-$INFO[Skin.String(Menu_Movie_sub4_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Movie_sub4_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Movie_sub4_act)</visible>
+	</item>
+	<item id="1005">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Movie_lab)][/COLOR]-$INFO[Skin.String(Menu_Movie_sub5_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Movie_sub5_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Movie_sub5_act)</visible>
+	</item>
+	<item id="1006">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Movie_lab)][/COLOR]-$INFO[Skin.String(Menu_Movie_sub6_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Movie_sub6_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Movie_sub6_act)</visible>
+	</item>
+	<item id="1007">
+		<description>SubMenu Opt 1</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Movie_lab)][/COLOR]-$INFO[Skin.String(Menu_Movie_sub7_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Movie_sub7_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Movie_sub7_act)</visible>
+	</item>
+	<item id="1008">
+		<description>SubMenu Opt 2</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Movie_lab)][/COLOR]-$INFO[Skin.String(Menu_Movie_sub8_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Movie_sub8_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Movie_sub8_act)</visible>
+	</item>
+	<item id="1009">
+		<description>SubMenu Opt 3</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Movie_lab)][/COLOR]-$INFO[Skin.String(Menu_Movie_sub9_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Movie_sub9_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Movie_sub9_act)</visible>
+	</item>
+	<item id="1010">
+		<description>SubMenu Opt 4</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Movie_lab)][/COLOR]-$INFO[Skin.String(Menu_Movie_sub10_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Movie_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Movie_sub10_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Movie_sub10_act)</visible>
+	</item>
+<!-- Movies End -->
+<!-- Music -->
+	<item id="301">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Music_lab)][/COLOR]-$INFO[Skin.String(Menu_Music_sub1_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Music_sub1_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Music_sub1_act)</visible>
+	</item>
+	<item id="302">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Music_lab)][/COLOR]-$INFO[Skin.String(Menu_Music_sub2_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Music_sub2_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Music_sub2_act)</visible>
+	</item>
+	<item id="303">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Music_lab)][/COLOR]-$INFO[Skin.String(Menu_Music_sub3_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Music_sub3_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Music_sub3_act)</visible>
+	</item>
+	<item id="304">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Music_lab)][/COLOR]-$INFO[Skin.String(Menu_Music_sub4_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Music_sub4_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Music_sub4_act)</visible>
+	</item>
+	<item id="305">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Music_lab)][/COLOR]-$INFO[Skin.String(Menu_Music_sub5_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Music_sub5_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Music_sub5_act)</visible>
+	</item>
+	<item id="306">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Music_lab)][/COLOR]-$INFO[Skin.String(Menu_Music_sub6_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Music_sub6_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Music_sub6_act)</visible>
+	</item>
+	<item id="307">
+		<description>SubMenu Opt 1</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Music_lab)][/COLOR]-$INFO[Skin.String(Menu_Music_sub7_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Music_sub7_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Music_sub7_act)</visible>
+	</item>
+	<item id="308">
+		<description>SubMenu Opt 2</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Music_lab)][/COLOR]-$INFO[Skin.String(Menu_Music_sub8_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Music_sub8_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Music_sub8_act)</visible>
+	</item>
+	<item id="309">
+		<description>SubMenu Opt 3</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Music_lab)][/COLOR]-$INFO[Skin.String(Menu_Music_sub9_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Music_sub9_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Music_sub9_act)</visible>
+	</item>
+	<item id="310">
+		<description>SubMenu Opt 4</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Music_lab)][/COLOR]-$INFO[Skin.String(Menu_Music_sub10_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Music_sub10_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Music_sub10_act)</visible>
+	</item>
+<!-- Music end -->
+<!-- Videos -->
+	<item id="201">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Videos_lab)][/COLOR]-$INFO[Skin.String(Menu_Videos_sub1_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Videos_sub1_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Videos_sub1_act)</visible>
+	</item>
+	<item id="202">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Videos_lab)][/COLOR]-$INFO[Skin.String(Menu_Videos_sub2_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Videos_sub2_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Videos_sub2_act)</visible>
+	</item>
+	<item id="203">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Videos_lab)][/COLOR]-$INFO[Skin.String(Menu_Videos_sub3_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Videos_sub3_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Videos_sub3_act)</visible>
+	</item>
+	<item id="204">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Videos_lab)][/COLOR]-$INFO[Skin.String(Menu_Videos_sub4_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Videos_sub4_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Videos_sub4_act)</visible>
+	</item>
+	<item id="205">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Videos_lab)][/COLOR]-$INFO[Skin.String(Menu_Videos_sub5_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Videos_sub5_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Videos_sub5_act)</visible>
+	</item>
+	<item id="206">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Videos_lab)][/COLOR]-$INFO[Skin.String(Menu_Videos_sub6_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Videos_sub6_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Videos_sub6_act)</visible>
+	</item>
+	<item id="207">
+		<description>SubMenu Opt 1</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Videos_lab)][/COLOR]-$INFO[Skin.String(Menu_Videos_sub7_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Videos_sub7_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Videos_sub7_act)</visible>
+	</item>
+	<item id="208">
+		<description>SubMenu Opt 2</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Videos_lab)][/COLOR]-$INFO[Skin.String(Menu_Videos_sub8_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Videos_sub8_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Videos_sub8_act)</visible>
+	</item>
+	<item id="209">
+		<description>SubMenu Opt 3</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Videos_lab)][/COLOR]-$INFO[Skin.String(Menu_Videos_sub9_lab)]</label>
+		<onclick>-</onclick>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Videos_sub9_back)]</thumb>
+		<visible>Skin.HasSetting(Menu_Videos_sub9_act)</visible>
+	</item>
+	<item id="210">
+		<description>SubMenu Opt 4</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Videos_lab)][/COLOR]-$INFO[Skin.String(Menu_Videos_sub10_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Videos_sub10_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Videos_sub10_act)</visible>
+	</item>
+<!-- Video End -->
+<!-- Pictures -->
+	<item id="401">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Pictures_lab)][/COLOR]-$INFO[Skin.String(Menu_Pictures_sub1_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Pictures_sub1_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Pictures_sub1_act)</visible>
+	</item>
+	<item id="402">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Pictures_lab)][/COLOR]-$INFO[Skin.String(Menu_Pictures_sub2_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Pictures_sub2_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Pictures_sub2_act)</visible>
+	</item>
+	<item id="403">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Pictures_lab)][/COLOR]-$INFO[Skin.String(Menu_Pictures_sub3_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Pictures_sub3_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Pictures_sub3_act)</visible>
+	</item>
+	<item id="404">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Pictures_lab)][/COLOR]-$INFO[Skin.String(Menu_Pictures_sub4_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Pictures_sub4_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Pictures_sub4_act)</visible>
+	</item>
+	<item id="405">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Pictures_lab)][/COLOR]-$INFO[Skin.String(Menu_Pictures_sub5_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Pictures_sub5_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Pictures_sub5_act)</visible>
+	</item>
+	<item id="406">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Pictures_lab)][/COLOR]-$INFO[Skin.String(Menu_Pictures_sub6_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Pictures_sub6_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Pictures_sub6_act)</visible>
+	</item>
+	<item id="407">
+		<description>SubMenu Opt 1</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Pictures_lab)][/COLOR]-$INFO[Skin.String(Menu_Pictures_sub7_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Pictures_sub7_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Pictures_sub7_act)</visible>
+	</item>
+	<item id="408">
+		<description>SubMenu Opt 2</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Pictures_lab)][/COLOR]-$INFO[Skin.String(Menu_Pictures_sub8_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Pictures_sub8_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Pictures_sub8_act)</visible>
+	</item>
+	<item id="409">
+		<description>SubMenu Opt 3</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Pictures_lab)][/COLOR]-$INFO[Skin.String(Menu_Pictures_sub9_lab)]</label>
+		<onclick>-</onclick>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Pictures_sub9_back)]</thumb>
+		<visible>Skin.HasSetting(Menu_Pictures_sub9_act)</visible>
+	</item>
+	<item id="410">
+		<description>SubMenu Opt 4</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Pictures_lab)][/COLOR]-$INFO[Skin.String(Menu_Pictures_sub10_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Pictures_sub10_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Pictures_sub10_act)</visible>
+	</item>
+<!-- Pictures End -->
+<!-- Weather -->
+	<item id="601">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Weather_lab)][/COLOR]-$INFO[Skin.String(Menu_Weather_sub1_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Weather_sub1_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Weather_sub1_act)</visible>
+	</item>
+	<item id="602">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Weather_lab)][/COLOR]-$INFO[Skin.String(Menu_Weather_sub2_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Weather_sub2_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Weather_sub2_act)</visible>
+	</item>
+	<item id="603">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Weather_lab)][/COLOR]-$INFO[Skin.String(Menu_Weather_sub3_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Weather_sub3_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Weather_sub3_act)</visible>
+	</item>
+	<item id="604">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Weather_lab)][/COLOR]-$INFO[Skin.String(Menu_Weather_sub4_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Weather_sub4_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Weather_sub4_act)</visible>
+	</item>
+	<item id="605">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Weather_lab)][/COLOR]-$INFO[Skin.String(Menu_Weather_sub5_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Weather_sub5_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Weather_sub5_act)</visible>
+	</item>
+	<item id="606">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Weather_lab)][/COLOR]-$INFO[Skin.String(Menu_Weather_sub6_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Weather_sub6_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Weather_sub6_act)</visible>
+	</item>
+	<item id="607">
+		<description>SubMenu Opt 1</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Weather_lab)][/COLOR]-$INFO[Skin.String(Menu_Weather_sub7_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Weather_sub7_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Weather_sub7_act)</visible>
+	</item>
+	<item id="608">
+		<description>SubMenu Opt 2</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Weather_lab)][/COLOR]-$INFO[Skin.String(Menu_Weather_sub8_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Weather_sub8_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Weather_sub8_act)</visible>
+	</item>
+	<item id="609">
+		<description>SubMenu Opt 3</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Weather_lab)][/COLOR]-$INFO[Skin.String(Menu_Weather_sub9_lab)]</label>
+		<onclick>-</onclick>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Weather_sub9_back)]</thumb>
+		<visible>Skin.HasSetting(Menu_Weather_sub9_act)</visible>
+	</item>
+	<item id="610">
+		<description>SubMenu Opt 4</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Weather_lab)][/COLOR]-$INFO[Skin.String(Menu_Weather_sub10_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Weather_sub10_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Weather_sub10_act)</visible>
+	</item>
+<!-- Weather End -->
+<!-- Dvd -->
+	<item id="1201">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Dvd_lab)][/COLOR]-$INFO[Skin.String(Menu_Dvd_sub1_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Dvd_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Dvd_sub1_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Dvd_sub1_act)</visible>
+	</item>
+	<item id="1202">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Dvd_lab)][/COLOR]-$INFO[Skin.String(Menu_Dvd_sub2_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Dvd_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Dvd_sub2_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Dvd_sub2_act)</visible>
+	</item>
+	<item id="1203">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Dvd_lab)][/COLOR]-$INFO[Skin.String(Menu_Dvd_sub3_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Dvd_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Dvd_sub3_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Dvd_sub3_act)</visible>
+	</item>
+	<item id="1204">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Dvd_lab)][/COLOR]-$INFO[Skin.String(Menu_Dvd_sub4_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Dvd_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Dvd_sub4_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Dvd_sub4_act)</visible>
+	</item>
+<!-- Dvd End -->
+<!-- Exit -->
+	<item id="1301">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Exit_lab)][/COLOR]-$INFO[Skin.String(Menu_Exit_sub1_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Exit_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Exit_sub1_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Exit_sub1_act)</visible>
+	</item>
+	<item id="1302">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Exit_lab)][/COLOR]-$INFO[Skin.String(Menu_Exit_sub2_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Exit_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Exit_sub2_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Exit_sub2_act)</visible>
+	</item>
+	<item id="1303">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Exit_lab)][/COLOR]-$INFO[Skin.String(Menu_Exit_sub3_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Exit_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Exit_sub3_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Exit_sub3_act)</visible>
+	</item>
+	<item id="1304">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Exit_lab)][/COLOR]-$INFO[Skin.String(Menu_Exit_sub4_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Exit_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Exit_sub4_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Exit_sub4_act)</visible>
+	</item>
+	<item id="1305">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Exit_lab)][/COLOR]-$INFO[Skin.String(Menu_Exit_sub5_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Exit_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Exit_sub5_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Exit_sub5_act)</visible>
+	</item>
+<!-- Exit End -->
+<!-- Favorites -->
+	<item id="1401">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Favorites_lab)][/COLOR]-$INFO[Skin.String(Menu_Favorites_sub1_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Favorites_sub1_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Favorites_sub1_act)</visible>
+	</item>
+	<item id="1402">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Favorites_lab)][/COLOR]-$INFO[Skin.String(Menu_Favorites_sub2_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Favorites_sub2_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Favorites_sub2_act)</visible>
+	</item>
+	<item id="1403">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Favorites_lab)][/COLOR]-$INFO[Skin.String(Menu_Favorites_sub3_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Favorites_sub3_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Favorites_sub3_act)</visible>
+	</item>
+	<item id="1404">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Favorites_lab)][/COLOR]-$INFO[Skin.String(Menu_Favorites_sub4_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Favorites_sub4_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Favorites_sub4_act)</visible>
+	</item>
+	<item id="1405">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Favorites_lab)][/COLOR]-$INFO[Skin.String(Menu_Favorites_sub5_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Favorites_sub5_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Favorites_sub5_act)</visible>
+	</item>
+	<item id="1406">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Favorites_lab)][/COLOR]-$INFO[Skin.String(Menu_Favorites_sub6_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Favorites_sub6_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Favorites_sub6_act)</visible>
+	</item>
+	<item id="1407">
+		<description>SubMenu Opt 1</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Favorites_lab)][/COLOR]-$INFO[Skin.String(Menu_Favorites_sub7_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Favorites_sub7_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Favorites_sub7_act)</visible>
+	</item>
+	<item id="1408">
+		<description>SubMenu Opt 2</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Favorites_lab)][/COLOR]-$INFO[Skin.String(Menu_Favorites_sub8_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Favorites_sub8_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Favorites_sub8_act)</visible>
+	</item>
+	<item id="1409">
+		<description>SubMenu Opt 3</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Favorites_lab)][/COLOR]-$INFO[Skin.String(Menu_Favorites_sub9_lab)]</label>
+		<onclick>-</onclick>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Favorites_sub9_back)]</thumb>
+		<visible>Skin.HasSetting(Menu_Favorites_sub9_act)</visible>
+	</item>
+	<item id="1410">
+		<description>SubMenu Opt 4</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Favorites_lab)][/COLOR]-$INFO[Skin.String(Menu_Favorites_sub10_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Favorites_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Favorites_sub10_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Favorites_sub10_act)</visible>
+	</item>
+<!-- Favorites End -->
+<!-- LiveTv -->
+	<item id="1501">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_LiveTv_lab)][/COLOR]-$INFO[Skin.String(Menu_LiveTv_sub1_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_LiveTv_sub1_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_LiveTv_sub1_act)</visible>
+	</item>
+	<item id="1502">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_LiveTv_lab)][/COLOR]-$INFO[Skin.String(Menu_LiveTv_sub2_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_LiveTv_sub2_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_LiveTv_sub2_act)</visible>
+	</item>
+	<item id="1503">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_LiveTv_lab)][/COLOR]-$INFO[Skin.String(Menu_LiveTv_sub3_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_LiveTv_sub3_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_LiveTv_sub3_act)</visible>
+	</item>
+	<item id="1504">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_LiveTv_lab)][/COLOR]-$INFO[Skin.String(Menu_LiveTv_sub4_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_LiveTv_sub4_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_LiveTv_sub4_act)</visible>
+	</item>
+	<item id="1505">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_LiveTv_lab)][/COLOR]-$INFO[Skin.String(Menu_LiveTv_sub5_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_LiveTv_sub5_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_LiveTv_sub5_act)</visible>
+	</item>
+	<item id="1506">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_LiveTv_lab)][/COLOR]-$INFO[Skin.String(Menu_LiveTv_sub6_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_LiveTv_sub6_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_LiveTv_sub6_act)</visible>
+	</item>
+	<item id="1507">
+		<description>SubMenu Opt 1</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_LiveTv_lab)][/COLOR]-$INFO[Skin.String(Menu_LiveTv_sub7_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_LiveTv_sub7_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_LiveTv_sub7_act)</visible>
+	</item>
+	<item id="1508">
+		<description>SubMenu Opt 2</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_LiveTv_lab)][/COLOR]-$INFO[Skin.String(Menu_LiveTv_sub8_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_LiveTv_sub8_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_LiveTv_sub8_act)</visible>
+	</item>
+	<item id="1509">
+		<description>SubMenu Opt 3</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_LiveTv_lab)][/COLOR]-$INFO[Skin.String(Menu_LiveTv_sub9_lab)]</label>
+		<onclick>-</onclick>
+		<icon>$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_LiveTv_sub9_back)]</thumb>
+		<visible>Skin.HasSetting(Menu_LiveTv_sub9_act)</visible>
+	</item>
+	<item id="1510">
+		<description>SubMenu Opt 4</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_LiveTv_lab)][/COLOR]-$INFO[Skin.String(Menu_LiveTv_sub10_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_LiveTv_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_LiveTv_sub10_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_LiveTv_sub10_act)</visible>
+	</item>
+<!-- LiveTv End -->
+<!-- Custom Menu 1 -->
+	<item id="2001">
+		<description>Men1Button1</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men1_lab)][/COLOR]-$INFO[Skin.String(Menu_Men1_sub1_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men1_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men1_sub1_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>[Skin.HasSetting(Menu_Men1_sub1_act) + !IsEmpty(Skin.String(Menu_Men1_sub1_lab))]</visible>
+	</item>
+	<item id="2002">
+		<description>Men1Button2</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men1_lab)][/COLOR]-$INFO[Skin.String(Menu_Men1_sub2_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men1_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men1_sub2_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>[Skin.HasSetting(Menu_Men1_sub2_act) + !IsEmpty(Skin.String(Menu_Men1_sub2_lab))]</visible>
+	</item>
+	<item id="2003">
+		<description>Men1Button3</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men1_lab)][/COLOR]-$INFO[Skin.String(Menu_Men1_sub3_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men1_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men1_sub3_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>[Skin.HasSetting(Menu_Men1_sub3_act) + !IsEmpty(Skin.String(Menu_Men1_sub3_lab))]</visible>
+	</item>
+	<item id="2004">
+		<description>Men1Button4</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men1_lab)][/COLOR]-$INFO[Skin.String(Menu_Men1_sub4_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men1_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men1_sub4_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>[Skin.HasSetting(Menu_Men1_sub4_act) + !IsEmpty(Skin.String(Menu_Men1_sub4_lab))]</visible>
+	</item>
+	<item id="2005">
+		<description>Men1Button5</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men1_lab)][/COLOR]-$INFO[Skin.String(Menu_Men1_sub5_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men1_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men1_sub5_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>[Skin.HasSetting(Menu_Men1_sub5_act) + !IsEmpty(Skin.String(Menu_Men1_sub5_lab))]</visible>
+	</item>
+	<item id="2006">
+		<description>Men1Button6</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men1_lab)][/COLOR]-$INFO[Skin.String(Menu_Men1_sub6_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men1_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men1_sub6_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>[Skin.HasSetting(Menu_Men1_sub6_act) + !IsEmpty(Skin.String(Menu_Men1_sub6_lab))]</visible>
+	</item>
+<!-- Custom Menu 1 End -->
+<!-- Custom Menu 2 -->
+	<item id="2101">
+		<description>Men2Button1</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men2_lab)][/COLOR]-$INFO[Skin.String(Menu_Men2_sub1_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men2_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men2_sub1_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>[Skin.HasSetting(Menu_Men2_sub1_act) + !IsEmpty(Skin.String(Menu_Men2_sub1_lab))]</visible>
+	</item>
+	<item id="2102">
+		<description>Men2Button2</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men2_lab)][/COLOR]-$INFO[Skin.String(Menu_Men2_sub2_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men2_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men2_sub2_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>[Skin.HasSetting(Menu_Men2_sub2_act) + !IsEmpty(Skin.String(Menu_Men2_sub2_lab))]</visible>
+	</item>
+	<item id="2103">
+		<description>Men2Button3</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men2_lab)][/COLOR]-$INFO[Skin.String(Menu_Men2_sub3_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men2_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men2_sub3_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>[Skin.HasSetting(Menu_Men2_sub3_act) + !IsEmpty(Skin.String(Menu_Men2_sub3_lab))]</visible>
+	</item>
+	<item id="2104">
+		<description>Men2Button4</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men2_lab)][/COLOR]-$INFO[Skin.String(Menu_Men2_sub4_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men2_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men2_sub4_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>[Skin.HasSetting(Menu_Men2_sub4_act) + !IsEmpty(Skin.String(Menu_Men2_sub4_lab))]</visible>
+	</item>
+	<item id="2105">
+		<description>Men2Button5</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men2_lab)][/COLOR]-$INFO[Skin.String(Menu_Men2_sub5_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men2_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men2_sub5_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>[Skin.HasSetting(Menu_Men2_sub5_act) + !IsEmpty(Skin.String(Menu_Men2_sub5_lab))]</visible>
+	</item>
+	<item id="2106">
+		<description>Men2Button6</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men2_lab)][/COLOR]-$INFO[Skin.String(Menu_Men2_sub6_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men2_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men2_sub6_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>[Skin.HasSetting(Menu_Men2_sub6_act) + !IsEmpty(Skin.String(Menu_Men2_sub6_lab))]</visible>
+	</item>
+<!-- Custom Menu 2 End -->
+<!-- Custom Menu 3 -->
+	<item id="2301">
+		<description>Men3Button1</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men3_lab)][/COLOR]-$INFO[Skin.String(Menu_Men3_sub1_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men3_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men3_sub1_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>[Skin.HasSetting(Menu_Men3_sub1_act) + !IsEmpty(Skin.String(Menu_Men3_sub1_lab))]</visible>
+	</item>
+	<item id="2302">
+		<description>Men3Button2</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men3_lab)][/COLOR]-$INFO[Skin.String(Menu_Men3_sub2_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men3_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men3_sub2_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>[Skin.HasSetting(Menu_Men3_sub2_act) + !IsEmpty(Skin.String(Menu_Men3_sub2_lab))]</visible>
+	</item>
+	<item id="2303">
+		<description>Men3Button3</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men3_lab)][/COLOR]-$INFO[Skin.String(Menu_Men3_sub3_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men3_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men3_sub3_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>[Skin.HasSetting(Menu_Men3_sub3_act) + !IsEmpty(Skin.String(Menu_Men3_sub3_lab))]</visible>
+	</item>
+	<item id="2304">
+		<description>Men3Button4</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men3_lab)][/COLOR]-$INFO[Skin.String(Menu_Men3_sub4_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men3_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men3_sub4_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>[Skin.HasSetting(Menu_Men3_sub4_act) + !IsEmpty(Skin.String(Menu_Men3_sub4_lab))]</visible>
+	</item>
+	<item id="2305">
+		<description>Men3Button5</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men3_lab)][/COLOR]-$INFO[Skin.String(Menu_Men3_sub5_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men3_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men3_sub5_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>[Skin.HasSetting(Menu_Men3_sub5_act) + !IsEmpty(Skin.String(Menu_Men3_sub5_lab))]</visible>
+	</item>
+	<item id="2306">
+		<description>Men3Button6</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men3_lab)][/COLOR]-$INFO[Skin.String(Menu_Men3_sub6_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men3_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men3_sub6_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>[Skin.HasSetting(Menu_Men3_sub6_act) + !IsEmpty(Skin.String(Menu_Men3_sub6_lab))]</visible>
+	</item>
+<!-- Custom Menu 3 End -->
+<!-- Custom Menu 4 -->
+	<item id="2401">
+		<description>Men4Button1</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men4_lab)][/COLOR]-$INFO[Skin.String(Menu_Men4_sub1_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men4_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men4_sub1_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>[Skin.HasSetting(Menu_Men4_sub1_act) + !IsEmpty(Skin.String(Menu_Men4_sub1_lab))]</visible>
+	</item>
+	<item id="2402">
+		<description>Men4Button2</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men4_lab)][/COLOR]-$INFO[Skin.String(Menu_Men4_sub2_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men4_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men4_sub2_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>[Skin.HasSetting(Menu_Men4_sub2_act) + !IsEmpty(Skin.String(Menu_Men4_sub2_lab))]</visible>
+	</item>
+	<item id="2403">
+		<description>Men4Button3</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men4_lab)][/COLOR]-$INFO[Skin.String(Menu_Men4_sub3_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men4_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men4_sub3_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>[Skin.HasSetting(Menu_Men4_sub3_act) + !IsEmpty(Skin.String(Menu_Men4_sub3_lab))]</visible>
+	</item>
+	<item id="2404">
+		<description>Men4Button4</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men4_lab)][/COLOR]-$INFO[Skin.String(Menu_Men4_sub4_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men4_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men4_sub4_back)]</thumb>
+		<onclick>-</onclick>
+		<onclick>-</onclick>
+		<onclick>-</onclick>
+		<visible>[Skin.HasSetting(Menu_Men4_sub4_act) + !IsEmpty(Skin.String(Menu_Men4_sub4_lab))]</visible>
+	</item>
+	<item id="2405">
+		<description>Men4Button5</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men4_lab)][/COLOR]-$INFO[Skin.String(Menu_Men4_sub5_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men4_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men4_sub5_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>[Skin.HasSetting(Menu_Men4_sub5_act) + !IsEmpty(Skin.String(Menu_Men4_sub5_lab))]</visible>
+	</item>
+	<item id="2406">
+		<description>Men4Button6</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men4_lab)][/COLOR]-$INFO[Skin.String(Menu_Men4_sub6_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Men4_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Men4_sub6_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>[Skin.HasSetting(Menu_Men4_sub6_act) + !IsEmpty(Skin.String(Menu_Men4_sub6_lab))]</visible>
+	</item>
+<!-- Custom Menu 4 End -->
+</include>
+</includes>

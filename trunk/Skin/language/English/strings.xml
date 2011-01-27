@@ -136,11 +136,6 @@
   <string id="31356">Download Subtitles</string>
   <string id="31357"></string>
 
-  <!-- Skin Fontsets -->
-  <string id="31390">Skin default</string>
-  <string id="31391">Skin default with no Caps</string>
-  <string id="31392">Arial based</string>
-
   <!-- Description Labels  -->
   <string id="31400">[B]CONFIGURE APPEARANCE SETTINGS[/B][CR][CR]Change the skin · Set language and region · Change file listing options[CR]Set up a screensaver</string>
   <string id="31401">[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set video playback options · Change video listing options[CR]Set subtitle fonts</string>
@@ -153,6 +148,18 @@
   <string id="31408">[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from xbmc.org[CR]Modify Add-on settings</string>
 
   <string id="31421">Select your XBMC user Profile[CR]to login and continue</string>
+  <!-- Extra Unified PVR labels -->
+  <string id="31500">Recording Timers</string>
+  <string id="31501">Scheduled Time</string>
+  <string id="31502">Live TV</string>
+  <string id="31503">Add Group</string>
+  <string id="31504">Rename Group</string>
+  <string id="31505">Delete Group</string>
+  <string id="31506">Available[CR]Groups</string>
+  <string id="31507">Ungrouped[CR]Channels</string>
+  <string id="31508">Channels in Group</string>
+  <string id="31509">Channel Group</string>
+  <string id="31510">Timer Set</string>
 
   <!-- Influence  -->
   <string id="35000">Use Horizontal Menu</string>
@@ -167,7 +174,7 @@
   <string id="35021">Skin</string>
   <string id="35022">Default value</string>
   <string id="35023">Enable Kiosk Mode (disable slideout menu)</string>
-  <string id="35030">Favori</string>
+  <string id="35030">Favourite</string>
   <string id="35031">Playlist Musical</string>
   <string id="35032">Playlist Video</string>
   <string id="35033">Script</string>
@@ -182,10 +189,16 @@
   <string id="35105">Formed</string>
   <string id="35110">Activate views</string>
   <string id="35111">Views</string>
-  <string id="35112">Activate/Desactivate</string>
+  <string id="35112">Activate/Deactivate</string>
   <string id="35113">Library Statistics</string>
   <string id="35114">Activate TvTunes script</string>
   <string id="35115">Show musical fanart</string>
   <string id="35116">Activate "Movie theater Experience" script</string>
   <string id="35117">Activate menu</string>
+  <string id="35119">DVD</string>
+  <string id="35120">Favourite</string>^M
+  <string id="35121">Hide Home Buttons</string>^M
+  <string id="35122">Edit Menu</string>^M
+  <string id="35123">Back to Menu</string>^M
+  <string id="35124">Music</string>^M
 </strings>

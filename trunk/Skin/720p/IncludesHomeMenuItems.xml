@@ -46,7 +46,7 @@
 				<ondown>9000</ondown>
 			</control>
 			<control type="button" id="21">
-				<description>Favourites push button</description>
+				<description>Favorites push button</description>
 				<posx>45</posx>
 				<posy>0</posy>
 				<width>43</width>
@@ -54,7 +54,7 @@
 				<label>1036</label>
 				<font>-</font>
 				<aligny>-</aligny>
-				<onclick>ActivateWindow(Favourites)</onclick>
+				<onclick>ActivateWindow(Favorites)</onclick>
 				<texturefocus>home-favourites-FO.png</texturefocus>
 				<texturenofocus>home-favourites.png</texturenofocus>
 				<onleft>22</onleft>

@@ -161,6 +161,34 @@
   <string id="31406">[B]Configura las opciones de SISTEMA[/B][CR][CR]Configura y calibra la pantalla - Configura salida de audio - Configura mandos a distancia[CR]Establece las opciones de ahorro de energía - Habilita depuración de errores - Configura bloqueo maestro</string>
   <string id="31407">[B]Configura las opciones de la SKIN[/B][CR][CR]Configura Confluence - Añade y elimina elementos del menú Inicio[CR]Cambia los fondos de la skin</string>
   <string id="31408">[B]Configura los ADD-ONS[/B][CR][CR]Administra tus addons instalados · Busca e instala addons desde xbmc.org[CR]Modifica la configuración de los addons</string>
-
+  <!-- Influence -->
   <string id="31421">Seleccione su perfil de usuario de XBMC[CR]para ingresar y continuar</string>
+  <string id="35000">Usar Menu Horizontal</string>
+  <string id="35001">   - Elevar Menu</string>
+  <string id="35002">   - Elevar canales RSS</string>
+  <string id="35003">Usar Menu Carrusel</string>
+  <string id="35004">Usar Menu Vertical </string>
+  <string id="35010">Mostrar Estadisiticas de Inicio</string>
+  <string id="35011">Mostrar CDart</string>
+  <string id="35012">Mostrar las cinco canciones siguientes</string>
+  <string id="35020">Personalizar menu</string>
+  <string id="35021">Skin</string>
+  <string id="35022">Valor por defecto</string>
+  <string id="35023">Activar Modo Kiosko (desactivar menu desplegable)</string>
+  <string id="35030">Favoritos</string>
+  <string id="35031">Lista de reproducción de Música</string>
+  <string id="35032">Lista de reproducción de  Video</string>
+  <string id="35033">Script</string>
+  <string id="35034">Addon</string>
+  <string id="35036">Free</string>
+  <string id="35040">Últimos albums</string>
+  <string id="35103">Puntuación IMDB:</string>
+  <string id="35104">Nacido</string>
+  <string id="35105">Formado</string>
+  <string id="35110">Activar vistas</string>
+  <string id="35111">Vistas</string>
+  <string id="35112">Activar/Desactivar</string>
+  <string id="35113">Estadísticas de Biblioteca</string>
+  
 </strings>
+

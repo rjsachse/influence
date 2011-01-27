@@ -124,7 +124,7 @@
 					<onclick>Skin.Reset(RunOpt)</onclick>
 	                                <onclick>Dialog.Close(2114)</onclick>
 	                        </item>
-	                        <item id="3">
+	                        <item id="4">
 	                                <description>Playlist Video</description>
 	                                <label>35032</label>
 	                                <onclick>Skin.SetFile(RunOpt,.xsp,special://videoplaylists/)</onclick>
@@ -132,7 +132,15 @@
 					<onclick>Skin.Reset(RunOpt)</onclick>
 	                                <onclick>Dialog.Close(2114)</onclick>
 	                        </item>
-	                        <item id="4">
+	                        <item id="5">
+	                                <description>Playlist Video (mod list)</description>
+	                                <label>Playlist Video (mod list)</label>
+	                                <onclick>Skin.SetFile(RunOpt,.xsp,special://videoplaylists/)</onclick>
+	                                <onclick>Skin.SetString($INFO[Skin.String(RunOpt_var)],ActivateWindow(VideoLibrary,$INFO[Skin.String(RunOpt)]))</onclick>
+					<onclick>Skin.Reset(RunOpt)</onclick>
+	                                <onclick>Dialog.Close(2114)</onclick>
+	                        </item>
+	                        <item id="6">
 	                                <description>Script</description>
 	                                <label>35033</label>
 	                                 <onclick>Skin.SetAddon(RunOpt,xbmc.python.script)</onclick>
@@ -140,7 +148,7 @@
 					<onclick>Skin.Reset(RunOpt)</onclick>
 	                                <onclick>Dialog.Close(2114)</onclick>
 	                        </item>
-	                        <item id="5">
+	                        <item id="7">
 	                                <description>Add-Ons</description>
 	                                <label>Add-Ons</label>
 	                                <onclick>Skin.SetAddon(RunOpt,xbmc.python.pluginsource)</onclick>
