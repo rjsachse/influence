@@ -185,7 +185,11 @@
   <string id="35112">Activer/Desactiver</string>
   <string id="35113">Médiathéque</string>
   <string id="35114">Activer le script TvTunes</string>
-  <string id="35115">Afficher les fanart musicaux</string>
+  <string id="35115">Afficher les fanarts musicaux</string>
   <string id="35116">Activer le script "Movie theater Experience"</string>
   <string id="35117">Activer le menu</string>
+  <string id="35119">DVD</string>
+  <string id="35120">Favoris</string>
+  <string id="35121">Cacher les boutons de l'accueil</string>
+  <string id="35124">Musique</string>
 </strings>

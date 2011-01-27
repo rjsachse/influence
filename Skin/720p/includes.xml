@@ -20,6 +20,8 @@
 	<include file="IncludesHomeVertical.xml" />
 	<include file="IncludesHomeHorizontal.xml" />
 	<include file="IncludesHomeCarousel.xml" />
+	<include file="IncludesCustomBackground.xml" />
+	<include file="IncludeCommonMenu.xml" />
 	<include file="IncludesHomeStat.xml" />
 	<include file="Carousel.xml" />
 	<include file="Include_CustomMenu.xml" />
@@ -36,7 +38,12 @@
 	<include file="Viewtype_Poster.xml" />
 	<include file="Viewtype_Logo.xml" />
 	<include file="Viewtype_Logo2.xml" />
+	<!-- View for Advanced launcher -->
+	<include file="Viewtype_AL_Wallstream.xml" />
 
+	<include file="script.weather.com.plus/CommonValues.xml" />
+	<include file="script.weather.com.plus/Current.xml" />
+	<include file="script.weather.com.plus/WeatherPluginView.xml" />
 	<constant name="FanartCrossfadeTime">500</constant>
 	<constant name="IconCrossfadeTime">400</constant>
 
@@ -65,6 +72,7 @@
                         <visible>Player.HasAudio + Skin.HasSetting(ShowBackgroundVis) + Skin.HasSetting(MusicFanArtIsEnable)</visible>
                         <texture>$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
                 </control>
+		<include>FanartMusic</include>
 		<control type="videowindow">
 			<posx>0</posx>
 			<posy>0</posy>
@@ -79,7 +87,7 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<imagepath fallback="special://skin/backgrounds/videos.jpg" background="true">$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</imagepath>
+			<imagepath fallback="special://skin/backgrounds/videos.jpg" background="true">$INFO[Skin.String(CurrentBackground)]</imagepath>
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
@@ -90,7 +98,7 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<imagepath fallback="special://skin/backgrounds/movies.jpg" background="true">$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</imagepath>
+			<imagepath fallback="special://skin/backgrounds/movies.jpg" background="true">$INFO[Skin.String(CurrentBackground)]</imagepath>
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
@@ -101,7 +109,7 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<imagepath fallback="special://skin/backgrounds/tvshows.jpg" background="true">$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</imagepath>
+			<imagepath fallback="special://skin/backgrounds/tvshows.jpg" background="true">$INFO[Skin.String(CurrentBackground)]</imagepath>
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
@@ -114,7 +122,7 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<imagepath fallback="special://skin/backgrounds/music.jpg" background="true">$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</imagepath>
+			<imagepath fallback="special://skin/backgrounds/music.jpg" background="true">$INFO[Skin.String(CurrentBackground)]</imagepath>
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
@@ -126,7 +134,7 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<imagepath fallback="special://skin/backgrounds/pictures.jpg" background="true">$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</imagepath>
+			<imagepath fallback="special://skin/backgrounds/pictures.jpg" background="true">$INFO[Skin.String(CurrentBackground)]</imagepath>
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
@@ -138,7 +146,7 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<imagepath fallback="special://skin/backgrounds/programs.jpg" background="true">$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</imagepath>
+			<imagepath fallback="special://skin/backgrounds/programs.jpg" background="true">$INFO[skin.string(CurrentBackground)]</imagepath>
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
@@ -150,7 +158,7 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<imagepath fallback="special://skin/backgrounds/scripts.jpg" background="true">$INFO[Skin.String(Home_Custom_Back_Scripts_Folder)]</imagepath>
+			<imagepath fallback="special://skin/backgrounds/scripts.jpg" background="true">$INFO[Skin.String(CurrentBackground)]</imagepath>
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
@@ -162,7 +170,7 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<imagepath fallback="special://skin/backgrounds/weather.jpg" background="true">$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</imagepath>
+			<imagepath fallback="special://skin/backgrounds/weather.jpg" background="true">$INFO[Skin.String(CurrentBackground)]</imagepath>
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
@@ -199,7 +207,7 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<imagepath fallback="special://skin/backgrounds/settings.jpg" background="true">$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</imagepath>
+			<imagepath fallback="special://skin/backgrounds/settings.jpg" background="true">$INFO[Skin.String(CurrentBackground)]</imagepath>
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
@@ -467,7 +475,8 @@
 			<font>font12_title</font>
 			<textcolor>grey2</textcolor>
 			<shadowcolor>black</shadowcolor>
-			<visible>!videoplayer.content(episodes) + !videoplayer.content(musicvideos)</visible>
+			<visible>!videoplayer.content(episodes) + !videoplayer.content(musicvideos) + !videoplayer.con
+tent(LiveTV)</visible>
 		</control>
 		<control type="label">
 			<description>TV Show Title label</description>
@@ -482,6 +491,22 @@
 			<textcolor>white</textcolor>
 			<shadowcolor>black</shadowcolor>
 			<visible>videoplayer.content(episodes)</visible>
+		</control>
+		<control type="fadelabel">
+			<description>Music Video Artist label</description>
+			<posx>160</posx>
+			<posy>20</posy>
+			<height>30</height>
+			<width>325</width>
+			<label>$INFO[VideoPlayer.Artist]</label>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>font12_title</font>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<visible>videoplayer.content(musicvideos)</visible>
+			<scrollout>false</scrollout>
+			<pauseatend>2000</pauseatend>
 		</control>
 		<control type="fadelabel">
 			<description>Music Video Artist label</description>
@@ -971,5 +996,193 @@
 	<include name="VisibleFadeEffect">
 		<animation effect="fade" time="300">Visible</animation>
 		<animation effect="fade" time="300">Hidden</animation>
+	</include>
+	<include name="HomeBigVisible">
+		<visible>Container(9000).HasFocus(1)  + Skin.HasSetting(Menu_Programs_sub_act) | Container(9000).HasFocus(2)  + Skin.HasSetting(Menu_Videos_sub_act) |Container(9000).HasFocus(3)  + Skin.HasSetting(Menu_Music_sub_act) |Container(9000).HasFocus(4)  + Skin.HasSetting(Menu_Pictures_sub_act) |Container(9000).HasFocus(5) | Container(9000).HasFocus(6)  + Skin.HasSetting(Menu_Weather_sub_act) |Container(9000).HasFocus(10)  + Skin.HasSetting(Menu_Movie_sub_act) |Container(9000).HasFocus(11)  + Skin.HasSetting(Menu_TVShows_sub_act) | Container(9000).HasFocus(20)  + Skin.HasSetting(Menu_Men1_sub_act) |Container(9000).HasFocus(21)  + Skin.HasSetting(Menu_Men2_sub_act) | Container(9000).HasFocus(22)  + Skin.HasSetting(Menu_Men3_sub_act) | Container(9000).HasFocus(23)  + Skin.HasSetting(Menu_Men4_sub_act) |Container(9000).HasFocus(13)  + Skin.HasSetting(Menu_Exit_sub_act) |Container(9000).HasFocus(12)  + Skin.HasSetting(Menu_Dvd_sub_act) | Container(9000).HasFocus(14)  + Skin.HasSetting(Menu_Pictures_sub_act) | Container(9000).HasFocus(15)  + Skin.HasSetting(Menu_LiveTv_sub_act) | Container(9000).HasFocus(14)  + Skin.HasSetting(Menu_Favorites_sub_act) </visible>
+	</include>
+	<include name="HomeBigNotVisible">
+		<visible>![Container(9000).HasFocus(1)  + Skin.HasSetting(Menu_Programs_sub_act) | Container(9000).HasFocus(2)  + Skin.HasSetting(Menu_Videos_sub_act) |Container(9000).HasFocus(3)  + Skin.HasSetting(Menu_Music_sub_act) |Container(9000).HasFocus(4)  + Skin.HasSetting(Menu_Pictures_sub_act) |Container(9000).HasFocus(5) | Container(9000).HasFocus(6)  + Skin.HasSetting(Menu_Weather_sub_act) |Container(9000).HasFocus(10)  + Skin.HasSetting(Menu_Movie_sub_act) |Container(9000).HasFocus(11)  + Skin.HasSetting(Menu_TVShows_sub_act) | Container(9000).HasFocus(20)  + Skin.HasSetting(Menu_Men1_sub_act) |Container(9000).HasFocus(21)  + Skin.HasSetting(Menu_Men2_sub_act) | Container(9000).HasFocus(22)  + Skin.HasSetting(Menu_Men3_sub_act) | Container(9000).HasFocus(23)  + Skin.HasSetting(Menu_Men4_sub_act) |Container(9000).HasFocus(13)  + Skin.HasSetting(Menu_Exit_sub_act) |Container(9000).HasFocus(12)  + Skin.HasSetting(Menu_Dvd_sub_act) | Container(9000).HasFocus(14)  + Skin.HasSetting(Menu_Pictures_sub_act) | Container(9000).HasFocus(15)  + Skin.HasSetting(Menu_LiveTv_sub_act) | Container(9000).HasFocus(14)  + Skin.HasSetting(Menu_Favorites_sub_act)]</visible>
+	</include>
+	<include name="HomeLogo">
+		<control type="image">
+			<description>LOGO</description>
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>140</width>
+			<height>40</height>
+			<texture>XBMC_Logo.png</texture>
+		</control>
+		<control type="image">
+			<description>LOGO Mirror</description>
+			<posx>10</posx>
+			<posy>42</posy>
+			<width>140</width>
+			<height>40</height>
+			<texture diffuse="diffuse_mirror.png" flipy="true">XBMC_Logo.png</texture>
+		</control>
+	</include>
+	<include name="HomeButton">
+		<control type="image">
+			<posx>0</posx>
+			<posy>100r</posy>
+			<width>256</width>
+			<height>100</height>
+			<texture>HomeButtonsBack.png</texture>
+		</control>
+		<control type="group" id="10">
+			<posx>15</posx>
+			<posy>55r</posy>
+			<control type="button" id="20">
+				<description>Power push button</description>
+				<posx>90</posx>
+				<posy>0</posy>
+				<width>43</width>
+				<height>43</height>
+				<label>31003</label>
+				<font>-</font>
+				<aligny>-</aligny>
+				<onclick>ActivateWindow(ShutdownMenu)</onclick>
+				<texturefocus>home-power-FO.png</texturefocus>
+				<texturenofocus>home-power.png</texturenofocus>
+				<onleft>21</onleft>
+				<onright>9000</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+			</control>
+			<control type="button" id="21">
+				<description>Favourites push button</description>
+				<posx>45</posx>
+				<posy>0</posy>
+				<width>43</width>
+				<height>43</height>
+				<label>1036</label>
+				<font>-</font>
+				<aligny>-</aligny>
+				<onclick>ActivateWindow(Favourites)</onclick>
+				<texturefocus>home-favourites-FO.png</texturefocus>
+				<texturenofocus>home-favourites.png</texturenofocus>
+				<onleft>22</onleft>
+				<onright>20</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+			</control>
+			<control type="button" id="22">
+				<description>Play Disc Media push button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>43</width>
+				<height>43</height>
+				<label>16004</label>
+				<font>-</font>
+				<aligny>-</aligny>
+				<onclick>ActivateWindow(1113)</onclick>
+				<texturefocus>home-playmedia-FO.png</texturefocus>
+				<texturenofocus>home-playmedia.png</texturenofocus>
+				<onleft>9000</onleft>
+				<onright>21</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+			</control>
+		</control>
+	</include>
+	<include name="MyVideoTopScreen">
+		<control type="group">
+			<posx>240</posx>
+			<posy>0</posy>
+			<visible>Container.Content(Movies)</visible>
+			<include>VisibleFadeEffect</include>
+			<animation effect="slide" end="-510,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="-510,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>250</width>
+				<height>35</height>
+				<texture border="0,0,32,0">header.png</texture>
+			</control>
+			<control type="label">
+				<include>WindowTitleCommons</include>
+				<posx>220</posx>
+				<label>$LOCALIZE[20342]</label>
+			</control>
+		</control>
+		<control type="group">
+			<posx>60</posx>
+			<posy>0</posy>
+			<animation effect="slide" end="-310,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="-310,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>250</width>
+				<height>35</height>
+				<texture border="0,0,32,0">header.png</texture>
+			</control>
+			<control type="label">
+				<include>WindowTitleCommons</include>
+				<posx>220</posx>
+				<label>$LOCALIZE[20314]</label>
+			</control>
+		</control>
+		<include>WindowTitleHomeButton</include>
+		<include>Clock</include>
+	</include>
+	<include name="MyMusicTopScreen">
+		<control type="group">
+			<posx>240</posx>
+			<posy>0</posy>
+			<visible>Container.Content(Albums)</visible>
+			<include>VisibleFadeEffect</include>
+			<animation effect="slide" end="-510,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="-510,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>250</width>
+				<height>35</height>
+				<texture border="0,0,32,0">header.png</texture>
+			</control>
+			<control type="label">
+				<include>WindowTitleCommons</include>
+				<posx>220</posx>
+				<label>$LOCALIZE[132]</label>
+			</control>
+		</control>
+		<control type="group">
+			<posx>60</posx>
+			<posy>0</posy>
+			<animation effect="slide" end="-310,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="-310,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>250</width>
+				<height>35</height>
+				<texture border="0,0,32,0">header.png</texture>
+			</control>
+			<control type="label">
+				<include>WindowTitleCommons</include>
+				<posx>220</posx>
+				<label>$LOCALIZE[10516]</label>
+			</control>
+		</control>
+		<include>WindowTitleHomeButton</include>
+		<include>Clock</include>
+	</include>
+	<include name="GetFocusSubMenu">
+		<control type="group" id="303">
+			<control type="button" id="305">
+				<include>HomeBigVisible</include>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onfocus>SetFocus(9001)</onfocus>
+			</control>
+			<control type="button" id="305">
+				<include>HomeBigNotVisible</include>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onfocus>SetFocus(10)</onfocus>
+			</control>
+		</control>
 	</include>
 </includes>

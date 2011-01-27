@@ -108,45 +108,54 @@
 						<icon>special://skin/backgrounds/pictures.jpg</icon>
 					</item>
 					<item id="5">
+						<label>31502</label>
+						<label2>31409</label2>
+						<onclick>ActivateWindow(MyTVSettings)</onclick>
+						<icon>special://skin/backgrounds/tv.jpg</icon>
+						<visible>Skin.HasSetting(LiveTvIsEnable)</visible>
+					</item>
+					<item id="6">
 						<label>8</label>
 						<label2>31404</label2>
 						<onclick>ActivateWindow(WeatherSettings)</onclick>
 						<icon>special://skin/backgrounds/weather.jpg</icon>
 					</item>
-					<item id="6">
+					<item id="7">
 						<label>24001</label>
 						<label2>31408</label2>
 						<onclick>ActivateWindow(AddonBrowser)</onclick>
 						<icon>special://skin/backgrounds/addons.jpg</icon>
 					</item>
-					<item id="7">
+					<item id="8">
 						<label>705</label>
 						<label2>31405</label2>
 						<onclick>ActivateWindow(NetworkSettings)</onclick>
 						<icon>special://skin/backgrounds/network.jpg</icon>
 					</item>
-					<item id="8">
+					<item id="9">
 						<label>13000</label>
 						<label2>31406</label2>
 						<onclick>ActivateWindow(SystemSettings)</onclick>
 						<icon>special://skin/backgrounds/system.jpg</icon>
 					</item>
 					<!-- remet à zero EditButtonExtra pour avoir tjs le carousel affiché et pas le sous menu-->
-					<item id="9">
+					<item id="10">
 						<label>166</label>
 						<label2>31407</label2>
 						<onclick>ActivateWindow(1111)</onclick>
-						<onclick>skin.ToggleSetting(EditButtonExtra)</onclick>
+						<onclick>skin.Reset(EditButtonExtra)</onclick>
+						<onclick>skin.Reset(EditButtonBack)</onclick>
 						<icon>special://skin/backgrounds/skinsetting.jpg</icon>
-					<visible>Skin.HasSetting(EditButtonExtra)</visible>
+						<visible>Skin.HasSetting(EditButtonExtra) | Skin.HasSetting(EditButtonBack)</visible>
 					</item>
-					<item id="9">
+					<item id="10">
 						<label>166</label>
 						<label2>31407</label2>
 						<onclick>ActivateWindow(1111)</onclick>
 						<icon>special://skin/backgrounds/skinsetting.jpg</icon>
-					<visible>!Skin.HasSetting(EditButtonExtra)</visible>
+						<visible>!Skin.HasSetting(EditButtonExtra) + !Skin.HasSetting(EditButtonBack)</visible>
 					</item>
+					
 				</content>
 			</control>
 			<control type="image">

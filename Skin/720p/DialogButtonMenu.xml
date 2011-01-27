@@ -223,6 +223,18 @@
 					<font>-</font>
 					<label>13013</label>
 				</control>
+				<control type="button" id="20">
+					<description>Settings</description>
+					<width>90</width>
+					<height>90</height>
+					<texturefocus>ButtonMenuSettingsFO.png</texturefocus>
+					<texturenofocus>ButtonMenuSettingsNF.png</texturenofocus>
+					<onclick>ActivateWindow(Settings)</onclick>
+					<pulseonselect>no</pulseonselect>
+					<font>-</font>
+					<label>$LOCALIZE[13000]</label>
+					<visible>Skin.HasSetting(HomeMenuNoSettingsButton)</visible>
+				</control>
 			</control>
 			<control type="group">
 				<posx>270</posx>

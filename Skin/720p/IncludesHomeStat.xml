@@ -4,7 +4,7 @@
 		<control type="group">
 			<posx>275r</posx>
 			<posy>358</posy>
-			<visible>Skin.HasSetting(HomeStats) + !Window.IsVisible(Favourites)</visible>
+			<visible>Skin.HasSetting(HomeStats) + !Window.IsVisible(Favorites)</visible>
 			<include>VisibleFadeEffect</include>
 			<animation effect="fade" time="300" delay="1000">WindowOpen</animation>
 			<animation effect="fade" time="200">WindowClose</animation>

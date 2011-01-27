@@ -50,7 +50,7 @@
 				<width>450</width>
 				<height>380</height>
 				<onup>450</onup>
-				<onleft>Dialog.Close(Favourites)</onleft>
+				<onleft>Dialog.Close(Favorites)</onleft>
 				<onright>450</onright>
 				<ondown>450</ondown>
 				<pagecontrol>-</pagecontrol>

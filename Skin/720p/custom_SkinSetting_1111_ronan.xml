@@ -1054,7 +1054,7 @@
 								<align>center</align>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<texturefocus border="5">button-focus.png</texturefocus>
-								<onclick>Skin.SetImage(Home_Custom_Back_Video_Folder)</onclick>
+								<onclick>Skin.SetImage(Home_Custom_Back_Videos_Folder)</onclick>
 								<onleft>302</onleft>
 								<onright>301</onright>
 								<onup>304</onup>
@@ -1073,7 +1073,7 @@
 								<align>center</align>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<texturefocus border="5">button-focus.png</texturefocus>
-								<onclick>Skin.SetPath(Home_Custom_Back_Video_Folder)</onclick>
+								<onclick>Skin.SetPath(Home_Custom_Back_Videos_Folder)</onclick>
 								<onleft>300</onleft>
 								<onright>302</onright>
 								<onup>304</onup>
@@ -1092,7 +1092,7 @@
 								<align>center</align>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<texturefocus border="5">button-focus.png</texturefocus>
-								<onclick>Skin.Reset(Home_Custom_Back_Video_Folder)</onclick>
+								<onclick>Skin.Reset(Home_Custom_Back_Videos_Folder)</onclick>
 								<onleft>301</onleft>
 								<onright>300</onright>
 								<onup>304</onup>

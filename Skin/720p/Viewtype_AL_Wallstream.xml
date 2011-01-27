@@ -1,0 +1,378 @@
+<includes>
+	<include name="WallStreamAL_Wide">
+		<control type="group">
+
+<!--
+			<visible>Control.IsVisible(561) + SubString(Container.FolderPath,program.advanced.launcher)</visible>
+-->
+			<visible>Control.IsVisible(561)</visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture background="true">ContentPanelfanart.png</texture> 
+			</control>		
+			<control type="image">
+				<posx>50</posx>
+				<posy>90</posy>
+				<width>523</width>
+				<height>253</height>
+				<aspectratio>Stretch</aspectratio>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<texture background="true" fallback="normal_controller.png">$INFO[ListItem.Property(fanart_image)]</texture>
+			</control>
+<!--
+			<control type="image">
+				<posx>49</posx>
+				<posy>88</posy>
+				<width>525</width>
+				<height>19</height>
+				<aspectratio>Stretch</aspectratio>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<texture background="true">fanblack2.png</texture>
+			</control>
+-->
+			<control type="label">
+				<posx>0</posx>
+				<posy>45</posy>
+				<width>620</width>
+				<height>25</height>
+				<font>font28_title</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<selectedcolor>selected</selectedcolor>
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="scrollbar" id="60">
+				<posx>1239</posx>
+				<posy>36</posy>
+				<width>25</width>
+				<height>650</height>
+				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<textureslidernib>ScrollBarNib.png</textureslidernib>
+				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+				<onleft>561</onleft>
+				<onright>561</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+			</control>
+			<control type="panel" id="561">
+				<posx>620</posx>
+				<posy>36</posy>
+				<width>750</width>
+				<height>650</height>
+				<onleft>2</onleft>
+				<onright>60</onright>
+				<onup>561</onup>
+				<ondown>561</ondown>
+				<viewtype label="AL Wide">panel</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<preloaditems>200</preloaditems>
+				<visible></visible>
+				<visible>SubString(Container.FolderPath,program.advanced.launcher)</visible>
+				<itemlayout height="156" width="216">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>216</width>
+						<height>156</height>
+						<bordersize>5</bordersize>
+						<bordertexture border="5">button-nofocus.png</bordertexture>
+						<aspectratio>stretch</aspectratio>
+						<fadetime>200</fadetime>
+						<texture background="true">$INFO[Listitem.Icon]</texture> 
+						<visible></visible>
+					</control>	
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>216</width>
+						<height>156</height>
+						<bordersize>5</bordersize>
+						<aspectratio>stretch</aspectratio>
+						<fadetime>200</fadetime>
+						<texture background="true" >UF_$INFO[Listitem.Icon]</texture> 
+						<visible>substring(Listitem.Icon,Default,left)</visible>
+					</control>	
+				</itemlayout>
+				<focusedlayout height="323" width="225">
+					<control type="group">	
+						<posx>0</posx>
+						<posy>0</posy>
+    					<animation effect="slide" end="30,0" time="200" reversible="true" condition="Container.Column(0)">conditional</animation>
+    					<animation effect="slide" end="0,34" time="200" reversible="true" condition="Container.Row(0)">conditional</animation>
+    					<animation effect="slide" end="0,-37" time="200" reversible="true" condition="Container.Row(2)">conditional</animation>
+    					<animation effect="slide" end="-28,0" time="200" reversible="true" condition="Container.Column(3)">conditional</animation>
+						<animation reversible="false" effect="zoom"  end="-27,-33,300,425" time="200">focus</animation>
+						<animation reversible="false" effect="zoom" start="-27,-33,300,425" time="0">unfocus</animation>			
+
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>216</width>
+							<height>156</height>
+							<aspectratio>stretch</aspectratio>
+							<fadetime>200</fadetime>
+							<bordersize>6</bordersize>
+							<texture background="true">$INFO[Listitem.Icon]</texture>
+							<bordertexture border="8">ThumbBorder.png</bordertexture>
+							<!--
+							<visible>substring(Listitem.Icon,Default,left)</visible>
+							-->
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="group">
+				<visible></visible>
+				<control type="label">
+					<description>Year txt</description>
+					<posx>469</posx>
+					<posy>343</posy>
+					<width>140</width>
+					<height>25</height>
+					<label>[COLOR blue]$LOCALIZE[345]: [/COLOR]$INFO[ListItem.Premiered]</label>
+					<align>Right</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Studio txt</description>
+					<posx>49</posx>
+					<posy>343</posy>
+					<width>400</width>
+					<height>25</height>
+					<label>[COLOR blue]$LOCALIZE[20339]: [/COLOR]$INFO[ListItem.Studio]</label>
+					<align>Right</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Genre value</description>
+					<posx>49</posx>
+					<posy>363</posy>
+					<width>390</width>
+					<height>25</height>
+					<label>[COLOR blue]$LOCALIZE[20417]: [/COLOR]$INFO[listitem.Genre]</label>
+					<align>Right</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="textbox">
+					<description>Description</description>
+					<posx>53</posx>
+					<posy>393</posy>
+					<width>523</width>
+					<height>220</height>
+					<font>font12</font>
+					<align>justify</align>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR blue]$LOCALIZE[207]: [/COLOR]$INFO[ListItem.Plot]</label>
+					<autoscroll time="2000" delay="3000" repeat="5000"></autoscroll>
+				</control>			
+			</control>
+		</control>
+	</include>
+	<include name="WallStreamAL_Small">
+		<control type="group">
+
+<!--
+			<visible>Control.IsVisible(560) + SubString(Container.FolderPath,program.advanced.launcher)</visible>
+-->
+			<visible>Control.IsVisible(560)</visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture background="true">ContentPanelfanart.png</texture> 
+			</control>		
+			<control type="image">
+				<posx>50</posx>
+				<posy>90</posy>
+				<width>523</width>
+				<height>253</height>
+				<aspectratio>Stretch</aspectratio>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<texture background="true" fallback="normal_controller.png">$INFO[ListItem.Property(fanart_image)]</texture>
+			</control>
+<!--
+			<control type="image">
+				<posx>49</posx>
+				<posy>88</posy>
+				<width>525</width>
+				<height>19</height>
+				<aspectratio>Stretch</aspectratio>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<texture background="true">fanblack2.png</texture>
+			</control>
+-->
+			<control type="label">
+				<posx>0</posx>
+				<posy>45</posy>
+				<width>620</width>
+				<height>25</height>
+				<font>font28_title</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<selectedcolor>selected</selectedcolor>
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="scrollbar" id="60">
+				<posx>1239</posx>
+				<posy>36</posy>
+				<width>25</width>
+				<height>650</height>
+				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<textureslidernib>ScrollBarNib.png</textureslidernib>
+				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+				<onleft>560</onleft>
+				<onright>560</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+			</control>
+			<control type="panel" id="560">
+				<posx>620</posx>
+				<posy>36</posy>
+				<width>750</width>
+				<height>650</height>
+				<onleft>2</onleft>
+				<onright>60</onright>
+				<onup>560</onup>
+				<ondown>560</ondown>
+				<viewtype label="AL Small">panel</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<preloaditems>200</preloaditems>
+				<visible></visible>
+				<visible>SubString(Container.FolderPath,program.advanced.launcher)</visible>
+				<itemlayout height="216" width="156">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>156</width>
+						<height>216</height>
+						<bordersize>5</bordersize>
+						<bordertexture border="5">button-nofocus.png</bordertexture>
+						<aspectratio>stretch</aspectratio>
+						<fadetime>200</fadetime>
+						<texture background="true">$INFO[Listitem.Icon]</texture> 
+						<visible></visible>
+					</control>	
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>156</width>
+						<height>216</height>
+						<bordersize>5</bordersize>
+						<aspectratio>stretch</aspectratio>
+						<fadetime>200</fadetime>
+						<texture background="true" >UF_$INFO[Listitem.Icon]</texture> 
+						<visible>substring(Listitem.Icon,Default,left)</visible>
+					</control>	
+				</itemlayout>
+				<focusedlayout height="323" width="225">
+					<control type="group">	
+						<posx>0</posx>
+						<posy>0</posy>
+    					<animation effect="slide" end="30,0" time="200" reversible="true" condition="Container.Column(0)">conditional</animation>
+    					<animation effect="slide" end="0,34" time="200" reversible="true" condition="Container.Row(0)">conditional</animation>
+    					<animation effect="slide" end="0,-37" time="200" reversible="true" condition="Container.Row(2)">conditional</animation>
+    					<animation effect="slide" end="-28,0" time="200" reversible="true" condition="Container.Column(3)">conditional</animation>
+						<animation reversible="false" effect="zoom"  end="-27,-33,300,425" time="200">focus</animation>
+						<animation reversible="false" effect="zoom" start="-27,-33,300,425" time="0">unfocus</animation>			
+
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>156</width>
+							<height>216</height>
+							<aspectratio>stretch</aspectratio>
+							<fadetime>200</fadetime>
+							<bordersize>6</bordersize>
+							<texture background="true">$INFO[Listitem.Icon]</texture>
+							<bordertexture border="8">ThumbBorder.png</bordertexture>
+							<!--
+							<visible>substring(Listitem.Icon,Default,left)</visible>
+							-->
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="group">
+				<visible></visible>
+				<control type="label">
+					<description>Year txt</description>
+					<posx>469</posx>
+					<posy>343</posy>
+					<width>140</width>
+					<height>25</height>
+					<label>[COLOR blue]$LOCALIZE[345]: [/COLOR]$INFO[ListItem.Premiered]</label>
+					<align>Right</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Studio txt</description>
+					<posx>49</posx>
+					<posy>343</posy>
+					<width>400</width>
+					<height>25</height>
+					<label>[COLOR blue]$LOCALIZE[20339]: [/COLOR]$INFO[ListItem.Studio]</label>
+					<align>Right</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Genre value</description>
+					<posx>49</posx>
+					<posy>363</posy>
+					<width>390</width>
+					<height>25</height>
+					<label>[COLOR blue]$LOCALIZE[20417]: [/COLOR]$INFO[listitem.Genre]</label>
+					<align>Right</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="textbox">
+					<description>Description</description>
+					<posx>53</posx>
+					<posy>393</posy>
+					<width>523</width>
+					<height>220</height>
+					<font>font12</font>
+					<align>justify</align>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR blue]$LOCALIZE[207]: [/COLOR]$INFO[ListItem.Plot]</label>
+					<autoscroll time="2000" delay="3000" repeat="5000"></autoscroll>
+				</control>			
+			</control>
+		</control>
+	</include>
+</includes>
