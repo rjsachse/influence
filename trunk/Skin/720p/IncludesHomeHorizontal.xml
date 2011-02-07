@@ -560,15 +560,8 @@
 					<onfocus>SetFocus(8001)</onfocus>
 				</control>
 			</control>
-			
-			<control type="group" id="303">
-				<control type="button" id="305">
-					<visible>[Container(9000).HasFocus(1) | Container(9000).HasFocus(2) | Container(9000).HasFocus(3) | Container(9000).HasFocus(4) |  Container(9000).HasFocus(5) |  Container(9000).HasFocus(6)| Container(9000).HasFocus(10) | Container(9000).HasFocus(11) | Container(9000).HasFocus(12) | Container(9000).HasFocus(13) | Container(9000).HasFocus(14) | Container(9000).HasFocus(15)  | Container(9000).HasFocus(20)  | Container(9000).HasFocus(21)  | Container(9000).HasFocus(22)  | Container(9000).HasFocus(23)]</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(9001)</onfocus>
-				</control>
-			</control>
+			<include>GetFocusSubMenu</include>
+
 <!-- Alternate Submenu -->
 			<control type="group" id="9001">
 				<posx>207</posx>
