@@ -515,6 +515,64 @@
 						<onclick>Skin.SetString(WeatherFanartDir,special://skin/backgrounds/Weather/FanartMeteo/)</onclick>
 						<selected>!Skin.HasSetting(ShowWeatherFanart)</selected>
 					</control>
+					<control type="radiobutton" id="213">
+						<description>enable weather info</description>
+						<textwidth>170</textwidth>
+						<include>ButtonMediaSubCommonValues</include>
+						<label>20084</label>
+						<onclick>Skin.ToggleSetting(homepageWeatherinfo)</onclick>
+						<selected>!Skin.HasSetting(homepageWeatherinfo)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="202">
+						<description>Meteo Home Toggle</description>
+						<textwidth>170</textwidth>
+						<include>ButtonMediaSubCommonValues</include>
+						<label>$LOCALIZE[35125]</label>
+						<onclick>Skin.Reset(ChoiceWeatherTwo)</onclick>
+						<onclick>Skin.Reset(ChoiceWeatherThree)</onclick>
+						<onclick>Skin.Reset(ChoiceWeatherFour)</onclick>
+						<onclick>Skin.ToggleSetting(ChoiceWeatherOne)</onclick>
+						<selected>Skin.HasSetting(ChoiceWeatherOne)</selected>
+						<visible>!Skin.HasSetting(homepageWeatherinfo)</visible>
+					</control>
+					<control type="radiobutton" id="203">
+						<description>Meteo Home Toggle</description>
+						<textwidth>170</textwidth>
+						<include>ButtonMediaSubCommonValues</include>
+						<label>$LOCALIZE[35126]</label>
+						<onclick>Skin.Reset(ChoiceWeatherOne)</onclick>
+						<onclick>Skin.Reset(ChoiceWeatherThree)</onclick>
+						<onclick>Skin.Reset(ChoiceWeatherFour)</onclick>
+						<onclick>Skin.ToggleSetting(ChoiceWeatherTwo)</onclick>
+						<selected>Skin.HasSetting(ChoiceWeatherTwo)</selected>
+						<visible>!Skin.HasSetting(homepageWeatherinfo)</visible>
+					</control>
+					<control type="radiobutton" id="204">
+						<description>Meteo Home Toggle</description>
+						<textwidth>170</textwidth>
+						<include>ButtonMediaSubCommonValues</include>
+						<label>$LOCALIZE[35127]</label>
+						<onclick>Skin.Reset(ChoiceWeatherOne)</onclick>
+						<onclick>Skin.Reset(ChoiceWeatherTwo)</onclick>
+						<onclick>Skin.Reset(ChoiceWeatherFour)</onclick>
+						<onclick>Skin.ToggleSetting(ChoiceWeatherThree)</onclick>
+						<selected>Skin.HasSetting(ChoiceWeatherThree)</selected>
+						<visible>!Skin.HasSetting(homepageWeatherinfo)</visible>
+					</control>
+					<control type="radiobutton" id="205">
+						<description>Meteo Home Toggle</description>
+						<textwidth>170</textwidth>
+						<include>ButtonMediaSubCommonValues</include>
+						<label>$LOCALIZE[35128]</label>
+						<onclick>Skin.Reset(ChoiceWeatherOne)</onclick>
+						<onclick>Skin.Reset(ChoiceWeatherTwo)</onclick>
+						<onclick>Skin.Reset(ChoiceWeatherThree)</onclick>
+						<onclick>Skin.ToggleSetting(ChoiceWeatherFour)</onclick>
+						<selected>Skin.HasSetting(ChoiceWeatherFour)</selected>
+						<visible>!Skin.HasSetting(homepageWeatherinfo)</visible>
+					</control>
 				</control>
 			</control>
 			<control type="button" id="8999">

@@ -188,8 +188,18 @@
   <string id="35115">Afficher les fanarts musicaux</string>
   <string id="35116">Activer le script "Movie theater Experience"</string>
   <string id="35117">Activer le menu</string>
+  <string id="35118">Activer le module Live TV</string>
   <string id="35119">DVD</string>
   <string id="35120">Favoris</string>
   <string id="35121">Cacher les boutons de l'accueil</string>
   <string id="35124">Musique</string>
+  <string id="35125">A 1 jour</string>
+  <string id="35126">A 2 jours</string>
+  <string id="35127">A 3 jours</string>
+  <string id="35128">A 4 jours</string>
+  <string id="35129">Afficher les Items aléatoires</string>
+  <string id="35130">Sauter à</string>
+  <string id="35131">Installer une nouvelle vue</string>
+  <string id="35132">Télécharger le théme</string>
+  <string id="35133">Cacher la barre du haut</string>
 </strings>

@@ -385,6 +385,21 @@
 							</control>
 						</control>
 						<control type="group">
+							<visible>Container(9003).HasFocus(16)          </visible>
+							<control type="button" id="300">
+								<include>BackCustomSingle</include>
+								<onclick>Skin.SetImage(Home_Custom_Back_Info_Folder)</onclick>
+							</control>
+							<control type="button" id="301">
+								<include>BackCustomMulti</include>
+								<onclick>Skin.SetPath(Home_Custom_Back_Info__Folder)</onclick>
+							</control>
+							<control type="button" id="302">
+								<include>BackCustomReset</include>
+								<onclick>Skin.SetString(Home_Custom_Back_Info__Folder,$INFO[Skin.String(Menu_LiveTv_Back)])</onclick>
+							</control>
+						</control>
+						<control type="group">
 							<visible>Container(9003).HasFocus(20)  </visible>
 							<control type="button" id="300">
 								<include>BackCustomSingle</include>
@@ -1862,6 +1877,158 @@
 							</control>
 						</control>
 <!-- Fin Sub LiveTv -->
+<!-- Sub Info  -->
+						<control type="group">
+							<visible>Container(9003).HasFocus(1501)  </visible>
+							<control type="button" id="300">
+								<include>BackCustomSingle</include>
+								<onclick>Skin.SetImage(Menu_Info_sub1_back)</onclick>
+							</control>
+							<control type="button" id="301">
+								<include>BackCustomMulti</include>
+								<onclick>Skin.SetPath(Menu_Info_sub1_back)</onclick>
+							</control>
+							<control type="button" id="302">
+								<include>BackCustomReset</include>
+								<onclick>Skin.Reset(Menu_Info_sub1_back)</onclick>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(9003).HasFocus(1502)  </visible>
+							<control type="button" id="300">
+								<include>BackCustomSingle</include>
+								<onclick>Skin.SetImage(Menu_Info_sub2_back)</onclick>
+							</control>
+							<control type="button" id="301">
+								<include>BackCustomMulti</include>
+								<onclick>Skin.SetPath(Menu_Info_sub2_back)</onclick>
+							</control>
+							<control type="button" id="302">
+								<include>BackCustomReset</include>
+								<onclick>Skin.Reset(Menu_Info_sub2_back)</onclick>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(9003).HasFocus(1503)  </visible>
+							<control type="button" id="300">
+								<include>BackCustomSingle</include>
+								<onclick>Skin.SetImage(Menu_Info_sub3_back)</onclick>
+							</control>
+							<control type="button" id="301">
+								<include>BackCustomMulti</include>
+								<onclick>Skin.SetPath(Menu_Info_sub3_back)</onclick>
+							</control>
+							<control type="button" id="302">
+								<include>BackCustomReset</include>
+								<onclick>Skin.Reset(Menu_Info_sub3_back)</onclick>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(9003).HasFocus(1504)  </visible>
+							<control type="button" id="300">
+								<include>BackCustomSingle</include>
+								<onclick>Skin.SetImage(Menu_Info_sub4_back)</onclick>
+							</control>
+							<control type="button" id="301">
+								<include>BackCustomMulti</include>
+								<onclick>Skin.SetPath(Menu_Info_sub4_back)</onclick>
+							</control>
+							<control type="button" id="302">
+								<include>BackCustomReset</include>
+								<onclick>Skin.Reset(Menu_Info_sub4_back)</onclick>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(9003).HasFocus(1505)  </visible>
+							<control type="button" id="300">
+								<include>BackCustomSingle</include>
+								<onclick>Skin.SetImage(Menu_Info_sub5_back)</onclick>
+							</control>
+							<control type="button" id="301">
+								<include>BackCustomMulti</include>
+								<onclick>Skin.SetPath(Menu_Info_sub5_back)</onclick>
+							</control>
+							<control type="button" id="302">
+								<include>BackCustomReset</include>
+								<onclick>Skin.Reset(Menu_Info_sub5_back)</onclick>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(9003).HasFocus(1506)  </visible>
+							<control type="button" id="300">
+								<include>BackCustomSingle</include>
+								<onclick>Skin.SetImage(Menu_Info_sub6_back)</onclick>
+							</control>
+							<control type="button" id="301">
+								<include>BackCustomMulti</include>
+								<onclick>Skin.SetPath(Menu_Info_sub6_back)</onclick>
+							</control>
+							<control type="button" id="302">
+								<include>BackCustomReset</include>
+								<onclick>Skin.Reset(Menu_Info_sub6_back)</onclick>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(9003).HasFocus(1507)  </visible>
+							<control type="button" id="300">
+								<include>BackCustomSingle</include>
+								<onclick>Skin.SetImage(Menu_Info_sub7_back)</onclick>
+							</control>
+							<control type="button" id="301">
+								<include>BackCustomMulti</include>
+								<onclick>Skin.SetPath(Menu_Info_sub7_back)</onclick>
+							</control>
+							<control type="button" id="302">
+								<include>BackCustomReset</include>
+								<onclick>Skin.Reset(Menu_Info_sub7_back)</onclick>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(9003).HasFocus(1508)  </visible>
+							<control type="button" id="300">
+								<include>BackCustomSingle</include>
+								<onclick>Skin.SetImage(Menu_Info_sub8_back)</onclick>
+							</control>
+							<control type="button" id="301">
+								<include>BackCustomMulti</include>
+								<onclick>Skin.SetPath(Menu_Info_sub8_back)</onclick>
+							</control>
+							<control type="button" id="302">
+								<include>BackCustomReset</include>
+								<onclick>Skin.Reset(Menu_Info_sub8_back)</onclick>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(9003).HasFocus(1509)  </visible>
+							<control type="button" id="300">
+								<include>BackCustomSingle</include>
+								<onclick>Skin.SetImage(Menu_Info_sub9_back)</onclick>
+							</control>
+							<control type="button" id="301">
+								<include>BackCustomMulti</include>
+								<onclick>Skin.SetPath(Menu_Info_sub9_back)</onclick>
+							</control>
+							<control type="button" id="302">
+								<include>BackCustomReset</include>
+								<onclick>Skin.Reset(Menu_Info_sub9_back)</onclick>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(9003).HasFocus(1510)  </visible>
+							<control type="button" id="300">
+								<include>BackCustomSingle</include>
+								<onclick>Skin.SetImage(Menu_Info_sub10_back)</onclick>
+							</control>
+							<control type="button" id="301">
+								<include>BackCustomMulti</include>
+								<onclick>Skin.SetPath(Menu_Info_sub10_back)</onclick>
+							</control>
+							<control type="button" id="302">
+								<include>BackCustomReset</include>
+								<onclick>Skin.Reset(Menu_Info_sub10_back)</onclick>
+							</control>
+						</control>
+<!-- Fin Sub Info -->
 <!-- Sub Menu1  -->
 						<control type="group">
 							<visible>Container(9003).HasFocus(2001)  </visible>

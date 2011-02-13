@@ -50,6 +50,42 @@
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(8003)</visible>
 		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/videos.jpg">$INFO[Container(8004).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8004)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/tvshows.jpg">$INFO[Container(8005).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8005)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/music.jpg">$INFO[Container(8006).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8006)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/videos.jpg">$INFO[Container(8007).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8007)</visible>
+		</control>
 <!-- randomsitem and recentlyadded fanart (end) -->
 <!-- gestion des sous menu -->
 		<control type="multiimage">
@@ -66,6 +102,8 @@
 		<include>CommonMediaPlayingBackground</include>
 		
 		<include condition="Skin.HasSetting(homepageHideRecentlyAdded)">HomeRecentlyAddedInfo</include>
+		<include condition="Skin.HasSetting(homepageHideRandomAdded)">HomeRandomAddedInfo</include>
+		<!--<include condition="Skin.HasSetting(homepageHideRecentlyAdded)">RssRecentlyAddedInfo</include>-->
 <!-- weather Info -->
 		<control type="group">
 			<posx>520r</posx>
@@ -114,8 +152,34 @@
 			<!--
 			<visible>Container(9000).HasFocus(6)+Weather.IsFetched+![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)] + ![Player.HasAudio + Skin.HasSetting(Next5Songs)]</visible>
 			-->
-			<visible>Container(9000).HasFocus(6)+Weather.IsFetched+![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)] + [[Skin.HasSetting(CarouselMenu) | Skin.HasSetting(VerticalMenu)] | [Skin.HasSetting(HorizontalMenu) +  ![Player.HasAudio + Skin.HasSetting(Next5Songs)]]]</visible>
-	        	<include>CurrentWeather</include>
+			<visible>Container(9000).HasFocus(6) + !ControlGroup(9001).HasFocus + Weather.IsFetched+![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)] + [[Skin.HasSetting(CarouselMenu) | Skin.HasSetting(VerticalMenu)] | [Skin.HasSetting(HorizontalMenu) +  ![Player.HasAudio + Skin.HasSetting(Next5Songs)]]]</visible>
+	        	<include condition="Skin.HasSetting(ChoiceWeatherOne)">CurrentWeather</include>
+			<include condition="Skin.HasSetting(ChoiceWeatherTwo) + [!Player.HasVideo + !Player.HasAudio]">CurrentWeather2</include>
+			<include condition="Skin.HasSetting(ChoiceWeatherThree) + [!Player.HasVideo + !Player.HasAudio]">CurrentWeather3</include>
+			<include condition="Skin.HasSetting(ChoiceWeatherFour) + [!Player.HasVideo + !Player.HasAudio]">CurrentWeather4</include>
+			<include condition="[Skin.HasSetting(ChoiceWeatherTwo) | Skin.HasSetting(ChoiceWeatherThree) | Skin.HasSetting(ChoiceWeatherFour)] + [Player.HasVideo | Player.HasAudio]">CurrentWeather</include>
+		</control>
+
+
+		<control type="group">
+		<visible>Container(945).HasFocus(601) + ControlGroup(9001).HasFocus + [!Player.HasVideo + !Player.HasAudio]</visible>
+		<include condition="Skin.HasSetting(Menu_Weather_sub1_act)">CurrentWeather</include>
+		</control>
+		<control type="group">
+		<visible>[Container(945).HasFocus(601) | Container(945).HasFocus(602)| Container(945).HasFocus(603) | Container(945).HasFocus(604)] + ControlGroup(9001).HasFocus + [ Player.HasVideo | Player.HasAudio] + !Skin.HasSetting(HorizontalMenu)</visible>
+		<include>CurrentWeather</include>
+		</control>
+		<control type="group">
+		<visible>Container(945).HasFocus(602) + ControlGroup(9001).HasFocus + [!Player.HasVideo + !Player.HasAudio]</visible>
+		<include condition="Skin.HasSetting(Menu_Weather_sub2_act)">CurrentWeather2</include>
+		</control>
+		<control type="group">
+		<visible>Container(945).HasFocus(603) + ControlGroup(9001).HasFocus + [!Player.HasVideo + !Player.HasAudio]</visible>
+		<include condition="Skin.HasSetting(Menu_Weather_sub3_act)">CurrentWeather3</include>
+		</control>
+		<control type="group">
+		<visible>Container(945).HasFocus(604) + ControlGroup(9001).HasFocus + [!Player.HasVideo + !Player.HasAudio]</visible>
+		<include condition="Skin.HasSetting(Menu_Weather_sub4_act)">CurrentWeather4</include>
 		</control>
 		<include condition="!Skin.HasSetting(VerticalMenu)+!Skin.HasSetting(HorizontalMenu)+!Skin.HasSetting(CarouselMenu)">IncludeHomeVertical</include>
 		<include condition="Skin.HasSetting(VerticalMenu)">IncludeHomeVertical</include>
@@ -379,6 +443,7 @@
 				       <posy>95</posy>
 				       <height>25</height>
 				       <width>440</width>
+
 				       <label>$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19126] - ]</label>
 				       <align>right</align>
 				       <aligny>center</aligny>
