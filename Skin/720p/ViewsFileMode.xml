@@ -12,7 +12,7 @@
 				<onright>60</onright>
 				<onup>50</onup>
 				<ondown>50</ondown>
-				<viewtype label="535">list</viewtype>
+				<viewtype label="$LOCALIZE[535] CommonRootView">list</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<visible>![Window.IsVisible(VideoLibrary) + Container.Content(TVShows) + !Skin.HasSetting(TVShowsUsePosters)]</visible>
@@ -92,6 +92,7 @@
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -173,12 +174,12 @@
 				<posx>90</posx>
 				<posy>80</posy>
 				<width>1080</width>
-				<height>550</height>
+				<height>570</height>
 				<onleft>2</onleft>
 				<onright>60</onright>
 				<onup>500</onup>
 				<ondown>500</ondown>
-				<viewtype label="21371">list</viewtype>
+				<viewtype label="$LOCALIZE[21371] ThumbnailView ">list</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<preloaditems>2</preloaditems>
@@ -187,32 +188,24 @@
 					<control type="image">
 						<visible>!SubString(Listitem.Icon,Default,Left)</visible>
 						<posx>1</posx>
-						<posy>0</posy>
+						<posy>15</posy>
 						<width>268</width>
 						<height>240</height>
-						<!--
-						<bordertexture border="5">button-nofocus.png</bordertexture>
-						<bordersize>5</bordersize>
-						-->
 						<fadetime>100</fadetime>
 						<texture background="true">$INFO[Listitem.Icon]</texture>
 					</control>
 					<control type="image">
 						<visible>SubString(Listitem.Icon,Default,Left)</visible>
 						<posx>1</posx>
-						<posy>0</posy>
+						<posy>15</posy>
 						<width>268</width>
 						<height>240</height>
-						<!--
-						<bordertexture border="5">folder-focus.png</bordertexture>
-						<bordersize>5</bordersize>
-						-->
 						<fadetime>100</fadetime>
 						<texture background="true">UF_$INFO[Listitem.Icon]</texture>
 					</control>
 					<control type="label">
 						<posx>135</posx>
-						<posy>240</posy>
+						<posy>255</posy>
 						<width>260</width>
 						<height>25</height>
 						<font>font12</font>
@@ -222,38 +215,45 @@
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
 					</control>
-					<!--
 					<control type="image">
 						<posx>230</posx>
-						<posy>200</posy>
+						<posy>230</posy>
 						<width>35</width>
 						<height>35</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Overlay]</texture>
 					</control>
-					-->
 				</itemlayout>
 				<focusedlayout height="275" width="270">
 					<control type="image">
+						<posx>-16</posx>
+						<posy>-1</posy>
+						<width>300</width>
+						<height>269</height>
+						<fadetime>100</fadetime>
+						<bordertexture border="8">ThumbBorder.png</bordertexture>
+						<bordersize>8</bordersize>
+						<texture background="true">$INFO[Listitem.Icon]</texture>
+						<visible>!SubString(Listitem.Icon,Default,Left)</visible>
+					</control>
+					<control type="image">
 						<posx>1</posx>
-						<posy>0</posy>
+						<posy>15</posy>
 						<width>268</width>
 						<height>240</height>
-						<!--
-						<bordertexture border="5">folder-focus.png</bordertexture>
-						<bordersize>5</bordersize>
-						-->
 						<fadetime>100</fadetime>
 						<texture background="true">$INFO[Listitem.Icon]</texture>
+						<visible>SubString(Listitem.Icon,Default,Left)</visible>
 					</control>
 					<control type="label">
 						<posx>135</posx>
-						<posy>240</posy>
+						<posy>265</posy>
 						<width>260</width>
 						<height>25</height>
 						<font>font14</font>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
+						<shadowcolor>black</shadowcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
@@ -301,7 +301,7 @@
 				<onright>60</onright>
 				<onup>505</onup>
 				<ondown>505</ondown>
-				<viewtype label="$LOCALIZE[539] $LOCALIZE[536]">list</viewtype>
+				<viewtype label="$LOCALIZE[539] $LOCALIZE[536] WideIconView">list</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<preloaditems>2</preloaditems>
@@ -311,9 +311,9 @@
 						<posy>0</posy>
 						<width>538</width>
 						<height>105</height>
-						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<visible>!SubString(Listitem.Icon,Default,Left)</visible>
 						<!--
+						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>5</bordersize>
 						-->
 						<bordersize>0</bordersize>
@@ -347,12 +347,18 @@
 						<posy>0</posy>
 						<width>538</width>
 						<height>105</height>
-						<bordertexture border="5">folder-focus.png</bordertexture>
-						<!--
-						<bordersize>5</bordersize>
-						-->
-						<bordersize>0</bordersize>
+						<bordertexture border="8">ThumbBorder.png</bordertexture>
+						<bordersize>8</bordersize>
 						<texture background="true">$INFO[Listitem.Icon]</texture>
+						<visible>!SubString(Listitem.Icon,Default,Left)</visible>
+					</control>
+					<control type="image">
+						<posx>1</posx>
+						<posy>0</posy>
+						<width>538</width>
+						<height>105</height>
+						<texture background="true">$INFO[Listitem.Icon]</texture>
+						<visible>SubString(Listitem.Icon,Default,Left)</visible>
 					</control>
 					<control type="image">
 						<posx>500</posx>
@@ -395,7 +401,7 @@
 				<onright>60</onright>
 				<onup>51</onup>
 				<ondown>51</ondown>
-				<viewtype label="537">list</viewtype>
+				<viewtype label="$LOCALIZE[537] FullWidthList ">list</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<itemlayout height="40" width="1080">

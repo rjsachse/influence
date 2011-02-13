@@ -123,7 +123,19 @@
 					<width>410</width>
 					<height>200</height>
 					<aspectratio>keep</aspectratio>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[container(450).ListItem.Icon]</texture>
+					<visible>Control.IsVisible(450)</visible>
+				</control>
+				<control type="image">
+					<posx>250</posx>
+					<posy>465</posy>
+					<width>410</width>
+					<height>200</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[container(451).ListItem.Icon]</texture>
+					<visible>Control.IsVisible(451)</visible>
 				</control>
 				<control type="panel" id="450">
 					<posx>20</posx>
@@ -159,7 +171,7 @@
 							<font>font13</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<selectedcolor>green</selectedcolor>
+							<selectedcolor>selected</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
 					</itemlayout>
@@ -195,7 +207,7 @@
 							<font>font13</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<selectedcolor>green</selectedcolor>
+							<selectedcolor>selected</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
 					</focusedlayout>
@@ -234,7 +246,7 @@
 							<font>font13</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<selectedcolor>green</selectedcolor>
+							<selectedcolor>selected</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
 					</itemlayout>
@@ -270,7 +282,7 @@
 							<font>font13</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<selectedcolor>green</selectedcolor>
+							<selectedcolor>selected</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
 					</focusedlayout>

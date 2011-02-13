@@ -5,18 +5,18 @@
 	
 		<control type="button" id="9">
 			<description>Trigger to Auto run the Latest media python after a 1 min delay if scan on startup is enabled</description>
-			<onfocus>XBMC.AlarmClock(UpdateRecentAdded,XBMC.RunScript(script.recentlyadded,limit=4),1,true)</onfocus>
+			<onfocus>XBMC.AlarmClock(UpdateRecentAdded,XBMC.RunScript(script.recentlyadded,limit=10),1,true)</onfocus>
 			<onfocus>SetFocus(10)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<visible>system.getbool(videolibrary.updateonstartup) +  !Skin.HasSetting(homepageHideRecentlyAdded)</visible>
+			<visible>system.getbool(videolibrary.updateonstartup) + !Skin.HasSetting(homepageHideRecentlyAdded) + !Skin.HasSetting(homepageHideRandomAdded)</visible>
 		</control>
 		<control type="button" id="9">
 			<description>Don't run anything is scan on startup is Disabled and jump to the startup playlist</description>
 			<onfocus>SetFocus(10)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<visible>!system.getbool(videolibrary.updateonstartup) | Skin.HasSetting(homepageHideRecentlyAdded)</visible>
+			<visible>!system.getbool(videolibrary.updateonstartup) | Skin.HasSetting(homepageHideRecentlyAdded) | Skin.HasSetting(homepageHideRandomAdded)</visible>
 		</control>
 		<control type="button" id="10">
 			<description>trigger</description>
@@ -33,6 +33,21 @@
 			<texturefocus>-</texturefocus>
 			<visible>Skin.HasSetting(Use_Startup_Playlist)</visible>
 		</control>
+		<control type="button" id="13">
+			<onfocus>Skin.SetBool(Influence_SkinInit_b4)</onfocus>
+			<onfocus>Skin.SetBool(ManagerMovieSets)</onfocus>
+			<onfocus>ReloadSkin()</onfocus>	
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>!Skin.HasSetting(Influence_SkinInit_b4)</visible>
+		</control>
+		<control type="button" id="13">
+			<description>Don't run anything</description>
+			<onfocus>ReplaceWindow(Home)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>			
+			<visible>Skin.HasSetting(Influence_SkinInit_b4)</visible>
+		</control>		
 		<control type="button" id="12">
 			<texturefocus>special://skin/media/Influence_Init.png</texturefocus>
 			<description>Trigger to Auto run the Latest media python after a 1 min delay if scan on startup is enabled</description>
@@ -41,8 +56,6 @@
 			<onfocus>Skin.SetBool(Menu_TVShows_sub_act)</onfocus>
 			<onfocus>Skin.SetBool(Menu_Movie_sub_act)</onfocus>
 			<onfocus>Skin.SetBool(Menu_Videos_sub_act)</onfocus>
-			<onfocus>Skin.SetString(ChoiceWeatherHome,1)</onfocus>
-			<onfocus>Skin.ToggleSetting(ChoiceWeatherOne)</onfocus>
 			<onfocus>Skin.SetString(Menu_Favorites_run,RunScript(special://skin/scripts/SetMenuFav.py))</onfocus>
 <!--icone-->		<onfocus>Skin.SetString(Menu_LiveTv_Ico,Carousel/livetv.png)</onfocus>
 <!--background-->       <onfocus>Skin.SetString(Menu_LiveTv_Back,special://skin/backgrounds/tv.jpg)</onfocus>
@@ -67,8 +80,73 @@
 			<onfocus>Skin.SetString(Menu_LiveTv_sub9_lab,Menu 9)</onfocus>
 	<!--icone-->	<onfocus>Skin.SetString(Menu_LiveTv_sub10_Ico,Carousel/livetv10.png)</onfocus>
 			<onfocus>Skin.SetString(Menu_LiveTv_sub10_lab,Menu 10)</onfocus>
-			<onfocus>ReloadSkin()</onfocus>
-			<onfocus>ReplaceWindow(Home)</onfocus>
+			<onfocus>Skin.SetBool(Menu_Weather_sub1_act)</onfocus>
+	<!--icone-->	<onfocus>Skin.SetString(Menu_Weather_sub1_Ico,Carousel/meteo1.png)</onfocus>
+			<onfocus>Skin.SetString(Menu_Weather_sub1_lab,$LOCALIZE[35125])</onfocus>
+			<onfocus>Skin.SetBool(Menu_Weather_sub2_act)</onfocus>
+	<!--icone-->	<onfocus>Skin.SetString(Menu_Weather_sub2_Ico,Carousel/meteo2.png)</onfocus>
+			<onfocus>Skin.SetString(Menu_Weather_sub2_lab,$LOCALIZE[35126])</onfocus>
+			<onfocus>Skin.SetBool(Menu_Weather_sub3_act)</onfocus>
+	<!--icone-->	<onfocus>Skin.SetString(Menu_Weather_sub3_Ico,Carousel/meteo3.png)</onfocus>
+			<onfocus>Skin.SetString(Menu_Weather_sub3_lab,$LOCALIZE[35127])</onfocus>
+			<onfocus>Skin.SetBool(Menu_Weather_sub4_act)</onfocus>
+	<!--icone-->	<onfocus>Skin.SetString(Menu_Weather_sub4_Ico,Carousel/meteo4.png)</onfocus>
+			<onfocus>Skin.SetString(Menu_Weather_sub4_lab,$LOCALIZE[35128])</onfocus>
+			<onfocus>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Weather&amp;Nb=10)</onfocus>
+			<onfocus>Skin.ToggleSetting(ChoiceWeatherOne)</onfocus>
+			<onfocus>Skin.SetString(Menu_Info_lab,RSS)</onfocus>
+<!--icone-->		<onfocus>Skin.SetString(Menu_Info_Ico,Carousel/info.png)</onfocus>
+<!--background-->       <onfocus>Skin.SetString(Menu_Info_Back,special://skin/backgrounds/info.jpg)</onfocus>
+<!--background-->       <onfocus>Skin.SetString(Home_Custom_Back_Info_Folder,special://skin/backgrounds/info.jpg)</onfocus>
+	<!--icone-->	<onfocus>Skin.SetString(Menu_Info_sub1_Ico,Carousel/Infos1.png)</onfocus>
+			<onfocus>Skin.SetString(Menu_Info_sub1_lab,Menu 1)</onfocus>
+	<!--icone-->	<onfocus>Skin.SetString(Menu_Info_sub2_Ico,Carousel/Infos2.png)</onfocus>
+			<onfocus>Skin.SetString(Menu_Info_sub2_lab,Menu 2)</onfocus>
+	<!--icone-->	<onfocus>Skin.SetString(Menu_Info_sub3_Ico,Carousel/Infos3.png)</onfocus>
+			<onfocus>Skin.SetString(Menu_Info_sub3_lab,Menu 3)</onfocus>
+	<!--icone-->	<onfocus>Skin.SetString(Menu_Info_sub4_Ico,Carousel/Infos4.png)</onfocus>
+			<onfocus>Skin.SetString(Menu_Info_sub4_lab,Menu 4)</onfocus>
+	<!--icone-->	<onfocus>Skin.SetString(Menu_Info_sub5_Ico,Carousel/Infos5.png)</onfocus>
+			<onfocus>Skin.SetString(Menu_Info_sub5_lab,Menu 5)</onfocus>
+	<!--icone-->	<onfocus>Skin.SetString(Menu_Info_sub6_Ico,Carousel/Infos6.png)</onfocus>
+			<onfocus>Skin.SetString(Menu_Info_sub6_lab,Menu 6)</onfocus>
+	<!--icone-->	<onfocus>Skin.SetString(Menu_Info_sub7_Ico,Carousel/Infos7.png)</onfocus>
+			<onfocus>Skin.SetString(Menu_Info_sub7_lab,Menu 7)</onfocus>
+	<!--icone-->	<onfocus>Skin.SetString(Menu_Info_sub8_Ico,Carousel/Infos8.png)</onfocus>
+			<onfocus>Skin.SetString(Menu_Info_sub8_lab,Menu 8)</onfocus>
+	<!--icone-->	<onfocus>Skin.SetString(Menu_Info_sub9_Ico,Carousel/Infos9.png)</onfocus>
+			<onfocus>Skin.SetString(Menu_Info_sub9_lab,Menu 9)</onfocus>
+	<!--icone-->	<onfocus>Skin.SetString(Menu_Info_sub10_Ico,Carousel/Info10.png)</onfocus>
+			<onfocus>Skin.SetString(Menu_Info_sub10_lab,Menu 10)</onfocus>
+			<onfocus>Skin.SetString(Menu_Pictures_sub1_lab,$LOCALIZE[35034])</onfocus>
+			<onfocus>Skin.SetBool(Menu_Pictures_sub1_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Pictures_sub1_run,ActivateWindow(10002,Plugins,return))</onfocus>
+			<onfocus>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Pictures&amp;Nb=10)</onfocus>
+			<onfocus>Skin.SetString(Menu_Pictures_sub2_lab,Dates)</onfocus>
+			<onfocus>Skin.SetBool(Menu_Pictures_sub2_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Pictures_sub2_run,ActivateWindow(10002,&quot;plugin://plugin.image.mypicsdb/?period=&apos;year&apos;&amp;value=&apos;&apos;&amp;viewmode=&apos;view&apos;&amp;action=&apos;showdate&apos;&amp;name=&apos;Parcourir+par+Dates&apos;&quot;))</onfocus>
+			<onfocus>Skin.SetString(Menu_Pictures_sub3_lab,Dossiers)</onfocus>
+			<onfocus>Skin.SetBool(Menu_Pictures_sub3_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Pictures_sub3_run,ActivateWindow(10002,&quot;plugin://plugin.image.mypicsdb/?method=&apos;folders&apos;&amp;folderid=&apos;&apos;&amp;onlypics=&apos;non&apos;&amp;viewmode=&apos;view&apos;&amp;action=&apos;showfolder&apos;&amp;name=&apos;Parcourir+par+Dossiers&apos;&quot;))</onfocus>
+			<onfocus>Skin.SetString(Menu_Pictures_sub4_lab,Périodes)</onfocus>
+			<onfocus>Skin.SetBool(Menu_Pictures_sub4_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Pictures_sub4_run,ActivateWindow(10002,&quot;plugin://plugin.image.mypicsdb/?period=&apos;&apos;&amp;viewmode=&apos;view&apos;&amp;action=&apos;showperiod&apos;&amp;name=&apos;P%C3%A9riodes&apos;&quot;))</onfocus>
+			<onfocus>Skin.SetString(Menu_Pictures_sub5_lab,Mots clefs)</onfocus>
+			<onfocus>Skin.SetBool(Menu_Pictures_sub5_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Pictures_sub5_run,ActivateWindow(10002,&quot;plugin://plugin.image.mypicsdb/?kw=&apos;&apos;&amp;viewmode=&apos;view&apos;&amp;action=&apos;showkeywords&apos;&amp;name=&apos;Parcourir+par+Mots-cl%C3%A9s&apos;&quot;))</onfocus>
+			<onfocus>Skin.SetString(Menu_Pictures_sub6_lab,Collections)</onfocus>
+			<onfocus>Skin.SetBool(Menu_Pictures_sub6_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Pictures_sub6_run,ActivateWindow(10002,&quot;plugin://plugin.image.mypicsdb/?collect=&apos;&apos;&amp;method=&apos;show&apos;&amp;viewmode=&apos;view&apos;&amp;action=&apos;showcollection&apos;&amp;name=&apos;Collections&apos;&quot;))</onfocus>
+<!-- Views parameters -->
+			<onfocus>Skin.SetString(DarkTime,1600)</onfocus>
+			<onfocus>Skin.SetString(DarkDelay,3500)</onfocus>
+			<onfocus>Skin.SetString(DarkDelay,3500)</onfocus>
+			<onfocus>Skin.SetString(FontTitreListeFO,font13)</onfocus>
+			<onfocus>Skin.SetString(FontTitreListeUF,font13)</onfocus>
+			<onfocus>Skin.SetString(FontTitreListeCompFO,font12)</onfocus>
+			<onfocus>Skin.SetString(FontTitreListeCompUF,font12)</onfocus>
+		
+			<onfocus>SetFocus(13)</onfocus>
 		
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
@@ -76,7 +154,7 @@
 		</control>
 		<control type="button" id="12">
 			<description>Don't run anything</description>
-			<onfocus>ReplaceWindow(Home)</onfocus>
+			<onfocus>SetFocus(13)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 			
@@ -190,15 +268,10 @@
 <!--background-->       <onfocus>Skin.SetString(Menu_Pictures_Back,special://skin/backgrounds/pictures.jpg)</onfocus>
 <!--background-->       <onfocus>Skin.SetString(Home_Custom_Back_Pictures_Folder,special://skin/backgrounds/pictures.jpg)</onfocus>
 	<!--icone-->	<onfocus>Skin.SetString(Menu_Pictures_sub1_Ico,Carousel/photos1.png)</onfocus>
-			<onfocus>Skin.SetString(Menu_Pictures_sub1_lab,Menu 1)</onfocus>
 	<!--icone-->	<onfocus>Skin.SetString(Menu_Pictures_sub2_Ico,Carousel/photos2.png)</onfocus>
-			<onfocus>Skin.SetString(Menu_Pictures_sub2_lab,Menu 2)</onfocus>
 	<!--icone-->	<onfocus>Skin.SetString(Menu_Pictures_sub3_Ico,Carousel/photos3.png)</onfocus>
-			<onfocus>Skin.SetString(Menu_Pictures_sub3_lab,Menu 3)</onfocus>
 	<!--icone-->	<onfocus>Skin.SetString(Menu_Pictures_sub4_Ico,Carousel/photos4.png)</onfocus>
-			<onfocus>Skin.SetString(Menu_Pictures_sub4_lab,Menu 4)</onfocus>
 	<!--icone-->	<onfocus>Skin.SetString(Menu_Pictures_sub5_Ico,Carousel/photos5.png)</onfocus>
-			<onfocus>Skin.SetString(Menu_Pictures_sub5_lab,Menu 5)</onfocus>
 	<!--icone-->	<onfocus>Skin.SetString(Menu_Pictures_sub6_Ico,Carousel/photos6.png)</onfocus>
 			<onfocus>Skin.SetString(Menu_Pictures_sub6_lab,Menu 6)</onfocus>
 	<!--icone-->	<onfocus>Skin.SetString(Menu_Pictures_sub7_Ico,Carousel/photos7.png)</onfocus>
@@ -419,7 +492,7 @@
 			<!--Exit -->
 			
 			<onfocus>Skin.SetString(Menu_Exit_lab,$LOCALIZE[13012])</onfocus>
-			<onfocus>Skin.SetString(Menu_Exit_run,ActivateWindow(ShutdownMenu))</onfocus>
+			<onfocus>Skin.SetString(Menu_Exit_run,XBMC.Quit())</onfocus>
 <!--icone-->		<onfocus>Skin.SetString(Menu_Exit_Ico,Carousel/exit.png)</onfocus>
 <!--background-->       <onfocus>Skin.SetString(Menu_Exit_Back,special://skin/backgrounds/shutdown.jpg)</onfocus>
 <!--background-->       <onfocus>Skin.SetString(Home_Custom_Back_Exit_Folder,special://skin/backgrounds/shutdown.jpg)</onfocus>

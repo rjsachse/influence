@@ -1,9 +1,12 @@
 <window id="1">
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<views>50,51,500,550,560,561</views>
+	<views>50,51,500,550,560,561,1001,1002,1003,1004,1005,1006,1007,1008,1009,1010</views>
 	<controls>
-		<include>CommonProgramsBackground</include>
+		<control type="group">
+			<include>CustomView Fanart</include>	
+			<include>CommonProgramsBackground</include>
+		</control>
 		<include>CommonMediaPlayingBackground</include>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>		
@@ -81,6 +84,7 @@
 			<include>AddonInfoListView1</include> <!-- view id = 550 -->
 			<include>WallStreamAL_Small</include> <!-- view id = 560 -->
 			<include>WallStreamAL_Wide</include> <!-- view id = 561 -->
+			<include>Include_CustomView</include> <!-- view 1001 ... 1010 -->
 		</control>
 		<include>CommonPageCount</include>
 		<include>BehindDialogFadeOut</include>

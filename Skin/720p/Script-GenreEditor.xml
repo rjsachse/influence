@@ -1,0 +1,258 @@
+<window type="dialog" id="25622">
+	<zorder>1</zorder> 
+	<defaultcontrol always="true">120</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>335</posx>
+		<posy>35</posy>
+	</coordinates>
+	<include>dialogeffect</include>
+  
+	<controls>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>610</width>
+			<height>650</height>
+			<texture border="40">DialogBack.png</texture>
+		</control>
+		<control type="image">
+			<posx>40</posx>
+			<posy>10</posy>
+			<width>530</width>
+			<height>90</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>GlassTitleBar.png</texture>
+		</control>
+		<control type="button">
+			<description>Close Window button</description>
+			<posx>520</posx>
+			<posy>9</posy>
+			<width>64</width>
+			<height>32</height>
+			<label>-</label>
+			<font>-</font>
+			<onclick>PreviousMenu</onclick>
+			<texturefocus>DialogCloseButton-focus.png</texturefocus>
+			<texturenofocus>DialogCloseButton.png</texturenofocus>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>10</onup>
+			<ondown>10</ondown>
+			<visible>system.getbool(input.enablemouse)</visible>
+		</control>
+		<control type="label" id="1">
+			<description>header label</description>
+			<posx>20</posx>
+			<posy>18</posy>
+			<width>570</width>
+			<height>30</height>
+			<font>font13_title</font>
+			<label>$INFO[system.addontitle(script.genre-editor)]</label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+
+		<control type="list" id="120">
+			<posx>20</posx>
+			<posy>60</posy>
+			<width>550</width>
+			<height>520</height>
+			<onup>120</onup>
+			<ondown>120</ondown>
+			<onleft>22</onleft>
+			<onright>61</onright>
+			<pagecontrol>61</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<animation effect="slide" start="0,0" end="10,0" time="0" condition="!Control.IsVisible(61)">Conditional</animation>
+			<itemlayout height="40" width="550">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>550</width>
+					<height>41</height>
+					<texture border="0,2,0,2">MenuItemNF.png</texture>
+				</control>
+				<control type="image">
+					<posx>500</posx>
+					<posy>10</posy>
+					<width>20</width>
+					<height>20</height>
+					<texture>OverlayWatched.png</texture>
+					<visible>!IsEmpty(Listitem.Icon)</visible>
+				</control>
+				<control type="label">
+					<posx>20</posx>
+					<posy>0</posy>
+					<width>510</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="40" width="550">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>550</width>
+					<height>41</height>
+					<texture border="0,2,0,2">MenuItemNF.png</texture>
+					<visible>!Control.HasFocus(120)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>550</width>
+					<height>41</height>
+					<texture border="0,2,0,2">MenuItemFO.png</texture>
+					<visible>Control.HasFocus(120)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<posx>340</posx>
+					<posy>5</posy>
+					<width>200</width>
+					<height>31</height>
+					<texture border="0,0,14,0">MediaItemDetailBG.png</texture>
+					<visible>Control.HasFocus(120) + !IsEmpty(Listitem.Icon)</visible>
+				</control>
+				<control type="image">
+					<posx>500</posx>
+					<posy>10</posy>
+					<width>20</width>
+					<height>20</height>
+					<texture>OverlayWatched.png</texture>
+					<visible>!IsEmpty(Listitem.Icon)</visible>
+				</control>
+				<control type="label">
+					<posx>20</posx>
+					<posy>0</posy>
+					<width>510</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="scrollbar" id="61">
+			<posx>570</posx>
+			<posy>60</posy>
+			<width>25</width>
+			<height>520</height>
+			<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+			<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+			<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+			<textureslidernib>ScrollBarNib.png</textureslidernib>
+			<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+			<onleft>120</onleft>
+			<onright>120</onright>
+			<ondown>61</ondown>
+			<onup>61</onup>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+		</control>
+		<control type="label">
+			<description>number of files/pages in list text label</description>
+			<posx>580</posx>
+			<posy>592</posy>
+			<width>300</width>
+			<height>35</height>
+			<font>font12</font>
+			<align>right</align>
+			<aligny>center</aligny>
+			<scroll>true</scroll>
+			<textcolor>grey</textcolor>
+			<label>([COLOR=blue]$INFO[Container(120).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(120).CurrentPage]/$INFO[Container(120).NumPages][/COLOR])</label>
+			<visible>Control.IsVisible(120)</visible>
+		</control>
+
+		<control type="group">
+			<posx>20</posx>
+			<posy>592</posy>
+			<control type="button" id="22">
+				<description>Save button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>35</height>
+				<label>Save</label>
+				<font>font12_title</font>
+				<textcolor>white</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<align>center</align>
+				<texturenofocus border="5">MenuItemNF.png</texturenofocus>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<onup>120</onup>
+				<ondown>120</ondown>
+				<onleft>25</onleft>
+				<onright>23</onright>
+			</control>
+			<control type="button" id="23">
+				<description>Cancel button</description>
+				<posx>110</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>35</height>
+				<label>Cancel</label>
+				<font>font12_title</font>
+				<textcolor>white</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<align>center</align>
+				<texturenofocus border="5">MenuItemNF.png</texturenofocus>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<onup>120</onup>
+				<ondown>120</ondown>
+				<onleft>22</onleft>
+				<onright>24</onright>
+			</control>
+			<control type="button" id="24">
+				<description>Add button</description>
+				<posx>220</posx>
+				<posy>0</posy>
+				<width>60</width>
+				<height>35</height>
+				<label>Add</label>
+				<font>font12_title</font>
+				<textcolor>white</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<align>center</align>
+				<texturenofocus border="5">MenuItemNF.png</texturenofocus>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<onup>120</onup>
+				<ondown>120</ondown>
+				<onleft>23</onleft>
+				<onright>25</onright>
+			</control>
+			<control type="button" id="25">
+				<description>Del button</description>
+				<posx>290</posx>
+				<posy>0</posy>
+				<width>60</width>
+				<height>35</height>
+				<label>Del</label>
+				<font>font12_title</font>
+				<textcolor>white</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<align>center</align>
+				<texturenofocus border="5">MenuItemNF.png</texturenofocus>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<onup>120</onup>
+				<ondown>120</ondown>
+				<onleft>24</onleft>
+				<onright>22</onright>
+			</control>
+		</control>
+	</controls>
+</window>

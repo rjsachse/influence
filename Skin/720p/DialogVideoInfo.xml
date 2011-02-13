@@ -45,6 +45,21 @@
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
+					<visible>IsEmpty(ListItem.Property(HasMovieSets))</visible>
+				</control>
+				<control type="label">
+					<description>header label</description>
+					<posx>210</posx>
+					<posy>50</posy>
+					<width>1030</width>
+					<height>30</height>
+					<font>font35_title</font>
+					<label>$ADDON[script.moviesets 33004] - $INFO[Listitem.Title]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!IsEmpty(ListItem.Property(HasMovieSets))</visible>
 				</control>
 				<control type="grouplist">
 					<description>Media Codec Flagging Images</description>
@@ -55,10 +70,11 @@
 					<itemgap>0</itemgap>
 					<orientation>horizontal</orientation>
 					<include>VisibleFadeEffect</include>
-					<visible>!Control.IsVisible(50) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
+					<visible>!Control.IsVisible(50) + [!IsEmpty(ListItem.Property(HasMovieSets)) | Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 					<include>VideoCodecFlaggingConditions</include>
 					<include>AudioCodecFlaggingConditions</include>
 					<include>AspectCodecFlaggingConditions</include>
+                    <include>VideoTypeHackFlaggingConditions</include>
 				</control>
 				<control type="group">
 					<visible>Control.HasFocus(12)</visible>
@@ -177,8 +193,8 @@
 						<posy>20</posy>
 						<width>740</width>
 						<height>330</height>
-						<onleft>49</onleft>
-						<onright>49</onright>
+						<onleft>9000</onleft>
+						<onright>61</onright>
 						<onup>9000</onup>
 						<ondown>61</ondown>
 						<pagecontrol>-</pagecontrol>
@@ -246,6 +262,12 @@
 						</focusedlayout>
 						<content>
 							<item>
+								<label>$LOCALIZE[20342]:</label>
+								<label2>$INFO[ListItem.Property(TotalMovies)] [COLOR=grey] ($INFO[ListItem.Property(WatchedMovies),, $LOCALIZE[16102]] - $INFO[ListItem.Property(UnWatchedMovies), , $LOCALIZE[16101]])[/COLOR]</label2>
+								<onclick>-</onclick>
+								<visible>!IsEmpty(ListItem.Property(HasMovieSets))</visible>
+							</item>
+							<item>
 								<label>$LOCALIZE[20376]:</label>
 								<label2>$INFO[ListItem.OriginalTitle]</label2>
 								<onclick>-</onclick>
@@ -277,9 +299,9 @@
 							</item>
 							<item>
 								<label>$LOCALIZE[562]:</label>
-								<label2>$INFO[ListItem.Year]</label2>
+								<label2>$INFO[ListItem.Year]$INFO[ListItem.Property(Years)]</label2>
 								<onclick>-</onclick>
-								<visible>!IsEmpty(ListItem.Year)</visible>
+								<visible>!IsEmpty(ListItem.Year) | !IsEmpty(ListItem.Property(Years))</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[2050]:</label>
@@ -310,6 +332,12 @@
 								<label2>$INFO[ListItem.mpaa]</label2>
 								<onclick>-</onclick>
 								<visible>!IsEmpty(ListItem.mpaa)</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[574]:</label>
+								<label2>$INFO[ListItem.Property(Countries)]</label2>
+								<onclick>-</onclick>
+								<visible>!IsEmpty(ListItem.Property(Countries))</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[15311]</label>
@@ -972,6 +1000,20 @@
 					<label>[COLOR=blue]$LOCALIZE[206][/COLOR]$INFO[Container(50).CurrentPage, ( $LOCALIZE[31024] ]$INFO[Container(50).NumPages,/, )]</label>
 					<visible>Control.IsVisible(50)</visible>
 				</control>
+				<control type="label">
+					<posx>130r</posx>
+					<posy>480</posy>
+					<width>400</width>
+					<height>30</height>
+					<font>font13_title</font>
+					<textcolor>grey2</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>[COLOR=blue]$LOCALIZE[206][/COLOR]$INFO[Container(150).CurrentPage, ( $LOCALIZE[31024] ]$INFO[Container(150).NumPages,/, )]</label>
+					<visible>Control.IsVisible(150)</visible>
+				</control>
 				<control type="spincontrol" id="61">
 					<description>Next page button</description>
 					<posx>120r</posx>
@@ -997,7 +1039,7 @@
 					<pagecontrol>61</pagecontrol>
 					<label>$INFO[ListItem.Plot]</label>
 					<autoscroll time="3000" delay="4000" repeat="5000">!Control.HasFocus(61) + Skin.HasSetting(AutoScroll)</autoscroll>
-					<visible>!Control.IsVisible(50)</visible>
+					<visible>![Control.IsVisible(50) | Control.IsVisible(150)]</visible>
 				</control>
 				<control type="image">
 					<description>Actor image</description>
@@ -1009,7 +1051,19 @@
 					<aspectratio>keep</aspectratio>
 					<visible>Control.IsVisible(50)</visible>
 				</control>
-				<control type="panel" id="50">
+				<control type="image">
+					<description>Actor image</description>
+					<posx>210</posx>
+					<posy>480</posy>
+					<width>160</width>
+					<height>160</height>
+					<texture>$INFO[Container(150).Listitem.Icon]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>Control.IsVisible(150)</visible>
+				</control>
+				<control type="panel" id="150">
+					<description>Actor list for movieset</description>
+					<visible>!Control.IsVisible(50) + !IsEmpty(ListItem.Property(HasMovieSets))</visible>
 					<posx>380</posx>
 					<posy>520</posy>
 					<width>860</width>
@@ -1018,6 +1072,70 @@
 					<onright>61</onright>
 					<onup>61</onup>
 					<ondown>9000</ondown>
+					<viewtype label="">list</viewtype>
+					<pagecontrol>61</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<orientation>vertical</orientation>
+					<itemlayout height="40" width="430">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>430</width>
+							<height>40</height>
+							<texture border="5">button-nofocus.png</texture>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>410</width>
+							<height>40</height>
+							<font>font12</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<selectedcolor>white</selectedcolor>
+							<info>ListItem.Label</info>
+						</control>
+					</itemlayout>
+					<focusedlayout height="40" width="430">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>430</width>
+							<height>40</height>
+							<visible>!Control.HasFocus(150)</visible>
+							<texture border="5">button-nofocus.png</texture>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>430</width>
+							<height>40</height>
+							<visible>Control.HasFocus(150)</visible>
+							<texture border="5">button-focus.png</texture>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>410</width>
+							<height>40</height>
+							<font>font12</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<selectedcolor>white</selectedcolor>
+							<info>ListItem.Label</info>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="panel" id="50">
+					<description>default xbmc actor list</description>
+					<posx>380</posx>
+					<posy>520</posy>
+					<width>860</width>
+					<height>120</height>
+					<onleft>150</onleft>
+					<onright>150</onright>
+					<onup>150</onup>
+					<ondown>150</ondown>
 					<viewtype label="">list</viewtype>
 					<pagecontrol>61</pagecontrol>
 					<scrolltime>200</scrolltime>
@@ -1091,7 +1209,7 @@
 						<alttexturefocus border="2">button-focus.png</alttexturefocus>
 						<alttexturenofocus border="2">button-nofocus.png</alttexturenofocus>
 						<altlabel>1024</altlabel>
-						<usealttexture>Container.Content(TVShows)</usealttexture>
+						<usealttexture>Container.Content(TVShows) | !IsEmpty(ListItem.Property(HasMovieSets))</usealttexture>
 					</control>
 					<control type="button" id="5">
 						<description>Cast/Review</description>
@@ -1113,6 +1231,13 @@
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>20413</label>
 					</control>
+					<control type="button" id="16">
+						<description>DB Editor</description>
+						<label>DB $LOCALIZE[33065]</label>
+						<onclick>RunScript(script.library.editor)</onclick>
+						<visible>System.HasAddon(script.library.editor) + IsEmpty(ListItem.Property(HasMovieSets))</visible>
+						<include>ButtonInfoDialogsCommonValues</include>
+					</control>
 					<control type="button" id="11">
 						<description>Play Trailer</description>
 						<include>ButtonInfoDialogsCommonValues</include>
@@ -1122,12 +1247,19 @@
 					<control type="button" id="13">
 						<description>Home Theater Experience</description>
 						<include>ButtonInfoDialogsCommonValues</include>
-						<visible>Container.Content(Movies) + Skin.HasSetting(TheaterScript_Enable)</visible>
-						<label>Theater</label>
+						<visible>system.hasaddon(script.cinema.experience) + Container.Content(Movies)</visible>
+						<label>Cinema</label>
 						<onclick>Dialog.Close(MovieInformation)</onclick>
 						<onclick>Playlist.Clear</onclick>
-						<onclick>RunScript($INFO[Skin.String(TheaterScript_Path)])</onclick>
+						<onclick>XBMC.RunScript(script.cinema.experience)</onclick>
 					</control>
+					<control type="button" id="17">
+						<description>TvTunes</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<visible>Container.Content(TvShows)</visible>
+						<label>TvTunes</label>
+						<onclick>XBMC.RunScript(script.TvTunes,mode=solo&tvpath=$INFO[ListItem.FilenameAndPath]&tvname=$INFO[ListItem.TVShowTitle])</onclick>
+					</control>					
 					<control type="button" id="15">
 						<description>Play Trailer Windowed</description>
 						<include>ButtonInfoDialogsCommonValues</include>

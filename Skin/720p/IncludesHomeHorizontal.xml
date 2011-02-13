@@ -453,6 +453,7 @@
 				<posx>0</posx>
 				<posy>2</posy>
 				<height>30</height>
+
 				<width>520</width>
 				<font>font12_title</font>
 				<label> $LOCALIZE[20342]: $INFO[Window.Property(Movies.Count)]  |  $LOCALIZE[20343]: $INFO[Window.Property(TVShows.Count)]  |  Music Videos: $INFO[Window.Property(MusicVideos.Count)]</label>
@@ -541,27 +542,43 @@
 			</control>
 			<control type="group" id="300">
 				<control type="button" id="302">
-					<visible>Container(9000).HasFocus(3)</visible>
+					<visible>Container(9000).HasFocus(3) + Skin.HasSetting(homepageHideRecentlyAdded)</visible>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<onfocus>SetFocus(8002)</onfocus>
 				</control>
-				
+				<control type="button" id="304">
+					<visible>Container(9000).HasFocus(3) + Skin.HasSetting(homepageHideRandomAdded)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8006)</onfocus>
+				</control>
 				<control type="button" id="306">
-					<visible>Container(9000).HasFocus(10)</visible>
+					<visible>Container(9000).HasFocus(10) +   Skin.HasSetting(homepageHideRecentlyAdded)</visible>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<onfocus>SetFocus(8000)</onfocus>
 				</control>
 				<control type="button" id="307">
-					<visible>Container(9000).HasFocus(11) | Container(9000).HasFocus(2)</visible>
+					<visible>Container(9000).HasFocus(10) +  Skin.HasSetting(homepageHideRandomAdded)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8004)</onfocus>
+				</control>
+				<control type="button" id="308">
+					<visible>[Container(9000).HasFocus(11)| Container(9000).HasFocus(2)]  + Skin.HasSetting(homepageHideRecentlyAdded)</visible>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<onfocus>SetFocus(8001)</onfocus>
 				</control>
+				<control type="button" id="309">
+					<visible>[Container(9000).HasFocus(11)| Container(9000).HasFocus(2)] + Skin.HasSetting(homepageHideRandomAdded)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8007)</onfocus>
+				</control>
 			</control>
 			<include>GetFocusSubMenu</include>
-
 <!-- Alternate Submenu -->
 			<control type="group" id="9001">
 				<posx>207</posx>
@@ -637,20 +654,25 @@
 				<texture>home/homemenu_back.png</texture>
 			</control>
 			<control type="button" id="8999">
-				<description>Run Recently added</description>
-				<posx>-20</posx>
-				<posy>-20</posy>
-				<width>1</width>
-				<height>1</height>
-				<label>-</label>
-				<font>-</font>
-				<onfocus>Skin.Reset(LibraryUpdated)</onfocus>
-				<onfocus>XBMC.RunScript(script.recentlyadded,limit=4&amp;albums=True&amp;totals=True)</onfocus>
-				<onfocus>SetFocus(9000)</onfocus>
-				<texturenofocus>-</texturenofocus>
-				<texturefocus>-</texturefocus>
-				<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
-			</control>
+			<description>Run Recently added</description>
+			<posx>-20</posx>
+			<posy>-20</posy>
+			<width>1</width>
+			<height>1</height>
+			<label>-</label>
+			<font>-</font>
+			<onfocus>Skin.Reset(LibraryUpdated)</onfocus>
+			<onfocus>XBMC.RunScript(script.recentlyadded,limit=10&amp;albums=True&amp;totals=True)</onfocus>
+			<include condition ="Skin.HasSetting(homepageHideRandomAdded)">RunRandomAdded</include>
+			<!--<onfocus>XBMC.RunScript(plugin.image.mypicsdb)</onfocus>
+			<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=1,feed=http://pipes.yahoo.com/pipes/pipe.run?_id=5a24572a18610d68960eb7157888f834&_render=rss,imagecaching=true,limit=4)</onfocus>
+				<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=2,feed=http://pipes.yahoo.com/pipes/pipe.run?_id=413d8e16c498ffa60e05ce0a3e9d0dbe&_render=rss,limit=4)</onfocus>
+				<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=3,feed=http://pipes.yahoo.com/pipes/pipe.run?_id=7acceee6ebe06dcf6182991b3e5fc9dc&_render=rss,limit=4)</onfocus>-->
+			<onfocus>SetFocus(9000)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>Skin.HasSetting(homepageHideRecentlyAdded) | Skin.HasSetting(homepageHideRandomAdded)</visible>
+		</control>
 			<control type="button" id="8999">
 				<description>Don't run Recently added</description>
 				<posx>-20</posx>
@@ -662,7 +684,7 @@
 				<onfocus>SetFocus(9000)</onfocus>
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>-</texturefocus>
-				<visible>!Skin.HasSetting(homepageHideRecentlyAdded)</visible>
+				<visible>!Skin.HasSetting(homepageHideRecentlyAdded) + !Skin.HasSetting(homepageHideRandomAdded)</visible>
 			</control>
 			<control type="wraplist" id="9000">
 				<posx>-175</posx>

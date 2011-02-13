@@ -1,6 +1,7 @@
 <includes>
 	<include file="defaults.xml" />
 	<include file="ViewsVideoLibrary.xml" />
+	<include file="ViewsMovieSets.xml" />	
 	<include file="ViewsMusicLibrary.xml" />
 	<include file="ViewsFileMode.xml" />
 	<include file="ViewsPictures.xml" />
@@ -8,6 +9,8 @@
 	<include file="ViewsLiveTV.xml" />
 	<include file="IncludesCodecFlagging.xml" />
 	<include file="IncludesHomeRecentlyAdded.xml" />
+	<include file="IncludesHomeRandomAdded.xml" />
+	<include file="RssRecentlyAdded.xml" />
 	<!-- include pour setting carousel et autres-->
 	<include file="Include_CustomMenuCarousel.xml" />
 	<include file="CustomCarousel.xml" />
@@ -26,27 +29,46 @@
 	<include file="Carousel.xml" />
 	<include file="Include_CustomMenu.xml" />
 	<include file="IncludesInitSkin.xml" />
-	<include file="Viewtype_Showcase.xml" />
-	<include file="Viewtype_Wallstream.xml" />
-	<include file="Viewtype_Musicwallstream.xml" />
-	<include file="Viewtype_PicShowcase.xml" />
-	<include file="Viewtype_Lowlist.xml" />
-	<include file="Viewtype_RightList.xml" />
-	<include file="Viewtype_HalfWall.xml" />
-	<include file="Viewtype_HalfWall2.xml" />
-	<include file="Viewtype_Episode.xml" />
-	<include file="Viewtype_Poster.xml" />
-	<include file="Viewtype_Logo.xml" />
-	<include file="Viewtype_Logo2.xml" />
+	
+	<!-- Custom Views -->
+	<include file="View_Custom1001.xml" />
+	<include file="View_Custom1002.xml" />
+	<include file="View_Custom1003.xml" />
+	<include file="View_Custom1004.xml" />
+	<include file="View_Custom1005.xml" />
+	<include file="View_Custom1006.xml" />
+	<include file="View_Custom1007.xml" />
+	<include file="View_Custom1008.xml" />
+	<include file="View_Custom1009.xml" />
+	<include file="View_Custom1010.xml" />
+
 	<!-- View for Advanced launcher -->
 	<include file="Viewtype_AL_Wallstream.xml" />
 
 	<include file="script.weather.com.plus/CommonValues.xml" />
 	<include file="script.weather.com.plus/Current.xml" />
 	<include file="script.weather.com.plus/WeatherPluginView.xml" />
+
 	<constant name="FanartCrossfadeTime">500</constant>
 	<constant name="IconCrossfadeTime">400</constant>
 
+	<include name="KeyboardEditText">
+		<posx>55</posx>
+		<posy>60</posy>
+		<width>650</width>
+		<height>50</height>
+	</include>
+	<include name="KeyboardEditBigText">
+		<posx>-205</posx>
+		<posy>-75</posy>
+		<width>1180</width>
+		<height>320</height>
+		<wrapmultiline>true</wrapmultiline>
+	</include>
+
+	<include name="RunRandomAdded">
+		<onfocus>XBMC.RunScript(script.randomitems,limit=10&amp;unplayed=True)</onfocus>
+	</include>
 	<include name="CommonMediaPlayingBackground">
 		<control type="image">
 			<posx>0</posx>
@@ -63,15 +85,15 @@
 			<height>720</height>
 			<visible>Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis)+ !SubString(Window(10025).Property(TvTunesIsAlive),True)</visible>
 		</control>
-                <control type="image">
-                        <description>visualisation background</description>
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>1280</width>
-                        <height>720</height>
-                        <visible>Player.HasAudio + Skin.HasSetting(ShowBackgroundVis) + Skin.HasSetting(MusicFanArtIsEnable)</visible>
-                        <texture>$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
-                </control>
+		<control type="image">
+			<description>visualisation background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<visible>Player.HasAudio + Skin.HasSetting(ShowBackgroundVis) + Skin.HasSetting(MusicFanArtIsEnable)</visible>
+			<texture>$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
+		</control>
 		<include>FanartMusic</include>
 		<control type="videowindow">
 			<posx>0</posx>
@@ -102,7 +124,8 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-			<visible>Container.Content(Movies)</visible>
+			<visible>!Skin.HasSetting(VideoLibraryMovieFanart)</visible>
+			<visible>Control.IsVisible(1001) + Skin.HasSetting(ViewCustom1001_ShowFanart) | [Container.Content(Movies) + !Control.IsVisible(513)]</visible>
 		</control>
 		<control type="multiimage">
 			<posx>0</posx>
@@ -113,6 +136,7 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
+			<visible>!Skin.HasSetting(VideoLibraryTVFanart)</visible>
 			<visible>[Container.Content(TVShows) | Container.Content(Seasons) |Container.Content(Episodes)]</visible>
 		</control>
 	</include>
@@ -222,7 +246,7 @@
 			<texture>black-back.png</texture>
 			<animation effect="fade" time="400">Visible</animation>
 			<animation effect="fade" time="200">Hidden</animation>
-			<visible>Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(SongInformation) | Window.IsActive(FileBrowser) | Window.IsActive(TextViewer) | Window.IsActive(AddonSettings) | Window.IsActive(ContentSettings) | Window.IsActive(SelectDialog) | Window.IsActive(FileStackingDialog) | Window.IsActive(MediaSource) | Window.IsActive(PictureInfo) | Window.IsActive(PlayerControls) | Window.IsActive(VirtualKeyboard) | Window.IsActive(NumericInput) | Window.IsActive(ProfileSettings) | Window.IsActive(LockSettings) | Window.IsActive(SmartPlaylistEditor) | Window.IsActive(SmartPlaylistRule) | Window.IsActive(script-Apple_Movie_Trailers-settings.xml) | Window.IsActive(script-Apple_Movie_Trailers-chooser.xml) | Window.IsActive(script-Apple_Movie_Trailers-search.xml) | Window.IsActive(script-Apple_Movie_Trailers-showtimes.xml) | Window.IsActive(script-XBMC_Lyrics-settings.xml) | Window.IsActive(script-RSS_Editor-rssEditor.xml) | Window.IsActive(script-RSS_Editor-setEditor.xml) | Window.IsActive(AddonInformation)</visible>
+			<visible>Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(SongInformation) | Window.IsActive(FileBrowser) | Window.IsActive(TextViewer) | Window.IsActive(AddonSettings) | Window.IsActive(ContentSettings) | Window.IsActive(SelectDialog) | Window.IsActive(FileStackingDialog) | Window.IsActive(MediaSource) | Window.IsActive(PictureInfo) | Window.IsActive(PlayerControls) | Window.IsActive(VirtualKeyboard) | Window.IsActive(NumericInput) | Window.IsActive(ProfileSettings) | Window.IsActive(LockSettings) | Window.IsActive(SmartPlaylistEditor) | Window.IsActive(SmartPlaylistRule) | Window.IsActive(script-Apple_Movie_Trailers-settings.xml) | Window.IsActive(script-Apple_Movie_Trailers-chooser.xml) | Window.IsActive(script-Apple_Movie_Trailers-search.xml) | Window.IsActive(script-Apple_Movie_Trailers-showtimes.xml) | Window.IsActive(script-XBMC_Lyrics-settings.xml) | Window.IsActive(script-RSS_Editor-rssEditor.xml) | Window.IsActive(script-RSS_Editor-setEditor.xml) | Window.IsActive(Script-GenreEditor.xml) | Window.IsActive(AddonInformation) | Window.IsActive(13000) | Window.IsActive(FileBrowser.xml) | Window.IsActive(DialogVideoInfo.xml)</visible>
 		</control>
 	</include>
 	<include name="WindowTitleCommons">
@@ -998,10 +1022,10 @@ tent(LiveTV)</visible>
 		<animation effect="fade" time="300">Hidden</animation>
 	</include>
 	<include name="HomeBigVisible">
-		<visible>Container(9000).HasFocus(1)  + Skin.HasSetting(Menu_Programs_sub_act) | Container(9000).HasFocus(2)  + Skin.HasSetting(Menu_Videos_sub_act) |Container(9000).HasFocus(3)  + Skin.HasSetting(Menu_Music_sub_act) |Container(9000).HasFocus(4)  + Skin.HasSetting(Menu_Pictures_sub_act) |Container(9000).HasFocus(5) | Container(9000).HasFocus(6)  + Skin.HasSetting(Menu_Weather_sub_act) |Container(9000).HasFocus(10)  + Skin.HasSetting(Menu_Movie_sub_act) |Container(9000).HasFocus(11)  + Skin.HasSetting(Menu_TVShows_sub_act) | Container(9000).HasFocus(20)  + Skin.HasSetting(Menu_Men1_sub_act) |Container(9000).HasFocus(21)  + Skin.HasSetting(Menu_Men2_sub_act) | Container(9000).HasFocus(22)  + Skin.HasSetting(Menu_Men3_sub_act) | Container(9000).HasFocus(23)  + Skin.HasSetting(Menu_Men4_sub_act) |Container(9000).HasFocus(13)  + Skin.HasSetting(Menu_Exit_sub_act) |Container(9000).HasFocus(12)  + Skin.HasSetting(Menu_Dvd_sub_act) | Container(9000).HasFocus(14)  + Skin.HasSetting(Menu_Pictures_sub_act) | Container(9000).HasFocus(15)  + Skin.HasSetting(Menu_LiveTv_sub_act) | Container(9000).HasFocus(14)  + Skin.HasSetting(Menu_Favorites_sub_act) </visible>
+		<visible>Container(9000).HasFocus(1)  + Skin.HasSetting(Menu_Programs_sub_act) | Container(9000).HasFocus(2)  + Skin.HasSetting(Menu_Videos_sub_act) |Container(9000).HasFocus(3)  + Skin.HasSetting(Menu_Music_sub_act) |Container(9000).HasFocus(4)  + Skin.HasSetting(Menu_Pictures_sub_act) |Container(9000).HasFocus(5) | Container(9000).HasFocus(6)  + Skin.HasSetting(Menu_Weather_sub_act) |Container(9000).HasFocus(10)  + Skin.HasSetting(Menu_Movie_sub_act) |Container(9000).HasFocus(11)  + Skin.HasSetting(Menu_TVShows_sub_act) | Container(9000).HasFocus(20)  + Skin.HasSetting(Menu_Men1_sub_act) |Container(9000).HasFocus(21)  + Skin.HasSetting(Menu_Men2_sub_act) | Container(9000).HasFocus(22)  + Skin.HasSetting(Menu_Men3_sub_act) | Container(9000).HasFocus(23)  + Skin.HasSetting(Menu_Men4_sub_act) |Container(9000).HasFocus(13)  + Skin.HasSetting(Menu_Exit_sub_act) |Container(9000).HasFocus(12)  + Skin.HasSetting(Menu_Dvd_sub_act) | Container(9000).HasFocus(14)  + Skin.HasSetting(Menu_Pictures_sub_act) | Container(9000).HasFocus(15)  + Skin.HasSetting(Menu_LiveTv_sub_act) | Container(9000).HasFocus(14)  + Skin.HasSetting(Menu_Favorites_sub_act)|Container(9000).HasFocus(16) + Skin.HasSetting(Menu_Info_sub_act) </visible>
 	</include>
 	<include name="HomeBigNotVisible">
-		<visible>![Container(9000).HasFocus(1)  + Skin.HasSetting(Menu_Programs_sub_act) | Container(9000).HasFocus(2)  + Skin.HasSetting(Menu_Videos_sub_act) |Container(9000).HasFocus(3)  + Skin.HasSetting(Menu_Music_sub_act) |Container(9000).HasFocus(4)  + Skin.HasSetting(Menu_Pictures_sub_act) |Container(9000).HasFocus(5) | Container(9000).HasFocus(6)  + Skin.HasSetting(Menu_Weather_sub_act) |Container(9000).HasFocus(10)  + Skin.HasSetting(Menu_Movie_sub_act) |Container(9000).HasFocus(11)  + Skin.HasSetting(Menu_TVShows_sub_act) | Container(9000).HasFocus(20)  + Skin.HasSetting(Menu_Men1_sub_act) |Container(9000).HasFocus(21)  + Skin.HasSetting(Menu_Men2_sub_act) | Container(9000).HasFocus(22)  + Skin.HasSetting(Menu_Men3_sub_act) | Container(9000).HasFocus(23)  + Skin.HasSetting(Menu_Men4_sub_act) |Container(9000).HasFocus(13)  + Skin.HasSetting(Menu_Exit_sub_act) |Container(9000).HasFocus(12)  + Skin.HasSetting(Menu_Dvd_sub_act) | Container(9000).HasFocus(14)  + Skin.HasSetting(Menu_Pictures_sub_act) | Container(9000).HasFocus(15)  + Skin.HasSetting(Menu_LiveTv_sub_act) | Container(9000).HasFocus(14)  + Skin.HasSetting(Menu_Favorites_sub_act)]</visible>
+		<visible>![Container(9000).HasFocus(1)  + Skin.HasSetting(Menu_Programs_sub_act) | Container(9000).HasFocus(2)  + Skin.HasSetting(Menu_Videos_sub_act) |Container(9000).HasFocus(3)  + Skin.HasSetting(Menu_Music_sub_act) |Container(9000).HasFocus(4)  + Skin.HasSetting(Menu_Pictures_sub_act) |Container(9000).HasFocus(5) | Container(9000).HasFocus(6)  + Skin.HasSetting(Menu_Weather_sub_act) |Container(9000).HasFocus(10)  + Skin.HasSetting(Menu_Movie_sub_act) |Container(9000).HasFocus(11)  + Skin.HasSetting(Menu_TVShows_sub_act) | Container(9000).HasFocus(20)  + Skin.HasSetting(Menu_Men1_sub_act) |Container(9000).HasFocus(21)  + Skin.HasSetting(Menu_Men2_sub_act) | Container(9000).HasFocus(22)  + Skin.HasSetting(Menu_Men3_sub_act) | Container(9000).HasFocus(23)  + Skin.HasSetting(Menu_Men4_sub_act) |Container(9000).HasFocus(13)  + Skin.HasSetting(Menu_Exit_sub_act) |Container(9000).HasFocus(12)  + Skin.HasSetting(Menu_Dvd_sub_act) | Container(9000).HasFocus(14)  + Skin.HasSetting(Menu_Pictures_sub_act) | Container(9000).HasFocus(15)  + Skin.HasSetting(Menu_LiveTv_sub_act) | Container(9000).HasFocus(14)  + Skin.HasSetting(Menu_Favorites_sub_act)]|Container(9000).HasFocus(16) + Skin.HasSetting(Menu_Info_sub_act)</visible>
 	</include>
 	<include name="HomeLogo">
 		<control type="image">
@@ -1085,47 +1109,169 @@ tent(LiveTV)</visible>
 			</control>
 		</control>
 	</include>
+	<include name="CommonMediaCodeFlaggingImages">
+		<control type="grouplist">
+			<description>Media Codec Flagging Images</description>
+			<posx>10</posx>
+			<posy>685</posy>
+			<width>590</width>
+			<align>left</align>
+			<itemgap>0</itemgap>
+			<orientation>horizontal</orientation>
+			<include>VideoCodecFlaggingConditions</include>
+			<include>AudioCodecFlaggingConditions</include>
+			<include>AspectCodecFlaggingConditions</include>
+			<include>VideoTypeHackFlaggingConditions</include>
+			<include>MovieSetsTypeHackFlaggingConditions</include>
+			<include>VideoMPAAFlaggingConditions</include>
+			<include>VideoMPAAFlaggingConditionsCSA</include>		
+			<include>VideoMPAAFlaggingConditionsUK</include>			
+			<visible>![Control.IsVisible(1001) + !Skin.HasSetting(ViewCustom1001_ShowFlagMedia)]</visible>
+			<visible>![Control.IsVisible(1002) + !Skin.HasSetting(ViewCustom1002_ShowFlagMedia)]</visible>
+			<visible>![Control.IsVisible(1003) + !Skin.HasSetting(ViewCustom1003_ShowFlagMedia)]</visible>
+			<visible>![Control.IsVisible(1004) + !Skin.HasSetting(ViewCustom1004_ShowFlagMedia)]</visible>
+			<visible>![Control.IsVisible(1005) + !Skin.HasSetting(ViewCustom1005_ShowFlagMedia)]</visible>
+			<visible>![Control.IsVisible(1006) + !Skin.HasSetting(ViewCustom1006_ShowFlagMedia)]</visible>
+			<visible>![Control.IsVisible(1007) + !Skin.HasSetting(ViewCustom1007_ShowFlagMedia)]</visible>
+			<visible>![Control.IsVisible(1008) + !Skin.HasSetting(ViewCustom1008_ShowFlagMedia)]</visible>
+			<visible>![Control.IsVisible(1009) + !Skin.HasSetting(ViewCustom1009_ShowFlagMedia)]</visible>
+			<visible>![Control.IsVisible(1010) + !Skin.HasSetting(ViewCustom1010_ShowFlagMedia)]</visible>
+			<visible>!Skin.HasSetting(HideMediaCodeFlaggingImages)</visible>
+		</control>
+	</include>
 	<include name="MyVideoTopScreen">
 		<control type="group">
-			<posx>240</posx>
-			<posy>0</posy>
-			<visible>Container.Content(Movies)</visible>
-			<include>VisibleFadeEffect</include>
-			<animation effect="slide" end="-510,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-			<animation effect="slide" start="-510,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-			<control type="image">
-				<posx>0</posx>
+			<control type="group">
+				<posx>240</posx>
 				<posy>0</posy>
-				<width>250</width>
-				<height>35</height>
-				<texture border="0,0,32,0">header.png</texture>
+				<visible>Container.Content(MusicVideos)</visible>
+				<include>VisibleFadeEffect</include>
+				<animation effect="slide" end="-510,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+				<animation effect="slide" start="-510,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>35</height>
+					<texture border="0,0,32,0">header.png</texture>
+				</control>
+				<control type="label">
+					<include>WindowTitleCommons</include>
+					<posx>220</posx>
+					<label>$LOCALIZE[20389]</label>
+				</control>
 			</control>
-			<control type="label">
-				<include>WindowTitleCommons</include>
-				<posx>220</posx>
-				<label>$LOCALIZE[20342]</label>
-			</control>
-		</control>
-		<control type="group">
-			<posx>60</posx>
-			<posy>0</posy>
-			<animation effect="slide" end="-310,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-			<animation effect="slide" start="-310,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-			<control type="image">
-				<posx>0</posx>
+			<control type="group">
+				<posx>240</posx>
 				<posy>0</posy>
-				<width>250</width>
-				<height>35</height>
-				<texture border="0,0,32,0">header.png</texture>
+				<visible>Container.Content(TVShows)</visible>
+				<include>VisibleFadeEffect</include>
+				<animation effect="slide" end="-510,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+				<animation effect="slide" start="-510,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>35</height>
+					<texture border="0,0,32,0">header.png</texture>
+				</control>
+				<control type="label">
+					<include>WindowTitleCommons</include>
+					<posx>220</posx>
+					<label>$LOCALIZE[20343]</label>
+				</control>
 			</control>
-			<control type="label">
-				<include>WindowTitleCommons</include>
-				<posx>220</posx>
-				<label>$LOCALIZE[20314]</label>
+			<control type="group">
+				<posx>470</posx>
+				<posy>0</posy>
+				<visible>Container.Content(Episodes)</visible>
+				<include>VisibleFadeEffect</include>
+				<animation effect="slide" end="-710,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+				<animation effect="slide" start="-710,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>35</height>
+					<texture border="0,0,32,0">header.png</texture>
+				</control>
+				<control type="label">
+					<include>WindowTitleCommons</include>
+					<posx>220</posx>
+					<label>$INFO[ListItem.Season,$LOCALIZE[20373] ]</label>
+				</control>
 			</control>
+			<control type="group">
+				<posx>240</posx>
+				<posy>0</posy>
+				<visible>Container.Content(Seasons) | Container.Content(Episodes)</visible>
+				<include>VisibleFadeEffect</include>
+				<animation effect="slide" end="-600,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+				<animation effect="slide" start="-600,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>350</width>
+					<height>35</height>
+					<texture border="0,0,32,0">header.png</texture>
+				</control>
+				<control type="label">
+					<width>250</width>
+					<include>WindowTitleCommons</include>
+					<posx>320</posx>
+					<label>$INFO[ListItem.TVShowTitle]</label>
+				</control>
+			</control>
+			<control type="group">
+				<control type="group">
+					<posx>240</posx>
+					<posy>0</posy>
+					<visible>Container.Content(Movies) | !IsEmpty(Window(10025).Property(Content.MovieSets))</visible>
+					<include>VisibleFadeEffect</include>
+					<animation effect="slide" end="-510,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+					<animation effect="slide" start="-510,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>250</width>
+						<height>35</height>
+						<texture border="0,0,32,0">header.png</texture>
+					</control>
+					<include>MovieSetsHeader</include>
+				</control>
+				<control type="group">
+					<posx>60</posx>
+					<posy>0</posy>
+					<animation effect="slide" end="-310,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+					<animation effect="slide" start="-310,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>250</width>
+						<height>35</height>
+						<texture border="0,0,32,0">header.png</texture>
+					</control>
+					<control type="label">
+						<include>WindowTitleCommons</include>
+						<posx>220</posx>
+						<label>$LOCALIZE[20314]</label>
+					</control>
+				</control>
+				<include>WindowTitleHomeButton</include>
+				<include>Clock</include>
+			</control>
+			<visible> ![Control.IsVisible(1001) + !Skin.HasSetting(ViewCustom1001_ShowHomePathClock)]</visible>
+			<visible> ![Control.IsVisible(1002) + !Skin.HasSetting(ViewCustom1002_ShowHomePathClock)]</visible>
+			<visible> ![Control.IsVisible(1003) + !Skin.HasSetting(ViewCustom1003_ShowHomePathClock)]</visible>
+			<visible> ![Control.IsVisible(1004) + !Skin.HasSetting(ViewCustom1004_ShowHomePathClock)]</visible>
+			<visible> ![Control.IsVisible(1005) + !Skin.HasSetting(ViewCustom1005_ShowHomePathClock)]</visible>
+			<visible> ![Control.IsVisible(1006) + !Skin.HasSetting(ViewCustom1006_ShowHomePathClock)]</visible>
+			<visible> ![Control.IsVisible(1007) + !Skin.HasSetting(ViewCustom1007_ShowHomePathClock)]</visible>
+			<visible> ![Control.IsVisible(1008) + !Skin.HasSetting(ViewCustom1008_ShowHomePathClock)]</visible>
+			<visible> ![Control.IsVisible(1009) + !Skin.HasSetting(ViewCustom1009_ShowHomePathClock)]</visible>
+			<visible> ![Control.IsVisible(1010) + !Skin.HasSetting(ViewCustom1010_ShowHomePathClock)]</visible>
+			<visible>!Skin.HasSetting(HideTopScreen)</visible>
 		</control>
-		<include>WindowTitleHomeButton</include>
-		<include>Clock</include>
 	</include>
 	<include name="MyMusicTopScreen">
 		<control type="group">
@@ -1184,5 +1330,49 @@ tent(LiveTV)</visible>
 				<onfocus>SetFocus(10)</onfocus>
 			</control>
 		</control>
+	</include>
+	<include name="VisibleFadeEffect2">
+	<!--
+		<animation effect="fade" start="0" end="100" time="1600" delay="3500" >Visible</animation>
+		<animation effect="fade" start="100" end="0" time="0" >Hidden</animation>
+	-->
+		<animation effect="fade" start="0" end="100" time="1600" delay="3000" >Visible</animation>
+		<animation effect="fade" start="100" end="0" time="0" >Hidden</animation>
+	</include>	
+	<include name="Include_CustomView">
+		<include condition="Skin.HasSetting(ViewCustom1001_IsEnable)">ViewCustom1001_Mod</include> <!-- view id = 1001 -->
+		<include condition="Skin.HasSetting(ViewCustom1002_IsEnable)">ViewCustom1002_Mod</include> <!-- view id = 1002 -->
+		<include condition="Skin.HasSetting(ViewCustom1003_IsEnable)">ViewCustom1003_Mod</include> <!-- view id = 1003 -->			
+		<include condition="Skin.HasSetting(ViewCustom1004_IsEnable)">ViewCustom1004_Mod</include> <!-- view id = 1004 -->			
+		<include condition="Skin.HasSetting(ViewCustom1005_IsEnable)">ViewCustom1005_Mod</include> <!-- view id = 1005 -->			
+		<include condition="Skin.HasSetting(ViewCustom1006_IsEnable)">ViewCustom1006_Mod</include> <!-- view id = 1006 -->			
+		<include condition="Skin.HasSetting(ViewCustom1007_IsEnable)">ViewCustom1007_Mod</include> <!-- view id = 1007 -->			
+		<include condition="Skin.HasSetting(ViewCustom1008_IsEnable)">ViewCustom1008_Mod</include> <!-- view id = 1008 -->			
+		<include condition="Skin.HasSetting(ViewCustom1009_IsEnable)">ViewCustom1009_Mod</include> <!-- view id = 1009 -->			
+		<include condition="Skin.HasSetting(ViewCustom1010_IsEnable)">ViewCustom1010_Mod</include> <!-- view id = 1010 -->			
+	</include>
+	<include name="Include_CustomView_Cust">
+		<include condition="Skin.HasSetting(ViewCustom1001_IsEnable)">ViewCustom1001_Custom</include> <!-- view id = 1001 -->
+		<include condition="Skin.HasSetting(ViewCustom1002_IsEnable)">ViewCustom1002_Custom</include> <!-- view id = 1002 -->
+		<include condition="Skin.HasSetting(ViewCustom1003_IsEnable)">ViewCustom1003_Custom</include> <!-- view id = 1003 -->			
+		<include condition="Skin.HasSetting(ViewCustom1004_IsEnable)">ViewCustom1004_Custom</include> <!-- view id = 1004 -->			
+		<include condition="Skin.HasSetting(ViewCustom1005_IsEnable)">ViewCustom1005_Custom</include> <!-- view id = 1005 -->			
+		<include condition="Skin.HasSetting(ViewCustom1006_IsEnable)">ViewCustom1006_Custom</include> <!-- view id = 1006 -->			
+		<include condition="Skin.HasSetting(ViewCustom1007_IsEnable)">ViewCustom1007_Custom</include> <!-- view id = 1007 -->			
+		<include condition="Skin.HasSetting(ViewCustom1008_IsEnable)">ViewCustom1008_Custom</include> <!-- view id = 1008 -->			
+		<include condition="Skin.HasSetting(ViewCustom1009_IsEnable)">ViewCustom1009_Custom</include> <!-- view id = 1009 -->			
+		<include condition="Skin.HasSetting(ViewCustom1010_IsEnable)">ViewCustom1010_Custom</include> <!-- view id = 1010 -->			
+	</include>		
+	<include name="CustomViewFanart">
+		<visible>![Control.IsVisible(1001) + !Skin.HasSetting(ViewCustom1001_ShowFanart)]</visible>
+		<visible>![Control.IsVisible(1002) + !Skin.HasSetting(ViewCustom1002_ShowFanart)]</visible>
+		<visible>![Control.IsVisible(1003) + !Skin.HasSetting(ViewCustom1003_ShowFanart)]</visible>
+		<visible>![Control.IsVisible(1004) + !Skin.HasSetting(ViewCustom1004_ShowFanart)]</visible>
+		<visible>![Control.IsVisible(1005) + !Skin.HasSetting(ViewCustom1005_ShowFanart)]</visible>
+		<visible>![Control.IsVisible(1006) + !Skin.HasSetting(ViewCustom1006_ShowFanart)]</visible>
+		<visible>![Control.IsVisible(1007) + !Skin.HasSetting(ViewCustom1007_ShowFanart)]</visible>
+		<visible>![Control.IsVisible(1008) + !Skin.HasSetting(ViewCustom1008_ShowFanart)]</visible>
+		<visible>![Control.IsVisible(1009) + !Skin.HasSetting(ViewCustom1009_ShowFanart)]</visible>
+		<visible>![Control.IsVisible(1010) + !Skin.HasSetting(ViewCustom1010_ShowFanart)]</visible>	
 	</include>
 </includes>

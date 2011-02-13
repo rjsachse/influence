@@ -47,6 +47,7 @@
 				<onclick>Skin.Reset(Menu_Movie)</onclick>
 				<onclick>Skin.Reset(Menu_Videos)</onclick>
 				<onclick>Skin.Reset(Menu_LiveTv)</onclick>
+				<onclick>Skin.Reset(Menu_Info)</onclick>
 				<onclick>Skin.Reset(Menu_Music)</onclick>
 				<onclick>Skin.Reset(Menu_DVD)</onclick>
 				<onclick>Skin.Reset(Menu_Favorites)</onclick>
@@ -273,6 +274,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<onclick>Skin.ToggleSetting(Menu_LiveTv)</onclick>
+				<onclick>Skin.Reset(Menu_Info)</onclick>
 				<onclick>Skin.Reset(Menu_Videos)</onclick>
 				<onclick>Skin.Reset(Menu_Settings)</onclick>
 				<onclick>Skin.Reset(Menu_Pictures)</onclick>
@@ -740,7 +742,485 @@
 				<visible>Skin.HasSetting(Menu_LiveTv) + Skin.HasSetting(Menu_LiveTv_act) + Skin.HasSetting(Menu_LiveTv_sub10_act)</visible>
 			</control>
 <!--Menu LiveTv (FIN) -->
-
+<!--Menu Info -->
+			<control type="button" id="160000">
+				<width>750</width>
+				<height>45</height>
+				<font>font13</font>
+				<label>$LOCALIZE[35020] $INFO[Skin.String(Menu_Info_lab)]</label>
+				<textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<onclick>Skin.ToggleSetting(Menu_Info)</onclick>
+				<onclick>Skin.Reset(Menu_LiveTv)</onclick>
+				<onclick>Skin.Reset(Menu_Videos)</onclick>
+				<onclick>Skin.Reset(Menu_Settings)</onclick>
+				<onclick>Skin.Reset(Menu_Pictures)</onclick>
+				<onclick>Skin.Reset(Menu_Weather)</onclick>
+				<onclick>Skin.Reset(Menu_Movie)</onclick>
+				<onclick>Skin.Reset(Menu_TVShows)</onclick>
+				<onclick>Skin.Reset(Menu_Programs)</onclick>
+				<onclick>Skin.Reset(Menu_Music)</onclick>
+				<onclick>Skin.Reset(Menu_DVD)</onclick>
+				<onclick>Skin.Reset(Menu_Favorites)</onclick>
+				<onclick>Skin.Reset(Menu_Exit)</onclick>
+				<onclick>Skin.Reset(Menu_Men1)</onclick>
+				<onclick>Skin.Reset(Menu_Men2)</onclick>
+				<onclick>Skin.Reset(Menu_Men3)</onclick>
+				<onclick>Skin.Reset(Menu_Men4)</onclick>
+			</control>
+			<control type="radiobutton" id="161000">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$LOCALIZE[35117] [B]$INFO[Skin.String(Menu_Info_lab)][/B]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_Info_act)</onclick>
+				<selected>Skin.HasSetting(Menu_Info_act)</selected>
+				<visible>Skin.HasSetting(Menu_Info)</visible>
+			</control>
+			<control type="button" id="162000">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[31120]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Info_lab)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(Menu_Info_lab)</onclick>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)</visible>
+			</control>
+			<control type="button" id="163000">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[31121]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Info_run)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Info_run)</onclick>
+				<onclick>ActivateWindow(2114)</onclick>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)</visible>
+			</control>
+			<control type="radiobutton" id="164011">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$LOCALIZE[31119] [B]$INFO[Skin.String(Menu_Info_sub1_lab)][/B]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_Info_sub1_act)</onclick>
+				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Info&amp;Nb=10)</onclick>
+				<selected>Skin.HasSetting(Menu_Info_sub1_act)</selected>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)</visible>
+			</control>
+			<control type="button" id="164012">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[31120]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Info_sub1_lab)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(Menu_Info_sub1_lab)</onclick>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)  + Skin.HasSetting(Menu_Info_sub1_act) </visible>
+			</control>
+			<control type="button" id="164013">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[31121]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Info_sub1_run)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Info_sub1_run)</onclick>
+				<onclick>ActivateWindow(2114)</onclick>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)  + Skin.HasSetting(Menu_Info_sub1_act) </visible>
+			</control>
+			<control type="radiobutton" id="164021">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$LOCALIZE[31119] [B]$INFO[Skin.String(Menu_Info_sub2_lab)][/B]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_Info_sub2_act)</onclick>
+				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Info&amp;Nb=10)</onclick>
+				<selected>Skin.HasSetting(Menu_Info_sub2_act)</selected>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)</visible>
+			</control>
+			<control type="button" id="164022">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[31120]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Info_sub2_lab)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(Menu_Info_sub2_lab)</onclick>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)  + Skin.HasSetting(Menu_Info_sub2_act) </visible>
+			</control>
+			<control type="button" id="164023">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[31121]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Info_sub2_run)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Info_sub2_run)</onclick>
+				<onclick>ActivateWindow(2114)</onclick>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)  + Skin.HasSetting(Menu_Info_sub2_act) </visible>
+			</control>
+			<control type="radiobutton" id="164031">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$LOCALIZE[31119] [B]$INFO[Skin.String(Menu_Info_sub3_lab)][/B]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_Info_sub3_act)</onclick>
+				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Info&amp;Nb=10)</onclick>
+				<selected>Skin.HasSetting(Menu_Info_sub3_act)</selected>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)</visible>
+			</control>
+			<control type="button" id="164032">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[31120]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Info_sub3_lab)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(Menu_Info_sub3_lab)</onclick>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)  + Skin.HasSetting(Menu_Info_sub3_act) </visible>
+			</control>
+			<control type="button" id="164033">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[31121]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Info_sub3_run)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Info_sub3_run)</onclick>
+				<onclick>ActivateWindow(2114)</onclick>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)  + Skin.HasSetting(Menu_Info_sub3_act) </visible>
+			</control>
+			<control type="radiobutton" id="164041">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$LOCALIZE[31119] [B]$INFO[Skin.String(Menu_Info_sub4_lab)][/B]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_Info_sub4_act)</onclick>
+				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Info&amp;Nb=10)</onclick>
+				<selected>Skin.HasSetting(Menu_Info_sub4_act)</selected>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)</visible>
+			</control>
+			<control type="button" id="164042">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[31120]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Info_sub4_lab)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(Menu_Info_sub4_lab)</onclick>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)  + Skin.HasSetting(Menu_Info_sub4_act) </visible>
+			</control>
+			<control type="button" id="164043">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[31121]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Info_sub4_run)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Info_sub4_run)</onclick>
+				<onclick>ActivateWindow(2114)</onclick>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)  + Skin.HasSetting(Menu_Info_sub4_act)</visible>
+			</control>
+			<control type="radiobutton" id="164051">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$LOCALIZE[31119] [B]$INFO[Skin.String(Menu_Info_sub5_lab)][/B]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_Info_sub5_act)</onclick>
+				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Info&amp;Nb=10)</onclick>
+				<selected>Skin.HasSetting(Menu_Info_sub5_act)</selected>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)</visible>
+			</control>
+			<control type="button" id="164052">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[31120]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Info_sub5_lab)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(Menu_Info_sub5_lab)</onclick>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)  + Skin.HasSetting(Menu_Info_sub5_act) </visible>
+			</control>
+			<control type="button" id="164053">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[31121]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Info_sub5_run)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Info_sub5_run)</onclick>
+				<onclick>ActivateWindow(2114)</onclick>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)  + Skin.HasSetting(Menu_Info_sub5_act)</visible>
+			</control>
+			<control type="radiobutton" id="164061">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$LOCALIZE[31119] [B]$INFO[Skin.String(Menu_Info_sub6_lab)][/B]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_Info_sub6_act)</onclick>
+				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Info&amp;Nb=10)</onclick>
+				<selected>Skin.HasSetting(Menu_Info_sub6_act)</selected>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)</visible>
+			</control>
+			<control type="button" id="164062">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[31120]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Info_sub6_lab)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(Menu_Info_sub6_lab)</onclick>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)  + Skin.HasSetting(Menu_Info_sub6_act) </visible>
+			</control>
+			<control type="button" id="164063">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[31121]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Info_sub6_run)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Info_sub6_run)</onclick>
+				<onclick>ActivateWindow(2114)</onclick>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)  + Skin.HasSetting(Menu_Info_sub6_act)</visible>
+			</control>
+			<control type="radiobutton" id="164071">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$LOCALIZE[31119] [B]1[/B]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_Info_sub7_act)</onclick>
+				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Info&amp;Nb=10)</onclick>
+				<selected>Skin.HasSetting(Menu_Info_sub7_act)</selected>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)</visible>
+			</control>
+			<control type="button" id="164072">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[31120]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Info_sub7_lab)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(Menu_Info_sub7_lab)</onclick>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act) + Skin.HasSetting(Menu_Info_sub7_act)</visible>
+			</control>
+			<control type="button" id="164073">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[31121]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Info_sub7_run)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Info_sub7_run)</onclick>
+				<onclick>ActivateWindow(2114)</onclick>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act) + Skin.HasSetting(Menu_Info_sub7_act)</visible>
+			</control>
+			<control type="radiobutton" id="164081">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$LOCALIZE[31119] [B]2[/B]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_Info_sub8_act)</onclick>
+				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Info&amp;Nb=10)</onclick>
+				<selected>Skin.HasSetting(Menu_Info_sub8_act)</selected>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)</visible>
+			</control>
+			<control type="button" id="164082">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[31120]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Info_sub8_lab)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(Menu_Info_sub8_lab)</onclick>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act) + Skin.HasSetting(Menu_Info_sub8_act)</visible>
+			</control>
+			<control type="button" id="164083">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[31121]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Info_sub8_run)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Info_sub8_run)</onclick>
+				<onclick>ActivateWindow(2114)</onclick>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act) + Skin.HasSetting(Menu_Info_sub8_act)</visible>
+			</control>
+			<control type="radiobutton" id="164091">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$LOCALIZE[31119] [B]3[/B]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_Info_sub9_act)</onclick>
+				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Info&amp;Nb=10)</onclick>
+				<selected>Skin.HasSetting(Menu_Info_sub9_act)</selected>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)</visible>
+			</control>
+			<control type="button" id="164092">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[31120]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Info_sub9_lab)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(Menu_Info_sub9_lab)</onclick>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act) + Skin.HasSetting(Menu_Info_sub9_act)</visible>
+			</control>
+			<control type="button" id="164093">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[31121]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Info_sub9_run)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Info_sub9_run)</onclick>
+				<onclick>ActivateWindow(2114)</onclick>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act) + Skin.HasSetting(Menu_Info_sub9_act)</visible>
+			</control>
+			<control type="radiobutton" id="164101">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$LOCALIZE[31119] [B]4[/B]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_Info_sub10_act)</onclick>
+				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Info&amp;Nb=10)</onclick>
+				<selected>Skin.HasSetting(Menu_Info_sub10_act)</selected>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)</visible>
+			</control>
+			<control type="button" id="164102">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[31120]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Info_sub10_lab)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(Menu_Info_sub10_lab)</onclick>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act) + Skin.HasSetting(Menu_Info_sub10_act)</visible>
+			</control>
+			<control type="button" id="164103">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[31121]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Info_sub10_run)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Info_sub10_run)</onclick>
+				<onclick>ActivateWindow(2114)</onclick>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act) + Skin.HasSetting(Menu_Info_sub10_act)</visible>
+			</control>
+<!--Menu Info (FIN) -->
 <!--Menu VIDEO -->
 			<control type="button" id="20000">
 				<width>750</width>
@@ -755,6 +1235,7 @@
 				<onclick>Skin.Reset(Menu_Settings)</onclick>
 				<onclick>Skin.Reset(Menu_Pictures)</onclick>
 				<onclick>Skin.Reset(Menu_LiveTv)</onclick>
+				<onclick>Skin.Reset(Menu_Info)</onclick>
 				<onclick>Skin.Reset(Menu_Weather)</onclick>
 				<onclick>Skin.Reset(Menu_Movie)</onclick>
 				<onclick>Skin.Reset(Menu_TVShows)</onclick>
@@ -1236,6 +1717,7 @@
 				<onclick>Skin.Reset(Menu_Movie)</onclick>
 				<onclick>Skin.Reset(Menu_Videos)</onclick>
 				<onclick>Skin.Reset(Menu_LiveTv)</onclick>
+				<onclick>Skin.Reset(Menu_Info)</onclick>
 				<onclick>Skin.Reset(Menu_TVShows)</onclick>
 				<onclick>Skin.Reset(Menu_Programs)</onclick>
 				<onclick>Skin.Reset(Menu_Men1)</onclick>
@@ -1714,6 +2196,7 @@
 				<onclick>Skin.Reset(Menu_Weather)</onclick>
 				<onclick>Skin.Reset(Menu_Videos)</onclick>
 				<onclick>Skin.Reset(Menu_LiveTv)</onclick>
+				<onclick>Skin.Reset(Menu_Info)</onclick>
 				<onclick>Skin.Reset(Menu_Movie)</onclick>
 				<onclick>Skin.Reset(Menu_TVShows)</onclick>
 				<onclick>Skin.Reset(Menu_Programs)</onclick>
@@ -1819,7 +2302,7 @@
 				<onclick>Skin.ToggleSetting(Menu_Pictures_sub2_act)</onclick>
 				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Pictures&amp;Nb=10)</onclick>
 				<selected>Skin.HasSetting(Menu_Pictures_sub2_act)</selected>
-				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act)</visible>
+				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(Enable_Pictures_DataBase)</visible>
 			</control>
 			<control type="button" id="44022">
 				<width>750</width>
@@ -1832,7 +2315,7 @@
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.SetString(Menu_Pictures_sub2_lab)</onclick>
-				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(Menu_Pictures_sub2_act)</visible>
+				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(Menu_Pictures_sub2_act) + Skin.HasSetting(Enable_Pictures_DataBase)</visible>
 			</control>
 			<control type="button" id="44023">
 				<width>750</width>
@@ -1846,7 +2329,7 @@
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.SetString(RunOpt_var,Menu_Pictures_sub2_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(Menu_Pictures_sub2_act)</visible>
+				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(Menu_Pictures_sub2_act) + Skin.HasSetting(Enable_Pictures_DataBase)</visible>
 			</control>
 			<control type="radiobutton" id="44031">
 				<width>750</width>
@@ -1860,7 +2343,7 @@
 				<onclick>Skin.ToggleSetting(Menu_Pictures_sub3_act)</onclick>
 				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Pictures&amp;Nb=10)</onclick>
 				<selected>Skin.HasSetting(Menu_Pictures_sub3_act)</selected>
-				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act)</visible>
+				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(Enable_Pictures_DataBase)</visible>
 			</control>
 			<control type="button" id="44032">
 				<width>750</width>
@@ -1873,7 +2356,7 @@
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.SetString(Menu_Pictures_sub3_lab)</onclick>
-				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(Menu_Pictures_sub3_act)</visible>
+				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(Menu_Pictures_sub3_act) + Skin.HasSetting(Enable_Pictures_DataBase)</visible>
 			</control>
 			<control type="button" id="44033">
 				<width>750</width>
@@ -1887,7 +2370,7 @@
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.SetString(RunOpt_var,Menu_Pictures_sub3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(Menu_Pictures_sub3_act)</visible>
+				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(Menu_Pictures_sub3_act) + Skin.HasSetting(Enable_Pictures_DataBase)</visible>
 			</control>
 			<control type="radiobutton" id="44041">
 				<width>750</width>
@@ -1901,7 +2384,7 @@
 				<onclick>Skin.ToggleSetting(Menu_Pictures_sub4_act)</onclick>
 				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Pictures&amp;Nb=10)</onclick>
 				<selected>Skin.HasSetting(Menu_Pictures_sub4_act)</selected>
-				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act)</visible>
+				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(Enable_Pictures_DataBase)</visible>
 			</control>
 			<control type="button" id="44042">
 				<width>750</width>
@@ -1914,7 +2397,7 @@
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.SetString(Menu_Pictures_sub4_lab)</onclick>
-				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(Menu_Pictures_sub4_act)</visible>
+				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(Menu_Pictures_sub4_act) + Skin.HasSetting(Enable_Pictures_DataBase)</visible>
 			</control>
 			<control type="button" id="44043">
 				<width>750</width>
@@ -1928,7 +2411,7 @@
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.SetString(RunOpt_var,Menu_Pictures_sub4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(Menu_Pictures_sub4_act)</visible>
+				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(Menu_Pictures_sub4_act) + Skin.HasSetting(Enable_Pictures_DataBase)</visible>
 			</control>
 			<control type="radiobutton" id="44051">
 				<width>750</width>
@@ -1942,7 +2425,7 @@
 				<onclick>Skin.ToggleSetting(Menu_Pictures_sub5_act)</onclick>
 				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Pictures&amp;Nb=10)</onclick>
 				<selected>Skin.HasSetting(Menu_Pictures_sub5_act)</selected>
-				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act)</visible>
+				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(Enable_Pictures_DataBase)</visible>
 			</control>
 			<control type="button" id="44052">
 				<width>750</width>
@@ -1955,7 +2438,7 @@
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.SetString(Menu_Pictures_sub5_lab)</onclick>
-				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(Menu_Pictures_sub5_act)</visible>
+				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(Menu_Pictures_sub5_act) + Skin.HasSetting(Enable_Pictures_DataBase)</visible>
 			</control>
 			<control type="button" id="44053">
 				<width>750</width>
@@ -1969,7 +2452,7 @@
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.SetString(RunOpt_var,Menu_Pictures_sub5_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(Menu_Pictures_sub5_act)</visible>
+				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(Menu_Pictures_sub5_act) + Skin.HasSetting(Enable_Pictures_DataBase)</visible>
 			</control>
 			<control type="radiobutton" id="44061">
 				<width>750</width>
@@ -2177,6 +2660,7 @@
 				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(Menu_Pictures_sub10_act)</visible>
 			</control>
 <!-- Menu Pictures END -->
+
 <!-- Menu Weather -->
 			<control type="button" id="60000">
 				<width>750</width>
@@ -2192,6 +2676,7 @@
 				<onclick>Skin.Reset(Menu_Pictures)</onclick>
 				<onclick>Skin.Reset(Menu_Videos)</onclick>
 				<onclick>Skin.Reset(Menu_LiveTv)</onclick>
+				<onclick>Skin.Reset(Menu_Info)</onclick>
 				<onclick>Skin.Reset(Menu_Movie)</onclick>
 				<onclick>Skin.Reset(Menu_TVShows)</onclick>
 				<onclick>Skin.Reset(Menu_Programs)</onclick>
@@ -2671,6 +3156,7 @@
 				<onclick>Skin.Reset(Menu_Weather)</onclick>
 				<onclick>Skin.Reset(Menu_Videos)</onclick>
 				<onclick>Skin.Reset(Menu_LiveTv)</onclick>
+				<onclick>Skin.Reset(Menu_Info)</onclick>
 				<onclick>Skin.Reset(Menu_TVShows)</onclick>
 				<onclick>Skin.Reset(Menu_Programs)</onclick>
 				<onclick>Skin.Reset(Menu_Music)</onclick>
@@ -3151,6 +3637,7 @@
 				<onclick>Skin.Reset(Menu_Movie)</onclick>
 				<onclick>Skin.Reset(Menu_Videos)</onclick>
 				<onclick>Skin.Reset(Menu_LiveTv)</onclick>
+				<onclick>Skin.Reset(Menu_Info)</onclick>
 				<onclick>Skin.Reset(Menu_Music)</onclick>
 				<onclick>Skin.Reset(Menu_DVD)</onclick>
 				<onclick>Skin.Reset(Menu_Favorites)</onclick>
@@ -3587,6 +4074,7 @@
 				<onclick>Skin.Reset(Menu_Weather)</onclick>
 				<onclick>Skin.Reset(Menu_Videos)</onclick>
 				<onclick>Skin.Reset(Menu_LiveTv)</onclick>
+				<onclick>Skin.Reset(Menu_Info)</onclick>
 				<onclick>Skin.Reset(Menu_Movie)</onclick>
 				<onclick>Skin.Reset(Menu_TVShows)</onclick>
 				<onclick>Skin.Reset(Menu_Programs)</onclick>
@@ -3805,6 +4293,7 @@
 				<onclick>Skin.Reset(Menu_Weather)</onclick>
 				<onclick>Skin.Reset(Menu_Videos)</onclick>
 				<onclick>Skin.Reset(Menu_LiveTv)</onclick>
+				<onclick>Skin.Reset(Menu_Info)</onclick>
 				<onclick>Skin.Reset(Menu_Movie)</onclick>
 				<onclick>Skin.Reset(Menu_TVShows)</onclick>
 				<onclick>Skin.Reset(Menu_Programs)</onclick>
@@ -4037,6 +4526,7 @@
 				<onclick>Skin.Reset(Menu_Weather)</onclick>
 				<onclick>Skin.Reset(Menu_Videos)</onclick>
 				<onclick>Skin.Reset(Menu_LiveTv)</onclick>
+				<onclick>Skin.Reset(Menu_Info)</onclick>
 				<onclick>Skin.Reset(Menu_Movie)</onclick>
 				<onclick>Skin.Reset(Menu_TVShows)</onclick>
 				<onclick>Skin.Reset(Menu_Programs)</onclick>
@@ -4516,6 +5006,7 @@
 				<onclick>Skin.Reset(Menu_Movie)</onclick>
 				<onclick>Skin.Reset(Menu_Videos)</onclick>
 				<onclick>Skin.Reset(Menu_LiveTv)</onclick>
+				<onclick>Skin.Reset(Menu_Info)</onclick>
 				<onclick>Skin.Reset(Menu_TVShows)</onclick>
 				<onclick>Skin.Reset(Menu_Programs)</onclick>
 				<onclick>Skin.Reset(Menu_Music)</onclick>
@@ -4830,6 +5321,7 @@
 				<onclick>Skin.Reset(Menu_Movie)</onclick>
 				<onclick>Skin.Reset(Menu_Videos)</onclick>
 				<onclick>Skin.Reset(Menu_LiveTv)</onclick>
+				<onclick>Skin.Reset(Menu_Info)</onclick>
 				<onclick>Skin.Reset(Menu_TVShows)</onclick>
 				<onclick>Skin.Reset(Menu_Programs)</onclick>
 				<onclick>Skin.Reset(Menu_Music)</onclick>
@@ -5144,6 +5636,7 @@
 				<onclick>Skin.Reset(Menu_Movie)</onclick>
 				<onclick>Skin.Reset(Menu_Videos)</onclick>
 				<onclick>Skin.Reset(Menu_LiveTv)</onclick>
+				<onclick>Skin.Reset(Menu_Info)</onclick>
 				<onclick>Skin.Reset(Menu_TVShows)</onclick>
 				<onclick>Skin.Reset(Menu_Programs)</onclick>
 				<onclick>Skin.Reset(Menu_Music)</onclick>
@@ -5458,6 +5951,7 @@
 				<onclick>Skin.Reset(Menu_Movie)</onclick>
 				<onclick>Skin.Reset(Menu_Videos)</onclick>
 				<onclick>Skin.Reset(Menu_LiveTv)</onclick>
+				<onclick>Skin.Reset(Menu_Info)</onclick>
 				<onclick>Skin.Reset(Menu_TVShows)</onclick>
 				<onclick>Skin.Reset(Menu_Programs)</onclick>
 				<onclick>Skin.Reset(Menu_Music)</onclick>
@@ -5762,7 +6256,7 @@
 				<height>45</height>
 				<font>font13</font>
 				<label>$LOCALIZE[35020] $LOCALIZE[13000]</label>
-				<textcolor>red</textcolor>
+				<textcolor>blue</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -5771,6 +6265,7 @@
 				<onclick>Skin.Reset(Menu_Weather)</onclick>
 				<onclick>Skin.Reset(Menu_Videos)</onclick>
 				<onclick>Skin.Reset(Menu_LiveTv)</onclick>
+				<onclick>Skin.Reset(Menu_Info)</onclick>
 				<onclick>Skin.Reset(Menu_Movie)</onclick>
 				<onclick>Skin.Reset(Menu_TVShows)</onclick>
 				<onclick>Skin.Reset(Menu_Programs)</onclick>
@@ -5788,8 +6283,8 @@
 				<height>40</height>
 				<font>font13</font>
 				<label>$LOCALIZE[35117] [B]$LOCALIZE[13000][/B]</label>
-				<textcolor>red</textcolor>
-				<focusedcolor>white</focusedcolor>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>red</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.ToggleSetting(HomeMenuNoSettingsButton)</onclick>

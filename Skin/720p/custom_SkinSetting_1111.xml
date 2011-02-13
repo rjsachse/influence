@@ -429,162 +429,28 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="202">
-						<description>Activate Showcase</description>
+					<control type="button" id="10000">
 						<width>750</width>
-						<height>40</height>
+						<height>45</height>
 						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>Showcase</label>
-						<onclick>Skin.ToggleSetting(EnableShowcaseView)</onclick>
-						<selected>Skin.HasSetting(EnableShowcaseView)</selected>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
-					<control type="radiobutton" id="203">
-						<description>Activate WallStreamView</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>WallStreamView</label>
-						<onclick>Skin.ToggleSetting(EnableWallStreamView)</onclick>
-						<selected>Skin.HasSetting(EnableWallStreamView)</selected>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
-					<control type="radiobutton" id="204">
-						<description>Activate WallStreamView2</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>WallStreamView2</label>
-						<onclick>Skin.ToggleSetting(EnableWallStreamView2)</onclick>
-						<selected>Skin.HasSetting(EnableWallStreamView2)</selected>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
-					<control type="radiobutton" id="205">
-						<description>Activate Landscape</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>Landscape</label>
-						<onclick>Skin.ToggleSetting(EnableLandscape)</onclick>
-						<selected>Skin.HasSetting(EnableLandscape)</selected>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
-					<control type="radiobutton" id="206">
-						<description>Activate Lowlist</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>Lowlist</label>
-						<onclick>Skin.ToggleSetting(EnableLowlist)</onclick>
-						<selected>Skin.HasSetting(EnableLowlist)</selected>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
-					<control type="radiobutton" id="207">
-						<description>Activate RightList</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>RightList</label>
-						<onclick>Skin.ToggleSetting(EnableRightList)</onclick>
-						<selected>Skin.HasSetting(EnableRightList)</selected>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
-					<control type="radiobutton" id="208">
-						<description>Activate HalfWall</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>HalfWall</label>
-						<onclick>Skin.ToggleSetting(EnableHalfWall)</onclick>
-						<selected>Skin.HasSetting(EnableHalfWall)</selected>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
-					<control type="radiobutton" id="209">
-						<description>Activate HalfWall2</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>HalfWall2</label>
-						<onclick>Skin.ToggleSetting(EnableHalfWall2)</onclick>
-						<selected>Skin.HasSetting(EnableHalfWall2)</selected>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
-					<control type="radiobutton" id="210">
-						<description>Activate Episode</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>Episode</label>
-						<onclick>Skin.ToggleSetting(EnableEpisode)</onclick>
-						<selected>Skin.HasSetting(EnableEpisode)</selected>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
-					<control type="radiobutton" id="211">
-						<description>Activate Poster</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>Poster</label>
-						<onclick>Skin.ToggleSetting(EnablePoster)</onclick>
-						<selected>Skin.HasSetting(EnablePoster)</selected>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
-					<control type="radiobutton" id="212">
-						<description>Activate Logo</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>Logo</label>
-						<onclick>Skin.ToggleSetting(EnableLogo)</onclick>
-						<selected>Skin.HasSetting(EnableLogo)</selected>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
-					<control type="radiobutton" id="213">
-						<description>Activate Logo2</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>Logo2</label>
-						<onclick>Skin.ToggleSetting(EnableLogo2)</onclick>
-						<selected>Skin.HasSetting(EnableLogo2)</selected>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
+						<label>35131</label>
+						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+	                    <onclick>Skin.SetFile(NewView,.zip)</onclick>
+ 						<onclick>RunScript(special://skin/scripts/script.influence_view.installer/default.py,$INFO[Skin.String(NewView)])</onclick>
+					</control>					
+					<include>ViewCustom1001_Init</include>
+					<include>ViewCustom1002_Init</include>
+					<include>ViewCustom1003_Init</include>
+					<include>ViewCustom1004_Init</include>
+					<include>ViewCustom1005_Init</include>
+					<include>ViewCustom1006_Init</include>
+					<include>ViewCustom1007_Init</include>
+					<include>ViewCustom1008_Init</include>
+					<include>ViewCustom1009_Init</include>
+					<include>ViewCustom1010_Init</include>
 				</control>
 
 				<control type="grouplist" id="9002">
@@ -777,20 +643,8 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
+					
 					<control type="radiobutton" id="213">
-						<description>enable weather info</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>20084</label>
-						<onclick>Skin.ToggleSetting(homepageWeatherinfo)</onclick>
-						<selected>!Skin.HasSetting(homepageWeatherinfo)</selected>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
-					<control type="radiobutton" id="214">
 						<description>Enable LiveTV</description>
 						<width>750</width>
 						<height>40</height>
@@ -804,7 +658,7 @@
 						<onclick>Skin.ToggleSetting(Menu_LiveTv_act)</onclick>
 						<selected>Skin.HasSetting(LiveTvIsEnable)</selected>
 						</control>
-					<control type="radiobutton" id="215">
+					<control type="radiobutton" id="214">
 						<description>Show Recently added info</description>
 						<width>750</width>
 						<height>40</height>
@@ -813,10 +667,26 @@
 						<focusedcolor>white</focusedcolor>
 						<label>31117</label>
 						<onclick>Skin.ToggleSetting(homepageHideRecentlyAdded)</onclick>
+						<onclick>Skin.Reset(homepageHideRandomAdded)</onclick>
 						<selected>Skin.HasSetting(homepageHideRecentlyAdded)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
+					<control type="radiobutton" id="215">
+						<description>Show Random info</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$LOCALIZE[35129]</label>
+						<onclick>Skin.ToggleSetting(homepageHideRandomAdded)</onclick>
+						<onclick>Skin.Reset(homepageHideRecentlyAdded)</onclick>
+						<selected>Skin.HasSetting(homepageHideRandomAdded)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+
 					<control type="radiobutton" id="216">
 						<description>Show Library Stats</description>
 						<width>750</width>
@@ -853,6 +723,19 @@
 						<label>35012</label>
 						<onclick>Skin.ToggleSetting(Next5Songs)</onclick>
 						<selected>Skin.HasSetting(Next5Songs)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="219">
+						<description>Hide Home buttonss</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>35121</label>
+						<onclick>Skin.ToggleSetting(HideHomeButton)</onclick>
+						<selected>Skin.HasSetting(HideHomeButton)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
@@ -899,7 +782,7 @@
 							<width>750</width>
 							<height>45</height>
 							<font>font13_title</font>
-							<label>$LOCALIZE[35124]</label>
+							<label>35124</label>
 							<textcolor>blue</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
@@ -968,6 +851,7 @@
 							<onclick>Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</onclick>
 							<visible>Skin.HasSetting(SubtitleDownload_Enable)</visible>
 						</control>
+					<!--
 						<control type="radiobutton" id="429">
 							<description>Enable Movie Theater Experience Script</description>
 							<width>750</width>
@@ -995,6 +879,8 @@
 							<texturenofocus>MenuItemNF.png</texturenofocus>
 							<visible>Skin.HasSetting(TheaterScript_Enable)</visible>
 						</control>
+					-->
+					<!--
 						<control type="radiobutton" id="432">
 							<description>Enable TvTunes Script</description>
 							<width>750</width>
@@ -1008,6 +894,20 @@
 							<onclick>Skin.ToggleSetting(TvTunesIsEnable)</onclick>
 							<selected>Skin.HasSetting(TvTunesIsEnable)</selected>
 						</control>
+					-->
+					<!--	<control type="radiobutton" id="433">
+							<description>enable Pictures menu</description>
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label>Activer MyPicsdb</label>
+							<onclick>Skin.ToggleSetting(Enable_Pictures_DataBase)</onclick>
+							<selected>Skin.HasSetting(Enable_Pictures_DataBase)</selected>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+						</control>-->
 					</control>
 				</control>
 				<control type="group">
