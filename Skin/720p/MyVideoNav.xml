@@ -1,12 +1,12 @@
 <window id="25">
 	<defaultcontrol always="true">9999</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<views>50,500,7700,550,560,501,508,504,503,505,511,513,1001,1002,1003,1004,1005,1006,1007,1008,1009,1010</views>
+	<views>50,500,7700,550,560,501,508,504,503,505,511,513,1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,1020</views>
 	<visible>!Skin.HasSetting(kiosk)</visible>
 	<controls>
 		<!-- includes for addon movie sets -->
-		<include>MovieSetsContainer</include>	
-		
+		<include>MovieSetsContainer</include>
+
 		<!-- addons launcher -->
 		<control type="group">
 			<description>trigger</description>
@@ -20,7 +20,7 @@
 			<control type="button" id="10001">
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
-				<onfocus>XBMC.RunScript(script.TvTunes,backend=True&amploop=False)</onfocus>
+				<onfocus>XBMC.RunScript(script.TvTunes,backend=True&amp;loop=False)</onfocus>
 				<visible>IsEmpty(Window(10025).Property(TvTunesIsRunning))</visible>
 			</control>
 			<control type="button" id="10001">
@@ -55,7 +55,7 @@
 				<include>backgroundfade</include>
 				<fadetime>FanartCrossfadeTime</fadetime>
 				<visible>![IsEmpty(container(7000).ListItem.Property(HasMovieSets)) + IsEmpty(Container(7000).ListItem.Property(Fanart_Image))]</visible>
-			</control>			
+			</control>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -77,7 +77,7 @@
 				<fadetime>FanartCrossfadeTime</fadetime>
 				<visible>!Skin.HasSetting(VideoLibraryTVFanart)</visible>
 				<visible>Container.Content(TVShows) | [Container.Content(Episodes) + stringcompare(Container.FolderPath,videodb://5/)]</visible>
-			</control>			
+			</control>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -93,7 +93,7 @@
 		</control>
 		<include>CommonMediaPlayingBackground</include>
 		<control type="group">
-			<include>Window_OpenClose_Animation</include>		
+			<include>Window_OpenClose_Animation</include>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -111,7 +111,7 @@
 				<texture>floor.png</texture>
 				<include>VisibleFadeEffect</include>
 				<visible>Control.IsVisible(50) | Control.IsVisible(500) | Control.IsVisible(505)</visible>
-			</control>			
+			</control>
 			<control type="group">
 				<include>VisibleFadeEffect</include>
 				<visible>Control.IsVisible(50)</visible>
@@ -171,13 +171,11 @@
 		</control>
 		<include>CommonMediaCodeFlaggingImages</include>
 		<control type="group">
-			<include>Window_OpenClose_Animation</include>		
+			<include>Window_OpenClose_Animation</include>
 			<include>CommonRootView</include> <!-- view id = 50 -->
 			<include>ThumbnailView</include> <!-- view id = 500 -->
-			<include>WallStreamView</include> <!-- view id = 513 -->			
-			<!--
-			<include>PosterWrapView</include> <!-- view id = 501 -->
-			-->
+			<include>WallStreamView</include> <!-- view id = 513 -->
+			<!--<include>PosterWrapView</include>--> <!-- view id = 501 -->
 			<include>PosterWrapView2_Fanart</include> <!-- view id = 508 -->
 			<include>MediaListView3</include> <!-- view id = 503 -->
 			<include>MediaListView2</include> <!-- view id = 504 -->
@@ -185,10 +183,8 @@
 			<include>MusicVideoInfoListView</include> <!-- view id = 511 -->
 			<include>AddonInfoListView1</include> <!-- view id = 550 -->
 			<include>LiveTVView1</include> <!-- view id = 560 -->
-			<!--
 			<include condition="!Skin.HasSetting(HideInfoMovieSets)">MovieSetsListView7700</include> <!-- view id = 7700 -->
-			-->
-			<include>Include_CustomView</include> <!-- view 1001 ... 1010 -->
+			<include>Include_CustomView</include> <!-- view 1001 ... 1020 -->
 		</control>
 		<include>CommonPageCount</include>
 		<include>BehindDialogFadeOut</include>
@@ -216,7 +212,7 @@
 					<texture>MediaBladeSub_Part2.png</texture>
 					<animation effect="slide" end="228,0" time="300" tween="quadratic" easing="out" condition="Control.HasFocus(97) | Control.HasFocus(98) | ControlGroup(9001).HasFocus | ControlGroup(9701).HasFocus">Conditional</animation>
 				</control>
-			</control>			
+			</control>
 			<control type="group" id="9701">
 				<posx>-220</posx>
 				<posy>-45</posy>
@@ -228,7 +224,7 @@
 					<description>Fake button for mouse control</description>
 					<posx>-15</posx>
 					<posy>0</posy>
-					<width>245</width>
+					<width>300</width>
 					<height>765</height>
 					<label>-</label>
 					<font>-</font>
@@ -236,15 +232,7 @@
 					<texturefocus>-</texturefocus>
 					<visible>true</visible>
 				</control>
-<!--
-				<control type="image">
-					<posx>185</posx>
-					<posy>240</posy>
-					<width>40</width>
-					<height>40</height>
-					<texture>MediaSubSet.png</texture>
-				</control>
--->
+
 				<control type="grouplist" id="9710">
 					<posx>10</posx>
 					<posy>290</posy>
@@ -290,6 +278,7 @@
 						<onclick>Addon.OpenSettings(script.moviesets)</onclick>
 						<visible>Control.IsVisible(190)</visible>
 					</control>
+
 					<control type="label" id="195">
 						<width>220</width>
 						<height>45</height>
@@ -298,17 +287,18 @@
 						<textcolor>dialogheader</textcolor>
 						<align>center</align>
 						<aligny>center</aligny>
+						<visible>Control.IsVisible(196)</visible>
 					</control>
 					<control type="button" id="196">
-						<description>genre editor</description>
+						<description>library editor</description>
 						<include>ButtonMediaSubCommonValues</include>
-						<label>$INFO[system.addontitle(script.genre-editor)]</label>
-						<onclick>RunScript(script.genre-editor)</onclick>
+						<label>$INFO[system.addontitle(script.library.editor)]</label>
+						<onclick>RunScript(script.library.editor)</onclick>
 						<onclick>SetFocus(50)</onclick>
-						<enable>!StringCompare(ListItem.Label,..) + [container.content(movies) |Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]</enable>
-						<visible>System.HasAddon(script.genre-editor)</visible>
+						<enable>!StringCompare(ListItem.Label,..) + [Container.Content(Movies) | Container.Content(MusicVideos) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]</enable>
+						<visible>System.HasAddon(script.library.editor)</visible>
 					</control>
-				
+
 					<control type="label" id="200">
 						<width>220</width>
 						<height>45</height>
@@ -326,7 +316,7 @@
 						<description>Run TvTunes</description>
 						<include>ButtonMediaSubCommonValues</include>
 						<label>35132</label>
-						<onclick>XBMC.RunScript(script.TvTunes,mode=solo&tvpath=$INFO[ListItem.FilenameAndPath]&tvname=$INFO[ListItem.TVShowTitle])</onclick>
+						<onclick>XBMC.RunScript(script.TvTunes,mode=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])</onclick>
 						<onclick>SetFocus(50)</onclick>
 						<visible>container.content(tvshows) + !StringCompare(ListItem.Label,..)</visible>
 					</control>
@@ -337,7 +327,7 @@
 						<onclick>Addon.OpenSettings(script.TvTunes)</onclick>
 						<onclick>SetFocus(50)</onclick>
 						<visible>container.content(tvshows) + !StringCompare(ListItem.Label,..)</visible>
-					</control>				
+					</control>
 					<control type="label" id="203">
 						<width>220</width>
 						<height>45</height>
@@ -355,12 +345,12 @@
 						<description>Run Logo Downloader</description>
 						<include>ButtonMediaSubCommonValues</include>
 						<label>Download</label>
-						<onclick>XBMC.RunScript(script.logo-downloader)</onclick>
+						<onclick>XBMC.RunScript(script.logo-downloader,mode=solo,logo=True,clearart=True,showthumb=True,showname=$INFO[ListItem.TVShowTitle])</onclick>
 						<onclick>SetFocus(50)</onclick>
 						<visible>container.content(tvshows) + !StringCompare(ListItem.Label,..)</visible>
 					</control>
 				</control>
-			</control>			
+			</control>
 			<control type="group" id="9001">
 				<visible>!ControlGroup(9701).HasFocus + !Control.HasFocus(97)</visible>
 				<posx>-220</posx>
@@ -381,15 +371,6 @@
 					<texturefocus>-</texturefocus>
 					<visible>true</visible>
 				</control>
-<!--
-				<control type="image">
-					<posx>185</posx>
-					<posy>240</posy>
-					<width>40</width>
-					<height>40</height>
-					<texture>MediaSubSet.png</texture>
-				</control>
--->				
 				<control type="grouplist" id="9010">
 					<posx>10</posx>
 					<posy>90</posy>
@@ -400,7 +381,7 @@
 					<onup>9010</onup>
 					<ondown>9010</ondown>
 					<itemgap>0</itemgap>
-<!-- Toutes vues confondues -->
+					<!-- Toutes vues confondues -->
 					<control type="radiobutton" id="14">
 						<description>Watched Toggle</description>
 						<textwidth>170</textwidth>
@@ -433,7 +414,7 @@
 						<selected>system.ismaster</selected>
 						<visible>system.haslocks</visible>
 					</control>
-					<control type="radiobutton" id="202">
+					<control type="radiobutton" id="20">
 						<description>Toggle TVShow Fanart</description>
 						<textwidth>170</textwidth>
 						<include>ButtonMediaSubCommonValues</include>
@@ -442,7 +423,7 @@
 						<selected>Skin.HasSetting(VideoLibraryTVFanart)</selected>
 						<visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
 					</control>
-					<control type="radiobutton" id="203">
+					<control type="radiobutton" id="21">
 						<description>Toggle MusicVideo Fanart</description>
 						<textwidth>170</textwidth>
 						<include>ButtonMediaSubCommonValues</include>
@@ -450,23 +431,23 @@
 						<onclick>Skin.ToggleSetting(VideoLibraryMusicVideoFanart)</onclick>
 						<selected>Skin.HasSetting(VideoLibraryMusicVideoFanart)</selected>
 						<visible>Container.Content(MusicVideos) | Container.Content(Artists) | Container.Content(Albums)</visible>
-					</control>					
-					<control type="radiobutton" id="207">
+					</control>
+					<control type="radiobutton" id="22">
 						<description>Toggle Top Info Screen</description>
 						<include>ButtonMediaSubCommonValues</include>
 						<label>35133</label>
 						<onclick>Skin.ToggleSetting(HideTopScreen)</onclick>
 						<selected>Skin.HasSetting(HideTopScreen)</selected>
 					</control>
-					<control type="radiobutton" id="208">
+					<control type="radiobutton" id="23">
 						<description>Hide Media Flag</description>
 						<include>ButtonMediaSubCommonValues</include>
 						<label>35134</label>
 						<onclick>Skin.ToggleSetting(HideMediaCodeFlaggingImages)</onclick>
 						<selected>Skin.HasSetting(HideMediaCodeFlaggingImages)</selected>
-					</control>					
-<!-- UK/US Ratings -->
-					<control type="radiobutton" id="301">
+					</control>
+					<!-- UK/US Ratings -->
+					<control type="radiobutton" id="24">
 						<description>Show US/UK ratings</description>
 						<textwidth>170</textwidth>
 						<include>ButtonMediaSubCommonValues</include>
@@ -475,19 +456,8 @@
 						<selected>Skin.HasSetting(UKMovieRating)</selected>
 						<visible>Container.Content(Movies)</visible>
 					</control>
-<!-- UK/US Ratings -->
-<!-- Spécifiques aux vues -->
-					<control type="label" id="200">
-						<width>220</width>
-						<height>45</height>
-						<font>font12caps</font>
-						<label>14018</label>
-						<textcolor>dialogheader</textcolor>
-						<align>center</align>
-						<aligny>center</aligny>
-						<visible>Control.IsVisible(201) | Control.IsVisible(202) | Control.IsVisible(203) | Control.IsVisible(204) | Control.IsVisible(205)</visible>
-					</control>
-					<control type="radiobutton" id="201">
+					<!-- UK/US Ratings -->
+					<control type="radiobutton" id="26">
 						<description>Toggle MoviesFanart</description>
 						<textwidth>170</textwidth>
 						<include>ButtonMediaSubCommonValues</include>
@@ -495,8 +465,21 @@
 						<onclick>Skin.ToggleSetting(VideoLibraryMovieFanart)</onclick>
 						<selected>Skin.HasSetting(VideoLibraryMovieFanart)</selected>
 						<visible>Container.Content(Movies) + !Control.IsVisible(508)</visible>
+					</control>					
+					<!-- Spécifiques aux vues -->
+					<control type="label" id="25">
+						<width>220</width>
+						<height>45</height>
+						<font>font12caps</font>
+						<label>14018</label>
+						<textcolor>dialogheader</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<!--
+						<visible>Control.IsVisible(201) | Control.IsVisible(202) | Control.IsVisible(203) | Control.IsVisible(204) | Control.IsVisible(205)</visible>
+						-->
 					</control>
-					<control type="radiobutton" id="204">
+					<control type="radiobutton" id="27">
 						<description>Toggle Fanart</description>
 						<textwidth>170</textwidth>
 						<include>ButtonMediaSubCommonValues</include>
@@ -505,9 +488,10 @@
 						<selected>!Skin.HasSetting(VideoLibraryFanartView504)</selected>
 						<visible>[Control.IsVisible(504) + [Container.Content(Movies) | Container.Content(TVShows)]]</visible>
 					</control>
+
 					<include>Include_CustomView_Cust</include>
 
-<!-- Toggle Cases Start -->
+					<!-- Toggle Cases Start -->
 					<control type="radiobutton" id="206">
 						<description>Toggle Media Cases View Wall Stream</description>
 						<include>ButtonMediaSubCommonValues</include>
@@ -516,8 +500,7 @@
 						<selected>Skin.HasSetting(View513HideCases)</selected>
 						<visible>Control.IsVisible(513)</visible>
 					</control>
-<!-- Toggle Cases End -->
-					<include>ViewCustom1003_Custom</include>
+					<!-- Toggle Cases End -->
 				</control>
 			</control>
 			<control type="button" id="8999">
@@ -620,7 +603,7 @@
 					<onup>16</onup>
 					<ondown>98</ondown>
 					<visible>true</visible>
-				</control>				
+				</control>
 				<control type="radiobutton" id="98">
 					<description>Extra Options</description>
 					<hitrect x="0" y="200" w="265" h="40" />

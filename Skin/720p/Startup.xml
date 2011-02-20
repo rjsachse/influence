@@ -56,6 +56,8 @@
 			<onfocus>Skin.SetBool(Menu_TVShows_sub_act)</onfocus>
 			<onfocus>Skin.SetBool(Menu_Movie_sub_act)</onfocus>
 			<onfocus>Skin.SetBool(Menu_Videos_sub_act)</onfocus>
+			<onfocus>Skin.SetReset(Menu_Info_sub_act)</onfocus>
+			<onfocus>Skin.SetBool(Menu_Pictures_sub_act)</onfocus>
 			<onfocus>Skin.SetString(Menu_Favorites_run,RunScript(special://skin/scripts/SetMenuFav.py))</onfocus>
 <!--icone-->		<onfocus>Skin.SetString(Menu_LiveTv_Ico,Carousel/livetv.png)</onfocus>
 <!--background-->       <onfocus>Skin.SetString(Menu_LiveTv_Back,special://skin/backgrounds/tv.jpg)</onfocus>
@@ -94,18 +96,28 @@
 			<onfocus>Skin.SetString(Menu_Weather_sub4_lab,$LOCALIZE[35128])</onfocus>
 			<onfocus>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Weather&amp;Nb=10)</onfocus>
 			<onfocus>Skin.ToggleSetting(ChoiceWeatherOne)</onfocus>
+
+			<onfocus>Skin.Reset(Menu_Info_act)</onfocus>
+			<!--<onfocus>Skin.SetString(Menu_Info_run,XBMC.RunScript(script.rssclient-standalone))</onfocus>-->
+			<onfocus>Skin.SetString(Menu_Info_run,RunScript(script.rss.editor))</onfocus>
 			<onfocus>Skin.SetString(Menu_Info_lab,RSS)</onfocus>
 <!--icone-->		<onfocus>Skin.SetString(Menu_Info_Ico,Carousel/info.png)</onfocus>
 <!--background-->       <onfocus>Skin.SetString(Menu_Info_Back,special://skin/backgrounds/info.jpg)</onfocus>
 <!--background-->       <onfocus>Skin.SetString(Home_Custom_Back_Info_Folder,special://skin/backgrounds/info.jpg)</onfocus>
+			<onfocus>Skin.SetBool(Menu_Info_sub1_act)</onfocus>
 	<!--icone-->	<onfocus>Skin.SetString(Menu_Info_sub1_Ico,Carousel/Infos1.png)</onfocus>
 			<onfocus>Skin.SetString(Menu_Info_sub1_lab,Menu 1)</onfocus>
+			<onfocus>Skin.SetString(Menu_Info_sub1_run,RunScript(&quot;script.image.bigpictures&quot;)</onfocus>
+			<onfocus>Skin.SetBool(Menu_Info_sub2_act)</onfocus>
 	<!--icone-->	<onfocus>Skin.SetString(Menu_Info_sub2_Ico,Carousel/Infos2.png)</onfocus>
 			<onfocus>Skin.SetString(Menu_Info_sub2_lab,Menu 2)</onfocus>
+			<onfocus>Skin.SetBool(Menu_Info_sub3_act)</onfocus>
 	<!--icone-->	<onfocus>Skin.SetString(Menu_Info_sub3_Ico,Carousel/Infos3.png)</onfocus>
 			<onfocus>Skin.SetString(Menu_Info_sub3_lab,Menu 3)</onfocus>
+			<onfocus>Skin.SetBool(Menu_Info_sub4_act)</onfocus>
 	<!--icone-->	<onfocus>Skin.SetString(Menu_Info_sub4_Ico,Carousel/Infos4.png)</onfocus>
 			<onfocus>Skin.SetString(Menu_Info_sub4_lab,Menu 4)</onfocus>
+			<onfocus>Skin.SetBool(Menu_Info_sub5_act)</onfocus>
 	<!--icone-->	<onfocus>Skin.SetString(Menu_Info_sub5_Ico,Carousel/Infos5.png)</onfocus>
 			<onfocus>Skin.SetString(Menu_Info_sub5_lab,Menu 5)</onfocus>
 	<!--icone-->	<onfocus>Skin.SetString(Menu_Info_sub6_Ico,Carousel/Infos6.png)</onfocus>

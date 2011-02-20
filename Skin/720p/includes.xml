@@ -1,7 +1,7 @@
 <includes>
 	<include file="defaults.xml" />
 	<include file="ViewsVideoLibrary.xml" />
-	<include file="ViewsMovieSets.xml" />	
+	<include file="ViewsMovieSets.xml" />
 	<include file="ViewsMusicLibrary.xml" />
 	<include file="ViewsFileMode.xml" />
 	<include file="ViewsPictures.xml" />
@@ -11,6 +11,7 @@
 	<include file="IncludesHomeRecentlyAdded.xml" />
 	<include file="IncludesHomeRandomAdded.xml" />
 	<include file="RssRecentlyAdded.xml" />
+	<include file="IncludesDialogVideoInfoContentItems.xml" />
 	<!-- include pour setting carousel et autres-->
 	<include file="Include_CustomMenuCarousel.xml" />
 	<include file="CustomCarousel.xml" />
@@ -19,6 +20,18 @@
 	<include file="InfluenceMusic.xml" />
 	<include file="IncludesFanartMedia.xml" />
 	<!-- end -->
+	<include file="weather.com plus/CommonValues.xml" />
+	<include file="weather.com plus/Maps-List-Static-Content-Includes.xml" />
+	<include file="weather.com plus/Current.xml" />
+	<include file="weather.com plus/36Hour.xml" />
+	<include file="weather.com plus/Hourly.xml" />
+	<include file="weather.com plus/Weekend.xml" />
+	<include file="weather.com plus/Daily.xml" />
+	<include file="weather.com plus/Maps.xml" />
+	<include file="weather.com plus/Alerts.xml" />
+	<include file="weather.com plus/Video.xml" />
+	<include file="weather.com plus/WeatherPluginView.xml" />
+	<include file="WeatherStandardView.xml" />
 	<include file="InfluenceWeather.xml" />
 	<include file="IncludesHomeVertical.xml" />
 	<include file="IncludesHomeHorizontal.xml" />
@@ -29,7 +42,7 @@
 	<include file="Carousel.xml" />
 	<include file="Include_CustomMenu.xml" />
 	<include file="IncludesInitSkin.xml" />
-	
+
 	<!-- Custom Views -->
 	<include file="View_Custom1001.xml" />
 	<include file="View_Custom1002.xml" />
@@ -41,6 +54,17 @@
 	<include file="View_Custom1008.xml" />
 	<include file="View_Custom1009.xml" />
 	<include file="View_Custom1010.xml" />
+	<include file="View_Custom1011.xml" />
+	<include file="View_Custom1012.xml" />
+	<include file="View_Custom1013.xml" />
+	<include file="View_Custom1014.xml" />
+	<include file="View_Custom1015.xml" />
+	<include file="View_Custom1016.xml" />
+	<include file="View_Custom1017.xml" />
+	<include file="View_Custom1018.xml" />
+	<include file="View_Custom1019.xml" />
+	<include file="View_Custom1020.xml" />	
+	<include file="IncludesNightMod.xml" />
 
 	<!-- View for Advanced launcher -->
 	<include file="Viewtype_AL_Wallstream.xml" />
@@ -237,6 +261,18 @@
 			<fadetime>1000</fadetime>
 		</control>
 	</include>
+	<include name="CommonInfoBackground">
+		<control type="multiimage">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<imagepath fallback="special://skin/backgrounds/info.jpg" background="true">$INFO[Skin.String(CurrentBackground)]</imagepath>
+			<timeperimage>10000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>1000</fadetime>
+		</control>
+	</include>
 	<include name="BehindDialogFadeOut">
 		<control type="image">
 			<posx>0</posx>
@@ -365,7 +401,7 @@
 			<shadowcolor>black</shadowcolor>
 			<visible>Player.HasMedia</visible>
 			<include>VisibleFadeEffect</include>
-			<include>Window_OpenClose_Animation</include>		
+			<include>Window_OpenClose_Animation</include>
 		</control>
 		<control type="label">
 			<description>Page Count Label</description>
@@ -379,7 +415,7 @@
 			<align>right</align>
 			<aligny>center</aligny>
 			<label>([COLOR=blue]$INFO[Container.NumItems][/COLOR]) $LOCALIZE[31025]$INFO[Container.TotalTime, - $LOCALIZE[180] ([COLOR=blue],[/COLOR])] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container.CurrentPage]/$INFO[Container.NumPages][/COLOR])</label>
-			<include>Window_OpenClose_Animation</include>		
+			<include>Window_OpenClose_Animation</include>
 		</control>
 	</include>
 	<include name="SmallMusicInfo">
@@ -950,7 +986,7 @@ tent(LiveTV)</visible>
 		</control>
 	</include>
 	<include name="ScrollOffsetLabel">
-                <control type="group">
+		<control type="group">
 			<visible>Container.Scrolling + [StringCompare(Container.SortMethod,$LOCALIZE[551]) | StringCompare(Container.SortMethod,$LOCALIZE[561]) | StringCompare(Container.SortMethod,$LOCALIZE[558]) | StringCompare(Container.SortMethod,$LOCALIZE[557]) | StringCompare(Container.SortMethod,$LOCALIZE[556])]</visible>
 			<animation effect="slide" start="0,0" end="0,-60" time="100">Visible</animation>
 			<animation effect="slide" start="0,-60" end="0,0" delay="400" time="100">Hidden</animation>
@@ -974,7 +1010,7 @@ tent(LiveTV)</visible>
 				<textcolor>white</textcolor>
 				<font>font30_title</font>
 			</control>
-                </control>
+		</control>
 	</include>
 	<include name="Clock">
 		<control type="group">
@@ -1069,7 +1105,7 @@ tent(LiveTV)</visible>
 				<texturefocus>home-power-FO.png</texturefocus>
 				<texturenofocus>home-power.png</texturenofocus>
 				<onleft>21</onleft>
-				<onright>9000</onright>
+				<onright>23</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 			</control>
@@ -1107,6 +1143,27 @@ tent(LiveTV)</visible>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 			</control>
+			<control type="button" id="23">
+				<description>RSS BUTTON</description>
+				<posx>135</posx>
+				<posy>0</posy>
+				<width>43</width>
+				<height>43</height>
+				<label>16004</label>
+				<font>-</font>
+				<aligny>-</aligny>
+				<onclick>Skin.SetString(CurrentBackground,$INFO[Skin.String(Home_Custom_Back_Info_Folder)])</onclick>
+				<onclick>RunScript(script.rssclient-standalone)</onclick>
+				<texturefocus>home-rss-FO.png</texturefocus>
+				<texturenofocus>home-rss.png</texturenofocus>
+				<onleft>20</onleft>
+				<onright>9000</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<animation effect="slide" start="0,240" end="0,0" time="400" >Visible</animation>
+				<animation effect="slide" start="0,0" end="0,240" time="400" >Hidden</animation>
+				<visible>!Skin.HasSetting(Menu_Info_act)</visible>
+			</control>
 		</control>
 	</include>
 	<include name="CommonMediaCodeFlaggingImages">
@@ -1124,8 +1181,8 @@ tent(LiveTV)</visible>
 			<include>VideoTypeHackFlaggingConditions</include>
 			<include>MovieSetsTypeHackFlaggingConditions</include>
 			<include>VideoMPAAFlaggingConditions</include>
-			<include>VideoMPAAFlaggingConditionsCSA</include>		
-			<include>VideoMPAAFlaggingConditionsUK</include>			
+			<include>VideoMPAAFlaggingConditionsCSA</include>
+			<include>VideoMPAAFlaggingConditionsUK</include>
 			<visible>![Control.IsVisible(1001) + !Skin.HasSetting(ViewCustom1001_ShowFlagMedia)]</visible>
 			<visible>![Control.IsVisible(1002) + !Skin.HasSetting(ViewCustom1002_ShowFlagMedia)]</visible>
 			<visible>![Control.IsVisible(1003) + !Skin.HasSetting(ViewCustom1003_ShowFlagMedia)]</visible>
@@ -1136,6 +1193,16 @@ tent(LiveTV)</visible>
 			<visible>![Control.IsVisible(1008) + !Skin.HasSetting(ViewCustom1008_ShowFlagMedia)]</visible>
 			<visible>![Control.IsVisible(1009) + !Skin.HasSetting(ViewCustom1009_ShowFlagMedia)]</visible>
 			<visible>![Control.IsVisible(1010) + !Skin.HasSetting(ViewCustom1010_ShowFlagMedia)]</visible>
+			<visible>![Control.IsVisible(1011) + !Skin.HasSetting(ViewCustom1011_ShowFlagMedia)]</visible>			
+			<visible>![Control.IsVisible(1012) + !Skin.HasSetting(ViewCustom1012_ShowFlagMedia)]</visible>			
+			<visible>![Control.IsVisible(1013) + !Skin.HasSetting(ViewCustom1013_ShowFlagMedia)]</visible>			
+			<visible>![Control.IsVisible(1014) + !Skin.HasSetting(ViewCustom1014_ShowFlagMedia)]</visible>			
+			<visible>![Control.IsVisible(1015) + !Skin.HasSetting(ViewCustom1015_ShowFlagMedia)]</visible>
+			<visible>![Control.IsVisible(1016) + !Skin.HasSetting(ViewCustom1016_ShowFlagMedia)]</visible>
+			<visible>![Control.IsVisible(1017) + !Skin.HasSetting(ViewCustom1017_ShowFlagMedia)]</visible>
+			<visible>![Control.IsVisible(1018) + !Skin.HasSetting(ViewCustom1018_ShowFlagMedia)]</visible>
+			<visible>![Control.IsVisible(1019) + !Skin.HasSetting(ViewCustom1019_ShowFlagMedia)]</visible>
+			<visible>![Control.IsVisible(1020) + !Skin.HasSetting(ViewCustom1020_ShowFlagMedia)]</visible>
 			<visible>!Skin.HasSetting(HideMediaCodeFlaggingImages)</visible>
 		</control>
 	</include>
@@ -1270,6 +1337,16 @@ tent(LiveTV)</visible>
 			<visible> ![Control.IsVisible(1008) + !Skin.HasSetting(ViewCustom1008_ShowHomePathClock)]</visible>
 			<visible> ![Control.IsVisible(1009) + !Skin.HasSetting(ViewCustom1009_ShowHomePathClock)]</visible>
 			<visible> ![Control.IsVisible(1010) + !Skin.HasSetting(ViewCustom1010_ShowHomePathClock)]</visible>
+			<visible> ![Control.IsVisible(1011) + !Skin.HasSetting(ViewCustom1011_ShowHomePathClock)]</visible>
+			<visible> ![Control.IsVisible(1012) + !Skin.HasSetting(ViewCustom1012_ShowHomePathClock)]</visible>
+			<visible> ![Control.IsVisible(1013) + !Skin.HasSetting(ViewCustom1013_ShowHomePathClock)]</visible>
+			<visible> ![Control.IsVisible(1014) + !Skin.HasSetting(ViewCustom1014_ShowHomePathClock)]</visible>
+			<visible> ![Control.IsVisible(1015) + !Skin.HasSetting(ViewCustom1015_ShowHomePathClock)]</visible>
+			<visible> ![Control.IsVisible(1016) + !Skin.HasSetting(ViewCustom1016_ShowHomePathClock)]</visible>
+			<visible> ![Control.IsVisible(1017) + !Skin.HasSetting(ViewCustom1017_ShowHomePathClock)]</visible>
+			<visible> ![Control.IsVisible(1018) + !Skin.HasSetting(ViewCustom1018_ShowHomePathClock)]</visible>
+			<visible> ![Control.IsVisible(1019) + !Skin.HasSetting(ViewCustom1019_ShowHomePathClock)]</visible>
+			<visible> ![Control.IsVisible(1020) + !Skin.HasSetting(ViewCustom1020_ShowHomePathClock)]</visible>	
 			<visible>!Skin.HasSetting(HideTopScreen)</visible>
 		</control>
 	</include>
@@ -1338,7 +1415,7 @@ tent(LiveTV)</visible>
 	-->
 		<animation effect="fade" start="0" end="100" time="1600" delay="3000" >Visible</animation>
 		<animation effect="fade" start="100" end="0" time="0" >Hidden</animation>
-	</include>	
+	</include>
 	<include name="Include_CustomView">
 		<include condition="Skin.HasSetting(ViewCustom1001_IsEnable)">ViewCustom1001_Mod</include> <!-- view id = 1001 -->
 		<include condition="Skin.HasSetting(ViewCustom1002_IsEnable)">ViewCustom1002_Mod</include> <!-- view id = 1002 -->
@@ -1349,7 +1426,17 @@ tent(LiveTV)</visible>
 		<include condition="Skin.HasSetting(ViewCustom1007_IsEnable)">ViewCustom1007_Mod</include> <!-- view id = 1007 -->			
 		<include condition="Skin.HasSetting(ViewCustom1008_IsEnable)">ViewCustom1008_Mod</include> <!-- view id = 1008 -->			
 		<include condition="Skin.HasSetting(ViewCustom1009_IsEnable)">ViewCustom1009_Mod</include> <!-- view id = 1009 -->			
-		<include condition="Skin.HasSetting(ViewCustom1010_IsEnable)">ViewCustom1010_Mod</include> <!-- view id = 1010 -->			
+		<include condition="Skin.HasSetting(ViewCustom1010_IsEnable)">ViewCustom1010_Mod</include> <!-- view id = 1010 -->	
+		<include condition="Skin.HasSetting(ViewCustom1011_IsEnable)">ViewCustom1011_Mod</include> <!-- view id = 1011 -->
+		<include condition="Skin.HasSetting(ViewCustom1012_IsEnable)">ViewCustom1012_Mod</include> <!-- view id = 1012 -->
+		<include condition="Skin.HasSetting(ViewCustom1013_IsEnable)">ViewCustom1013_Mod</include> <!-- view id = 1013 -->			
+		<include condition="Skin.HasSetting(ViewCustom1014_IsEnable)">ViewCustom1014_Mod</include> <!-- view id = 1014 -->			
+		<include condition="Skin.HasSetting(ViewCustom1015_IsEnable)">ViewCustom1015_Mod</include> <!-- view id = 1015 -->			
+		<include condition="Skin.HasSetting(ViewCustom1016_IsEnable)">ViewCustom1016_Mod</include> <!-- view id = 1016 -->			
+		<include condition="Skin.HasSetting(ViewCustom1017_IsEnable)">ViewCustom1017_Mod</include> <!-- view id = 1017 -->			
+		<include condition="Skin.HasSetting(ViewCustom1018_IsEnable)">ViewCustom1018_Mod</include> <!-- view id = 1018 -->			
+		<include condition="Skin.HasSetting(ViewCustom1019_IsEnable)">ViewCustom1019_Mod</include> <!-- view id = 1019 -->			
+		<include condition="Skin.HasSetting(ViewCustom1020_IsEnable)">ViewCustom1020_Mod</include> <!-- view id = 1020 -->				
 	</include>
 	<include name="Include_CustomView_Cust">
 		<include condition="Skin.HasSetting(ViewCustom1001_IsEnable)">ViewCustom1001_Custom</include> <!-- view id = 1001 -->
@@ -1361,8 +1448,18 @@ tent(LiveTV)</visible>
 		<include condition="Skin.HasSetting(ViewCustom1007_IsEnable)">ViewCustom1007_Custom</include> <!-- view id = 1007 -->			
 		<include condition="Skin.HasSetting(ViewCustom1008_IsEnable)">ViewCustom1008_Custom</include> <!-- view id = 1008 -->			
 		<include condition="Skin.HasSetting(ViewCustom1009_IsEnable)">ViewCustom1009_Custom</include> <!-- view id = 1009 -->			
-		<include condition="Skin.HasSetting(ViewCustom1010_IsEnable)">ViewCustom1010_Custom</include> <!-- view id = 1010 -->			
-	</include>		
+		<include condition="Skin.HasSetting(ViewCustom1010_IsEnable)">ViewCustom1010_Custom</include> <!-- view id = 1010 -->	
+		<include condition="Skin.HasSetting(ViewCustom1011_IsEnable)">ViewCustom1011_Custom</include> <!-- view id = 1011 -->
+		<include condition="Skin.HasSetting(ViewCustom1012_IsEnable)">ViewCustom1012_Custom</include> <!-- view id = 1012 -->
+		<include condition="Skin.HasSetting(ViewCustom1013_IsEnable)">ViewCustom1013_Custom</include> <!-- view id = 1013 -->			
+		<include condition="Skin.HasSetting(ViewCustom1014_IsEnable)">ViewCustom1014_Custom</include> <!-- view id = 1014 -->			
+		<include condition="Skin.HasSetting(ViewCustom1015_IsEnable)">ViewCustom1015_Custom</include> <!-- view id = 1015 -->			
+		<include condition="Skin.HasSetting(ViewCustom1016_IsEnable)">ViewCustom1016_Custom</include> <!-- view id = 1016 -->			
+		<include condition="Skin.HasSetting(ViewCustom1017_IsEnable)">ViewCustom1017_Custom</include> <!-- view id = 1017 -->			
+		<include condition="Skin.HasSetting(ViewCustom1018_IsEnable)">ViewCustom1018_Custom</include> <!-- view id = 1018 -->			
+		<include condition="Skin.HasSetting(ViewCustom1019_IsEnable)">ViewCustom1019_Custom</include> <!-- view id = 1019 -->			
+		<include condition="Skin.HasSetting(ViewCustom1020_IsEnable)">ViewCustom1020_Custom</include> <!-- view id = 1020 -->			
+	</include>
 	<include name="CustomViewFanart">
 		<visible>![Control.IsVisible(1001) + !Skin.HasSetting(ViewCustom1001_ShowFanart)]</visible>
 		<visible>![Control.IsVisible(1002) + !Skin.HasSetting(ViewCustom1002_ShowFanart)]</visible>
@@ -1374,5 +1471,101 @@ tent(LiveTV)</visible>
 		<visible>![Control.IsVisible(1008) + !Skin.HasSetting(ViewCustom1008_ShowFanart)]</visible>
 		<visible>![Control.IsVisible(1009) + !Skin.HasSetting(ViewCustom1009_ShowFanart)]</visible>
 		<visible>![Control.IsVisible(1010) + !Skin.HasSetting(ViewCustom1010_ShowFanart)]</visible>	
+		<visible>![Control.IsVisible(1011) + !Skin.HasSetting(ViewCustom1011_ShowFanart)]</visible>
+		<visible>![Control.IsVisible(1012) + !Skin.HasSetting(ViewCustom1012_ShowFanart)]</visible>
+		<visible>![Control.IsVisible(1013) + !Skin.HasSetting(ViewCustom1013_ShowFanart)]</visible>
+		<visible>![Control.IsVisible(1014) + !Skin.HasSetting(ViewCustom1014_ShowFanart)]</visible>
+		<visible>![Control.IsVisible(1015) + !Skin.HasSetting(ViewCustom1015_ShowFanart)]</visible>
+		<visible>![Control.IsVisible(1016) + !Skin.HasSetting(ViewCustom1016_ShowFanart)]</visible>
+		<visible>![Control.IsVisible(1017) + !Skin.HasSetting(ViewCustom1017_ShowFanart)]</visible>
+		<visible>![Control.IsVisible(1018) + !Skin.HasSetting(ViewCustom1018_ShowFanart)]</visible>
+		<visible>![Control.IsVisible(1019) + !Skin.HasSetting(ViewCustom1019_ShowFanart)]</visible>
+		<visible>![Control.IsVisible(1020) + !Skin.HasSetting(ViewCustom1020_ShowFanart)]</visible>	
 	</include>
+	<include name="RunFeed1Added">
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=1,feed=http://gdata.youtube.com/feeds/base/standardfeeds/FR/most_viewed?client=ytapi-youtube-browse&amp;amp;alt=rss&amp;amp;time=today,limit=10)</onfocus>
+		
+	</include>
+	<include name="RunFeed2Added">
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=2,feed=http://www.comicbookresources.com/feed.php?feed=all,limit=10)</onfocus>
+	</include>
+	<include name="RunFeed3Added">
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=3,feed=http://pipes.yahoo.com/pipes/pipe.run?_id=7acceee6ebe06dcf6182991b3e5fc9dc&_render=rss,limit=10)</onfocus>
+	</include>
+	<include name="RunFeed4Added">
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=4,feed=http://pipes.yahoo.com/pipes/pipe.run?_id=74fc14a798efee89310bea2b56f99336&_render=rss&n=10,limit=10)</onfocus>
+	</include>
+	<include name="RunFeed5Added">
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=5,feed=http://pipes.yahoo.com/pipes/pipe.run?_id=9KUs2CRI3hGF2JCZ3rVd_w&_render=rss,limit=10)</onfocus>
+	</include>
+	<include name="RunFeed6Added">
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=6,feed=http://pipes.yahoo.com/pipes/pipe.run?_id=9c377c68a206d6ae8f2889db97f10084&_render=rss,limit=10)</onfocus>
+	</include>
+	<include name="RunFeed7Added">
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=7,feed=http://www.celebutopia.net/forum/external.php?forumids=12,limit=10)</onfocus>
+	</include>
+	<include name="RunFeed8Added">
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=8,feed=http://rss.allocine.fr/ac/bandesannonces/anepasmanquer,limit=10)</onfocus>
+	</include>
+	<include name="RunFeed9Added">
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=9,feed=http://belgium-iphone.lesoir.be/feed/,limit=10)</onfocus>
+	</include>
+	<include name="RunFeed10Added">
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=10,feed=http://pipes.yahoo.com/pipes/pipe.run?NumStories=3&Start=1&_id=e5ecd8ffbee522fccb5b2b3b6b776fd5&_render=rss,limit=10)</onfocus>
+	</include>
+	<include name="TestRecently">
+	
+	<control type="button" id="8999">
+			<description>Run Recently added</description>
+			<posx>-20</posx>
+			<posy>-20</posy>
+			<width>1</width>
+			<height>1</height>
+			<label>-</label>
+			<font>-</font>
+			<onfocus>Skin.Reset(LibraryUpdated)</onfocus>
+			<onfocus>XBMC.RunScript(script.recentlyadded,limit=10&amp;albums=True&amp;totals=True)</onfocus>
+			<include condition ="Skin.HasSetting(homepageHideRandomAdded)">RunRandomAdded</include>
+			<onfocus>SetFocus(8998)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>Skin.HasSetting(homepageHideRecentlyAdded) | Skin.HasSetting(homepageHideRandomAdded)</visible>
+		</control>
+			<control type="button" id="8999">
+				<description>Don't run Recently added</description>
+				<posx>-20</posx>
+				<posy>-20</posy>
+				<width>1</width>
+				<height>1</height>
+				<label>-</label>
+				<font>-</font>
+				<onfocus>SetFocus(8998)</onfocus>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<visible>!Skin.HasSetting(homepageHideRecentlyAdded) + !Skin.HasSetting(homepageHideRandomAdded)</visible>
+			</control>
+			<control type="button" id="8998">
+				<description>run rss feeds</description>
+				<posx>-20</posx>
+				<posy>-20</posy>
+				<width>1</width>
+				<height>1</height>
+				<label>-</label>
+				<font>-</font>
+				<include condition ="Skin.HasSetting(Menu_Info_sub1_act)">RunFeed1Added</include>
+				<include condition ="Skin.HasSetting(Menu_Info_sub2_act)">RunFeed2Added</include>
+				<include condition ="Skin.HasSetting(Menu_Info_sub3_act)">RunFeed3Added</include>
+				<include condition ="Skin.HasSetting(Menu_Info_sub4_act)">RunFeed4Added</include>
+				<include condition ="Skin.HasSetting(Menu_Info_sub5_act)">RunFeed5Added</include>
+				<include condition ="Skin.HasSetting(Menu_Info_sub6_act)">RunFeed6Added</include>
+				<include condition ="Skin.HasSetting(Menu_Info_sub7_act)">RunFeed7Added</include>
+				<include condition ="Skin.HasSetting(Menu_Info_sub8_act)">RunFeed8Added</include>
+				<include condition ="Skin.HasSetting(Menu_Info_sub9_act)">RunFeed9Added</include>
+				<include condition ="Skin.HasSetting(Menu_Info_sub10_act)">RunFeed10Added</include>
+				<onfocus>SetFocus(9000)</onfocus>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<visible>Skin.HasSetting(Menu_Info_act)</visible>
+			</control>
+		</include>
 </includes>

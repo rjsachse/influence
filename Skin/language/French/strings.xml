@@ -154,6 +154,61 @@
   <string id="31408">[B]CONFIGURATION DES ADD-ONS[/B][CR][CR]Gérer les Add-ons installés· Recherche et installation d'Add-ons depuis xbmc.org[CR]Modifier les paramètres Add-on</string>
   
   <string id="31421">Sélectionnez un profil d'utilisateur[CR]pour vous connecter et continuer</string>
+   <!-- Night LOCALIZE -->
+  <string id="31226">Rated</string>
+  <string id="31229">Diffusé pour la première fois en</string>
+  <string id="31230">Cette série a été diffusée</string>
+  <string id="31231">Diffusé le</string>
+  <string id="31232">BACK [CR]RETOUR</string>
+  <string id="31233">Choisissez une chanson</string>
+  <string id="31234">sur</string>
+  <string id="31235">RETOUR</string>
+  <string id="31237">Appuyer sur "Bas" pour lancer la Bande-Annonce</string>
+  <string id="31238">Appuyer sur "X" pour arrêter</string>
+  <string id="31240">Appuyer sur "Gauche" pour lancer la Bande-Annonce</string>
+  <string id="31274">LECTURE EN COURS</string>
+  <string id="31275">Episodes récents</string>
+  <string id="31508">Saga</string>
+  <string id="31515">*Appuyez sur "Bas" pour les épisodes récents*</string>
+  <string id="31516">*Appuyez sur "Haut" pour arrêter la Bande-Annonce*</string>
+<!-- WEATHER PLUGIN-->
+    <string id="31900">MAPS</string>
+    <string id="31901">36 HEURES</string>
+    <string id="31902">PAR HEURE</string>
+    <string id="31903">WEEK-END</string>
+    <string id="31904">A 10 JOURS</string>
+    <string id="31905">ACTUEL</string>
+    <string id="31906">ALERTE METEO</string>
+    <string id="31907">VIDEO</string>
+
+    <string id="31910">Satellite &amp; Radar</string>
+    <string id="31911">Forecast</string>
+    <string id="31912">Conditions</string>
+    <string id="31913">Severe Weather</string>
+    <string id="31914">Weather Outlook</string>
+
+    <string id="31923">Average High</string>
+    <string id="31924">Average Low</string>
+    <string id="31925">Record High</string>
+    <string id="31926">Record Low</string>
+    <string id="31927">Observed High</string>
+    <string id="31928">Observed Low</string>
+
+    <string id="31930">Default View</string>
+    <string id="31931">Default Map</string>
+    <string id="31932">Zoom Map</string>
+    <string id="31933">Map Pack Path</string>
+    <string id="31934">Show Details</string>
+    <string id="31935">Show RSS</string>
+    <string id="31936">Show Hourly</string>
+
+    <string id="31940">Pressure</string>
+    <string id="31941">Visibility</string>
+    <string id="31943">Statistics</string>
+    <string id="31948">Chance Precip</string>
+
+    <string id="31970">Fetching forecast info...</string>
+    <string id="31971">Click video button to play</string>
   <!-- Influence -->
   <string id="35000">Utiliser le menu horizontal</string>
   <string id="35001">   - Centrer le Menu</string>
@@ -202,4 +257,5 @@
   <string id="35131">Installer une nouvelle vue</string>
   <string id="35132">Télécharger le théme</string>
   <string id="35133">Cacher la barre du haut</string>
+  <string id="35134">CHEMIN DU FLUX RSS</string>
 </strings>

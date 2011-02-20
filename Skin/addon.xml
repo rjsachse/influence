@@ -1,29 +1,31 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="skin.influence"
-  version="1.2.0"
+  version="1.2.1"
   name="Influence"
-  provider-name="Yiarkyiark, Team Passion XBMC">
+  provider-name="Yiarkyiark/Ronan/Frost, Team Passion XBMC">
   <requires>
     <import addon="xbmc.gui" version="2.11"/>
     <import addon="script.TvTunes" version="0.7.3"/>
     <import addon="script.moviesets" version="1.0.5"/>
+    <import addon="script.rssclient" version="1.0.1"/>
     <import addon="script.favourites" version="1.0.3"/>
     <import addon="script.randomitems" version="1.0.6"/>
     <import addon="script.recentlyadded" version="1.0.5"/>
+    <import addon="script.library.editor" version="1.0.0"/>
     <import addon="script.xbmc.subtitles" version="1.8.0"/>
     <import addon="script.logo-downloader" version="2.0.0"/>
     </requires>
-  <extension 
+  <extension
     point="xbmc.gui.skin"
-    defaultresolution="720p" 
+    defaultresolution="720p"
     defaultresolutionwide="720p"
-    defaultthemename="textures.xbt" 
+    defaultthemename="textures.xbt"
     effectslowdown="0.75"
     debugging="false"/>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">Influence by Yiarkyiark and the team Passion XBMC</summary>
-    <summary lang="fr">Influence par Yiarkyiark et l'équipe Team Passion XBMC</summary>
+    <summary lang="en">Influence by Yiarkyiark/Ronan/Frost and the team Passion XBMC</summary>
+    <summary lang="fr">Influence par Yiarkyiark/Ronan/Frost et l'équipe Team Passion XBMC</summary>
     <description lang="en">Influence is a skin based on Confluence, It includes all its features but have a slightly different approach based on texture transparency enhancement in order to highlight fanarts. The other main feature of this skin is to have fully customizable menus, modifying, deleting or adding some with an intuitive interface. It also carries most of the successfull skin features (Movie set, logo, clearart, fanart, ...)</description>
     <description lang="fr">Influence est un skin dérivé de Confluence, il en reprend toutes les caractéristiques mais avec une approche basée sur la transparence des textures pour mettre en valeur les fanarts.  L'autre caractéristique de ce skin est d'avoir des menus entièrement paramétrable, modification, suppression ou rajout, ceci avec une interface intuitive. Il intègre également la plupart des fonctionnalités des skins a succès, (Saga, logo, clearart, fanart, ...)</description>
     <platform>all</platform>

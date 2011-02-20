@@ -149,17 +149,73 @@
 
   <string id="31421">Select your XBMC user Profile[CR]to login and continue</string>
   <!-- Extra Unified PVR labels -->
-  <string id="31500">Recording Timers</string>
-  <string id="31501">Scheduled Time</string>
-  <string id="31502">Live TV</string>
-  <string id="31503">Add Group</string>
-  <string id="31504">Rename Group</string>
-  <string id="31505">Delete Group</string>
-  <string id="31506">Available[CR]Groups</string>
-  <string id="31507">Ungrouped[CR]Channels</string>
-  <string id="31508">Channels in Group</string>
-  <string id="31509">Channel Group</string>
-  <string id="31510">Timer Set</string>
+  <string id="34500">Recording Timers</string>
+  <string id="34501">Scheduled Time</string>
+  <string id="34502">Live TV</string>
+  <string id="34503">Add Group</string>
+  <string id="34504">Rename Group</string>
+  <string id="34505">Delete Group</string>
+  <string id="34506">Available[CR]Groups</string>
+  <string id="34507">Ungrouped[CR]Channels</string>
+  <string id="34508">Channels in Group</string>
+  <string id="34509">Channel Group</string>
+  <string id="34510">Timer Set</string>
+  
+ <!-- Night LOCALIZE -->
+  <string id="31226">Rated</string><!-- GOOD -->
+  <string id="31229">First Premiered in</string><!-- GOOD -->
+  <string id="31230">This Show Aired</string><!-- GOOD -->
+  <string id="31231">Aired</string><!-- GOOD -->
+  <string id="31232">GO [CR]BACK</string>
+  <string id="31233">Please Choose a Song</string><!-- GOOD -->
+  <string id="31234">on</string><!-- GODD -->
+  <string id="31235">GO BACK</string>
+  <string id="31237">Press Down for Trailer</string>
+  <string id="31238">Press "X" to Stop</string>
+  <string id="31240">Press "Left" for Trailer</string>
+  <string id="31274">NOW PLAYING</string>
+  <string id="31275">Recent Episodes</string>
+  <string id="31508">MovieSet</string>
+  <string id="31515">Press Down for New Episodes</string>
+  <string id="31516">*Press Up or "X" to stop Trailer*</string>
+  <!-- Weather plugin -->
+    <string id="31900">MAPS</string>
+    <string id="31901">36 HOUR</string>
+    <string id="31902">HOURLY</string>
+    <string id="31903">WEEKEND</string>
+    <string id="31904">10 DAY</string>
+    <string id="31905">CURRENT</string>
+    <string id="31906">ALERTS</string>
+    <string id="31907">VIDEO</string>
+
+    <string id="31910">Satellite &amp; Radar</string>
+    <string id="31911">Forecast</string>
+    <string id="31912">Conditions</string>
+    <string id="31913">Severe Weather</string>
+    <string id="31914">Weather Outlook</string>
+
+    <string id="31923">Average High</string>
+    <string id="31924">Average Low</string>
+    <string id="31925">Record High</string>
+    <string id="31926">Record Low</string>
+    <string id="31927">Observed High</string>
+    <string id="31928">Observed Low</string>
+
+    <string id="31930">Default View</string>
+    <string id="31931">Default Map</string>
+    <string id="31932">Zoom Map</string>
+    <string id="31933">Map Pack Path</string>
+    <string id="31934">Show Details</string>
+    <string id="31935">Show RSS</string>
+    <string id="31936">Show Hourly</string>
+
+    <string id="31940">Pressure</string>
+    <string id="31941">Visibility</string>
+    <string id="31943">Statistics</string>
+    <string id="31948">Chance Precip</string>
+
+    <string id="31970">Fetching forecast info...</string>
+    <string id="31971">Click video button to play</string>
 
   <!-- Influence  -->
   <string id="35000">Use Horizontal Menu</string>
@@ -197,11 +253,11 @@
   <string id="35117">Activate menu</string>
   <string id="35118">Activate Live Tv</string>
   <string id="35119">DVD</string>
-  <string id="35120">Favourite</string>^M
-  <string id="35121">Hide the buttons on the home</string>^M
-  <string id="35122">Edit Menu</string>^M
-  <string id="35123">Back to Menu</string>^M
-  <string id="35124">Music</string>^M
+  <string id="35120">Favourite</string>
+  <string id="35121">Hide Homescreen buttons</string>
+  <string id="35122">Edit Menu</string>
+  <string id="35123">Back to Menu</string>
+  <string id="35124">Music</string>
   <string id="35125">1 day weather</string>
   <string id="35126">In 2 days</string>
   <string id="35127">In 3 days</string>
