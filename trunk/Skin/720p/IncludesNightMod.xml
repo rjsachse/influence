@@ -1,0 +1,1979 @@
+<includes>
+	<include name="Animation_BackdropFade">
+		<animation effect="fade" start="0" end="100" time="800">WindowOpen</animation>	
+		<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="200">Visible</animation>	
+		<animation effect="fade" start="100" end="0" time="200">Hidden</animation>		
+	</include>
+	<include name="Animation_Bartowski_Context_Zoom">
+		<animation type="WindowOpen">
+			<effect type="zoom" time="400" center="640,360" start="180" end="100" tween="cubic" easing="out" />
+			<effect type="fade" time="400" start="0" end="100" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="zoom" time="400" center="640,360" start="100" end="280" tween="cubic" easing="in" />
+			<effect type="fade" time="400" start="100" end="0" />
+		</animation>	
+	</include>
+	<include name="Animation_CommonFade">
+		<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>	
+		<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="200">Visible</animation>	
+		<animation effect="fade" start="100" end="0" time="200">Hidden</animation>		
+	</include>
+	<include name="Animation_CommonFadeNoHide">
+		<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>	
+		<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+	</include>
+	<include name="Animation_HiddenByInfo">
+		<animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(songinformation)">Conditional</animation>	
+	</include>
+	<include name="Animation_HiddenByMusicInfo">
+		<animation type="Conditional" condition="Window.IsActive(2001)">
+			<effect type="zoom" time="400" center="640,360" start="100" end="20" tween="cubic" easing="in" />
+			<effect type="fade" time="400" start="100" end="0" />
+		</animation>
+	</include>
+	<include name="Animation_LandscapeFade">
+		<animation effect="fade" start="0" end="100" time="800" delay="800">WindowOpen</animation>	
+		<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+	</include>
+	<include name="Animation_MusicWallFloat">
+		<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="Container(53).Row(0)">Conditional</animation>
+		<animation effect="slide" end="0,-200" time="300" tween="cubic" easing="inout" condition="Container(53).Row(1)">Conditional</animation>		
+		<animation effect="slide" end="0,-400" time="300" tween="cubic" easing="inout" condition="Container(53).Row(2)">Conditional</animation>
+		<animation effect="slide" end="0,-600" time="300" tween="cubic" easing="inout" condition="Container(53).Row(3)">Conditional</animation>
+		<animation effect="slide" end="0,-800" time="300" tween="cubic" easing="inout" condition="Container(53).Row(4)">Conditional</animation>
+		<animation effect="slide" end="0,-1000" time="300" tween="cubic" easing="inout" condition="Container(53).Row(5)">Conditional</animation>
+		<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="Container(53).Column(3)">Conditional</animation>
+		<animation effect="slide" end="-200,0" time="300" tween="cubic" easing="inout" condition="Container(53).Column(4)">Conditional</animation>		
+		<animation effect="slide" end="-400,0" time="300" tween="cubic" easing="inout" condition="Container(53).Column(5)">Conditional</animation>
+		<animation effect="slide" end="-600,0" time="300" tween="cubic" easing="inout" condition="Container(53).Column(6)">Conditional</animation>
+		<animation effect="slide" end="-800,0" time="300" tween="cubic" easing="inout" condition="Container(53).Column(7)">Conditional</animation>
+		<animation effect="slide" end="-1000,0" time="300" tween="cubic" easing="inout" condition="Container(53).Column(8)">Conditional</animation>
+		<animation effect="slide" end="200,0" time="300" tween="cubic" easing="inout" condition="Container(53).Column(2)">Conditional</animation>			
+		<animation effect="slide" end="400,0" time="300" tween="cubic" easing="inout" condition="Container(53).Column(1)">Conditional</animation>		
+		<animation effect="slide" end="600,0" time="300" tween="cubic" easing="inout" condition="Container(53).Column(0)">Conditional</animation>		
+	</include>
+	<include name="Animation_SlideUpFadeOut">
+		<animation type="WindowOpen" reversible="false">
+			<effect type="slide" start="0,100" end="0,0" time="400" tween="cubic" easing="out" />
+			<effect type="fade" start="0" end="100" time="400" />
+		</animation>
+		<animation type="WindowClose" reversible="false">
+			<effect type="fade" start="100" end="0" time="400" />
+		</animation>
+	</include>
+	<include name="Animation_Viewtype_3dLand_FocusArea">
+		<animation type="WindowOpen">
+			<effect type="slide" start="1400" end="0,0" time="1000" delay="200" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" start="0" end="1400,0" time="1000" delay="200" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
+	<include name="Animation_Viewtype_3dland_Leftplot">
+		<animation type="WindowOpen">
+			<effect type="slide" start="0,800" end="0,0" time="600" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="0,800" time="600" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
+	<include name="Animation_Viewtype_3dland_Lefttop">
+		<animation type="WindowOpen">
+			<effect type="slide" start="-900,0" end="0,0" time="600" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="-900,0" time="600" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
+	<include name="Animation_Viewtype_Episode_BottomArea">
+		<animation type="WindowOpen">
+			<effect type="slide" start="0,400" end="0,0" time="600" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="0,400" time="600" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
+	<include name="Animation_Viewtype_Episode_FocusArea">
+		<animation type="WindowOpen">
+			<effect type="slide" start="400" end="0,0" time="600" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" start="0" end="400,0" time="600" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
+	<include name="Animation_Viewtype_Episode_LeftSide">
+		<animation type="WindowOpen">
+			<effect type="slide" start="-800" end="0,0" time="600" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" start="0" end="-800,0" time="600" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
+	<include name="Animation_Viewtype_Files_LeftArea">
+		<animation type="WindowOpen">
+			<effect type="slide" start="-1000,0" end="0,0" time="600" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" start="0" end="-1000,0" time="600" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
+	<include name="Animation_Viewtype_Files_RightArea">
+		<animation type="WindowOpen">
+			<effect type="slide" start="800,0" end="0,0" time="600" delay="600" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" start="0" end="800,0" time="600" delay="600" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
+	<include name="Animation_Viewtype_Landscape_BottomInfo">
+		<animation type="WindowOpen">
+			<effect type="slide" start="0,600" end="0,0" time="600" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="0,600" time="600" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
+	<include name="Animation_Viewtype_Landscape_Fanart_FocusArea">
+		<animation type="WindowOpen">
+			<effect type="slide" start="1400" end="-400,0" time="600" tween="cubic" easing="inout" />
+			<effect type="slide" start="0,0" end="400,0" time="800" delay="600" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" start="0" end="0,200" time="600" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
+	<include name="Animation_Viewtype_Landscape_FocusArea">
+		<animation type="WindowOpen">
+			<effect type="slide" start="1400" end="-400,0" time="600" tween="cubic" easing="inout" />
+			<effect type="slide" start="0,0" end="400,0" time="800" delay="600" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" start="0" end="0,-200" time="600" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
+	<include name="Animation_Viewtype_Landscape_RightArea">
+		<animation type="WindowOpen">
+			<effect type="slide" start="1000,0" end="0,0" time="800" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="1000,0" time="800" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
+	<include name="Animation_Viewtype_Landscape_ThumbArea">
+		<animation type="WindowOpen">
+			<effect type="slide" start="-800,0" end="0,0" time="600" delay="400" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="-800,0" time="600" delay="400" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
+	<include name="Animation_Viewtype_Panel_BottomArea">
+		<animation type="WindowOpen">
+			<effect type="slide" start="0,600" end="0,0" time="600" delay="400" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="0,600" time="600" delay="400" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
+	<include name="Animation_Viewtype_Panel_Fanart">
+		<animation type="WindowOpen">
+			<effect type="fade" start="0" end="100" time="600" delay="400" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="600" delay="400" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
+	<include name="Animation_Viewtype_Panel_FocusArea">
+		<animation type="WindowOpen">
+			<effect type="slide" start="800,0" end="0,0" time="600" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="800,0" time="600" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
+	<include name="Animation_Viewtype_Panel_Title">
+		<animation type="WindowOpen">
+			<effect type="slide" start="-600,0" end="0,0" time="600" delay="200" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="-600,0" time="600" delay="200" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
+	<include name="Animation_Viewtype_Showcase_FocusArea">
+		<animation type="WindowOpen">
+			<effect type="slide" start="0,400" end="0,0" time="600" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="0,400" time="600" tween="cubic" easing="inout" />
+			<effect type="fade" start="100" end="0" time="400" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
+	<include name="Animation_Viewtype_Showcase_LeftArea">
+		<animation type="WindowOpen">
+			<effect type="slide" start="-600" end="0,0" time="600" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
+	<include name="Animation_Viewtype_Showcase_Plot">
+		<animation type="WindowOpen">
+			<effect type="slide" start="0,-800" end="0,0" time="600" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="0,-800" time="600" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
+	<include name="Animation_Viewtype_Showcase_RightArea">
+		<animation type="WindowOpen">
+			<effect type="slide" start="800,0" end="0,0" time="800" delay="200" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="800,0" time="800" delay="200" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
+	<include name="Animation_Viewtype_Showcase_RightFlags">
+		<animation type="WindowOpen">
+			<effect type="slide" start="800,0" end="0,0" time="800" delay="600" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="800,0" time="800" delay="600" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
+	<include name="Animation_Viewtype_Showcase_ThumbArea">
+		<animation type="WindowOpen">
+			<effect type="slide" start="-800,0" end="0,0" time="600" delay="400" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="-800,0" time="600" delay="400" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
+	<include name="Animation_Viewtype_Showcase_Trailer">
+		<animation type="WindowOpen">
+			<effect type="slide" start="-800,0" end="0,0" time="800" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="-800,0" time="800" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
+	<include name="Animation_Viewtype_Wall_Fags">
+		<animation type="WindowOpen">
+			<effect type="slide" start="0,200" end="0,0" time="600" delay="600" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="0,200" time="600" delay="600" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
+	<include name="Animation_Viewtype_Wall_Plot">
+		<animation type="WindowOpen">
+			<effect type="slide" start="800,0" end="0,0" time="600" delay="800" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="800,0" time="600" delay="800" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
+	<include name="Animation_Viewtype_Wall_Title">
+		<animation type="WindowOpen">
+			<effect type="slide" start="800,0" end="0,0" time="600" delay="400" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="800,0" time="600" delay="400" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
+	<include name="Animation_Viewtype_Wall_UnderInfo">
+		<animation type="WindowOpen">
+			<effect type="slide" start="800,0" end="0,0" time="600" delay="600" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="800,0" time="600" delay="600" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
+	<include name="Animation_ZoomInZoomOut">
+		<animation type="WindowOpen">
+			<effect type="zoom" time="400" center="640,360" start="50" end="100" tween="cubic" easing="out" />
+			<effect type="fade" time="400" start="0" end="100" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="zoom" time="400" center="640,360" start="100" end="50" tween="cubic" easing="in" />
+			<effect type="fade" time="400" start="100" end="0" />
+		</animation>	
+	</include>
+	<include name="color_flags">
+		<include>VideoCodecFlaggingConditions</include>
+		<include>AudioCodecFlaggingConditions</include>
+		<include>AspectCodecFlaggingConditions</include>
+		<include>VideoTypeHackFlaggingConditions</include>
+	</include>
+	<include name="Dimensions_Fullscreen">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+	</include>
+	<include name="Fanart_Next_Aired">
+		<control type="group">
+			<animation effect="slide" start="0,0" end="0,-40" time="0" tween="cubic" easing="inout" condition="IsEmpty(Control.GetLabel(7015))">Conditional</animation>
+			<visible>Skin.HasSetting(Poster_Fanart)</visible>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.1.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.1.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.2.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.2.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.3.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.3.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.4.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.4.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.5.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.5.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.6.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.6.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.7.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.7.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.8.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.8.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.9.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.9.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.10.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.10.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.11.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.11.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.12.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.12.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.13.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.13.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.14.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.14.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.15.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.15.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.16.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.16.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.17.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.17.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.18.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.18.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.19.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.19.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.20.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.20.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.21.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.21.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.22.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.22.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.23.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.23.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.24.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.24.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.25.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.25.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.26.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.26.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.27.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.27.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.28.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.28.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.29.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.29.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=mainblue][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.30.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.30.ShowTitle),ListItem.Label)</visible>
+				</control>
+		</control>
+	</include>
+	<include name="grey_flags">
+		<include>VideoCodecFlaggingConditions_grey</include>
+		<include>AudioCodecFlaggingConditions_grey</include>
+		<include>AspectCodecFlaggingConditions_grey</include>
+		<include>VideoTypeHackFlaggingConditions_grey</include>
+	</include>
+	<include name="Landscape_Next_Aired">
+		<control type="group">
+		<include>Animation_HiddenByInfo</include>
+		<include>Animation_Viewtype_Landscape_BottomInfo</include>
+		<animation effect="slide" start="0,0" end="0,120" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(52) + [Skin.HasSetting(TVPosters) + !Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)]]">Conditional</animation>
+		<visible>Control.IsVisible(52) + Container.Content(tvshows) + !IsEmpty(ListItem.Title)</visible>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.1.NextDate)] - $INFO[Window(Home).Property(NextAired.1.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.1.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.2.NextDate)] - $INFO[Window(Home).Property(NextAired.2.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.2.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.3.NextDate)] - $INFO[Window(Home).Property(NextAired.3.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.3.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.4.NextDate)] - $INFO[Window(Home).Property(NextAired.4.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.4.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.5.NextDate)] - $INFO[Window(Home).Property(NextAired.5.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.5.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.6.NextDate)] - $INFO[Window(Home).Property(NextAired.6.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.6.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.7.NextDate)] - $INFO[Window(Home).Property(NextAired.7.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.7.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.8.NextDate)] - $INFO[Window(Home).Property(NextAired.8.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.8.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.9.NextDate)] - $INFO[Window(Home).Property(NextAired.9.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.9.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.10.NextDate)] - $INFO[Window(Home).Property(NextAired.10.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.10.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.11.NextDate)] - $INFO[Window(Home).Property(NextAired.11.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.11.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.12.NextDate)] - $INFO[Window(Home).Property(NextAired.12.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.12.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.13.NextDate)] - $INFO[Window(Home).Property(NextAired.13.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.13.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.14.NextDate)] - $INFO[Window(Home).Property(NextAired.14.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.14.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.15.NextDate)] - $INFO[Window(Home).Property(NextAired.15.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.15.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.16.NextDate)] - $INFO[Window(Home).Property(NextAired.16.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.16.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.17.NextDate)] - $INFO[Window(Home).Property(NextAired.17.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.17.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.18.NextDate)] - $INFO[Window(Home).Property(NextAired.18.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.18.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.19.NextDate)] - $INFO[Window(Home).Property(NextAired.19.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.19.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.20.NextDate)] - $INFO[Window(Home).Property(NextAired.20.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.20.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.21.NextDate)] - $INFO[Window(Home).Property(NextAired.21.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.21.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.22.NextDate)] - $INFO[Window(Home).Property(NextAired.22.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.22.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.23.NextDate)] - $INFO[Window(Home).Property(NextAired.23.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.23.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.24.NextDate)] - $INFO[Window(Home).Property(NextAired.24.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.24.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.25.NextDate)] - $INFO[Window(Home).Property(NextAired.25.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.25.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.26.NextDate)] - $INFO[Window(Home).Property(NextAired.26.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.26.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.27.NextDate)] - $INFO[Window(Home).Property(NextAired.27.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.27.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.28.NextDate)] - $INFO[Window(Home).Property(NextAired.28.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.28.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.29.NextDate)] - $INFO[Window(Home).Property(NextAired.29.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.29.ShowTitle),ListItem.Label)</visible>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>556</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=mainblue]Next Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[Window(Home).Property(NextAired.30.NextDate)] - $INFO[Window(Home).Property(NextAired.30.NextTitle)][/COLOR]</label>
+				<visible>StringCompare(Window(Home).Property(NextAired.30.ShowTitle),ListItem.Label)</visible>
+			</control>
+		</control>
+	</include>
+	<include name="cdartspin2">
+		<animation type="WindowOpen">
+			<effect type="slide" end="-72" tween="cubic" easing="out" delay="1000" time="2000" />
+			<effect type="rotate" center="auto" end="234" time="3250" />
+		</animation>
+		<animation type="WindowClose" reversible="false" condition="Player.Playing">
+			<effect type="slide" start="-72" end="0" tween="cubic" easing="out" time="2000" />
+			<effect type="rotate" center="auto" start="0" end="20" time="500" />
+			<effect type="rotate" center="auto" start="0" end="25" time="500" delay="500" />
+			<effect type="rotate" center="auto" start="0" end="30" time="500" delay="1000" />
+			<effect type="rotate" center="auto" start="0" end="36" time="500" delay="1500" />
+		</animation>
+		
+		<animation effect="rotate" end="-36000" center="auto" time="500000" loop="true" reversible="false" condition="true">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="3000" loop="true" reversible="false" condition="Player.Forwarding2x">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="Player.Forwarding4x">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="1500" loop="true" reversible="false" condition="Player.Forwarding8x">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="1000" loop="true" reversible="false" condition="Player.Forwarding16x">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="500" loop="true" reversible="false" condition="Player.Forwarding32x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="3000" loop="true" reversible="false" condition="Player.Rewinding2x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="2000" loop="true" reversible="false" condition="Player.Rewinding4x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="1500" loop="true" reversible="false" condition="Player.Rewinding8x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="1000" loop="true" reversible="false" condition="Player.Rewinding16x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="500" loop="true" reversible="false" condition="Player.Rewinding32x">Conditional</animation>
+		<animation effect="rotate" end="36000" center="auto" time="500000" loop="true" reversible="false" condition="Player.Paused">Conditional</animation>
+		<animation effect="rotate" end="-28" center="auto" time="500" reversible="false" condition="Player.Paused">Conditional</animation>
+		<animation effect="rotate" end="-15" center="auto" time="500" delay="500" reversible="false" condition="Player.Paused">Conditional</animation>
+		<animation effect="rotate" end="-3" center="auto" time="250" delay="1000" reversible="false" condition="Player.Paused">Conditional</animation>
+	</include>	
+	<include name="cdartspin3">
+		<animation type="WindowOpen">
+			<effect type="slide" end="70" tween="cubic" easing="out" delay="1000" time="2000" />
+			<effect type="rotate" center="auto" end="234" time="3250" />
+		</animation>
+		<animation type="WindowClose" reversible="false" condition="Player.Playing">
+			<effect type="slide" start="70" end="0" tween="cubic" easing="out" time="2000" />
+			<effect type="rotate" center="auto" start="0" end="20" time="500" />
+			<effect type="rotate" center="auto" start="0" end="25" time="500" delay="500" />
+			<effect type="rotate" center="auto" start="0" end="30" time="500" delay="1000" />
+			<effect type="rotate" center="auto" start="0" end="36" time="500" delay="1500" />
+		</animation>
+		
+		<animation effect="rotate" end="-36000" center="auto" time="500000" loop="true" reversible="false" condition="true">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="3000" loop="true" reversible="false" condition="Player.Forwarding2x">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="Player.Forwarding4x">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="1500" loop="true" reversible="false" condition="Player.Forwarding8x">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="1000" loop="true" reversible="false" condition="Player.Forwarding16x">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="500" loop="true" reversible="false" condition="Player.Forwarding32x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="3000" loop="true" reversible="false" condition="Player.Rewinding2x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="2000" loop="true" reversible="false" condition="Player.Rewinding4x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="1500" loop="true" reversible="false" condition="Player.Rewinding8x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="1000" loop="true" reversible="false" condition="Player.Rewinding16x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="500" loop="true" reversible="false" condition="Player.Rewinding32x">Conditional</animation>
+		<animation effect="rotate" end="36000" center="auto" time="500000" loop="true" reversible="false" condition="Player.Paused">Conditional</animation>
+		<animation effect="rotate" end="-28" center="auto" time="500" reversible="false" condition="Player.Paused">Conditional</animation>
+		<animation effect="rotate" end="-15" center="auto" time="500" delay="500" reversible="false" condition="Player.Paused">Conditional</animation>
+		<animation effect="rotate" end="-3" center="auto" time="250" delay="1000" reversible="false" condition="Player.Paused">Conditional</animation>
+	</include>	
+	<include name="Music_Global_Showcase">
+		<control type="group">
+		<include>Animation_CommonFade</include>
+		<visible>[Control.IsVisible(56) | Control.IsVisible(57) | [Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart)] | Control.IsVisible(51)] + Player.HasAudio + !Skin.HasSetting(zune_music)</visible>		
+			<control type="image"><!-- 1st overlay -->
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture>Custom_Media_Night/music/music_overlay_back.png</texture>
+			</control>
+			<control type="group">
+				<posx>-20</posx>
+				<posy>700</posy>
+					<animation type="Conditional" reversible="false" condition="true" loop="true">
+						<effect type="slide" start="-400,0" end="0,0" time="500" delay="0" />
+						<effect type="slide" start="0,0" end="-400,0" time="500" delay="21000" />
+						<effect type="slide" start="0,0" end="-400,0" time="500" delay="28000" />
+					</animation>
+						<control type="image" id="7026">
+							<description>dirty hack for showing cdart image</description>
+							<posx>30</posx>
+							<posy>-120</posy>
+							<width>130</width>
+							<height>130</height>
+							<texture>$INFO[Player.FolderPath]cdart.png</texture>
+							<aspectratio align="bottom">keep</aspectratio>
+							<include>cdartspin3</include>
+						</control>	
+						<control type="image">
+							<description>cover image</description>
+							<posx>32</posx>
+							<posy>-120</posy>
+							<width>130</width>
+							<height>130</height>
+							<texture diffuse="Custom_Media_Night/music/musicwallmatte.png">$INFO[MusicPlayer.Cover]</texture>
+						</control>
+						<control type="image">
+							<posx>20</posx>
+							<posy>-132</posy>
+							<width>154</width>
+							<height>154</height>
+							<texture>Custom_Media_Night/music/musicwallframeF.png</texture>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+						</control>
+				</control>
+				
+				<control type="group">
+				<posx>-20</posx>
+				<posy>700</posy>
+					<animation type="Conditional" reversible="false" condition="true" loop="true">
+						<effect type="slide" start="-400,0" end="0,0" time="500" delay="21500" />
+						<effect type="slide" start="0,0" end="-400,0" time="500" delay="28000" />
+					</animation>
+						<control type="image">
+							<description>cover image</description>
+							<posx>32</posx>
+							<posy>-120</posy>
+							<width>130</width>
+							<height>130</height>
+							<texture diffuse="Custom_Media_Night/music/musicwallmatte.png">$INFO[MusicPlayer.offset(1).Cover]</texture>
+						</control>
+						<control type="image">
+							<posx>20</posx>
+							<posy>-132</posy>
+							<width>154</width>
+							<height>154</height>
+							<texture>Custom_Media_Night/music/musicwallframeF.png</texture>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+						</control>
+			</control>
+			<control type="group">
+			<posx>-80</posx>
+			<posy>600</posy>
+			<animation effect="slide" start="0,0" end="66,0" delay="600" time="2000" tween="cubic" easing="inout" condition="!IsEmpty(Control.GetLabel(7026))">Conditional</animation>
+			<animation type="Conditional" reversible="false" condition="true" loop="true">
+				<effect type="slide" start="0,400" end="0,0" time="500" delay="0" />
+				<effect type="slide" start="0,0" end="0,400" time="500" delay="21000" />
+				<effect type="slide" start="0,0" end="0,400" time="500" delay="28000" />
+			</animation>
+					<control type="label">
+						<description>Track</description>
+						<posx>234</posx>
+						<posy>-26</posy>
+						<width min="10" max="380">auto</width>
+						<align>left</align>
+						<height>18</height>
+						<font>Font_Date</font>
+						<textcolor>ffffffff</textcolor>
+						<label>[B][COLOR=mainblue]$LOCALIZE[13350][/COLOR] [/B]</label>
+						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
+						<visible>!Control.IsVisible(51)</visible>
+					</control>
+					<control type="label">
+						<description>Track</description>
+						<posx>234</posx>
+						<posy>-10</posy>
+						<width min="10" max="380">auto</width>
+						<align>left</align>
+						<height>18</height>
+						<font>Font_Bartowski_Showcase_Title</font>
+						<textcolor>ffffffff</textcolor>
+						<label>[B]$INFO[MusicPlayer.Title][/B]</label>
+						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
+						<visible>!Control.IsVisible(51)</visible>
+					</control>
+				
+		<!-- artist name control -->
+					<control type="label">
+						<description>artist name</description>
+						<posx>234</posx>
+						<posy>20</posy>
+						<width>380</width>
+						<height>18</height>
+						<aligny>center</aligny>
+						<align>left</align>
+						<font>Font_Date</font>
+						<textcolor>ffffffff</textcolor>
+						<label>$INFO[MusicPlayer.Artist,[B]$LOCALIZE[557]: [/B]]</label>
+						<!--<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>-->
+						<visible>!Control.IsVisible(51)</visible>
+					</control>
+		<!--  album name control -->
+					<control type="label">
+						<description>album name</description>
+						<posx>234</posx>
+						<posy>42</posy>
+						<width>380</width>
+						<height>18</height>
+						<aligny>center</aligny>
+						<align>left</align>
+						<font>Font_Date</font>
+						<textcolor>ffffffff</textcolor>
+						<label>$INFO[MusicPlayer.Album,[B]$LOCALIZE[558]: [/B]]</label>
+						<visible>!Control.IsVisible(51)</visible>
+					</control>
+					<control type="label">
+						<description>album name</description>
+						<posx>234</posx>
+						<posy>64</posy>
+						<width>380</width>
+						<height>18</height>
+						<aligny>center</aligny>
+						<align>left</align>
+						<font>Font_Date</font>
+						<textcolor>ffffffff</textcolor>
+						<label>$INFO[MusicPlayer.year,[B]$LOCALIZE[345]: [/B]]</label>
+						<visible>!Control.IsVisible(51)</visible>
+					</control>
+			</control>
+				
+				
+				
+				
+				
+			<control type="group">
+			<posx>-100</posx>
+			<posy>570</posy>
+			<visible>true</visible>
+				<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<effect type="slide" start="0,400" end="0,0" time="500" delay="21500" />
+					<effect type="slide" start="0,0" end="0,400" time="500" delay="28000" />
+				</animation>
+					<control type="label">
+						<description>Track</description>
+						<posx>250</posx>
+						<posy>6</posy>
+						<width min="40" max="380">auto</width>
+						<align>left</align>
+						<height>18</height>
+						<font>Font_Date</font>
+						<textcolor>ffffffff</textcolor>
+						<label>[B][COLOR=mainblue]$LOCALIZE[209]...[/COLOR][/B]</label>
+						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
+					</control>
+					<control type="label">
+						<description>Track</description>
+						<posx>250</posx>
+						<posy>22</posy>
+						<width min="40" max="380">auto</width>
+						<align>left</align>
+						<height>18</height>
+						<font>Font_Bartowski_Showcase_Title</font>
+						<textcolor>ffffffff</textcolor>
+						<label>[B]$INFO[MusicPlayer.offset(1).Title][/B]</label>
+						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
+					</control>
+		<!-- artist name control -->
+					<control type="label">
+						<description>artist name</description>
+						<posx>250</posx>
+						<posy>50</posy>
+						<width>380</width>
+						<height>18</height>
+						<aligny>center</aligny>
+						<align>left</align>
+						<font>Font_Date</font>
+						<textcolor>ffffffff</textcolor>
+						<label>$INFO[MusicPlayer.offset(1).Artist,[B]$LOCALIZE[557]: [/B]]</label>
+						<!--<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>-->
+					</control>
+		<!--  album name control -->
+					<control type="label">
+						<description>album name</description>
+						<posx>250</posx>
+						<posy>70</posy>
+						<width>380</width>
+						<height>18</height>
+						<aligny>center</aligny>
+						<align>left</align>
+						<font>Font_Date</font>
+						<textcolor>ffffffff</textcolor>
+						<label>$INFO[MusicPlayer.offset(1).Album,[B]$LOCALIZE[558]: [/B]]</label>
+					</control>
+				</control>
+		</control>
+		<control type="group">
+		<posx>30</posx>
+		<posy>630</posy>
+		<include>Animation_CommonFade</include>
+		<visible>[Control.IsVisible(56) | Control.IsVisible(57) | [Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart)] | Control.IsVisible(51)] + Player.HasAudio + Skin.HasSetting(zune_music)</visible>
+			<control type="image"><!-- 1st overlay -->
+				<posx>-30</posx>
+				<posy>-630</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture>Custom_Media_Night/music/music_overlay_back.png</texture>
+			</control>
+			<control type="image">
+				<description>cover image</description>
+				<posx>0</posx>
+				<posy>30</posy>
+				<width>50</width>
+				<height>50</height>
+				<texture diffuse="Custom_Media_Night/music/musicwallmatte.png">$INFO[MusicPlayer.Cover]</texture>
+			</control>
+			<control type="image">
+				<posx>-6</posx>
+				<posy>24</posy>
+				<width>60</width>
+				<height>60</height>
+				<texture>Custom_Media_Night/music/musicwallframeF.png</texture>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+			</control>
+			<control type="label">
+				<description>artist name</description>
+				<posx>60</posx>
+				<posy>36</posy>
+				<width>200</width>
+				<height>18</height>
+				<aligny>center</aligny>
+				<align>center</align>
+				<font>Font_Bartowski_Zune</font>
+				<textcolor>grey2</textcolor>
+				<label>$INFO[MusicPlayer.Artist]</label>
+				<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<effect type="fade" start="0" end="100" time="500" delay="0" />
+					<effect type="fade" start="100" end="0" time="500" delay="7000" />
+					<effect type="fade" start="100" end="0" time="500" delay="14000" />
+				</animation>
+			</control>
+			<control type="label">
+				<description>album name</description>
+				<posx>60</posx>
+				<posy>36</posy>
+				<width>200</width>
+				<height>18</height>
+				<aligny>center</aligny>
+				<align>center</align>
+				<font>Font_Bartowski_Zune</font>
+				<textcolor>grey2</textcolor>
+				<label>$INFO[MusicPlayer.Album]</label>
+				<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<effect type="fade" start="0" end="100" time="500" delay="7500" />
+					<effect type="fade" start="100" end="0" time="500" delay="14000" />
+				</animation>
+			</control>
+			<control type="progress" id="23">
+				<texturebg>Custom_Media_Night/osd/osd_progress_back1.png</texturebg>
+				<lefttexture>Custom_Media_Night/osd/left.png</lefttexture>
+				<midtexture>Custom_Media_Night/osd/mid.png</midtexture>
+				<righttexture>Custom_Media_Night/osd/new_pause2.png</righttexture>
+				<info>Player.Progress</info>
+				<posx>60</posx>
+				<posy>60</posy>
+				<width>200</width>
+				<height>10</height>
+			</control>
+		</control>
+	</include>
+	<include name="Music_Global_TopRight_Music_Showcase">
+		<control type="image"><!-- Floor -->
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>309</height>
+			<texture>Custom_Media_Night/music/music_top_right_fanart_back.png</texture>
+			<include>Animation_CommonFade</include>
+			<visible>[Control.IsVisible(58) + Skin.HasSetting(MusicShowcaseFanart) | Control.IsVisible(56) + Skin.HasSetting(3dmusic_Fanart)] + Player.HasAudio</visible>
+		</control>
+		<control type="group">
+		<include>Animation_CommonFade</include>
+		<visible>[Control.IsVisible(50) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(55)] + Window.IsActive(musiclibrary) + Player.HasAudio + !Skin.HasSetting(zune_music)</visible>		
+			<control type="group">
+				<posx>1100</posx>
+				<posy>130</posy>
+					<animation type="Conditional" reversible="false" condition="true" loop="true">
+						<effect type="slide" start="400,0" end="0,0" time="500" delay="0" />
+						<effect type="slide" start="0,0" end="400,0" time="500" delay="21000" />
+						<effect type="slide" start="0,0" end="400,0" time="500" delay="28000" />
+					</animation>
+						<control type="image" id="9826">
+							<description>dirty hack for showing cdart image</description>
+							<posx>34</posx>
+							<posy>-120</posy>
+							<width>130</width>
+							<height>130</height>
+							<texture>$INFO[Player.FolderPath]cdart.png</texture>
+							<aspectratio align="bottom">keep</aspectratio>
+							<include>cdartspin2</include>
+						</control>	
+						<control type="image">
+							<description>cover image</description>
+							<posx>32</posx>
+							<posy>-120</posy>
+							<width>130</width>
+							<height>130</height>
+							<texture diffuse="Custom_Media_Night/music/musicwallmatte.png">$INFO[MusicPlayer.Cover]</texture>
+						</control>
+						<control type="image">
+							<posx>20</posx>
+							<posy>-132</posy>
+							<width>152</width>
+							<height>152</height>
+							<texture>Custom_Media_Night/music/musicwallframeF.png</texture>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+						</control>
+				</control>
+				
+				<control type="group">
+				<posx>1100</posx>
+				<posy>130</posy>
+					<animation type="Conditional" reversible="false" condition="true" loop="true">
+						<effect type="slide" start="400,0" end="0,0" time="500" delay="21500" />
+						<effect type="slide" start="0,0" end="400,0" time="500" delay="28000" />
+					</animation>
+						<control type="image">
+							<description>cover image</description>
+							<posx>32</posx>
+							<posy>-120</posy>
+							<width>130</width>
+							<height>130</height>
+							<texture diffuse="Custom_Media_Night/music/musicwallmatte.png">$INFO[MusicPlayer.offset(1).Cover]</texture>
+						</control>
+						<control type="image">
+							<posx>20</posx>
+							<posy>-132</posy>
+							<width>152</width>
+							<height>152</height>
+							<texture>Custom_Media_Night/music/musicwallframeF.png</texture>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+						</control>
+				</control>
+			<control type="group">
+			<posx>864</posx>
+			<posy>34</posy>
+				<animation effect="slide" start="0,0" end="-60,0" delay="600" time="2000" tween="cubic" easing="inout" condition="!IsEmpty(Control.GetLabel(9826))">Conditional</animation>
+				<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<effect type="slide" start="0,-400" end="0,0" time="500" delay="0" />
+					<effect type="slide" start="0,0" end="0,-400" time="500" delay="21000" />
+					<effect type="slide" start="0,0" end="0,-400" time="500" delay="28000" />
+				</animation>
+					<control type="label">
+						<description>Track</description>
+						<posx>250</posx>
+						<posy>-26</posy>
+						<width min="10" max="380">auto</width>
+						<align>right</align>
+						<height>18</height>
+						<font>Font_Date</font>
+						<textcolor>mainblue</textcolor>
+						<label>[B]$LOCALIZE[13350][/B]</label>
+						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
+					</control>
+					<control type="label">
+						<description>Track</description>
+						<posx>250</posx>
+						<posy>-8</posy>
+						<width min="10" max="380">auto</width>
+						<align>right</align>
+						<height>18</height>
+						<font>Font_Bartowski_Showcase_Title</font>
+						<textcolor>ffffffff</textcolor>
+						<label>[B]$INFO[MusicPlayer.Title][/B]</label>
+						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
+					</control>
+				
+		<!-- artist name control -->
+					<control type="label">
+						<description>artist name</description>
+						<posx>250</posx>
+						<posy>22</posy>
+						<width>380</width>
+						<height>18</height>
+						<aligny>center</aligny>
+						<align>right</align>
+						<font>Font_Date</font>
+						<textcolor>ffffffff</textcolor>
+						<label>$INFO[MusicPlayer.Artist] :[B]$LOCALIZE[557][/B]</label>
+						<!--<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>-->
+					</control>
+		<!--  album name control -->
+					<control type="label">
+						<description>album name</description>
+						<posx>250</posx>
+						<posy>44</posy>
+						<width>380</width>
+						<height>18</height>
+						<aligny>center</aligny>
+						<align>right</align>
+						<font>Font_Date</font>
+						<textcolor>ffffffff</textcolor>
+						<label>$INFO[MusicPlayer.Album] [B]:$LOCALIZE[558][/B]</label>
+					</control>
+					<control type="label">
+						<description>album name</description>
+						<posx>250</posx>
+						<posy>66</posy>
+						<width>380</width>
+						<height>18</height>
+						<aligny>center</aligny>
+						<align>right</align>
+						<font>Font_Date</font>
+						<textcolor>ffffffff</textcolor>
+						<label>$INFO[MusicPlayer.year] [B]:$LOCALIZE[345][/B]</label>
+					</control>
+			</control>
+				
+				
+				
+				
+				
+			<control type="group">
+			<posx>864</posx>
+			<posy>6</posy>
+			<visible>true</visible>
+				<animation effect="slide" start="0,0" end=",-30" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(59)">Conditional</animation>
+				<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<effect type="slide" start="0,-400" end="0,0" time="500" delay="21500" />
+					<effect type="slide" start="0,0" end="0,-400" time="500" delay="28000" />
+				</animation>
+					<control type="label">
+						<description>Track</description>
+						<posx>250</posx>
+						<posy>0</posy>
+						<width min="750" max="380">auto</width>
+						<align>right</align>
+						<height>18</height>
+						<font>Font_Date</font>
+						<textcolor>mainblue</textcolor>
+						<label>[B]$LOCALIZE[209][/B]</label>
+						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
+					</control>
+					<control type="label">
+						<description>Track</description>
+						<posx>250</posx>
+						<posy>16</posy>
+						<width min="750" max="380">auto</width>
+						<align>right</align>
+						<height>18</height>
+						<font>Font_Bartowski_Showcase_Title</font>
+						<textcolor>ffffffff</textcolor>
+						<label>$INFO[MusicPlayer.offset(1).Title]</label>
+						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
+					</control>
+		<!-- artist name control -->
+					<control type="label">
+						<description>artist name</description>
+						<posx>250</posx>
+						<posy>46</posy>
+						<width>380</width>
+						<height>18</height>
+						<aligny>center</aligny>
+						<align>right</align>
+						<font>Font_Date</font>
+						<textcolor>ffffffff</textcolor>
+						<label>$INFO[MusicPlayer.offset(1).Artist][B]:$LOCALIZE[557][/B]</label>
+						<!--<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>-->
+					</control>
+		<!--  album name control -->
+					<control type="label">
+						<description>album name</description>
+						<posx>250</posx>
+						<posy>66</posy>
+						<width>380</width>
+						<height>18</height>
+						<aligny>center</aligny>
+						<align>right</align>
+						<font>Font_Date</font>
+						<textcolor>ffffffff</textcolor>
+						<label>$INFO[MusicPlayer.offset(1).Album][B]:$LOCALIZE[558][/B]</label>
+					</control>
+				</control>
+		</control>
+		<control type="group">
+		<posx>1000</posx>
+		<posy>-10</posy>
+		<include>Animation_CommonFade</include>
+		<visible>[Control.IsVisible(50) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(55)] + Window.IsActive(musiclibrary) + Player.HasAudio + Skin.HasSetting(zune_music)</visible>
+			<control type="image">
+				<description>cover image</description>
+				<posx>0</posx>
+				<posy>30</posy>
+				<width>50</width>
+				<height>50</height>
+				<texture diffuse="Custom_Media_Night/music/musicwallmatte.png">$INFO[MusicPlayer.Cover]</texture>
+			</control>
+			<control type="image">
+				<posx>-6</posx>
+				<posy>24</posy>
+				<width>60</width>
+				<height>60</height>
+				<texture>Custom_Media_Night/music/musicwallframeF.png</texture>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+			</control>
+			<control type="label">
+				<description>artist name</description>
+				<posx>60</posx>
+				<posy>36</posy>
+				<width>200</width>
+				<height>18</height>
+				<aligny>center</aligny>
+				<align>center</align>
+				<font>Font_Bartowski_Zune</font>
+				<textcolor>grey2</textcolor>
+				<label>$INFO[MusicPlayer.Artist]</label>
+				<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<effect type="fade" start="0" end="100" time="500" delay="0" />
+					<effect type="fade" start="100" end="0" time="500" delay="7000" />
+					<effect type="fade" start="100" end="0" time="500" delay="14000" />
+				</animation>
+			</control>
+			<control type="label">
+				<description>album name</description>
+				<posx>60</posx>
+				<posy>36</posy>
+				<width>200</width>
+				<height>18</height>
+				<aligny>center</aligny>
+				<align>center</align>
+				<font>Font_Bartowski_Zune</font>
+				<textcolor>grey2</textcolor>
+				<label>$INFO[MusicPlayer.Album]</label>
+				<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<effect type="fade" start="0" end="100" time="500" delay="7500" />
+					<effect type="fade" start="100" end="0" time="500" delay="14000" />
+				</animation>
+			</control>
+			<control type="progress" id="23">
+				<texturebg>Custom_Media_Night/osd/osd_progress_back1.png</texturebg>
+				<lefttexture>Custom_Media_Night/osd/left.png</lefttexture>
+				<midtexture>Custom_Media_Night/osd/mid.png</midtexture>
+				<righttexture>Custom_Media_Night/osd/new_pause2.png</righttexture>
+				<info>Player.Progress</info>
+				<posx>60</posx>
+				<posy>60</posy>
+				<width>200</width>
+				<height>10</height>
+			</control>
+		</control>
+	</include>
+	<include name="ondown_small_trailer">
+		<ondown>XBMC.PlayMedia($INFO[ListItem.Trailer],1,noresume)</ondown>
+	</include>
+	<include name="ondown_big_trailer">
+		<ondown>XBMC.PlayMedia($INFO[ListItem.Trailer],noresume)</ondown>
+	</include>
+	<include name="onleft_small_trailer">
+		<onleft>XBMC.PlayMedia($INFO[ListItem.Trailer],1,noresume)</onleft>
+	</include>
+	<include name="onleft_big_trailer">
+		<onleft>XBMC.PlayMedia($INFO[ListItem.Trailer],noresume)</onleft>
+	</include>
+	<include name="poster_focusposition_dark">
+		<focusposition>3</focusposition>
+	</include>
+	<include name="poster_focusposition_fanart">
+		<focusposition>5</focusposition>
+	</include>
+	<include name="Poster_Next_Aired">
+		<control type="group">
+			<visible>Container.Content(tvshows)</visible>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.1.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.1.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.2.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.2.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.3.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.3.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.4.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.4.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.5.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.5.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.6.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.6.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.7.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.7.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.8.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.8.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.9.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.9.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.10.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.10.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.11.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.11.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.12.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.12.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.13.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.13.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.14.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.14.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.15.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.15.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.16.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.16.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.17.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.17.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.18.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.18.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.19.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.19.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.20.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.20.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.21.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.21.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.22.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.22.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.23.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.23.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.24.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.24.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.25.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.25.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.26.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.26.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.27.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.27.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.28.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.28.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.29.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.29.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.30.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.30.ShowTitle),ListItem.Label)</visible>
+				</control>
+		</control>
+	</include>
+	<include name="posterview_width_dark">
+		<width>1400</width>
+	</include>
+	<include name="posterview_width_fanart">
+		<width>1900</width>
+	</include>
+	<include name="Trailer_Episodes">
+		<control type="group">
+			<visible>Control.IsVisible(51) + Player.HasVideo</visible>
+			<animation effect="zoom" start="0" end="60" time="0" delay="0" condition="Player.HasVideo">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="400" delay="800" condition="Player.HasVideo">Conditional</animation>
+			<posx>-10</posx>
+			<posy>900</posy>
+			<control type="image"> 
+				<description>trailer image</description>
+				<posx>-70</posx>
+				<posy>-70</posy>   
+				<width>693</width>     
+				<height>445</height> 
+				<texture>Custom_Media_Night/dialogs/trailer_diffuse_back.png</texture>
+			</control>
+			<control type="videowindow" id="9">
+				<posx>30</posx>
+				<posy>26</posy>
+				<width>500</width>
+				<height>256</height>
+			</control>
+		</control>
+	</include>
+	<include name="Trailer_Home">
+		<control type="group">
+			<visible>Window.IsActive(Home) + Player.HasVideo</visible>
+			<animation effect="zoom" start="0" end="60" time="0" delay="0" condition="Player.HasVideo">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="400" delay="800" condition="Player.HasVideo">Conditional</animation>
+			<posx>500</posx>
+			<posy>500</posy>
+			<control type="image"> 
+				<description>trailer image</description>
+				<posx>-70</posx>
+				<posy>-70</posy>   
+				<width>693</width>     
+				<height>445</height> 
+				<texture>Custom_Media_Night/dialogs/trailer_diffuse_back.png</texture>
+			</control>
+			<control type="videowindow" id="8">
+				<posx>30</posx>
+				<posy>26</posy>
+				<width>500</width>
+				<height>256</height>
+			</control>
+		</control>
+	</include>
+	<include name="Trailer_Panel">
+		<control type="group">
+			<visible>Control.IsVisible(56) + Player.HasVideo</visible>
+			<animation effect="slide" start="-100,-16" end="6,-16" time="400" delay="800" condition="Player.HasVideo">Conditional</animation>
+			<animation effect="zoom" start="0" end="100" time="400" delay="800" condition="Player.HasVideo">Conditional</animation>
+			<posx>0</posx>
+			<posy>0</posy>
+			<control type="image"> 
+				<description>trailer image</description>
+				<posx>-70</posx>
+				<posy>-70</posy>   
+				<width>693</width>     
+				<height>445</height> 
+				<texture>Custom_Media_Night/dialogs/trailer_diffuse_back.png</texture>
+			</control>
+			<control type="videowindow" id="4">
+				<posx>30</posx>
+				<posy>26</posy>
+				<width>500</width>
+				<height>256</height>
+			</control>
+		</control>
+	</include>
+	<include name="Trailer_Showcase">
+		<control type="group">
+			<visible>Control.IsVisible(58) + Player.HasVideo</visible>
+			<animation effect="zoom" start="0" end="78" time="400" delay="0" condition="Player.HasVideo">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="400" delay="800" condition="Player.HasVideo">Conditional</animation>
+			<posx>-10</posx>
+			<posy>0</posy>
+			<control type="image"> 
+				<description>trailer image</description>
+				<posx>-70</posx>
+				<posy>-70</posy>   
+				<width>693</width>     
+				<height>445</height> 
+				<texture>Custom_Media_Night/dialogs/trailer_diffuse_back.png</texture>
+			</control>
+			<control type="videowindow" id="6">
+				<posx>30</posx>
+				<posy>26</posy>
+				<width>500</width>
+				<height>256</height>
+			</control>
+		</control>
+	</include>
+	<include name="Trailer_WallPanel">
+		<control type="group">
+			<visible>Control.IsVisible(597) + Player.HasVideo</visible>
+			<animation effect="zoom" start="0" end="50" time="0" delay="0" condition="Player.HasVideo">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="400" delay="800" condition="Player.HasVideo">Conditional</animation>
+			<posx>0</posx>
+			<posy>1090</posy>
+			<control type="image"> 
+				<description>trailer image</description>
+				<posx>-70</posx>
+				<posy>-70</posy>   
+				<width>693</width>     
+				<height>445</height> 
+				<texture>Custom_Media_Night/dialogs/trailer_diffuse_back.png</texture>
+			</control>
+			<control type="videowindow" id="8">
+				<posx>30</posx>
+				<posy>26</posy>
+				<width>500</width>
+				<height>256</height>
+			</control>
+		</control>
+	</include>
+</includes>

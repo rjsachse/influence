@@ -1,0 +1,249 @@
+<includes>
+	<include name="ContentItemGenre">
+		<item>
+			<label>$LOCALIZE[515]:</label>
+			<label2 fallback="[COLOR=grey2]Click to Edit[/COLOR]">$INFO[ListItem.Genre]</label2>
+			<onclick>RunScript(script.library.editor,EDIT_GENRE)</onclick>
+			<icon>MediaSubSet.png</icon>
+			<visible>System.HasAddon(script.library.editor) + IsEmpty(ListItem.Property(HasMovieSets))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[515]:</label>
+			<label2>$INFO[ListItem.Genre]</label2>
+			<onclick>-</onclick>
+			<visible>!IsEmpty(ListItem.Genre) + [!System.HasAddon(script.library.editor) | !IsEmpty(ListItem.Property(HasMovieSets))]</visible>
+		</item>
+	</include>
+	<include name="ContentItemDirector">
+		<item>
+			<label>$LOCALIZE[20339]:</label>
+			<label2>$INFO[ListItem.Director]</label2>
+			<onclick>-</onclick>
+			<visible>!IsEmpty(ListItem.Director)</visible>
+		</item>
+	</include>
+	<include name="ContentItemWriter">
+		<item>
+			<label>$LOCALIZE[20417]:</label>
+			<label2>$INFO[ListItem.Writer]</label2>
+			<onclick>-</onclick>
+			<visible>!IsEmpty(ListItem.Writer)</visible>
+		</item>
+	</include>
+	<include name="ContentItemStudio">
+		<item>
+			<label>$LOCALIZE[572]:</label>
+			<label2>$INFO[ListItem.Studio]</label2>
+			<onclick>-</onclick>
+			<visible>!IsEmpty(ListItem.Studio)</visible>
+		</item>
+	</include>
+	<include name="ContentItemYear">
+		<item>
+			<label>$LOCALIZE[562]:</label>
+			<label2 fallback="[COLOR=grey2]Click to Edit[/COLOR]">$INFO[ListItem.Year]$INFO[ListItem.Property(Years)]</label2>
+			<onclick>RunScript(script.library.editor,EDIT_YEAR)</onclick>
+			<icon>MediaSubSet.png</icon>
+			<visible>System.HasAddon(script.library.editor) + IsEmpty(ListItem.Property(HasMovieSets))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[562]:</label>
+			<label2>$INFO[ListItem.Year]$INFO[ListItem.Property(Years)]</label2>
+			<onclick>-</onclick>
+			<visible>[!IsEmpty(ListItem.Year) | !IsEmpty(ListItem.Property(Years))] + [!System.HasAddon(script.library.editor) | !IsEmpty(ListItem.Property(HasMovieSets))]</visible>
+		</item>
+	</include>
+	<include name="ContentItemDuration">
+		<item>
+			<label>$LOCALIZE[2050]:</label>
+			<label2>$INFO[ListItem.Duration] $LOCALIZE[12391]</label2>
+			<onclick>-</onclick>
+			<visible>!IsEmpty(ListItem.Duration)</visible>
+		</item>
+	</include>
+	<include name="ContentItemRatingAndVotes">
+		<item>
+			<label>$LOCALIZE[563]:</label>
+			<label2 fallback="[COLOR=grey2]Click to Edit[/COLOR]">$INFO[ListItem.RatingAndVotes]</label2>
+			<onclick>RunScript(script.library.editor,EDIT_RATING)</onclick>
+			<icon>MediaSubSet.png</icon>
+			<visible>System.HasAddon(script.library.editor) + IsEmpty(ListItem.Property(HasMovieSets))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[563]:</label>
+			<label2>$INFO[ListItem.RatingAndVotes]</label2>
+			<onclick>-</onclick>
+			<visible>!IsEmpty(ListItem.RatingAndVotes) + [!System.HasAddon(script.library.editor) | !IsEmpty(ListItem.Property(HasMovieSets))]</visible>
+		</item>
+	</include>
+	<include name="ContentItemTagLine">
+		<item>
+			<label>$LOCALIZE[202]:</label>
+			<label2>$INFO[ListItem.TagLine]</label2>
+			<onclick>-</onclick>
+			<visible>!IsEmpty(ListItem.TagLine)</visible>
+		</item>
+	</include>
+	<include name="ContentItemPlotOutline">
+		<item>
+			<label>$LOCALIZE[203]:</label>
+			<label2>$INFO[ListItem.PlotOutline]</label2>
+			<onclick>-</onclick>
+			<visible>!IsEmpty(ListItem.PlotOutline)</visible>
+		</item>
+	</include>
+	<include name="ContentItemMPAA">
+		<item>
+			<label>$LOCALIZE[20074]:</label>
+			<label2 fallback="[COLOR=grey2]Click to Edit[/COLOR]">$INFO[ListItem.mpaa]</label2>
+			<onclick>RunScript(script.library.editor,EDIT_MPAA)</onclick>
+			<icon>MediaSubSet.png</icon>
+			<visible>System.HasAddon(script.library.editor) + IsEmpty(ListItem.Property(HasMovieSets))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[20074]:</label>
+			<label2>$INFO[ListItem.mpaa]</label2>
+			<onclick>-</onclick>
+			<visible>!IsEmpty(ListItem.mpaa) + [!System.HasAddon(script.library.editor) | !IsEmpty(ListItem.Property(HasMovieSets))]</visible>
+		</item>
+	</include>
+	<include name="ContentItemFilenameAndPath">
+		<item>
+			<label>$LOCALIZE[15311]</label>
+			<label2>$INFO[ListItem.FilenameAndPath]</label2>
+			<onclick>-</onclick>
+			<visible>!IsEmpty(ListItem.FilenameAndPath)</visible>
+		</item>
+	</include>
+	<include name="ContentItemPremiered">
+		<item>
+			<label>$LOCALIZE[31322]:</label>
+			<label2 fallback="[COLOR=grey2]Click to Edit[/COLOR]">$INFO[ListItem.Premiered]</label2>
+			<onclick>RunScript(script.library.editor,EDIT_PREMIERED)</onclick>
+			<icon>MediaSubSet.png</icon>
+			<visible>System.HasAddon(script.library.editor) + IsEmpty(ListItem.Property(HasMovieSets))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[31322]:</label>
+			<label2>$INFO[ListItem.Premiered]</label2>
+			<onclick>-</onclick>
+			<visible>!IsEmpty(ListItem.Premiered) + [!System.HasAddon(script.library.editor) | !IsEmpty(ListItem.Property(HasMovieSets))]</visible>
+		</item>
+	</include>
+	<include name="ContentItemRating">
+		<item>
+			<label>$LOCALIZE[563]:</label>
+			<label2 fallback="[COLOR=grey2]Click to Edit[/COLOR]">$INFO[ListItem.Rating]</label2>
+			<onclick>RunScript(script.library.editor,EDIT_RATING)</onclick>
+			<icon>MediaSubSet.png</icon>
+			<visible>System.HasAddon(script.library.editor) + IsEmpty(ListItem.Property(HasMovieSets))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[563]:</label>
+			<label2>$INFO[ListItem.Rating]</label2>
+			<onclick>-</onclick>
+			<visible>!IsEmpty(ListItem.Rating) + [!System.HasAddon(script.library.editor) | !IsEmpty(ListItem.Property(HasMovieSets))]</visible>
+		</item>
+	</include>
+	<include name="MoviesContentItems">
+		<content>
+			<item>
+				<label>$LOCALIZE[20342]:</label>
+				<label2>$INFO[ListItem.Property(TotalMovies)] [COLOR=grey] ($INFO[ListItem.Property(WatchedMovies),, $LOCALIZE[16102]] - $INFO[ListItem.Property(UnWatchedMovies), , $LOCALIZE[16101]])[/COLOR]</label2>
+				<onclick>-</onclick>
+				<visible>!IsEmpty(ListItem.Property(HasMovieSets))</visible>
+			</item>
+			<item>
+				<label>$LOCALIZE[20376]:</label>
+				<label2>$INFO[ListItem.OriginalTitle]</label2>
+				<onclick>-</onclick>
+				<visible>!IsEmpty(ListItem.OriginalTitle) + !stringcompare(ListItem.OriginalTitle,Listitem.Title)</visible>
+			</item>
+			<include>ContentItemDirector</include>
+			<include>ContentItemWriter</include>
+			<include>ContentItemStudio</include>
+			<include>ContentItemGenre</include>
+			<include>ContentItemYear</include>
+			<include>ContentItemDuration</include>
+			<include>ContentItemRatingAndVotes</include>
+			<include>ContentItemTagLine</include>
+			<include>ContentItemPlotOutline</include>
+			<include>ContentItemMPAA</include>
+			<item>
+				<label>$LOCALIZE[574]:</label>
+				<label2>$INFO[ListItem.Property(Countries)]</label2>
+				<onclick>-</onclick>
+				<visible>!IsEmpty(ListItem.Property(Countries))</visible>
+			</item>
+			<include>ContentItemFilenameAndPath</include>
+		</content>
+	</include>
+	<include name="TVShowsContentItems">
+		<content>
+			<item>
+				<label>$LOCALIZE[20360]:</label>
+				<label2>$INFO[listitem.episode] [COLOR=grey] ($INFO[ListItem.Property(WatchedEpisodes),, $LOCALIZE[16102]] - $INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101]])[/COLOR]</label2>
+				<onclick>-</onclick>
+				<visible>!IsEmpty(ListItem.Episode)</visible>
+			</item>
+			<include>ContentItemPremiered</include>
+			<include>ContentItemGenre</include>
+			<include>ContentItemYear</include>
+			<include>ContentItemRating</include>
+			<include>ContentItemFilenameAndPath</include>
+		</content>
+	</include>
+	<include name="EpisodesContentItems">
+		<content>
+			<item>
+				<label>$LOCALIZE[20364]:</label>
+				<label2>$INFO[ListItem.TVShowTitle]</label2>
+				<onclick>-</onclick>
+				<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
+			</item>
+			<item>
+				<label>$LOCALIZE[20373]:</label>
+				<label2>$INFO[ListItem.Season]</label2>
+				<onclick>-</onclick>
+				<visible>!IsEmpty(ListItem.Season)</visible>
+			</item>
+			<item>
+				<label>$LOCALIZE[20359]:</label>
+				<label2>$INFO[ListItem.Episode]</label2>
+				<onclick>-</onclick>
+				<visible>!IsEmpty(ListItem.Episode)</visible>
+			</item>
+			<include>ContentItemPremiered</include>
+			<!--<include>ContentItemGenre</include>-->
+			<include>ContentItemDirector</include>
+			<include>ContentItemWriter</include>
+			<include>ContentItemYear</include>
+			<include>ContentItemDuration</include>
+			<include>ContentItemRating</include>
+			<include>ContentItemFilenameAndPath</include>
+		</content>
+	</include>
+	<include name="MusicVideosContentItems">
+		<content>
+			<item>
+				<label>$LOCALIZE[557]:</label>
+				<label2>$INFO[ListItem.Artist]</label2>
+				<onclick>-</onclick>
+				<visible>!IsEmpty(ListItem.Artist)</visible>
+			</item>
+			<item>
+				<label>$LOCALIZE[558]:</label>
+				<label2>$INFO[ListItem.Album]</label2>
+				<onclick>-</onclick>
+				<visible>!IsEmpty(ListItem.Album)</visible>
+			</item>
+			<include>ContentItemGenre</include>
+			<include>ContentItemStudio</include>
+			<include>ContentItemWriter</include>
+			<include>ContentItemDirector</include>
+			<include>ContentItemYear</include>
+			<include>ContentItemDuration</include>
+			<include>ContentItemFilenameAndPath</include>
+		</content>
+	</include>
+</includes>
