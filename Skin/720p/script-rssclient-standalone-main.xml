@@ -1,0 +1,693 @@
+<window>
+	<defaultcontrol always="true">30049</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<views>50,51,500,550,560,561,1001,1002,1003,1004,1005,1006,1007,1008,1009,1010</views>
+	<controls>
+		<include>CustomView Fanart</include>
+		<include>CommonInfoBackground</include>
+		<include>CommonMediaPlayingBackground</include>
+		<include>Window_OpenClose_Animation</include>
+		<control type="image">
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>1260</width>
+			<height>700</height>
+			<texture>ContentPanel.png</texture>
+			<aspectratio scalediffuse="false" align="center" aligny="top">stretch</aspectratio>
+		</control>
+		<control type="group">
+			<control type="group">
+				<control type="image">
+					<posx>380</posx>
+					<posy>55</posy>
+					<width>48</width>
+					<height>48</height>
+					<texture>scroll-left.png</texture>
+				</control>
+				<control type="image">
+					<posx>1195</posx>
+					<posy>55</posy>
+					<width>48</width>
+					<height>48</height>
+					<texture>scroll-right.png</texture>
+				</control>
+				<visible>!Control.HasFocus(30049)</visible>		
+			</control>
+			<control type="group">
+				<control type="image">
+					<posx>380</posx>
+					<posy>55</posy>
+					<width>48</width>
+					<height>48</height>
+					<texture>scroll-left-focus.png</texture>
+				</control>
+				<control type="image">
+					<posx>1195</posx>
+					<posy>55</posy>
+					<width>48</width>
+					<height>48</height>
+					<texture>scroll-right-focus.png</texture>
+				</control>
+				<visible>Control.HasFocus(30049)</visible>		
+			</control>
+			<control type="label">
+				<posx>430</posx>
+				<posy>55</posy>
+				<width>370</width>
+				<height>48</height>
+				<aligny>center</aligny>
+				<align>left</align>
+				<label>$INFO[Container(30050).ListItem(-1).Label]</label>
+				<wrapmultiline>true</wrapmultiline>
+				<font>font10</font>
+				<textcolor>white</textcolor>
+			</control>
+			<control type="label">
+				<posx>1190</posx>
+				<posy>55</posy>
+				<width>370</width>
+				<height>48</height>
+				<aligny>center</aligny>
+				<align>right</align>
+				<label>$INFO[Container(30050).ListItem(1).Label]</label>
+				<wrapmultiline>true</wrapmultiline>
+				<font>font10</font>
+				<textcolor>white</textcolor>
+			</control>
+			
+		
+			<control type="textbox" id="30009">
+				<posx>380</posx>
+				<posy>280</posy>
+				<width>860</width>
+				<height>268</height>
+				<aligny>top</aligny>
+				<align>left</align>
+				<autoscroll time="3000" delay="4000" repeat="5000">True</autoscroll>
+				<label>$INFO[Container(30050).ListItem(0).Property(desc)]</label>
+				<font>font10</font>
+				<textcolor>white</textcolor>
+				<spincolor>FFFFFFFF</spincolor>
+			</control>	
+			
+			
+			<control type="label">
+				<posx>1240</posx>
+				<posy>120</posy>
+				<width>860</width>
+				<height>310</height>
+				<aligny>top</aligny>
+				<align>right</align>
+				<label>$INFO[Container(30050).ListItem(0).Property(channeltext)]</label>
+				<wrapmultiline>true</wrapmultiline>
+				<font>font11</font>
+				<textcolor>white</textcolor>
+			</control>	
+				
+			<control type="label">
+				<posx>1240</posx>
+				<posy>150</posy>
+				<width>860</width>
+				<height>310</height>
+				<aligny>top</aligny>
+				<align>right</align>
+				<label>$INFO[Container(30050).ListItem(0).Property(date)]</label>
+				<wrapmultiline>true</wrapmultiline>
+				<font>font10</font>
+				<textcolor>white</textcolor>
+			</control>	
+			
+			<control type="group">
+				<control type="label">
+					<posx>380</posx>
+					<posy>180</posy>
+					<width>860</width>
+					<height>310</height>
+					<aligny>top</aligny>
+					<align>left</align>
+					<label>$INFO[Container(30050).ListItem(0).Label]</label>
+					<wrapmultiline>true</wrapmultiline>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+				</control>
+				<visible>StringCompare(Container(30050).ListItem(0).Property(image),)</visible>
+			</control>
+			
+			
+			
+			<control type="group">
+				<control type="label">
+					<posx>550</posx>
+					<posy>180</posy>
+					<width>690</width>
+					<height>310</height>
+					<aligny>top</aligny>
+					<align>left</align>
+					<label>$INFO[Container(30050).ListItem(0).Label]</label>
+					<wrapmultiline>true</wrapmultiline>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+				</control>	
+				<control type="image" id="30011">
+					<posx>380</posx>
+					<posy>120</posy>
+					<width>150</width>
+					<height>150</height>
+					<texture>$INFO[Container(30050).ListItem(0).Property(image)]</texture>
+					<aspectratio scalediffuse="false" align="center" aligny="top">keep</aspectratio>
+					<visible>!Container(30050).ListItem.Property(slideshowable)</visible>
+				</control>	
+				<control type="multiimage">
+					<posx>380</posx>
+					<posy>120</posy>
+					<width>150</width>
+					<height>150</height>
+					<imagepath>$INFO[Container(30050).ListItem(0).Property(multiimagepath)]</imagepath>
+					<aspectratio scalediffuse="false" align="center" aligny="top">keep</aspectratio>
+					<timeperimage>2000</timeperimage>
+					<fadetime>1000</fadetime>
+					<pauseatend>5000</pauseatend>
+					<randomize>false</randomize>
+					<loop>yes</loop>
+					<visible>Container(30050).ListItem.Property(slideshowable)</visible>
+				</control>	
+				<visible>!StringCompare(Container(30050).ListItem(0).Property(image),)</visible>
+			</control>
+			<control type="group" id="30052">
+				<control type="button" id="39000">
+					<onright>39001</onright>
+					<onleft>30049</onleft>
+					<onup>30049</onup>
+					<ondown>30051</ondown>
+					<label>$ADDON[script.rssclient-standalone 30012]</label>
+					<onclick>SetFocus(30050)</onclick>
+					<textcolor>white</textcolor>
+					<font>font13</font>
+					<posx>380</posx>
+					<posy>600</posy>
+					<height>40</height>
+					<width>250</width>
+					<textoffsetx>10</textoffsetx>
+					<textwidth>235</textwidth>
+					<texturefocus border="5">button-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+				</control>
+				
+				<control type="grouplist">
+					<posx>630</posx>
+					<posy>600</posy>
+					<width>500</width>
+					<height>310</height>
+					<itemgap>250</itemgap>
+					
+					<orientation>horizontal</orientation>
+					<onup>30049</onup>
+					<ondown>30051</ondown>
+					<onleft>39000</onleft>
+					<onright>30049</onright>
+					<control type="button" id="39001">
+						<onright>39002</onright>
+						<onleft>39000</onleft>
+						<label>$ADDON[script.rssclient-standalone 30013]</label>
+						<onclick>XBMC.SlideShow($INFO[Container(30050).ListItem.Property(multiimagepath)])</onclick>
+						<textcolor>white</textcolor>
+						<height>40</height>
+						<width>250</width>
+						<font>font13</font>
+						<textoffsetx>10</textoffsetx>
+						<textwidth>235</textwidth>
+						<texturefocus border="5">button-focus.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<pulseonselect>false</pulseonselect>
+						<visible>Container(30050).ListItem.Property(slideshowable)</visible>
+					</control>
+					<control type="button" id="39002">
+						<onright>30049</onright>
+						<onleft>39001</onleft>
+						<label>$ADDON[script.rssclient-standalone 30014]</label>
+						<onclick>XBMC.PlayMedia($INFO[Container(30050).ListItem.Property(video)])</onclick>
+						<textcolor>white</textcolor>
+						<height>40</height>
+						<width>250</width>
+						<font>font13</font>
+						<textoffsetx>10</textoffsetx>
+						<textwidth>235</textwidth>
+						<texturefocus border="5">button-focus.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<pulseonselect>false</pulseonselect>
+						<visible>!StringCompare(Container(30050).ListItem.Property(video),)</visible>
+					</control>
+				</control>
+			</control>
+			<control type="group" id="30048">
+				<control type="button" id="30049">
+					<posx>-70</posx>
+					<posy>-70</posy>
+					<width>20</width>
+					<height>20</height>
+					<onleft>30031</onleft>
+					<onright>30032</onright>
+					<ondown>30052</ondown>
+					<onup>30051</onup>
+				</control>
+				<control type="button" id="30031">
+				<posx>-70</posx>
+				<posy>-70</posy>
+					<width>20</width>
+					<height>20</height>
+					<onfocus>SetFocus(30049)</onfocus>
+					<onfocus>Control.Move(30050,-1)</onfocus>
+				</control>
+				<control type="button" id="30032">
+					<posx>-70</posx>
+					<posy>-70</posy>
+					<width>20</width>
+					<height>20</height>
+					<onfocus>SetFocus(30049)</onfocus>
+					<onfocus>Control.Move(30050,1)</onfocus>
+				</control>
+			</control>
+				
+				<animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(30050)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="200" delay="200" condition="!Control.HasFocus(30050)">Conditional</animation>
+		</control>
+		
+		<control type="list" id="30050">
+			<animation effect="slide" start="0,0" end="-900,0" time="400" >Focus</animation>
+			<animation effect="slide" start="-900,0" end="0,0" time="400" >Unfocus</animation>
+			<posx>1280</posx>
+			<posy>40</posy>
+			<width>860</width>
+			<height>640</height>
+			<orientation>vertical</orientation>
+			<visible>true</visible>
+			<onleft>30049</onleft>
+			<onright>30049</onright>
+			<onup>30050</onup>
+			<ondown>30050</ondown>
+			<scrolltime>0</scrolltime>
+			<focusposition>7</focusposition>
+			
+			<itemlayout height="40" width="860">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>860</width>
+					<height>41</height>
+					<texture border="0,2,0,2">MenuItemNF.png</texture>
+				</control>
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>830</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>white</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="image">
+					<posx>838</posx>
+					<posy>14</posy>
+					<width>20</width>
+					<height>16</height>
+					<texture>OverlayWatched.png</texture>
+					<visible>ListItem.Property(read)</visible>
+				</control>
+			</itemlayout>
+			<focusedlayout height="40" width="860">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>860</width>
+					<height>41</height>
+					<texture border="0,2,0,2">MenuItemNF.png</texture>
+					<visible>!Control.HasFocus(30050)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>860</width>
+					<height>41</height>
+					<texture border="0,2,0,2">MenuItemFO.png</texture>
+					<visible>Control.HasFocus(30050)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>830</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="image">
+					<posx>838</posx>
+					<posy>14</posy>
+					<width>20</width>
+					<height>16</height>
+					<texture>OverlayWatched.png</texture>
+					<visible>ListItem.Property(read)</visible>
+				</control>
+			</focusedlayout>
+		</control>
+
+		
+
+		
+		
+		<control type="list" id="30051">
+			<posx>40</posx>
+			<posy>40</posy>
+			<width>300</width>
+			<height>520</height>
+			<onleft>39003</onleft>
+			<onright>30049</onright>
+			<onup>30051</onup>
+			<ondown>30051</ondown>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="40" width="290">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>290</width>
+					<height>41</height>
+					<texture border="0,2,0,2">MenuItemNF.png</texture>
+				</control>
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>260</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>white</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="40" width="580">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>290</width>
+					<height>41</height>
+					<texture border="0,2,0,2">MenuItemNF.png</texture>
+					<visible>!Control.HasFocus(30051)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>290</width>
+					<height>41</height>
+					<texture border="0,2,0,2">MenuItemFO.png</texture>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<posx>00</posx>
+					<posy>5</posy>
+					<width>290</width>
+					<height>31</height>
+					<texture border="0,0,14,0">MediaItemDetailBG.png</texture>
+					<visible>Control.HasFocus(30051)</visible>
+				</control>
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>260</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>white</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</focusedlayout>
+		</control>
+		
+		<control type="group">
+			
+			<control type="label">
+				<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+				<animation effect="fade" start="0" end="100" time="400" delay="200">Visible</animation>
+				<posx>40</posx>
+				<posy>580</posy>
+				<width>250</width>
+				<height>80</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$ADDON[script.rssclient-standalone 30201]</label>
+				<wrapmultiline>true</wrapmultiline>
+				<font>font10</font>
+				<textcolor>white</textcolor>
+				<visible>Control.HasFocus(30049)</visible>
+			</control>
+			<control type="label">
+				<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+				<animation effect="fade" start="0" end="100" time="400" delay="200">Visible</animation>
+				<posx>40</posx>
+				<posy>580</posy>
+				<width>250</width>
+				<height>80</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$ADDON[script.rssclient-standalone 30202]</label>
+				<wrapmultiline>true</wrapmultiline>
+				<font>font10</font>
+				<textcolor>white</textcolor>
+				<visible>Control.HasFocus(30050)</visible>
+			</control>
+			<control type="label">
+				<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+				<animation effect="fade" start="0" end="100" time="400" delay="200">Visible</animation>
+				<posx>40</posx>
+				<posy>580</posy>
+				<width>250</width>
+				<height>80</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$ADDON[script.rssclient-standalone 30203]</label>
+				<wrapmultiline>true</wrapmultiline>
+				<font>font10</font>
+				<textcolor>white</textcolor>
+				<visible>Control.HasFocus(30051)</visible>
+			</control>
+			<control type="label">
+				<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+				<animation effect="fade" start="0" end="100" time="400" delay="200">Visible</animation>
+				<posx>40</posx>
+				<posy>580</posy>
+				<width>250</width>
+				<height>80</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$ADDON[script.rssclient-standalone 30204]</label>
+				<wrapmultiline>true</wrapmultiline>
+				<font>font10</font>
+				<textcolor>white</textcolor>
+				<visible>Control.HasFocus(39000) | Control.HasFocus(39001) | Control.HasFocus(39002)</visible>
+			</control>
+		</control>
+		<include>CommonPageCount</include>
+		<include>BehindDialogFadeOut</include>
+		<include>ScrollOffsetLabel</include>
+		<control type="group">
+			<animation effect="slide" start="0,0" end="250,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(30005).HasFocus | Control.HasFocus(8999)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-250,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(30005).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
+			<control type="button" id="8999">
+				<description>Fake button for mouse control</description>
+				<posx>-250</posx>
+				<posy>0</posy>
+				<width>265</width>
+				<height>720</height>
+				<label>-</label>
+				<font>-</font>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<visible>true</visible>
+			</control>
+			<include>SideBladeLeft</include>
+			<control type="image">
+				<description>LOGO</description>
+				<posx>-230</posx>
+				<posy>50</posy>
+				<width>220</width>
+				<height>80</height>
+				<aspectratio>keep</aspectratio>
+				<texture>Confluence_Logo.png</texture>
+			</control>
+		<control type="group" id="30005">
+			<posx>-240</posx>
+			<posy>130</posy>
+			
+			
+			<control type="button" id="39003">
+				<description>Sort by button</description>
+				<posx>0</posx>
+				<posy>40</posy>
+				<onright>39004</onright>
+				<onleft>30049</onleft>
+				<ondown>39007</ondown>
+				<onup>39011</onup>
+				<label>103</label>
+				<textcolor>FFFFFFFF</textcolor>
+				<height>40</height>
+				<width>250</width>
+				<textoffsetx>10</textoffsetx>
+				<textwidth>235</textwidth>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+		
+			</control>
+			<control type="togglebutton" id="39004">
+				<description>Sort order</description>
+				<posx>220</posx>
+				<posy>53</posy>
+				<label>-</label>
+				<onright>30051</onright>
+				<onleft>39003</onleft>
+				<ondown>39007</ondown>
+				<onup>39008</onup>
+				
+				<width>20</width>
+				<height>20</height>
+				<texturefocus>scroll-up-focus.png</texturefocus>
+				<texturenofocus>scroll-up.png</texturenofocus>
+				<alttexturefocus>scroll-down-focus.png</alttexturefocus>
+				<alttexturenofocus>scroll-down.png</alttexturenofocus>
+			</control>
+			
+			<control type="radiobutton" id="39007">
+				<description>group by chan.</description>
+				<posx>0</posx>
+				<posy>80</posy>
+				<onright>30051</onright>
+				<onleft>30049</onleft>
+				<ondown>39008</ondown>
+				<onup>39003</onup>
+				<textcolor>FFFFFFFF</textcolor>
+				<radiowidth>24</radiowidth>
+				<radioheight>24</radioheight>
+				<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+				<textureradionofocus>radiobutton-nofocus.png</textureradionofocus>
+				<height>40</height>
+				<width>250</width>
+				<textoffsetx>10</textoffsetx>
+				<textwidth>235</textwidth>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+
+				<label>$ADDON[script.rssclient-standalone 30001]</label>
+			</control>
+			<control type="button" id="39008">
+				<description>Edit feeds</description>
+				<posx>0</posx>
+				<posy>120</posy>
+				<onright>30051</onright>
+				<onleft>30049</onleft>
+				<ondown>39009</ondown>
+				<onup>39007</onup>
+				<height>40</height>
+				<width>250</width>
+				<textoffsetx>10</textoffsetx>
+				<textwidth>235</textwidth>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+				<label>$ADDON[script.rssclient-standalone 30002]</label>
+				<onclick>RunScript(script.rss.editor)</onclick>
+				<textcolor>FFFFFFFF</textcolor>
+			</control>
+			<control type="button" id="39009">
+				<description>set as read </description>
+				<posx>0</posx>
+				<posy>160</posy>
+				<onright>30051</onright>
+				<onleft>30049</onleft>
+				<ondown>39999</ondown>
+				<onup>39008</onup>
+				<label>$ADDON[script.rssclient-standalone 30003]</label>
+				<textcolor>FFFFFFFF</textcolor>
+				<height>40</height>
+				<width>250</width>
+				<textoffsetx>10</textoffsetx>
+				<textwidth>235</textwidth>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			
+			<control type="button" id="39999">
+				<description>go to addon settings</description>
+				<posx>0</posx>
+				<posy>200</posy>
+				<onright>30051</onright>
+				<onleft>30049</onleft>
+				<ondown>39011</ondown>
+				<onup>39009</onup>
+				<label>$ADDON[script.rssclient-standalone 30009]</label>
+				<onclick>ActivateWindow(addonsettings,script.rssclient-standalone)</onclick>
+				<textcolor>FFFFFFFF</textcolor>
+				<height>40</height>
+				<width>250</width>
+				<textoffsetx>10</textoffsetx>
+				<textwidth>235</textwidth>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="button" id="610">
+					<description>Fake Button to fix Player Controls Navigation</description>
+					<onup>3</onup>
+					<ondown>603</ondown>
+					<visible>false</visible>
+				</control>
+				<control type="group">
+					<posx>0</posx>
+					<posy>260</posy>
+					<include>CommonNowPlaying_Controls</include>
+				</control>
+				<control type="button" id="611">
+					<description>Fake Button to fix Player Controls Navigation</description>
+					<onup>608</onup>
+					<ondown>2</ondown>
+					<visible>false</visible>
+				</control>
+		</control>
+		</control>
+		<control type="group">
+			<posx>60</posx>
+			<posy>0</posy>
+			<animation effect="slide" end="-310,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="-310,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>250</width>
+				<height>35</height>
+				<texture border="0,0,32,0">header.png</texture>
+			</control>
+			<control type="label">
+				<include>WindowTitleCommons</include>
+				<posx>220</posx>
+				<label>RSS</label>
+			</control>
+		</control>
+		<include>WindowTitleHomeButton</include>
+		<include>Clock</include>
+	</controls>
+
+</window>

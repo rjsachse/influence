@@ -1,0 +1,2585 @@
+<includes>
+	<include name="RssRecentlyAddedInfo">
+		<control type="group">
+			<visible>!Window.IsVisible(Favorites)</visible>
+			<include>VisibleFadeEffect</include>
+			<animation effect="fade" time="300" delay="1000">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+			<!--<control type="group">
+				
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeHorizRaise</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
+				<posx>715</posx>
+				<posy>50</posy>
+				
+				<visible>Container(9000).HasFocus(16) + !ControlGroup(9001).HasFocus + system.getbool(lookandfeel.enablerssfeeds) +![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)] + [[Skin.HasSetting(CarouselMenu) | Skin.HasSetting(VerticalMenu)] | [Skin.HasSetting(HorizontalMenu) +  ![Player.HasAudio + Skin.HasSetting(Next5Songs)]]]</visible>
+				<include>VisibleFadeEffect</include>
+				
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>500</width>
+					<height>620</height>
+					<texture border="20">ContentPanel.png</texture>
+				</control>
+				
+				<control type="label">
+					<description>Title label</description>
+					<posx>10</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Window.Property(RSS.1.Title)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>60</posx>
+					<posy>50</posy>
+					<width>300</width>
+					<height>150</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Window.Property(RSS.1.Image)]</texture>
+					<visible>!Control.HasFocus(8009)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>60</posx>
+					<posy>50</posy>
+					<width>300</width>
+					<height>150</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture background="true">$INFO[Container(8009).ListItem.Thumb]</texture>
+					<visible>Control.HasFocus(8009)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="list" id="8009">
+					<posx>0</posx>
+					<posy>155</posy>
+					<width>250</width>
+					<height>136</height>
+					<onleft>9000</onleft>
+					<onright>8009</onright>
+					<onup>8009</onup>
+					<ondown>8009</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>0</scrolltime>
+				<itemlayout height="34" width="230">
+						<control type="label">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>230</width>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="34" width="230">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>250</width>
+							<height>23</height>
+							<texture border="0,2,0,2">MenuItemFO.png</texture>
+							<visible>Control.HasFocus(8009)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>230</width>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<include>LatestSubRss</include>
+				</control>
+			</control>-->
+			
+			<control type="group">
+				
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeHorizRaise</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
+				<posx>275r</posx>
+				
+				<visible>Container(945).Hasfocus(1601))</visible>
+				<include>VisibleFadeEffect</include>
+				<control type="image">
+					<description>background</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>300</height>
+					<texture border="10">RecentAddedNF.png</texture>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>10</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Window.Property(1.RSS.1.Title)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Window.Property(1.RSS.1.Image)]</texture>
+					<visible>!Control.HasFocus(8010)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture background="true">$INFO[Container(8010).ListItem.Thumb]</texture>
+					<visible>Control.HasFocus(8010)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="list" id="8010">
+					<posx>0</posx>
+					<posy>155</posy>
+					<width>250</width>
+					<height>136</height>
+					<onleft>9000</onleft>
+					<onright>8010</onright>
+					<onup>8010</onup>
+					<ondown>8010</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>0</scrolltime>
+				<itemlayout height="34" width="230">
+						<control type="label">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>230</width>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="34" width="230">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>250</width>
+							<height>23</height>
+							<texture border="0,2,0,2">MenuItemFO.png</texture>
+							<visible>Control.HasFocus(8010)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>230</width>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<include>LatestSub1Rss</include>
+				</control>
+			</control>
+			<control type="group">
+				
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeHorizRaise</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
+				<posx>275r</posx>
+				
+				<visible>Container(945).Hasfocus(1602)</visible>
+				<include>VisibleFadeEffect</include>
+				<control type="image">
+					<description>background</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>300</height>
+					<texture border="10">RecentAddedNF.png</texture>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>10</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Window.Property(2.RSS.1.Title)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Window.Property(2.RSS.1.Image)]</texture>
+					<visible>!Control.HasFocus(8011)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture background="true">$INFO[Container(8011).ListItem.Thumb]</texture>
+					<visible>Control.HasFocus(8011)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="list" id="8011">
+					<posx>0</posx>
+					<posy>155</posy>
+					<width>250</width>
+					<height>136</height>
+					<onleft>9000</onleft>
+					<onright>8011</onright>
+					<onup>8011</onup>
+					<ondown>8011</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>0</scrolltime>
+				<itemlayout height="34" width="230">
+						<control type="label">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>230</width>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="34" width="230">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>250</width>
+							<height>23</height>
+							<texture border="0,2,0,2">MenuItemFO.png</texture>
+							<visible>Control.HasFocus(8011)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>230</width>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<include>LatestSub2Rss</include>
+				</control>
+			</control>
+			<control type="group">
+				
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeHorizRaise</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
+				<posx>275r</posx>
+				
+				<visible>Container(945).Hasfocus(1603)</visible>
+				<include>VisibleFadeEffect</include>
+				<control type="image">
+					<description>background</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>300</height>
+					<texture border="10">RecentAddedNF.png</texture>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>10</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Window.Property(3.RSS.1.Title)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Window.Property(3.RSS.1.Image)]</texture>
+					<visible>!Control.HasFocus(8012)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture background="true">$INFO[Container(8012).ListItem.Thumb]</texture>
+					<visible>Control.HasFocus(8012)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="list" id="8012">
+					<posx>0</posx>
+					<posy>155</posy>
+					<width>250</width>
+					<height>136</height>
+					<onleft>9000</onleft>
+					<onright>8012</onright>
+					<onup>8012</onup>
+					<ondown>8012</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>0</scrolltime>
+				<itemlayout height="34" width="230">
+						<control type="label">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>230</width>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="34" width="230">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>250</width>
+							<height>23</height>
+							<texture border="0,2,0,2">MenuItemFO.png</texture>
+							<visible>Control.HasFocus(8012)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>230</width>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<include>LatestSub3Rss</include>
+				</control>
+			</control>
+			<control type="group">
+				
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeHorizRaise</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
+				<posx>275r</posx>
+				
+				<visible>Container(945).Hasfocus(1604)</visible>
+				<include>VisibleFadeEffect</include>
+				<control type="image">
+					<description>background</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>300</height>
+					<texture border="10">RecentAddedNF.png</texture>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>10</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Window.Property(4.RSS.1.Title)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Window.Property(4.RSS.1.Image)]</texture>
+					<visible>!Control.HasFocus(8013)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture background="true">$INFO[Container(8013).ListItem.Thumb]</texture>
+					<visible>Control.HasFocus(8013)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="list" id="8013">
+					<posx>0</posx>
+					<posy>155</posy>
+					<width>250</width>
+					<height>136</height>
+					<onleft>9000</onleft>
+					<onright>8013</onright>
+					<onup>8013</onup>
+					<ondown>8013</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>0</scrolltime>
+				<itemlayout height="34" width="230">
+						<control type="label">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>230</width>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="34" width="230">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>250</width>
+							<height>23</height>
+							<texture border="0,2,0,2">MenuItemFO.png</texture>
+							<visible>Control.HasFocus(8013)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>230</width>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<include>LatestSub4Rss</include>
+				</control>
+			</control>
+			<control type="group">
+				
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeHorizRaise</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
+				<posx>275r</posx>
+				
+				<visible>Container(945).Hasfocus(1605)</visible>
+				<include>VisibleFadeEffect</include>
+				<control type="image">
+					<description>background</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>300</height>
+					<texture border="10">RecentAddedNF.png</texture>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>10</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Window.Property(5.RSS.1.Title)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Window.Property(5.RSS.1.Image)]</texture>
+					<visible>!Control.HasFocus(8014)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture background="true">$INFO[Container(8014).ListItem.Thumb]</texture>
+					<visible>Control.HasFocus(8014)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="list" id="8014">
+					<posx>0</posx>
+					<posy>155</posy>
+					<width>250</width>
+					<height>136</height>
+					<onleft>9000</onleft>
+					<onright>8014</onright>
+					<onup>8014</onup>
+					<ondown>8014</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>0</scrolltime>
+				<itemlayout height="34" width="230">
+						<control type="label">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>230</width>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="34" width="230">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>250</width>
+							<height>23</height>
+							<texture border="0,2,0,2">MenuItemFO.png</texture>
+							<visible>Control.HasFocus(8014)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>230</width>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<include>LatestSub5Rss</include>
+				</control>
+			</control>
+			<control type="group">
+				
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeHorizRaise</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
+				<posx>275r</posx>
+				
+				<visible>Container(945).Hasfocus(1606)</visible>
+				<include>VisibleFadeEffect</include>
+				<control type="image">
+					<description>background</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>300</height>
+					<texture border="10">RecentAddedNF.png</texture>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>10</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Window.Property(6.RSS.1.Title)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Window.Property(6.RSS.1.Image)]</texture>
+					<visible>!Control.HasFocus(8015)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture background="true">$INFO[Container(8015).ListItem.Thumb]</texture>
+					<visible>Control.HasFocus(8015)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="list" id="8015">
+					<posx>0</posx>
+					<posy>155</posy>
+					<width>250</width>
+					<height>136</height>
+					<onleft>9000</onleft>
+					<onright>8015</onright>
+					<onup>8015</onup>
+					<ondown>8015</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>0</scrolltime>
+				<itemlayout height="34" width="230">
+						<control type="label">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>230</width>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="34" width="230">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>250</width>
+							<height>23</height>
+							<texture border="0,2,0,2">MenuItemFO.png</texture>
+							<visible>Control.HasFocus(8015)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>230</width>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<include>LatestSub6Rss</include>
+				</control>
+			</control>
+			<control type="group">
+				
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeHorizRaise</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
+				<posx>275r</posx>
+				
+				<visible>Container(945).Hasfocus(1607) </visible>
+				<include>VisibleFadeEffect</include>
+				<control type="image">
+					<description>background</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>300</height>
+					<texture border="10">RecentAddedNF.png</texture>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>10</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Window.Property(7.RSS.1.Title)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Window.Property(7.RSS.1.Image)]</texture>
+					<visible>!Control.HasFocus(8016)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture background="true">$INFO[Container(8016).ListItem.Thumb]</texture>
+					<visible>Control.HasFocus(8016)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="list" id="8016">
+					<posx>0</posx>
+					<posy>155</posy>
+					<width>250</width>
+					<height>136</height>
+					<onleft>9000</onleft>
+					<onright>8016</onright>
+					<onup>8016</onup>
+					<ondown>8016</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>0</scrolltime>
+				<itemlayout height="34" width="230">
+						<control type="label">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>230</width>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="34" width="230">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>250</width>
+							<height>23</height>
+							<texture border="0,2,0,2">MenuItemFO.png</texture>
+							<visible>Control.HasFocus(8016)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>230</width>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<include>LatestSub7Rss</include>
+				</control>
+			</control>
+			<control type="group">
+				
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeHorizRaise</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
+				<posx>275r</posx>
+				
+				<visible>Container(945).Hasfocus(1608)  </visible>
+				<include>VisibleFadeEffect</include>
+				<control type="image">
+					<description>background</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>300</height>
+					<texture border="10">RecentAddedNF.png</texture>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>10</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Window.Property(8.RSS.1.Title)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Window.Property(8.RSS.1.Image)]</texture>
+					<visible>!Control.HasFocus(8017)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture background="true">$INFO[Container(8017).ListItem.Thumb]</texture>
+					<visible>Control.HasFocus(8017)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="list" id="8017">
+					<posx>0</posx>
+					<posy>155</posy>
+					<width>250</width>
+					<height>136</height>
+					<onleft>9000</onleft>
+					<onright>8017</onright>
+					<onup>8017</onup>
+					<ondown>8017</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>0</scrolltime>
+				<itemlayout height="34" width="230">
+						<control type="label">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>230</width>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="34" width="230">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>250</width>
+							<height>23</height>
+							<texture border="0,2,0,2">MenuItemFO.png</texture>
+							<visible>Control.HasFocus(8017)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>230</width>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<include>LatestSub8Rss</include>
+				</control>
+			</control>
+			<control type="group">
+				
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeHorizRaise</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
+				<posx>275r</posx>
+				
+				<visible>Container(945).Hasfocus(1609) </visible>
+				<include>VisibleFadeEffect</include>
+				<control type="image">
+					<description>background</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>300</height>
+					<texture border="10">RecentAddedNF.png</texture>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>10</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Window.Property(9.RSS.1.Title)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Window.Property(9.RSS.1.Image)]</texture>
+					<visible>!Control.HasFocus(8018)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture background="true">$INFO[Container(8018).ListItem.Thumb]</texture>
+					<visible>Control.HasFocus(8018)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="list" id="8018">
+					<posx>0</posx>
+					<posy>155</posy>
+					<width>250</width>
+					<height>136</height>
+					<onleft>9000</onleft>
+					<onright>8018</onright>
+					<onup>8018</onup>
+					<ondown>8018</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>0</scrolltime>
+				<itemlayout height="34" width="230">
+						<control type="label">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>230</width>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="34" width="230">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>250</width>
+							<height>23</height>
+							<texture border="0,2,0,2">MenuItemFO.png</texture>
+							<visible>Control.HasFocus(8018)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>230</width>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<include>LatestSub9Rss</include>
+				</control>
+			</control>
+			<control type="group">
+				
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeHorizRaise</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
+				<posx>275r</posx>
+				
+				<visible>Container(945).Hasfocus(1610)  </visible>
+				<include>VisibleFadeEffect</include>
+				<control type="image">
+					<description>background</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>300</height>
+					<texture border="10">RecentAddedNF.png</texture>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>10</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Window.Property(10.RSS.1.Title)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Window.Property(10.RSS.1.Image)]</texture>
+					<visible>!Control.HasFocus(8019)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture background="true">$INFO[Container(8019).ListItem.Thumb]</texture>
+					<visible>Control.HasFocus(8019)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="list" id="8019">
+					<posx>0</posx>
+					<posy>155</posy>
+					<width>250</width>
+					<height>136</height>
+					<onleft>9000</onleft>
+					<onright>8019</onright>
+					<onup>8019</onup>
+					<ondown>8019</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>0</scrolltime>
+				<itemlayout height="34" width="230">
+						<control type="label">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>230</width>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="34" width="230">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>250</width>
+							<height>23</height>
+							<texture border="0,2,0,2">MenuItemFO.png</texture>
+							<visible>Control.HasFocus(8019)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>230</width>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<include>LatestSub10Rss</include>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="HRAI_HomeHorizRaise">
+		<posy>385</posy>
+	</include>
+	<include name="HRAI_HomeRaise">
+		<posy>30</posy>
+	</include>
+	<include name="HRAI">
+		<posy>50</posy>
+	</include>
+	<include name="PosXMovie">
+		<posx>275r</posx>
+	</include>
+	<include name="PosXMovie_TV">
+		<posx>535r</posx>
+	</include>
+				<include name="LatestSubRss">
+					<content>
+						
+						<item id="1">
+							<label>$INFO[Window.Property(RSS.1.Channel)]</label>
+							<label2>$INFO[Window.Property(RSS.1.Desc)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(RSS.1.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(RSS.1.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(RSS.1.Media)]</icon>
+							<thumb>$INFO[Window.Property(RSS.1.Image)]</thumb>
+						</item>
+						<item id="2">
+							<label>$INFO[Window.Property(RSS.2.Title)]</label>
+							<label2>$INFO[Window.Property(RSS.2.Desc)]</label2>
+							
+							<onclick>PlayMedia($INFO[Window.Property(RSS.2.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(RSS.2.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(RSS.2.Media)]</icon>
+							<thumb>$INFO[Window.Property(RSS.2.Image)]</thumb>
+						</item>
+						<item id="3">
+							<label>$INFO[Window.Property(RSS.3.Title)]</label>
+							<label2>$INFO[Window.Property(RSS.3.Desc)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(RSS.3.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(RSS.3.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(RSS.3.Media)]</icon>
+							<thumb>$INFO[Window.Property(RSS.3.Image)]</thumb>
+						</item>
+						<item id="4">
+							<label>$INFO[Window.Property(RSS.4.Title)]</label>
+							<label2>$INFO[Window.Property(RSS.4.Desc)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(RSS.4.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(RSS.4.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(RSS.4.Media)]</icon>
+							<thumb>$INFO[Window.Property(RSS.4.Image)]</thumb>
+						</item>
+						<item id="5">
+							<label>$INFO[Window.Property(RSS.5.Channel)]</label>
+							<label2>$INFO[Window.Property(RSS.5.Desc)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(RSS.5.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(RSS.5.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(RSS.5.Media)]</icon>
+							<thumb>$INFO[Window.Property(RSS.5.Image)]</thumb>
+						</item>
+						<item id="6">
+							<label>$INFO[Window.Property(RSS.6.Channel)]</label>
+							<label2>$INFO[Window.Property(RSS.6.Desc)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(RSS.6.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(RSS.6.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(RSS.6.Media)]</icon>
+							<thumb>$INFO[Window.Property(RSS.6.Image)]</thumb>
+						</item>
+						<item id="7">
+							<label>$INFO[Window.Property(RSS.7.Channel)]</label>
+							<label2>$INFO[Window.Property(RSS.7.Desc)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(RSS.7.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(RSS.7.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(RSS.7.Media)]</icon>
+							<thumb>$INFO[Window.Property(RSS.7.Image)]</thumb>
+						</item>
+						<item id="8">
+							<label>$INFO[Window.Property(RSS.8.Channel)]</label>
+							<label2>$INFO[Window.Property(RSS.8.Desc)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(RSS.8.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(RSS.8.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(RSS.8.Media)]</icon>
+							<thumb>$INFO[Window.Property(RSS.8.Image)]</thumb>
+						</item>
+						<item id="9">
+							<label>$INFO[Window.Property(RSS.9.Channel)]</label>
+							<label2>$INFO[Window.Property(RSS.9.Desc)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(RSS.9.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(RSS.9.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(RSS.9.Media)]</icon>
+							<thumb>$INFO[Window.Property(RSS.9.Image)]</thumb>
+						</item>
+						<item id="10">
+							<label>$INFO[Window.Property(RSS.10.Channel)]</label>
+							<label2>$INFO[Window.Property(RSS.10.Desc)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(RSS.10.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(RSS.10.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(RSS.10.Media)]</icon>
+							<thumb>$INFO[Window.Property(RSS.10.Image)]</thumb>
+						</item>
+					</content>
+				</include>
+				<include name="LatestSub1Rss">
+					<content>
+						
+						<item id="1">
+							<label>$INFO[Window.Property(1.RSS.1.Title)]</label>
+							<label2>$INFO[Window.Property(1.RSS.1.Date)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(1.RSS.1.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(1.RSS.1.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(1.RSS.1.Media)]</icon>
+							<thumb>$INFO[Window.Property(1.RSS.1.Image)]</thumb>
+						</item>
+						<item id="2">
+							<label>$INFO[Window.Property(1.RSS.2.Title)]</label>
+							<label2>$INFO[Window.Property(1.RSS.2.Date)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(1.RSS.2.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(1.RSS.2.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(1.RSS.2.Media)]</icon>
+							<thumb>$INFO[Window.Property(1.RSS.2.Image)]</thumb>
+						</item>
+						<item id="3">
+							<label>$INFO[Window.Property(1.RSS.3.Title)]</label>
+							<label2>$INFO[Window.Property(1.RSS.3.Date)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(1.RSS.3.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(1.RSS.3.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(1.RSS.3.Media)]</icon>
+							<thumb>$INFO[Window.Property(1.RSS.3.Image)]</thumb>
+						</item>
+						<item id="4">
+							<label>$INFO[Window.Property(1.RSS.4.Title)]</label>
+							<label2>$INFO[Window.Property(1.RSS.4.Date)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(1.RSS.4.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(1.RSS.4.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(1.RSS.4.Media)]</icon>
+							<thumb>$INFO[Window.Property(1.RSS.4.Image)]</thumb>
+						</item>
+						<item id="5">
+							<label>$INFO[Window.Property(1.RSS.5.Title)]</label>
+							<label2>$INFO[Window.Property(1.RSS.5.Date)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(1.RSS.5.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(1.RSS.5.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(1.RSS.5.Media)]</icon>
+							<thumb>$INFO[Window.Property(1.RSS.5.Image)]</thumb>
+						</item>
+						<item id="6">
+							<label>$INFO[Window.Property(1.RSS.6.Title)]</label>
+							<label2>$INFO[Window.Property(1.RSS.6.Date)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(1.RSS.6.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(1.RSS.6.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(1.RSS.6.Media)]</icon>
+							<thumb>$INFO[Window.Property(1.RSS.6.Image)]</thumb>
+						</item>
+						<item id="7">
+							<label>$INFO[Window.Property(1.RSS.7.Title)]</label>
+							<label2>$INFO[Window.Property(1.RSS.7.Date)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(1.RSS.7.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(1.RSS.7.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(1.RSS.7.Media)]</icon>
+							<thumb>$INFO[Window.Property(1.RSS.7.Image)]</thumb>
+						</item>
+						<item id="8">
+							<label>$INFO[Window.Property(1.RSS.8.Title)]</label>
+							<label2>$INFO[Window.Property(1.RSS.8.Date)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(1.RSS.8.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(1.RSS.8.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(1.RSS.8.Media)]</icon>
+							<thumb>$INFO[Window.Property(1.RSS.8.Image)]</thumb>
+						</item>
+						<item id="9">
+							<label>$INFO[Window.Property(1.RSS.9.Title)]</label>
+							<label2>$INFO[Window.Property(1.RSS.9.Date)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(1.RSS.9.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(1.RSS.9.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(1.RSS.9.Media)]</icon>
+							<thumb>$INFO[Window.Property(1.RSS.9.Image)]</thumb>
+						</item>
+						<item id="10">
+							<label>$INFO[Window.Property(1.RSS.10.Title)]</label>
+							<label2>$INFO[Window.Property(1.RSS.10.Date)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(1.RSS.10.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(1.RSS.10.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(1.RSS.10.Media)]</icon>
+							<thumb>$INFO[Window.Property(1.RSS.10.Image)]</thumb>
+						</item>
+					</content>
+				</include>
+				
+				<include name="LatestSub2Rss">
+					<content>
+						
+						<item id="1">
+							<label>$INFO[Window.Property(2.RSS.1.Title)]</label>
+							<label2>$INFO[Window.Property(2.RSS.1.Date)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(2.RSS.1.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(2.RSS.1.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(2.RSS.1.Media)]</icon>
+							<thumb>$INFO[Window.Property(2.RSS.1.Image)]</thumb>
+						</item>
+						<item id="2">
+							<label>$INFO[Window.Property(2.RSS.2.Title)]</label>
+							<label2>$INFO[Window.Property(2.RSS.2.Date)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(2.RSS.2.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(2.RSS.2.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(2.RSS.2.Media)]</icon>
+							<thumb>$INFO[Window.Property(2.RSS.2.Image)]</thumb>
+						</item>
+						<item id="3">
+							<label>$INFO[Window.Property(2.RSS.3.Title)]</label>
+							<label2>$INFO[Window.Property(2.RSS.3.Date)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(2.RSS.3.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(2.RSS.3.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(2.RSS.3.Media)]</icon>
+							<thumb>$INFO[Window.Property(2.RSS.3.Image)]</thumb>
+						</item>
+						<item id="4">
+							<label>$INFO[Window.Property(2.RSS.4.Title)]</label>
+							<label2>$INFO[Window.Property(2.RSS.4.Date)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(2.RSS.4.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(2.RSS.4.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(2.RSS.4.Media)]</icon>
+							<thumb>$INFO[Window.Property(2.RSS.4.Image)]</thumb>
+						</item>
+						<item id="5">
+							<label>$INFO[Window.Property(2.RSS.5.Title)]</label>
+							<label2>$INFO[Window.Property(2.RSS.5.Date)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(2.RSS.5.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(2.RSS.5.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(2.RSS.5.Media)]</icon>
+							<thumb>$INFO[Window.Property(2.RSS.5.Image)]</thumb>
+						</item>
+						<item id="6">
+							<label>$INFO[Window.Property(2.RSS.6.Title)]</label>
+							<label2>$INFO[Window.Property(2.RSS.6.Date)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(2.RSS.6.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(2.RSS.6.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(2.RSS.6.Media)]</icon>
+							<thumb>$INFO[Window.Property(2.RSS.6.Image)]</thumb>
+						</item>
+						<item id="7">
+							<label>$INFO[Window.Property(2.RSS.7.Title)]</label>
+							<label2>$INFO[Window.Property(2.RSS.7.Date)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(2.RSS.7.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(2.RSS.7.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(2.RSS.7.Media)]</icon>
+							<thumb>$INFO[Window.Property(2.RSS.7.Image)]</thumb>
+						</item>
+						<item id="8">
+							<label>$INFO[Window.Property(2.RSS.8.Title)]</label>
+							<label2>$INFO[Window.Property(2.RSS.8.Date)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(2.RSS.8.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(2.RSS.8.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(2.RSS.8.Media)]</icon>
+							<thumb>$INFO[Window.Property(2.RSS.8.Image)]</thumb>
+						</item>
+						<item id="9">
+							<label>$INFO[Window.Property(2.RSS.9.Title)]</label>
+							<label2>$INFO[Window.Property(2.RSS.9.Date)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(2.RSS.9.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(2.RSS.9.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(2.RSS.9.Media)]</icon>
+							<thumb>$INFO[Window.Property(2.RSS.9.Image)]</thumb>
+						</item>
+						<item id="10">
+							<label>$INFO[Window.Property(2.RSS.10.Title)]</label>
+							<label2>$INFO[Window.Property(2.RSS.10.Date)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(2.RSS.10.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(2.RSS.10.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(2.RSS.10.Media)]</icon>
+							<thumb>$INFO[Window.Property(2.RSS.10.Image)]</thumb>
+						</item>
+					</content>
+				</include>
+				<include name="LatestSub3Rss">
+					<content>
+						<item id="1">
+							<label>$INFO[Window.Property(3.RSS.1.Title)]</label>
+							<label2>$INFO[Window.Property(3.RSS.1.Date)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(3.RSS.1.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(3.RSS.1.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(3.RSS.1.Media)]</icon>
+							<thumb>$INFO[Window.Property(3.RSS.1.Image)]</thumb>
+						</item>
+						<item id="2">
+							<label>$INFO[Window.Property(3.RSS.2.Title)]</label>
+							<label2>$INFO[Window.Property(3.RSS.2.Date)]</label2>
+							
+							<onclick>PlayMedia($INFO[Window.Property(3.RSS.2.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(3.RSS.2.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(3.RSS.2.Media)]</icon>
+							<thumb>$INFO[Window.Property(3.RSS.2.Image)]</thumb>
+						</item>
+						<item id="3">
+							<label>$INFO[Window.Property(3.RSS.3.Title)]</label>
+							<label2>$INFO[Window.Property(3.RSS.3.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(3.RSS.3.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(3.RSS.3.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(3.RSS.3.Media)]</icon>
+							<thumb>$INFO[Window.Property(3.RSS.3.Image)]</thumb>
+						</item>
+						<item id="4">
+							<label>$INFO[Window.Property(3.RSS.4.Title)]</label>
+							<label2>$INFO[Window.Property(3.RSS.4.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(3.RSS.4.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(3.RSS.4.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(3.RSS.4.Media)]</icon>
+							<thumb>$INFO[Window.Property(3.RSS.4.Image)]</thumb>
+						</item>
+						<item id="5">
+							<label>$INFO[Window.Property(3.RSS.5.Title)]</label>
+							<label2>$INFO[Window.Property(3.RSS.5.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(3.RSS.5.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(3.RSS.5.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(3.RSS.5.Media)]</icon>
+							<thumb>$INFO[Window.Property(3.RSS.5.Image)]</thumb>
+						</item>
+						<item id="6">
+							<label>$INFO[Window.Property(3.RSS.6.Title)]</label>
+							<label2>$INFO[Window.Property(3.RSS.6.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(3.RSS.6.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(3.RSS.6.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(3.RSS.6.Media)]</icon>
+							<thumb>$INFO[Window.Property(3.RSS.6.Image)]</thumb>
+						</item>
+						<item id="7">
+							<label>$INFO[Window.Property(3.RSS.7.Title)]</label>
+							<label2>$INFO[Window.Property(3.RSS.7.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(3.RSS.7.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(3.RSS.7.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(3.RSS.7.Media)]</icon>
+							<thumb>$INFO[Window.Property(3.RSS.7.Image)]</thumb>
+						</item>
+						<item id="8">
+							<label>$INFO[Window.Property(3.RSS.8.Title)]</label>
+							<label2>$INFO[Window.Property(3.RSS.8.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(3.RSS.8.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(3.RSS.8.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(3.RSS.8.Media)]</icon>
+							<thumb>$INFO[Window.Property(3.RSS.8.Image)]</thumb>
+						</item>
+						<item id="9">
+							<label>$INFO[Window.Property(3.RSS.9.Title)]</label>
+							<label2>$INFO[Window.Property(3.RSS.9.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(3.RSS.9.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(3.RSS.9.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(3.RSS.9.Media)]</icon>
+							<thumb>$INFO[Window.Property(3.RSS.9.Image)]</thumb>
+						</item>
+						<item id="10">
+							<label>$INFO[Window.Property(3.RSS.10.Title)]</label>
+							<label2>$INFO[Window.Property(3.RSS.10.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(3.RSS.10.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(3.RSS.10.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(3.RSS.10.Media)]</icon>
+							<thumb>$INFO[Window.Property(3.RSS.10.Image)]</thumb>
+						</item>
+					</content>
+				</include>
+				<include name="LatestSub4Rss">
+					<content>
+						
+						<item id="1">
+							<label>$INFO[Window.Property(4.RSS.1.Title)]</label>
+							<label2>$INFO[Window.Property(4.RSS.1.Date)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(4.RSS.1.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(4.RSS.1.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(4.RSS.1.Media)]</icon>
+							<thumb>$INFO[Window.Property(4.RSS.1.Image)]</thumb>
+						</item>
+						<item id="2">
+							<label>$INFO[Window.Property(4.RSS.2.Title)]</label>
+							<label2>$INFO[Window.Property(4.RSS.2.Date)]</label2>
+							
+							<onclick>PlayMedia($INFO[Window.Property(4.RSS.2.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(4.RSS.2.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(4.RSS.2.Media)]</icon>
+							<thumb>$INFO[Window.Property(4.RSS.2.Image)]</thumb>
+						</item>
+						<item id="3">
+							<label>$INFO[Window.Property(4.RSS.3.Title)]</label>
+							<label2>$INFO[Window.Property(4.RSS.3.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(4.RSS.3.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(4.RSS.3.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(4.RSS.3.Media)]</icon>
+							<thumb>$INFO[Window.Property(4.RSS.3.Image)]</thumb>
+						</item>
+						<item id="4">
+							<label>$INFO[Window.Property(4.RSS.4.Title)]</label>
+							<label2>$INFO[Window.Property(4.RSS.4.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(4.RSS.4.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(4.RSS.4.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(4.RSS.4.Media)]</icon>
+							<thumb>$INFO[Window.Property(4.RSS.4.Image)]</thumb>
+						</item>
+						<item id="5">
+							<label>$INFO[Window.Property(4.RSS.5.Title)]</label>
+							<label2>$INFO[Window.Property(4.RSS.5.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(4.RSS.5.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(4.RSS.5.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(4.RSS.5.Media)]</icon>
+							<thumb>$INFO[Window.Property(4.RSS.5.Image)]</thumb>
+						</item>
+						<item id="6">
+							<label>$INFO[Window.Property(4.RSS.6.Title)]</label>
+							<label2>$INFO[Window.Property(4.RSS.6.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(4.RSS.6.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(4.RSS.6.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(4.RSS.6.Media)]</icon>
+							<thumb>$INFO[Window.Property(4.RSS.6.Image)]</thumb>
+						</item>
+						<item id="7">
+							<label>$INFO[Window.Property(4.RSS.7.Title)]</label>
+							<label2>$INFO[Window.Property(4.RSS.7.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(4.RSS.7.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(4.RSS.7.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(4.RSS.7.Media)]</icon>
+							<thumb>$INFO[Window.Property(4.RSS.7.Image)]</thumb>
+						</item>
+						<item id="8">
+							<label>$INFO[Window.Property(4.RSS.8.Title)]</label>
+							<label2>$INFO[Window.Property(4.RSS.8.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(4.RSS.8.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(4.RSS.8.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(4.RSS.8.Media)]</icon>
+							<thumb>$INFO[Window.Property(4.RSS.8.Image)]</thumb>
+						</item>
+						<item id="9">
+							<label>$INFO[Window.Property(4.RSS.9.Title)]</label>
+							<label2>$INFO[Window.Property(4.RSS.9.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(4.RSS.9.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(4.RSS.9.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(4.RSS.9.Media)]</icon>
+							<thumb>$INFO[Window.Property(4.RSS.9.Image)]</thumb>
+						</item>
+						<item id="10">
+							<label>$INFO[Window.Property(4.RSS.10.Title)]</label>
+							<label2>$INFO[Window.Property(4.RSS.10.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(4.RSS.10.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(4.RSS.10.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(4.RSS.10.Media)]</icon>
+							<thumb>$INFO[Window.Property(4.RSS.10.Image)]</thumb>
+						</item>
+					</content>
+				</include>
+				<include name="LatestSub5Rss">
+					<content>
+						
+						<item id="1">
+							<label>$INFO[Window.Property(5.RSS.1.Title)]</label>
+							<label2>$INFO[Window.Property(5.RSS.1.Date)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(5.RSS.1.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(5.RSS.1.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(5.RSS.1.Media)]</icon>
+							<thumb>$INFO[Window.Property(5.RSS.1.Image)]</thumb>
+						</item>
+						<item id="2">
+							<label>$INFO[Window.Property(5.RSS.2.Title)]</label>
+							<label2>$INFO[Window.Property(5.RSS.2.Date)]</label2>
+							
+							<onclick>PlayMedia($INFO[Window.Property(5.RSS.2.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(5.RSS.2.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(5.RSS.2.Media)]</icon>
+							<thumb>$INFO[Window.Property(5.RSS.2.Image)]</thumb>
+						</item>
+						<item id="3">
+							<label>$INFO[Window.Property(5.RSS.3.Title)]</label>
+							<label2>$INFO[Window.Property(5.RSS.3.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(5.RSS.3.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(5.RSS.3.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(5.RSS.3.Media)]</icon>
+							<thumb>$INFO[Window.Property(5.RSS.3.Image)]</thumb>
+						</item>
+						<item id="4">
+							<label>$INFO[Window.Property(5.RSS.4.Title)]</label>
+							<label2>$INFO[Window.Property(5.RSS.4.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(5.RSS.4.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(5.RSS.4.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(5.RSS.4.Media)]</icon>
+							<thumb>$INFO[Window.Property(5.RSS.4.Image)]</thumb>
+						</item>
+						<item id="5">
+							<label>$INFO[Window.Property(5.RSS.5.Title)]</label>
+							<label2>$INFO[Window.Property(5.RSS.5.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(5.RSS.5.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(5.RSS.5.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(5.RSS.5.Media)]</icon>
+							<thumb>$INFO[Window.Property(5.RSS.5.Image)]</thumb>
+						</item>
+						<item id="6">
+							<label>$INFO[Window.Property(5.RSS.6.Title)]</label>
+							<label2>$INFO[Window.Property(5.RSS.6.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(5.RSS.6.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(5.RSS.6.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(5.RSS.6.Media)]</icon>
+							<thumb>$INFO[Window.Property(5.RSS.6.Image)]</thumb>
+						</item>
+						<item id="7">
+							<label>$INFO[Window.Property(5.RSS.7.Title)]</label>
+							<label2>$INFO[Window.Property(5.RSS.7.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(5.RSS.7.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(5.RSS.7.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(5.RSS.7.Media)]</icon>
+							<thumb>$INFO[Window.Property(5.RSS.7.Image)]</thumb>
+						</item>
+						<item id="8">
+							<label>$INFO[Window.Property(5.RSS.8.Title)]</label>
+							<label2>$INFO[Window.Property(5.RSS.8.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(5.RSS.8.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(5.RSS.8.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(5.RSS.8.Media)]</icon>
+							<thumb>$INFO[Window.Property(5.RSS.8.Image)]</thumb>
+						</item>
+						<item id="9">
+							<label>$INFO[Window.Property(5.RSS.9.Title)]</label>
+							<label2>$INFO[Window.Property(5.RSS.9.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(5.RSS.9.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(5.RSS.9.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(5.RSS.9.Media)]</icon>
+							<thumb>$INFO[Window.Property(5.RSS.9.Image)]</thumb>
+						</item>
+						<item id="10">
+							<label>$INFO[Window.Property(5.RSS.10.Title)]</label>
+							<label2>$INFO[Window.Property(5.RSS.10.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(5.RSS.10.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(5.RSS.10.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(5.RSS.10.Media)]</icon>
+							<thumb>$INFO[Window.Property(5.RSS.10.Image)]</thumb>
+						</item>
+					</content>
+				</include>
+				<include name="LatestSub6Rss">
+					<content>
+						
+						<item id="1">
+							<label>$INFO[Window.Property(6.RSS.1.Title)]</label>
+							<label2>$INFO[Window.Property(6.RSS.1.Date)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(6.RSS.1.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(6.RSS.1.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(6.RSS.1.Media)]</icon>
+							<thumb>$INFO[Window.Property(6.RSS.1.Image)]</thumb>
+						</item>
+						<item id="2">
+							<label>$INFO[Window.Property(6.RSS.2.Title)]</label>
+							<label2>$INFO[Window.Property(6.RSS.2.Date)]</label2>
+							
+							<onclick>PlayMedia($INFO[Window.Property(6.RSS.2.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(6.RSS.2.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(6.RSS.2.Media)]</icon>
+							<thumb>$INFO[Window.Property(6.RSS.2.Image)]</thumb>
+						</item>
+						<item id="3">
+							<label>$INFO[Window.Property(6.RSS.3.Title)]</label>
+							<label2>$INFO[Window.Property(6.RSS.3.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(6.RSS.3.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(6.RSS.3.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(6.RSS.3.Media)]</icon>
+							<thumb>$INFO[Window.Property(6.RSS.3.Image)]</thumb>
+						</item>
+						<item id="4">
+							<label>$INFO[Window.Property(6.RSS.4.Title)]</label>
+							<label2>$INFO[Window.Property(6.RSS.4.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(6.RSS.4.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(6.RSS.4.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(6.RSS.4.Media)]</icon>
+							<thumb>$INFO[Window.Property(6.RSS.4.Image)]</thumb>
+						</item>
+						<item id="5">
+							<label>$INFO[Window.Property(6.RSS.5.Title)]</label>
+							<label2>$INFO[Window.Property(6.RSS.5.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(6.RSS.5.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(6.RSS.5.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(6.RSS.5.Media)]</icon>
+							<thumb>$INFO[Window.Property(6.RSS.5.Image)]</thumb>
+						</item>
+						<item id="6">
+							<label>$INFO[Window.Property(6.RSS.6.Title)]</label>
+							<label2>$INFO[Window.Property(6.RSS.6.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(6.RSS.6.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(6.RSS.6.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(6.RSS.6.Media)]</icon>
+							<thumb>$INFO[Window.Property(6.RSS.6.Image)]</thumb>
+						</item>
+						<item id="7">
+							<label>$INFO[Window.Property(6.RSS.7.Title)]</label>
+							<label2>$INFO[Window.Property(6.RSS.7.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(6.RSS.7.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(6.RSS.7.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(6.RSS.7.Media)]</icon>
+							<thumb>$INFO[Window.Property(6.RSS.7.Image)]</thumb>
+						</item>
+						<item id="8">
+							<label>$INFO[Window.Property(6.RSS.8.Title)]</label>
+							<label2>$INFO[Window.Property(6.RSS.8.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(6.RSS.8.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(6.RSS.8.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(6.RSS.8.Media)]</icon>
+							<thumb>$INFO[Window.Property(6.RSS.8.Image)]</thumb>
+						</item>
+						<item id="9">
+							<label>$INFO[Window.Property(6.RSS.9.Title)]</label>
+							<label2>$INFO[Window.Property(6.RSS.9.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(6.RSS.9.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(6.RSS.9.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(6.RSS.9.Media)]</icon>
+							<thumb>$INFO[Window.Property(6.RSS.9.Image)]</thumb>
+						</item>
+						<item id="10">
+							<label>$INFO[Window.Property(6.RSS.10.Title)]</label>
+							<label2>$INFO[Window.Property(6.RSS.10.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(6.RSS.10.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(6.RSS.10.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(6.RSS.10.Media)]</icon>
+							<thumb>$INFO[Window.Property(6.RSS.10.Image)]</thumb>
+						</item>
+					</content>
+				</include>
+				<include name="LatestSub7Rss">
+					<content>
+						
+						<item id="1">
+							<label>$INFO[Window.Property(7.RSS.1.Title)]</label>
+							<label2>$INFO[Window.Property(7.RSS.1.Date)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(7.RSS.1.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(7.RSS.1.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(7.RSS.1.Media)]</icon>
+							<thumb>$INFO[Window.Property(7.RSS.1.Image)]</thumb>
+						</item>
+						<item id="2">
+							<label>$INFO[Window.Property(7.RSS.2.Title)]</label>
+							<label2>$INFO[Window.Property(7.RSS.2.Date)]</label2>
+							
+							<onclick>PlayMedia($INFO[Window.Property(7.RSS.2.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(7.RSS.2.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(7.RSS.2.Media)]</icon>
+							<thumb>$INFO[Window.Property(7.RSS.2.Image)]</thumb>
+						</item>
+						<item id="3">
+							<label>$INFO[Window.Property(7.RSS.3.Title)]</label>
+							<label2>$INFO[Window.Property(7.RSS.3.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(7.RSS.3.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(7.RSS.3.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(7.RSS.3.Media)]</icon>
+							<thumb>$INFO[Window.Property(7.RSS.3.Image)]</thumb>
+						</item>
+						<item id="4">
+							<label>$INFO[Window.Property(7.RSS.4.Title)]</label>
+							<label2>$INFO[Window.Property(7.RSS.4.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(7.RSS.4.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(7.RSS.4.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(7.RSS.4.Media)]</icon>
+							<thumb>$INFO[Window.Property(7.RSS.4.Image)]</thumb>
+						</item>
+						<item id="5">
+							<label>$INFO[Window.Property(7.RSS.5.Title)]</label>
+							<label2>$INFO[Window.Property(7.RSS.5.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(7.RSS.5.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(7.RSS.5.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(7.RSS.5.Media)]</icon>
+							<thumb>$INFO[Window.Property(7.RSS.5.Image)]</thumb>
+						</item>
+						<item id="6">
+							<label>$INFO[Window.Property(7.RSS.6.Title)]</label>
+							<label2>$INFO[Window.Property(7.RSS.6.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(7.RSS.6.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(7.RSS.6.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(7.RSS.6.Media)]</icon>
+							<thumb>$INFO[Window.Property(7.RSS.6.Image)]</thumb>
+						</item>
+						<item id="7">
+							<label>$INFO[Window.Property(7.RSS.7.Title)]</label>
+							<label2>$INFO[Window.Property(7.RSS.7.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(7.RSS.7.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(7.RSS.7.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(7.RSS.7.Media)]</icon>
+							<thumb>$INFO[Window.Property(7.RSS.7.Image)]</thumb>
+						</item>
+						<item id="8">
+							<label>$INFO[Window.Property(7.RSS.8.Title)]</label>
+							<label2>$INFO[Window.Property(7.RSS.8.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(7.RSS.8.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(7.RSS.8.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(7.RSS.8.Media)]</icon>
+							<thumb>$INFO[Window.Property(7.RSS.8.Image)]</thumb>
+						</item>
+						<item id="9">
+							<label>$INFO[Window.Property(7.RSS.9.Title)]</label>
+							<label2>$INFO[Window.Property(7.RSS.9.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(7.RSS.9.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(7.RSS.9.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(7.RSS.9.Media)]</icon>
+							<thumb>$INFO[Window.Property(7.RSS.9.Image)]</thumb>
+						</item>
+						<item id="10">
+							<label>$INFO[Window.Property(7.RSS.10.Title)]</label>
+							<label2>$INFO[Window.Property(7.RSS.10.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(7.RSS.10.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(7.RSS.10.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(7.RSS.10.Media)]</icon>
+							<thumb>$INFO[Window.Property(7.RSS.10.Image)]</thumb>
+						</item>
+					</content>
+				</include>
+				<include name="LatestSub8Rss">
+					<content>
+						
+						<item id="1">
+							<label>$INFO[Window.Property(8.RSS.1.Title)]</label>
+							<label2>$INFO[Window.Property(8.RSS.1.Date)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(8.RSS.1.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(8.RSS.1.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(8.RSS.1.Media)]</icon>
+							<thumb>$INFO[Window.Property(8.RSS.1.Image)]</thumb>
+						</item>
+						<item id="2">
+							<label>$INFO[Window.Property(8.RSS.2.Title)]</label>
+							<label2>$INFO[Window.Property(8.RSS.2.Date)]</label2>
+							
+							<onclick>PlayMedia($INFO[Window.Property(8.RSS.2.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(8.RSS.2.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(8.RSS.2.Media)]</icon>
+							<thumb>$INFO[Window.Property(8.RSS.2.Image)]</thumb>
+						</item>
+						<item id="3">
+							<label>$INFO[Window.Property(8.RSS.3.Title)]</label>
+							<label2>$INFO[Window.Property(8.RSS.3.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(8.RSS.3.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(8.RSS.3.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(8.RSS.3.Media)]</icon>
+							<thumb>$INFO[Window.Property(8.RSS.3.Image)]</thumb>
+						</item>
+						<item id="4">
+							<label>$INFO[Window.Property(8.RSS.4.Title)]</label>
+							<label2>$INFO[Window.Property(8.RSS.4.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(8.RSS.4.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(8.RSS.4.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(8.RSS.4.Media)]</icon>
+							<thumb>$INFO[Window.Property(8.RSS.4.Image)]</thumb>
+						</item>
+						<item id="5">
+							<label>$INFO[Window.Property(8.RSS.5.Title)]</label>
+							<label2>$INFO[Window.Property(8.RSS.5.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(8.RSS.5.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(8.RSS.5.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(8.RSS.5.Media)]</icon>
+							<thumb>$INFO[Window.Property(8.RSS.5.Image)]</thumb>
+						</item>
+						<item id="6">
+							<label>$INFO[Window.Property(8.RSS.6.Title)]</label>
+							<label2>$INFO[Window.Property(8.RSS.6.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(8.RSS.6.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(8.RSS.6.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(8.RSS.6.Media)]</icon>
+							<thumb>$INFO[Window.Property(8.RSS.6.Image)]</thumb>
+						</item>
+						<item id="7">
+							<label>$INFO[Window.Property(8.RSS.7.Title)]</label>
+							<label2>$INFO[Window.Property(8.RSS.7.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(8.RSS.7.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(8.RSS.7.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(8.RSS.7.Media)]</icon>
+							<thumb>$INFO[Window.Property(8.RSS.7.Image)]</thumb>
+						</item>
+						<item id="8">
+							<label>$INFO[Window.Property(8.RSS.8.Title)]</label>
+							<label2>$INFO[Window.Property(8.RSS.8.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(8.RSS.8.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(8.RSS.8.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(8.RSS.8.Media)]</icon>
+							<thumb>$INFO[Window.Property(8.RSS.8.Image)]</thumb>
+						</item>
+						<item id="9">
+							<label>$INFO[Window.Property(8.RSS.9.Title)]</label>
+							<label2>$INFO[Window.Property(8.RSS.9.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(8.RSS.9.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(8.RSS.9.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(8.RSS.9.Media)]</icon>
+							<thumb>$INFO[Window.Property(8.RSS.9.Image)]</thumb>
+						</item>
+						<item id="10">
+							<label>$INFO[Window.Property(8.RSS.10.Title)]</label>
+							<label2>$INFO[Window.Property(8.RSS.10.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(8.RSS.10.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(8.RSS.10.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(8.RSS.10.Media)]</icon>
+							<thumb>$INFO[Window.Property(8.RSS.10.Image)]</thumb>
+						</item>
+					</content>
+				</include>
+				<include name="LatestSub9Rss">
+					<content>
+						
+						<item id="1">
+							<label>$INFO[Window.Property(9.RSS.1.Title)]</label>
+							<label2>$INFO[Window.Property(9.RSS.1.Date)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(9.RSS.1.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(9.RSS.1.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(9.RSS.1.Media)]</icon>
+							<thumb>$INFO[Window.Property(9.RSS.1.Image)]</thumb>
+						</item>
+						<item id="2">
+							<label>$INFO[Window.Property(9.RSS.2.Title)]</label>
+							<label2>$INFO[Window.Property(9.RSS.2.Date)]</label2>
+							
+							<onclick>PlayMedia($INFO[Window.Property(9.RSS.2.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(9.RSS.2.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(9.RSS.2.Media)]</icon>
+							<thumb>$INFO[Window.Property(9.RSS.2.Image)]</thumb>
+						</item>
+						<item id="3">
+							<label>$INFO[Window.Property(9.RSS.3.Title)]</label>
+							<label2>$INFO[Window.Property(9.RSS.3.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(9.RSS.3.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(9.RSS.3.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(9.RSS.3.Media)]</icon>
+							<thumb>$INFO[Window.Property(9.RSS.3.Image)]</thumb>
+						</item>
+						<item id="4">
+							<label>$INFO[Window.Property(9.RSS.4.Title)]</label>
+							<label2>$INFO[Window.Property(9.RSS.4.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(9.RSS.4.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(9.RSS.4.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(9.RSS.4.Media)]</icon>
+							<thumb>$INFO[Window.Property(9.RSS.4.Image)]</thumb>
+						</item>
+						<item id="5">
+							<label>$INFO[Window.Property(9.RSS.5.Title)]</label>
+							<label2>$INFO[Window.Property(9.RSS.5.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(9.RSS.5.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(9.RSS.5.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(9.RSS.5.Media)]</icon>
+							<thumb>$INFO[Window.Property(9.RSS.5.Image)]</thumb>
+						</item>
+						<item id="6">
+							<label>$INFO[Window.Property(9.RSS.6.Title)]</label>
+							<label2>$INFO[Window.Property(9.RSS.6.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(9.RSS.6.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(9.RSS.6.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(9.RSS.6.Media)]</icon>
+							<thumb>$INFO[Window.Property(9.RSS.6.Image)]</thumb>
+						</item>
+						<item id="7">
+							<label>$INFO[Window.Property(9.RSS.7.Title)]</label>
+							<label2>$INFO[Window.Property(9.RSS.7.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(9.RSS.7.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(9.RSS.7.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(9.RSS.7.Media)]</icon>
+							<thumb>$INFO[Window.Property(9.RSS.7.Image)]</thumb>
+						</item>
+						<item id="8">
+							<label>$INFO[Window.Property(9.RSS.8.Title)]</label>
+							<label2>$INFO[Window.Property(9.RSS.8.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(9.RSS.8.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(9.RSS.8.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(9.RSS.8.Media)]</icon>
+							<thumb>$INFO[Window.Property(9.RSS.8.Image)]</thumb>
+						</item>
+						<item id="9">
+							<label>$INFO[Window.Property(9.RSS.9.Title)]</label>
+							<label2>$INFO[Window.Property(9.RSS.9.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(9.RSS.9.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(9.RSS.9.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(9.RSS.9.Media)]</icon>
+							<thumb>$INFO[Window.Property(9.RSS.9.Image)]</thumb>
+						</item>
+						<item id="10">
+							<label>$INFO[Window.Property(9.RSS.10.Title)]</label>
+							<label2>$INFO[Window.Property(9.RSS.10.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(9.RSS.10.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(9.RSS.10.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(9.RSS.10.Media)]</icon>
+							<thumb>$INFO[Window.Property(9.RSS.10.Image)]</thumb>
+						</item>
+					</content>
+				</include>
+				<include name="LatestSub10Rss">
+					<content>
+						
+						<item id="1">
+							<label>$INFO[Window.Property(10.RSS.1.Title)]</label>
+							<label2>$INFO[Window.Property(10.RSS.1.Date)]</label2>
+							<onclick>SlideShow($INFO[Window.Property(10.RSS.1.MultiImagePath)])</onclick>
+							<onclick>PlayMedia($INFO[Window.Property(10.RSS.1.Media),&quot;,&quot;])</onclick>
+							<icon>$INFO[Window.Property(10.RSS.1.Media)]</icon>
+							<thumb>$INFO[Window.Property(10.RSS.1.Image)]</thumb>
+						</item>
+						<item id="2">
+							<label>$INFO[Window.Property(10.RSS.2.Title)]</label>
+							<label2>$INFO[Window.Property(10.RSS.2.Date)]</label2>
+							
+							<onclick>PlayMedia($INFO[Window.Property(10.RSS.2.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(10.RSS.2.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(10.RSS.2.Media)]</icon>
+							<thumb>$INFO[Window.Property(10.RSS.2.Image)]</thumb>
+						</item>
+						<item id="3">
+							<label>$INFO[Window.Property(10.RSS.3.Title)]</label>
+							<label2>$INFO[Window.Property(10.RSS.3.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(10.RSS.3.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(10.RSS.3.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(10.RSS.3.Media)]</icon>
+							<thumb>$INFO[Window.Property(10.RSS.3.Image)]</thumb>
+						</item>
+						<item id="4">
+							<label>$INFO[Window.Property(10.RSS.4.Title)]</label>
+							<label2>$INFO[Window.Property(10.RSS.4.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(10.RSS.4.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(10.RSS.4.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(10.RSS.4.Media)]</icon>
+							<thumb>$INFO[Window.Property(10.RSS.4.Image)]</thumb>
+						</item>
+						<item id="5">
+							<label>$INFO[Window.Property(10.RSS.5.Title)]</label>
+							<label2>$INFO[Window.Property(10.RSS.5.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(10.RSS.5.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(10.RSS.5.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(10.RSS.5.Media)]</icon>
+							<thumb>$INFO[Window.Property(10.RSS.5.Image)]</thumb>
+						</item>
+						<item id="6">
+							<label>$INFO[Window.Property(10.RSS.6.Title)]</label>
+							<label2>$INFO[Window.Property(10.RSS.6.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(10.RSS.6.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(10.RSS.6.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(10.RSS.6.Media)]</icon>
+							<thumb>$INFO[Window.Property(10.RSS.6.Image)]</thumb>
+						</item>
+						<item id="7">
+							<label>$INFO[Window.Property(10.RSS.7.Title)]</label>
+							<label2>$INFO[Window.Property(10.RSS.7.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(10.RSS.7.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(10.RSS.7.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(10.RSS.7.Media)]</icon>
+							<thumb>$INFO[Window.Property(10.RSS.7.Image)]</thumb>
+						</item>
+						<item id="8">
+							<label>$INFO[Window.Property(10.RSS.8.Title)]</label>
+							<label2>$INFO[Window.Property(10.RSS.8.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(10.RSS.8.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(10.RSS.8.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(10.RSS.8.Media)]</icon>
+							<thumb>$INFO[Window.Property(10.RSS.8.Image)]</thumb>
+						</item>
+						<item id="9">
+							<label>$INFO[Window.Property(10.RSS.9.Title)]</label>
+							<label2>$INFO[Window.Property(10.RSS.9.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(10.RSS.9.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(10.RSS.9.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(10.RSS.9.Media)]</icon>
+							<thumb>$INFO[Window.Property(10.RSS.9.Image)]</thumb>
+						</item>
+						<item id="10">
+							<label>$INFO[Window.Property(10.RSS.10.Title)]</label>
+							<label2>$INFO[Window.Property(10.RSS.10.Date)]</label2>
+							<onclick>PlayMedia($INFO[Window.Property(10.RSS.10.Media),&quot;,&quot;])</onclick>
+							<onclick>SlideShow($INFO[Window.Property(10.RSS.10.MultiImagePath)])</onclick>
+							<icon>$INFO[Window.Property(10.RSS.10.Media)]</icon>
+							<thumb>$INFO[Window.Property(10.RSS.10.Image)]</thumb>
+						</item>
+					</content>
+				</include>
+	<include name="RssFeeds">
+			
+			<control type="button">
+				<description>RSS background</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>860</width>
+				<height>35</height>
+				<texture border="32,0,0,0">Rss_Back.png</texture>
+				<onclick>Skin.Reset(ChoiceFeedsOne)</onclick>
+				<onclick>Skin.Reset(ChoiceFeedsThree)</onclick>
+				<onclick>Skin.Reset(ChoiceFeedsFour)</onclick>
+				<onclick>Skin.ToggleSetting(ChoiceFeedsTwo)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			</control>
+			<control type="rss" id="1">
+				<description>RSS feed</description>
+				<posx>35</posx>
+				<posy>6</posy>
+				<height>35</height>
+				<width>825</width>
+				<font>font12</font>
+				<urlset>1</urlset>
+				<textcolor>blue</textcolor>
+				<titlecolor>blue</titlecolor>
+				<headlinecolor>white</headlinecolor>
+				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			</control>
+			<control type="image">
+				<description>RSS background</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>860</width>
+				<height>35</height>
+				<texture border="32,0,0,0">Rss_Back_Overlay.png</texture>
+				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			</control>
+		
+	</include>
+	<include name="RssFeeds2">
+			
+			<control type="button">
+				<description>RSS background</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>860</width>
+				<height>35</height>
+				<texture border="32,0,0,0">Rss_Back.png</texture>
+				<onclick>Skin.Reset(ChoiceFeedsOne)</onclick>
+				<onclick>Skin.Reset(ChoiceFeedsTwo)</onclick>
+				<onclick>Skin.Reset(ChoiceFeedsFour)</onclick>
+				<onclick>Skin.ToggleSetting(ChoiceFeedsThree)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			</control>
+			<control type="rss" id="2">
+				<description>RSS feed</description>
+				<posx>35</posx>
+				<posy>6</posy>
+				<height>35</height>
+				<width>825</width>
+				<font>font12</font>
+				<urlset>2</urlset>
+				<textcolor>blue</textcolor>
+				<titlecolor>blue</titlecolor>
+				<headlinecolor>white</headlinecolor>
+				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			</control>
+			<control type="image">
+				<description>RSS background</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>860</width>
+				<height>35</height>
+				<texture border="32,0,0,0">Rss_Back_Overlay.png</texture>
+				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			</control>
+		
+	</include>
+	<include name="RssFeeds3">
+			
+			<control type="button">
+				<description>RSS background</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>860</width>
+				<height>35</height>
+				<texture border="32,0,0,0">Rss_Back.png</texture>
+				<onclick>Skin.Reset(ChoiceFeedsOne)</onclick>
+				<onclick>Skin.Reset(ChoiceFeedsTwo)</onclick>
+				<onclick>Skin.Reset(ChoiceFeedsThree)</onclick>
+				<onclick>Skin.ToggleSetting(ChoiceFeedsFour)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<visible>system.getbool(lookandfeel.enablerssfeeds) + Skin.HasSetting(ChoiceFeedsThree)</visible>
+			</control>
+			<control type="rss" id="3">
+				<description>RSS feed</description>
+				<posx>35</posx>
+				<posy>6</posy>
+				<height>35</height>
+				<width>825</width>
+				<font>font12</font>
+				<urlset>3</urlset>
+				<textcolor>blue</textcolor>
+				<titlecolor>blue</titlecolor>
+				<headlinecolor>white</headlinecolor>
+				<visible>system.getbool(lookandfeel.enablerssfeeds) + Skin.HasSetting(ChoiceFeedsThree)</visible>
+			</control>
+			<control type="image">
+				<description>RSS background</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>860</width>
+				<height>35</height>
+				<texture border="32,0,0,0">Rss_Back_Overlay.png</texture>
+				<visible>system.getbool(lookandfeel.enablerssfeeds) + Skin.HasSetting(ChoiceFeedsThree)</visible>
+			</control>
+		
+	</include>
+	<include name="RssFeeds4">
+			
+			<control type="button">
+				<description>RSS background</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>860</width>
+				<height>35</height>
+				<texture border="32,0,0,0">Rss_Back.png</texture>
+				<onclick>Skin.Reset(ChoiceFeedsTwo)</onclick>
+				<onclick>Skin.Reset(ChoiceFeedsThree)</onclick>
+				<onclick>Skin.Reset(ChoiceFeedsFour)</onclick>
+				<onclick>Skin.ToggleSetting(ChoiceFeedsOne)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			</control>
+			<control type="rss" id="4">
+				<description>RSS feed</description>
+				<posx>35</posx>
+				<posy>6</posy>
+				<height>35</height>
+				<width>825</width>
+				<font>font12</font>
+				<urlset>4</urlset>
+				<textcolor>blue</textcolor>
+				<titlecolor>blue</titlecolor>
+				<headlinecolor>white</headlinecolor>
+				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			</control>
+			<control type="image">
+				<description>RSS background</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>860</width>
+				<height>35</height>
+				<texture border="32,0,0,0">Rss_Back_Overlay.png</texture>
+				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			</control>
+		
+	</include>
+</includes>
