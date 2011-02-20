@@ -7,9 +7,13 @@
 			<width>750</width>
 			<height>530</height>
 			<itemgap>-1</itemgap>
+			<!--
 			<pagecontrol>70</pagecontrol>
+			-->
 			<onleft>9000</onleft>
+<!--			
 			<onright>70</onright>
+-->			
 			<onup>9005</onup>
 			<ondown>9005</ondown>
 			<control type="label" >
@@ -851,6 +855,20 @@
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)  + Skin.HasSetting(Menu_Info_sub1_act) </visible>
 			</control>
+			<control type="button" id="164014">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[35134]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Info_sub1_feed)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Info_sub1_feed)</onclick>
+				<onclick>ActivateWindow(2115)</onclick>
+				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)  + Skin.HasSetting(Menu_Info_sub1_act) </visible>
+			</control>
 			<control type="radiobutton" id="164021">
 				<width>750</width>
 				<height>40</height>
@@ -1060,7 +1078,7 @@
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
-				<label>$LOCALIZE[31119] [B]1[/B]</label>
+				<label>$LOCALIZE[31119] [B]$INFO[Skin.String(Menu_Info_sub7_lab)][/B]</label>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
@@ -1101,7 +1119,7 @@
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
-				<label>$LOCALIZE[31119] [B]2[/B]</label>
+				<label>$LOCALIZE[31119] [B]$INFO[Skin.String(Menu_Info_sub8_lab)][/B]</label>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
@@ -1142,7 +1160,7 @@
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
-				<label>$LOCALIZE[31119] [B]3[/B]</label>
+				<label>$LOCALIZE[31119] [B]$INFO[Skin.String(Menu_Info_sub9_lab)][/B]</label>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
@@ -1183,7 +1201,7 @@
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
-				<label>$LOCALIZE[31119] [B]4[/B]</label>
+				<label>$LOCALIZE[31119] [B]$INFO[Skin.String(Menu_Info_sub10_lab)][/B]</label>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
