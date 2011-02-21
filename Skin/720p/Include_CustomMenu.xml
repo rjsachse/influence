@@ -4114,6 +4114,7 @@
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.ToggleSetting(Menu_DVD_act)</onclick>
+				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=DVD&amp;Nb=4)</onclick>				
 				<selected>Skin.HasSetting(Menu_DVD_act)</selected>
 				<visible>Skin.HasSetting(Menu_DVD)</visible>
 			</control>
@@ -4333,6 +4334,7 @@
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.ToggleSetting(Menu_Exit_act)</onclick>
+				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Exit&amp;Nb=4)</onclick>
 				<selected>Skin.HasSetting(Menu_Exit_act)</selected>
 				<visible>Skin.HasSetting(Menu_Exit)</visible>
 			</control>
@@ -4566,6 +4568,7 @@
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.ToggleSetting(Menu_Favorites_act)</onclick>
+				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Favorites&amp;Nb=10)</onclick>
 				<selected>Skin.HasSetting(Menu_Favorites_act)</selected>
 				<visible>Skin.HasSetting(Menu_Favorites)</visible>
 			</control>

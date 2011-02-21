@@ -41,6 +41,11 @@
 			<filename>DejaVuSans.ttf</filename>
 			<size>18</size>
 		</font>
+		<font>
+			<name>fontTest</name>
+			<filename>DefaultCaps.ttf</filename>
+			<size>40</size>		
+		</font>
 
 
 	<!-- Title Fonts -->
@@ -90,6 +95,11 @@
 			<filename>DejaVuSans-Bold-Caps.ttf</filename>
 			<size>60</size>
 		</font>
+	 	<font>
+			<name>font70caps_toto</name>
+			<filename>DejaVuSans-Bold.ttf</filename>
+			<size>70</size>
+		</font>		
 <!-- Added This -->		
 
 	 	<font>
@@ -160,9 +170,8 @@
 		</font>
 		<font>
 			<name>Font_Bartowski_Episodes</name>
-			<filename>alaska_light_nocaps.ttf</filename>
-			<size>24</size>
-			<linespacing>1</linespacing>
+			<filename>DejaVuSans-Bold.ttf</filename>
+			<size>16</size>
 		</font>
 		<font>
 			<name>Font_Bartowski_Movies_Plot</name>
@@ -172,27 +181,23 @@
 		</font>
 		<font>
 			<name>Font_Bartowski_Movies_Title</name>
-			<filename>alaska_light.ttf</filename>
+			<filename>DejaVuSans-Bold-Caps.ttf</filename>
 			<size>40</size>
-			<linespacing>1</linespacing>
 		</font>
 		<font>
 			<name>Font_Bartowski_TV_Title</name>
-			<filename>alaska_light.ttf</filename>
-			<size>40</size>
-			<linespacing>1</linespacing>
+			<filename>DejaVuSans-Bold-Caps.ttf</filename>
+			<size>50</size>
 		</font>
 		<font>
 			<name>Font_Bartowski_Landscape_TV_Title</name>
-			<filename>alaska_light.ttf</filename>
+			<filename>DejaVuSans-Bold-Caps.ttf</filename>
 			<size>50</size>
-			<linespacing>1</linespacing>
 		</font>
 		<font>
 			<name>Font_Episode_Landscape_TVTitle</name>
-			<filename>alaska_light.ttf</filename>
+			<filename>DejaVuSans-Bold-Caps.ttf</filename>
 			<size>50</size>
-			<linespacing>.7</linespacing>
 		</font>
 		<font>
 			<name>Font_Bartowski_Movies_Duration</name>
@@ -218,8 +223,8 @@
 		</font>
 		<font>
 			<name>Font_Bartowski_Extras_Pause</name>
-			<filename>scoutlightnc.ttf</filename>
-			<size>22</size>
+			<filename>DejaVuSans.ttf</filename>
+			<size>16</size>
 		</font>
 		<font>
 			<name>Font_Bartowski_Under_Pause</name>
@@ -228,7 +233,7 @@
 		</font>
 		<font>
 			<name>Font_Bartowski_Episode_ContextMenu</name>
-			<filename>scoutlightnc.ttf</filename>
+			<filename>DejaVuSans.ttf</filename>
 			<size>30</size>
 		</font>
 		<font>
@@ -238,58 +243,57 @@
 		</font>
 		<font>
 			<name>Font_Bartowski_List_Main</name>
-			<filename>scoutlightnc.ttf</filename>
-			<size>24</size>
+			<filename>DejaVuSans.ttf</filename>
+			<size>20</size>
 		</font>
 		<font>
 			<name>Font_Bartowski_Showcase_plot</name>
-			<filename>alaska_light_nocaps.ttf</filename>
-			<size>25</size>
-			<linespacing>0.8</linespacing>
+			<filename>DejaVuSans.ttf</filename>
+			<size>20</size>
 		</font>
 		<font>
 			<name>Font_Bartowski_Showcase_Title</name>
-			<filename>alaska_regular.ttf</filename>
-			<size>31</size>
+			<filename>DejaVuSans-Bold.ttf</filename>
+			<size>25</size>
 		</font>
 		<font>
 			<name>Font_Bartowski_Showcase_Right_Main</name>
-			<filename>alaska_nocaps.ttf</filename>
-			<size>28</size>
+			<filename>DejaVuSans.ttf</filename>
+			<size>21</size>
 		</font>
 		<font>
 			<name>Font_Bartowski_Showcase_Right_Under</name>
-			<filename>scoutlightnc.ttf</filename>
-			<size>22</size>
+			<filename>DejaVuSans.ttf</filename>
+			<size>16</size>
 		</font>
 		<font>
 			<name>Font_Bartowski_Showcase_runtime_year</name>
-			<filename>alaska_regular.ttf</filename>
+			<filename>DefaultCaps.ttf</filename>
 			<size>24</size>
 		</font>
 		<font>
 			<name>Font_Bartowski_MenuValue</name>
-			<filename>scoutlightnc.ttf</filename>
-			<size>36</size>
+			<filename>DejaVuSans.ttf</filename>
+			<size>30</size>
 		</font>
 		<font>
 			<name>Font_Bartowski_Smaller_MenuValue</name>
-			<filename>scoutlightnc.ttf</filename>
+			<filename>DejaVuSans.ttf</filename>
 			<size>30</size>
 		</font>
 		<font>
 			<name>Font_Bartowski_Smaller_MenuTitle</name>
-			<filename>scoutlightnc.ttf</filename>
+			<filename>DejaVuSans.ttf</filename>
 			<size>22</size>
 		</font>
 		<font>
 			<name>Font_Bartowski_Press_S</name>
-			<filename>scoutlightnc.ttf</filename>
+			<filename>DejaVuSans.ttf</filename>
 			<size>26</size>
 		</font>
 		<font>
 			<name>Font_Bartowski_MainMenu_Context</name>
-			<filename>scoutlightnc.ttf</filename>
+			<filename>DejaVuSans.ttf</filename>
 			<size>44</size>
 		</font>
 		<font>
@@ -304,7 +308,7 @@
 		</font>
 		<font>
 			<name>Font_Landscape_TitleTVShow</name>
-			<filename>scoutlightnc.ttf</filename>
+			<filename>DejaVuSans.ttf</filename>
 			<size>25</size>
 			<linespacing>1</linespacing>
 		</font>
@@ -368,12 +372,6 @@
 		</font>
 
 		<font>
-			<name>font13</name>
-			<filename>Arial.ttf</filename>
-			<size>14</size>
-		</font>
-
-		<font>
 			<name>Font_Time</name>
 			<filename>alaska_black.ttf</filename>
 			<size>42</size>
@@ -415,8 +413,8 @@
 
 		<font>
 			<name>Font_RSS_Big</name>
-			<filename>alaska_light_nocaps.ttf</filename>
-			<size>27</size>
+			<filename>DejaVuSans.ttf</filename>
+			<size>22</size>
 		</font>
 
 		<font>
@@ -453,14 +451,14 @@
 
 		<font>
 			<name>Font_InfoYear2</name>
-			<filename>alaska_regular.ttf</filename>
-			<size>40</size>
+			<filename>DefaultCaps.ttf</filename>
+			<size>30</size>
 		</font>
 
 		<font>
 			<name>Font_InfoDetails</name>
-			<filename>alaska_regular.ttf</filename>
-			<size>22</size>
+			<filename>DefaultCaps.ttf</filename>
+			<size>20</size>
 		</font>
 
 		<font>
@@ -497,22 +495,20 @@
 
 		<font>
 			<name>Font_EpisodePlot</name>
-			<filename>alaska_light_nocaps.ttf</filename>
-			<size>21</size>
-			<linespacing>0.8</linespacing>
+			<filename>DejaVuSans.ttf</filename>
+			<size>20</size>
 		</font>	
 
 		<font>
 			<name>Font_EpisodePlot2</name>
-			<filename>alaska_light_nocaps.ttf</filename>
-			<size>18</size>
+			<filename>DejaVuSans.ttf</filename>
+			<size>16</size>
 		</font>	
 
 		<font>
 			<name>Font_TVShow</name>
-			<filename>alaska_light_nocaps.ttf</filename>
-			<size>25</size>
-			<linespacing>1</linespacing>
+			<filename>DejaVuSans.ttf</filename>
+			<size>20</size>
 		</font>
 
 		<font>
@@ -616,8 +612,8 @@
 
 		<font>
 			<name>Font_MainMenuLabel</name>
-			<filename>alaska_regular.ttf</filename>
-			<size>44</size>
+			<filename>DefaultCaps.ttf</filename>
+			<size>40</size>	
 		</font>	
 		<font>
 			<name>Font_FileBrowserHeading</name>
@@ -639,14 +635,13 @@
 		<!--#Pragma Keyboard --><linespacing>1</linespacing>
 		<font>
 			<name>Font_KeyboardKeys</name>
-			<filename>alaska_nocaps.ttf</filename>
-			<size>26</size>
+			<filename>DejaVuSans.ttf</filename>
+			<size>22</size>
 		</font>
 		<font>
 			<name>Font_KeyboardKeys_Plot</name>
-			<filename>alaska_nocaps.ttf</filename>
-			<size>24</size>
-			<linespacing>.8</linespacing>
+			<filename>DejaVuSans.ttf</filename>
+			<size>20</size>
 		</font>
 		<font>
 			<name>Font_KeyboardTitle</name>
@@ -700,27 +695,27 @@
 		</font>
 		<font>
 			<name>font24caps_title</name>
-			<filename>scoutlightnc.ttf</filename>
+			<filename>DejaVuSans.ttf</filename>
 			<size>34</size>
 		</font>
 		<font>
 			<name>font16caps</name>
-			<filename>scoutlightnc.ttf</filename>
+			<filename>DejaVuSans.ttf</filename>
 			<size>25</size>
 		</font>
 		<font>
 			<name>font13caps_title</name>
-			<filename>scoutlightnc.ttf</filename>
+			<filename>DejaVuSans.ttf</filename>
 			<size>20</size>
 		</font>
 		<font>
 			<name>Font_Music_Jukebox</name>
-			<filename>scoutlightnc.ttf</filename>
+			<filename>DejaVuSans.ttf</filename>
 			<size>18</size>
 		</font>
 		<font>
 			<name>Bartowski_settings_small</name>
-			<filename>scoutlightnc.ttf</filename>
+			<filename>DejaVuSans.ttf</filename>
 			<size>16</size>
 		</font>
 		<font>
@@ -753,11 +748,7 @@
 			<filename>DejaVuSans.ttf</filename>
 			<size>20</size>
 		</font>
-	 	<font>
-			<name>font13caps</name>
-			<filename>DejaVuSans.ttf</filename>
-			<size>20</size>
-		</font>
+
 	 	<font>
 			<name>font16caps</name>
 			<filename>DejaVuSans.ttf</filename>
@@ -776,11 +767,7 @@
 
 
 	<!-- Title Fonts -->
-	 	<font>
-			<name>font10_title</name>
-			<filename>DejaVuSans-Bold.ttf</filename>
-			<size>12</size>
-		</font>
+
 	 	<font>
 			<name>font12_title</name>
 			<filename>DejaVuSans-Bold.ttf</filename>
@@ -816,7 +803,6 @@
 			<filename>DejaVuSans-Bold.ttf</filename>
 			<size>50</size>
 		</font>
-
 	 	<font>
 			<name>WeatherTemp</name>
 			<filename>DejaVuSans-Bold.ttf</filename>
