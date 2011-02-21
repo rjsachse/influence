@@ -440,6 +440,13 @@
 						<selected>Skin.HasSetting(HideTopScreen)</selected>
 					</control>
 					<control type="radiobutton" id="23">
+						<description>Toggle Bottom Info Screen</description>
+						<include>ButtonMediaSubCommonValues</include>
+						<label>Toggle Bottom Info Screen</label>
+						<onclick>Skin.ToggleSetting(HideBottomScreen)</onclick>
+						<selected>Skin.HasSetting(HideBottomScreen)</selected>
+					</control>					
+					<control type="radiobutton" id="24">
 						<description>Hide Media Flag</description>
 						<include>ButtonMediaSubCommonValues</include>
 						<label>35134</label>
@@ -447,7 +454,7 @@
 						<selected>Skin.HasSetting(HideMediaCodeFlaggingImages)</selected>
 					</control>
 					<!-- UK/US Ratings -->
-					<control type="radiobutton" id="24">
+					<control type="radiobutton" id="25">
 						<description>Show US/UK ratings</description>
 						<textwidth>170</textwidth>
 						<include>ButtonMediaSubCommonValues</include>

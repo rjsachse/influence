@@ -14,7 +14,7 @@
 	<include file="IncludesDialogVideoInfoContentItems.xml" />
 	<!-- include pour setting carousel et autres-->
 	<include file="Include_CustomMenuCarousel.xml" />
-	<include file="CustomCarousel.xml" />
+	<include file="CarouselCustom.xml" />
 	<include file="InfluenceSystem.xml" />
 	<include file="InfluenceVideos.xml" />
 	<include file="InfluenceMusic.xml" />
@@ -388,35 +388,58 @@
 		</control>
 	</include>
 	<include name="CommonPageCount">
-		<control type="label">
-			<posx>40</posx>
-			<posy>30r</posy>
-			<width>700</width>
-			<height>20</height>
-			<label>([COLOR=blue]$INFO[Player.Time] / $INFO[Player.Duration,][/COLOR]) - $INFO[MusicPlayer.Title]$INFO[VideoPlayer.Title]</label>
-			<align>left</align>
-			<aligny>center</aligny>
-			<font>font12</font>
-			<textcolor>grey</textcolor>
-			<shadowcolor>black</shadowcolor>
-			<visible>Player.HasMedia</visible>
-			<include>VisibleFadeEffect</include>
-			<include>Window_OpenClose_Animation</include>
-		</control>
-		<control type="label">
-			<description>Page Count Label</description>
-			<posx>40r</posx>
-			<posy>30r</posy>
-			<width>500</width>
-			<height>20</height>
-			<font>font12</font>
-			<textcolor>grey</textcolor>
-			<scroll>false</scroll>
-			<align>right</align>
-			<aligny>center</aligny>
-			<label>([COLOR=blue]$INFO[Container.NumItems][/COLOR]) $LOCALIZE[31025]$INFO[Container.TotalTime, - $LOCALIZE[180] ([COLOR=blue],[/COLOR])] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container.CurrentPage]/$INFO[Container.NumPages][/COLOR])</label>
-			<include>Window_OpenClose_Animation</include>
-		</control>
+		<control type="group">
+			<control type="label">
+				<posx>40</posx>
+				<posy>30r</posy>
+				<width>700</width>
+				<height>20</height>
+				<label>([COLOR=blue]$INFO[Player.Time] / $INFO[Player.Duration,][/COLOR]) - $INFO[MusicPlayer.Title]$INFO[VideoPlayer.Title]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>grey</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>Player.HasMedia</visible>
+				<include>VisibleFadeEffect</include>
+				<include>Window_OpenClose_Animation</include>
+			</control>
+			<control type="label">
+				<description>Page Count Label</description>
+				<posx>40r</posx>
+				<posy>30r</posy>
+				<width>500</width>
+				<height>20</height>
+				<font>font12</font>
+				<textcolor>grey</textcolor>
+				<scroll>false</scroll>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>([COLOR=blue]$INFO[Container.NumItems][/COLOR]) $LOCALIZE[31025]$INFO[Container.TotalTime, - $LOCALIZE[180] ([COLOR=blue],[/COLOR])] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container.CurrentPage]/$INFO[Container.NumPages][/COLOR])</label>
+				<include>Window_OpenClose_Animation</include>
+			</control>
+			<visible> ![Control.IsVisible(1001) + !Skin.HasSetting(ViewCustom1001_ShowItemCount)]</visible>
+			<visible> ![Control.IsVisible(1002) + !Skin.HasSetting(ViewCustom1002_ShowItemCount)]</visible>
+			<visible> ![Control.IsVisible(1003) + !Skin.HasSetting(ViewCustom1003_ShowItemCount)]</visible>
+			<visible> ![Control.IsVisible(1004) + !Skin.HasSetting(ViewCustom1004_ShowItemCount)]</visible>
+			<visible> ![Control.IsVisible(1005) + !Skin.HasSetting(ViewCustom1005_ShowItemCount)]</visible>
+			<visible> ![Control.IsVisible(1006) + !Skin.HasSetting(ViewCustom1006_ShowItemCount)]</visible>
+			<visible> ![Control.IsVisible(1007) + !Skin.HasSetting(ViewCustom1007_ShowItemCount)]</visible>
+			<visible> ![Control.IsVisible(1008) + !Skin.HasSetting(ViewCustom1008_ShowItemCount)]</visible>
+			<visible> ![Control.IsVisible(1009) + !Skin.HasSetting(ViewCustom1009_ShowItemCount)]</visible>
+			<visible> ![Control.IsVisible(1010) + !Skin.HasSetting(ViewCustom1010_ShowItemCount)]</visible>
+			<visible> ![Control.IsVisible(1011) + !Skin.HasSetting(ViewCustom1011_ShowItemCount)]</visible>
+			<visible> ![Control.IsVisible(1012) + !Skin.HasSetting(ViewCustom1012_ShowItemCount)]</visible>
+			<visible> ![Control.IsVisible(1013) + !Skin.HasSetting(ViewCustom1013_ShowItemCount)]</visible>
+			<visible> ![Control.IsVisible(1014) + !Skin.HasSetting(ViewCustom1014_ShowItemCount)]</visible>
+			<visible> ![Control.IsVisible(1015) + !Skin.HasSetting(ViewCustom1015_ShowItemCount)]</visible>
+			<visible> ![Control.IsVisible(1016) + !Skin.HasSetting(ViewCustom1016_ShowItemCount)]</visible>
+			<visible> ![Control.IsVisible(1017) + !Skin.HasSetting(ViewCustom1017_ShowItemCount)]</visible>
+			<visible> ![Control.IsVisible(1018) + !Skin.HasSetting(ViewCustom1018_ShowItemCount)]</visible>
+			<visible> ![Control.IsVisible(1019) + !Skin.HasSetting(ViewCustom1019_ShowItemCount)]</visible>
+			<visible> ![Control.IsVisible(1020) + !Skin.HasSetting(ViewCustom1020_ShowItemCount)]</visible>	
+			<visible>!Skin.HasSetting(HideBottomScreen)</visible>			
+		</control>		
 	</include>
 	<include name="SmallMusicInfo">
 		<control type="image">
@@ -1513,9 +1536,8 @@ tent(LiveTV)</visible>
 	<include name="RunFeed10Added">
 		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=10,feed=http://pipes.yahoo.com/pipes/pipe.run?NumStories=3&Start=1&_id=e5ecd8ffbee522fccb5b2b3b6b776fd5&_render=rss,limit=10)</onfocus>
 	</include>
-	<include name="TestRecently">
-	
-	<control type="button" id="8999">
+	<include name="TestRecently">	
+		<control type="button" id="8999">
 			<description>Run Recently added</description>
 			<posx>-20</posx>
 			<posy>-20</posy>
@@ -1531,41 +1553,41 @@ tent(LiveTV)</visible>
 			<texturefocus>-</texturefocus>
 			<visible>Skin.HasSetting(homepageHideRecentlyAdded) | Skin.HasSetting(homepageHideRandomAdded)</visible>
 		</control>
-			<control type="button" id="8999">
-				<description>Don't run Recently added</description>
-				<posx>-20</posx>
-				<posy>-20</posy>
-				<width>1</width>
-				<height>1</height>
-				<label>-</label>
-				<font>-</font>
-				<onfocus>SetFocus(8998)</onfocus>
-				<texturenofocus>-</texturenofocus>
-				<texturefocus>-</texturefocus>
-				<visible>!Skin.HasSetting(homepageHideRecentlyAdded) + !Skin.HasSetting(homepageHideRandomAdded)</visible>
-			</control>
-			<control type="button" id="8998">
-				<description>run rss feeds</description>
-				<posx>-20</posx>
-				<posy>-20</posy>
-				<width>1</width>
-				<height>1</height>
-				<label>-</label>
-				<font>-</font>
-				<include condition ="Skin.HasSetting(Menu_Info_sub1_act)">RunFeed1Added</include>
-				<include condition ="Skin.HasSetting(Menu_Info_sub2_act)">RunFeed2Added</include>
-				<include condition ="Skin.HasSetting(Menu_Info_sub3_act)">RunFeed3Added</include>
-				<include condition ="Skin.HasSetting(Menu_Info_sub4_act)">RunFeed4Added</include>
-				<include condition ="Skin.HasSetting(Menu_Info_sub5_act)">RunFeed5Added</include>
-				<include condition ="Skin.HasSetting(Menu_Info_sub6_act)">RunFeed6Added</include>
-				<include condition ="Skin.HasSetting(Menu_Info_sub7_act)">RunFeed7Added</include>
-				<include condition ="Skin.HasSetting(Menu_Info_sub8_act)">RunFeed8Added</include>
-				<include condition ="Skin.HasSetting(Menu_Info_sub9_act)">RunFeed9Added</include>
-				<include condition ="Skin.HasSetting(Menu_Info_sub10_act)">RunFeed10Added</include>
-				<onfocus>SetFocus(9000)</onfocus>
-				<texturenofocus>-</texturenofocus>
-				<texturefocus>-</texturefocus>
-				<visible>Skin.HasSetting(Menu_Info_act)</visible>
-			</control>
-		</include>
+		<control type="button" id="8999">
+			<description>Don't run Recently added</description>
+			<posx>-20</posx>
+			<posy>-20</posy>
+			<width>1</width>
+			<height>1</height>
+			<label>-</label>
+			<font>-</font>
+			<onfocus>SetFocus(8998)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>!Skin.HasSetting(homepageHideRecentlyAdded) + !Skin.HasSetting(homepageHideRandomAdded)</visible>
+		</control>
+		<control type="button" id="8998">
+			<description>run rss feeds</description>
+			<posx>-20</posx>
+			<posy>-20</posy>
+			<width>1</width>
+			<height>1</height>
+			<label>-</label>
+			<font>-</font>
+			<include condition ="Skin.HasSetting(Menu_Info_sub1_act)">RunFeed1Added</include>
+			<include condition ="Skin.HasSetting(Menu_Info_sub2_act)">RunFeed2Added</include>
+			<include condition ="Skin.HasSetting(Menu_Info_sub3_act)">RunFeed3Added</include>
+			<include condition ="Skin.HasSetting(Menu_Info_sub4_act)">RunFeed4Added</include>
+			<include condition ="Skin.HasSetting(Menu_Info_sub5_act)">RunFeed5Added</include>
+			<include condition ="Skin.HasSetting(Menu_Info_sub6_act)">RunFeed6Added</include>
+			<include condition ="Skin.HasSetting(Menu_Info_sub7_act)">RunFeed7Added</include>
+			<include condition ="Skin.HasSetting(Menu_Info_sub8_act)">RunFeed8Added</include>
+			<include condition ="Skin.HasSetting(Menu_Info_sub9_act)">RunFeed9Added</include>
+			<include condition ="Skin.HasSetting(Menu_Info_sub10_act)">RunFeed10Added</include>
+			<onfocus>SetFocus(9000)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>Skin.HasSetting(Menu_Info_act)</visible>
+		</control>
+	</include>
 </includes>
