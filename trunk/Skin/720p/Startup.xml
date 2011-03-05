@@ -9,14 +9,14 @@
 			<onfocus>SetFocus(10)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<visible>system.getbool(videolibrary.updateonstartup) + !Skin.HasSetting(homepageHideRecentlyAdded) + !Skin.HasSetting(homepageHideRandomAdded)</visible>
+			<visible>system.getbool(videolibrary.updateonstartup) + !Skin.HasSetting(homepageHideRecentlyVideoAdded) + !Skin.HasSetting(homepageHideRecentlyMovieAdded) + !Skin.HasSetting(homepageHideRecentlyTvShowsAdded) + !Skin.HasSetting(homepageHideRecentlyMusicAdded)+ !Skin.HasSetting(homepageHideRandomVideoAdded) + !Skin.HasSetting(homepageHideRandomMovieAdded) + !Skin.HasSetting(homepageHideRandomTvShowsAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded)</visible>
 		</control>
 		<control type="button" id="9">
 			<description>Don't run anything is scan on startup is Disabled and jump to the startup playlist</description>
 			<onfocus>SetFocus(10)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<visible>!system.getbool(videolibrary.updateonstartup) | Skin.HasSetting(homepageHideRecentlyAdded) | Skin.HasSetting(homepageHideRandomAdded)</visible>
+			<visible>!system.getbool(videolibrary.updateonstartup) | Skin.HasSetting(homepageHideRecentlyVideoAdded) | Skin.HasSetting(homepageHideRecentlyMovieAdded) | Skin.HasSetting(homepageHideRecentlyTvShowsAdded) | Skin.HasSetting(homepageHideRecentlyMusicAdded)| Skin.HasSetting(homepageHideRandomVideoAdded) | Skin.HasSetting(homepageHideRandomMovieAdded) | Skin.HasSetting(homepageHideRandomTvShowsAdded) | Skin.HasSetting(homepageHideRandomMusicAdded)</visible>
 		</control>
 		<control type="button" id="10">
 			<description>trigger</description>

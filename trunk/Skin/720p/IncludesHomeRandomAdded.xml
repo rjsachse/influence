@@ -10,7 +10,7 @@
 				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeHorizRaise</include>
 				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
 				<visible>Library.HasContent(Movies)</visible>
-				<visible>Container(9000).Hasfocus(10)</visible>
+				<visible>Container(9000).Hasfocus(10) + Skin.HasSetting(homepageHideRandomMovieAdded) +!Skin.HasSetting(homepageHideRecentlyMovieAdded)</visible>
 				<include>VisibleFadeEffect</include>
 <!--
 				<animation effect="slide" time="0" start="0,0" end="-260,0" condition="[Library.HasContent(TVShows) + ![Skin.HasSetting(HomeMenuNoMoviesButton) | Skin.HasSetting(HomeMenuNoTVShowsButton)]] + ![Container(9000).Hasfocus(10)]">Conditional</animation>
@@ -29,7 +29,7 @@
 					<posy>5</posy>
 					<height>20</height>
 					<width>230</width>
-					<label>31323</label>
+					<label>31331</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -141,7 +141,7 @@
 				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeRaise</include>
 				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
 				<visible>Library.HasContent(Movies)</visible>
-				<visible>[Container(9000).Hasfocus(2) + !Skin.HasSetting(HomeMenuNoMoviesButton)]</visible>
+				<visible>[Container(9000).Hasfocus(2) + !Skin.HasSetting(HomeMenuNoMoviesButton)+ Skin.HasSetting(homepageHideRandomVideoAdded)] | [Container(9000).Hasfocus(10) + !Skin.HasSetting(HomeMenuNoMoviesButton)+ Skin.HasSetting(homepageHideRandomMovieAdded) + Skin.HasSetting(homepageHideRecentlyMovieAdded)]</visible>
 				<include>VisibleFadeEffect</include>
 <!--
 				<animation effect="slide" time="0" start="0,0" end="-260,0" condition="[Library.HasContent(TVShows) + ![Skin.HasSetting(HomeMenuNoMoviesButton) | Skin.HasSetting(HomeMenuNoTVShowsButton)]] + ![Container(9000).Hasfocus(10)]">Conditional</animation>
@@ -160,7 +160,7 @@
 					<posy>5</posy>
 					<height>20</height>
 					<width>230</width>
-					<label>31323</label>
+					<label>31331</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -270,7 +270,7 @@
 				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
 				<posx>275r</posx>
 				<visible>Library.HasContent(Music)</visible>
-				<visible>Container(9000).Hasfocus(3)</visible>
+				<visible>Container(9000).Hasfocus(3)+ Skin.HasSetting(homepageHideRandomMusicAdded)+!Skin.HasSetting(homepageHideRecentlyMusicAdded)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="image">
 					<description>background</description>
@@ -286,7 +286,7 @@
 					<posy>5</posy>
 					<height>20</height>
 					<width>230</width>
-					<label>35040</label>
+					<label>31333</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -422,7 +422,7 @@
 				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
 				<posx>275r</posx>
 				<visible>Library.HasContent(TVShows)</visible>
-				<visible>[Container(9000).Hasfocus(2) + !Skin.HasSetting(HomeMenuNoTVShowsButton)] | Container(9000).Hasfocus(11)</visible>
+				<visible>[Container(9000).Hasfocus(2) + !Skin.HasSetting(HomeMenuNoTVShowsButton)]+ Skin.HasSetting(homepageHideRandomVideoAdded) | Container(9000).Hasfocus(11)+ Skin.HasSetting(homepageHideRandomTvShowsAdded)+!Skin.HasSetting(homepageHideRecentlyTvShowsAdded)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="image">
 					<description>background</description>
@@ -438,7 +438,7 @@
 					<posy>5</posy>
 					<height>20</height>
 					<width>230</width>
-					<label>31324</label>
+					<label>31332</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -548,6 +548,241 @@
 					<include>RandomEpisodeItem</include>
 				</control>
 			</control>
+			<control type="group">
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">PosXMovie</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">PosXMovie_TV</include>
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeRaise</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
+				<visible>Library.HasContent(Music)</visible>
+				<visible>Container(9000).Hasfocus(3)+ Skin.HasSetting(homepageHideRandomMusicAdded)+Skin.HasSetting(homepageHideRecentlyMusicAdded)</visible>
+				<include>VisibleFadeEffect</include>
+
+				<control type="image">
+					<description>background</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>300</height>
+					<texture border="10">RecentAddedNF.png</texture>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>10</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>31333</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<description>Main Icon -3</description>
+					<posx>165</posx>
+					<posy>60</posy>
+					<width>75</width>
+					<height>110</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture background="true">$INFO[Window.Property(RandomSong.4.Thumb)]</texture>
+					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<description>Main Icon -2</description>
+					<posx>130</posx>
+					<posy>50</posy>
+					<width>86</width>
+					<height>130</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture background="true">$INFO[Window.Property(RandomSong.3.Thumb)]</texture>
+					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<description>Main Icon -1</description>
+					<posx>80</posx>
+					<posy>40</posy>
+					<width>100</width>
+					<height>150</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture background="true">$INFO[Window.Property(RandomSong.2.Thumb)]</texture>
+					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>25</posy>
+					<width>120</width>
+					<height>180</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture background="true">$INFO[Window.Property(RandomSong.1.Thumb)]</texture>
+					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="list" id="8008">
+					<posx>0</posx>
+					<posy>200</posy>
+					<width>250</width>
+					<height>92</height>
+					<onleft>9000</onleft>
+					<onright>8006</onright>
+					<onup>8008</onup>
+					<ondown>8008</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>0</scrolltime>
+					<itemlayout height="23" width="230">
+						<control type="label">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>230</width>
+							<height>23</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="23" width="230">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>250</width>
+							<height>23</height>
+							<texture border="0,2,0,2">MenuItemFO.png</texture>
+							<visible>Control.HasFocus(8008)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>230</width>
+							<height>23</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<include>RandomMusicItem</include>
+				</control>
+			</control>
+				<control type="group">
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">PosXMovie</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">PosXMovie_TV</include>
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeRaise</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
+				<visible>Library.HasContent(TVShows)</visible>
+				<visible>Container(9000).Hasfocus(11)+ Skin.HasSetting(homepageHideRandomTvShowsAdded)+ Skin.HasSetting(homepageHideRecentlyTvShowsAdded)</visible>
+				<include>VisibleFadeEffect</include>
+
+				<control type="image">
+					<description>background</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>300</height>
+					<texture border="10">RecentAddedNF.png</texture>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>10</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>31332</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Window.Property(RandomEpisode.1.Thumb)]</texture>
+					<visible>!Control.HasFocus(8009)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture background="true">$INFO[Container(8009).ListItem.Thumb]</texture>
+					<visible>Control.HasFocus(8007)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="list" id="8009">
+					<posx>0</posx>
+					<posy>200</posy>
+					<width>250</width>
+					<height>92</height>
+					<onleft>9000</onleft>
+					<onright>8007</onright>
+					<onup>8009</onup>
+					<ondown>8009</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>0</scrolltime>
+					<itemlayout height="23" width="230">
+						<control type="label">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>230</width>
+							<height>23</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="23" width="230">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>250</width>
+							<height>23</height>
+							<texture border="0,2,0,2">MenuItemFO.png</texture>
+							<visible>Control.HasFocus(8009)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>230</width>
+							<height>23</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<include>RandomEpisodeItem</include>
+				</control>
+			</control>
 		</control>
 	</include>
 	<include name="HRAI_HomeHorizRaise">
@@ -570,70 +805,70 @@
 			<item id="1">
 				<label>$INFO[Window.Property(RandomMovie.1.Title)]</label>
 				<label2>-</label2>
-				<onclick>$INFO[Window.Property(RandomMovie.1.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(RandomMovie.1.Path)])</onclick>
 				<icon>$INFO[Window.Property(RandomMovie.1.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(RandomMovie.1.Fanart)]</thumb>
 			</item>
 			<item id="2">
 				<label>$INFO[Window.Property(RandomMovie.2.Title)]</label>
 				<label2>-</label2>
-				<onclick>$INFO[Window.Property(RandomMovie.2.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(RandomMovie.2.Path)])</onclick>
 				<icon>$INFO[Window.Property(RandomMovie.2.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(RandomMovie.2.Fanart)]</thumb>
 			</item>
 			<item id="3">
 				<label>$INFO[Window.Property(RandomMovie.3.Title)]</label>
 				<label2>-</label2>
-				<onclick>$INFO[Window.Property(RandomMovie.3.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(RandomMovie.3.Path)])</onclick>
 				<icon>$INFO[Window.Property(RandomMovie.3.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(RandomMovie.3.Fanart)]</thumb>
 			</item>
 			<item id="4">
 				<label>$INFO[Window.Property(RandomMovie.4.Title)]</label>
 				<label2>-</label2>
-				<onclick>$INFO[Window.Property(RandomMovie.4.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(RandomMovie.4.Path)])</onclick>
 				<icon>$INFO[Window.Property(RandomMovie.4.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(RandomMovie.4.Fanart)]</thumb>
 			</item>
 			<item id="5">
 				<label>$INFO[Window.Property(RandomMovie.5.Title)]</label>
 				<label2>-</label2>
-				<onclick>$INFO[Window.Property(RandomMovie.5.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(RandomMovie.5.Path)])</onclick>
 				<icon>$INFO[Window.Property(RandomMovie.5.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(RandomMovie.5.Fanart)]</thumb>
 			</item>
 				<item id="6">
 				<label>$INFO[Window.Property(RandomMovie.6.Title)]</label>
 				<label2>-</label2>
-				<onclick>$INFO[Window.Property(RandomMovie.6.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(RandomMovie.6.Path)])</onclick>
 				<icon>$INFO[Window.Property(RandomMovie.6.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(RandomMovie.6.Fanart)]</thumb>
 			</item>
 			<item id="7">
 				<label>$INFO[Window.Property(RandomMovie.7.Title)]</label>
 				<label2>-</label2>
-				<onclick>$INFO[Window.Property(RandomMovie.7.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(RandomMovie.7.Path)])</onclick>
 				<icon>$INFO[Window.Property(RandomMovie.7.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(RandomMovie.7.Fanart)]</thumb>
 			</item>
 			<item id="8">
 				<label>$INFO[Window.Property(RandomMovie.8.Title)]</label>
 				<label2>-</label2>
-				<onclick>$INFO[Window.Property(RandomMovie.8.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(RandomMovie.8.Path)])</onclick>
 				<icon>$INFO[Window.Property(RandomMovie.8.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(RandomMovie.8.Fanart)]</thumb>
 			</item>
 			<item id="9">
 				<label>$INFO[Window.Property(RandomMovie.9.Title)]</label>
 				<label2>-</label2>
-				<onclick>$INFO[Window.Property(RandomMovie.9.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(RandomMovie.9.Path)])</onclick>
 				<icon>$INFO[Window.Property(RandomMovie.9.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(RandomMovie.9.Fanart)]</thumb>
 			</item>
 				<item id="10">
 				<label>$INFO[Window.Property(RandomMovie.10.Title)]</label>
 				<label2>-</label2>
-				<onclick>$INFO[Window.Property(RandomMovie.10.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(RandomMovie.10.Path)])</onclick>
 				<icon>$INFO[Window.Property(RandomMovie.10.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(RandomMovie.10.Fanart)]</thumb>
 			</item>
@@ -718,70 +953,70 @@
 			<item id="1">
 				<label>$INFO[Window.Property(RandomEpisode.1.EpisodeTitle)]</label>
 				<label2>$INFO[Window.Property(RandomEpisode.1.ShowTitle)] - $INFO[Window.Property(RandomEpisode.1.EpisodeNo)]</label2>
-				<onclick>$INFO[Window.Property(RandomEpisode.1.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(RandomEpisode.1.Path)])</onclick>
 				<icon>$INFO[Window.Property(RandomEpisode.1.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(RandomEpisode.1.Fanart)]</thumb>
 			</item>
 			<item id="2">
 				<label>$INFO[Window.Property(RandomEpisode.2.EpisodeTitle)]</label>
 				<label2>$INFO[Window.Property(RandomEpisode.2.ShowTitle)] - $INFO[Window.Property(RandomEpisode.2.EpisodeNo)]</label2>
-				<onclick>$INFO[Window.Property(RandomEpisode.2.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(RandomEpisode.2.Path)])</onclick>
 				<icon>$INFO[Window.Property(RandomEpisode.2.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(RandomEpisode.2.Fanart)]</thumb>
 			</item>
 			<item id="3">
 				<label>$INFO[Window.Property(RandomEpisode.3.EpisodeTitle)]</label>
 				<label2>$INFO[Window.Property(RandomEpisode.3.ShowTitle)] - $INFO[Window.Property(RandomEpisode.3.EpisodeNo)]</label2>
-				<onclick>$INFO[Window.Property(RandomEpisode.3.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(RandomEpisode.3.Path)])</onclick>
 				<icon>$INFO[Window.Property(RandomEpisode.3.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(RandomEpisode.3.Fanart)]</thumb>
 			</item>
 			<item id="4">
 				<label>$INFO[Window.Property(RandomEpisode.4.EpisodeTitle)]</label>
 				<label2>$INFO[Window.Property(RandomEpisode.4.ShowTitle)] - $INFO[Window.Property(RandomEpisode.4.EpisodeNo)]</label2>
-				<onclick>$INFO[Window.Property(RandomEpisode.4.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(RandomEpisode.4.Path)])</onclick>
 				<icon>$INFO[Window.Property(RandomEpisode.4.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(RandomEpisode.4.Fanart)]</thumb>
 			</item>
 			<item id="5">
 				<label>$INFO[Window.Property(RandomEpisode.5.EpisodeTitle)]</label>
 				<label2>$INFO[Window.Property(RandomEpisode.5.ShowTitle)] - $INFO[Window.Property(RandomEpisode.5.EpisodeNo)]</label2>
-				<onclick>$INFO[Window.Property(RandomEpisode.5.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(RandomEpisode.5.Path)])</onclick>
 				<icon>$INFO[Window.Property(RandomEpisode.5.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(RandomEpisode.5.Fanart)]</thumb>
 			</item>
 			<item id="6">
 				<label>$INFO[Window.Property(RandomEpisode.6.EpisodeTitle)]</label>
 				<label2>$INFO[Window.Property(RandomEpisode.6.ShowTitle)] - $INFO[Window.Property(RandomEpisode.6.EpisodeNo)]</label2>
-				<onclick>$INFO[Window.Property(RandomEpisode.6.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(RandomEpisode.6.Path)])</onclick>
 				<icon>$INFO[Window.Property(RandomEpisode.6.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(RandomEpisode.6.Fanart)]</thumb>
 			</item>
 			<item id="7">
 				<label>$INFO[Window.Property(RandomEpisode.7.EpisodeTitle)]</label>
 				<label2>$INFO[Window.Property(RandomEpisode.7.ShowTitle)] - $INFO[Window.Property(RandomEpisode.7.EpisodeNo)]</label2>
-				<onclick>$INFO[Window.Property(RandomEpisode.7.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(RandomEpisode.7.Path)])</onclick>
 				<icon>$INFO[Window.Property(RandomEpisode.7.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(RandomEpisode.7.Fanart)]</thumb>
 			</item>
 			<item id="8">
 				<label>$INFO[Window.Property(RandomEpisode.8.EpisodeTitle)]</label>
 				<label2>$INFO[Window.Property(RandomEpisode.8.ShowTitle)] - $INFO[Window.Property(RandomEpisode.8.EpisodeNo)]</label2>
-				<onclick>$INFO[Window.Property(RandomEpisode.8.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(RandomEpisode.8.Path)])</onclick>
 				<icon>$INFO[Window.Property(RandomEpisode.8.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(RandomEpisode.8.Fanart)]</thumb>
 			</item>
 			<item id="9">
 				<label>$INFO[Window.Property(RandomEpisode.9.EpisodeTitle)]</label>
 				<label2>$INFO[Window.Property(RandomEpisode.9.ShowTitle)] - $INFO[Window.Property(RandomEpisode.9.EpisodeNo)]</label2>
-				<onclick>$INFO[Window.Property(RandomEpisode.9.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(RandomEpisode.9.Path)])</onclick>
 				<icon>$INFO[Window.Property(RandomEpisode.9.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(RandomEpisode.9.Fanart)]</thumb>
 			</item>
 			<item id="10">
 				<label>$INFO[Window.Property(RandomEpisode.10.EpisodeTitle)]</label>
 				<label2>$INFO[Window.Property(RandomEpisode.10.ShowTitle)] - $INFO[Window.Property(RandomEpisode.10.EpisodeNo)]</label2>
-				<onclick>$INFO[Window.Property(RandomEpisode.10.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(RandomEpisode.10.Path)])</onclick>
 				<icon>$INFO[Window.Property(RandomEpisode.10.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(RandomEpisode.10.Fanart)]</thumb>
 			</item>

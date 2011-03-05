@@ -657,7 +657,7 @@
 						<onclick>Skin.ToggleSetting(Menu_LiveTv_act)</onclick>
 						<selected>Skin.HasSetting(LiveTvIsEnable)</selected>
 						</control>
-					<control type="radiobutton" id="214">
+					<control type="button" id="214">
 						<description>Show Recently added info</description>
 						<width>750</width>
 						<height>40</height>
@@ -666,12 +666,68 @@
 						<focusedcolor>white</focusedcolor>
 						<label>31117</label>
 						<onclick>Skin.ToggleSetting(homepageHideRecentlyAdded)</onclick>
-						<onclick>Skin.Reset(homepageHideRandomAdded)</onclick>
 						<selected>Skin.HasSetting(homepageHideRecentlyAdded)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
 					<control type="radiobutton" id="215">
+						<description>Show Recently Video added info</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$INFO[Skin.String(Menu_Videos_lab)]</label>
+						<onclick>Skin.ToggleSetting(homepageHideRecentlyVideoAdded)</onclick>
+						<onclick>Skin.Reset(homepageHideRandomVideoAdded)</onclick>
+						<selected>Skin.HasSetting(homepageHideRecentlyVideoAdded)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
+					</control>
+					<control type="radiobutton" id="216">
+						<description>Show Recently Movie added info</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$INFO[Skin.String(Menu_Movie_lab)]</label>
+						<onclick>Skin.ToggleSetting(homepageHideRecentlyMovieAdded)</onclick>
+						<selected>Skin.HasSetting(homepageHideRecentlyMovieAdded)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
+					</control>
+					<control type="radiobutton" id="217">
+						<description>Show Recently TvShows added info</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$INFO[Skin.String(Menu_TVShows_lab)]</label>
+						<onclick>Skin.ToggleSetting(homepageHideRecentlyTvShowsAdded)</onclick>
+						<selected>Skin.HasSetting(homepageHideRecentlyTvShowsAdded)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
+					</control>
+					<control type="radiobutton" id="218">
+						<description>Show Recently Music added info</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$INFO[Skin.String(Menu_Music_lab)]</label>
+						<onclick>Skin.ToggleSetting(homepageHideRecentlyMusicAdded)</onclick>
+						<selected>Skin.HasSetting(homepageHideRecentlyMusicAdded)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
+					</control>
+					<control type="button" id="219">
 						<description>Show Random info</description>
 						<width>750</width>
 						<height>40</height>
@@ -680,12 +736,68 @@
 						<focusedcolor>white</focusedcolor>
 						<label>$LOCALIZE[35129]</label>
 						<onclick>Skin.ToggleSetting(homepageHideRandomAdded)</onclick>
-						<onclick>Skin.Reset(homepageHideRecentlyAdded)</onclick>
 						<selected>Skin.HasSetting(homepageHideRandomAdded)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="216">
+					<control type="radiobutton" id="220">
+						<description>Show Random video info</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$INFO[Skin.String(Menu_Videos_lab)]</label>
+						<onclick>Skin.ToggleSetting(homepageHideRandomVideoAdded)</onclick>
+						<onclick>Skin.Reset(homepageHideRecentlyVideoAdded)</onclick>
+						<selected>Skin.HasSetting(homepageHideRandomVideoAdded)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<visible>Skin.HasSetting(homepageHideRandomAdded)</visible>
+					</control>
+					<control type="radiobutton" id="221">
+						<description>Show Random Movie info</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$INFO[Skin.String(Menu_Movie_lab)]</label>
+						<onclick>Skin.ToggleSetting(homepageHideRandomMovieAdded)</onclick>
+						<selected>Skin.HasSetting(homepageHideRandomMovieAdded)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<visible>Skin.HasSetting(homepageHideRandomAdded)</visible>
+					</control>
+					<control type="radiobutton" id="222">
+						<description>Show Random TvShows info</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$INFO[Skin.String(Menu_TVShows_lab)]</label>
+						<onclick>Skin.ToggleSetting(homepageHideRandomTvShowsAdded)</onclick>
+						<selected>Skin.HasSetting(homepageHideRandomTvShowsAdded)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<visible>Skin.HasSetting(homepageHideRandomAdded)</visible>
+					</control>
+					<control type="radiobutton" id="223">
+						<description>Show Random Music info</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$INFO[Skin.String(Menu_Music_lab)]</label>
+						<onclick>Skin.ToggleSetting(homepageHideRandomMusicAdded)</onclick>
+						<selected>Skin.HasSetting(homepageHideRandomMusicAdded)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<visible>Skin.HasSetting(homepageHideRandomAdded)</visible>
+					</control>
+					<control type="radiobutton" id="224">
 						<description>Show Library Stats</description>
 						<width>750</width>
 						<height>40</height>
@@ -698,7 +810,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="217">
+					<control type="radiobutton" id="225">
 						<description>Show CDArt</description>
 						<width>750</width>
 						<height>40</height>
@@ -711,7 +823,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="218">
+					<control type="radiobutton" id="226">
 						<description>Show Next Five Songs</description>
 						<width>750</width>
 						<height>40</height>
@@ -724,7 +836,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="219">
+					<control type="radiobutton" id="227">
 						<description>Hide Home buttonss</description>
 						<width>750</width>
 						<height>40</height>

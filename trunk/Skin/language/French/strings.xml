@@ -67,7 +67,7 @@
   <string id="31114">Image multiple</string>
   <string id="31115">Personnaliser</string>
   <string id="31116"></string>
-  <string id="31117">Afficher les vidéos récemment ajoutées</string>
+  <string id="31117">Afficher les items récemment ajoutées</string>
   <string id="31118">Sous-menu de la page d'accueil</string>
   <string id="31119">Activer le bouton Add-on personnalisé</string>
   <string id="31120">ÉTIQUETTE DU BOUTON</string>
@@ -127,6 +127,9 @@
   <string id="31328">Récemment ajouté</string>
   <string id="31329">[B]Réglage minuterie ![/B] [COLOR=grey2] - Fermer le système automatiquement dans[/COLOR]</string>
   <string id="31330">Cliquer sur le bouton pour voir[CR][CR]le trailer du film</string>
+  <string id="31331">Films aléatoires</string>
+  <string id="31332">épisodes aléatoires</string>
+  <string id="31333">Albums aléatoires</string>
 
   <!-- Video and Music OSD Labels  -->
   <string id="31351">Pause</string>
