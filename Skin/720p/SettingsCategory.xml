@@ -74,7 +74,7 @@
 			<control type="grouplist" id="3000">
 				<description>custum button area for music or video</description>
 				<!-- based on GUISettings.cpp: AddGroup(3, 2) and AddGroup(5, 3) -->
-				<!-- see file: /xbmc/GUISettings.cpp -->
+				<!-- see file: /xbmc/settings/GUISettings.cpp -->
 				<visible>StringCompare(Control.GetLabel(2),$LOCALIZE[2]) | StringCompare(Control.GetLabel(2),$LOCALIZE[3])</visible>
 				<posx>10</posx>
 				<posy>90</posy>
@@ -291,9 +291,10 @@
 						<onright>3</onright>
 					</control>
 				</control>
-				<!-- AddCategory(3, "karaoke", 13327) or AddCategory(5, "scrapers", 21412) -->
+				<!-- AddCategory(3, "karaoke", 13327) -->
 				<control type="group" id="195">
 					<animation effect="fade" start="100" end="50" time="0" condition="[ControlGroup(195).HasFocus + ControlGroup(3000).HasFocus(100)]">Conditional</animation>
+					<visible>StringCompare(Control.GetLabel(2),$LOCALIZE[2])</visible>
 					<height>60</height>
 					<control type="image">
 						<description>focus</description>
@@ -314,26 +315,6 @@
 						<textoffsetx>20</textoffsetx>
 						<align>right</align>
 						<aligny>center</aligny>
-						<label>21412</label>
-						<font>font13_title</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>-</texturefocus>
-						<texturenofocus border="5">MenuItemNF.png</texturenofocus>
-						<ondown>100</ondown>
-						<onleft>60</onleft>
-						<onright>3</onright>
-                        <visible>StringCompare(Control.GetLabel(2),$LOCALIZE[3])</visible>
-					</control>
-					<control type="button" id="-95">
-						<description>Button</description>
-						<posx>0</posx>
-						<posy>0</posy>
-						<height>60</height>
-						<width>260</width>
-						<textoffsetx>20</textoffsetx>
-						<align>right</align>
-						<aligny>center</aligny>
 						<label>13327</label>
 						<font>font13_title</font>
 						<textcolor>grey2</textcolor>
@@ -343,7 +324,6 @@
 						<ondown>100</ondown>
 						<onleft>60</onleft>
 						<onright>3</onright>
-                        <visible>StringCompare(Control.GetLabel(2),$LOCALIZE[2])</visible>
 					</control>
 				</control>
 				<!-- Add Custom Category -->
@@ -501,7 +481,7 @@
 					<width>750</width>
 					<height>40</height>
 					<font>font13</font>
-					<label>$LOCALIZE[31132]</label>
+					<label>$LOCALIZE[31129]</label>
 					<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(LyricScript_Path))][/COLOR]</label2>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
@@ -561,7 +541,7 @@
 					<texturefocus>MenuItemFO.png</texturefocus>
 					<texturenofocus>MenuItemNF.png</texturenofocus>
 					<onclick>Addon.OpenSettings(script.moviesets)</onclick>
-					<!-- <enable>!Skin.HasSetting(HideInfoMovieSets)</enable> -->
+					<enable>!Skin.HasSetting(HideInfoMovieSets)</enable>
 					<visible>Control.IsVisible(520)</visible>
 				</control>
 				<control type="label" id="523">
@@ -574,7 +554,7 @@
 					<disabledcolor>grey3</disabledcolor>
 					<align>left</align>
 					<aligny>center</aligny>
-					<!-- <enable>!Skin.HasSetting(HideInfoMovieSets)</enable> -->
+					<enable>!Skin.HasSetting(HideInfoMovieSets)</enable>
 					<visible>Control.IsVisible(520)</visible>
 				</control>
 				<control type="radiobutton" id="524">
@@ -589,7 +569,7 @@
 					<selected>Skin.HasSetting(ManagerMovieSets)</selected>
 					<texturefocus>MenuItemFO.png</texturefocus>
 					<texturenofocus>MenuItemNF.png</texturenofocus>
-					<!-- <enable>!Skin.HasSetting(HideInfoMovieSets)</enable> -->
+					<enable>!Skin.HasSetting(HideInfoMovieSets)</enable>
 					<visible>Control.IsVisible(520)</visible>
 				</control>
 				<control type="radiobutton" id="525">
@@ -623,7 +603,7 @@
 					<width>750</width>
 					<height>40</height>
 					<font>font13</font>
-					<label>$LOCALIZE[24012]</label>
+					<label>$LOCALIZE[31126]</label>
 					<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(SubtitleScript_Path))][/COLOR]</label2>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>

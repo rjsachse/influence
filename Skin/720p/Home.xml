@@ -31,8 +31,8 @@
 <!-- end -->	</control>
 		<include>CommonMediaPlayingBackground</include>
 		
-		<include condition="Skin.HasSetting(homepageHideRecentlyAdded)">HomeRecentlyAddedInfo</include>
-		<include condition="Skin.HasSetting(homepageHideRandomAdded)">HomeRandomAddedInfo</include>
+		<include condition="Skin.HasSetting(homepageHideRecentlyVideoAdded) | Skin.HasSetting(homepageHideRecentlyMovieAdded) | Skin.HasSetting(homepageHideRecentlyTvShowsAdded) | Skin.HasSetting(homepageHideRecentlyMusicAdded) ">HomeRecentlyAddedInfo</include>
+		<include condition="Skin.HasSetting(homepageHideRandomVideoAdded) | Skin.HasSetting(homepageHideRandomMovieAdded) | Skin.HasSetting(homepageHideRandomTvShowsAdded) | Skin.HasSetting(homepageHideRandomMusicAdded) ">HomeRandomAddedInfo</include>
 		<include condition="Skin.HasSetting(Menu_Info_act)">RssRecentlyAddedInfo</include>
 <!-- weather Info -->
 		<control type="group">

@@ -67,7 +67,7 @@
   <string id="31114">Multi Image</string>
   <string id="31115">Customizer</string>
   <string id="31116"></string>
-  <string id="31117">Show Recently added Videos</string>
+  <string id="31117">Show Recently added Items</string>
   <string id="31118">Home Page Programs Submenu</string>
   <string id="31119">Enable Custom Add-on Button</string>
   <string id="31120">BUTTON LABEL</string>
@@ -126,6 +126,9 @@
   <string id="31328">Recently Added</string>
   <string id="31329">[B]Timer set![/B] [COLOR=grey2] - System auto shutdown in[/COLOR]</string>
   <string id="31330">Click button to play[CR][CR]Movie trailer</string>
+  <string id="31331">Random Movies</string>
+  <string id="31332">Random Episodes</string>
+  <string id="31333">Random albums</string>
 
   <!-- Video and Music OSD Labels  -->
   <string id="31351">Pause</string>

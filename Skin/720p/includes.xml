@@ -15,9 +15,6 @@
 	<!-- include pour setting carousel et autres-->
 	<include file="Include_CustomMenuCarousel.xml" />
 	<include file="CarouselCustom.xml" />
-	<include file="InfluenceSystem.xml" />
-	<include file="InfluenceVideos.xml" />
-	<include file="InfluenceMusic.xml" />
 	<include file="IncludesFanartMedia.xml" />
 	<!-- end -->
 	<include file="weather.com plus/CommonValues.xml" />
@@ -1081,10 +1078,10 @@ tent(LiveTV)</visible>
 		<animation effect="fade" time="300">Hidden</animation>
 	</include>
 	<include name="HomeBigVisible">
-		<visible>Container(9000).HasFocus(1)  + Skin.HasSetting(Menu_Programs_sub_act) | Container(9000).HasFocus(2)  + Skin.HasSetting(Menu_Videos_sub_act) |Container(9000).HasFocus(3)  + Skin.HasSetting(Menu_Music_sub_act) |Container(9000).HasFocus(4)  + Skin.HasSetting(Menu_Pictures_sub_act) |Container(9000).HasFocus(5) | Container(9000).HasFocus(6)  + Skin.HasSetting(Menu_Weather_sub_act) |Container(9000).HasFocus(10)  + Skin.HasSetting(Menu_Movie_sub_act) |Container(9000).HasFocus(11)  + Skin.HasSetting(Menu_TVShows_sub_act) | Container(9000).HasFocus(20)  + Skin.HasSetting(Menu_Men1_sub_act) |Container(9000).HasFocus(21)  + Skin.HasSetting(Menu_Men2_sub_act) | Container(9000).HasFocus(22)  + Skin.HasSetting(Menu_Men3_sub_act) | Container(9000).HasFocus(23)  + Skin.HasSetting(Menu_Men4_sub_act) |Container(9000).HasFocus(13)  + Skin.HasSetting(Menu_Exit_sub_act) |Container(9000).HasFocus(12)  + Skin.HasSetting(Menu_Dvd_sub_act) | Container(9000).HasFocus(14)  + Skin.HasSetting(Menu_Pictures_sub_act) | Container(9000).HasFocus(15)  + Skin.HasSetting(Menu_LiveTv_sub_act) | Container(9000).HasFocus(14)  + Skin.HasSetting(Menu_Favorites_sub_act)|Container(9000).HasFocus(16) + Skin.HasSetting(Menu_Info_sub_act) </visible>
+		<visible>Container(9000).HasFocus(1)  + Skin.HasSetting(Menu_Programs_sub_act) | Container(9000).HasFocus(2)  + Skin.HasSetting(Menu_Videos_sub_act) |Container(9000).HasFocus(3)  + Skin.HasSetting(Menu_Music_sub_act) |Container(9000).HasFocus(4)  + Skin.HasSetting(Menu_Pictures_sub_act) |Container(9000).HasFocus(5) | Container(9000).HasFocus(6)  + Skin.HasSetting(Menu_Weather_sub_act) |Container(9000).HasFocus(10)  + Skin.HasSetting(Menu_Movie_sub_act) |Container(9000).HasFocus(11)  + Skin.HasSetting(Menu_TVShows_sub_act)|Container(9000).HasFocus(24) + Skin.HasSetting(Menu_Info_sub_act)  | Container(9000).HasFocus(20)  + Skin.HasSetting(Menu_Men1_sub_act) |Container(9000).HasFocus(21)  + Skin.HasSetting(Menu_Men2_sub_act) | Container(9000).HasFocus(22)  + Skin.HasSetting(Menu_Men3_sub_act) | Container(9000).HasFocus(23)  + Skin.HasSetting(Menu_Men4_sub_act) |Container(9000).HasFocus(13)  + Skin.HasSetting(Menu_Exit_sub_act) |Container(9000).HasFocus(12)  + Skin.HasSetting(Menu_Dvd_sub_act) | Container(9000).HasFocus(14)  + Skin.HasSetting(Menu_Pictures_sub_act) | Container(9000).HasFocus(15)  + Skin.HasSetting(Menu_LiveTv_sub_act) | Container(9000).HasFocus(14)  + Skin.HasSetting(Menu_Favorites_sub_act)</visible>
 	</include>
 	<include name="HomeBigNotVisible">
-		<visible>![Container(9000).HasFocus(1)  + Skin.HasSetting(Menu_Programs_sub_act) | Container(9000).HasFocus(2)  + Skin.HasSetting(Menu_Videos_sub_act) |Container(9000).HasFocus(3)  + Skin.HasSetting(Menu_Music_sub_act) |Container(9000).HasFocus(4)  + Skin.HasSetting(Menu_Pictures_sub_act) |Container(9000).HasFocus(5) | Container(9000).HasFocus(6)  + Skin.HasSetting(Menu_Weather_sub_act) |Container(9000).HasFocus(10)  + Skin.HasSetting(Menu_Movie_sub_act) |Container(9000).HasFocus(11)  + Skin.HasSetting(Menu_TVShows_sub_act) | Container(9000).HasFocus(20)  + Skin.HasSetting(Menu_Men1_sub_act) |Container(9000).HasFocus(21)  + Skin.HasSetting(Menu_Men2_sub_act) | Container(9000).HasFocus(22)  + Skin.HasSetting(Menu_Men3_sub_act) | Container(9000).HasFocus(23)  + Skin.HasSetting(Menu_Men4_sub_act) |Container(9000).HasFocus(13)  + Skin.HasSetting(Menu_Exit_sub_act) |Container(9000).HasFocus(12)  + Skin.HasSetting(Menu_Dvd_sub_act) | Container(9000).HasFocus(14)  + Skin.HasSetting(Menu_Pictures_sub_act) | Container(9000).HasFocus(15)  + Skin.HasSetting(Menu_LiveTv_sub_act) | Container(9000).HasFocus(14)  + Skin.HasSetting(Menu_Favorites_sub_act)]|Container(9000).HasFocus(16) + Skin.HasSetting(Menu_Info_sub_act)</visible>
+		<visible>![Container(9000).HasFocus(1)  + Skin.HasSetting(Menu_Programs_sub_act) | Container(9000).HasFocus(2)  + Skin.HasSetting(Menu_Videos_sub_act) |Container(9000).HasFocus(3)  + Skin.HasSetting(Menu_Music_sub_act) |Container(9000).HasFocus(4)  + Skin.HasSetting(Menu_Pictures_sub_act) |Container(9000).HasFocus(5) | Container(9000).HasFocus(6)  + Skin.HasSetting(Menu_Weather_sub_act) |Container(9000).HasFocus(10)  + Skin.HasSetting(Menu_Movie_sub_act) |Container(9000).HasFocus(11)  + Skin.HasSetting(Menu_TVShows_sub_act) |Container(9000).HasFocus(24) + Skin.HasSetting(Menu_Info_sub_act)| Container(9000).HasFocus(20)  + Skin.HasSetting(Menu_Men1_sub_act) |Container(9000).HasFocus(21)  + Skin.HasSetting(Menu_Men2_sub_act) | Container(9000).HasFocus(22)  + Skin.HasSetting(Menu_Men3_sub_act) | Container(9000).HasFocus(23)  + Skin.HasSetting(Menu_Men4_sub_act) |Container(9000).HasFocus(13)  + Skin.HasSetting(Menu_Exit_sub_act) |Container(9000).HasFocus(12)  + Skin.HasSetting(Menu_Dvd_sub_act) | Container(9000).HasFocus(14)  + Skin.HasSetting(Menu_Pictures_sub_act) | Container(9000).HasFocus(15)  + Skin.HasSetting(Menu_LiveTv_sub_act) | Container(9000).HasFocus(14)  + Skin.HasSetting(Menu_Favorites_sub_act)]</visible>
 	</include>
 	<include name="HomeLogo">
 		<control type="image">
@@ -1175,8 +1172,8 @@ tent(LiveTV)</visible>
 				<label>16004</label>
 				<font>-</font>
 				<aligny>-</aligny>
-				<onclick>Skin.SetString(CurrentBackground,$INFO[Skin.String(Home_Custom_Back_Info_Folder)])</onclick>
-				<onclick>RunScript(script.rssclient-standalone)</onclick>
+				
+				<onclick>ActivateWindow(1116)</onclick>
 				<texturefocus>home-rss-FO.png</texturefocus>
 				<texturenofocus>home-rss.png</texturenofocus>
 				<onleft>20</onleft>
@@ -1506,35 +1503,35 @@ tent(LiveTV)</visible>
 		<visible>![Control.IsVisible(1020) + !Skin.HasSetting(ViewCustom1020_ShowFanart)]</visible>	
 	</include>
 	<include name="RunFeed1Added">
-		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=1,feed=http://gdata.youtube.com/feeds/base/standardfeeds/FR/most_viewed?client=ytapi-youtube-browse&amp;amp;alt=rss&amp;amp;time=today,limit=10)</onfocus>
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=1,feed=$INFO[Skin.String(Menu_Info_sub1_feed)],limit=10)</onfocus>
 		
 	</include>
 	<include name="RunFeed2Added">
-		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=2,feed=http://www.comicbookresources.com/feed.php?feed=all,limit=10)</onfocus>
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=2,feed=$INFO[Skin.String(Menu_Info_sub2_feed)],limit=10)</onfocus>
 	</include>
 	<include name="RunFeed3Added">
-		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=3,feed=http://pipes.yahoo.com/pipes/pipe.run?_id=7acceee6ebe06dcf6182991b3e5fc9dc&_render=rss,limit=10)</onfocus>
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=3,feed=$INFO[Skin.String(Menu_Info_sub3_feed)],limit=10)</onfocus>
 	</include>
 	<include name="RunFeed4Added">
-		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=4,feed=http://pipes.yahoo.com/pipes/pipe.run?_id=74fc14a798efee89310bea2b56f99336&_render=rss&n=10,limit=10)</onfocus>
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=4,feed=$INFO[Skin.String(Menu_Info_sub4_feed)],limit=10)</onfocus>
 	</include>
 	<include name="RunFeed5Added">
-		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=5,feed=http://pipes.yahoo.com/pipes/pipe.run?_id=9KUs2CRI3hGF2JCZ3rVd_w&_render=rss,limit=10)</onfocus>
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=5,feed=$INFO[Skin.String(Menu_Info_sub5_feed)],limit=10)</onfocus>
 	</include>
 	<include name="RunFeed6Added">
-		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=6,feed=http://pipes.yahoo.com/pipes/pipe.run?_id=9c377c68a206d6ae8f2889db97f10084&_render=rss,limit=10)</onfocus>
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=6,feed=$INFO[Skin.String(Menu_Info_sub6_feed)],limit=10)</onfocus>
 	</include>
 	<include name="RunFeed7Added">
-		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=7,feed=http://www.celebutopia.net/forum/external.php?forumids=12,limit=10)</onfocus>
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=7,feed=$INFO[Skin.String(Menu_Info_sub7_feed)],limit=10)</onfocus>
 	</include>
 	<include name="RunFeed8Added">
-		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=8,feed=http://rss.allocine.fr/ac/bandesannonces/anepasmanquer,limit=10)</onfocus>
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=8,feed=$INFO[Skin.String(Menu_Info_sub8_feed)],limit=10)</onfocus>
 	</include>
 	<include name="RunFeed9Added">
-		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=9,feed=http://belgium-iphone.lesoir.be/feed/,limit=10)</onfocus>
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=9,feed=$INFO[Skin.String(Menu_Info_sub9_feed)],limit=10)</onfocus>
 	</include>
 	<include name="RunFeed10Added">
-		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=10,feed=http://pipes.yahoo.com/pipes/pipe.run?NumStories=3&Start=1&_id=e5ecd8ffbee522fccb5b2b3b6b776fd5&_render=rss,limit=10)</onfocus>
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=10,feed=$INFO[Skin.String(Menu_Info_sub10_feed)],limit=10)</onfocus>
 	</include>
 	<include name="TestRecently">	
 		<control type="button" id="8999">
@@ -1551,7 +1548,7 @@ tent(LiveTV)</visible>
 			<onfocus>SetFocus(8998)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<visible>Skin.HasSetting(homepageHideRecentlyAdded) | Skin.HasSetting(homepageHideRandomAdded)</visible>
+			<visible>Skin.HasSetting(homepageHideRecentlyVideoAdded) | Skin.HasSetting(homepageHideRecentlyMovieAdded) | Skin.HasSetting(homepageHideRecentlyTvShowsAdded) | Skin.HasSetting(homepageHideRecentlyMusicAdded)| Skin.HasSetting(homepageHideRandomVideoAdded) | Skin.HasSetting(homepageHideRandomMovieAdded) | Skin.HasSetting(homepageHideRandomTvShowsAdded) | Skin.HasSetting(homepageHideRandomMusicAdded)</visible>
 		</control>
 		<control type="button" id="8999">
 			<description>Don't run Recently added</description>
@@ -1564,7 +1561,7 @@ tent(LiveTV)</visible>
 			<onfocus>SetFocus(8998)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<visible>!Skin.HasSetting(homepageHideRecentlyAdded) + !Skin.HasSetting(homepageHideRandomAdded)</visible>
+			<visible>!Skin.HasSetting(homepageHideRecentlyVideoAdded) + !Skin.HasSetting(homepageHideRecentlyMovieAdded) + !Skin.HasSetting(homepageHideRecentlyTvShowsAdded) + !Skin.HasSetting(homepageHideRecentlyMusicAdded)+ !Skin.HasSetting(homepageHideRandomVideoAdded) + !Skin.HasSetting(homepageHideRandomMovieAdded) + !Skin.HasSetting(homepageHideRandomTvShowsAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded)</visible>
 		</control>
 		<control type="button" id="8998">
 			<description>run rss feeds</description>
@@ -1588,6 +1585,19 @@ tent(LiveTV)</visible>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 			<visible>Skin.HasSetting(Menu_Info_act)</visible>
+		</control>
+		<control type="button" id="8998">
+			<description>run rss feeds</description>
+			<posx>-20</posx>
+			<posy>-20</posy>
+			<width>1</width>
+			<height>1</height>
+			<label>-</label>
+			<font>-</font>
+			<onfocus>SetFocus(9000)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>!Skin.HasSetting(Menu_Info_act)</visible>
 		</control>
 	</include>
 </includes>

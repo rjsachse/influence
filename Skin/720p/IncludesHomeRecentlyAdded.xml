@@ -10,7 +10,7 @@
 				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeHorizRaise</include>
 				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
 				<visible>Library.HasContent(Movies)</visible>
-				<visible>Container(9000).Hasfocus(10)</visible>
+				<visible>Container(9000).Hasfocus(10) + Skin.HasSetting(homepageHideRecentlyMovieAdded)</visible>
 				<include>VisibleFadeEffect</include>
 <!--
 				<animation effect="slide" time="0" start="0,0" end="-260,0" condition="[Library.HasContent(TVShows) + ![Skin.HasSetting(HomeMenuNoMoviesButton) | Skin.HasSetting(HomeMenuNoTVShowsButton)]] + ![Container(9000).Hasfocus(10)]">Conditional</animation>
@@ -141,7 +141,7 @@
 				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeRaise</include>
 				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
 				<visible>Library.HasContent(Movies)</visible>
-				<visible>[Container(9000).Hasfocus(2) + !Skin.HasSetting(HomeMenuNoMoviesButton)]</visible>
+				<visible>[Container(9000).Hasfocus(2) + !Skin.HasSetting(HomeMenuNoMoviesButton)] + Skin.HasSetting(homepageHideRecentlyVideoAdded)</visible>
 				<include>VisibleFadeEffect</include>
 <!--
 				<animation effect="slide" time="0" start="0,0" end="-260,0" condition="[Library.HasContent(TVShows) + ![Skin.HasSetting(HomeMenuNoMoviesButton) | Skin.HasSetting(HomeMenuNoTVShowsButton)]] + ![Container(9000).Hasfocus(10)]">Conditional</animation>
@@ -270,7 +270,7 @@
 				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
 				<posx>275r</posx>
 				<visible>Library.HasContent(Music)</visible>
-				<visible>Container(9000).Hasfocus(3)</visible>
+				<visible>Container(9000).Hasfocus(3)+ Skin.HasSetting(homepageHideRecentlyMusicAdded)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="image">
 					<description>background</description>
@@ -422,7 +422,7 @@
 				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
 				<posx>275r</posx>
 				<visible>Library.HasContent(TVShows)</visible>
-				<visible>[Container(9000).Hasfocus(2) + !Skin.HasSetting(HomeMenuNoTVShowsButton)] | Container(9000).Hasfocus(11)</visible>
+				<visible>[Container(9000).Hasfocus(2) + !Skin.HasSetting(HomeMenuNoTVShowsButton)]+ Skin.HasSetting(homepageHideRecentlyVideoAdded) | Container(9000).Hasfocus(11) +Skin.HasSetting(homepageHideRecentlyTvShowsAdded)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="image">
 					<description>background</description>
@@ -570,70 +570,70 @@
 			<item id="1">
 				<label>$INFO[Window.Property(LatestMovie.1.Title)]</label>
 				<label2>-</label2>
-				<onclick>$INFO[Window.Property(LatestMovie.1.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(LatestMovie.1.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMovie.1.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestMovie.1.Fanart)]</thumb>
 			</item>
 			<item id="2">
 				<label>$INFO[Window.Property(LatestMovie.2.Title)]</label>
 				<label2>-</label2>
-				<onclick>$INFO[Window.Property(LatestMovie.2.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(LatestMovie.2.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMovie.2.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestMovie.2.Fanart)]</thumb>
 			</item>
 			<item id="3">
 				<label>$INFO[Window.Property(LatestMovie.3.Title)]</label>
 				<label2>-</label2>
-				<onclick>$INFO[Window.Property(LatestMovie.3.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(LatestMovie.3.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMovie.3.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestMovie.3.Fanart)]</thumb>
 			</item>
 			<item id="4">
 				<label>$INFO[Window.Property(LatestMovie.4.Title)]</label>
 				<label2>-</label2>
-				<onclick>$INFO[Window.Property(LatestMovie.4.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(LatestMovie.4.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMovie.4.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestMovie.4.Fanart)]</thumb>
 			</item>
 			<item id="5">
 				<label>$INFO[Window.Property(LatestMovie.5.Title)]</label>
 				<label2>-</label2>
-				<onclick>$INFO[Window.Property(LatestMovie.5.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(LatestMovie.5.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMovie.5.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestMovie.5.Fanart)]</thumb>
 			</item>
 				<item id="6">
 				<label>$INFO[Window.Property(LatestMovie.6.Title)]</label>
 				<label2>-</label2>
-				<onclick>$INFO[Window.Property(LatestMovie.6.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(LatestMovie.6.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMovie.6.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestMovie.6.Fanart)]</thumb>
 			</item>
 			<item id="7">
 				<label>$INFO[Window.Property(LatestMovie.7.Title)]</label>
 				<label2>-</label2>
-				<onclick>$INFO[Window.Property(LatestMovie.7.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(LatestMovie.7.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMovie.7.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestMovie.7.Fanart)]</thumb>
 			</item>
 			<item id="8">
 				<label>$INFO[Window.Property(LatestMovie.8.Title)]</label>
 				<label2>-</label2>
-				<onclick>$INFO[Window.Property(LatestMovie.8.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(LatestMovie.8.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMovie.8.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestMovie.8.Fanart)]</thumb>
 			</item>
 			<item id="9">
 				<label>$INFO[Window.Property(LatestMovie.9.Title)]</label>
 				<label2>-</label2>
-				<onclick>$INFO[Window.Property(LatestMovie.9.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(LatestMovie.9.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMovie.9.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestMovie.9.Fanart)]</thumb>
 			</item>
 				<item id="10">
 				<label>$INFO[Window.Property(LatestMovie.10.Title)]</label>
 				<label2>-</label2>
-				<onclick>$INFO[Window.Property(LatestMovie.10.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(LatestMovie.10.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMovie.10.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestMovie.10.Fanart)]</thumb>
 			</item>
@@ -718,70 +718,70 @@
 			<item id="1">
 				<label>$INFO[Window.Property(LatestEpisode.1.EpisodeTitle)]</label>
 				<label2>$INFO[Window.Property(LatestEpisode.1.ShowTitle)] - $INFO[Window.Property(LatestEpisode.1.EpisodeNo)]</label2>
-				<onclick>$INFO[Window.Property(LatestEpisode.1.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(LatestEpisode.1.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestEpisode.1.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestEpisode.1.Fanart)]</thumb>
 			</item>
 			<item id="2">
 				<label>$INFO[Window.Property(LatestEpisode.2.EpisodeTitle)]</label>
 				<label2>$INFO[Window.Property(LatestEpisode.2.ShowTitle)] - $INFO[Window.Property(LatestEpisode.2.EpisodeNo)]</label2>
-				<onclick>$INFO[Window.Property(LatestEpisode.2.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(LatestEpisode.2.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestEpisode.2.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestEpisode.2.Fanart)]</thumb>
 			</item>
 			<item id="3">
 				<label>$INFO[Window.Property(LatestEpisode.3.EpisodeTitle)]</label>
 				<label2>$INFO[Window.Property(LatestEpisode.3.ShowTitle)] - $INFO[Window.Property(LatestEpisode.3.EpisodeNo)]</label2>
-				<onclick>$INFO[Window.Property(LatestEpisode.3.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(LatestEpisode.3.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestEpisode.3.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestEpisode.3.Fanart)]</thumb>
 			</item>
 			<item id="4">
 				<label>$INFO[Window.Property(LatestEpisode.4.EpisodeTitle)]</label>
 				<label2>$INFO[Window.Property(LatestEpisode.4.ShowTitle)] - $INFO[Window.Property(LatestEpisode.4.EpisodeNo)]</label2>
-				<onclick>$INFO[Window.Property(LatestEpisode.4.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(LatestEpisode.4.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestEpisode.4.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestEpisode.4.Fanart)]</thumb>
 			</item>
 			<item id="5">
 				<label>$INFO[Window.Property(LatestEpisode.5.EpisodeTitle)]</label>
 				<label2>$INFO[Window.Property(LatestEpisode.5.ShowTitle)] - $INFO[Window.Property(LatestEpisode.5.EpisodeNo)]</label2>
-				<onclick>$INFO[Window.Property(LatestEpisode.5.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(LatestEpisode.5.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestEpisode.5.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestEpisode.5.Fanart)]</thumb>
 			</item>
 			<item id="6">
 				<label>$INFO[Window.Property(LatestEpisode.6.EpisodeTitle)]</label>
 				<label2>$INFO[Window.Property(LatestEpisode.6.ShowTitle)] - $INFO[Window.Property(LatestEpisode.6.EpisodeNo)]</label2>
-				<onclick>$INFO[Window.Property(LatestEpisode.6.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(LatestEpisode.6.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestEpisode.6.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestEpisode.6.Fanart)]</thumb>
 			</item>
 			<item id="7">
 				<label>$INFO[Window.Property(LatestEpisode.7.EpisodeTitle)]</label>
 				<label2>$INFO[Window.Property(LatestEpisode.7.ShowTitle)] - $INFO[Window.Property(LatestEpisode.7.EpisodeNo)]</label2>
-				<onclick>$INFO[Window.Property(LatestEpisode.7.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(LatestEpisode.7.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestEpisode.7.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestEpisode.7.Fanart)]</thumb>
 			</item>
 			<item id="8">
 				<label>$INFO[Window.Property(LatestEpisode.8.EpisodeTitle)]</label>
 				<label2>$INFO[Window.Property(LatestEpisode.8.ShowTitle)] - $INFO[Window.Property(LatestEpisode.8.EpisodeNo)]</label2>
-				<onclick>$INFO[Window.Property(LatestEpisode.8.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(LatestEpisode.8.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestEpisode.8.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestEpisode.8.Fanart)]</thumb>
 			</item>
 			<item id="9">
 				<label>$INFO[Window.Property(LatestEpisode.9.EpisodeTitle)]</label>
 				<label2>$INFO[Window.Property(LatestEpisode.9.ShowTitle)] - $INFO[Window.Property(LatestEpisode.9.EpisodeNo)]</label2>
-				<onclick>$INFO[Window.Property(LatestEpisode.9.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(LatestEpisode.9.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestEpisode.9.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestEpisode.9.Fanart)]</thumb>
 			</item>
 			<item id="10">
 				<label>$INFO[Window.Property(LatestEpisode.10.EpisodeTitle)]</label>
 				<label2>$INFO[Window.Property(LatestEpisode.10.ShowTitle)] - $INFO[Window.Property(LatestEpisode.10.EpisodeNo)]</label2>
-				<onclick>$INFO[Window.Property(LatestEpisode.10.Path)])</onclick>
+				<onclick>PlayMedia($INFO[Window.Property(LatestEpisode.10.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestEpisode.10.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestEpisode.10.Fanart)]</thumb>
 			</item>
