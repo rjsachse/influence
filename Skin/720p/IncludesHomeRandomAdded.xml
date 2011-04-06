@@ -1,10 +1,31 @@
 <includes>
 	<include name="HomeRandomAddedInfo">
 		<control type="group">
-			<visible>!Window.IsVisible(Favorites)</visible>
+			<visible>!Window.IsVisible(Favourites) + !Window.IsVisible(1117) + !Window.IsVisible(4577)</visible>
 			<include>VisibleFadeEffect</include>
 			<animation effect="fade" time="300" delay="1000">WindowOpen</animation>
 			<animation effect="fade" time="200">WindowClose</animation>
+			<control type="group" id="860">
+				
+				<control type="button" id="360">
+					<visible>Container(9000).HasFocus(11) + Skin.HasSetting(UseNextAired)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8021)</onfocus>
+				</control>
+				<control type="button" id="361">
+					<visible>Container(9000).HasFocus(11) + !Skin.HasSetting(UseNextAired)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(9000)</onfocus>
+				</control>
+				<control type="button" id="362">
+					<visible>Container(9000).HasFocus(2) + Skin.HasSetting(homepageHideRandomVideoAdded)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8005)</onfocus>
+				</control>
+			</control>
 			<control type="group">
 				<posx>275r</posx>
 				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeHorizRaise</include>
@@ -45,6 +66,19 @@
 					<aspectratio align="left">keep</aspectratio>
 					<texture background="true">$INFO[Window.Property(RandomMovie.4.Thumb)]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>!Control.HasFocus(8004)</visible>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<description>Main Icon -3</description>
+					<posx>165</posx>
+					<posy>60</posy>
+					<width>75</width>
+					<height>110</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture background="true">$INFO[Container(8004).ListItem(3).ActualIcon]</texture>
+					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>Control.HasFocus(8004)</visible>
 					<bordersize>8</bordersize>
 				</control>
 				<control type="image">
@@ -56,6 +90,19 @@
 					<aspectratio align="left">keep</aspectratio>
 					<texture background="true">$INFO[Window.Property(RandomMovie.3.Thumb)]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>!Control.HasFocus(8004)</visible>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<description>Main Icon -2</description>
+					<posx>130</posx>
+					<posy>50</posy>
+					<width>86</width>
+					<height>130</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture background="true">$INFO[Container(8004).ListItem(2).ActualIcon]</texture>
+					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>Control.HasFocus(8004)</visible>
 					<bordersize>8</bordersize>
 				</control>
 				<control type="image">
@@ -67,6 +114,19 @@
 					<aspectratio align="left">keep</aspectratio>
 					<texture background="true">$INFO[Window.Property(RandomMovie.2.Thumb)]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>!Control.HasFocus(8004)</visible>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<description>Main Icon -1</description>
+					<posx>80</posx>
+					<posy>40</posy>
+					<width>100</width>
+					<height>150</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture background="true">$INFO[Container(8004).ListItem(1).ActualIcon]</texture>
+					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>Control.HasFocus(8004)</visible>
 					<bordersize>8</bordersize>
 				</control>
 				<control type="image">
@@ -78,6 +138,19 @@
 					<aspectratio align="left">keep</aspectratio>
 					<texture background="true">$INFO[Window.Property(RandomMovie.1.Thumb)]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>!Control.HasFocus(8004)</visible>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>25</posy>
+					<width>120</width>
+					<height>180</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture background="true">$INFO[Container(8004).ListItem.ActualIcon]</texture>
+					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>Control.HasFocus(8004)</visible>
 					<bordersize>8</bordersize>
 				</control>
 				<control type="list" id="8004">
@@ -176,6 +249,19 @@
 					<aspectratio align="left">keep</aspectratio>
 					<texture background="true">$INFO[Window.Property(RandomMovie.4.Thumb)]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>!Control.HasFocus(8005)</visible>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<description>Main Icon -3</description>
+					<posx>165</posx>
+					<posy>60</posy>
+					<width>75</width>
+					<height>110</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture background="true">$INFO[Container(8005).ListItem(3).ActualIcon]</texture>
+					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>Control.HasFocus(8005)</visible>
 					<bordersize>8</bordersize>
 				</control>
 				<control type="image">
@@ -187,6 +273,19 @@
 					<aspectratio align="left">keep</aspectratio>
 					<texture background="true">$INFO[Window.Property(RandomMovie.3.Thumb)]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>!Control.HasFocus(8005)</visible>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<description>Main Icon -2</description>
+					<posx>130</posx>
+					<posy>50</posy>
+					<width>86</width>
+					<height>130</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture background="true">$INFO[Container(8005).ListItem(2).ActualIcon]</texture>
+					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>Control.HasFocus(8005)</visible>
 					<bordersize>8</bordersize>
 				</control>
 				<control type="image">
@@ -198,6 +297,19 @@
 					<aspectratio align="left">keep</aspectratio>
 					<texture background="true">$INFO[Window.Property(RandomMovie.2.Thumb)]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>!Control.HasFocus(8005)</visible>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<description>Main Icon -1</description>
+					<posx>80</posx>
+					<posy>40</posy>
+					<width>100</width>
+					<height>150</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture background="true">$INFO[Container(8005).ListItem(1).ActualIcon]</texture>
+					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>Control.HasFocus(8005)</visible>
 					<bordersize>8</bordersize>
 				</control>
 				<control type="image">
@@ -209,6 +321,19 @@
 					<aspectratio align="left">keep</aspectratio>
 					<texture background="true">$INFO[Window.Property(RandomMovie.1.Thumb)]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>Control.HasFocus(8005)</visible>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>25</posy>
+					<width>120</width>
+					<height>180</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture background="true">$INFO[Container(8005).ListItem.ActualIcon]</texture>
+					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>Control.HasFocus(8005)</visible>
 					<bordersize>8</bordersize>
 				</control>
 				<control type="list" id="8005">
@@ -217,7 +342,7 @@
 					<width>250</width>
 					<height>92</height>
 					<onleft>9000</onleft>
-					<onright>8007</onright>
+					<onright>8000</onright>
 					<onup>8005</onup>
 					<ondown>8005</ondown>
 					<viewtype label="535">list</viewtype>
@@ -302,6 +427,19 @@
 					<aspectratio align="left">keep</aspectratio>
 					<texture background="true">$INFO[Window.Property(RandomSong.4.Thumb)]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>!Control.HasFocus(8006)</visible>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<description>Main Icon -3</description>
+					<posx>140</posx>
+					<posy>35</posy>
+					<width>100</width>
+					<height>100</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture background="true">$INFO[Container(8006).ListItem(3).ActualIcon]</texture>
+					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>Control.HasFocus(8006)</visible>
 					<bordersize>8</bordersize>
 				</control>
 				<control type="image">
@@ -313,6 +451,19 @@
 					<aspectratio align="left">keep</aspectratio>
 					<texture background="true">$INFO[Window.Property(RandomSong.3.Thumb)]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>!Control.HasFocus(8006)</visible>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<description>Main Icon -2</description>
+					<posx>100</posx>
+					<posy>30</posy>
+					<width>112</width>
+					<height>112</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture background="true">$INFO[Container(8006).ListItem(2).ActualIcon]</texture>
+					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>Control.HasFocus(8006)</visible>
 					<bordersize>8</bordersize>
 				</control>
 				<control type="image">
@@ -324,6 +475,19 @@
 					<aspectratio align="left">keep</aspectratio>
 					<texture background="true">$INFO[Window.Property(RandomSong.2.Thumb)]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>!Control.HasFocus(8006)</visible>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<description>Main Icon -1</description>
+					<posx>60</posx>
+					<posy>10</posy>
+					<width>120</width>
+					<height>150</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture background="true">$INFO[Container(8006).ListItem(1).ActualIcon]</texture>
+					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>Control.HasFocus(8006)</visible>
 					<bordersize>8</bordersize>
 				</control>
 				<control type="image">
@@ -335,6 +499,19 @@
 					<aspectratio align="left">keep</aspectratio>
 					<texture background="true">$INFO[Window.Property(RandomSong.1.Thumb)]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>!Control.HasFocus(8006)</visible>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>20</posy>
+					<width>130</width>
+					<height>130</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture background="true">$INFO[Container(8006).ListItem.ActualIcon]</texture>
+					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>Control.HasFocus(8006)</visible>
 					<bordersize>8</bordersize>
 				</control>
 				<control type="list" id="8006">
@@ -342,7 +519,7 @@
 					<posy>155</posy>
 					<width>250</width>
 					<height>136</height>
-					<onleft>9000</onleft>
+					<onleft>8008</onleft>
 					<onright>9000</onright>
 					<onup>8006</onup>
 					<ondown>8006</ondown>
@@ -473,7 +650,7 @@
 					<posy>155</posy>
 					<width>250</width>
 					<height>136</height>
-					<onleft>8005</onleft>
+					<onleft>860</onleft>
 					<onright>9000</onright>
 					<onup>8007</onup>
 					<ondown>8007</ondown>
@@ -580,66 +757,131 @@
 				</control>
 				<control type="image">
 					<description>Main Icon -3</description>
-					<posx>165</posx>
-					<posy>60</posy>
-					<width>75</width>
-					<height>110</height>
+					<posx>140</posx>
+					<posy>35</posy>
+					<width>100</width>
+					<height>100</height>
 					<aspectratio align="left">keep</aspectratio>
 					<texture background="true">$INFO[Window.Property(RandomSong.4.Thumb)]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>!Control.HasFocus(8008)</visible>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<description>Main Icon -3</description>
+					<posx>140</posx>
+					<posy>35</posy>
+					<width>100</width>
+					<height>100</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture background="true">$INFO[Container(8008).ListItem(3).ActualIcon]</texture>
+					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>Control.HasFocus(8008)</visible>
 					<bordersize>8</bordersize>
 				</control>
 				<control type="image">
 					<description>Main Icon -2</description>
-					<posx>130</posx>
-					<posy>50</posy>
-					<width>86</width>
-					<height>130</height>
+					<posx>100</posx>
+					<posy>30</posy>
+					<width>112</width>
+					<height>112</height>
 					<aspectratio align="left">keep</aspectratio>
 					<texture background="true">$INFO[Window.Property(RandomSong.3.Thumb)]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>!Control.HasFocus(8008)</visible>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<description>Main Icon -2</description>
+					<posx>100</posx>
+					<posy>30</posy>
+					<width>112</width>
+					<height>112</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture background="true">$INFO[Container(8008).ListItem(2).ActualIcon]</texture>
+					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>Control.HasFocus(8008)</visible>
 					<bordersize>8</bordersize>
 				</control>
 				<control type="image">
 					<description>Main Icon -1</description>
-					<posx>80</posx>
-					<posy>40</posy>
-					<width>100</width>
+					<posx>60</posx>
+					<posy>10</posy>
+					<width>120</width>
 					<height>150</height>
 					<aspectratio align="left">keep</aspectratio>
 					<texture background="true">$INFO[Window.Property(RandomSong.2.Thumb)]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>!Control.HasFocus(8008)</visible>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<description>Main Icon -1</description>
+					<posx>60</posx>
+					<posy>10</posy>
+					<width>120</width>
+					<height>150</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture background="true">$INFO[Container(8008).ListItem(1).ActualIcon]</texture>
+					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>Control.HasFocus(8008)</visible>
 					<bordersize>8</bordersize>
 				</control>
 				<control type="image">
 					<description>Main Icon</description>
 					<posx>10</posx>
-					<posy>25</posy>
-					<width>120</width>
-					<height>180</height>
+					<posy>20</posy>
+					<width>130</width>
+					<height>130</height>
 					<aspectratio align="left">keep</aspectratio>
 					<texture background="true">$INFO[Window.Property(RandomSong.1.Thumb)]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>!Control.HasFocus(8008)</visible>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>20</posy>
+					<width>130</width>
+					<height>130</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture background="true">$INFO[Container(8008).ListItem.ActualIcon]</texture>
+					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<visible>Control.HasFocus(8008)</visible>
 					<bordersize>8</bordersize>
 				</control>
 				<control type="list" id="8008">
 					<posx>0</posx>
-					<posy>200</posy>
+					<posy>155</posy>
 					<width>250</width>
-					<height>92</height>
+					<height>136</height>
 					<onleft>9000</onleft>
-					<onright>8006</onright>
+					<onright>8002</onright>
 					<onup>8008</onup>
 					<ondown>8008</ondown>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>0</scrolltime>
-					<itemlayout height="23" width="230">
+					<itemlayout height="34" width="230">
 						<control type="label">
 							<posx>10</posx>
-							<posy>0</posy>
+							<posy>2</posy>
 							<width>230</width>
-							<height>23</height>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
 							<font>font12</font>
 							<textcolor>white</textcolor>
 							<shadowcolor>black</shadowcolor>
@@ -649,21 +891,34 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="23" width="230">
+					<focusedlayout height="34" width="230">
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>250</width>
-							<height>23</height>
+							<height>34</height>
 							<texture border="0,2,0,2">MenuItemFO.png</texture>
 							<visible>Control.HasFocus(8008)</visible>
 							<include>VisibleFadeEffect</include>
 						</control>
 						<control type="label">
 							<posx>10</posx>
-							<posy>0</posy>
+							<posy>2</posy>
 							<width>230</width>
-							<height>23</height>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
 							<font>font12</font>
 							<textcolor>white</textcolor>
 							<shadowcolor>black</shadowcolor>
@@ -726,27 +981,40 @@
 					<aspectratio>keep</aspectratio>
 					<fadetime>200</fadetime>
 					<texture background="true">$INFO[Container(8009).ListItem.Thumb]</texture>
-					<visible>Control.HasFocus(8007)</visible>
+					<visible>Control.HasFocus(8009)</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="list" id="8009">
 					<posx>0</posx>
-					<posy>200</posy>
+					<posy>155</posy>
 					<width>250</width>
-					<height>92</height>
+					<height>136</height>
 					<onleft>9000</onleft>
-					<onright>8007</onright>
+					<onright>8001</onright>
 					<onup>8009</onup>
 					<ondown>8009</ondown>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>0</scrolltime>
-					<itemlayout height="23" width="230">
+					<itemlayout height="34" width="230">
 						<control type="label">
 							<posx>10</posx>
-							<posy>0</posy>
+							<posy>2</posy>
 							<width>230</width>
-							<height>23</height>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
 							<font>font12</font>
 							<textcolor>white</textcolor>
 							<shadowcolor>black</shadowcolor>
@@ -756,21 +1024,34 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="23" width="230">
+					<focusedlayout height="34" width="230">
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>250</width>
-							<height>23</height>
+							<height>34</height>
 							<texture border="0,2,0,2">MenuItemFO.png</texture>
 							<visible>Control.HasFocus(8009)</visible>
 							<include>VisibleFadeEffect</include>
 						</control>
 						<control type="label">
 							<posx>10</posx>
-							<posy>0</posy>
+							<posy>2</posy>
 							<width>230</width>
-							<height>23</height>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
 							<font>font12</font>
 							<textcolor>white</textcolor>
 							<shadowcolor>black</shadowcolor>

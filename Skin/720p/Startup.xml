@@ -6,6 +6,7 @@
 		<control type="button" id="9">
 			<description>Trigger to Auto run the Latest media python after a 1 min delay if scan on startup is enabled</description>
 			<onfocus>XBMC.AlarmClock(UpdateRecentAdded,XBMC.RunScript(script.recentlyadded,limit=10),1,true)</onfocus>
+			<onfocus>Skin.SetString(InitRunScript,True)</onfocus>
 			<onfocus>SetFocus(10)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
@@ -13,6 +14,7 @@
 		</control>
 		<control type="button" id="9">
 			<description>Don't run anything is scan on startup is Disabled and jump to the startup playlist</description>
+			<onfocus>Skin.SetString(InitRunScript,True)</onfocus>
 			<onfocus>SetFocus(10)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
@@ -33,17 +35,45 @@
 			<texturefocus>-</texturefocus>
 			<visible>Skin.HasSetting(Use_Startup_Playlist)</visible>
 		</control>
+		<control type="button" id="14">
+			<onfocus>Skin.SetBool(Influence_SkinInit_b5)</onfocus>
+			<onfocus>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Info&amp;Nb=10)</onfocus>
+			<onfocus>Skin.SetString(Menu_Info_run,ActivateWindow(1116))</onfocus>
+			<onfocus>Skin.Reset(Menu_Info_sub1_act)</onfocus>
+			<onfocus>Skin.Reset(Menu_Info_sub4_act)</onfocus>
+			<onfocus>Skin.Reset(Menu_Info_sub5_act)</onfocus>
+			<onfocus>Skin.SetBool(Menu_Info_sub2_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Info_sub2_lab,YouTube)</onfocus>
+			<onfocus>Skin.SetString(Menu_Info_sub2_run,ActivateWindow(10024,plugin://plugin.video.youtube/))</onfocus>
+			<onfocus>Skin.SetString(Menu_Info_sub2_feed,http://gdata.youtube.com/feeds/base/standardfeeds/FR/most_viewed?client=ytapi-youtube-browse&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;alt=rss&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;time=today)</onfocus>
+			<onfocus>Skin.SetBool(Menu_Info_sub3_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_Info_sub3_lab,Big Pictures)</onfocus>
+			<onfocus>Skin.SetString(Menu_Info_sub3_feed,http://pipes.yahoo.com/pipes/pipe.run?NumStories=3&amp;Start=1&amp;_id=e5ecd8ffbee522fccb5b2b3b6b776fd5&amp;_render=rss)</onfocus>
+			<onfocus>Skin.SetBool(Menu_Info_sub3_fanart)</onfocus>
+			<onfocus>Skin.ToggleSetting(ChoiceFeeds1)</onfocus>
+			<onfocus>ReloadSkin()</onfocus>	
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>!Skin.HasSetting(Influence_SkinInit_b5)</visible>
+		</control>
+		<control type="button" id="14">
+			<description>Don't run anything</description>
+			<onfocus>ReplaceWindow(Home)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>			
+			<visible>Skin.HasSetting(Influence_SkinInit_b5)</visible>
+		</control>
 		<control type="button" id="13">
 			<onfocus>Skin.SetBool(Influence_SkinInit_b4)</onfocus>
 			<onfocus>Skin.SetBool(ManagerMovieSets)</onfocus>
-			<onfocus>ReloadSkin()</onfocus>	
+			<onfocus>SetFocus(14)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 			<visible>!Skin.HasSetting(Influence_SkinInit_b4)</visible>
 		</control>
 		<control type="button" id="13">
 			<description>Don't run anything</description>
-			<onfocus>ReplaceWindow(Home)</onfocus>
+			<onfocus>SetFocus(14)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>			
 			<visible>Skin.HasSetting(Influence_SkinInit_b4)</visible>

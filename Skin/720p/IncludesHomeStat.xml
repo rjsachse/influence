@@ -4,7 +4,7 @@
 		<control type="group">
 			<posx>275r</posx>
 			<posy>358</posy>
-			<visible>Skin.HasSetting(HomeStats) + !Window.IsVisible(Favourites)</visible>
+			<visible>Skin.HasSetting(HomeStats) + !Window.IsVisible(Favourites)+ !Window.IsVisible(1117) + !Window.IsVisible(4577)</visible>
 			<include>VisibleFadeEffect</include>
 			<animation effect="fade" time="300" delay="1000">WindowOpen</animation>
 			<animation effect="fade" time="200">WindowClose</animation>
@@ -334,6 +334,7 @@
 			</control>
 		</control>
 		<!-- Music Info Vertical -->
+
 		<!-- FIN INCLUDE -->	
 	</include>
 	<include name="IncludesShowFanart">
@@ -427,5 +428,115 @@
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(8008)</visible>
 		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/info.jpg">$INFO[Container(8010).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8010)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/info.jpg">$INFO[Container(8011).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8011)+Skin.HasSetting(Menu_Info_sub2_fanart)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/info.jpg">$INFO[Container(8012).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8012)+Skin.HasSetting(Menu_Info_sub3_fanart)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/info.jpg">$INFO[Container(8013).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8013)+Skin.HasSetting(Menu_Info_sub4_fanart)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/info.jpg">$INFO[Container(8014).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8014)+Skin.HasSetting(Menu_Info_sub5_fanart)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/info.jpg">$INFO[Container(8015).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8015)+Skin.HasSetting(Menu_Info_sub6_fanart)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/info.jpg">$INFO[Container(8016).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8016)+Skin.HasSetting(Menu_Info_sub7_fanart)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/info.jpg">$INFO[Container(8017).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8017)+Skin.HasSetting(Menu_Info_sub8_fanart)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/info.jpg">$INFO[Container(8018).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8018)+Skin.HasSetting(Menu_Info_sub9_fanart)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/info.jpg">$INFO[Container(8019).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8019)+Skin.HasSetting(Menu_Info_sub10_fanart)</visible>
+		</control>
+		
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/tvshows.jpg">$INFO[Container(8020).ListItem.Thumb,,fanart.jpg]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8020)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/tvshows.jpg">$INFO[Container(8021).ListItem.Thumb,,fanart.jpg]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8021)</visible>
+		</control>
+		
 </include>
 </includes>

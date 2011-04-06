@@ -323,6 +323,32 @@
 						<onclick>Skin.ToggleSetting(TVShowsUsePosters)</onclick>
 						<selected>Skin.HasSetting(TVShowsUsePosters)</selected>
 					</control>
+					<control type="radiobutton" id="123">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>Afficher Next Aired</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(UseNextAired)</onclick>
+						<onclick>Skin.SetString(InitRunScript,True)</onclick>
+						<selected>Skin.HasSetting(UseNextAired)</selected>
+					</control>
+					<control type="radiobutton" id="124">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>Afficher les Cleararts</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(UseNextAiredClearart)</onclick>
+						<selected>Skin.HasSetting(UseNextAiredClearart)</selected>
+						<visible>Skin.HasSetting(UseNextAired)</visible>
+					</control>
 					<control type="label" id="125">
 						<width>750</width>
 						<height>45</height>
@@ -680,6 +706,7 @@
 						<label>$INFO[Skin.String(Menu_Videos_lab)]</label>
 						<onclick>Skin.ToggleSetting(homepageHideRecentlyVideoAdded)</onclick>
 						<onclick>Skin.Reset(homepageHideRandomVideoAdded)</onclick>
+						<onclick>Skin.SetString(InitRunScript,True)</onclick>
 						<selected>Skin.HasSetting(homepageHideRecentlyVideoAdded)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
@@ -694,6 +721,7 @@
 						<focusedcolor>white</focusedcolor>
 						<label>$INFO[Skin.String(Menu_Movie_lab)]</label>
 						<onclick>Skin.ToggleSetting(homepageHideRecentlyMovieAdded)</onclick>
+						<onclick>Skin.SetString(InitRunScript,True)</onclick>
 						<selected>Skin.HasSetting(homepageHideRecentlyMovieAdded)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
@@ -708,6 +736,7 @@
 						<focusedcolor>white</focusedcolor>
 						<label>$INFO[Skin.String(Menu_TVShows_lab)]</label>
 						<onclick>Skin.ToggleSetting(homepageHideRecentlyTvShowsAdded)</onclick>
+						<onclick>Skin.SetString(InitRunScript,True)</onclick>
 						<selected>Skin.HasSetting(homepageHideRecentlyTvShowsAdded)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
@@ -722,6 +751,7 @@
 						<focusedcolor>white</focusedcolor>
 						<label>$INFO[Skin.String(Menu_Music_lab)]</label>
 						<onclick>Skin.ToggleSetting(homepageHideRecentlyMusicAdded)</onclick>
+						<onclick>Skin.SetString(InitRunScript,True)</onclick>
 						<selected>Skin.HasSetting(homepageHideRecentlyMusicAdded)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
@@ -750,6 +780,7 @@
 						<label>$INFO[Skin.String(Menu_Videos_lab)]</label>
 						<onclick>Skin.ToggleSetting(homepageHideRandomVideoAdded)</onclick>
 						<onclick>Skin.Reset(homepageHideRecentlyVideoAdded)</onclick>
+						<onclick>Skin.SetString(InitRunScript,True)</onclick>
 						<selected>Skin.HasSetting(homepageHideRandomVideoAdded)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
@@ -764,6 +795,7 @@
 						<focusedcolor>white</focusedcolor>
 						<label>$INFO[Skin.String(Menu_Movie_lab)]</label>
 						<onclick>Skin.ToggleSetting(homepageHideRandomMovieAdded)</onclick>
+						<onclick>Skin.SetString(InitRunScript,True)</onclick>
 						<selected>Skin.HasSetting(homepageHideRandomMovieAdded)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
@@ -778,6 +810,7 @@
 						<focusedcolor>white</focusedcolor>
 						<label>$INFO[Skin.String(Menu_TVShows_lab)]</label>
 						<onclick>Skin.ToggleSetting(homepageHideRandomTvShowsAdded)</onclick>
+						<onclick>Skin.SetString(InitRunScript,True)</onclick>
 						<selected>Skin.HasSetting(homepageHideRandomTvShowsAdded)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
@@ -792,6 +825,7 @@
 						<focusedcolor>white</focusedcolor>
 						<label>$INFO[Skin.String(Menu_Music_lab)]</label>
 						<onclick>Skin.ToggleSetting(homepageHideRandomMusicAdded)</onclick>
+						<onclick>Skin.SetString(InitRunScript,True)</onclick>
 						<selected>Skin.HasSetting(homepageHideRandomMusicAdded)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
