@@ -7,10 +7,12 @@
 	<include file="ViewsPictures.xml" />
 	<include file="ViewsAddonBrowser.xml" />
 	<include file="ViewsLiveTV.xml" />
+	<include file="ViewsRssFeeds.xml" />
 	<include file="IncludesCodecFlagging.xml" />
 	<include file="IncludesHomeRecentlyAdded.xml" />
 	<include file="IncludesHomeRandomAdded.xml" />
 	<include file="RssRecentlyAdded.xml" />
+        <include file="IncludesNextAired.xml" />
 	<include file="IncludesDialogVideoInfoContentItems.xml" />
 	<!-- include pour setting carousel et autres-->
 	<include file="Include_CustomMenuCarousel.xml" />
@@ -87,9 +89,7 @@
 		<wrapmultiline>true</wrapmultiline>
 	</include>
 
-	<include name="RunRandomAdded">
-		<onfocus>XBMC.RunScript(script.randomitems,limit=10&amp;unplayed=True)</onfocus>
-	</include>
+	
 	<include name="CommonMediaPlayingBackground">
 		<control type="image">
 			<posx>0</posx>
@@ -1503,39 +1503,40 @@ tent(LiveTV)</visible>
 		<visible>![Control.IsVisible(1020) + !Skin.HasSetting(ViewCustom1020_ShowFanart)]</visible>	
 	</include>
 	<include name="RunFeed1Added">
-		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=1,feed=$INFO[Skin.String(Menu_Info_sub1_feed)],limit=10)</onfocus>
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=1,feed=$INFO[Skin.String(Menu_Info_sub1_feed)],limit=10)</onfocus>
 		
 	</include>
 	<include name="RunFeed2Added">
-		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=2,feed=$INFO[Skin.String(Menu_Info_sub2_feed)],limit=10)</onfocus>
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=2,feed=$INFO[Skin.String(Menu_Info_sub2_feed)],limit=10)</onfocus>
 	</include>
 	<include name="RunFeed3Added">
-		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=3,feed=$INFO[Skin.String(Menu_Info_sub3_feed)],limit=10)</onfocus>
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=3,feed=$INFO[Skin.String(Menu_Info_sub3_feed)],limit=10)</onfocus>
 	</include>
 	<include name="RunFeed4Added">
-		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=4,feed=$INFO[Skin.String(Menu_Info_sub4_feed)],limit=10)</onfocus>
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=4,feed=$INFO[Skin.String(Menu_Info_sub4_feed)],limit=10)</onfocus>
 	</include>
 	<include name="RunFeed5Added">
-		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=5,feed=$INFO[Skin.String(Menu_Info_sub5_feed)],limit=10)</onfocus>
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=5,feed=$INFO[Skin.String(Menu_Info_sub5_feed)],limit=10)</onfocus>
 	</include>
 	<include name="RunFeed6Added">
-		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=6,feed=$INFO[Skin.String(Menu_Info_sub6_feed)],limit=10)</onfocus>
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=6,feed=$INFO[Skin.String(Menu_Info_sub6_feed)],limit=10)</onfocus>
 	</include>
 	<include name="RunFeed7Added">
-		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=7,feed=$INFO[Skin.String(Menu_Info_sub7_feed)],limit=10)</onfocus>
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=7,feed=$INFO[Skin.String(Menu_Info_sub7_feed)],limit=10)</onfocus>
 	</include>
 	<include name="RunFeed8Added">
-		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=8,feed=$INFO[Skin.String(Menu_Info_sub8_feed)],limit=10)</onfocus>
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=8,feed=$INFO[Skin.String(Menu_Info_sub8_feed)],limit=10)</onfocus>
 	</include>
 	<include name="RunFeed9Added">
-		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=9,feed=$INFO[Skin.String(Menu_Info_sub9_feed)],limit=10)</onfocus>
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=9,feed=$INFO[Skin.String(Menu_Info_sub9_feed)],limit=10)</onfocus>
 	</include>
 	<include name="RunFeed10Added">
-		<onfocus>XBMC.RunScript(script.rssclient,guiless,prefix=10,feed=$INFO[Skin.String(Menu_Info_sub10_feed)],limit=10)</onfocus>
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=10,feed=$INFO[Skin.String(Menu_Info_sub10_feed)],limit=10)</onfocus>
 	</include>
 	<include name="TestRecently">	
 		<control type="button" id="8999">
 			<description>Run Recently added</description>
+			<visible>Substring(Skin.String(InitRunScript),True)</visible>
 			<posx>-20</posx>
 			<posy>-20</posy>
 			<width>1</width>
@@ -1544,14 +1545,17 @@ tent(LiveTV)</visible>
 			<font>-</font>
 			<onfocus>Skin.Reset(LibraryUpdated)</onfocus>
 			<onfocus>XBMC.RunScript(script.recentlyadded,limit=10&amp;albums=True&amp;totals=True)</onfocus>
-			<include condition ="Skin.HasSetting(homepageHideRandomAdded)">RunRandomAdded</include>
+			<onfocus>XBMC.RunScript(script.tv.show.next.aired,silent=true)</onfocus>
+			<onfocus>XBMC.RunScript(script.randomitems,limit=10)</onfocus>
+			<!--<onfocus>XBMC.RunScript(script.recentlywatched,limit=10)</onfocus>-->
 			<onfocus>SetFocus(8998)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<visible>Skin.HasSetting(homepageHideRecentlyVideoAdded) | Skin.HasSetting(homepageHideRecentlyMovieAdded) | Skin.HasSetting(homepageHideRecentlyTvShowsAdded) | Skin.HasSetting(homepageHideRecentlyMusicAdded)| Skin.HasSetting(homepageHideRandomVideoAdded) | Skin.HasSetting(homepageHideRandomMovieAdded) | Skin.HasSetting(homepageHideRandomTvShowsAdded) | Skin.HasSetting(homepageHideRandomMusicAdded)</visible>
+			
 		</control>
 		<control type="button" id="8999">
 			<description>Don't run Recently added</description>
+			<visible>Substring(Skin.String(InitRunScript),False)</visible>
 			<posx>-20</posx>
 			<posy>-20</posy>
 			<width>1</width>
@@ -1561,8 +1565,7 @@ tent(LiveTV)</visible>
 			<onfocus>SetFocus(8998)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<visible>!Skin.HasSetting(homepageHideRecentlyVideoAdded) + !Skin.HasSetting(homepageHideRecentlyMovieAdded) + !Skin.HasSetting(homepageHideRecentlyTvShowsAdded) + !Skin.HasSetting(homepageHideRecentlyMusicAdded)+ !Skin.HasSetting(homepageHideRandomVideoAdded) + !Skin.HasSetting(homepageHideRandomMovieAdded) + !Skin.HasSetting(homepageHideRandomTvShowsAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded)</visible>
-		</control>
+		</control>	
 		<control type="button" id="8998">
 			<description>run rss feeds</description>
 			<posx>-20</posx>
@@ -1581,12 +1584,14 @@ tent(LiveTV)</visible>
 			<include condition ="Skin.HasSetting(Menu_Info_sub8_act)">RunFeed8Added</include>
 			<include condition ="Skin.HasSetting(Menu_Info_sub9_act)">RunFeed9Added</include>
 			<include condition ="Skin.HasSetting(Menu_Info_sub10_act)">RunFeed10Added</include>
+			<onfocus>Skin.SetString(InitRunScript,False)</onfocus>
 			<onfocus>SetFocus(9000)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 			<visible>Skin.HasSetting(Menu_Info_act)</visible>
 		</control>
 		<control type="button" id="8998">
+			
 			<description>run rss feeds</description>
 			<posx>-20</posx>
 			<posy>-20</posy>
@@ -1594,10 +1599,14 @@ tent(LiveTV)</visible>
 			<height>1</height>
 			<label>-</label>
 			<font>-</font>
+			<onfocus>Skin.SetString(InitRunScript,False)</onfocus>
 			<onfocus>SetFocus(9000)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 			<visible>!Skin.HasSetting(Menu_Info_act)</visible>
 		</control>
+		
+		
 	</include>
+	
 </includes>

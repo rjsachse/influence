@@ -1,5 +1,6 @@
 <includes>
 	<include name="IncludeHomeHorizontal">
+	
 <!-- Music Info Horizontal-->	
 		<control type="group">
 			<include condition="Skin.HasSetting(RaiseHorizontalMenu)">HRAI_Music_Play</include>
@@ -60,6 +61,7 @@
 				<onclick>ActivateWindow(2006)</onclick>
 			</control>
 			<control type="label">
+				<visible>!Window.IsVisible(1117)</visible>
 				<description>NowPlaying label</description>
 				<posx>975r</posx>
 				<posy>80</posy>
@@ -73,6 +75,7 @@
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="label">
+				<visible>!Window.IsVisible(1117)</visible>
 				<description>Artist label</description>
 				<posx>975r</posx>
 				<posy>105</posy>
@@ -86,6 +89,7 @@
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="label">
+				<visible>!Window.IsVisible(1117)</visible>
 				<description>Album Label</description>
 				<posx>975r</posx>
 				<posy>130</posy>
@@ -99,6 +103,7 @@
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="label">
+				<visible>!Window.IsVisible(1117)</visible>
 				<description>Title label</description>
 				<posx>975r</posx>
 				<posy>155</posy>
@@ -112,6 +117,7 @@
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="label">
+				<visible>!Window.IsVisible(1117)</visible>
 				<description>Time Label</description>
 				<posx>975r</posx>
 				<posy>180</posy>
@@ -126,6 +132,7 @@
 			</control>
 <!-- Next 5 Songs -->
 			<control type="group">
+				<visible>!Window.IsVisible(1117)</visible>
 				<include condition="Skin.HasSetting(RaiseHorizontalMenu)">HRAI_Music_5Songs</include>
 				<include condition="!Skin.HasSetting(RaiseHorizontalMenu)">notHRAI_Music_5Songs</include>
 				<posx>430</posx>
@@ -352,6 +359,7 @@
 <!-- Movie Info Horizontal END -->
 <!-- TV Show Info Horizontal-->
 			<control type="group">
+			
 				<visible>VideoPlayer.Content(Episodes)</visible>
 				<control type="image">
 					<description>Cover image</description>
@@ -434,6 +442,7 @@
 <!-- TV Show Info Horizontal END-->
 <!-- Horizontal Statistics -->
 		<control type="group">
+			<visible>!Window.IsVisible(1117)</visible>
 			<posx>0</posx>
 			<posy>561</posy>
 			<visible>Skin.HasSetting(HomeStats)</visible>
@@ -453,6 +462,11 @@
 				<posx>0</posx>
 				<posy>2</posy>
 				<height>30</height>
+
+
+
+
+
 
 
 
@@ -522,6 +536,7 @@
 <!-- Horizontal Statistics END -->
 <!-- Horizontal -->
 		<control type="group">
+			<visible>!Window.IsVisible(1117)</visible>
 			<animation effect="fade" time="700" tween="quadratic" easing="out">WindowClose</animation>
 			<animation effect="fade" time="700" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" end="0,-275" condition="Skin.HasSetting(RaiseHorizontalMenu)">Conditional</animation>
@@ -576,10 +591,76 @@
 					<onfocus>SetFocus(8001)</onfocus>
 				</control>
 				<control type="button" id="309">
-					<visible>[Container(9000).HasFocus(11) + Skin.HasSetting(homepageHideRandomTVShowsAdded)] | [Container(9000).HasFocus(2) + Skin.HasSetting(homepageHideRandomVideosAdded)]</visible>
+					<visible>[Container(9000).HasFocus(11) + Skin.HasSetting(homepageHideRandomTVShowsAdded)] | [Container(9000).HasFocus(2) + Skin.HasSetting(homepageHideRandomVideoAdded)]</visible>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<onfocus>SetFocus(8007)</onfocus>
+				</control>
+				<control type="button" id="310">
+					<visible>Container(945).HasFocus(2401)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8010)</onfocus>
+				</control>
+				<control type="button" id="311">
+					<visible>Container(945).HasFocus(2402)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8011)</onfocus>
+				</control>
+				<control type="button" id="312">
+					<visible>Container(945).HasFocus(2403)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8012)</onfocus>
+				</control>
+				<control type="button" id="313">
+					<visible>Container(945).HasFocus(2404)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8013)</onfocus>
+				</control>
+				<control type="button" id="314">
+					<visible>Container(945).HasFocus(2405)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8014)</onfocus>
+				</control>
+				<control type="button" id="315">
+					<visible>Container(945).HasFocus(2406)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8015)</onfocus>
+				</control>
+				<control type="button" id="316">
+					<visible>Container(945).HasFocus(2407)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8016)</onfocus>
+				</control>
+				<control type="button" id="317">
+					<visible>Container(945).HasFocus(2408)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8017)</onfocus>
+				</control>
+				<control type="button" id="318">
+					<visible>Container(945).HasFocus(2409)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8018)</onfocus>
+				</control>
+				<control type="button" id="319">
+					<visible>Container(945).HasFocus(2410)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8019)</onfocus>
+				</control>
+				<control type="button" id="320">
+					<visible>Container(9000).HasFocus(11) + !Skin.HasSetting(homepageHideRandomTVShowsAdded) + !Skin.HasSetting(homepageHideRecentlyTVShowsAdded) + Skin.HasSetting(UseNextAired)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8020)</onfocus>
 				</control>
 			</control>
 			<include>GetFocusSubMenu</include>
@@ -709,44 +790,16 @@
 			<include condition="!Skin.HasSetting(HideHomeButton)">HomeButton</include>
 		</control>
 <!-- Horizontal Lowered -->
-		<control type="group">
-			<visible>[!Skin.HasSetting(RaiseHorizontalMenu) | !Skin.HasSetting(RaiseHorizontalMenu) + !ControlGroup(9001).HasFocus |  Skin.HasSetting(RaiseHorizontalMenu)]</visible>
-			<posx>420</posx>
-			<posy>35r</posy>
-			<animation effect="slide" end="0,35" time="300" tween="quadratic" easing="out">WindowClose</animation>
-			<animation effect="slide" start="0,35" time="300" tween="quadratic" easing="out">WindowOpen</animation>
-			<control type="image">
-				<description>RSS background</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>860</width>
-				<height>35</height>
-				<texture border="32,0,0,0">Rss_Back.png</texture>
-				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
-			</control>
-			<control type="rss">
-				<description>RSS feed</description>
-				<posx>35</posx>
-				<posy>6</posy>
-				<height>35</height>
-				<width>825</width>
-				<font>font12</font>
-				<urlset>1</urlset>
-				<textcolor>blue</textcolor>
-				<titlecolor>blue</titlecolor>
-				<headlinecolor>white</headlinecolor>
-				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
-			</control>
-			<control type="image">
-				<description>RSS background</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>825</width>
-				<height>35</height>
-				<texture border="32,0,0,0">Rss_Back_Overlay.png</texture>
-				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
-			</control>
-		</control>
+		<include>RssFeeds1</include>
+			<include>RssFeeds2</include>
+			<include>RssFeeds3</include>
+			<include>RssFeeds4</include>
+			<include>RssFeeds5</include>
+			<include>RssFeeds6</include>
+			<include>RssFeeds7</include>
+			<include>RssFeeds8</include>
+			<include>RssFeeds9</include>
+			<include>RssFeeds10</include>
 	</include>
 	<include name="HRAI_Music_Play">
 		<posy>780r</posy>

@@ -228,16 +228,82 @@
 					<onfocus>SetFocus(8001)</onfocus>
 				</control>
 				<control type="button" id="309">
-					<visible>[Container(9000).HasFocus(11) + Skin.HasSetting(homepageHideRandomTVShowsAdded)] | [Container(9000).HasFocus(2) + Skin.HasSetting(homepageHideRandomVideosAdded)]</visible>
+					<visible>[Container(9000).HasFocus(11) + Skin.HasSetting(homepageHideRandomTVShowsAdded)] | [Container(9000).HasFocus(2) + Skin.HasSetting(homepageHideRandomVideoAdded)]</visible>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<onfocus>SetFocus(8007)</onfocus>
 				</control>
-				
+				<control type="button" id="310">
+					<visible>Container(945).HasFocus(2401)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8010)</onfocus>
+				</control>
+				<control type="button" id="311">
+					<visible>Container(945).HasFocus(2402)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8011)</onfocus>
+				</control>
+				<control type="button" id="312">
+					<visible>Container(945).HasFocus(2403)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8012)</onfocus>
+				</control>
+				<control type="button" id="313">
+					<visible>Container(945).HasFocus(2404)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8013)</onfocus>
+				</control>
+				<control type="button" id="314">
+					<visible>Container(945).HasFocus(2405)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8014)</onfocus>
+				</control>
+				<control type="button" id="315">
+					<visible>Container(945).HasFocus(2406)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8015)</onfocus>
+				</control>
+				<control type="button" id="316">
+					<visible>Container(945).HasFocus(2407)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8016)</onfocus>
+				</control>
+				<control type="button" id="317">
+					<visible>Container(945).HasFocus(2408)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8017)</onfocus>
+				</control>
+				<control type="button" id="318">
+					<visible>Container(945).HasFocus(2409)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8018)</onfocus>
+				</control>
+				<control type="button" id="319">
+					<visible>Container(945).HasFocus(2410)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8019)</onfocus>
+				</control>
+				<control type="button" id="320">
+					<visible>Container(9000).HasFocus(11) + !Skin.HasSetting(homepageHideRandomTVShowsAdded) + !Skin.HasSetting(homepageHideRecentlyTVShowsAdded) + Skin.HasSetting(UseNextAired)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8020)</onfocus>
+				</control>
 			</control>
 			<include>GetFocusSubMenu</include>
 	<!-- Alternate Submenu -->
 		<control type="group" id="9001">
+			<visible>!Window.IsVisible(1117)</visible>
 			<posx>0</posx>
 			<posy>548</posy>
 			<animation effect="fade" time="500">Visible</animation>
@@ -250,6 +316,7 @@
                 	</animation>
 			<include>HomeBigVisible</include>
 			<control type="wraplist" id="945">
+				<visible>!Window.IsVisible(1117)</visible>
 				<posx>10</posx>
 				<height>205</height>
 				<width>665</width>
@@ -317,6 +384,7 @@
 		</control>
 		<include>TestRecently</include>
 		<control type="wraplist" id="9000">
+			<visible>!Window.IsVisible(1117)</visible>
 			<posx>27</posx>
 			<posy>207</posy>
 			<width>666</width>
@@ -338,42 +406,15 @@
 		<include>Carousel</include>
 		<include>HomeLogo</include>
 		<include condition="!Skin.HasSetting(HideHomeButton)">HomeButton</include>
-		<control type="group">
-			<posx>420</posx>
-			<posy>35r</posy>
-			<animation effect="slide" end="0,35" time="300" tween="quadratic" easing="out">WindowClose</animation>
-			<animation effect="slide" start="0,35" time="300" tween="quadratic" easing="out">WindowOpen</animation>
-			<control type="image">
-				<description>RSS background</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>860</width>
-				<height>35</height>
-				<texture border="32,0,0,0">Rss_Back.png</texture>
-				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
-			</control>
-			<control type="rss">
-				<description>RSS feed</description>
-				<posx>35</posx>
-				<posy>6</posy>
-				<height>35</height>
-				<width>825</width>
-				<font>font12</font>
-				<urlset>1</urlset>
-				<textcolor>blue</textcolor>
-				<titlecolor>blue</titlecolor>
-				<headlinecolor>white</headlinecolor>
-				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
-			</control>
-			<control type="image">
-				<description>RSS background</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>100</width>
-				<height>35</height>
-				<texture border="32,0,0,0">Rss_Back_Overlay.png</texture>
-				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
-			</control>
-		</control>
+		<include>RssFeeds1</include>
+			<include>RssFeeds2</include>
+			<include>RssFeeds3</include>
+			<include>RssFeeds4</include>
+			<include>RssFeeds5</include>
+			<include>RssFeeds6</include>
+			<include>RssFeeds7</include>
+			<include>RssFeeds8</include>
+			<include>RssFeeds9</include>
+			<include>RssFeeds10</include>
 	</include>
 </includes>
