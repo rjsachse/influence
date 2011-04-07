@@ -1,0 +1,183 @@
+<window type="dialog" id="1112">
+	<defaultcontrol always="true">999</defaultcontrol>
+	
+	<controls>
+		
+		<control type="group">
+			<animation effect="slide" start="400,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="400,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<control type="image">
+				<posx>400r</posx>
+				<posy>0</posy>
+				<width>400</width>
+				<height>720</height>
+				<texture border="15,0,0,0" flipx="true">HomeBladeSub.png</texture>
+			</control>
+			<control type="button">
+				<description>Close Window button</description>
+				<posx>380r</posx>
+				<posy>0</posy>
+				<width>64</width>
+				<height>32</height>
+				<label>-</label>
+				<font>-</font>
+				<onclick>PreviousMenu</onclick>
+				<texturefocus>DialogCloseButton-focus.png</texturefocus>
+				<texturenofocus>DialogCloseButton.png</texturenofocus>
+				<onleft>450</onleft>
+				<onright>450</onright>
+				<onup>450</onup>
+				<ondown>450</ondown>
+				<visible>system.getbool(input.enablemouse)</visible>
+			</control>
+			<control type="image">
+				<posx>370r</posx>
+				<posy>30</posy>
+				<width>200</width>
+				<height>200</height>
+				<aspectratio align="center">keep</aspectratio>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<texture>$INFO[ListItem.Icon]</texture>
+				<bordertexture border="8">ThumbShadow.png</bordertexture>
+				<bordersize>8</bordersize>
+			</control>
+			<control type="group">
+				<posx>390r</posx>
+				<posy>250</posy>
+				<width>450</width>
+				<height>680</height>
+				<visible>Window.IsVisible(Home)</visible>
+				<control type="image">
+					<posx>0</posx>
+					<posy>-200</posy>
+					<width>345</width>
+					<height>180</height>
+					<aspectratio>keep</aspectratio>
+					<texture fallback="Rss.png">$INFO[Window(1112).Property(RSS.Image)]</texture>
+					<aligny>center</aligny>
+					<visible>!IntegerGreaterThan(Window(1112).Property(RSS.ImageCount),1)</visible>
+				</control>
+				<control type="button" id="997">
+					<description>Slideshow</description>
+					<posx>0</posx>
+					<posy>-200</posy>
+					<width>345</width>
+					<height>180</height>
+					<aspectratio>keep</aspectratio>
+					<texturefocus>MenuItemFO.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onclick>SlideShow($INFO[Window(10000).Property(CachedRSSImages)])</onclick>
+					<onclick>Dialog.Close(1112)</onclick>
+					<visible>IntegerGreaterThan(Window(1112).Property(RSS.ImageCount),1) + !StringCompare(Window(10000).Property(CachedRSSImages),)</visible>
+					<onleft>450</onleft>
+					<onright>450</onright>
+					<onup>997</onup>
+					<ondown>998</ondown>
+				</control>
+				<control type="multiimage">
+					<posx>0</posx>
+					<posy>-200</posy>
+					<width>345</width>
+					<height>180</height>
+					<aspectratio>keep</aspectratio>
+					<imagepath fallback="Rss.png">$INFO[Window(10000).Property(CachedRSSImages)]</imagepath>
+					<timeperimage>5000</timeperimage>
+					<randomize>true</randomize>
+					<fadetime>750</fadetime>
+					<aligny>center</aligny>
+					<visible>IntegerGreaterThan(Window(1112).Property(RSS.ImageCount),1) + !StringCompare(Window(10000).Property(CachedRSSImages),)</visible>
+				</control>
+				
+				<control type="button" id="997" >
+					<description>Slideshow</description>
+					<posx>0</posx>
+					<posy>-200</posy>
+					<width>345</width>
+					<height>180</height>
+					<texturefocus>MenuItemFO.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onclick>SlideShow($INFO[Window(1112).Property(RSS.Image)])</onclick>
+					<onclick>Dialog.Close(1112)</onclick>
+					<visible>!IntegerGreaterThan(Window(1112).Property(RSS.ImageCount),1)</visible>
+					<onleft>450</onleft>
+					<onright>450</onright>
+					<onup>997</onup>
+					<ondown>998</ondown>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>350</width>
+					<height>20</height>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Window(Home).Property(RSS.Title)]</label>
+					
+				</control>
+				<control type="button" id ="998">
+					<description>Movies youtube</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>350</width>
+					<height>20</height>
+					<texturefocus>MenuItemFO.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onclick>PlayMedia($INFO[Window(Home).Property(RSS.Media)])</onclick>
+					<onclick>Dialog.Close(1112)</onclick>
+					<visible>Window.IsVisible(Home)</visible>
+					<onleft>450</onleft>
+					<onright>450</onright>
+					<onup>997</onup>
+					<ondown>997</ondown>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>10</posy>
+					<width>350</width>
+					<height>30</height>
+					<label>[I]$INFO[Window(Home).Property(RSS.Date)] - $INFO[Window(Home).Property(RSS.Channel)] [/I]</label>
+					<font>font10</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+				</control>
+				<control type="textbox">
+					<posx>0</posx>
+					<posy>45</posy>
+					<width>350</width>
+					<height>500</height>
+					<label>$INFO[Window(Home).Property(RSS.Desc)]</label>
+					<font>font12</font>
+					<autoscroll time="3000" delay="15000" repeat="5000">true</autoscroll>
+				</control>
+			</control>
+			<include>SideBladeRight</include>
+		</control>
+		<control type="button" id="999">
+			<posx>-10</posx>
+			<posy>-10</posy>
+			<width>1</width>
+			<height>1</height>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<onfocus>RunScript(script.ImageCacher,window=10000,PropertyName=CachedRSSImages,separator=;,images=$INFO[Window(Home).Property(RSS.MultiImages)])</onfocus>
+			<onfocus>SetProperty(RSS.Title,&quot;$INFO[Window(Home).Property(RSS.Title)]&quot;)</onfocus>
+			<onfocus>SetProperty(RSS.Desc,&quot;$INFO[Window(Home).Property(RSS.Desc)]&quot;)</onfocus>
+			<onfocus>SetProperty(RSS.Date,&quot;$INFO[Window(Home).Property(RSS.Date)]&quot;)</onfocus>
+			<onfocus>SetProperty(RSS.Channel,&quot;$INFO[Window(Home).Property(RSS.Channel)]&quot;)</onfocus>
+			<onfocus>SetProperty(RSS.MultiImages,&quot;$INFO[Window(Home).Property(RSS.MultiImages)]&quot;)</onfocus>
+			<onfocus>SetProperty(RSS.ImageCount,&quot;$INFO[Window(Home).Property(RSS.ImageCount)]&quot;)</onfocus>
+			<onfocus>SetProperty(RSS.Image,&quot;$INFO[Window(Home).Property(RSS.Image)]&quot;)</onfocus>
+			<onfocus>SetFocus(998)</onfocus>
+			<onclick>Dialog.Close(1112)</onclick>
+			<visible>Window.IsVisible(Home)</visible>
+		</control>
+		
+	</controls>
+</window>

@@ -1,0 +1,684 @@
+<includes>
+	<include name="IncludesHomeNextAired">
+		<control type="group">
+			<visible>!Window.IsVisible(Favourites)+ !Window.IsVisible(1117) + !Window.IsVisible(4577)</visible>
+			<include>VisibleFadeEffect</include>
+			<animation effect="fade" time="300" delay="1000">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+<!-- Nextaired-->	<control type="group" id="870">
+				
+				<control type="button" id="370">
+					<visible>Container(9000).HasFocus(11) + Skin.HasSetting(homepageHideRecentlyTvShowsAdded)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8001)</onfocus>
+				</control>
+				<control type="button" id="371">
+					<visible>Container(9000).HasFocus(11) + Skin.HasSetting(homepageHideRandomTvShowsAdded)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8007)</onfocus>
+				</control>
+			</control>
+			
+				<control type="group">
+				<posx>535r</posx>
+				<posy>358</posy>
+				<visible>Container(9000).HasFocus(11) + Skin.HasSetting(UseNextAired) + Skin.HasSetting(homepageHideRecentlyTvShowsAdded) + Skin.HasSetting(homepageHideRandomTvShowsAdded)</visible>
+				<control type="image">
+					<description>background</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>130</height>
+					<texture border="10">RecentAddedNF.png</texture>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>5</posy>
+					<height>30</height>
+					<width>355</width>
+					<label>$LOCALIZE[35140]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>20</posy>
+					<width>165</width>
+					<height>80</height>
+					<aspectratio>keep</aspectratio>
+					<texture diffuse="showcasebackdrop.png">$INFO[Window(Home).Property(NextAired.1.Showpath),,logo.png]</texture>
+					<visible>!Skin.HasSetting(UseNextAiredClearart) </visible>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>20</posy>
+					<width>165</width>
+					<height>80</height>
+					<aspectratio>keep</aspectratio>
+					<texture diffuse="showcasebackdrop.png">$INFO[Window(Home).Property(NextAired.1.Showpath),,clearart.png]</texture>
+					<visible>Skin.HasSetting(UseNextAiredClearart) </visible>
+				</control>
+				<control type="image">
+					<posx>150</posx>
+					<posy>-10</posy>
+					<width>88</width>
+					<height>60</height>
+					<texture diffuse="showcasebackdrop.png">$INFO[Window(Home).Property(NextAired.1.network),flagging/Studios/,.png]</texture>
+					
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>95</posy>
+					<height>25</height>
+					<align>left</align>
+					<width>355</width>
+					<label>$INFO[Window(Home).Property(NextAired.1.NextDate)] $LOCALIZE[35139] $INFO[Window(Home).Property(NextAired.1.shortime)]</label>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				
+			</control>
+		
+		<control type="group">
+				<posx>275r</posx>
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeHorizRaise</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
+				<visible>Library.HasContent(TVShows)</visible>
+				<visible>Container(9000).HasFocus(11) + Skin.HasSetting(UseNextAired) + !Skin.HasSetting(homepageHideRecentlyTvShowsAdded) + !Skin.HasSetting(homepageHideRandomTvShowsAdded)</visible>
+				<include>VisibleFadeEffect</include>
+
+				<control type="image">
+					<description>background</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>300</height>
+					<texture border="10">RecentAddedNF.png</texture>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>10</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$LOCALIZE[35140]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>160</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Window(Home).Property(NextAired.1.shortime)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!Control.HasFocus(8020)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>160</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Container(8020).ListItem.Label2]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Control.HasFocus(8020)</visible>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>0</posx>
+					<posy>10</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Window(Home).Property(NextAired.1.Network),flagging/Studios/,.png]</texture>
+					<visible>!Control.HasFocus(8020)+ !Skin.HasSetting(UseNextAiredClearart) </visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Window(Home).Property(NextAired.1.Showpath),,logo.png]</texture>
+					<visible>!Control.HasFocus(8020)+ !Skin.HasSetting(UseNextAiredClearart) </visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>0</posx>
+					<posy>10</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture background="true">$INFO[Container(8020).ListItem.ActualIcon]</texture>
+					<visible>Control.HasFocus(8020)+ !Skin.HasSetting(UseNextAiredClearart) </visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture background="true">$INFO[Container(8020).ListItem.Thumb,,logo.png]</texture>
+					<visible>Control.HasFocus(8020)+ !Skin.HasSetting(UseNextAiredClearart) </visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>-20</posx>
+					<posy>140</posy>
+					<width>115</width>
+					<height>60</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Window(Home).Property(NextAired.1.Network),flagging/Studios/,.png]</texture>
+					<visible>!Control.HasFocus(8020)+ Skin.HasSetting(UseNextAiredClearart) </visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Window(Home).Property(NextAired.1.Showpath),,clearart.png]</texture>
+					<visible>!Control.HasFocus(8020)+ Skin.HasSetting(UseNextAiredClearart) </visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>-20</posx>
+					<posy>140</posy>
+					<width>115</width>
+					<height>60</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture background="true">$INFO[Container(8020).ListItem.ActualIcon]</texture>
+					<visible>Control.HasFocus(8020)+ Skin.HasSetting(UseNextAiredClearart) </visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture background="true">$INFO[Container(8020).ListItem.Thumb,,clearart.png]</texture>
+					<visible>Control.HasFocus(8020)+ Skin.HasSetting(UseNextAiredClearart) </visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="list" id="8020">
+					<posx>0</posx>
+					<posy>200</posy>
+					<width>250</width>
+					<height>92</height>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>8020</onup>
+					<ondown>8020</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>0</scrolltime>
+					<itemlayout height="23" width="230">
+						<control type="label">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>230</width>
+							<height>23</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="23" width="230">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>250</width>
+							<height>23</height>
+							<texture border="0,2,0,2">MenuItemFO.png</texture>
+							<visible>Control.HasFocus(8020)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>230</width>
+							<height>23</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<include>NextAiredItem</include>
+				</control>
+			</control>
+			<control type="group">
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">PosXMovie</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">PosXMovie_TV</include>
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeRaise</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
+				<visible>Library.HasContent(TVShows)</visible>
+				<visible>[Container(9000).HasFocus(11) + Skin.HasSetting(UseNextAired) + !Skin.HasSetting(homepageHideRecentlyTvShowsAdded) + Skin.HasSetting(homepageHideRandomTvShowsAdded)] | [Container(9000).HasFocus(11) + Skin.HasSetting(UseNextAired) + Skin.HasSetting(homepageHideRecentlyTvShowsAdded) + !Skin.HasSetting(homepageHideRandomTvShowsAdded)]</visible>
+				<include>VisibleFadeEffect</include>
+
+				<control type="image">
+					<description>background</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>300</height>
+					<texture border="10">RecentAddedNF.png</texture>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>10</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$LOCALIZE[35140]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>160</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Window(Home).Property(NextAired.1.shortime)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!Control.HasFocus(8021)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>160</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Container(8021).ListItem.Label2]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Control.HasFocus(8021)</visible>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>0</posx>
+					<posy>10</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Window(Home).Property(NextAired.1.Network),flagging/Studios/,.png]</texture>
+					<visible>!Control.HasFocus(8021)+ !Skin.HasSetting(UseNextAiredClearart) </visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Window(Home).Property(NextAired.1.Showpath),,logo.png]</texture>
+					<visible>!Control.HasFocus(8021)+ !Skin.HasSetting(UseNextAiredClearart) </visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>0</posx>
+					<posy>10</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture background="true">$INFO[Container(8021).ListItem.ActualIcon]</texture>
+					<visible>Control.HasFocus(8021)+ !Skin.HasSetting(UseNextAiredClearart) </visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture background="true">$INFO[Container(8021).ListItem.Thumb,,logo.png]</texture>
+					<visible>Control.HasFocus(8021)+ !Skin.HasSetting(UseNextAiredClearart) </visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>-20</posx>
+					<posy>140</posy>
+					<width>115</width>
+					<height>60</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Window(Home).Property(NextAired.1.Network),flagging/Studios/,.png]</texture>
+					<visible>!Control.HasFocus(8021)+ Skin.HasSetting(UseNextAiredClearart) </visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Window(Home).Property(NextAired.1.Showpath),,clearart.png]</texture>
+					<visible>!Control.HasFocus(8021)+ Skin.HasSetting(UseNextAiredClearart) </visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>-20</posx>
+					<posy>140</posy>
+					<width>115</width>
+					<height>60</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture background="true">$INFO[Container(8021).ListItem.ActualIcon]</texture>
+					<visible>Control.HasFocus(8021)+ Skin.HasSetting(UseNextAiredClearart) </visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture background="true">$INFO[Container(8021).ListItem.Thumb,,clearart.png]</texture>
+					<visible>Control.HasFocus(8021)+ Skin.HasSetting(UseNextAiredClearart) </visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="list" id="8021">
+					<posx>0</posx>
+					<posy>200</posy>
+					<width>250</width>
+					<height>92</height>
+					<onleft>9000</onleft>
+					<onright>870</onright>
+					<onup>8021</onup>
+					<ondown>8021</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>0</scrolltime>
+					<itemlayout height="23" width="230">
+						<control type="label">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>230</width>
+							<height>23</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="23" width="230">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>250</width>
+							<height>23</height>
+							<texture border="0,2,0,2">MenuItemFO.png</texture>
+							<visible>Control.HasFocus(8021)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>230</width>
+							<height>23</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>230</width>
+							<height>23</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<include>NextAiredItem</include>
+				</control>
+			</control>
+		</control>
+	</include>
+					<include name="NextAiredItem">
+						<content>
+							<item id="1">
+								<label>$INFO[Window(Home).Property(NextAired.1.NextDate)] $LOCALIZE[35139] $INFO[Window(Home).Property(NextAired.1.shortime)]</label>
+								<label2>$INFO[Window(Home).Property(NextAired.1.shortime)]</label2>
+								<onclick>SetProperty(NextAired.NextTitle,&quot;$INFO[Window(Home).Property(NextAired.1.NextTitle)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.ep_img,&quot;$INFO[Window(Home).Property(NextAired.1.ep_img)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Network,&quot;$INFO[Window(Home).Property(NextAired.1.Network)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.NextDate,&quot;$INFO[Window(Home).Property(NextAired.1.NextDate)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.ShowTitle,&quot;$INFO[Window(Home).Property(NextAired.1.ShowTitle)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Airtime,&quot;$INFO[Window(Home).Property(NextAired.1.Airtime)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.NextNumber,&quot;$INFO[Window(Home).Property(NextAired.1.NextNumber)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Status,&quot;$INFO[Window(Home).Property(NextAired.1.Status)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Runtime,&quot;$INFO[Window(Home).Property(NextAired.1.Runtime)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.LatestTitle,&quot;$INFO[Window(Home).Property(NextAired.1.LatestTitle)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.LatestDate,&quot;$INFO[Window(Home).Property(NextAired.1.LatestDate)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.LatestNumber,&quot;$INFO[Window(Home).Property(NextAired.1.LatestNumber)]&quot;)</onclick>
+								<onclick>ActivateWindow(1117)</onclick>
+								<icon>$INFO[Window(Home).Property(NextAired.1.Network),flagging/Studios/,.png]</icon>
+								<thumb>$INFO[Window(Home).Property(NextAired.1.Showpath)]</thumb>
+								
+							</item>
+							<item id="2">
+								<label>$INFO[Window(Home).Property(NextAired.2.NextDate)] $LOCALIZE[35139] $INFO[Window(Home).Property(NextAired.2.shortime)]</label>
+								<label2>$INFO[Window(Home).Property(NextAired.2.shortime)]</label2>
+								<onclick>SetProperty(NextAired.NextTitle,&quot;$INFO[Window(Home).Property(NextAired.2.NextTitle)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.ep_img,&quot;$INFO[Window(Home).Property(NextAired.2.ep_img)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Network,&quot;$INFO[Window(Home).Property(NextAired.2.Network)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.NextDate,&quot;$INFO[Window(Home).Property(NextAired.2.NextDate)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.ShowTitle,&quot;$INFO[Window(Home).Property(NextAired.2.ShowTitle)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Airtime,&quot;$INFO[Window(Home).Property(NextAired.2.Airtime)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.NextNumber,&quot;$INFO[Window(Home).Property(NextAired.2.NextNumber)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Status,&quot;$INFO[Window(Home).Property(NextAired.2.Status)]&quot;)</onclick>
+								<onclick>ActivateWindow(1117)</onclick>
+								<icon>$INFO[Window(Home).Property(NextAired.2.Network),flagging/Studios/,.png]</icon>
+								<thumb>$INFO[Window(Home).Property(NextAired.2.Showpath)]</thumb>
+								
+							</item>
+							<item id="3">
+								<label>$INFO[Window(Home).Property(NextAired.3.NextDate)] $LOCALIZE[35139] $INFO[Window(Home).Property(NextAired.3.shortime)]</label>
+								<label2>$INFO[Window(Home).Property(NextAired.3.shortime)]</label2>
+								<onclick>SetProperty(NextAired.NextTitle,&quot;$INFO[Window(Home).Property(NextAired.3.NextTitle)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.ep_img,&quot;$INFO[Window(Home).Property(NextAired.3.ep_img)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Network,&quot;$INFO[Window(Home).Property(NextAired.3.Network)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.NextDate,&quot;$INFO[Window(Home).Property(NextAired.3.NextDate)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.ShowTitle,&quot;$INFO[Window(Home).Property(NextAired.3.ShowTitle)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Airtime,&quot;$INFO[Window(Home).Property(NextAired.3.Airtime)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.NextNumber,&quot;$INFO[Window(Home).Property(NextAired.3.NextNumber)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Status,&quot;$INFO[Window(Home).Property(NextAired.3.Status)]&quot;)</onclick>
+								<onclick>ActivateWindow(1117)</onclick>
+								<icon>$INFO[Window(Home).Property(NextAired.3.Network),flagging/Studios/,.png]</icon>
+								<thumb>$INFO[Window(Home).Property(NextAired.3.Showpath)]</thumb>
+								
+							</item>
+							<item id="4">
+								<label>$INFO[Window(Home).Property(NextAired.4.NextDate)] $LOCALIZE[35139] $INFO[Window(Home).Property(NextAired.4.shortime)]</label>
+								<label2>$INFO[Window(Home).Property(NextAired.4.shortime)]</label2>
+								<onclick>SetProperty(NextAired.NextTitle,&quot;$INFO[Window(Home).Property(NextAired.4.NextTitle)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.ep_img,&quot;$INFO[Window(Home).Property(NextAired.4.ep_img)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Network,&quot;$INFO[Window(Home).Property(NextAired.4.Network)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.NextDate,&quot;$INFO[Window(Home).Property(NextAired.4.NextDate)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.ShowTitle,&quot;$INFO[Window(Home).Property(NextAired.4.ShowTitle)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Airtime,&quot;$INFO[Window(Home).Property(NextAired.4.Airtime)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.NextNumber,&quot;$INFO[Window(Home).Property(NextAired.4.NextNumber)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Status,&quot;$INFO[Window(Home).Property(NextAired.4.Status)]&quot;)</onclick>
+								<onclick>ActivateWindow(1117)</onclick>
+								<icon>$INFO[Window(Home).Property(NextAired.4.Network),flagging/Studios/,.png]</icon>
+								<thumb>$INFO[Window(Home).Property(NextAired.4.Showpath)]</thumb>
+								
+							</item>
+							<item id="5">
+								<label>$INFO[Window(Home).Property(NextAired.5.NextDate)] $LOCALIZE[35139] $INFO[Window(Home).Property(NextAired.5.shortime)]</label>
+								<label2>$INFO[Window(Home).Property(NextAired.5.shortime)]</label2>
+								<onclick>SetProperty(NextAired.NextTitle,&quot;$INFO[Window(Home).Property(NextAired.5.NextTitle)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.ep_img,&quot;$INFO[Window(Home).Property(NextAired.5.ep_img)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Network,&quot;$INFO[Window(Home).Property(NextAired.5.Network)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.NextDate,&quot;$INFO[Window(Home).Property(NextAired.5.NextDate)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.ShowTitle,&quot;$INFO[Window(Home).Property(NextAired.5.ShowTitle)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Airtime,&quot;$INFO[Window(Home).Property(NextAired.5.Airtime)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.NextNumber,&quot;$INFO[Window(Home).Property(NextAired.5.NextNumber)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Status,&quot;$INFO[Window(Home).Property(NextAired.5.Status)]&quot;)</onclick>
+								<onclick>ActivateWindow(1117)</onclick>
+								<icon>$INFO[Window(Home).Property(NextAired.5.Network),flagging/Studios/,.png]</icon>
+								<thumb>$INFO[Window(Home).Property(NextAired.5.Showpath)]</thumb>
+								
+							</item>
+							<item id="6">
+								<label>$INFO[Window(Home).Property(NextAired.6.NextDate)] $LOCALIZE[35139] $INFO[Window(Home).Property(NextAired.6.shortime)]</label>
+								<label2>$INFO[Window(Home).Property(NextAired.6.shortime)]</label2>
+								<onclick>SetProperty(NextAired.NextTitle,&quot;$INFO[Window(Home).Property(NextAired.6.NextTitle)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.ep_img,&quot;$INFO[Window(Home).Property(NextAired.6.ep_img)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Network,&quot;$INFO[Window(Home).Property(NextAired.6.Network)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.NextDate,&quot;$INFO[Window(Home).Property(NextAired.6.NextDate)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.ShowTitle,&quot;$INFO[Window(Home).Property(NextAired.6.ShowTitle)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Airtime,&quot;$INFO[Window(Home).Property(NextAired.6.Airtime)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.NextNumber,&quot;$INFO[Window(Home).Property(NextAired.6.NextNumber)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Status,&quot;$INFO[Window(Home).Property(NextAired.6.Status)]&quot;)</onclick>
+								<onclick>ActivateWindow(1117)</onclick>
+								<icon>$INFO[Window(Home).Property(NextAired.6.Network),flagging/Studios/,.png]</icon>
+								<thumb>$INFO[Window(Home).Property(NextAired.6.Showpath)]</thumb>
+								
+							</item>
+							<item id="7">
+								<label>$INFO[Window(Home).Property(NextAired.7.NextDate)] $LOCALIZE[35139] $INFO[Window(Home).Property(NextAired.7.shortime)]</label>
+								<label2>$INFO[Window(Home).Property(NextAired.7.shortime)]</label2>
+								<onclick>SetProperty(NextAired.NextTitle,&quot;$INFO[Window(Home).Property(NextAired.7.NextTitle)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.ep_img,&quot;$INFO[Window(Home).Property(NextAired.7.ep_img)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Network,&quot;$INFO[Window(Home).Property(NextAired.7.Network)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.NextDate,&quot;$INFO[Window(Home).Property(NextAired.7.NextDate)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.ShowTitle,&quot;$INFO[Window(Home).Property(NextAired.7.ShowTitle)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Airtime,&quot;$INFO[Window(Home).Property(NextAired.7.Airtime)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.NextNumber,&quot;$INFO[Window(Home).Property(NextAired.7.NextNumber)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Status,&quot;$INFO[Window(Home).Property(NextAired.7.Status)]&quot;)</onclick>
+								<onclick>ActivateWindow(1117)</onclick>
+								<icon>$INFO[Window(Home).Property(NextAired.7.Network),flagging/Studios/,.png]</icon>
+								<thumb>$INFO[Window(Home).Property(NextAired.7.Showpath)]</thumb>
+								
+							</item>
+							<item id="8">
+								<label>$INFO[Window(Home).Property(NextAired.8.NextDate)] $LOCALIZE[35139] $INFO[Window(Home).Property(NextAired.8.shortime)]</label>
+								<label2>$INFO[Window(Home).Property(NextAired.8.shortime)]</label2>
+								<onclick>SetProperty(NextAired.NextTitle,&quot;$INFO[Window(Home).Property(NextAired.8.NextTitle)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.ep_img,&quot;$INFO[Window(Home).Property(NextAired.8.ep_img)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Network,&quot;$INFO[Window(Home).Property(NextAired.8.Network)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.NextDate,&quot;$INFO[Window(Home).Property(NextAired.8.NextDate)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.ShowTitle,&quot;$INFO[Window(Home).Property(NextAired.8.ShowTitle)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Airtime,&quot;$INFO[Window(Home).Property(NextAired.8.Airtime)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.NextNumber,&quot;$INFO[Window(Home).Property(NextAired.8.NextNumber)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Status,&quot;$INFO[Window(Home).Property(NextAired.8.Status)]&quot;)</onclick>
+								<onclick>ActivateWindow(1117)</onclick>
+								<icon>$INFO[Window(Home).Property(NextAired.8.Network),flagging/Studios/,.png]</icon>
+								<thumb>$INFO[Window(Home).Property(NextAired.8.Showpath)]</thumb>
+								
+							</item>
+							<item id="9">
+								<label>$INFO[Window(Home).Property(NextAired.9.NextDate)] $LOCALIZE[35139] $INFO[Window(Home).Property(NextAired.9.shortime)]</label>
+								<label2>$INFO[Window(Home).Property(NextAired.9.shortime)]</label2>
+								<onclick>SetProperty(NextAired.NextTitle,&quot;$INFO[Window(Home).Property(NextAired.9.NextTitle)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.ep_img,&quot;$INFO[Window(Home).Property(NextAired.9.ep_img)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Network,&quot;$INFO[Window(Home).Property(NextAired.9.Network)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.NextDate,&quot;$INFO[Window(Home).Property(NextAired.9.NextDate)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.ShowTitle,&quot;$INFO[Window(Home).Property(NextAired.9.ShowTitle)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Airtime,&quot;$INFO[Window(Home).Property(NextAired.9.Airtime)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.NextNumber,&quot;$INFO[Window(Home).Property(NextAired.9.NextNumber)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Status,&quot;$INFO[Window(Home).Property(NextAired.9.Status)]&quot;)</onclick>
+								<onclick>ActivateWindow(1117)</onclick>
+								<icon>$INFO[Window(Home).Property(NextAired.9.Network),flagging/Studios/,.png]</icon>
+								<thumb>$INFO[Window(Home).Property(NextAired.9.Showpath)]</thumb>
+								
+							</item>
+							<item id="10">
+								<label>$INFO[Window(Home).Property(NextAired.10.NextDate)] $LOCALIZE[35139] $INFO[Window(Home).Property(NextAired.10.shortime)]</label>
+								<label2>$INFO[Window(Home).Property(NextAired.10.shortime)]</label2>
+								<onclick>SetProperty(NextAired.NextTitle,&quot;$INFO[Window(Home).Property(NextAired.10.NextTitle)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.ep_img,&quot;$INFO[Window(Home).Property(NextAired.10.ep_img)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Network,&quot;$INFO[Window(Home).Property(NextAired.10.Network)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.NextDate,&quot;$INFO[Window(Home).Property(NextAired.10.NextDate)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.ShowTitle,&quot;$INFO[Window(Home).Property(NextAired.10.ShowTitle)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Airtime,&quot;$INFO[Window(Home).Property(NextAired.10.Airtime)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.NextNumber,&quot;$INFO[Window(Home).Property(NextAired.10.NextNumber)]&quot;)</onclick>
+								<onclick>SetProperty(NextAired.Status,&quot;$INFO[Window(Home).Property(NextAired.10.Status)]&quot;)</onclick>
+								<onclick>ActivateWindow(1117)</onclick>
+								<icon>$INFO[Window(Home).Property(NextAired.10.Network),flagging/Studios/,.png]</icon>
+								<thumb>$INFO[Window(Home).Property(NextAired.10.Showpath)]</thumb>
+								
+							</item>
+						</content>
+		<!-- FIN INCLUDE -->	
+	</include>
+	
+
+</includes>
