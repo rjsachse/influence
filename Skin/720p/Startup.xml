@@ -35,6 +35,24 @@
 			<texturefocus>-</texturefocus>
 			<visible>Skin.HasSetting(Use_Startup_Playlist)</visible>
 		</control>
+		<control type="button" id="15">
+			<onfocus>Skin.SetBool(Influence_SkinInit_b6)</onfocus>
+			<onfocus>Skin.SetString(Menu_Info_sub1_run,ActivateWindow(1116))</onfocus>
+			<onfocus>Skin.SetString(Menu_Info_run,RunScript(script.rss.editor))</onfocus>
+			<onfocus>Skin.SetString(Menu_Info_sub1_lab,Browse RSS)</onfocus>
+			<onfocus>Skin.SetBool(Menu_Info_sub1_act)</onfocus>
+			<onfocus>ReloadSkin()</onfocus>	
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>!Skin.HasSetting(Influence_SkinInit_b6)</visible>
+		</control>
+		<control type="button" id="15">
+			<description>Don't run anything</description>
+			<onfocus>ReplaceWindow(Home)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>			
+			<visible>Skin.HasSetting(Influence_SkinInit_b6)</visible>
+		</control>
 		<control type="button" id="14">
 			<onfocus>Skin.SetBool(Influence_SkinInit_b5)</onfocus>
 			<onfocus>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Info&amp;Nb=10)</onfocus>
@@ -51,14 +69,14 @@
 			<onfocus>Skin.SetString(Menu_Info_sub3_feed,http://pipes.yahoo.com/pipes/pipe.run?NumStories=3&amp;Start=1&amp;_id=e5ecd8ffbee522fccb5b2b3b6b776fd5&amp;_render=rss)</onfocus>
 			<onfocus>Skin.SetBool(Menu_Info_sub3_fanart)</onfocus>
 			<onfocus>Skin.ToggleSetting(ChoiceFeeds1)</onfocus>
-			<onfocus>ReloadSkin()</onfocus>	
+			<onfocus>SetFocus(15)</onfocus>	
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 			<visible>!Skin.HasSetting(Influence_SkinInit_b5)</visible>
 		</control>
 		<control type="button" id="14">
 			<description>Don't run anything</description>
-			<onfocus>ReplaceWindow(Home)</onfocus>
+			<onfocus>SetFocus(15)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>			
 			<visible>Skin.HasSetting(Influence_SkinInit_b5)</visible>
@@ -128,7 +146,6 @@
 			<onfocus>Skin.ToggleSetting(ChoiceWeatherOne)</onfocus>
 
 			<onfocus>Skin.Reset(Menu_Info_act)</onfocus>
-			<!--<onfocus>Skin.SetString(Menu_Info_run,XBMC.RunScript(script.rssclient-standalone))</onfocus>-->
 			<onfocus>Skin.SetString(Menu_Info_run,RunScript(script.rss.editor))</onfocus>
 			<onfocus>Skin.SetString(Menu_Info_lab,RSS)</onfocus>
 <!--icone-->		<onfocus>Skin.SetString(Menu_Info_Ico,Carousel/info.png)</onfocus>
@@ -488,7 +505,7 @@
 <!--
 			<onfocus>Skin.SetBool(Menu_LiveTv_act)</onfocus>
 -->
-			<onfocus>Skin.SetString(Menu_LiveTv_lab,$LOCALIZE[31502])</onfocus>
+			<onfocus>Skin.SetString(Menu_LiveTv_lab,$LOCALIZE[34502])</onfocus>
 			<onfocus>Skin.SetString(Menu_LiveTv_run,ActivateWindow(TV))</onfocus>
 			<!-- Music -->
 			<!-- Programs -->

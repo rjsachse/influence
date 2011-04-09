@@ -14,7 +14,7 @@
 				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
 				<posx>275r</posx>
 				
-				<visible>Container(945).Hasfocus(2401)+ !Window.IsVisible(1112)</visible>
+				<visible>[Container(945).Hasfocus(2401) | Control.HasFocus(23)] + !Window.IsVisible(1112)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="image">
 					<description>background</description>

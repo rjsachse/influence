@@ -814,7 +814,7 @@
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)</visible>
 			</control>
-			<!--<control type="radiobutton" id="164011">
+			<control type="radiobutton" id="164011">
 				<width>750</width>
 				<height>40</height>
 				<font>font13</font>
@@ -881,7 +881,7 @@
 				<onclick>Skin.ToggleSetting(Menu_Info_sub1_fanart)</onclick>
 				<selected>Skin.HasSetting(Menu_Info_sub1_fanart)</selected>
 				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)+ Skin.HasSetting(Menu_Info_sub1_act)</visible>
-			</control>-->
+			</control>
 			<control type="radiobutton" id="164021">
 				<width>750</width>
 				<height>40</height>

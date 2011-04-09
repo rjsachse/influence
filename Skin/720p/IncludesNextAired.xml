@@ -93,7 +93,7 @@
 				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeHorizRaise</include>
 				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
 				<visible>Library.HasContent(TVShows)</visible>
-				<visible>Container(9000).HasFocus(11) + Skin.HasSetting(UseNextAired) + !Skin.HasSetting(homepageHideRecentlyTvShowsAdded) + !Skin.HasSetting(homepageHideRandomTvShowsAdded)</visible>
+				<visible>Container(9000).HasFocus(11) + Skin.HasSetting(UseNextAired) + !Skin.HasSetting(homepageHideRecentlyTvShowsAdded) + !Skin.HasSetting(homepageHideRandomTvShowsAdded) +  !Control.HasFocus(23)</visible>
 				<include>VisibleFadeEffect</include>
 
 				<control type="image">
