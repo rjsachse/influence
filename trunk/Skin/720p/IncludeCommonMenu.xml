@@ -81,14 +81,7 @@
 		<thumb>$INFO[Skin.String(Home_Custom_Back_Dvd_Folder)]</thumb>
 		<visible>Skin.HasSetting(Menu_Dvd_act) + System.HasMediaDVD</visible>
 	</item>
-	<item id="13">
-		<label>$INFO[Skin.String(Menu_Exit_lab)]</label>
-		<label2>$INFO[Skin.String(Menu_Exit_Ico)]</label2>
-		<onclick>$INFO[Skin.String(Menu_Exit_run)]</onclick>
-		<icon>special://skin/backgrounds/shutdown.jpg</icon>
-		<thumb>$INFO[Skin.String(Home_Custom_Back_Exit_Folder)]</thumb>
-		<visible>Skin.HasSetting(Menu_Exit_act)</visible>
-	</item>
+	
 	<item id="14">
 		<label>$INFO[Skin.String(Menu_Favorites_lab)]</label>
 		<label2>$INFO[Skin.String(Menu_Favorites_Ico)]</label2>
@@ -169,6 +162,14 @@
 		<onclick>Skin.SetString(CurrentBackground,$INFO[Skin.String(Home_Custom_Back_Settings_Folder)])</onclick>
 		<onclick>ActivateWindow(Settings)</onclick>
 		<visible>!Skin.HasSetting(HomeMenuNoSettingsButton)</visible>
+	</item>
+	<item id="13">
+		<label>$INFO[Skin.String(Menu_Exit_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Exit_Ico)]</label2>
+		<onclick>$INFO[Skin.String(Menu_Exit_run)]</onclick>
+		<icon>special://skin/backgrounds/shutdown.jpg</icon>
+		<thumb>$INFO[Skin.String(Home_Custom_Back_Exit_Folder)]</thumb>
+		<visible>Skin.HasSetting(Menu_Exit_act)</visible>
 	</item>
 </include>
 
