@@ -76,6 +76,7 @@
 					<include>AspectCodecFlaggingConditions</include>
 					<include>VideoTypeHackFlaggingConditions</include>
 				</control>
+					
 				<control type="group">
 					<visible>Control.HasFocus(12)</visible>
 					<posy>90</posy>
@@ -955,7 +956,7 @@
 					</focusedlayout>
 				</control>
 				<control type="grouplist" id="9000">
-					<posx>210</posx>
+					<posx>200</posx>
 					<posy>660</posy>
 					<width>1030</width>
 					<height>40</height>
