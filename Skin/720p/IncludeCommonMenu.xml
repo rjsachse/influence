@@ -845,7 +845,7 @@
 		<icon>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</icon>
 		<thumb>$INFO[Skin.String(Menu_Pictures_sub2_back)]</thumb>
 		<onclick>RunScript(special://skin/scripts/SetBackground.py,Menu=Pictures&amp;SubMenu=sub2)</onclick>
-		<visible>Container(9000).HasFocus(4) + Skin.HasSetting(Menu_Pictures_sub2_act)</visible>
+		<visible>Container(9000).HasFocus(4) + Skin.HasSetting(Menu_Pictures_sub2_act) + Skin.HasSetting(Enable_Pictures_DataBase)</visible>
 	</item>
 	<item id="403">
 		<label>$INFO[Skin.String(Menu_Pictures_sub3_lab)]</label>
@@ -853,7 +853,7 @@
 		<icon>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</icon>
 		<thumb>$INFO[Skin.String(Menu_Pictures_sub3_back)]</thumb>
 		<onclick>RunScript(special://skin/scripts/SetBackground.py,Menu=Pictures&amp;SubMenu=sub3)</onclick>
-		<visible>Container(9000).HasFocus(4) + Skin.HasSetting(Menu_Pictures_sub3_act)</visible>
+		<visible>Container(9000).HasFocus(4) + Skin.HasSetting(Menu_Pictures_sub3_act)+ Skin.HasSetting(Enable_Pictures_DataBase)</visible>
 	</item>
 	<item id="404">
 		<label>$INFO[Skin.String(Menu_Pictures_sub4_lab)]</label>
@@ -861,7 +861,7 @@
 		<icon>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</icon>
 		<thumb>$INFO[Skin.String(Menu_Pictures_sub4_back)]</thumb>
 		<onclick>RunScript(special://skin/scripts/SetBackground.py,Menu=Pictures&amp;SubMenu=sub4)</onclick>
-		<visible>Container(9000).HasFocus(4) + Skin.HasSetting(Menu_Pictures_sub4_act)</visible>
+		<visible>Container(9000).HasFocus(4) + Skin.HasSetting(Menu_Pictures_sub4_act)+ Skin.HasSetting(Enable_Pictures_DataBase)</visible>
 	</item>
 	<item id="405">
 		<label>$INFO[Skin.String(Menu_Pictures_sub5_lab)]</label>
@@ -869,7 +869,7 @@
 		<icon>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</icon>
 		<thumb>$INFO[Skin.String(Menu_Pictures_sub5_back)]</thumb>
 		<onclick>RunScript(special://skin/scripts/SetBackground.py,Menu=Pictures&amp;SubMenu=sub5)</onclick>
-		<visible>Container(9000).HasFocus(4) + Skin.HasSetting(Menu_Pictures_sub5_act)</visible>
+		<visible>Container(9000).HasFocus(4) + Skin.HasSetting(Menu_Pictures_sub5_act)+ Skin.HasSetting(Enable_Pictures_DataBase)</visible>
 	</item>
 	<item id="406">
 		<label>$INFO[Skin.String(Menu_Pictures_sub6_lab)]</label>
@@ -877,7 +877,7 @@
 		<icon>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</icon>
 		<thumb>$INFO[Skin.String(Menu_Pictures_sub6_back)]</thumb>
 		<onclick>RunScript(special://skin/scripts/SetBackground.py,Menu=Pictures&amp;SubMenu=sub6)</onclick>
-		<visible>Container(9000).HasFocus(4) + Skin.HasSetting(Menu_Pictures_sub6_act)</visible>
+		<visible>Container(9000).HasFocus(4) + Skin.HasSetting(Menu_Pictures_sub6_act)+ Skin.HasSetting(Enable_Pictures_DataBase)</visible>
 	</item>
 	<item id="407">
 		<description>SubMenu Sub 7</description>

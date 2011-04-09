@@ -353,13 +353,37 @@
 						<width>750</width>
 						<height>45</height>
 						<font>font13_title</font>
-						<label>512</label>
+						<label>$LOCALIZE[1]</label>
 						<textcolor>blue</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
 					<control type="radiobutton" id="126">
+						<description>enable Pictures menu</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>31547</label>
+						<onclick>Skin.ToggleSetting(Enable_Pictures_DataBase)</onclick>
+						<selected>Skin.HasSetting(Enable_Pictures_DataBase)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					<!--<enable>StringCompare(Plugin,mypicsdb)</enable>-->
+					</control>
+					<control type="label" id="127">
+						<width>750</width>
+						<height>45</height>
+						<font>font13_title</font>
+						<label>512</label>
+						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="radiobutton" id="128">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -371,7 +395,7 @@
 						<onclick>Skin.ToggleSetting(Use_Startup_Playlist)</onclick>
 						<selected>Skin.HasSetting(Use_Startup_Playlist)</selected>
 					</control>
-					<control type="button" id="127">
+					<control type="button" id="129">
 						<description>Startup Playlist Path</description>
 						<width>750</width>
 						<height>40</height>
@@ -385,7 +409,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
 					</control>
-					<control type="label" id="128">
+					<control type="label" id="130">
 						<width>750</width>
 						<height>45</height>
 						<font>font13_title</font>
@@ -395,7 +419,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="129">
+					<control type="radiobutton" id="131">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -407,7 +431,7 @@
 						<onclick>Skin.ToggleSetting(ShowBackgroundVideo)</onclick>
 						<selected>!Skin.HasSetting(ShowBackgroundVideo)</selected>
 					</control>
-					<control type="radiobutton" id="130">
+					<control type="radiobutton" id="132">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -419,7 +443,7 @@
 						<onclick>Skin.ToggleSetting(ShowBackgroundVis)</onclick>
 						<selected>!Skin.HasSetting(ShowBackgroundVis)</selected>
 					</control>
-					<control type="radiobutton" id="131">
+					<control type="radiobutton" id="133">
 						<description>Show Fanart</description>
 						<width>750</width>
 						<height>40</height>
