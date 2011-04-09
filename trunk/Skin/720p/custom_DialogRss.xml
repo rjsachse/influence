@@ -145,6 +145,9 @@
 					<item id="1">
 						<label>$INFO[Window.Property(feeds.1.name)]</label>
 						<onclick>Skin.ToggleSetting(ChoiceFeeds1)</onclick>
+						<onclick>Skin.SetString(Menu_Info_sub1_feed,$INFO[Window.Property(feeds.1.path)])</onclick>
+						<onclick>Skin.SetString(InitRunScript,True)</onclick>
+						<onclick>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=1,feed=$INFO[Skin.String(Menu_Info_sub1_feed)],limit=10)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds2)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds3)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds4)</onclick>
@@ -160,6 +163,9 @@
 					<item id="2">
 						<label>$INFO[Window.Property(feeds.2.name)]</label>
 						<onclick>Skin.ToggleSetting(ChoiceFeeds2)</onclick>
+						<onclick>Skin.SetString(Menu_Info_sub1_feed,$INFO[Window.Property(feeds.2.path)])</onclick>
+						<onclick>Skin.SetString(InitRunScript,True)</onclick>
+						<onclick>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=1,feed=$INFO[Skin.String(Menu_Info_sub1_feed)],limit=10)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds1)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds3)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds4)</onclick>
@@ -175,6 +181,9 @@
 					<item id="3">
 						<label>$INFO[Window.Property(feeds.3.name)]</label>
 						<onclick>Skin.ToggleSetting(ChoiceFeeds3)</onclick>
+						<onclick>Skin.SetString(Menu_Info_sub1_feed,$INFO[Window.Property(feeds.3.path)])</onclick>
+						<onclick>Skin.SetString(InitRunScript,True)</onclick>
+						<onclick>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=1,feed=$INFO[Skin.String(Menu_Info_sub1_feed)],limit=10)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds2)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds1)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds4)</onclick>
@@ -190,6 +199,9 @@
 					<item id="4">
 						<label>$INFO[Window.Property(feeds.4.name)]</label>
 						<onclick>Skin.ToggleSetting(ChoiceFeeds4)</onclick>
+						<onclick>Skin.SetString(Menu_Info_sub1_feed,$INFO[Window.Property(feeds.4.path)])</onclick>
+						<onclick>Skin.SetString(InitRunScript,True)</onclick>
+						<onclick>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=1,feed=$INFO[Skin.String(Menu_Info_sub1_feed)],limit=10)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds2)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds3)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds1)</onclick>
@@ -205,6 +217,9 @@
 					<item id="5">
 						<label>$INFO[Window.Property(feeds.5.name)]</label>
 						<onclick>Skin.ToggleSetting(ChoiceFeeds5)</onclick>
+						<onclick>Skin.SetString(Menu_Info_sub1_feed,$INFO[Window.Property(feeds.5.path)])</onclick>
+						<onclick>Skin.SetString(InitRunScript,True)</onclick>
+						<onclick>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=1,feed=$INFO[Skin.String(Menu_Info_sub1_feed)],limit=10)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds2)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds3)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds4)</onclick>
@@ -220,6 +235,9 @@
 					<item id="6">
 						<label>$INFO[Window.Property(feeds.6.name)]</label>
 						<onclick>Skin.ToggleSetting(ChoiceFeeds6)</onclick>
+						<onclick>Skin.SetString(Menu_Info_sub1_feed,$INFO[Window.Property(feeds.6.path)])</onclick>
+						<onclick>Skin.SetString(InitRunScript,True)</onclick>
+						<onclick>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=1,feed=$INFO[Skin.String(Menu_Info_sub1_feed)],limit=10)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds2)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds3)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds4)</onclick>
@@ -235,6 +253,9 @@
 					<item id="7">
 						<label>$INFO[Window.Property(feeds.7.name)]</label>
 						<onclick>Skin.ToggleSetting(ChoiceFeeds7)</onclick>
+						<onclick>Skin.SetString(Menu_Info_sub1_feed,$INFO[Window.Property(feeds.7.path)])</onclick>
+						<onclick>Skin.SetString(InitRunScript,True)</onclick>
+						<onclick>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=1,feed=$INFO[Skin.String(Menu_Info_sub1_feed)],limit=10)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds2)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds3)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds4)</onclick>
@@ -250,6 +271,9 @@
 					<item id="8">
 						<label>$INFO[Window.Property(feeds.8.name)]</label>
 						<onclick>Skin.ToggleSetting(ChoiceFeeds8)</onclick>
+						<onclick>Skin.SetString(Menu_Info_sub1_feed,$INFO[Window.Property(feeds.8.path)])</onclick>
+						<onclick>Skin.SetString(InitRunScript,True)</onclick>
+						<onclick>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=1,feed=$INFO[Skin.String(Menu_Info_sub1_feed)],limit=10)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds2)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds3)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds4)</onclick>
@@ -265,6 +289,9 @@
 					<item id="9">
 						<label>$INFO[Window.Property(feeds.9.name)]</label>
 						<onclick>Skin.ToggleSetting(ChoiceFeeds9)</onclick>
+						<onclick>Skin.SetString(Menu_Info_sub1_feed,$INFO[Window.Property(feeds.9.path)])</onclick>
+						<onclick>Skin.SetString(InitRunScript,True)</onclick>
+						<onclick>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=1,feed=$INFO[Skin.String(Menu_Info_sub1_feed)],limit=10)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds2)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds3)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds4)</onclick>
@@ -280,6 +307,9 @@
 					<item id="10">
 						<label>$INFO[Window.Property(feeds.10.name)]</label>
 						<onclick>Skin.ToggleSetting(ChoiceFeeds10)</onclick>
+						<onclick>Skin.SetString(Menu_Info_sub1_feed,$INFO[Window.Property(feeds.10.path)])</onclick>
+						<onclick>Skin.SetString(InitRunScript,True)</onclick>
+						<onclick>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=1,feed=$INFO[Skin.String(Menu_Info_sub1_feed)],limit=10)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds2)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds3)</onclick>
 						<onclick>Skin.Reset(ChoiceFeeds4)</onclick>

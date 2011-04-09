@@ -65,7 +65,7 @@
 				<posx>275r</posx>
 				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeHorizRaise</include>
 				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
-				<visible>Library.HasContent(Movies)</visible>
+				<visible>Library.HasContent(Movies) + !Control.HasFocus(23)</visible>
 				<visible>Container(9000).Hasfocus(10) + Skin.HasSetting(homepageHideRecentlyMovieAdded)</visible>
 				<include>VisibleFadeEffect</include>
 <!--
@@ -429,7 +429,7 @@
 				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeHorizRaise</include>
 				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
 				<posx>275r</posx>
-				<visible>Library.HasContent(Music)</visible>
+				<visible>Library.HasContent(Music) + !Control.HasFocus(23)</visible>
 				<visible>Container(9000).Hasfocus(3)+ Skin.HasSetting(homepageHideRecentlyMusicAdded)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="image">
@@ -633,7 +633,7 @@
 				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeHorizRaise</include>
 				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
 				<posx>275r</posx>
-				<visible>Library.HasContent(TVShows)</visible>
+				<visible>Library.HasContent(TVShows) + !Control.HasFocus(23)</visible>
 				<visible>[Container(9000).Hasfocus(2) + !Skin.HasSetting(HomeMenuNoTVShowsButton)]+ Skin.HasSetting(homepageHideRecentlyVideoAdded) | Container(9000).Hasfocus(11) +Skin.HasSetting(homepageHideRecentlyTvShowsAdded)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="image">
