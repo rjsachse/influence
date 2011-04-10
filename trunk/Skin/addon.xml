@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="skin.influence"
-  version="1.2.4"
+  version="1.2.5"
   name="Influence"
   provider-name="Yiarkyiark/Ronan/Frost, Team Passion XBMC">
   <requires>
@@ -17,6 +17,7 @@
     <import addon="script.logo-downloader" version="2.0.0"/>
     <import addon="script.ExtraMusicInfo" version="0.0.2"/>
     <import addon="plugin.image.mypicsdb" version="0.5.1"/>
+    <import addon="script.rssfeeds" version="1.0.0"/>
     </requires>
   <extension
     point="xbmc.gui.skin"
