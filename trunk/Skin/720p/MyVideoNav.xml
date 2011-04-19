@@ -20,7 +20,7 @@
 			<control type="button" id="10001">
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
-				<onfocus>XBMC.RunScript(script.TvTunes,backend=True&amp;loop=False)</onfocus>
+				<onfocus>XBMC.RunScript(script.tvtunes,backend=True&amp;loop=False)</onfocus>
 				<visible>IsEmpty(Window(10025).Property(TvTunesIsRunning))</visible>
 			</control>
 			<control type="button" id="10001">
@@ -365,7 +365,7 @@
 						<description>Run TvTunes</description>
 						<include>ButtonMediaSubCommonValues</include>
 						<label>35132</label>
-						<onclick>XBMC.RunScript(script.TvTunes,mode=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])</onclick>
+						<onclick>XBMC.RunScript(script.tvtunes,mode=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])</onclick>
 						<onclick>SetFocus(50)</onclick>
 						<visible>container.content(tvshows) + !StringCompare(ListItem.Label,..)</visible>
 					</control>
@@ -373,7 +373,7 @@
 						<description>TvTunes Management</description>
 						<include>ButtonMediaSubCommonValues</include>
 						<label>5</label>
-						<onclick>Addon.OpenSettings(script.TvTunes)</onclick>
+						<onclick>Addon.OpenSettings(script.tvtunes)</onclick>
 						<onclick>SetFocus(50)</onclick>
 						<visible>container.content(tvshows) + !StringCompare(ListItem.Label,..)</visible>
 					</control>

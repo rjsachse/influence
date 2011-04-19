@@ -97,14 +97,14 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>special://skin/backgrounds/media-overlay.png</texture>
-			<visible>Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)+ !SubString(Window(10025).Property(TvTunesIsAlive),True)</visible>
+			<visible>Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)+ !SubString(Window(10025).Property(tvtunesIsAlive),True)</visible>
 		</control>
 		<control type="visualisation">
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<visible>Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis)+ !SubString(Window(10025).Property(TvTunesIsAlive),True)</visible>
+			<visible>Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis)+ !SubString(Window(10025).Property(tvtunesIsAlive),True)</visible>
 		</control>
 		<control type="image">
 			<description>visualisation background</description>
