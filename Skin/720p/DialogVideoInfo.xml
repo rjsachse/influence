@@ -1031,7 +1031,7 @@
 						<include>ButtonInfoDialogsCommonValues</include>
 						<visible>Container.Content(TvShows)</visible>
 						<label>TvTunes</label>
-						<onclick>XBMC.RunScript(script.TvTunes,mode=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])</onclick>
+						<onclick>XBMC.RunScript(script.tvtunes,mode=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])</onclick>
 					</control>
 				</control>
 			</control>
