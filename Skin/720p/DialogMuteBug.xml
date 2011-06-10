@@ -18,6 +18,7 @@
 				<width>80</width>
 				<height>35</height>
 				<texture flipx="true" border="32,0,0,0">header.png</texture>
+				<include>Top-Level</include>
 			</control>
 			<control type="image">
 				<posx>35</posx>
@@ -26,6 +27,7 @@
 				<height>30</height>
 				<aspectratio>keep</aspectratio>
 				<texture>icon-mute.png</texture>
+				<include>Top-Level</include>
 			</control>
 		</control>
 	</controls>

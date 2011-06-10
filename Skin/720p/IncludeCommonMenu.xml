@@ -99,15 +99,7 @@
 		<onclick>$INFO[Skin.String(Menu_LiveTv_run)]</onclick>
 		<visible>Skin.HasSetting(Menu_LiveTv_act)</visible>
 	</item>
-	<item id="24">
-		<label>$INFO[Skin.String(Menu_Info_lab)]</label>
-		<label2>$INFO[Skin.String(Menu_Info_Ico)]</label2>
-		<icon>$INFO[Skin.String(Menu_Info_Back)]</icon>
-		<thumb>$INFO[Skin.String(Home_Custom_Back_Info_Folder)]</thumb>
-		<onclick>Skin.SetString(CurrentBackground,$INFO[Skin.String(Home_Custom_Back_Info_Folder)])</onclick>
-		<onclick>$INFO[Skin.String(Menu_Info_run)]</onclick>
-		<visible>Skin.HasSetting(Menu_Info_act)</visible>
-	</item>
+	
 	<!-- Custom Home -->					
 	<item id="20">
 		<label>$INFO[Skin.String(Menu_Men1_lab)]</label>
@@ -154,6 +146,15 @@
 		<onclick>$INFO[Skin.String(Menu_Programs_run)]</onclick>
 		<visible>Skin.HasSetting(Menu_Programs_act)</visible>
 	</item>
+	<item id="24">
+		<label>$INFO[Skin.String(Menu_Info_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Info_Ico)]</label2>
+		<icon>$INFO[Skin.String(Menu_Info_Back)]</icon>
+		<thumb>$INFO[Skin.String(Home_Custom_Back_Info_Folder)]</thumb>
+		<onclick>Skin.SetString(CurrentBackground,$INFO[Skin.String(Home_Custom_Back_Info_Folder)])</onclick>
+		<onclick>$INFO[Skin.String(Menu_Info_run)]</onclick>
+		<visible>Skin.HasSetting(Menu_Info_act)</visible>
+	</item>
 	<item id="5">
 		<label>13000</label>
 		<label2>Carousel/parametres.png</label2>
@@ -171,6 +172,7 @@
 		<thumb>$INFO[Skin.String(Home_Custom_Back_Exit_Folder)]</thumb>
 		<visible>Skin.HasSetting(Menu_Exit_act)</visible>
 	</item>
+	
 </include>
 
 <include name="IncludeCommonSubMenu">
@@ -305,7 +307,7 @@
 		<icon>$INFO[Skin.String(Home_Custom_Back_Info_Folder)]</icon>
 		<thumb>$INFO[Skin.String(Menu_Info_sub2_back)]</thumb>
 		<onclick>RunScript(special://skin/scripts/SetBackground.py,Menu=Info&amp;SubMenu=sub2)</onclick>
-		<visible>Container(9000).HasFocus(24) + Skin.HasSetting(Menu_Info_sub2_act)</visible>
+		<visible>Container(9000).HasFocus(24) + Skin.HasSetting(Menu_Info_sub2_act) + ![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]</visible>
 	</item>
 	<item id="2403">
 		<label>$INFO[Skin.String(Menu_Info_sub3_lab)]</label>
@@ -1306,7 +1308,7 @@
 	</item>
 <!-- Custom Menu 2 End -->
 <!-- Custom Menu 3 -->
-	<item id="2301">
+	<item id="2201">
 		<description>Men3Button1</description>
 		<label>$INFO[Skin.String(Menu_Men3_sub1_lab)]</label>
 		<label2>$INFO[Skin.String(Menu_Men3_sub1_Ico)]</label2>
@@ -1315,7 +1317,7 @@
 		<onclick>RunScript(special://skin/scripts/SetBackground.py,Menu=Men3&amp;SubMenu=sub1)</onclick>
 		<visible>Container(9000).HasFocus(22) + [Skin.HasSetting(Menu_Men3_sub1_act) + !IsEmpty(Skin.String(Menu_Men3_sub1_lab))]</visible>
 	</item>
-	<item id="2302">
+	<item id="2202">
 		<description>Men3Button2</description>
 		<label>$INFO[Skin.String(Menu_Men3_sub2_lab)]</label>
 		<label2>$INFO[Skin.String(Menu_Men3_sub2_Ico)]</label2>
@@ -1324,7 +1326,7 @@
 		<onclick>RunScript(special://skin/scripts/SetBackground.py,Menu=Men3&amp;SubMenu=sub2)</onclick>
 		<visible>Container(9000).HasFocus(22) + [Skin.HasSetting(Menu_Men3_sub2_act) + !IsEmpty(Skin.String(Menu_Men3_sub2_lab))]</visible>
 	</item>
-	<item id="2303">
+	<item id="2203">
 		<description>Men3Button3</description>
 		<label>$INFO[Skin.String(Menu_Men3_sub3_lab)]</label>
 		<label2>$INFO[Skin.String(Menu_Men3_sub3_Ico)]</label2>
@@ -1333,7 +1335,7 @@
 		<onclick>RunScript(special://skin/scripts/SetBackground.py,Menu=Men3&amp;SubMenu=sub3)</onclick>
 		<visible>Container(9000).HasFocus(22) + [Skin.HasSetting(Menu_Men3_sub3_act) + !IsEmpty(Skin.String(Menu_Men3_sub3_lab))]</visible>
 	</item>
-	<item id="2304">
+	<item id="2204">
 		<description>Men3Button4</description>
 		<label>$INFO[Skin.String(Menu_Men3_sub4_lab)]</label>
 		<label2>$INFO[Skin.String(Menu_Men3_sub4_Ico)]</label2>
@@ -1342,7 +1344,7 @@
 		<onclick>RunScript(special://skin/scripts/SetBackground.py,Menu=Men3&amp;SubMenu=sub4)</onclick>
 		<visible>Container(9000).HasFocus(22) + [Skin.HasSetting(Menu_Men3_sub4_act) + !IsEmpty(Skin.String(Menu_Men3_sub4_lab))]</visible>
 	</item>
-	<item id="2305">
+	<item id="2205">
 		<description>Men3Button5</description>
 		<label>$INFO[Skin.String(Menu_Men3_sub5_lab)]</label>
 		<label2>$INFO[Skin.String(Menu_Men3_sub5_Ico)]</label2>
@@ -1351,7 +1353,7 @@
 		<onclick>RunScript(special://skin/scripts/SetBackground.py,Menu=Men3&amp;SubMenu=sub5)</onclick>
 		<visible>Container(9000).HasFocus(22) + [Skin.HasSetting(Menu_Men3_sub5_act) + !IsEmpty(Skin.String(Menu_Men3_sub5_lab))]</visible>
 	</item>
-	<item id="2306">
+	<item id="2206">
 		<description>Men3Button6</description>
 		<label>$INFO[Skin.String(Menu_Men3_sub6_lab)]</label>
 		<label2>$INFO[Skin.String(Menu_Men3_sub6_Ico)]</label2>
@@ -1362,7 +1364,7 @@
 	</item>
 <!-- Custom Menu 3 End -->
 <!-- Custom Menu 4 -->
-	<item id="2401">
+	<item id="2301">
 		<description>Men4Button1</description>
 		<label>$INFO[Skin.String(Menu_Men4_sub1_lab)]</label>
 		<label2>$INFO[Skin.String(Menu_Men4_sub1_Ico)]</label2>
@@ -1371,7 +1373,7 @@
 		<onclick>RunScript(special://skin/scripts/SetBackground.py,Menu=Men4&amp;SubMenu=sub1)</onclick>
 		<visible>Container(9000).HasFocus(23) + [Skin.HasSetting(Menu_Men4_sub1_act) + !IsEmpty(Skin.String(Menu_Men4_sub1_lab))]</visible>
 	</item>
-	<item id="2402">
+	<item id="2302">
 		<description>Men4Button2</description>
 		<label>$INFO[Skin.String(Menu_Men4_sub2_lab)]</label>
 		<label2>$INFO[Skin.String(Menu_Men4_sub2_Ico)]</label2>
@@ -1380,7 +1382,7 @@
 		<onclick>RunScript(special://skin/scripts/SetBackground.py,Menu=Men4&amp;SubMenu=sub2)</onclick>
 		<visible>Container(9000).HasFocus(23) + [Skin.HasSetting(Menu_Men4_sub2_act) + !IsEmpty(Skin.String(Menu_Men4_sub2_lab))]</visible>
 	</item>
-	<item id="2403">
+	<item id="2303">
 		<description>Men4Button3</description>
 		<label>$INFO[Skin.String(Menu_Men4_sub3_lab)]</label>
 		<label2>$INFO[Skin.String(Menu_Men4_sub3_Ico)]</label2>
@@ -1389,7 +1391,7 @@
 		<onclick>RunScript(special://skin/scripts/SetBackground.py,Menu=Men4&amp;SubMenu=sub3)</onclick>
 		<visible>Container(9000).HasFocus(23) + [Skin.HasSetting(Menu_Men4_sub3_act) + !IsEmpty(Skin.String(Menu_Men4_sub3_lab))]</visible>
 	</item>
-	<item id="2404">
+	<item id="2304">
 		<description>Men4Button4</description>
 		<label>$INFO[Skin.String(Menu_Men4_sub4_lab)]</label>
 		<label2>$INFO[Skin.String(Menu_Men4_sub4_Ico)]</label2>
@@ -1398,7 +1400,7 @@
 		<onclick>RunScript(special://skin/scripts/SetBackground.py,Menu=Men4&amp;SubMenu=sub4)</onclick>
 		<visible>Container(9000).HasFocus(23) + [Skin.HasSetting(Menu_Men4_sub4_act) + !IsEmpty(Skin.String(Menu_Men4_sub4_lab))]</visible>
 	</item>
-	<item id="2405">
+	<item id="2305">
 		<description>Men4Button5</description>
 		<label>$INFO[Skin.String(Menu_Men4_sub5_lab)]</label>
 		<label2>$INFO[Skin.String(Menu_Men4_sub5_Ico)]</label2>
@@ -1407,7 +1409,7 @@
 		<onclick>RunScript(special://skin/scripts/SetBackground.py,Menu=Men4&amp;SubMenu=sub5)</onclick>
 		<visible>Container(9000).HasFocus(23) + [Skin.HasSetting(Menu_Men4_sub5_act) + !IsEmpty(Skin.String(Menu_Men4_sub5_lab))]</visible>
 	</item>
-	<item id="2406">
+	<item id="2306">
 		<description>Men4Button6</description>
 		<label>$INFO[Skin.String(Menu_Men4_sub6_lab)]</label>
 		<label2>$INFO[Skin.String(Menu_Men4_sub6_Ico)]</label2>
@@ -2222,7 +2224,7 @@
 	</item>
 <!-- Custom Menu 2 End -->
 <!-- Custom Menu 3 -->
-	<item id="2301">
+	<item id="2201">
 		<description>Men3Button1</description>
 		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men3_lab)][/COLOR]-$INFO[Skin.String(Menu_Men3_sub1_lab)]</label>
 		<icon>$INFO[Skin.String(Home_Custom_Back_Men3_Folder)]</icon>
@@ -2230,7 +2232,7 @@
 		<onclick>-</onclick>
 		<visible>[Skin.HasSetting(Menu_Men3_sub1_act) + !IsEmpty(Skin.String(Menu_Men3_sub1_lab))]</visible>
 	</item>
-	<item id="2302">
+	<item id="2202">
 		<description>Men3Button2</description>
 		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men3_lab)][/COLOR]-$INFO[Skin.String(Menu_Men3_sub2_lab)]</label>
 		<icon>$INFO[Skin.String(Home_Custom_Back_Men3_Folder)]</icon>
@@ -2238,7 +2240,7 @@
 		<onclick>-</onclick>
 		<visible>[Skin.HasSetting(Menu_Men3_sub2_act) + !IsEmpty(Skin.String(Menu_Men3_sub2_lab))]</visible>
 	</item>
-	<item id="2303">
+	<item id="2203">
 		<description>Men3Button3</description>
 		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men3_lab)][/COLOR]-$INFO[Skin.String(Menu_Men3_sub3_lab)]</label>
 		<icon>$INFO[Skin.String(Home_Custom_Back_Men3_Folder)]</icon>
@@ -2246,7 +2248,7 @@
 		<onclick>-</onclick>
 		<visible>[Skin.HasSetting(Menu_Men3_sub3_act) + !IsEmpty(Skin.String(Menu_Men3_sub3_lab))]</visible>
 	</item>
-	<item id="2304">
+	<item id="2204">
 		<description>Men3Button4</description>
 		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men3_lab)][/COLOR]-$INFO[Skin.String(Menu_Men3_sub4_lab)]</label>
 		<icon>$INFO[Skin.String(Home_Custom_Back_Men3_Folder)]</icon>
@@ -2254,7 +2256,7 @@
 		<onclick>-</onclick>
 		<visible>[Skin.HasSetting(Menu_Men3_sub4_act) + !IsEmpty(Skin.String(Menu_Men3_sub4_lab))]</visible>
 	</item>
-	<item id="2305">
+	<item id="2205">
 		<description>Men3Button5</description>
 		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men3_lab)][/COLOR]-$INFO[Skin.String(Menu_Men3_sub5_lab)]</label>
 		<icon>$INFO[Skin.String(Home_Custom_Back_Men3_Folder)]</icon>
@@ -2262,7 +2264,7 @@
 		<onclick>-</onclick>
 		<visible>[Skin.HasSetting(Menu_Men3_sub5_act) + !IsEmpty(Skin.String(Menu_Men3_sub5_lab))]</visible>
 	</item>
-	<item id="2306">
+	<item id="2206">
 		<description>Men3Button6</description>
 		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men3_lab)][/COLOR]-$INFO[Skin.String(Menu_Men3_sub6_lab)]</label>
 		<icon>$INFO[Skin.String(Home_Custom_Back_Men3_Folder)]</icon>
@@ -2272,7 +2274,7 @@
 	</item>
 <!-- Custom Menu 3 End -->
 <!-- Custom Menu 4 -->
-	<item id="2401">
+	<item id="2301">
 		<description>Men4Button1</description>
 		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men4_lab)][/COLOR]-$INFO[Skin.String(Menu_Men4_sub1_lab)]</label>
 		<icon>$INFO[Skin.String(Home_Custom_Back_Men4_Folder)]</icon>
@@ -2280,7 +2282,7 @@
 		<onclick>-</onclick>
 		<visible>[Skin.HasSetting(Menu_Men4_sub1_act) + !IsEmpty(Skin.String(Menu_Men4_sub1_lab))]</visible>
 	</item>
-	<item id="2402">
+	<item id="2302">
 		<description>Men4Button2</description>
 		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men4_lab)][/COLOR]-$INFO[Skin.String(Menu_Men4_sub2_lab)]</label>
 		<icon>$INFO[Skin.String(Home_Custom_Back_Men4_Folder)]</icon>
@@ -2288,7 +2290,7 @@
 		<onclick>-</onclick>
 		<visible>[Skin.HasSetting(Menu_Men4_sub2_act) + !IsEmpty(Skin.String(Menu_Men4_sub2_lab))]</visible>
 	</item>
-	<item id="2403">
+	<item id="2303">
 		<description>Men4Button3</description>
 		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men4_lab)][/COLOR]-$INFO[Skin.String(Menu_Men4_sub3_lab)]</label>
 		<icon>$INFO[Skin.String(Home_Custom_Back_Men4_Folder)]</icon>
@@ -2296,7 +2298,7 @@
 		<onclick>-</onclick>
 		<visible>[Skin.HasSetting(Menu_Men4_sub3_act) + !IsEmpty(Skin.String(Menu_Men4_sub3_lab))]</visible>
 	</item>
-	<item id="2404">
+	<item id="2304">
 		<description>Men4Button4</description>
 		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men4_lab)][/COLOR]-$INFO[Skin.String(Menu_Men4_sub4_lab)]</label>
 		<icon>$INFO[Skin.String(Home_Custom_Back_Men4_Folder)]</icon>
@@ -2306,7 +2308,7 @@
 		<onclick>-</onclick>
 		<visible>[Skin.HasSetting(Menu_Men4_sub4_act) + !IsEmpty(Skin.String(Menu_Men4_sub4_lab))]</visible>
 	</item>
-	<item id="2405">
+	<item id="2305">
 		<description>Men4Button5</description>
 		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men4_lab)][/COLOR]-$INFO[Skin.String(Menu_Men4_sub5_lab)]</label>
 		<icon>$INFO[Skin.String(Home_Custom_Back_Men4_Folder)]</icon>
@@ -2314,7 +2316,7 @@
 		<onclick>-</onclick>
 		<visible>[Skin.HasSetting(Menu_Men4_sub5_act) + !IsEmpty(Skin.String(Menu_Men4_sub5_lab))]</visible>
 	</item>
-	<item id="2406">
+	<item id="2306">
 		<description>Men4Button6</description>
 		<label>[COLOR=selected]$INFO[Skin.String(Menu_Men4_lab)][/COLOR]-$INFO[Skin.String(Menu_Men4_sub6_lab)]</label>
 		<icon>$INFO[Skin.String(Home_Custom_Back_Men4_Folder)]</icon>
@@ -2323,5 +2325,81 @@
 		<visible>[Skin.HasSetting(Menu_Men4_sub6_act) + !IsEmpty(Skin.String(Menu_Men4_sub6_lab))]</visible>
 	</item>
 <!-- Custom Menu 4 End -->
+	<!-- Info rss -->
+	<item id="2401">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Info_lab)][/COLOR]-$INFO[Skin.String(Menu_Info_sub1_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Info_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Info_sub1_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Info_sub1_act)</visible>
+	</item>
+	<item id="2402">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Info_lab)][/COLOR]-$INFO[Skin.String(Menu_Info_sub2_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Info_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Info_sub2_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Info_sub2_act)</visible>
+	</item>
+	<item id="2403">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Info_lab)][/COLOR]-$INFO[Skin.String(Menu_Info_sub3_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Info_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Info_sub3_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Info_sub3_act)</visible>
+	</item>
+	<item id="2404">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Info_lab)][/COLOR]-$INFO[Skin.String(Menu_Info_sub4_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Info_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Info_sub4_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Info_sub4_act)</visible>
+	</item>
+	<item id="2405">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Info_lab)][/COLOR]-$INFO[Skin.String(Menu_Info_sub5_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Info_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Info_sub5_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Info_sub5_act)</visible>
+	</item>
+	<item id="2406">
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Info_lab)][/COLOR]-$INFO[Skin.String(Menu_Info_sub6_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Info_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Info_sub6_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Info_sub6_act)</visible>
+	</item>
+	<item id="2407">
+		<description>SubMenu Opt 1</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Info_lab)][/COLOR]-$INFO[Skin.String(Menu_Info_sub7_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Info_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Info_sub7_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Info_sub7_act)</visible>
+	</item>
+	<item id="2408">
+		<description>SubMenu Opt 2</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Info_lab)][/COLOR]-$INFO[Skin.String(Menu_Info_sub8_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Info_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Info_sub8_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Info_sub8_act)</visible>
+	</item>
+	<item id="2409">
+		<description>SubMenu Opt 3</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Info_lab)][/COLOR]-$INFO[Skin.String(Menu_Info_sub9_lab)]</label>
+		<onclick>-</onclick>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Info_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Info_sub9_back)]</thumb>
+		<visible>Skin.HasSetting(Menu_Info_sub9_act)</visible>
+	</item>
+	<item id="2410">
+		<description>SubMenu Opt 4</description>
+		<label>[COLOR=selected]$INFO[Skin.String(Menu_Info_lab)][/COLOR]-$INFO[Skin.String(Menu_Info_sub10_lab)]</label>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Info_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Info_sub10_back)]</thumb>
+		<onclick>-</onclick>
+		<visible>Skin.HasSetting(Menu_Info_sub10_act)</visible>
+	</item>
+<!-- Inforss End -->
 </include>
 </includes>

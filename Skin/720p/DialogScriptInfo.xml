@@ -10,6 +10,7 @@
 				<width>1100</width>
 				<height>720</height>
 				<texture border="15,0,0,0" flipx="true">MediaBladeSub.png</texture>
+				<include>Top-Level</include>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
@@ -82,6 +83,7 @@
 			<width>846</width>
 			<height>720</height>
 			<texture flipx="true">HomeBlade.png</texture>
+			<include>Top-Level</include>
 		</control>
 		<include>Clock</include>
 	</controls>

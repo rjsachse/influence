@@ -1,3 +1,4 @@
+<window>
 <!-- Carousel by Frost -->
 <includes>
     <include name="CustomCarousel">
@@ -596,6 +597,7 @@
                     <width>50</width>
                     <height>65</height>
                     <texture fallback="Carousel/default.png" flipy="true" diffuse="Carousel/diffuse_mirror.png">$INFO[Container(9016).Listitem(-4).label2]</texture>
+
 
 
 
@@ -1654,3 +1656,4 @@
    
 </includes>
 
+</window>

@@ -1,0 +1,203 @@
+<includes>
+	<include name="T-Level">
+		<include condition="Skin.HasSetting(Trans0)">T-Level0</include>
+		<include condition="Skin.HasSetting(Trans10)">T-Level10</include>
+		<include condition="Skin.HasSetting(Trans20)">T-Level20</include>
+		<include condition="Skin.HasSetting(Trans30)">T-Level30</include>
+		<include condition="Skin.HasSetting(Trans40)">T-Level40</include>
+		<include condition="Skin.HasSetting(Trans50)">T-Level50</include>
+		<include condition="Skin.HasSetting(Trans60)">T-Level60</include>
+		<include condition="Skin.HasSetting(Trans70)">T-Level70</include>
+		<include condition="Skin.HasSetting(Trans80)">T-Level80</include>
+		<include condition="Skin.HasSetting(Trans90)">T-Level90</include>
+		<include condition="Skin.HasSetting(Trans100)">T-Level100</include>
+	</include>
+	<include name="Top-Level">
+		<include condition="Skin.HasSetting(TopTrans0)">T-Level0</include>
+		<include condition="Skin.HasSetting(TopTrans10)">T-Level10</include>
+		<include condition="Skin.HasSetting(TopTrans20)">T-Level20</include>
+		<include condition="Skin.HasSetting(TopTrans30)">T-Level30</include>
+		<include condition="Skin.HasSetting(TopTrans40)">T-Level40</include>
+		<include condition="Skin.HasSetting(TopTrans50)">T-Level50</include>
+		<include condition="Skin.HasSetting(TopTrans60)">T-Level60</include>
+		<include condition="Skin.HasSetting(TopTrans70)">T-Level70</include>
+		<include condition="Skin.HasSetting(TopTrans80)">T-Level80</include>
+		<include condition="Skin.HasSetting(TopTrans90)">T-Level90</include>
+		<include condition="Skin.HasSetting(TopTrans100)">T-Level100</include>
+	</include>
+	<include name="T-Level0">
+		<colordiffuse>18FFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level10">
+		<colordiffuse>18FFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level20">
+		<colordiffuse>2FFFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level30">
+		<colordiffuse>48FFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level40">
+		<colordiffuse>5FFFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level50">
+		<colordiffuse>78FFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level60">
+		<colordiffuse>8FFFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level70">
+		<colordiffuse>A8FFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level80">
+		<colordiffuse>BFFFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level90">
+		<colordiffuse>DFFFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level100">
+		<colordiffuse>FFFFFFFF</colordiffuse>
+	</include>
+        <include name="HomeWidget01">
+		<control type="image">
+			<include>Widgets_Home_Animation</include>
+			<description>background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>250</width>
+			<height>300</height>
+			<texture border="10">RecentAddedNF.png</texture>
+			<include>T-Level</include>
+		</control>
+       </include>
+	<include name="HomeWidget02">
+	<control type="image">
+			<include>Widgets_Home_Animation</include>
+			<posx>-290</posx>
+			<posy>0</posy>
+			<width>500</width>
+			<height>400</height>
+			<texture border="20">ContentPanel.png</texture>
+			<include>T-Level</include>	
+		</control>
+	 </include>
+	 <include name="HomeWidget03">
+		<control type="image">
+			<include>Widgets_Home_Animation</include>
+			<description>background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>210</width>
+			<height>220</height>
+			<texture border="10">RecentAddedNF.png</texture>
+			<include>T-Level</include>
+		</control>
+       </include>
+	 <include name="HomeWidget04">
+		<control type="image">
+			<include>Widgets_Home_Animation</include>
+			<description>background</description>
+			<posx>430</posx>
+			<posy>220</posy>
+			<width>450</width>
+			<height>420</height>
+			<texture border="10">RecentAddedNF.png</texture>
+			<include>T-Level</include>
+		</control>
+       </include>
+	 <include name="HomeVertical01">
+		<control type="image">	
+			<posx>0</posx>
+			<posy>-555</posy>
+			<width>205</width>
+			<height>1800</height>
+			<texture>HomeBlade_middle.png</texture>
+			<include>T-Level</include>
+		</control>
+	</include>
+	<include name="HomeVertical02">
+		<control type="image">
+			<posx>-630</posx>
+			<posy>-250</posy>
+			<width>846</width>
+			<height>720</height>
+			<texture>HomeBlade_top.png</texture>
+			<include>T-Level</include>
+		</control>
+	</include>
+	<include name="HomeVertical03">
+		<control type="image">
+			<posx>-450</posx>
+			<posy>0</posy>
+			<width>846</width>
+			<height>720</height>
+			<colordiffuse>DAFFFFFF</colordiffuse>
+			<texture>HomeBlade_bottom.png</texture>
+			<include>T-Level</include>
+		</control>
+	</include>
+	<include name="HomeVertical04">
+		<control type="image">
+			<posx>370</posx>
+			<posy>63</posy>
+			<width>18</width>
+			<height>18</height>
+			<texture>HomeHasSub.png</texture>
+			<include>T-Level</include>
+			<include>HomeBigVisible</include>
+			<animation effect="fade" start="0" end="100" time="200">Focus</animation>
+			<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
+		</control>
+	</include>
+	<include name="HomeVertical05">
+		<control type="image">
+			<posx>0</posx>
+			<posy>-205</posy>
+			<width>385</width>
+			<height>1130</height>
+			<texture>HomeBlade_middle.png</texture>
+			<include>T-Level</include>
+			<animation effect="slide" end="0,-204" time="300" condition="Container(9000).Row(1)">conditional</animation>
+			<animation effect="slide" end="0,-102" time="300" condition="Container(9000).Row(2)">conditional</animation>
+			<animation effect="slide" end="0,102" time="300" condition="Container(9000).Row(4)">conditional</animation>
+			<animation effect="slide" end="0,204" time="300" condition="Container(9000).Row(5)">conditional</animation>
+		</control>
+	</include>
+	<include name="HomeVertical06">
+		<control type="image">
+			<posx>-450</posx>
+			<posy>0</posy>
+			<width>846</width>
+			<height>720</height>
+			<texture>HomeBlade_top.png</texture>
+			<include>T-Level</include>
+		</control>
+	</include>
+	<include name="SideBladeRight">
+		<control type="image">
+			<posx>26r</posx>
+			<posy>0</posy>
+			<width>846</width>
+			<height>720</height>
+			<texture flipx="true">HomeBlade.png</texture>
+			<include>Top-Level</include>
+			<animation effect="slide" start="26,0" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="26,0" time="200" delay="200" tween="quadratic" easing="out">WindowClose</animation>
+		</control>
+	</include>
+	<include name="SideBladeLeft">
+		<control type="image">
+			<posx>-820</posx>
+			<posy>0</posy>
+			<width>846</width>
+			<height>720</height>
+			<texture>HomeBlade.png</texture>
+			<include>Top-Level</include>
+			<animation effect="slide" start="-26,0" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="-26,0" time="200" delay="200" tween="quadratic" easing="out">WindowClose</animation>
+		</control>
+	</include>
+	
+
+
+</includes>

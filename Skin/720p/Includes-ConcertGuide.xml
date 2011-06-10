@@ -1,0 +1,1714 @@
+<includes>
+	<include name="IncludesHomeConcert">
+		<control type="group">
+			<visible>!Window.IsVisible(Favourites)+ !Window.IsVisible(1117) + !Window.IsVisible(1118)+ !Window.IsVisible(1112)+ !Window.IsVisible(1116) +!Control.HasFocus(23)] + !Control.HasFocus(8010)</visible>
+			<include>VisibleFadeEffect</include>
+			<animation effect="fade" time="300" delay="1000">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+<!-- ConcertGuide-->	<control type="group" id="870">
+				
+				<control type="button" id="390">
+					<visible>[Container(9000).HasFocus(3) + Skin.HasSetting(homepageHideRecentlyMusicAdded)+ !Skin.HasSetting(homepageHideRandomMusicAdded)+!Skin.HasSetting(Menu_InfoMusic_act)]|[Container(9000).HasFocus(3) + Skin.HasSetting(homepageHideRecentlyMusicAdded)+ Skin.HasSetting(homepageHideRandomMusicAdded)+!Skin.HasSetting(Menu_InfoMusic_act)]|[Container(9000).HasFocus(3) + Skin.HasSetting(homepageHideRecentlyMusicAdded)+ !Skin.HasSetting(homepageHideRandomMusicAdded)+Skin.HasSetting(Menu_InfoMusic_act)]</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8002)</onfocus>
+				</control>
+				<control type="button" id="391">
+					<visible>[Container(9000).HasFocus(3) + Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(homepageHideRecentlyMusicAdded)+!Skin.HasSetting(Menu_InfoMusic_act)]|[Container(9000).HasFocus(3) + Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(homepageHideRecentlyMusicAdded)+Skin.HasSetting(Menu_InfoMusic_act)]</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8006)</onfocus>
+				</control>
+				<control type="button" id="392">
+					<visible>[Container(9000).HasFocus(3) + !Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(homepageHideRecentlyMusicAdded)+Skin.HasSetting(Menu_InfoMusic_act)]</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8134)</onfocus>
+				</control>
+				<control type="button" id="393">
+					<visible>[Container(9000).HasFocus(3) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(homepageHideRecentlyMusicAdded)+Skin.HasSetting(Menu_InfoMusic_act)]</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8136)</onfocus>
+				</control>
+			</control>
+			
+				<!--<control type="group">
+				<posx>535r</posx>
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">PosYNextandConcertRaise</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">PosYNextandConcert</include>
+				<visible>!Skin.HasSetting(SearchArtistConcertRss)</visible>
+				<visible>Container(9000).HasFocus(3) + Skin.HasSetting(UseConcertInfo) + Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded)</visible>
+				<visible>!Skin.HasSetting(SearchArtistConcertRss)</visible>
+				<control type="image">
+					<description>background</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>130</height>
+					<texture border="10">RecentAddedNF.png</texture>
+					<include>T-Level</include>
+				</control>
+				<control type="image">
+					<posx>30</posx>
+					<posy>5</posy>
+					<width>160</width>
+					<height>30</height>
+					<texture border="0,2,0,2">MenuItemFO.png</texture>
+					<visible>Control.HasFocus(8064)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>5</posy>
+					<height>30</height>
+					<width>232</width>
+					<label>En Concert</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+				</control>
+				
+				<control type="label">
+					<posx>30</posx>
+					<posy>25</posy>
+					<height>30</height>
+					<align>left</align>
+					<width>225</width>
+					<label>$INFO[Window.Property(NearEvents.1.Artists)]</label>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!Control.HasFocus(8064)</visible>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>30</posy>
+					<height>25</height>
+					<align>left</align>
+					<width>225</width>
+					<label>$INFO[Container(8064).ListItem.Label]</label>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Control.HasFocus(8064)</visible>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>50</posy>
+					<height>25</height>
+					<align>left</align>
+					<width>225</width>
+					<label>$INFO[Window.Property(NearEvents.1.Date)]</label>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!Control.HasFocus(8064)</visible>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>50</posy>
+					<height>25</height>
+					<align>left</align>
+					<width>225</width>
+					<label>$INFO[Container(8064).ListItem.Label2]</label>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Control.HasFocus(8064)</visible>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>70</posy>
+					<height>25</height>
+					<align>left</align>
+					<width>225</width>
+					<label>$INFO[Window.Property(NearEvents.1.Name)]</label>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!Control.HasFocus(8064)</visible>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>70</posy>
+					<height>25</height>
+					<align>left</align>
+					<width>225</width>
+					<label>$INFO[Container(8064).ListItem.Property(Name)]</label>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Control.HasFocus(8064)</visible>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>90</posy>
+					<height>25</height>
+					<align>left</align>
+					<width>225</width>
+					<label>$INFO[Window.Property(NearEvents.1.City)]</label>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!Control.HasFocus(8064)</visible>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>90</posy>
+					<height>25</height>
+					<align>left</align>
+					<width>225</width>
+					<label>$INFO[Container(8064).ListItem.Property(City)]</label>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Control.HasFocus(8064)</visible>
+				</control>
+				<control type="fixedlist" id="8064">
+				
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>130</height>
+					<onup>8009</onup>
+					<ondown>9000</ondown>
+					<orientation>horizontal</orientation>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>300</scrolltime>
+				
+				<itemlayout height="130" width="200">
+			
+			
+				 
+				</itemlayout>
+				
+				<focusedlayout height="130" width="200">
+				   
+				
+				</focusedlayout>
+				<include>ConcertGuideItem</include>
+			</control>
+			</control>
+			<control type="group">
+				<posx>535r</posx>
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">PosYNextandConcertRaise</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">PosYNextandConcert</include>
+				<visible>Skin.HasSetting(SearchArtistConcertRss)</visible>
+				<visible>Container(9000).HasFocus(3) + Skin.HasSetting(UseConcertInfo) + Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded)</visible>
+				<control type="fixedlist" id="8065">
+				
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>130</height>
+					<onup>8009</onup>
+					<ondown>9000</ondown>
+					<orientation>horizontal</orientation>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>300</scrolltime>
+				
+				<itemlayout height="130" width="200">
+			
+			
+				 
+				</itemlayout>
+				
+				<focusedlayout height="130" width="200">
+				   
+				
+				</focusedlayout>
+				<include>LatestSub12Rss</include>
+			</control>
+				<control type="image">
+					<description>background</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>130</height>
+					<texture border="10">RecentAddedNF.png</texture>
+					<include>T-Level</include>
+				</control>
+				<control type="image">
+					<posx>30</posx>
+					<posy>5</posy>
+					<width>160</width>
+					<height>30</height>
+					<texture border="0,2,0,2">MenuItemFO.png</texture>
+					<visible>Control.HasFocus(8065)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="label">
+					<posx>40</posx>
+					<posy>0</posy>
+					<height>30</height>
+					<width>222</width>
+					<label>$INFO[Skin.String(ArtistNameConcertRss)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<onclick>Skin.Reset(SearchArtistConcertRss)</onclick>
+					<onclick>SetFocus(8060)</onclick>
+				</control>
+				<control type="Button" id ="8066">
+					<description>Button back</description>
+					<posx>10</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>20</width>
+					<onleft>9000</onleft>
+					<onright>8063</onright>
+					<onup>9000</onup>
+					<ondown>8063</ondown>
+					<texturenofocus>HomeHasSub1.png</texturenofocus>
+					<texturefocus>HomeHasSub3.png</texturefocus>
+					<align>left</align>
+					<onclick>Skin.Reset(SearchArtistConcertRss)</onclick>
+					<onclick>SetFocus(8063)</onclick>
+				</control>
+				<control type="label">
+					<posx>40</posx>
+					<posy>30</posy>
+					<width>222</width>
+					<height>10</height>
+					<font>font10</font>
+					<textcolor>grey</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Window(Home).Property(12.RSS.1.Title)]</label>
+					<visible>!Control.HasFocus(8065)</visible>
+				</control>
+				<control type="label">
+					<posx>40</posx>
+					<posy>30</posy>
+					<width>222</width>
+					<height>10</height>
+					<font>font10</font>
+					<textcolor>grey</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Container(8065).ListItem.Label]</label>
+					<visible>Control.HasFocus(8065)</visible>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>30</posx>
+					<posy>45</posy>
+					<width>165</width>
+					<height>80</height>
+					<aspectratio>keep</aspectratio>
+					<texture fallback="Rss.png" background="true">$INFO[Window.Property(12.RSS.1.Image)]</texture>
+					<visible>!Control.HasFocus(8065)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>30</posx>
+					<posy>45</posy>
+					<width>165</width>
+					<height>80</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture fallback="Rss.png" background="true">$INFO[Container(8065).ListItem.Thumb]</texture>
+					<visible>Control.HasFocus(8065)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				
+			</control>-->
+		<control type="group">
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)+ !Skin.HasSetting(Menu_InfoMusic_act)]|[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)+ Skin.HasSetting(Menu_InfoMusic_act)+Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded)]|[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)+ Skin.HasSetting(Menu_InfoMusic_act)+!Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded)]|![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]+!Skin.HasSetting(HorizontalMenu)">PosXMovie_TV</include>
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)+ Skin.HasSetting(Menu_InfoMusic_act)+Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded)]">PosXNextAired_TV</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]+Skin.HasSetting(HorizontalMenu)+ ![Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]">PosXNextAired_TV</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]+Skin.HasSetting(HorizontalMenu)+ [Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]">PosXNextAired</include>
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeRaise</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]+!Skin.HasSetting(HorizontalMenu)">PosYNextandConcert</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]+Skin.HasSetting(HorizontalMenu)">HRAI</include>
+				<visible>[!Player.HasAudio + !Player.HasVideo])</visible>
+				<visible>Container(9000).HasFocus(3) + Skin.HasSetting(UseConcertInfo)</visible>
+				<visible>[Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]| [Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]</visible>
+				<include>VisibleFadeEffect</include>
+
+				<include>HomeWidget01</include>
+				<include>Widgets_Home_Animation</include>
+				<visible>!Skin.HasSetting(SearchArtistConcertRss)</visible>
+				<control type="label">
+					<description>Title label</description>
+					<posx>10</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>En concert</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>15</posx>
+					<posy>35</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Window.Property(NearEvents.1.Artists)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!Control.HasFocus(8064)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>15</posx>
+					<posy>35</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Container(8064).ListItem.Label]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Control.HasFocus(8064)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>15</posx>
+					<posy>55</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Window.Property(NearEvents.1.Date)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!Control.HasFocus(8064)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>15</posx>
+					<posy>55</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Container(8064).ListItem.Label2]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Control.HasFocus(8064)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>15</posx>
+					<posy>75</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Window.Property(NearEvents.1.Name)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!Control.HasFocus(8064)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>15</posx>
+					<posy>75</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Container(8064).ListItem.Property(Name)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Control.HasFocus(8064)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>15</posx>
+					<posy>95</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Window.Property(NearEvents.1.City)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!Control.HasFocus(8064)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>15</posx>
+					<posy>95</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Container(8064).ListItem.Property(City)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Control.HasFocus(8064)</visible>
+				</control>
+				<control type="list" id="8064">
+					<posx>0</posx>
+					<posy>150</posy>
+					<width>250</width>
+					<height>142</height>
+					<onleft>9000</onleft>
+					<onright>870</onright>
+					<onup>8064</onup>
+					<ondown>8064</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>0</scrolltime>
+					<itemlayout height="23" width="230">
+						<control type="label">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>230</width>
+							<height>23</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="23" width="230">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>250</width>
+							<height>23</height>
+							<texture border="0,2,0,2">MenuItemFO.png</texture>
+							<visible>Control.HasFocus(8064)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>230</width>
+							<height>23</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<include>ConcertGuideItem</include>
+				</control>
+			</control>
+			<control type="group">
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)+ !Skin.HasSetting(Menu_InfoMusic_act)]|[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)+ Skin.HasSetting(Menu_InfoMusic_act)+Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded)]|[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)+ Skin.HasSetting(Menu_InfoMusic_act)+!Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded)]|![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]+!Skin.HasSetting(HorizontalMenu)">PosXMovie_TV</include>
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)+ Skin.HasSetting(Menu_InfoMusic_act)+Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded)]">PosXNextAired_TV</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]+Skin.HasSetting(HorizontalMenu)+ ![Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]">PosXNextAired_TV</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]+Skin.HasSetting(HorizontalMenu)+ [Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]">PosXNextAired</include>
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeRaise</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]+!Skin.HasSetting(HorizontalMenu)">PosYNextandConcert</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]+Skin.HasSetting(HorizontalMenu)">HRAI</include>
+				<visible>[!Player.HasAudio + !Player.HasVideo]</visible>
+				
+				<visible>Container(9000).HasFocus(3) + Skin.HasSetting(UseConcertInfo)</visible>
+				<visible>[Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]| [Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]</visible>
+				<include>VisibleFadeEffect</include>
+
+				<include>HomeWidget01</include>
+				<include>Widgets_Home_Animation</include>
+				<visible>Skin.HasSetting(SearchArtistConcertRss)</visible>
+				<control type="Button">
+					<description>Title label</description>
+					<posx>50</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Skin.String(ArtistNameConcertRss)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<onclick>Skin.Reset(SearchArtistConcertRss)</onclick>
+					<onclick>SetFocus(8066)</onclick>
+				</control>
+				<control type="Button" id ="8066">
+					<description>Title label</description>
+					<posx>10</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>20</width>
+					<onleft>9000</onleft>
+					<onright>870</onright>
+					<onup>9000</onup>
+					<ondown>8062</ondown>
+					<texturenofocus>HomeHasSub1.png</texturenofocus>
+					<texturefocus>HomeHasSub3.png</texturefocus>
+					<align>left</align>
+					<onclick>Skin.Reset(SearchArtistConcertRss)</onclick>
+					<onclick>SetFocus(8064)</onclick>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<texture fallback="Rss.png" background="true">$INFO[Window.Property(12.RSS.1.Image)]</texture>
+					<visible>!Control.HasFocus(8065)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture fallback="Rss.png" background="true">$INFO[Container(8065).ListItem.Thumb]</texture>
+					<visible>Control.HasFocus(8065)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="list" id="8065">
+					<posx>0</posx>
+					<posy>155</posy>
+					<width>250</width>
+					<height>136</height>
+					<onleft>9000</onleft>
+					<onright>8066</onright>
+					<onup>8065</onup>
+					<ondown>8065</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>0</scrolltime>
+				<itemlayout height="34" width="230">
+						<control type="label">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>230</width>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="34" width="230">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>250</width>
+							<height>23</height>
+							<texture border="0,2,0,2">MenuItemFO.png</texture>
+							<visible>Control.HasFocus(8065)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>230</width>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<include>LatestSub12Rss</include>
+				</control>
+			</control>
+
+		<control type="group">
+				<posx>275r</posx>
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeHorizRaise</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
+				<visible>!Skin.HasSetting(SearchArtistConcertRss)</visible>
+				<visible>Container(9000).HasFocus(3) + Skin.HasSetting(UseConcertInfo) + !Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded)+ !Skin.HasSetting(Menu_InfoMusic_act)+  !Control.HasFocus(23)</visible>
+				
+				<include>VisibleFadeEffect</include>
+
+				<include>HomeWidget01</include>
+				<include>Widgets_Home_Animation</include>
+				<control type="label">
+					<description>Title label</description>
+					<posx>10</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>En concert</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>15</posx>
+					<posy>35</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Window.Property(NearEvents.1.Artists)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!Control.HasFocus(8060)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>15</posx>
+					<posy>35</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Container(8060).ListItem.Label]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Control.HasFocus(8060)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>15</posx>
+					<posy>55</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Window.Property(NearEvents.1.Date)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!Control.HasFocus(8060)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>15</posx>
+					<posy>55</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Container(8060).ListItem.Label2]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Control.HasFocus(8060)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>15</posx>
+					<posy>75</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Window.Property(NearEvents.1.Name)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!Control.HasFocus(8060)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>15</posx>
+					<posy>75</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Container(8060).ListItem.Property(Name)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Control.HasFocus(8060)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>15</posx>
+					<posy>95</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Window.Property(NearEvents.1.City)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!Control.HasFocus(8060)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>15</posx>
+					<posy>95</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Container(8060).ListItem.Property(City)]</label>
+
+
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Control.HasFocus(8060)</visible>
+				</control>
+				<control type="list" id="8060">
+					<posx>0</posx>
+					<posy>150</posy>
+					<width>250</width>
+					<height>142</height>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>8060</onup>
+					<ondown>8060</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>0</scrolltime>
+					<itemlayout height="23" width="230">
+						<control type="label">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>230</width>
+							<height>23</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="23" width="230">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>250</width>
+							<height>23</height>
+							<texture border="0,2,0,2">MenuItemFO.png</texture>
+							<visible>Control.HasFocus(8060)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>230</width>
+							<height>23</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<include>ConcertGuideItem</include>
+				</control>
+			</control>
+			<control type="group">
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">PosXMovie</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">PosXMovie_TV</include>
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeRaise</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
+				
+				<visible>Container(9000).HasFocus(3) + Skin.HasSetting(UseConcertInfo) </visible>
+				<visible>[Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]</visible>
+				<include>VisibleFadeEffect</include>
+
+				<include>HomeWidget01</include>
+				<include>Widgets_Home_Animation</include>
+				<visible>!Skin.HasSetting(SearchArtistConcertRss)</visible>
+				<control type="label">
+					<description>Title label</description>
+					<posx>10</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>En concert</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>15</posx>
+					<posy>35</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Window.Property(NearEvents.1.Artists)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!Control.HasFocus(8061)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>15</posx>
+					<posy>35</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Container(8061).ListItem.Label]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Control.HasFocus(8061)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>15</posx>
+					<posy>55</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Window.Property(NearEvents.1.Date)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!Control.HasFocus(8061)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>15</posx>
+					<posy>55</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Container(8061).ListItem.Label2]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Control.HasFocus(8061)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>15</posx>
+					<posy>75</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Window.Property(NearEvents.1.Name)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!Control.HasFocus(8061)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>15</posx>
+					<posy>75</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Container(8061).ListItem.Property(Name)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Control.HasFocus(8061)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>15</posx>
+					<posy>95</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Window.Property(NearEvents.1.City)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!Control.HasFocus(8061)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>15</posx>
+					<posy>95</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Container(8061).ListItem.Property(City)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Control.HasFocus(8061)</visible>
+				</control>
+				<control type="list" id="8061">
+					<posx>0</posx>
+					<posy>150</posy>
+					<width>250</width>
+					<height>142</height>
+					<onleft>9000</onleft>
+					<onright>870</onright>
+					<onup>8061</onup>
+					<ondown>8061</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>0</scrolltime>
+					<itemlayout height="23" width="230">
+						<control type="label">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>230</width>
+							<height>23</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="23" width="230">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>250</width>
+							<height>23</height>
+							<texture border="0,2,0,2">MenuItemFO.png</texture>
+							<visible>Control.HasFocus(8061)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>230</width>
+							<height>23</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<include>ConcertGuideItem</include>
+				</control>
+			</control>
+			<control type="group">
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">PosXMovie</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">PosXMovie_TV</include>
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeRaise</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
+				
+				<visible>Container(9000).HasFocus(3) + Skin.HasSetting(UseConcertInfo) </visible>
+				<visible>[Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]</visible>
+				<include>VisibleFadeEffect</include>
+
+				<include>HomeWidget01</include>
+				<include>Widgets_Home_Animation</include>
+				<visible>Skin.HasSetting(SearchArtistConcertRss)</visible>
+				<control type="Button">
+					<description>Title label</description>
+					<posx>50</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Skin.String(ArtistNameConcertRss)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<onclick>Skin.Reset(SearchArtistConcertRss)</onclick>
+					<onclick>SetFocus(8061)</onclick>
+				</control>
+				<control type="Button" id ="8064">
+					<description>Title label</description>
+					<posx>10</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>20</width>
+					<onleft>9000</onleft>
+					<onright>870</onright>
+					<onup>9000</onup>
+					<ondown>8062</ondown>
+					<texturenofocus>HomeHasSub1.png</texturenofocus>
+					<texturefocus>HomeHasSub3.png</texturefocus>
+					<align>left</align>
+					<onclick>Skin.Reset(SearchArtistConcertRss)</onclick>
+					<onclick>SetFocus(8061)</onclick>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<texture fallback="Rss.png" background="true">$INFO[Window.Property(12.RSS.1.Image)]</texture>
+					<visible>!Control.HasFocus(8062)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture fallback="Rss.png" background="true">$INFO[Container(8062).ListItem.Thumb]</texture>
+					<visible>Control.HasFocus(8062)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="list" id="8062">
+					<posx>0</posx>
+					<posy>155</posy>
+					<width>250</width>
+					<height>136</height>
+					<onleft>9000</onleft>
+					<onright>8064</onright>
+					<onup>8062</onup>
+					<ondown>8062</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>0</scrolltime>
+				<itemlayout height="34" width="230">
+						<control type="label">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>230</width>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="34" width="230">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>250</width>
+							<height>23</height>
+							<texture border="0,2,0,2">MenuItemFO.png</texture>
+							<visible>Control.HasFocus(8062)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>230</width>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<include>LatestSub12Rss</include>
+				</control>
+			</control>
+			<control type="group">
+				<posx>275r</posx>
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeHorizRaise</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
+				<visible>Skin.HasSetting(SearchArtistConcertRss)</visible>
+				<visible>Container(9000).HasFocus(3) + Skin.HasSetting(UseConcertInfo) + !Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded)+ !Skin.HasSetting(Menu_InfoMusic_act)+  !Control.HasFocus(23)</visible>
+				<include>VisibleFadeEffect</include>
+
+				<include>HomeWidget01</include>
+				<include>Widgets_Home_Animation</include>
+				<control type="label">
+					<description>Title label</description>
+					<posx>50</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Skin.String(ArtistNameConcertRss)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<onclick>Skin.Reset(SearchArtistConcertRss)</onclick>
+					<onclick>SetFocus(8060)</onclick>
+				</control>
+				<control type="Button" id ="8065">
+					<description>Title label</description>
+					<posx>10</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>20</width>
+					<onleft>9000</onleft>
+					<onright>8063</onright>
+					<onup>9000</onup>
+					<ondown>8063</ondown>
+					<texturenofocus>HomeHasSub1.png</texturenofocus>
+					<texturefocus>HomeHasSub3.png</texturefocus>
+					<align>left</align>
+					<onclick>Skin.Reset(SearchArtistConcertRss)</onclick>
+					<onclick>SetFocus(8060)</onclick>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<texture fallback="Rss.png" background="true">$INFO[Window.Property(12.RSS.1.Image)]</texture>
+					<visible>!Control.HasFocus(8063)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture fallback="Rss.png" background="true">$INFO[Container(8063).ListItem.Thumb]</texture>
+					<visible>Control.HasFocus(8063)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="list" id="8063">
+					<posx>0</posx>
+					<posy>155</posy>
+					<width>250</width>
+					<height>136</height>
+					<onleft>9000</onleft>
+					<onright>8065</onright>
+					<onup>8063</onup>
+					<ondown>8063</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>0</scrolltime>
+				<itemlayout height="34" width="230">
+						<control type="label">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>230</width>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="34" width="230">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>250</width>
+							<height>23</height>
+							<texture border="0,2,0,2">MenuItemFO.png</texture>
+							<visible>Control.HasFocus(8063)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>2</posy>
+							<width>230</width>
+							<height>10</height>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>230</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<include>LatestSub12Rss</include>
+				</control>
+			</control>
+		</control>
+	</include>
+		<include name="ConcertGuideItem">
+						<content>
+							<item id="1">
+				<label>$INFO[Window.Property(NearEvents.1.Artists)]</label>
+				<label2>$INFO[Window.Property(NearEvents.1.Date)]</label2>
+				<property name="Name">$INFO[Window.Property(NearEvents.1.Name)]</property>
+				<property name="City">$INFO[Window.Property(NearEvents.1.City)]</property>
+				<property name="Country">$INFO[Window.Property(NearEvents.1.Country)]</property>
+				<onclick>Skin.SetString(ArtistNameConcertRss,$INFO[Window.Property(NearEvents.1.Artists)])</onclick>
+				<onclick>Skin.SetBool(SearchArtistConcertRss)</onclick>
+				<include condition="[Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]">ChoiceConcert01</include>
+				<include condition=" Skin.HasSetting(UseConcertInfo) + !Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded)+ !Skin.HasSetting(Menu_InfoMusic_act)">ChoiceConcert02</include>
+				<include condition=" [Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]| [Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]">ChoiceConcert03</include>
+				<onclick>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=12,feed=http://pipes.yahoo.com/pipes/pipe.run?_id=9aeedcfb616c374c2b0a18bc31479dfd&amp;_render=rss&amp;filterinput=video&amp;maininput=$INFO[Window.Property(NearEvents.1.Artists)]+music,limit=10)</onclick>
+				<visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),0)</visible>
+			</item>
+			<item id="2">
+				<label>$INFO[Window.Property(NearEvents.2.Artists)]</label>
+				<label2>$INFO[Window.Property(NearEvents.2.Date)]</label2>
+				<property name="Name">$INFO[Window.Property(NearEvents.2.Name)]</property>
+				<property name="City">$INFO[Window.Property(NearEvents.2.City)]</property>
+				<property name="Country">$INFO[Window.Property(NearEvents.2.Country)]</property>
+				<onclick>Skin.SetString(ArtistNameConcertRss,$INFO[Window.Property(NearEvents.2.Artists)])</onclick>
+				<onclick>Skin.SetBool(SearchArtistConcertRss)</onclick>
+				<include condition="[Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]">ChoiceConcert01</include>
+				<include condition=" Skin.HasSetting(UseConcertInfo) + !Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded)+ !Skin.HasSetting(Menu_InfoMusic_act)">ChoiceConcert02</include>
+				<include condition=" [Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]| [Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]">ChoiceConcert03</include>
+				<onclick>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=12,feed=http://pipes.yahoo.com/pipes/pipe.run?_id=9aeedcfb616c374c2b0a18bc31479dfd&amp;_render=rss&amp;filterinput=video&amp;maininput=$INFO[Window.Property(NearEvents.2.Artists)]+music,limit=10)</onclick>
+				<visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),1)</visible>
+			</item>
+			<item id="3">
+				<label>$INFO[Window.Property(NearEvents.3.Artists)]</label>
+				<label2>$INFO[Window.Property(NearEvents.3.Date)]</label2>
+				<property name="Name">$INFO[Window.Property(NearEvents.3.Name)]</property>
+				<property name="City">$INFO[Window.Property(NearEvents.3.City)]</property>
+				<property name="Country">$INFO[Window.Property(NearEvents.3.Country)]</property>
+				<onclick>Skin.SetString(ArtistNameConcertRss,$INFO[Window.Property(NearEvents.3.Artists)])</onclick>
+				<onclick>Skin.SetBool(SearchArtistConcertRss)</onclick>
+				<include condition="[Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]">ChoiceConcert01</include>
+				<include condition=" Skin.HasSetting(UseConcertInfo) + !Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded)+ !Skin.HasSetting(Menu_InfoMusic_act)">ChoiceConcert02</include>
+				<include condition=" [Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]| [Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]">ChoiceConcert03</include>
+				<onclick>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=12,feed=http://pipes.yahoo.com/pipes/pipe.run?_id=9aeedcfb616c374c2b0a18bc31479dfd&amp;_render=rss&amp;filterinput=video&amp;maininput=$INFO[Window.Property(NearEvents.3.Artists)]+music,limit=10)</onclick>
+				<visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),2)</visible>
+			</item>
+			<item id="4">
+				<label>$INFO[Window.Property(NearEvents.4.Artists)]</label>
+				<label2>$INFO[Window.Property(NearEvents.4.Date)]</label2>
+				<property name="Name">$INFO[Window.Property(NearEvents.4.Name)]</property>
+				<property name="City">$INFO[Window.Property(NearEvents.4.City)]</property>
+				<property name="Country">$INFO[Window.Property(NearEvents.4.Country)]</property>
+				<onclick>Skin.SetString(ArtistNameConcertRss,$INFO[Window.Property(NearEvents.4.Artists)])</onclick>
+				<onclick>Skin.SetBool(SearchArtistConcertRss)</onclick>
+				<include condition="[Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]">ChoiceConcert01</include>
+				<include condition=" Skin.HasSetting(UseConcertInfo) + !Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded)+ !Skin.HasSetting(Menu_InfoMusic_act)">ChoiceConcert02</include>
+				<include condition=" [Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]| [Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]">ChoiceConcert03</include>
+				<onclick>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=12,feed=http://pipes.yahoo.com/pipes/pipe.run?_id=9aeedcfb616c374c2b0a18bc31479dfd&amp;_render=rss&amp;filterinput=video&amp;maininput=$INFO[Window.Property(NearEvents.4.Artists)]+music,limit=10)</onclick>
+				<visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),3)</visible>
+			</item>
+			<item id="5">
+				<label>$INFO[Window.Property(NearEvents.5.Artists)]</label>
+				<label2>$INFO[Window.Property(NearEvents.5.Date)]</label2>
+				<property name="Name">$INFO[Window.Property(NearEvents.5.Name)]</property>
+				<property name="City">$INFO[Window.Property(NearEvents.5.City)]</property>
+				<property name="Country">$INFO[Window.Property(NearEvents.5.Country)]</property>
+				<onclick>Skin.SetString(ArtistNameConcertRss,$INFO[Window.Property(NearEvents.5.Artists)])</onclick>
+				<onclick>Skin.SetBool(SearchArtistConcertRss)</onclick>
+				<include condition="[Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]">ChoiceConcert01</include>
+				<include condition=" Skin.HasSetting(UseConcertInfo) + !Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded)+ !Skin.HasSetting(Menu_InfoMusic_act)">ChoiceConcert02</include>
+				<include condition=" [Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]| [Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]">ChoiceConcert03</include>
+				<onclick>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=12,feed=http://pipes.yahoo.com/pipes/pipe.run?_id=9aeedcfb616c374c2b0a18bc31479dfd&amp;_render=rss&amp;filterinput=video&amp;maininput=$INFO[Window.Property(NearEvents.5.Artists)]+music,limit=10)</onclick>
+				<visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),4)</visible>
+			</item>
+			<item id="6">
+				<label>$INFO[Window.Property(NearEvents.6.Artists)]</label>
+				<label2>$INFO[Window.Property(NearEvents.6.Date)]</label2>
+				<property name="Name">$INFO[Window.Property(NearEvents.6.Name)]</property>
+				<property name="City">$INFO[Window.Property(NearEvents.6.City)]</property>
+				<property name="Country">$INFO[Window.Property(NearEvents.6.Country)]</property>
+				<onclick>Skin.SetString(ArtistNameConcertRss,$INFO[Window.Property(NearEvents.6.Artists)])</onclick>
+				<onclick>Skin.SetBool(SearchArtistConcertRss)</onclick>
+				<include condition="[Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]">ChoiceConcert01</include>
+				<include condition=" Skin.HasSetting(UseConcertInfo) + !Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded)+ !Skin.HasSetting(Menu_InfoMusic_act)">ChoiceConcert02</include>
+				<include condition=" [Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]| [Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]">ChoiceConcert03</include>
+				<onclick>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=12,feed=http://pipes.yahoo.com/pipes/pipe.run?_id=9aeedcfb616c374c2b0a18bc31479dfd&amp;_render=rss&amp;filterinput=video&amp;maininput=$INFO[Window.Property(NearEvents.6.Artists)]+music,limit=10)</onclick>
+				<visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),5)</visible>
+			</item>
+			<item id="7">
+				<label>$INFO[Window.Property(NearEvents.7.Artists)]</label>
+				<label2>$INFO[Window.Property(NearEvents.7.Date)]</label2>
+				<property name="Name">$INFO[Window.Property(NearEvents.7.Name)]</property>
+				<property name="City">$INFO[Window.Property(NearEvents.7.City)]</property>
+				<property name="Country">$INFO[Window.Property(NearEvents.7.Country)]</property>
+				<onclick>Skin.SetString(ArtistNameConcertRss,$INFO[Window.Property(NearEvents.7.Artists)])</onclick>
+				<onclick>Skin.SetBool(SearchArtistConcertRss)</onclick>
+				<include condition="[Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]">ChoiceConcert01</include>
+				<include condition=" Skin.HasSetting(UseConcertInfo) + !Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded)+ !Skin.HasSetting(Menu_InfoMusic_act)">ChoiceConcert02</include>
+				<include condition=" [Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]| [Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]">ChoiceConcert03</include>
+				<onclick>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=12,feed=http://pipes.yahoo.com/pipes/pipe.run?_id=9aeedcfb616c374c2b0a18bc31479dfd&amp;_render=rss&amp;filterinput=video&amp;maininput=$INFO[Window.Property(NearEvents.7.Artists)]+music,limit=10)</onclick>
+				<visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),6)</visible>
+			</item>
+			<item id="8">
+				<label>$INFO[Window.Property(NearEvents.8.Artists)]</label>
+				<label2>$INFO[Window.Property(NearEvents.8.Date)]</label2>
+				<property name="Name">$INFO[Window.Property(NearEvents.8.Name)]</property>
+				<property name="City">$INFO[Window.Property(NearEvents.8.City)]</property>
+				<property name="Country">$INFO[Window.Property(NearEvents.8.Country)]</property>
+				<onclick>Skin.SetString(ArtistNameConcertRss,$INFO[Window.Property(NearEvents.8.Artists)])</onclick>
+				<onclick>Skin.SetBool(SearchArtistConcertRss)</onclick>
+				<include condition="[Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]">ChoiceConcert01</include>
+				<include condition=" Skin.HasSetting(UseConcertInfo) + !Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded)+ !Skin.HasSetting(Menu_InfoMusic_act)">ChoiceConcert02</include>
+				<include condition=" [Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]| [Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]">ChoiceConcert03</include>
+				<onclick>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=12,feed=http://pipes.yahoo.com/pipes/pipe.run?_id=9aeedcfb616c374c2b0a18bc31479dfd&amp;_render=rss&amp;filterinput=video&amp;maininput=$INFO[Window.Property(NearEvents.8.Artists)]+music,limit=10)</onclick>
+				<visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),7)</visible>
+			</item>
+			<item id="9">
+				<label>$INFO[Window.Property(NearEvents.9.Artists)]</label>
+				<label2>$INFO[Window.Property(NearEvents.9.Date)]</label2>
+				<property name="Name">$INFO[Window.Property(NearEvents.9.Name)]</property>
+				<property name="City">$INFO[Window.Property(NearEvents.9.City)]</property>
+				<property name="Country">$INFO[Window.Property(NearEvents.9.Country)]</property>
+				<onclick>Skin.SetString(ArtistNameConcertRss,$INFO[Window.Property(NearEvents.9.Artists)])</onclick>
+				<onclick>Skin.SetBool(SearchArtistConcertRss)</onclick>
+				<include condition="[Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]">ChoiceConcert01</include>
+				<include condition=" Skin.HasSetting(UseConcertInfo) + !Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded)+ !Skin.HasSetting(Menu_InfoMusic_act)">ChoiceConcert02</include>
+				<include condition=" [Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]| [Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]">ChoiceConcert03</include>
+				<onclick>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=12,feed=http://pipes.yahoo.com/pipes/pipe.run?_id=9aeedcfb616c374c2b0a18bc31479dfd&amp;_render=rss&amp;filterinput=video&amp;maininput=$INFO[Window.Property(NearEvents.9.Artists)]+music,limit=10)</onclick>
+				<visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),8)</visible>
+			</item>
+			<item id="10">
+				<label>$INFO[Window.Property(NearEvents.10.Artists)]</label>
+				<label2>$INFO[Window.Property(NearEvents.10.Date)]</label2>
+				<property name="Name">$INFO[Window.Property(NearEvents.10.Name)]</property>
+				<property name="City">$INFO[Window.Property(NearEvents.10.City)]</property>
+				<property name="Country">$INFO[Window.Property(NearEvents.10.Country)]</property>
+				<onclick>Skin.SetString(ArtistNameConcertRss,$INFO[Window.Property(NearEvents.10.Artists)])</onclick>
+				<onclick>Skin.SetBool(SearchArtistConcertRss)</onclick>
+				<include condition="[Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]">ChoiceConcert01</include>
+				<include condition=" Skin.HasSetting(UseConcertInfo) + !Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded)+ !Skin.HasSetting(Menu_InfoMusic_act)">ChoiceConcert02</include>
+				<include condition=" [Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(Menu_InfoMusic_act)] | [Skin.HasSetting(homepageHideRecentlyMusicAdded) + !Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)] | [!Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]| [Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]">ChoiceConcert03</include>
+				<onclick>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=12,feed=http://pipes.yahoo.com/pipes/pipe.run?_id=9aeedcfb616c374c2b0a18bc31479dfd&amp;_render=rss&amp;filterinput=video&amp;maininput=$INFO[Window.Property(NearEvents.10.Artists)]+music,limit=10)</onclick>
+				<visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),9)</visible>
+			</item>
+		</content>
+		<!-- FIN INCLUDE -->	
+	</include>
+	<include name="LatestSub12Rss">
+					<content>
+						
+						<item id="1">
+							<label>$INFO[Window(Home).Property(12.RSS.1.Title)]</label>
+							<label2>$INFO[Window(Home).Property(12.RSS.1.ImageCount)]</label2>
+							<thumb>$INFO[Window(Home).Property(12.RSS.1.Image)]</thumb>
+							<onclick>SetProperty(RSS.Desc,&quot;$LOCALIZE[31548]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Title,&quot;$INFO[Window(Home).Property(12.RSS.1.Title)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Desc,&quot;$INFO[Window(Home).Property(12.RSS.1.Desc)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Date,&quot;$INFO[Window(Home).Property(12.RSS.1.Date)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Channel,&quot;$INFO[Window(Home).Property(12.RSS.1.Channel)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Image,Rss.png)</onclick>
+							<onclick>SetProperty(RSS.Image,&quot;$INFO[Window(Home).Property(12.RSS.1.Image)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.MultiImages,&quot;$INFO[Window(Home).Property(12.RSS.1.MultiImages)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.SlideShowable,&quot;$INFO[Window(Home).Property(12.RSS.1.SlideShowable)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.ImageCount,&quot;$INFO[Window(Home).Property(12.RSS.1.ImageCount)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Media,&quot;$INFO[Window(Home).Property(12.RSS.1.Title)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Media,&quot;$INFO[Window(Home).Property(12.RSS.1.Media)]&quot;)</onclick>
+							<onclick>ActivateWindow(1112)</onclick>
+							
+						</item>
+						<item id="2">
+							<label>$INFO[Window(Home).Property(12.RSS.2.Title)]</label>
+							<label2>$INFO[Window(Home).Property(12.RSS.2.ImageCount)]</label2>
+							<thumb>$INFO[Window(Home).Property(12.RSS.2.Image)]</thumb>
+							<onclick>SetProperty(RSS.Desc,&quot;$LOCALIZE[31548]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Title,&quot;$INFO[Window(Home).Property(12.RSS.2.Title)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Desc,&quot;$INFO[Window(Home).Property(12.RSS.2.Desc)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Date,&quot;$INFO[Window(Home).Property(12.RSS.2.Date)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Channel,&quot;$INFO[Window(Home).Property(12.RSS.2.Channel)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Image,Rss.png)</onclick>
+							<onclick>SetProperty(RSS.Image,&quot;$INFO[Window(Home).Property(12.RSS.2.Image)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.MultiImages,&quot;$INFO[Window(Home).Property(12.RSS.2.MultiImages)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.SlideShowable,&quot;$INFO[Window(Home).Property(12.RSS.2.SlideShowable)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.ImageCount,&quot;$INFO[Window(Home).Property(12.RSS.2.ImageCount)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Media,&quot;$INFO[Window(Home).Property(12.RSS.1.Title)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Media,&quot;$INFO[Window(Home).Property(12.RSS.2.Media)]&quot;)</onclick>
+							<onclick>ActivateWindow(1112)</onclick>
+							
+						</item>
+						<item id="3">
+							<label>$INFO[Window(Home).Property(12.RSS.3.Title)]</label>
+							<label2>$INFO[Window(Home).Property(12.RSS.3.ImageCount)]</label2>
+							<thumb>$INFO[Window(Home).Property(12.RSS.3.Image)]</thumb>
+							<onclick>SetProperty(RSS.Desc,&quot;$LOCALIZE[31548]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Title,&quot;$INFO[Window(Home).Property(12.RSS.3.Title)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Desc,&quot;$INFO[Window(Home).Property(12.RSS.3.Desc)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Date,&quot;$INFO[Window(Home).Property(12.RSS.3.Date)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Channel,&quot;$INFO[Window(Home).Property(12.RSS.3.Channel)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Image,Rss.png)</onclick>
+							<onclick>SetProperty(RSS.Image,&quot;$INFO[Window(Home).Property(12.RSS.3.Image)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.MultiImages,&quot;$INFO[Window(Home).Property(12.RSS.3.MultiImages)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.SlideShowable,&quot;$INFO[Window(Home).Property(12.RSS.3.SlideShowable)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.ImageCount,&quot;$INFO[Window(Home).Property(12.RSS.3.ImageCount)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Media,&quot;$INFO[Window(Home).Property(12.RSS.1.Title)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Media,&quot;$INFO[Window(Home).Property(12.RSS.3.Media)]&quot;)</onclick>
+							<onclick>ActivateWindow(1112)</onclick>
+							
+						</item>
+						<item id="4">
+							<label>$INFO[Window(Home).Property(12.RSS.4.Title)]</label>
+							<label2>$INFO[Window(Home).Property(12.RSS.4.ImageCount)]</label2>
+							<thumb>$INFO[Window(Home).Property(12.RSS.4.Image)]</thumb>
+							<onclick>SetProperty(RSS.Desc,&quot;$LOCALIZE[31548]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Title,&quot;$INFO[Window(Home).Property(12.RSS.4.Title)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Desc,&quot;$INFO[Window(Home).Property(12.RSS.4.Desc)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Date,&quot;$INFO[Window(Home).Property(12.RSS.4.Date)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Channel,&quot;$INFO[Window(Home).Property(12.RSS.4.Channel)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Image,Rss.png)</onclick>
+							<onclick>SetProperty(RSS.Image,&quot;$INFO[Window(Home).Property(12.RSS.4.Image)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.MultiImages,&quot;$INFO[Window(Home).Property(12.RSS.4.MultiImages)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.SlideShowable,&quot;$INFO[Window(Home).Property(12.RSS.4.SlideShowable)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.ImageCount,&quot;$INFO[Window(Home).Property(12.RSS.4.ImageCount)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Media,&quot;$INFO[Window(Home).Property(12.RSS.1.Title)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Media,&quot;$INFO[Window(Home).Property(12.RSS.4.Media)]&quot;)</onclick>
+							<onclick>ActivateWindow(1112)</onclick>
+							
+						</item>
+						<item id="5">
+							<label>$INFO[Window(Home).Property(12.RSS.5.Title)]</label>
+							<label2>$INFO[Window(Home).Property(12.RSS.5.ImageCount)]</label2>
+							<thumb>$INFO[Window(Home).Property(12.RSS.5.Image)]</thumb>
+							<onclick>SetProperty(RSS.Desc,&quot;$LOCALIZE[31548]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Title,&quot;$INFO[Window(Home).Property(12.RSS.5.Title)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Desc,&quot;$INFO[Window(Home).Property(12.RSS.5.Desc)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Date,&quot;$INFO[Window(Home).Property(12.RSS.5.Date)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Channel,&quot;$INFO[Window(Home).Property(12.RSS.5.Channel)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Image,Rss.png)</onclick>
+							<onclick>SetProperty(RSS.Image,&quot;$INFO[Window(Home).Property(12.RSS.5.Image)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.MultiImages,&quot;$INFO[Window(Home).Property(12.RSS.5.MultiImages)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.SlideShowable,&quot;$INFO[Window(Home).Property(12.RSS.5.SlideShowable)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.ImageCount,&quot;$INFO[Window(Home).Property(12.RSS.5.ImageCount)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Media,&quot;$INFO[Window(Home).Property(12.RSS.1.Title)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Media,&quot;$INFO[Window(Home).Property(12.RSS.5.Media)]&quot;)</onclick>
+							<onclick>ActivateWindow(1112)</onclick>
+							
+						</item>
+						<item id="6">
+							<label>$INFO[Window(Home).Property(12.RSS.6.Title)]</label>
+							<label2>$INFO[Window(Home).Property(12.RSS.6.ImageCount)]</label2>
+							<thumb>$INFO[Window(Home).Property(12.RSS.6.Image)]</thumb>
+							<onclick>SetProperty(RSS.Desc,&quot;$LOCALIZE[31548]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Title,&quot;$INFO[Window(Home).Property(12.RSS.6.Title)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Desc,&quot;$INFO[Window(Home).Property(12.RSS.6.Desc)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Date,&quot;$INFO[Window(Home).Property(12.RSS.6.Date)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Channel,&quot;$INFO[Window(Home).Property(12.RSS.6.Channel)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Image,Rss.png)</onclick>
+							<onclick>SetProperty(RSS.Image,&quot;$INFO[Window(Home).Property(12.RSS.6.Image)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.MultiImages,&quot;$INFO[Window(Home).Property(12.RSS.6.MultiImages)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.SlideShowable,&quot;$INFO[Window(Home).Property(12.RSS.6.SlideShowable)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.ImageCount,&quot;$INFO[Window(Home).Property(12.RSS.6.ImageCount)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Media,&quot;$INFO[Window(Home).Property(12.RSS.1.Title)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Media,&quot;$INFO[Window(Home).Property(12.RSS.6.Media)]&quot;)</onclick>
+							<onclick>ActivateWindow(1112)</onclick>
+							
+						</item>
+						<item id="7">
+							<label>$INFO[Window(Home).Property(12.RSS.7.Title)]</label>
+							<label2>$INFO[Window(Home).Property(12.RSS.7.ImageCount)]</label2>
+							<thumb>$INFO[Window(Home).Property(12.RSS.7.Image)]</thumb>
+							<onclick>SetProperty(RSS.Desc,&quot;$LOCALIZE[31548]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Title,&quot;$INFO[Window(Home).Property(12.RSS.7.Title)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Desc,&quot;$INFO[Window(Home).Property(12.RSS.7.Desc)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Date,&quot;$INFO[Window(Home).Property(12.RSS.7.Date)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Channel,&quot;$INFO[Window(Home).Property(12.RSS.7.Channel)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Image,Rss.png)</onclick>
+							<onclick>SetProperty(RSS.Image,&quot;$INFO[Window(Home).Property(12.RSS.7.Image)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.MultiImages,&quot;$INFO[Window(Home).Property(12.RSS.7.MultiImages)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.SlideShowable,&quot;$INFO[Window(Home).Property(12.RSS.7.SlideShowable)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.ImageCount,&quot;$INFO[Window(Home).Property(12.RSS.7.ImageCount)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Media,&quot;$INFO[Window(Home).Property(12.RSS.1.Title)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Media,&quot;$INFO[Window(Home).Property(12.RSS.7.Media)]&quot;)</onclick>
+							<onclick>ActivateWindow(1112)</onclick>
+							
+						</item>
+						<item id="8">
+							<label>$INFO[Window(Home).Property(12.RSS.8.Title)]</label>
+							<label2>$INFO[Window(Home).Property(12.RSS.8.ImageCount)]</label2>
+							<thumb>$INFO[Window(Home).Property(12.RSS.8.Image)]</thumb>
+							<onclick>SetProperty(RSS.Desc,&quot;$LOCALIZE[31548]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Title,&quot;$INFO[Window(Home).Property(12.RSS.8.Title)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Desc,&quot;$INFO[Window(Home).Property(12.RSS.8.Desc)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Date,&quot;$INFO[Window(Home).Property(12.RSS.8.Date)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Channel,&quot;$INFO[Window(Home).Property(12.RSS.8.Channel)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Image,Rss.png)</onclick>
+							<onclick>SetProperty(RSS.Image,&quot;$INFO[Window(Home).Property(12.RSS.8.Image)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.MultiImages,&quot;$INFO[Window(Home).Property(12.RSS.8.MultiImages)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.SlideShowable,&quot;$INFO[Window(Home).Property(12.RSS.8.SlideShowable)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.ImageCount,&quot;$INFO[Window(Home).Property(12.RSS.8.ImageCount)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Media,&quot;$INFO[Window(Home).Property(12.RSS.1.Title)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Media,&quot;$INFO[Window(Home).Property(12.RSS.8.Media)]&quot;)</onclick>
+							<onclick>ActivateWindow(1112)</onclick>
+							
+						</item>
+						<item id="9">
+							<label>$INFO[Window(Home).Property(12.RSS.9.Title)]</label>
+							<label2>$INFO[Window(Home).Property(12.RSS.9.ImageCount)]</label2>
+							<thumb>$INFO[Window(Home).Property(12.RSS.9.Image)]</thumb>
+							<onclick>SetProperty(RSS.Desc,&quot;$LOCALIZE[31548]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Title,&quot;$INFO[Window(Home).Property(12.RSS.9.Title)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Desc,&quot;$INFO[Window(Home).Property(12.RSS.9.Desc)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Date,&quot;$INFO[Window(Home).Property(12.RSS.9.Date)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Channel,&quot;$INFO[Window(Home).Property(12.RSS.9.Channel)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Image,Rss.png)</onclick>
+							<onclick>SetProperty(RSS.Image,&quot;$INFO[Window(Home).Property(12.RSS.9.Image)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.MultiImages,&quot;$INFO[Window(Home).Property(12.RSS.9.MultiImages)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.SlideShowable,&quot;$INFO[Window(Home).Property(12.RSS.9.SlideShowable)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.ImageCount,&quot;$INFO[Window(Home).Property(12.RSS.9.ImageCount)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Media,&quot;$INFO[Window(Home).Property(12.RSS.1.Title)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Media,&quot;$INFO[Window(Home).Property(12.RSS.9.Media)]&quot;)</onclick>
+							<onclick>ActivateWindow(1112)</onclick>
+							
+						</item>
+						<item id="10">
+							<label>$INFO[Window(Home).Property(12.RSS.10.Title)]</label>
+							<label2>$INFO[Window(Home).Property(12.RSS.10.ImageCount)]</label2>
+							<thumb>$INFO[Window(Home).Property(12.RSS.10.Image)]</thumb>
+							<onclick>SetProperty(RSS.Desc,&quot;$LOCALIZE[31548]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Title,&quot;$INFO[Window(Home).Property(12.RSS.10.Title)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Desc,&quot;$INFO[Window(Home).Property(12.RSS.10.Desc)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Date,&quot;$INFO[Window(Home).Property(12.RSS.10.Date)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Channel,&quot;$INFO[Window(Home).Property(12.RSS.10.Channel)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Image,Rss.png)</onclick>
+							<onclick>SetProperty(RSS.Image,&quot;$INFO[Window(Home).Property(12.RSS.10.Image)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.MultiImages,&quot;$INFO[Window(Home).Property(12.RSS.10.MultiImages)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.SlideShowable,&quot;$INFO[Window(Home).Property(12.RSS.10.SlideShowable)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.ImageCount,&quot;$INFO[Window(Home).Property(12.RSS.10.ImageCount)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Media,&quot;$INFO[Window(Home).Property(12.RSS.1.Title)]&quot;)</onclick>
+							<onclick>SetProperty(RSS.Media,&quot;$INFO[Window(Home).Property(12.RSS.10.Media)]&quot;)</onclick>
+							<onclick>ActivateWindow(1112)</onclick>
+							
+						</item>
+					</content>
+				</include>
+				<include name="ChoiceConcert01">
+					<onclick>SetFocus(8062)</onclick>
+				</include>
+				<include name="ChoiceConcert02">
+					<onclick>SetFocus(8063)</onclick>
+				</include>
+				<include name="ChoiceConcert03">
+					<onclick>SetFocus(8065)</onclick>
+				</include>
+</includes>

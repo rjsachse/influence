@@ -23,6 +23,7 @@
 				<width>1280</width>
 				<height>270</height>
 				<texture>HomeNowPlayingBack.png</texture>
+				<include>T-Level</include>
 			</control>
 			<control type="image">
 				<description>media info background image</description>
@@ -30,7 +31,7 @@
 				<posy>270r</posy>
 				<width>1280</width>
 				<height>270</height>
-				<colordiffuse>88FFFFFF</colordiffuse>
+				<include>T-Level</include>
 				<texture>HomeNowPlayingBack.png</texture>
 			</control>
 			<control type="image">

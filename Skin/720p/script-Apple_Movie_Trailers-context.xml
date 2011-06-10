@@ -14,6 +14,7 @@
 			<width>370</width>
 			<height>50</height>
 			<texture border="45,45,45,0">DialogContextTop.png</texture>
+			<include>Top-Level</include>
 		</control>
 		<control type="image" id="998">
 			<description>background image</description>
@@ -21,6 +22,7 @@
 			<posy>0</posy>
 			<width>370</width>
 			<texture border="45,0,45,0">DialogContextMiddle.png</texture>
+			<include>Top-Level</include>
 		</control>
 		<control type="image" id="999">
 			<description>background bottom image</description>
@@ -28,6 +30,7 @@
 			<width>370</width>
 			<height>50</height>
 			<texture border="45,0,45,49">DialogContextBottom.png</texture>
+			<include>Top-Level</include>
 		</control>
 		<!-- ** Required ** Do not change <description> or <type> -->
 		<control type="button" id="1001">

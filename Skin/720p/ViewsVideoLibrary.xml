@@ -54,7 +54,7 @@
 						<height>152</height>
 						<aspectratio>stretch</aspectratio>
 						<texture>black-back.png</texture>
-						<colordiffuse>AAFFFFFF</colordiffuse>
+						<include>T-Level</include>
 					</control>
 					<control type="image">
 						<posx>2</posx>
@@ -154,6 +154,7 @@
 				<width>920</width>
 				<height>410</height>
 				<texture border="20">ContentPanel_Dark.png</texture>
+				<include>T-Level</include>
 			</control>
 			<include>MovieSetsThumbsView508</include>
 			<include>MovieSetsPlotsView508</include>
@@ -436,14 +437,15 @@
 					<posy>30</posy>
 					<width>850</width>
 					<height>120</height>
-					<font>font12</font>
+					<include condition="Skin.HasSetting(SizePlot)">ViewSizePlot</include>
+					<include condition="!Skin.HasSetting(SizePlot)">NoViewSizePlot</include>
 					<align>justify</align>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.Plot]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 			</control>
-			<!--
+			
 			<control type="grouplist">
 				<description>Media Codec Flagging Images</description>
 				<posx>40</posx>
@@ -467,7 +469,7 @@
 				<orientation>horizontal</orientation>
 				<include>VideoMPAAFlaggingConditions</include>
 			</control>
-			-->
+			
 		</control>
 	</include>
 	<include name="MediaListView3">
@@ -480,6 +482,7 @@
 				<width>600</width>
 				<height>421</height>
 				<texture border="20">RecentAddedNF.png</texture>
+				<include>T-Level</include>
 			</control>			
 			<control type="list" id="503">
 				<posx>660</posx>
@@ -653,6 +656,7 @@
 						<width>610</width>
 						<height>274</height>
 						<texture border="20">RecentAddedNF.png</texture>
+						<include>T-Level</include>
 					</control>	
 					<control type="label">
 						<description>Episodes txt</description>
@@ -739,7 +743,8 @@
 						<posy>250</posy>
 						<width>600</width>
 						<height>160</height>
-						<font>font12</font>
+						<include condition="Skin.HasSetting(SizePlot)">ViewSizePlot</include>
+						<include condition="!Skin.HasSetting(SizePlot)">NoViewSizePlot</include>
 						<align>justify</align>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Plot]</label>
@@ -773,7 +778,7 @@
 						<height>350</height>
 						<aspectratio>stretch</aspectratio>
 						<texture>GlassOverlay.png</texture>
-						<colordiffuse>AAFFFFFF</colordiffuse>
+						<include>T-Level</include>
 					</control>
 					<control type="image">
 						<posx>8</posx>
@@ -851,7 +856,7 @@
 						<height>350</height>
 						<aspectratio>stretch</aspectratio>
 						<texture>GlassOverlay.png</texture>
-						<colordiffuse>AAFFFFFF</colordiffuse>
+						<include>T-Level</include>
 					</control>
 					<control type="image">
 						<posx>8</posx>
@@ -949,6 +954,7 @@
 						<width>610</width>
 						<height>215</height>
 						<texture border="20">RecentAddedNF.png</texture>
+						<include>T-Level</include>
 					</control>	
 					<control type="label">
 						<description>INFO txt</description>
@@ -977,7 +983,8 @@
 						<posy>240</posy>
 						<width>600</width>
 						<height>140</height>
-						<font>font12</font>
+						<include condition="Skin.HasSetting(SizePlot)">ViewSizePlot</include>
+						<include condition="!Skin.HasSetting(SizePlot)">NoViewSizePlot</include>
 						<align>justify</align>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Plot]</label>
@@ -1011,7 +1018,7 @@
 						<height>350</height>
 						<aspectratio>stretch</aspectratio>
 						<texture>GlassOverlay.png</texture>
-						<colordiffuse>AAFFFFFF</colordiffuse>
+						<include>T-Level</include>
 					</control>
 					<control type="image">
 						<posx>8</posx>
@@ -1032,6 +1039,7 @@
 						<width>300</width>
 						<height>420</height>
 						<texture border="20">RecentAddedNF.png</texture>
+						<include>T-Level</include>
 					</control>				
 					<control type="textbox">
 						<description>Description Value for Movie</description>
@@ -1039,7 +1047,8 @@
 						<posy>80</posy>
 						<width>270</width>
 						<height>370</height>
-						<font>font12</font>
+						<include condition="Skin.HasSetting(SizePlot)">ViewSizePlot</include>
+						<include condition="!Skin.HasSetting(SizePlot)">NoViewSizePlot</include>
 						<align>justify</align>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Plot]</label>
@@ -1052,7 +1061,8 @@
 						<posy>80</posy>
 						<width>270</width>
 						<height>370</height>
-						<font>font12</font>
+						<include condition="Skin.HasSetting(SizePlot)">ViewSizePlot</include>
+						<include condition="!Skin.HasSetting(SizePlot)">NoViewSizePlot</include>
 						<align>justify</align>
 						<textcolor>white</textcolor>
 						<pagecontrol>7770</pagecontrol>
@@ -1257,6 +1267,7 @@
 				<width>600</width>
 				<height>621</height>
 				<texture border="20">RecentAddedNF.png</texture>
+				<include>T-Level</include>
 			</control>	
 			<control type="list" id="504">
 				<posx>660</posx>
@@ -1478,6 +1489,7 @@
 						<width>610</width>
 						<height>240</height>
 						<texture border="20">RecentAddedNF.png</texture>
+						<include>T-Level</include>
 					</control>	
 					<visible>!Skin.HasSetting(VideoLibraryFanartView504)</visible>
 					<control type="label">
@@ -1541,7 +1553,8 @@
 						<posy>250</posy>
 						<width>600</width>
 						<height>160</height>
-						<font>font12</font>
+						<include condition="Skin.HasSetting(SizePlot)">ViewSizePlot</include>
+						<include condition="!Skin.HasSetting(SizePlot)">NoViewSizePlot</include>
 						<align>justify</align>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Plot]</label>
@@ -1558,6 +1571,7 @@
 						<width>610</width>
 						<height>411</height>
 						<texture border="20">RecentAddedNF.png</texture>
+						<include>T-Level</include>
 					</control>	
 					<control type="label">
 						<description>Aired txt</description>
@@ -1644,7 +1658,8 @@
 						<posy>275</posy>
 						<width>600</width>
 						<height>290</height>
-						<font>font12</font>
+						<include condition="Skin.HasSetting(SizePlot)">ViewSizePlot</include>
+						<include condition="!Skin.HasSetting(SizePlot)">NoViewSizePlot</include>
 						<align>justify</align>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Plot]</label>
@@ -1661,6 +1676,7 @@
 						<width>610</width>
 						<height>200</height>
 						<texture border="20">RecentAddedNF.png</texture>
+						<include>T-Level</include>
 					</control>	
 					<control type="label">
 						<description>Genre txt</description>
@@ -1723,7 +1739,8 @@
 						<posy>275</posy>
 						<width>600</width>
 						<height>100</height>
-						<font>font12</font>
+						<include condition="Skin.HasSetting(SizePlot)">ViewSizePlot</include>
+						<include condition="!Skin.HasSetting(SizePlot)">NoViewSizePlot</include>
 						<align>justify</align>
 						<textcolor>white</textcolor>
 						<label>THR3 $INFO[ListItem.Plot]</label>
@@ -1783,6 +1800,7 @@
 						<width>610</width>
 						<height>412</height>
 						<texture border="20">RecentAddedNF.png</texture>
+						<include>T-Level</include>
 					</control>	
 					<control type="label">
 						<description>Duration txt</description>
@@ -1889,7 +1907,8 @@
 						<posy>275</posy>
 						<width>600</width>
 						<height>290</height>
-						<font>font12</font>
+						<include condition="Skin.HasSetting(SizePlot)">ViewSizePlot</include>
+						<include condition="!Skin.HasSetting(SizePlot)">NoViewSizePlot</include>
 						<align>justify</align>
 						<textcolor>white</textcolor>
 						<pagecontrol>7770</pagecontrol>
@@ -1960,6 +1979,7 @@
 						<width>610</width>
 						<height>220</height>
 						<texture border="20">RecentAddedNF.png</texture>
+						<include>T-Level</include>
 					</control>	
 					<control type="image">
 						<posx>0</posx>
@@ -2029,7 +2049,8 @@
 						<posy>280</posy>
 						<width>600</width>
 						<height>120</height>
-						<font>font12</font>
+						<include condition="Skin.HasSetting(SizePlot)">ViewSizePlot</include>
+						<include condition="!Skin.HasSetting(SizePlot)">NoViewSizePlot</include>
 						<align>justify</align>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Plot]</label>
@@ -2210,6 +2231,7 @@
 						<width>610</width>
 						<height>206</height>
 						<texture border="20">RecentAddedNF.png</texture>
+						<include>T-Level</include>
 					</control>			
 					<control type="image">
 						<posx>0</posx>
@@ -2279,7 +2301,8 @@
 						<posy>290</posy>
 						<width>600</width>
 						<height>120</height>
-						<font>font12</font>
+						<include condition="Skin.HasSetting(SizePlot)">ViewSizePlot</include>
+						<include condition="!Skin.HasSetting(SizePlot)">NoViewSizePlot</include>
 						<align>justify</align>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Plot]</label>

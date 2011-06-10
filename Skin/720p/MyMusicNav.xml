@@ -5,7 +5,7 @@
 	<visible>!Skin.HasSetting(kiosk)</visible>
 	<controls>
 		<control type="group">
-			<include>CustomView Fanart</include>
+			<include>CustomViewFanart</include>
 			<include>CommonMusicBackground</include>
 			<include>Window_OpenClose_Animation</include>		
 			<control type="image">
@@ -28,6 +28,18 @@
 				<fadetime>FanartCrossfadeTime</fadetime>
 				<visible>!Skin.HasSetting(MusicLibraryFanart) + !IsEmpty(Fanart.Image)</visible>
 			</control>
+			<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true">special://skin/backgrounds/GenreFanart/$INFO[ListItem.Label,,.jpg]</texture>
+			<aspectratio>scale</aspectratio>
+			<fadetime>FanartCrossfadeTime</fadetime>
+			<include>VisibleFadeEffect</include>
+			
+			<visible>Container.Content(Genres)</visible>
+		</control>
 		</control>
 		<include>CommonMediaPlayingBackground</include>
 		<control type="group">
@@ -38,6 +50,7 @@
 				<width>1280</width>
 				<height>720</height>
 				<texture border="20">black-back.png</texture>
+				<include>T-Level</include>
 				<include>VisibleFadeEffect</include>
 				<visible>Control.IsVisible(50) | Control.IsVisible(500)</visible>
 			</control>
@@ -47,6 +60,7 @@
 				<width>1280</width>
 				<height>128</height>
 				<texture>floor.png</texture>
+				<include>T-Level</include>
 				<include>VisibleFadeEffect</include>
 				<visible>Control.IsVisible(50) | Control.IsVisible(500) | Control.IsVisible(509)</visible>
 			</control>
@@ -59,6 +73,7 @@
 					<width>750</width>
 					<height>600</height>
 					<texture border="20">ContentPanel.png</texture>
+					<include>T-Level</include>
 				</control>
 				<control type="image">
 					<posx>50</posx>
@@ -67,6 +82,7 @@
 					<height>600</height>
 					<aspectratio aligny="top">keep</aspectratio>
 					<texture diffuse="diffuse_mirror3.png" flipy="true" border="20">ContentPanel.png</texture>
+					<include>T-Level</include>
 				</control>
 			</control>
 			<control type="group">
@@ -78,6 +94,7 @@
 					<width>1130</width>
 					<height>600</height>
 					<texture border="20">ContentPanel.png</texture>
+					<include>T-Level</include>
 				</control>
 				<control type="image">
 					<posx>75</posx>
@@ -86,6 +103,7 @@
 					<height>600</height>
 					<aspectratio aligny="top">keep</aspectratio>
 					<texture diffuse="diffuse_mirror3.png" flipy="true" border="20">ContentPanel.png</texture>
+					<include>T-Level</include>
 				</control>
 			</control>
 			<control type="image">
@@ -94,6 +112,7 @@
 				<width>1280</width>
 				<height>725</height>
 				<texture border="0,5,0,0">ContentPanel4.png</texture>
+				<include>T-Level</include>
 				<include>VisibleFadeEffect</include>
 				<visible>Control.IsVisible(506) | Control.IsVisible(511) | Control.IsVisible(512) | Control.IsVisible(513) | Control.IsVisible(550)</visible>
 			</control>
@@ -126,6 +145,7 @@
 					<width>1</width>
 					<height>720</height>
 					<texture>MediaBladeSub_Part1.png</texture>
+					<include>Top-Level</include>
 					<animation effect="zoom" start="0,0,1,720" end="0,0,229,720" time="300" tween="quadratic" easing="out" condition="Control.HasFocus(98) | ControlGroup(9001).HasFocus">Conditional</animation>
 				</control>
 				<control type="image">
@@ -134,6 +154,7 @@
 					<width>12</width>
 					<height>720</height>
 					<texture>MediaBladeSub_Part2.png</texture>
+					<include>Top-Level</include>
 					<animation effect="slide" end="228,0" time="300" tween="quadratic" easing="out" condition="Control.HasFocus(98) | ControlGroup(9001).HasFocus">Conditional</animation>
 				</control>
 			</control>
@@ -162,6 +183,7 @@
 					<width>40</width>
 					<height>40</height>
 					<texture>MediaSubSet.png</texture>
+					
 				</control>
 				<control type="grouplist" id="9010">
 					<posx>10</posx>
@@ -293,7 +315,9 @@
 					<onright>50</onright>
 					<onup>99</onup>
 					<ondown>98</ondown>
+					<include condition="Skin.HasSetting(UseLastFMSlideShow)">RunlastFmSlideShow</include>
 				</control>
+				
 				<control type="radiobutton" id="98">
 					<description>Extra Options</description>
 					<hitrect x="0" y="160" w="265" h="40" />
@@ -339,15 +363,16 @@
 			<animation effect="slide" end="-510,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 			<animation effect="slide" start="-510,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
 			<control type="image">
-				<posx>0</posx>
+				<posx>-200</posx>
 				<posy>0</posy>
 				<width>250</width>
 				<height>35</height>
 				<texture border="0,0,32,0">header.png</texture>
+				<include>T-Level</include>
 			</control>
 			<control type="label">
 				<include>WindowTitleCommons</include>
-				<posx>220</posx>
+				<posx>20</posx>
 				<label>$LOCALIZE[20389]</label>
 			</control>
 		</control>
@@ -359,15 +384,16 @@
 			<animation effect="slide" end="-510,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 			<animation effect="slide" start="-510,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
 			<control type="image">
-				<posx>0</posx>
+				<posx>-200</posx>
 				<posy>0</posy>
 				<width>250</width>
 				<height>35</height>
 				<texture border="0,0,32,0">header.png</texture>
+				<include>T-Level</include>
 			</control>
 			<control type="label">
 				<include>WindowTitleCommons</include>
-				<posx>220</posx>
+				<posx>20</posx>
 				<label>$LOCALIZE[133]</label>
 			</control>
 		</control>
@@ -379,18 +405,21 @@
 			<animation effect="slide" end="-510,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 			<animation effect="slide" start="-510,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
 			<control type="image">
-				<posx>0</posx>
+				<posx>-200</posx>
 				<posy>0</posy>
 				<width>250</width>
 				<height>35</height>
 				<texture border="0,0,32,0">header.png</texture>
+				<include>T-Level</include>
 			</control>
 			<control type="label">
 				<include>WindowTitleCommons</include>
-				<posx>220</posx>
+				<posx>20</posx>
 				<label>$LOCALIZE[134]</label>
 			</control>
 		</control>
 		<include condition="!Skin.HasSetting(HideTopScreen)">MyMusicTopScreen</include>
+		<include>WindowTitleHomeButton</include>
+		<include>Clock</include>
 	</controls>
 </window>

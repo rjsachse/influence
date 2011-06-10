@@ -15,6 +15,7 @@
 				<width>400</width>
 				<height>720</height>
 				<texture border="15,0,0,0" flipx="true">HomeBladeSub.png</texture>
+				<include>Top-Level</include>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>

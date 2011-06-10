@@ -9,6 +9,7 @@
 			<width>1280</width>
 			<height>130</height>
 			<texture>black-back.png</texture>
+			<include>T-Level</include>
 		</control>
 		<control type="label" id="10">
 			<description>row 1 label</description>

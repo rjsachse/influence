@@ -30,6 +30,7 @@
 				<width>1100</width>
 				<height>640</height>
 				<texture border="20">DialogBack.png</texture>
+				<include>Top-Level</include>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
@@ -171,6 +172,7 @@
 				<width>790</width>
 				<height>618</height>
 				<texture border="5">black-back2.png</texture>
+				<include>Top-Level</include>
 			</control>
 			<control type="image">
 				<posx>268</posx>
@@ -179,6 +181,7 @@
 				<height>100</height>
 				<aspectratio>stretch</aspectratio>
 				<texture>GlassTitleBar.png</texture>
+				<include>Top-Level</include>
 			</control>
 			<control type="label">
 				<description>header label</description>
@@ -324,6 +327,7 @@
 				<width>790</width>
 				<height>118</height>
 				<texture border="5">black-back2.png</texture>
+				<include>Top-Level</include>
 			</control>
 			<control type="textbox">
 				<description>Appearance Description</description>

@@ -156,7 +156,7 @@
                     <label>$INFO[Window.Property(MapList.1.ShortTitle)]</label>
                     <onleft>2000</onleft>
                     <onright>5202</onright>
-                    <onup>5100</onup>
+                    <onup>13200</onup>
                     <ondown>5100</ondown>
                     <visible>!IsEmpty(Window.Property(MapList.1.ShortTitle))</visible>
                     <onfocus>SetProperty(CurrentMapList,1)</onfocus>
@@ -169,7 +169,7 @@
                     <label>$INFO[Window.Property(MapList.2.ShortTitle)]</label>
                     <onleft>5201</onleft>
                     <onright>5203</onright>
-                    <onup>5100</onup>
+                    <onup>13200</onup>
                     <ondown>5100</ondown>
                     <visible>!IsEmpty(Window.Property(MapList.2.ShortTitle))</visible>
                     <onfocus>SetProperty(CurrentMapList,2)</onfocus>
@@ -182,7 +182,7 @@
                     <label>$INFO[Window.Property(MapList.3.ShortTitle)]</label>
                     <onleft>5202</onleft>
                     <onright>5201</onright>
-                    <onup>5100</onup>
+                    <onup>13200</onup>
                     <ondown>5100</ondown>
                     <visible>!IsEmpty(Window.Property(MapList.3.ShortTitle))</visible>
                     <onfocus>SetProperty(CurrentMapList,3)</onfocus>

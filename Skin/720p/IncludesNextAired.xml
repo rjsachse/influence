@@ -1,29 +1,50 @@
 <includes>
 	<include name="IncludesHomeNextAired">
 		<control type="group">
-			<visible>!Window.IsVisible(Favourites)+ !Window.IsVisible(1117) + !Window.IsVisible(4577)</visible>
+			<visible>!Window.IsVisible(Favourites)+ !Window.IsVisible(1117) + !Window.IsVisible(1118)+ !Window.IsVisible(1112)+ !Window.IsVisible(1116) +!Control.HasFocus(23)] + !Control.HasFocus(8010)</visible>
 			<include>VisibleFadeEffect</include>
 			<animation effect="fade" time="300" delay="1000">WindowOpen</animation>
 			<animation effect="fade" time="200">WindowClose</animation>
+			
 <!-- Nextaired-->	<control type="group" id="870">
 				
 				<control type="button" id="370">
-					<visible>Container(9000).HasFocus(11) + Skin.HasSetting(homepageHideRecentlyTvShowsAdded)</visible>
+					<visible>Container(9000).HasFocus(11) + Skin.HasSetting(homepageHideRecentlyTvShowsAdded)+!Skin.HasSetting(Menu_InfoTVShows_act)|Container(9000).HasFocus(11) + Skin.HasSetting(homepageHideRecentlyTvShowsAdded)+Skin.HasSetting(Menu_InfoTVShows_act)+ !Skin.HasSetting(homepageHideRandomTvShowsAdded)</visible>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<onfocus>SetFocus(8001)</onfocus>
 				</control>
 				<control type="button" id="371">
-					<visible>Container(9000).HasFocus(11) + Skin.HasSetting(homepageHideRandomTvShowsAdded)</visible>
+					<visible>Container(9000).HasFocus(11) + Skin.HasSetting(homepageHideRandomTvShowsAdded)+ !Skin.HasSetting(homepageHideRecentlyTvShowsAdded)+!Skin.HasSetting(Menu_InfoTVShows_act)</visible>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<onfocus>SetFocus(8007)</onfocus>
 				</control>
+				<control type="button" id="372">
+					<visible>Container(9000).HasFocus(11) + Skin.HasSetting(homepageHideRandomTvShowsAdded) + Skin.HasSetting(homepageHideRecentlyTvShowsAdded)+Skin.HasSetting(Menu_InfoTVShows_act)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8132)</onfocus>
+				</control>
+				<control type="button" id="372">
+					<visible>Container(9000).HasFocus(11) + Skin.HasSetting(homepageHideRandomTvShowsAdded) + !Skin.HasSetting(homepageHideRecentlyTvShowsAdded)+Skin.HasSetting(Menu_InfoTVShows_act)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8007)</onfocus>
+				</control>
+				<control type="button" id="373">
+					<visible>Container(9000).HasFocus(11) + !Skin.HasSetting(homepageHideRandomTvShowsAdded) + !Skin.HasSetting(homepageHideRecentlyTvShowsAdded)+Skin.HasSetting(Menu_InfoTVShows_act)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8130)</onfocus>
+				</control>
+				
 			</control>
 			
-				<control type="group">
+			<!--	<control type="group">
 				<posx>535r</posx>
-				<posy>358</posy>
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">PosYNextandConcertRaise</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">PosYNextandConcert</include>
 				<visible>Container(9000).HasFocus(11) + Skin.HasSetting(UseNextAired) + Skin.HasSetting(homepageHideRecentlyTvShowsAdded) + Skin.HasSetting(homepageHideRandomTvShowsAdded)</visible>
 				<control type="image">
 					<description>background</description>
@@ -32,6 +53,16 @@
 					<width>250</width>
 					<height>130</height>
 					<texture border="10">RecentAddedNF.png</texture>
+					<include>T-Level</include>
+				</control>
+				<control type="image">
+					<posx>30</posx>
+					<posy>5</posy>
+					<width>160</width>
+					<height>30</height>
+					<texture border="0,2,0,2">MenuItemFO.png</texture>
+					<visible>Control.HasFocus(8022)</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="label">
 					<posx>30</posx>
@@ -54,7 +85,16 @@
 					<height>80</height>
 					<aspectratio>keep</aspectratio>
 					<texture diffuse="showcasebackdrop.png">$INFO[Window(Home).Property(NextAired.1.Showpath),,logo.png]</texture>
-					<visible>!Skin.HasSetting(UseNextAiredClearart) </visible>
+					<visible>!Skin.HasSetting(UseNextAiredClearart) + !Control.HasFocus(8022) </visible>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>20</posy>
+					<width>165</width>
+					<height>80</height>
+					<aspectratio>keep</aspectratio>
+					<texture diffuse="showcasebackdrop.png">$INFO[Container(8022).ListItem.Thumb,,logo.png]</texture>
+					<visible>!Skin.HasSetting(UseNextAiredClearart) + Control.HasFocus(8022) </visible>
 				</control>
 				<control type="image">
 					<posx>10</posx>
@@ -63,7 +103,16 @@
 					<height>80</height>
 					<aspectratio>keep</aspectratio>
 					<texture diffuse="showcasebackdrop.png">$INFO[Window(Home).Property(NextAired.1.Showpath),,clearart.png]</texture>
-					<visible>Skin.HasSetting(UseNextAiredClearart) </visible>
+					<visible>Skin.HasSetting(UseNextAiredClearart) + !Control.HasFocus(8022)  </visible>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>20</posy>
+					<width>165</width>
+					<height>80</height>
+					<aspectratio>keep</aspectratio>
+					<texture diffuse="showcasebackdrop.png">$INFO[Container(8022).ListItem.Thumb,,clearart.png]</texture>
+					<visible>Skin.HasSetting(UseNextAiredClearart) + Control.HasFocus(8022)  </visible>
 				</control>
 				<control type="image">
 					<posx>150</posx>
@@ -71,7 +120,15 @@
 					<width>88</width>
 					<height>60</height>
 					<texture diffuse="showcasebackdrop.png">$INFO[Window(Home).Property(NextAired.1.network),flagging/Studios/,.png]</texture>
-					
+					<visible>!Control.HasFocus(8022)  </visible>
+				</control>
+				<control type="image">
+					<posx>150</posx>
+					<posy>-10</posy>
+					<width>88</width>
+					<height>60</height>
+					<texture diffuse="showcasebackdrop.png">$INFO[Container(8022).ListItem.ActualIcon]</texture>
+					<visible>Control.HasFocus(8022)  </visible>
 				</control>
 				<control type="label">
 					<posx>30</posx>
@@ -84,26 +141,260 @@
 					<font>font12</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
+					<visible>!Control.HasFocus(8022)  </visible>
 				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>95</posy>
+					<height>25</height>
+					<align>left</align>
+					<width>355</width>
+					<label>$INFO[Container(8022).ListItem.Label]</label>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Control.HasFocus(8022)  </visible>
+				</control>
+				<control type="fixedlist" id="8022">
 				
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>200</height>
+					<onup>8009</onup>
+					<ondown>9000</ondown>
+					<orientation>horizontal</orientation>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>300</scrolltime>
+				
+				<itemlayout height="240" width="200">
+			
+			
+				 
+				</itemlayout>
+				
+				<focusedlayout height="240" width="200">
+				   
+				
+				</focusedlayout>
+				<include>NextAiredItem</include>
 			</control>
-		
+		</control>-->
+		<control type="group">
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)+ !Skin.HasSetting(Menu_InfoTVShows_act)]|[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)+ Skin.HasSetting(Menu_InfoTVShows_act)+Skin.HasSetting(homepageHideRecentlyTvShowsAdded) + !Skin.HasSetting(homepageHideRandomTvShowsAdded)]|[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)+ Skin.HasSetting(Menu_InfoTVShows_act)+!Skin.HasSetting(homepageHideRecentlyTvShowsAdded) + Skin.HasSetting(homepageHideRandomTvShowsAdded)]|![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]+!Skin.HasSetting(HorizontalMenu)">PosXMovie_TV</include>
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)+ Skin.HasSetting(Menu_InfoTVShows_act)+Skin.HasSetting(homepageHideRecentlyTvShowsAdded) + Skin.HasSetting(homepageHideRandomTvShowsAdded)]">PosXNextAired_TV</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]+Skin.HasSetting(HorizontalMenu)+ ![Skin.HasSetting(homepageHideRecentlyTvShowsAdded) + Skin.HasSetting(homepageHideRandomTvShowsAdded) + Skin.HasSetting(Menu_InfoTVShows_act)]">PosXNextAired_TV</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]+Skin.HasSetting(HorizontalMenu)+ [Skin.HasSetting(homepageHideRecentlyTvShowsAdded) + Skin.HasSetting(homepageHideRandomTvShowsAdded) + Skin.HasSetting(Menu_InfoTVShows_act)]">PosXNextAired</include>
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeRaise</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]+!Skin.HasSetting(HorizontalMenu)">PosYNextandConcert</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]+Skin.HasSetting(HorizontalMenu)">HRAI</include>
+				<visible>Library.HasContent(TVShows)</visible>
+				<visible>[!Player.HasAudio + !Player.HasVideo]</visible>
+				<visible>Container(9000).HasFocus(11) + Skin.HasSetting(UseNextAired)</visible>
+				<visible>[Skin.HasSetting(homepageHideRecentlyTvShowsAdded) + Skin.HasSetting(homepageHideRandomTvShowsAdded) + !Skin.HasSetting(Menu_InfoTVShows_act)] | [Skin.HasSetting(homepageHideRecentlyTvShowsAdded) + !Skin.HasSetting(homepageHideRandomTvShowsAdded) + Skin.HasSetting(Menu_InfoTVShows_act)] | [!Skin.HasSetting(homepageHideRecentlyTvShowsAdded) + Skin.HasSetting(homepageHideRandomTvShowsAdded) + Skin.HasSetting(Menu_InfoTVShows_act)]| [Skin.HasSetting(homepageHideRecentlyTvShowsAdded) + Skin.HasSetting(homepageHideRandomTvShowsAdded) + Skin.HasSetting(Menu_InfoTVShows_act)]</visible>
+				<include>VisibleFadeEffect</include>
+
+				<include>HomeWidget01</include>
+				<include>Widgets_Home_Animation</include>
+				<control type="label">
+					<description>Title label</description>
+					<posx>10</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$LOCALIZE[35140]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>160</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Window(Home).Property(NextAired.1.shortime)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!Control.HasFocus(8023)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>160</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$INFO[Container(8023).ListItem.Label2]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Control.HasFocus(8023)</visible>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>0</posx>
+					<posy>10</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Window(Home).Property(NextAired.1.Network),flagging/Studios/,.png]</texture>
+					<visible>!Control.HasFocus(8023)+ !Skin.HasSetting(UseNextAiredClearart) </visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Window(Home).Property(NextAired.1.Showpath),,logo.png]</texture>
+					<visible>!Control.HasFocus(8023)+ !Skin.HasSetting(UseNextAiredClearart) </visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>0</posx>
+					<posy>10</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture background="true">$INFO[Container(8023).ListItem.ActualIcon]</texture>
+					<visible>Control.HasFocus(8023)+ !Skin.HasSetting(UseNextAiredClearart) </visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture background="true">$INFO[Container(8023).ListItem.Thumb,,logo.png]</texture>
+					<visible>Control.HasFocus(8023)+ !Skin.HasSetting(UseNextAiredClearart) </visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>-20</posx>
+					<posy>140</posy>
+					<width>115</width>
+					<height>60</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Window(Home).Property(NextAired.1.Network),flagging/Studios/,.png]</texture>
+					<visible>!Control.HasFocus(8023)+ Skin.HasSetting(UseNextAiredClearart) </visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Window(Home).Property(NextAired.1.Showpath),,clearart.png]</texture>
+					<visible>!Control.HasFocus(8023)+ Skin.HasSetting(UseNextAiredClearart) </visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>-20</posx>
+					<posy>140</posy>
+					<width>115</width>
+					<height>60</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture background="true">$INFO[Container(8023).ListItem.ActualIcon]</texture>
+					<visible>Control.HasFocus(8023)+ Skin.HasSetting(UseNextAiredClearart) </visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<description>Main Icon</description>
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>230</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture background="true">$INFO[Container(8023).ListItem.Thumb,,clearart.png]</texture>
+					<visible>Control.HasFocus(8023)+ Skin.HasSetting(UseNextAiredClearart) </visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="list" id="8023">
+					<posx>0</posx>
+					<posy>200</posy>
+					<width>250</width>
+					<height>92</height>
+					<onleft>9000</onleft>
+					<onright>870</onright>
+					<onup>8023</onup>
+					<ondown>8023</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>0</scrolltime>
+					<itemlayout height="23" width="230">
+						<control type="label">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>230</width>
+							<height>23</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="23" width="230">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>250</width>
+							<height>23</height>
+							<texture border="0,2,0,2">MenuItemFO.png</texture>
+							<visible>Control.HasFocus(8023)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>230</width>
+							<height>23</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<include>NextAiredItem</include>
+				</control>
+			</control>
 		<control type="group">
 				<posx>275r</posx>
 				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeHorizRaise</include>
 				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
 				<visible>Library.HasContent(TVShows)</visible>
-				<visible>Container(9000).HasFocus(11) + Skin.HasSetting(UseNextAired) + !Skin.HasSetting(homepageHideRecentlyTvShowsAdded) + !Skin.HasSetting(homepageHideRandomTvShowsAdded) +  !Control.HasFocus(23)</visible>
+				<visible>Container(9000).HasFocus(11) + Skin.HasSetting(UseNextAired) + !Skin.HasSetting(homepageHideRecentlyTvShowsAdded) + !Skin.HasSetting(homepageHideRandomTvShowsAdded) + !Skin.HasSetting(Menu_InfoTVShows_act) +  !Control.HasFocus(23)</visible>
 				<include>VisibleFadeEffect</include>
 
-				<control type="image">
-					<description>background</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>250</width>
-					<height>300</height>
-					<texture border="10">RecentAddedNF.png</texture>
-				</control>
+				<include>HomeWidget01</include>
+				<include>Widgets_Home_Animation</include>
 				<control type="label">
 					<description>Title label</description>
 					<posx>10</posx>
@@ -297,17 +588,12 @@
 				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeRaise</include>
 				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
 				<visible>Library.HasContent(TVShows)</visible>
-				<visible>[Container(9000).HasFocus(11) + Skin.HasSetting(UseNextAired) + !Skin.HasSetting(homepageHideRecentlyTvShowsAdded) + Skin.HasSetting(homepageHideRandomTvShowsAdded)] | [Container(9000).HasFocus(11) + Skin.HasSetting(UseNextAired) + Skin.HasSetting(homepageHideRecentlyTvShowsAdded) + !Skin.HasSetting(homepageHideRandomTvShowsAdded)]</visible>
+				<visible>Container(9000).HasFocus(11) + Skin.HasSetting(UseNextAired) </visible>
+				<visible>[Skin.HasSetting(homepageHideRecentlyTvShowsAdded) + !Skin.HasSetting(homepageHideRandomTvShowsAdded) + !Skin.HasSetting(Menu_InfoTVShows_act)] | [!Skin.HasSetting(homepageHideRecentlyTvShowsAdded) + Skin.HasSetting(homepageHideRandomTvShowsAdded) + !Skin.HasSetting(Menu_InfoTVShows_act)] | [!Skin.HasSetting(homepageHideRecentlyTvShowsAdded) + !Skin.HasSetting(homepageHideRandomTvShowsAdded) + Skin.HasSetting(Menu_InfoTVShows_act)]</visible>
 				<include>VisibleFadeEffect</include>
 
-				<control type="image">
-					<description>background</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>250</width>
-					<height>300</height>
-					<texture border="10">RecentAddedNF.png</texture>
-				</control>
+				<include>HomeWidget01</include>
+				<include>Widgets_Home_Animation</include>
 				<control type="label">
 					<description>Title label</description>
 					<posx>10</posx>

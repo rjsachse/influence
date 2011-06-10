@@ -12,6 +12,7 @@
 				<width>400</width>
 				<height>720</height>
 				<texture border="15,0,0,0" flipx="true">HomeBladeSub.png</texture>
+				<include>Top-Level</include>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
@@ -47,6 +48,7 @@
 				<width>450</width>
 				<height>680</height>
 				<visible>Window.IsVisible(Home)</visible>
+				
 				<control type="image">
 					<posx>0</posx>
 					<posy>-200</posy>
@@ -171,7 +173,6 @@
 			<onfocus>SetProperty(RSS.Desc,&quot;$INFO[Window(Home).Property(RSS.Desc)]&quot;)</onfocus>
 			<onfocus>SetProperty(RSS.Date,&quot;$INFO[Window(Home).Property(RSS.Date)]&quot;)</onfocus>
 			<onfocus>SetProperty(RSS.Channel,&quot;$INFO[Window(Home).Property(RSS.Channel)]&quot;)</onfocus>
-			<onfocus>SetProperty(RSS.MultiImages,&quot;$INFO[Window(Home).Property(RSS.MultiImages)]&quot;)</onfocus>
 			<onfocus>SetProperty(RSS.ImageCount,&quot;$INFO[Window(Home).Property(RSS.ImageCount)]&quot;)</onfocus>
 			<onfocus>SetProperty(RSS.Image,&quot;$INFO[Window(Home).Property(RSS.Image)]&quot;)</onfocus>
 			<onfocus>SetFocus(998)</onfocus>

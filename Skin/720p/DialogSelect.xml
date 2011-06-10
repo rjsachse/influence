@@ -1,5 +1,5 @@
 <window type="dialog" id="2000">
-	<defaultcontrol always="true">3</defaultcontrol>
+	<defaultcontrol always="true">2</defaultcontrol>
 	<coordinates>
 		<system>1</system>
 		<posx>335</posx>
@@ -14,6 +14,7 @@
 			<width>610</width>
 			<height>650</height>
 			<texture border="40">DialogBack.png</texture>
+			<include>Top-Level</include>
 		</control>
 		<control type="image">
 			<posx>40</posx>
@@ -22,6 +23,7 @@
 			<height>90</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>GlassTitleBar.png</texture>
+			<include>Top-Level</include>
 		</control>
 		<control type="button">
 			<description>Close Window button</description>
@@ -52,6 +54,21 @@
 			<aligny>center</aligny>
 			<textcolor>white</textcolor>
 			<shadowcolor>black</shadowcolor>
+		</control>
+		<control type="button" id="2">
+			
+			<description>don't run rss search</description>
+			<posx>-20</posx>
+			<posy>-20</posy>
+			<width>1</width>
+			<height>1</height>
+			<label>-</label>
+			<font>-</font>
+			<onfocus>Skin.SetString(InitRunScript,True)</onfocus>
+			<onfocus>SetFocus(3)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			
 		</control>
 		<control type="list" id="3">
 			<posx>20</posx>

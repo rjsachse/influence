@@ -32,6 +32,7 @@
 				<width>1280</width>
 				<height>128</height>
 				<texture>floor.png</texture>
+				<include>T-Level</include>
 				<include>VisibleFadeEffect</include>
 				<visible>Control.IsVisible(50) | Control.IsVisible(51)</visible>
 			</control>
@@ -41,6 +42,7 @@
 				<width>1280</width>
 				<height>725</height>
 				<texture border="0,5,0,0">ContentPanel4.png</texture>
+				<include>T-Level</include>
 				<include>VisibleFadeEffect</include>
 				<visible>Control.IsVisible(550)</visible>
 			</control>
@@ -53,6 +55,7 @@
 					<width>750</width>
 					<height>600</height>
 					<texture border="20">ContentPanel.png</texture>
+					<include>T-Level</include>
 				</control>
 				<control type="image">
 					<posx>50</posx>
@@ -61,6 +64,7 @@
 					<height>600</height>
 					<aspectratio aligny="top">keep</aspectratio>
 					<texture diffuse="diffuse_mirror3.png" flipy="true" border="20">ContentPanel.png</texture>
+					<include>T-Level</include>
 				</control>
 			</control>
 			<control type="group">
@@ -72,6 +76,7 @@
 					<width>1130</width>
 					<height>600</height>
 					<texture border="20">ContentPanel.png</texture>
+					<include>T-Level</include>
 				</control>
 				<control type="image">
 					<posx>75</posx>
@@ -80,6 +85,7 @@
 					<height>600</height>
 					<aspectratio aligny="top">keep</aspectratio>
 					<texture diffuse="diffuse_mirror3.png" flipy="true" border="20">ContentPanel.png</texture>
+					<include>T-Level</include>
 				</control>
 			</control>
 		</control>
@@ -262,6 +268,7 @@
 				<width>250</width>
 				<height>35</height>
 				<texture border="0,0,32,0">header.png</texture>
+				<include>T-Level</include>
 			</control>
 			<control type="label">
 				<include>WindowTitleCommons</include>

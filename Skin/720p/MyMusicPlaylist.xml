@@ -4,7 +4,7 @@
 	<views>50,51,506,1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,1020</views>
 	<controls>
 		<control type="group">	
-			<include>CustomView Fanart</include>		
+			<include>CustomViewFanart</include>		
 			<include>CommonMusicBackground</include>
 		</control>
 		<include>CommonMediaPlayingBackground</include>
@@ -16,6 +16,7 @@
 				<width>1280</width>
 				<height>720</height>
 				<texture border="20">black-back.png</texture>
+				<include>T-Level</include>
 				<include>VisibleFadeEffect</include>
 				<visible>Control.IsVisible(50) | Control.IsVisible(51)</visible>
 			</control>
@@ -25,6 +26,7 @@
 				<width>1280</width>
 				<height>128</height>
 				<texture>floor.png</texture>
+				<include>T-Level</include>
 				<include>VisibleFadeEffect</include>
 				<visible>Control.IsVisible(50) | Control.IsVisible(51)</visible>
 			</control>
@@ -45,6 +47,7 @@
 					<height>600</height>
 					<aspectratio aligny="top">keep</aspectratio>
 					<texture diffuse="diffuse_mirror3.png" flipy="true" border="20">ContentPanel.png</texture>
+					<include>T-Level</include>
 				</control>
 			</control>
 			<control type="group">
@@ -56,6 +59,7 @@
 					<width>1130</width>
 					<height>600</height>
 					<texture border="20">ContentPanel.png</texture>
+					<include>T-Level</include>
 				</control>
 				<control type="image">
 					<posx>75</posx>
@@ -64,6 +68,7 @@
 					<height>600</height>
 					<aspectratio aligny="top">keep</aspectratio>
 					<texture diffuse="diffuse_mirror3.png" flipy="true" border="20">ContentPanel.png</texture>
+					<include>T-Level</include>
 				</control>
 			</control>
 			<control type="image">
@@ -72,6 +77,7 @@
 				<width>1280</width>
 				<height>725</height>
 				<texture border="0.5.0.0">ContentPanel4.png</texture>
+				<include>T-Level</include>
 				<include>VisibleFadeEffect</include>
 				<visible>Control.IsVisible(506)</visible>
 			</control>
@@ -201,6 +207,7 @@
 				<width>300</width>
 				<height>35</height>
 				<texture border="0,0,32,0">header.png</texture>
+				<include>T-Level</include>
 			</control>
 			<control type="label">
 				<include>WindowTitleCommons</include>

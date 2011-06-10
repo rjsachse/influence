@@ -102,6 +102,62 @@
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Programs) + Skin.HasSetting(Menu_Programs_act)</visible>
 			</control>
+			<control type="button" id="13001">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>[B]Widgets[/B]</label>
+				<textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_ProgramsWidget_act)</onclick>
+				<selected>Skin.HasSetting(Menu_ProgramsWidget_act)</selected>
+				<visible>Skin.HasSetting(Menu_Programs)+Skin.HasSetting(Menu_Programs_act)</visible>
+			</control>
+			<control type="radiobutton" id="13002">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$LOCALIZE[35117] [B]$INFO[Skin.String(Menu_Info_lab)][/B]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_InfoPrograms_act)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
+				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Programs&amp;Nb=4)</onclick>
+				<selected>Skin.HasSetting(Menu_InfoPrograms_act)</selected>
+				<visible>Skin.HasSetting(Menu_Programs)+Skin.HasSetting(Menu_ProgramsWidget_act)</visible>
+			</control>
+			<control type="button" id="13003">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[35135]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_InfoPrograms_feed)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_InfoPrograms_feed)</onclick>
+				<onclick>ActivateWindow(1115)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
+				<visible>Skin.HasSetting(Menu_Programs)+Skin.HasSetting(Menu_InfoPrograms_act)+Skin.HasSetting(Menu_ProgramsWidget_act)</visible>
+			</control>
+			<control type="radiobutton" id="13004">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label> - $LOCALIZE[31029]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_Programs_fanart)</onclick>
+				<selected>Skin.HasSetting(Menu_Programs_fanart)</selected>
+				<visible>Skin.HasSetting(Menu_Programs)+Skin.HasSetting(Menu_InfoPrograms_act)+Skin.HasSetting(Menu_ProgramsWidget_act)</visible>
+			</control>
 			<control type="radiobutton" id="14011">
 				<width>750</width>
 				<height>40</height>
@@ -909,7 +965,7 @@
 				<onclick>Skin.SetString(Menu_Info_sub2_lab)</onclick>
 				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)  + Skin.HasSetting(Menu_Info_sub2_act) </visible>
 			</control>
-			<control type="button" id="164023">
+			<!--<control type="button" id="164023">
 				<width>750</width>
 				<height>40</height>
 				<font>font12</font>
@@ -937,7 +993,7 @@
 				<onclick>Skin.SetString(InitRunScript,True)</onclick>
 				<onclick>ActivateWindow(1115)</onclick>
 				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)  + Skin.HasSetting(Menu_Info_sub2_act) </visible>
-			</control>
+			</control>-->
 			<control type="radiobutton" id="164025">
 				<width>750</width>
 				<height>40</height>
@@ -989,6 +1045,7 @@
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.SetString(RunOpt_var,Menu_Info_sub3_run)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)  + Skin.HasSetting(Menu_Info_sub3_act) </visible>
 			</control>
@@ -1058,6 +1115,7 @@
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.SetString(RunOpt_var,Menu_Info_sub4_run)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)  + Skin.HasSetting(Menu_Info_sub4_act)</visible>
 			</control>
@@ -1127,6 +1185,7 @@
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.SetString(RunOpt_var,Menu_Info_sub5_run)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)  + Skin.HasSetting(Menu_Info_sub5_act)</visible>
 			</control>
@@ -1196,6 +1255,7 @@
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.SetString(RunOpt_var,Menu_Info_sub6_run)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act)  + Skin.HasSetting(Menu_Info_sub6_act)</visible>
 			</control>
@@ -1265,6 +1325,7 @@
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.SetString(RunOpt_var,Menu_Info_sub7_run)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act) + Skin.HasSetting(Menu_Info_sub7_act)</visible>
 			</control>
@@ -1334,6 +1395,7 @@
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.SetString(RunOpt_var,Menu_Info_sub8_run)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act) + Skin.HasSetting(Menu_Info_sub8_act)</visible>
 			</control>
@@ -1403,6 +1465,7 @@
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.SetString(RunOpt_var,Menu_Info_sub9_run)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act) + Skin.HasSetting(Menu_Info_sub9_act)</visible>
 			</control>
@@ -1472,6 +1535,7 @@
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.SetString(RunOpt_var,Menu_Info_sub10_run)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Info) + Skin.HasSetting(Menu_Info_act) + Skin.HasSetting(Menu_Info_sub10_act)</visible>
 			</control>
@@ -1571,6 +1635,103 @@
 				<onclick>Skin.SetString(RunOpt_var,Menu_Videos_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Videos) + Skin.HasSetting(Menu_Videos_act)</visible>
+			</control>
+			<control type="button" id="23001">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>[B]Widgets[/B]</label>
+				<textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_VideosWidget_act)</onclick>
+				<selected>Skin.HasSetting(Menu_VideosWidget_act)</selected>
+				<visible>Skin.HasSetting(Menu_Videos)+Skin.HasSetting(Menu_Videos_act)</visible>
+			</control>
+			<control type="radiobutton" id="23002">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$LOCALIZE[35117] [B]$INFO[Skin.String(Menu_Info_lab)] 1[/B]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_InfoVideos1_act)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
+				<selected>Skin.HasSetting(Menu_InfoVideos1_act)</selected>
+				<visible>Skin.HasSetting(Menu_Videos)+Skin.HasSetting(Menu_VideosWidget_act)</visible>
+			</control>
+			<control type="button" id="23003">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[35135]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_InfoVideos1_feed)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_InfoVideos1_feed)</onclick>
+				<onclick>ActivateWindow(1115)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
+				<visible>Skin.HasSetting(Menu_Videos)+Skin.HasSetting(Menu_InfoVideos1_act)+Skin.HasSetting(Menu_VideosWidget_act)</visible>
+			</control>
+			<control type="radiobutton" id="23004">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label> - $LOCALIZE[31029]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_Videos1_fanart)</onclick>
+				<selected>Skin.HasSetting(Menu_Videos1_fanart)</selected>
+				<visible>Skin.HasSetting(Menu_Videos)+Skin.HasSetting(Menu_InfoVideos1_act)+Skin.HasSetting(Menu_VideosWidget_act)</visible>
+			</control>
+			<control type="radiobutton" id="23005">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$LOCALIZE[35117] [B]$INFO[Skin.String(Menu_Info_lab)] 2[/B]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_InfoVideos2_act)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
+				<selected>Skin.HasSetting(Menu_InfoVideos2_act)</selected>
+				<visible>Skin.HasSetting(Menu_Videos)+Skin.HasSetting(Menu_VideosWidget_act)+Skin.HasSetting(Menu_InfoVideos1_act)</visible>
+			</control>
+			<control type="button" id="23006">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[35135]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_InfoVideos2_feed)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_InfoVideos2_feed)</onclick>
+				<onclick>ActivateWindow(1115)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
+				<visible>Skin.HasSetting(Menu_Videos)+Skin.HasSetting(Menu_InfoVideos2_act)+Skin.HasSetting(Menu_VideosWidget_act)+Skin.HasSetting(Menu_InfoVideos1_act)</visible>
+			</control>
+			<control type="radiobutton" id="23007">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label> - $LOCALIZE[31029]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_Videos2_fanart)</onclick>
+				<selected>Skin.HasSetting(Menu_Videos2_fanart)</selected>
+				<visible>Skin.HasSetting(Menu_Videos)+Skin.HasSetting(Menu_InfoVideos2_act)+Skin.HasSetting(Menu_VideosWidget_act)+Skin.HasSetting(Menu_InfoVideos1_act)</visible>
 			</control>
 			<control type="radiobutton" id="24011">
 				<width>750</width>
@@ -2051,6 +2212,61 @@
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Music) + Skin.HasSetting(Menu_Music_act)</visible>
 			</control>
+			<control type="button" id="33001">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>[B]Widgets[/B]</label>
+				<textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_MusicWidget_act)</onclick>
+				<selected>Skin.HasSetting(Menu_MusicWidget_act)</selected>
+				<visible>Skin.HasSetting(Menu_Music)+Skin.HasSetting(Menu_Music_act)</visible>
+			</control>
+			<control type="radiobutton" id="33002">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$LOCALIZE[35117] [B]$INFO[Skin.String(Menu_Info_lab)][/B]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_InfoMusic_act)</onclick>
+				<selected>Skin.HasSetting(Menu_InfoMusic_act)</selected>
+				<visible>Skin.HasSetting(Menu_Music) + Skin.HasSetting(Menu_MusicWidget_act)</visible>
+			</control>
+			<control type="button" id="33003">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[35135]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_InfoMusic_feed)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_InfoMusic_feed)</onclick>
+				<onclick>ActivateWindow(1115)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
+				<visible>Skin.HasSetting(Menu_Music)+Skin.HasSetting(Menu_InfoMusic_act) + Skin.HasSetting(Menu_MusicWidget_act)</visible>
+			</control>
+			<control type="radiobutton" id="33004">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label> - $LOCALIZE[31029]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_Music_fanart)</onclick>
+				<selected>Skin.HasSetting(Menu_Music_fanart)</selected>
+				<visible>Skin.HasSetting(Menu_Music)+Skin.HasSetting(Menu_InfoMusic_act)+Skin.HasSetting(Menu_MusicWidget_act)</visible>
+			</control>
+			
 			<control type="radiobutton" id="34011">
 				<width>750</width>
 				<height>40</height>
@@ -2532,6 +2748,61 @@
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act)</visible>
 			</control>
+			<control type="button" id="43001">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>[B]Widgets[/B]</label>
+				<textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_PicturesWidget_act)</onclick>
+				<selected>Skin.HasSetting(Menu_PicturesWidget_act)</selected>
+				<visible>Skin.HasSetting(Menu_Pictures)+Skin.HasSetting(Menu_Pictures_act)</visible>
+			</control>
+			<control type="radiobutton" id="43002">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$LOCALIZE[35117] [B]$INFO[Skin.String(Menu_Info_lab)][/B]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_InfoPictures_act)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
+				<selected>Skin.HasSetting(Menu_InfoPictures_act)</selected>
+				<visible>Skin.HasSetting(Menu_Pictures)+ Skin.HasSetting(Menu_PicturesWidget_act)</visible>
+			</control>
+			<control type="button" id="43003">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[35135]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_InfoPictures_feed)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_InfoPictures_feed)</onclick>
+				<onclick>ActivateWindow(1115)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
+				<visible>Skin.HasSetting(Menu_Pictures)+Skin.HasSetting(Menu_InfoPictures_act)+Skin.HasSetting(Menu_PicturesWidget_act)</visible>
+			</control>
+			<control type="radiobutton" id="43004">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label> - $LOCALIZE[31029]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_Pictures_fanart)</onclick>
+				<selected>Skin.HasSetting(Menu_Pictures_fanart)</selected>
+				<visible>Skin.HasSetting(Menu_Pictures)+Skin.HasSetting(Menu_InfoPictures_act)+Skin.HasSetting(Menu_PicturesWidget_act)</visible>
+			</control>
 			<control type="radiobutton" id="44011">
 				<width>750</width>
 				<height>40</height>
@@ -2817,7 +3088,19 @@
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.SetString(RunOpt_var,Menu_Pictures_sub7_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(Menu_Pictures_sub7_act)</visible>
+				<visible>Skin.HasSetting(Menu_Pic<control type="button" id="43001">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>[B]Widgets[/B]</label>
+				<textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_PicturesWidget_act)</onclick>
+				<selected>Skin.HasSetting(Menu_PicturesWidget_act)</selected>
+				<visible>Skin.HasSetting(Menu_Pictures)+Skin.HasSetting(Menu_Pictures_act)</visible>
+			</control>tures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(Menu_Pictures_sub7_act)</visible>
 			</control>
 			<control type="radiobutton" id="44081">
 				<width>750</width>
@@ -3464,6 +3747,7 @@
 				<selected>Skin.HasSetting(Menu_Movie_act)</selected>
 				<visible>Skin.HasSetting(Menu_Movie)</visible>
 			</control>
+			
 			<control type="button" id="102000">
 				<width>750</width>
 				<height>40</height>
@@ -3490,6 +3774,61 @@
 				<onclick>Skin.SetString(RunOpt_var,Menu_Movie_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_Movie_act)</visible>
+			</control>
+			<control type="button" id="103001">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>[B]Widgets[/B]</label>
+				<textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_MovieWidget_act)</onclick>
+				<selected>Skin.HasSetting(Menu_MovieWidget_act)</selected>
+				<visible>Skin.HasSetting(Menu_Movie)+Skin.HasSetting(Menu_Movie_act)</visible>
+			</control>
+			<control type="radiobutton" id="103002">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$LOCALIZE[35117] [B]$INFO[Skin.String(Menu_Info_lab)][/B]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_InfoMovie_act)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
+				<selected>Skin.HasSetting(Menu_InfoMovie_act)</selected>
+				<visible>Skin.HasSetting(Menu_Movie) + Skin.HasSetting(Menu_MovieWidget_act)</visible>
+			</control>
+			<control type="button" id="103003">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[35135]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_InfoMovie_feed)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_InfoMovie_feed)</onclick>
+				<onclick>ActivateWindow(1115)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
+				<visible>Skin.HasSetting(Menu_Movie)+Skin.HasSetting(Menu_InfoMovie_act) + Skin.HasSetting(Menu_MovieWidget_act)</visible>
+			</control>
+			<control type="radiobutton" id="103004">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label> - $LOCALIZE[31029]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_Movie_fanart)</onclick>
+				<selected>Skin.HasSetting(Menu_Movie_fanart)</selected>
+				<visible>Skin.HasSetting(Menu_Movie)+Skin.HasSetting(Menu_InfoMovie_act)+Skin.HasSetting(Menu_MovieWidget_act)</visible>
 			</control>
 			<control type="radiobutton" id="104011">
 				<width>750</width>
@@ -3970,6 +4309,61 @@
 				<onclick>Skin.SetString(RunOpt_var,Menu_TVShows_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_TVShows) + Skin.HasSetting(Menu_TVShows_act)</visible>
+			</control>
+			<control type="button" id="113001">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>[B]Widgets[/B]</label>
+				<textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_TVShowsWidget_act)</onclick>
+				<selected>Skin.HasSetting(Menu_TVShowsWidget_act)</selected>
+				<visible>Skin.HasSetting(Menu_TVShows)+Skin.HasSetting(Menu_TVShows_act)</visible>
+			</control>
+			<control type="radiobutton" id="113002">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$LOCALIZE[35117] [B]$INFO[Skin.String(Menu_Info_lab)][/B]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_InfoTVShows_act)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
+				<selected>Skin.HasSetting(Menu_InfoTVShows_act)</selected>
+				<visible>Skin.HasSetting(Menu_TVShows) + Skin.HasSetting(Menu_TVShowsWidget_act)</visible>
+			</control>
+			<control type="button" id="113003">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[35135]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_InfoTVShows_feed)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_InfoTVShows_feed)</onclick>
+				<onclick>ActivateWindow(1115)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
+				<visible>Skin.HasSetting(Menu_TVShows)+Skin.HasSetting(Menu_InfoTVShows_act) + Skin.HasSetting(Menu_TVShowsWidget_act)</visible>
+			</control>
+			<control type="radiobutton" id="113004">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label> - $LOCALIZE[31029]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_TVShows_fanart)</onclick>
+				<selected>Skin.HasSetting(Menu_TVShows_fanart)</selected>
+				<visible>Skin.HasSetting(Menu_TVShows)+Skin.HasSetting(Menu_InfoTVShows_act)+Skin.HasSetting(Menu_TVShowsWidget_act)</visible>
 			</control>
 			<control type="radiobutton" id="114011">
 				<width>750</width>
@@ -5275,6 +5669,119 @@
 				<visible>Skin.HasSetting(Menu_Favorites) + Skin.HasSetting(Menu_Favorites_act) + Skin.HasSetting(Menu_Favorites_sub10_act)</visible>
 			</control>
 <!-- Menu Favorites END -->
+			<!-- Menu Settings -->
+			<control type="button" id="50000">
+				<width>750</width>
+				<height>45</height>
+				<font>font13</font>
+				<label>$LOCALIZE[35020] $LOCALIZE[13000]</label>
+				<textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<onclick>Skin.ToggleSetting(Menu_Settings)</onclick>
+				<onclick>Skin.Reset(Menu_Pictures)</onclick>
+				<onclick>Skin.Reset(Menu_Weather)</onclick>
+				<onclick>Skin.Reset(Menu_Videos)</onclick>
+				<onclick>Skin.Reset(Menu_LiveTv)</onclick>
+				<onclick>Skin.Reset(Menu_Info)</onclick>
+				<onclick>Skin.Reset(Menu_Movie)</onclick>
+				<onclick>Skin.Reset(Menu_TVShows)</onclick>
+				<onclick>Skin.Reset(Menu_Programs)</onclick>
+				<onclick>Skin.Reset(Menu_Music)</onclick>
+				<onclick>Skin.Reset(Menu_DVD)</onclick>
+				<onclick>Skin.Reset(Menu_Favorites)</onclick>
+				<onclick>Skin.Reset(Menu_Exit)</onclick>
+				<onclick>Skin.Reset(Menu_Men1)</onclick>
+				<onclick>Skin.Reset(Menu_Men2)</onclick>
+				<onclick>Skin.Reset(Menu_Men3)</onclick>
+				<onclick>Skin.Reset(Menu_Men4)</onclick>
+			</control>
+			<control type="radiobutton" id="51000">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$LOCALIZE[35117] [B]$LOCALIZE[13000][/B]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>red</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(HomeMenuNoSettingsButton)</onclick>
+				<selected>!Skin.HasSetting(HomeMenuNoSettingsButton)</selected>
+				<visible>Skin.HasSetting(Menu_Settings)</visible>
+			</control>
+			<control type="button" id="52000">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>[B]Widgets[/B]</label>
+				<textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_SettingsWidget_act)</onclick>
+				<selected>Skin.HasSetting(Menu_SettingsWidget_act)</selected>
+				<visible>Skin.HasSetting(Menu_Settings)</visible>
+			</control>
+			<control type="radiobutton" id="52001">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>[B]Afficher Info Systéme[/B]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_SettingsInfoSys)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
+				<selected>Skin.HasSetting(Menu_SettingsInfoSys)</selected>
+				<visible>Skin.HasSetting(Menu_Settings)+ Skin.HasSetting(Menu_SettingsWidget_act)</visible>
+			</control>
+			
+			<control type="radiobutton" id="52002">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$LOCALIZE[35117] [B]$INFO[Skin.String(Menu_Info_lab)][/B]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_InfoSettings_act)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
+				<selected>Skin.HasSetting(Menu_InfoSettings_act)</selected>
+				<visible>Skin.HasSetting(Menu_Settings) + Skin.HasSetting(Menu_SettingsWidget_act)</visible>
+			</control>
+			<control type="button" id="52003">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[35135]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_InfoSettings_feed)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_InfoSettings_feed)</onclick>
+				<onclick>ActivateWindow(1115)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
+				<visible>Skin.HasSetting(Menu_Settings)+Skin.HasSetting(Menu_InfoSettings_act) + Skin.HasSetting(Menu_SettingsWidget_act)</visible>
+			</control>
+			<control type="radiobutton" id="52004">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label> - $LOCALIZE[31029]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_Settings_fanart)</onclick>
+				<selected>Skin.HasSetting(Menu_Settings_fanart)</selected>
+				<visible>Skin.HasSetting(Menu_Settings)+Skin.HasSetting(Menu_InfoSettings_act)+Skin.HasSetting(Menu_SettingsWidget_act)</visible>
+			</control>
+<!-- Menu Settings END -->
+		
 <!-- Menu custom 1 -->
 			<control type="button" id="200000">
 				<width>750</width>
@@ -5342,6 +5849,61 @@
 				<onclick>Skin.SetString(RunOpt_var,Menu_Men1_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Men1) + Skin.HasSetting(Menu_Men1_act)</visible>
+			</control>
+			<control type="button" id="203001">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>[B]Widgets[/B]</label>
+				<textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_Men1Widget_act)</onclick>
+				<selected>Skin.HasSetting(Menu_Men1Widget_act)</selected>
+				<visible>Skin.HasSetting(Menu_Men1)+Skin.HasSetting(Menu_Men1_act)</visible>
+			</control>
+			<control type="radiobutton" id="203002">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$LOCALIZE[35117] [B]$INFO[Skin.String(Menu_Info_lab)][/B]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_InfoMen1_act)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
+				<selected>Skin.HasSetting(Menu_InfoMen1_act)</selected>
+				<visible>Skin.HasSetting(Menu_Men1)+ Skin.HasSetting(Menu_Men1Widget_act)</visible>
+			</control>
+			<control type="button" id="203003">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[35135]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_InfoMen1_feed)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_InfoMen1_feed)</onclick>
+				<onclick>ActivateWindow(1115)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
+				<visible>Skin.HasSetting(Menu_Men1)+Skin.HasSetting(Menu_InfoMen1_act)+Skin.HasSetting(Menu_Men1Widget_act)</visible>
+			</control>
+			<control type="radiobutton" id="203004">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label> - $LOCALIZE[31029]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_Men1_fanart)</onclick>
+				<selected>Skin.HasSetting(Menu_Men1_fanart)</selected>
+				<visible>Skin.HasSetting(Menu_Men1)+Skin.HasSetting(Menu_InfoMen1_act)+Skin.HasSetting(Menu_Men1Widget_act)</visible>
 			</control>
 			<control type="radiobutton" id="204011">
 				<width>750</width>
@@ -5658,6 +6220,61 @@
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Men2) + Skin.HasSetting(Menu_Men2_act)</visible>
 			</control>
+			<control type="button" id="213001">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>[B]Widgets[/B]</label>
+				<textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_Men2Widget_act)</onclick>
+				<selected>Skin.HasSetting(Menu_Men2Widget_act)</selected>
+				<visible>Skin.HasSetting(Menu_Men2)+Skin.HasSetting(Menu_Men2_act)</visible>
+			</control>
+			<control type="radiobutton" id="213002">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$LOCALIZE[35117] [B]$INFO[Skin.String(Menu_Info_lab)][/B]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_InfoMen2_act)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
+				<selected>Skin.HasSetting(Menu_InfoMen2_act)</selected>
+				<visible>Skin.HasSetting(Menu_Men2)+ Skin.HasSetting(Menu_Men2Widget_act)</visible>
+			</control>
+			<control type="button" id="213003">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[35135]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_InfoMen2_feed)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_InfoMen2_feed)</onclick>
+				<onclick>ActivateWindow(1115)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
+				<visible>Skin.HasSetting(Menu_Men2)+Skin.HasSetting(Menu_InfoMen2_act)+Skin.HasSetting(Menu_Men2Widget_act)</visible>
+			</control>
+			<control type="radiobutton" id="213004">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label> - $LOCALIZE[31029]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_Men2_fanart)</onclick>
+				<selected>Skin.HasSetting(Menu_Men2_fanart)</selected>
+				<visible>Skin.HasSetting(Menu_Men2)+Skin.HasSetting(Menu_InfoMen2_act)+Skin.HasSetting(Menu_Men2Widget_act)</visible>
+			</control>
 			<control type="radiobutton" id="214011">
 				<width>750</width>
 				<height>40</height>
@@ -5972,6 +6589,61 @@
 				<onclick>Skin.SetString(RunOpt_var,Menu_Men3_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Men3) + Skin.HasSetting(Menu_Men3_act)</visible>
+			</control>
+			<control type="button" id="223001">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>[B]Widgets[/B]</label>
+				<textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_Men3Widget_act)</onclick>
+				<selected>Skin.HasSetting(Menu_Men3Widget_act)</selected>
+				<visible>Skin.HasSetting(Menu_Men3)+Skin.HasSetting(Menu_Men3_act)</visible>
+			</control>
+			<control type="radiobutton" id="223002">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$LOCALIZE[35117] [B]$INFO[Skin.String(Menu_Info_lab)][/B]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_InfoMen3_act)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
+				<selected>Skin.HasSetting(Menu_InfoMen3_act)</selected>
+				<visible>Skin.HasSetting(Menu_Men3)+ Skin.HasSetting(Menu_Men3Widget_act)</visible>
+			</control>
+			<control type="button" id="223003">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[35135]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_InfoMen3_feed)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_InfoMen3_feed)</onclick>
+				<onclick>ActivateWindow(1115)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
+				<visible>Skin.HasSetting(Menu_Men3)+Skin.HasSetting(Menu_InfoMen3_act)+Skin.HasSetting(Menu_Men3Widget_act)</visible>
+			</control>
+			<control type="radiobutton" id="223004">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label> - $LOCALIZE[31029]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_Men3_fanart)</onclick>
+				<selected>Skin.HasSetting(Menu_Men3_fanart)</selected>
+				<visible>Skin.HasSetting(Menu_Men3)+Skin.HasSetting(Menu_InfoMen3_act)+Skin.HasSetting(Menu_Men3Widget_act)</visible>
 			</control>
 			<control type="radiobutton" id="224011">
 				<width>750</width>
@@ -6288,6 +6960,61 @@
 				<onclick>Skin.SetString(RunOpt_var,Menu_Men4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(Menu_Men4_act)</visible>
+			</control>		
+			<control type="button" id="233001">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>[B]Widgets[/B]</label>
+				<textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_Men4Widget_act)</onclick>
+				<selected>Skin.HasSetting(Menu_Men4Widget_act)</selected>
+				<visible>Skin.HasSetting(Menu_Men4)+Skin.HasSetting(Menu_Men4_act)</visible>
+			</control>
+			<control type="radiobutton" id="233002">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$LOCALIZE[35117] [B]$INFO[Skin.String(Menu_Info_lab)][/B]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_InfoMen4_act)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
+				<selected>Skin.HasSetting(Menu_InfoMen4_act)</selected>
+				<visible>Skin.HasSetting(Menu_Men4)+ Skin.HasSetting(Menu_Men4Widget_act)</visible>
+			</control>
+			<control type="button" id="23003">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[35135]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_InfoMen4_feed)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_InfoMen4_feed)</onclick>
+				<onclick>ActivateWindow(1115)</onclick>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
+				<visible>Skin.HasSetting(Menu_Men4)+Skin.HasSetting(Menu_InfoMen4_act)+Skin.HasSetting(Menu_Men4Widget_act)</visible>
+			</control>
+			<control type="radiobutton" id="233004">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label> - $LOCALIZE[31029]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_Men4_fanart)</onclick>
+				<selected>Skin.HasSetting(Menu_Men4_fanart)</selected>
+				<visible>Skin.HasSetting(Menu_Men4)+Skin.HasSetting(Menu_InfoMen4_act)+Skin.HasSetting(Menu_Men4Widget_act)</visible>
 			</control>
 			<control type="radiobutton" id="234011">
 				<width>750</width>
@@ -6536,50 +7263,8 @@
 				<visible>Skin.HasSetting(Menu_Men4) + Skin.HasSetting(Menu_Men4_sub1_act) + Skin.HasSetting(Menu_Men4_sub2_act) + Skin.HasSetting(Menu_Men4_sub3_act) + Skin.HasSetting(Menu_Men4_sub4_act)  + Skin.HasSetting(Menu_Men4_sub6_act) + Skin.HasSetting(Menu_Men4_act)</visible>
 			</control>
 <!-- Menu custom 4 END -->
-<!-- Menu Settings -->
-			<control type="button" id="50000">
-				<width>750</width>
-				<height>45</height>
-				<font>font13</font>
-				<label>$LOCALIZE[35020] $LOCALIZE[13000]</label>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<align>left</align>
-				<aligny>center</aligny>
-				<onclick>Skin.ToggleSetting(Menu_Settings)</onclick>
-				<onclick>Skin.Reset(Menu_Pictures)</onclick>
-				<onclick>Skin.Reset(Menu_Weather)</onclick>
-				<onclick>Skin.Reset(Menu_Videos)</onclick>
-				<onclick>Skin.Reset(Menu_LiveTv)</onclick>
-				<onclick>Skin.Reset(Menu_Info)</onclick>
-				<onclick>Skin.Reset(Menu_Movie)</onclick>
-				<onclick>Skin.Reset(Menu_TVShows)</onclick>
-				<onclick>Skin.Reset(Menu_Programs)</onclick>
-				<onclick>Skin.Reset(Menu_Music)</onclick>
-				<onclick>Skin.Reset(Menu_DVD)</onclick>
-				<onclick>Skin.Reset(Menu_Favorites)</onclick>
-				<onclick>Skin.Reset(Menu_Exit)</onclick>
-				<onclick>Skin.Reset(Menu_Men1)</onclick>
-				<onclick>Skin.Reset(Menu_Men2)</onclick>
-				<onclick>Skin.Reset(Menu_Men3)</onclick>
-				<onclick>Skin.Reset(Menu_Men4)</onclick>
-			</control>
-			<control type="radiobutton" id="51000">
-				<width>750</width>
-				<height>40</height>
-				<font>font13</font>
-				<label>$LOCALIZE[35117] [B]$LOCALIZE[13000][/B]</label>
-				<textcolor>grey2</textcolor>
-				<focusedcolor>red</focusedcolor>
-				<texturefocus>MenuItemFO.png</texturefocus>
-				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.ToggleSetting(HomeMenuNoSettingsButton)</onclick>
-				<selected>!Skin.HasSetting(HomeMenuNoSettingsButton)</selected>
-				<visible>Skin.HasSetting(Menu_Settings)</visible>
-			</control>
-<!-- Menu Settings END -->
 		</control>
-		<control type="scrollbar" id="70000">
+		<control type="scrollbar" id="70">
 			<posx>1060</posx>
 			<posy>60</posy>
 			<width>25</width>

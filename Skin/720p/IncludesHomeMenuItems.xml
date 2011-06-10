@@ -304,4 +304,5 @@
 			<onclick>ActivateWindow(VideoLibrary,RecentlyAddedEpisodes,return)</onclick>
 		</control>
 	</include>
+	
 </includes>
