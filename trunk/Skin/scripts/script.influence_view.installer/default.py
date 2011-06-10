@@ -21,6 +21,7 @@ from xbmcaddon import Addon
 SILENT = True
 DIALOG_PROGRESS = xbmcgui.DialogProgress()
 
+
 def install( filename ):
     from resources.lib.extractor import extract
     print "extract : %s %s " % (filename, xbmc.translatePath( "special://skin" ) )
@@ -49,18 +50,24 @@ if ( __name__ == "__main__" ):
                     fp, ok = install( zipview )
                     SrcView=open('special://skin/720p/View_Custom.xml','r')
                     NewView=open('special://skin/720p/View_Custom%s.xml' % (v),'w')
+		    SaveView=open('special://profile/View_Custom%s.xml' % (v),'w')
                     f=SrcView.readlines()
                     SrcView.close
                     for l in f:
                         NewView.write(l.replace("##@@##",v))
+			SaveView.write(l.replace("##@@##",v))
                     NewView.close
+		    SaveView.close
                     ViewOK=True
                     xbmc.executebuiltin( "Skin.SetBool(ViewCustom%s_IsInstall)" % ( v ) )
                     try: os.remove(xbmc.translatePath('special://skin/720p/View_Custom.xml'))
                     except: print "erreur os.remove(%s)" % xbmc.translatePath('special://skin/720p/View_Custom.xml')
-                    break	        
-
+                    break	
+                    try: os.remove(xbmc.translatePath('special://profile/720p/View_Custom.xml'))
+                    except: print "erreur os.remove(%s)" % xbmc.translatePath('special://profile/720p/View_Custom.xml')
+                    break        
+			
             if ViewOK:
-                xbmcgui.Dialog().ok(  "View %s installed" % (v), "XBMC requires restart!" )
+                xbmcgui.Dialog().ok(  "View %s installed and save in userdata" % (v), "XBMC requires restart!" )
             else:
                 xbmcgui.Dialog().ok(  "Error","No more custom view available" )    

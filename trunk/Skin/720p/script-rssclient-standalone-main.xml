@@ -3,7 +3,7 @@
 	<allowoverlay>no</allowoverlay>
 	<views>50,51,500,550,560,561,1001,1002,1003,1004,1005,1006,1007,1008,1009,1010</views>
 	<controls>
-		<include>CustomView Fanart</include>
+		<include>CustomViewFanart</include>
 		<include>CommonInfoBackground</include>
 		<include>CommonMediaPlayingBackground</include>
 		<include>Window_OpenClose_Animation</include>
@@ -13,6 +13,7 @@
 			<width>1260</width>
 			<height>700</height>
 			<texture>ContentPanel.png</texture>
+			<include>T-Level</include>
 			<aspectratio scalediffuse="false" align="center" aligny="top">stretch</aspectratio>
 		</control>
 		<control type="group">
@@ -679,6 +680,7 @@
 				<width>250</width>
 				<height>35</height>
 				<texture border="0,0,32,0">header.png</texture>
+				<include>T-Level</include>
 			</control>
 			<control type="label">
 				<include>WindowTitleCommons</include>

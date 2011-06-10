@@ -11,6 +11,7 @@
 				<width>370</width>
 				<height>70</height>
 				<texture flipy="true" border="20,20,20,2">InfoMessagePanel.png</texture>
+				<include>Top-Level</include>
 			</control>
 			<control type="label" id="401">
 				<description>Song Number Label</description>

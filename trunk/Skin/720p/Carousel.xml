@@ -46,7 +46,42 @@
 			<posy>280</posy>>			
 			<texture fallback="cdart/default.png">$INFO[Player.FolderPath]/cdart.png</texture>			
 			<aspectratio align="bottom">keep</aspectratio>
-			<visible>Skin.HasSetting(CDart) + Player.HasAudio</visible>
+			<visible>Skin.HasSetting(CDart) + Player.HasAudio+!Skin.HasSetting(Vinyl)</visible>
+			</control>
+
+			<control type="image">			
+			<description>Cd overlay</description>
+<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<effect type="fade" start="0" end="100" time="2000" delay="38000" />
+					<effect type="fade" start="100" end="0" time="2000" delay="80000" />
+
+				</animation>
+			<animation effect="slide" start="-70" end="0" time="900" tween="cubic" easing="out" delay="2000">WindowOpen</animation>
+				<animation effect="rotate" end="-360" center="auto" time="2250" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+			<width>115</width>			
+			<height>115</height>			
+			<posx>1015r</posx>			
+			<posy>280</posy>>			
+			<texture>cdart/Vinyl.png</texture>			
+			<aspectratio align="bottom">keep</aspectratio>
+			<visible>Skin.HasSetting(CDart) + Player.HasAudio+Skin.HasSetting(Vinyl)</visible>
+			</control>
+			<control type="image">			
+			<description>Cd overlay</description>
+<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<effect type="fade" start="0" end="100" time="2000" delay="38000" />
+					<effect type="fade" start="100" end="0" time="2000" delay="80000" />
+
+				</animation>
+			<animation effect="slide" start="-70" end="0" time="900" tween="cubic" easing="out" delay="2000">WindowOpen</animation>
+				<animation effect="rotate" end="-360" center="auto" time="2250" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+			<width>40</width>			
+			<height>40</height>			
+			<posx>975r</posx>			
+			<posy>315</posy>>			
+			<texture>$INFO[Player.FolderPath]/cdart.png</texture>			
+			<aspectratio align="bottom">keep</aspectratio>
+			<visible>Skin.HasSetting(CDart) + Player.HasAudio+Skin.HasSetting(Vinyl)</visible>
 			</control>
 	 <control type="image">
 <animation type="Conditional" reversible="false" condition="true" loop="true">
@@ -112,14 +147,7 @@
             <effect type="rotatex" tween="sine" easing="inout" acceleration="-1" center="auto" start="0" end="-3600" time="180000" delay="89000" />
         </animation>
 
-	<control type="image">
-				<posx>20</posx>
-				<posy>180</posy>
-				<width>675</width>
-				<height>490</height>
-				<texture border="20">ContentPanel.png</texture>
-				<visible>Skin.HasSetting(CarouselBackMenu)</visible>
-			</control>
+	
         <control type="label">
             <description>carousel label</description>
             <posx>360</posx>
@@ -917,6 +945,7 @@
             </control>
         </control>
 </control>
+	
         <!-- END STATIC ICONS -->
         <!-- CAROUSEL-LIST -->
     </include>

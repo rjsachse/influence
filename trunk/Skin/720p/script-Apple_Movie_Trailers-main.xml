@@ -10,6 +10,7 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>special://skin/backgrounds/amt.jpg</texture>
+			<include>T-Level</include>
 			<include>Window_OpenClose_Animation</include>
 		</control>
 		<control type="group">
@@ -20,6 +21,7 @@
 				<width>1280</width>
 				<height>128</height>
 				<texture>floor.png</texture>
+				<include>T-Level</include>
 				<visible>Control.IsVisible(4000)</visible>
 				<include>VisibleFadeEffect</include>
 				<animation effect="fade" time="0" delay="1000" start="0" end="100">WindowOpen</animation>
@@ -34,6 +36,7 @@
 					<width>750</width>
 					<height>600</height>
 					<texture border="20">ContentPanel.png</texture>
+					<include>T-Level</include>
 				</control>
 				<control type="image">
 					<posx>265</posx>
@@ -42,6 +45,7 @@
 					<height>600</height>
 					<aspectratio aligny="top">keep</aspectratio>
 					<texture diffuse="diffuse_mirror3.png" flipy="true" border="20">ContentPanel.png</texture>
+					<include>T-Level</include>
 				</control>
 			</control>
 			<control type="image">
@@ -50,6 +54,7 @@
 				<width>1280</width>
 				<height>720</height>
 				<texture>ContentPanel2.png</texture>
+				<include>T-Level</include>
 				<include>VisibleFadeEffect</include>
 				<visible>[Control.IsVisible(50) | Control.IsVisible(51)] + Control.IsVisible(3000)</visible>
 			</control>
@@ -226,7 +231,7 @@
 							<height>230</height>
 							<aspectratio>stretch</aspectratio>
 							<texture>GlassOverlay.png</texture>
-							<colordiffuse>AAFFFFFF</colordiffuse>
+							<include>Top-Level</include>
 						</control>
 						<control type="image">
 							<posx>215</posx>
@@ -262,6 +267,7 @@
 							<height>60</height>
 							<aspectratio>stretch</aspectratio>
 							<texture>GlassTitleBar.png</texture>
+							<include>T-Level</include>
 						</control>
 						<control type="label">
 							<posx>50</posx>
@@ -312,6 +318,7 @@
 							<height>170</height>
 							<aspectratio>stretch</aspectratio>
 							<texture>separator_vertical.png</texture>
+							
 						</control>
 						<control type="label">
 							<posx>970</posx>
@@ -403,6 +410,7 @@
 							<height>318</height>
 							<aspectratio>stretch</aspectratio>
 							<bordertexture border="8">ThumbBorder.png</bordertexture>
+							<include>Top-Level</include>
 							<bordersize>8</bordersize>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<animation reversible="false" effect="zoom" start="-2,36,222,318" end="-28,0,284,390" time="200">focus</animation>
@@ -415,6 +423,7 @@
 							<height>180</height>
 							<aspectratio>stretch</aspectratio>
 							<texture>GlassOverlay.png</texture>
+							<include>T-Level</include>
 							<animation reversible="false" effect="zoom" start="6,44,170,180" end="-24,4,240,250" time="200">focus</animation>
 							<animation reversible="false" effect="zoom" end="6,44,170,180" start="-24,4,240,250" time="200">unfocus</animation>
 						</control>
@@ -446,6 +455,7 @@
 						<height>60</height>
 						<aspectratio>stretch</aspectratio>
 						<texture>GlassTitleBar.png</texture>
+						<include>T-Level</include>
 					</control>
 					<control type="label">
 						<posx>0</posx>
@@ -638,6 +648,7 @@
 					<width>1</width>
 					<height>720</height>
 					<texture>MediaBladeSub_Part1.png</texture>
+					<include>Top-Level</include>
 					<animation effect="zoom" start="0,0,1,720" end="0,0,229,720" time="300" tween="quadratic" easing="out" condition="Control.HasFocus(98) | ControlGroup(9001).HasFocus">Conditional</animation>
 				</control>
 				<control type="image">
@@ -646,6 +657,7 @@
 					<width>12</width>
 					<height>720</height>
 					<texture>MediaBladeSub_Part2.png</texture>
+					<include>Top-Level</include>
 					<animation effect="slide" end="228,0" time="300" tween="quadratic" easing="out" condition="Control.HasFocus(98) | ControlGroup(9001).HasFocus">Conditional</animation>
 				</control>
 			</control>
@@ -878,6 +890,7 @@
 				<width>250</width>
 				<height>35</height>
 				<texture border="0,0,32,0">header.png</texture>
+				<include>T-Level</include>
 			</control>
 			<control type="label">
 				<include>WindowTitleCommons</include>
@@ -885,6 +898,7 @@
 				<label>$INFO[Container.Property(Category)]</label>
 			</control>
 		</control>
+		<include>WindowTitleHomeButton</include>
 		<include>Clock</include>
 <!-- Bunch of stuff required by amt to run proper but not in this skin -->
 		<!-- ** Required ** Do not change id or type-->

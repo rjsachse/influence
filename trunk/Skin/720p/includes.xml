@@ -7,12 +7,14 @@
 	<include file="ViewsPictures.xml" />
 	<include file="ViewsAddonBrowser.xml" />
 	<include file="ViewsLiveTV.xml" />
-	<include file="ViewsRssFeeds.xml" />
 	<include file="IncludesCodecFlagging.xml" />
 	<include file="IncludesHomeRecentlyAdded.xml" />
 	<include file="IncludesHomeRandomAdded.xml" />
 	<include file="RssRecentlyAdded.xml" />
+	<include file="IncludeHomeRss.xml" />
         <include file="IncludesNextAired.xml" />
+        <include file="Includes_NextAired.xml" />
+	<include file="IncludesHomeSysInfo.xml" />
 	<include file="IncludesDialogVideoInfoContentItems.xml" />
 	<!-- include pour setting carousel et autres-->
 	<include file="Include_CustomMenuCarousel.xml" />
@@ -35,13 +37,15 @@
 	<include file="IncludesHomeVertical.xml" />
 	<include file="IncludesHomeHorizontal.xml" />
 	<include file="IncludesHomeCarousel.xml" />
+	<include file="IncludesHomeKinect.xml" />
 	<include file="IncludesCustomBackground.xml" />
 	<include file="IncludeCommonMenu.xml" />
 	<include file="IncludesHomeStat.xml" />
 	<include file="Carousel.xml" />
 	<include file="Include_CustomMenu.xml" />
 	<include file="IncludesInitSkin.xml" />
-
+	<include file="Includes_Transparency.xml" />
+        <include file="Includes-ConcertGuide.xml" />
 	<!-- Custom Views -->
 	<include file="View_Custom1001.xml" />
 	<include file="View_Custom1002.xml" />
@@ -68,9 +72,7 @@
 	<!-- View for Advanced launcher -->
 	<include file="Viewtype_AL_Wallstream.xml" />
 
-	<include file="script.weather.com.plus/CommonValues.xml" />
-	<include file="script.weather.com.plus/Current.xml" />
-	<include file="script.weather.com.plus/WeatherPluginView.xml" />
+	
 
 	<constant name="FanartCrossfadeTime">500</constant>
 	<constant name="IconCrossfadeTime">400</constant>
@@ -88,7 +90,189 @@
 		<height>320</height>
 		<wrapmultiline>true</wrapmultiline>
 	</include>
+	<include name="Window_OpenClose_Left_Animation">
+		<animation effect="slide" start="1280,0" end="0,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="1280,0" time="500" tween="quadratic" easing="in">WindowClose</animation>
+	</include>
+	<include name="Window_OpenClose_Right_Animation">
+		<animation effect="slide" start="-1280,0" end="0,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="-1280,0" time="500" tween="quadratic" easing="in">WindowClose</animation>
+	</include>
+	<include name="ViewSizePlot">
+		<font>font15</font>
+	</include>
+	<include name="NoViewSizePlot">
+		<font>font12</font>
+	</include>
+	<include name="Widgets_Home_Animation">
+		<animation condition="System.IdleTime(33) + Skin.HasSetting(AnimWidgets)" type="Conditional" loop="true" reversible="false">
+            			<effect type="rotatex" tween="sine" easing="inout" acceleration="-1" center="auto" start="0" end="3600" time="180000" />
+            			<effect type="rotatey" tween="sine" easing="inout" acceleration="-1" center="auto" start="0" end="3600" time="42000" />
+            			<effect type="rotatey" tween="sine" easing="inout" acceleration="-1" center="auto" start="0" end="-3600" time="42000" delay="89000" />
+           			<effect type="rotatex" tween="sine" easing="inout" acceleration="-1" center="auto" start="0" end="-3600" time="180000" delay="89000" />
+                	</animation>
+	</include>
+	<include name="RunlastFmSlideShow"><onclick>RunScript(&quot;script.image.lastfm.slideshow&quot;)</onclick></include>
+	<include name="TVInfo">
+	 <control type="group">
+		       <posx>490r</posx>
+		       <posy>40</posy>
+<!--
+			<visible>!Skin.HasSetting(HorizontalMenu) + Container(9000).HasFocus(12) + [PVR.IsRecording | PVR.HasTimer]</visible>
+-->
+			<visible>Container(9000).HasFocus(12) + [PVR.IsRecording | PVR.HasTimer]</visible>
 
+		       <animation type="Visible" reversible="false">
+			       <effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
+			       <effect type="fade" start="0" end="100" time="300" />
+		       </animation>
+		       <animation type="Hidden" reversible="false">
+			       <effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+			       <effect type="fade" start="100" end="0" time="300" />
+		       </animation>		    
+		       <animation type="WindowOpen" reversible="false">
+			       <effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
+			       <effect type="fade" start="0" end="100" time="300" />
+		       </animation>
+		       <animation type="WindowClose" reversible="false">
+			       <effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+			       <effect type="fade" start="100" end="0" time="300" />
+		       </animation>		    
+		       <animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(Favourites)">conditional</animation>
+		       <control type="image">
+			       <description>background</description>
+			       <posx>0</posx>
+			       <posy>0</posy>
+			       <width>480</width>
+			       <height>135</height>
+			       <include>T-Level</include>
+			       <texture border="20">OverlayDialogBackground.png</texture>
+		       </control>
+		       <control type="group">
+			       <visible>!PVR.IsRecording + PVR.HasTimer</visible>
+			       <control type="image">
+				       <posx>435</posx>
+				       <posy>15</posy>
+				       <width>25</width>
+				       <height>25</height>
+				       <texture>PVR-HasTimer.png</texture>
+					<include>T-Level</include>
+			       </control>
+			       <control type="label">
+				       <description>Next Timer Header label</description>
+				       <posx>420</posx>
+				       <posy>15</posy>
+				       <height>25</height>
+				       <width>400</width>
+				       <label>$LOCALIZE[19157]</label>
+				       <align>right</align>
+				       <aligny>center</aligny>
+				       <font>font12_title</font>
+				       <textcolor>blue</textcolor>
+				       <shadowcolor>black</shadowcolor>
+			       </control>
+			       <control type="label">
+				       <description>NextRecordingTitle</description>
+				       <posx>460</posx>
+				       <posy>40</posy>
+				       <height>30</height>
+				       <width>440</width>
+				       <label>$INFO[PVR.NextRecordingTitle]</label>
+				       <align>right</align>
+				       <aligny>center</aligny>
+				       <font>font13</font>
+				       <shadowcolor>black</shadowcolor>
+				       <scroll>true</scroll>
+			       </control>
+			       <control type="label">
+				       <description>NextRecordingChannel</description>
+				       <posx>460</posx>
+				       <posy>70</posy>
+				       <height>25</height>
+				       <width>440</width>
+				       <label>$INFO[PVR.NextRecordingChannel]</label>
+				       <align>right</align>
+				       <aligny>center</aligny>
+				       <font>font12</font>
+				       <shadowcolor>black</shadowcolor>
+			       </control>
+			       <control type="label">
+				       <description>NextRecordingDateTime</description>
+				       <posx>460</posx>
+				       <posy>95</posy>
+				       <height>25</height>
+				       <width>440</width>
+				       <label>$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19126] - ]</label>
+				       <align>right</align>
+				       <aligny>center</aligny>
+				       <font>font12</font>
+				       <shadowcolor>black</shadowcolor>
+			       </control>
+		       </control>
+		       <control type="group">
+			       <visible>PVR.IsRecording</visible>
+			       <control type="image">
+				       <posx>423</posx>
+				       <posy>15</posy>
+				       <width>37</width>
+				       <height>25</height>
+				       <texture>PVR-IsRecording.png</texture>
+					<include>T-Level</include>
+			       </control>
+			       <control type="label">
+				       <description>Is Recording Header label</description>
+				       <posx>410</posx>
+				       <posy>15</posy>
+				       <height>25</height>
+				       <width>390</width>
+				       <label>$LOCALIZE[19158]</label>
+				       <align>right</align>
+				       <aligny>center</aligny>
+				       <font>font12_title</font>
+				       <textcolor>blue</textcolor>
+				       <shadowcolor>black</shadowcolor>
+			       </control>
+			       <control type="label">
+				       <description>NextRecordingTitle</description>
+				       <posx>460</posx>
+				       <posy>40</posy>
+				       <height>30</height>
+				       <width>440</width>
+				       <label>$INFO[PVR.NowRecordingTitle]</label>
+				       <align>right</align>
+				       <aligny>center</aligny>
+				       <font>font13</font>
+				       <shadowcolor>black</shadowcolor>
+				       <scroll>true</scroll>
+			       </control>
+			       <control type="label">
+				       <description>NextRecordingChannel</description>
+				       <posx>460</posx>
+				       <posy>70</posy>
+				       <height>25</height>
+				       <width>440</width>
+				       <label>$INFO[PVR.NowRecordingChannel]</label>
+				       <align>right</align>
+				       <aligny>center</aligny>
+				       <font>font12</font>
+				       <shadowcolor>black</shadowcolor>
+			       </control>
+			       <control type="label">
+				       <description>NextRecordingDateTime</description>
+				       <posx>460</posx>
+				       <posy>95</posy>
+				       <height>25</height>
+				       <width>440</width>
+
+				       <label>$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19126] - ]</label>
+				       <align>right</align>
+				       <aligny>center</aligny>
+				       <font>font12</font>
+				       <shadowcolor>black</shadowcolor>
+			       </control>
+		       </control>
+	       </control>
+	</include>
 	
 	<include name="CommonMediaPlayingBackground">
 		<control type="image">
@@ -277,6 +461,8 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>black-back.png</texture>
+			<texture border="20">black-back.png</texture>
+			<include>T-Level</include>
 			<animation effect="fade" time="400">Visible</animation>
 			<animation effect="fade" time="200">Hidden</animation>
 			<visible>Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(SongInformation) | Window.IsActive(FileBrowser) | Window.IsActive(TextViewer) | Window.IsActive(AddonSettings) | Window.IsActive(ContentSettings) | Window.IsActive(SelectDialog) | Window.IsActive(FileStackingDialog) | Window.IsActive(MediaSource) | Window.IsActive(PictureInfo) | Window.IsActive(PlayerControls) | Window.IsActive(VirtualKeyboard) | Window.IsActive(NumericInput) | Window.IsActive(ProfileSettings) | Window.IsActive(LockSettings) | Window.IsActive(SmartPlaylistEditor) | Window.IsActive(SmartPlaylistRule) | Window.IsActive(script-Apple_Movie_Trailers-settings.xml) | Window.IsActive(script-Apple_Movie_Trailers-chooser.xml) | Window.IsActive(script-Apple_Movie_Trailers-search.xml) | Window.IsActive(script-Apple_Movie_Trailers-showtimes.xml) | Window.IsActive(script-XBMC_Lyrics-settings.xml) | Window.IsActive(script-RSS_Editor-rssEditor.xml) | Window.IsActive(script-RSS_Editor-setEditor.xml) | Window.IsActive(Script-GenreEditor.xml) | Window.IsActive(AddonInformation) | Window.IsActive(13000) | Window.IsActive(FileBrowser.xml) | Window.IsActive(DialogVideoInfo.xml)</visible>
@@ -294,16 +480,17 @@
 	</include>
 	<include name="WindowTitleHomeButton">
 		<control type="group">
-			<posx>20</posx>
+			<posx>-10</posx>
 			<posy>0</posy>
-			<animation effect="slide" end="-270,0" time="400" tween="quadratic" easing="out" condition="Window.Next(Home)">WindowClose</animation>
+		<animation effect="slide" end="-270,0" time="400" tween="quadratic" easing="out" condition="Window.Next(Home)">WindowClose</animation>
 			<animation effect="slide" start="-270,0" time="400" tween="quadratic" easing="out" condition="Window.Previous(Home)">WindowOpen</animation>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>80</width>
+				<width>115</width>
 				<height>35</height>
 				<texture border="0,0,32,0">header.png</texture>
+				<include>T-Level</include>
 			</control>
 			<control type="button">
 				<hitrect x="0" y="0" w="60" h="30" />
@@ -362,28 +549,7 @@
 		<texturenofocus border="5">button-nofocus.png</texturenofocus>
 		<pulseonselect>false</pulseonselect>
 	</include>
-	<include name="SideBladeRight">
-		<control type="image">
-			<posx>26r</posx>
-			<posy>0</posy>
-			<width>846</width>
-			<height>720</height>
-			<texture flipx="true">HomeBlade.png</texture>
-			<animation effect="slide" start="26,0" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="26,0" time="200" delay="200" tween="quadratic" easing="out">WindowClose</animation>
-		</control>
-	</include>
-	<include name="SideBladeLeft">
-		<control type="image">
-			<posx>-820</posx>
-			<posy>0</posy>
-			<width>846</width>
-			<height>720</height>
-			<texture>HomeBlade.png</texture>
-			<animation effect="slide" start="-26,0" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="-26,0" time="200" delay="200" tween="quadratic" easing="out">WindowClose</animation>
-		</control>
-	</include>
+	
 	<include name="CommonPageCount">
 		<control type="group">
 			<control type="label">
@@ -445,7 +611,7 @@
 			<posy>0</posy>
 			<width>500</width>
 			<height>165</height>
-			<colordiffuse>DDFFFFFF</colordiffuse>
+			<include>T-Level</include>
 			<texture border="20">OverlayDialogBackground.png</texture>
 		</control>
 		<control type="image">
@@ -531,7 +697,7 @@
 			<posy>0</posy>
 			<width>500</width>
 			<height>165</height>
-			<colordiffuse>DDFFFFFF</colordiffuse>
+			<include>T-Level</include>
 			<texture border="20">OverlayDialogBackground.png</texture>
 		</control>
 		<control type="image">
@@ -1046,6 +1212,7 @@ tent(LiveTV)</visible>
 				<width>150</width>
 				<height>35</height>
 				<texture flipx="true" border="32,0,0,0">header.png</texture>
+				<include>T-Level</include>
 			</control>
 			<control type="label">
 				<description>time label</description>
@@ -1177,7 +1344,7 @@ tent(LiveTV)</visible>
 				<texturefocus>home-rss-FO.png</texturefocus>
 				<texturenofocus>home-rss.png</texturenofocus>
 				<onleft>20</onleft>
-				<onright>9000</onright>
+				<onright>8010</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<visible>!Skin.HasSetting(Menu_Info_act)</visible>
@@ -1239,6 +1406,7 @@ tent(LiveTV)</visible>
 					<width>250</width>
 					<height>35</height>
 					<texture border="0,0,32,0">header.png</texture>
+					<include>T-Level</include>
 				</control>
 				<control type="label">
 					<include>WindowTitleCommons</include>
@@ -1259,6 +1427,7 @@ tent(LiveTV)</visible>
 					<width>250</width>
 					<height>35</height>
 					<texture border="0,0,32,0">header.png</texture>
+					<include>T-Level</include>
 				</control>
 				<control type="label">
 					<include>WindowTitleCommons</include>
@@ -1279,6 +1448,7 @@ tent(LiveTV)</visible>
 					<width>250</width>
 					<height>35</height>
 					<texture border="0,0,32,0">header.png</texture>
+					<include>T-Level</include>
 				</control>
 				<control type="label">
 					<include>WindowTitleCommons</include>
@@ -1299,6 +1469,7 @@ tent(LiveTV)</visible>
 					<width>350</width>
 					<height>35</height>
 					<texture border="0,0,32,0">header.png</texture>
+					<include>T-Level</include>
 				</control>
 				<control type="label">
 					<width>250</width>
@@ -1321,6 +1492,7 @@ tent(LiveTV)</visible>
 						<width>250</width>
 						<height>35</height>
 						<texture border="0,0,32,0">header.png</texture>
+						<include>T-Level</include>
 					</control>
 					<include>MovieSetsHeader</include>
 				</control>
@@ -1335,6 +1507,7 @@ tent(LiveTV)</visible>
 						<width>250</width>
 						<height>35</height>
 						<texture border="0,0,32,0">header.png</texture>
+						<include>T-Level</include>
 					</control>
 					<control type="label">
 						<include>WindowTitleCommons</include>
@@ -1342,8 +1515,7 @@ tent(LiveTV)</visible>
 						<label>$LOCALIZE[20314]</label>
 					</control>
 				</control>
-				<include>WindowTitleHomeButton</include>
-				<include>Clock</include>
+				
 			</control>
 			<visible> ![Control.IsVisible(1001) + !Skin.HasSetting(ViewCustom1001_ShowHomePathClock)]</visible>
 			<visible> ![Control.IsVisible(1002) + !Skin.HasSetting(ViewCustom1002_ShowHomePathClock)]</visible>
@@ -1382,6 +1554,7 @@ tent(LiveTV)</visible>
 				<width>250</width>
 				<height>35</height>
 				<texture border="0,0,32,0">header.png</texture>
+				<include>T-Level</include>
 			</control>
 			<control type="label">
 				<include>WindowTitleCommons</include>
@@ -1400,6 +1573,7 @@ tent(LiveTV)</visible>
 				<width>250</width>
 				<height>35</height>
 				<texture border="0,0,32,0">header.png</texture>
+				<include>T-Level</include>
 			</control>
 			<control type="label">
 				<include>WindowTitleCommons</include>
@@ -1500,6 +1674,26 @@ tent(LiveTV)</visible>
 		<visible>![Control.IsVisible(1019) + !Skin.HasSetting(ViewCustom1019_ShowFanart)]</visible>
 		<visible>![Control.IsVisible(1020) + !Skin.HasSetting(ViewCustom1020_ShowFanart)]</visible>	
 	</include>
+	<include name="RunRecentlyAdded">
+		<onfocus>XBMC.RunScript(script.recentlyadded,limit=10&amp;albums=True&amp;totals=True)</onfocus>
+		
+	</include>
+	<include name="RunRandomAdded">
+		<onfocus>XBMC.RunScript(script.randomitems,limit=10)</onfocus>
+		
+	</include>
+	<include name="RunNextAiredAdded">
+		<onfocus>XBMC.RunScript(script.tv.show.next.aired,silent=true)</onfocus>
+		
+	</include>
+	<include name="RunRecentlyWatcheAdded">
+		<onfocus>XBMC.RunScript(script.recentlywatched,limit=10)</onfocus>
+		
+	</include>
+	<include name="RunExtraMusicConcertAdded">
+		<onfocus>RunScript(script.ExtraMusicInfo,info=NearEvents)</onfocus>
+		
+	</include>
 	<include name="RunFeed1Added">
 		<onfocus>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=1,feed=$INFO[Skin.String(Menu_Info_sub1_feed)],limit=10)</onfocus>
 		
@@ -1531,7 +1725,44 @@ tent(LiveTV)</visible>
 	<include name="RunFeed10Added">
 		<onfocus>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=10,feed=$INFO[Skin.String(Menu_Info_sub10_feed)],limit=10)</onfocus>
 	</include>
+	<include name="RunFeed20Added">
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=20,feed=$INFO[Skin.String(Menu_InfoMovie_feed)],limit=10)</onfocus>
+	</include>
+	<include name="RunFeed21Added">
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=21,feed=$INFO[Skin.String(Menu_InfoPrograms_feed)],limit=10)</onfocus>
+	</include>
+	<include name="RunFeed22Added">
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=22,feed=$INFO[Skin.String(Menu_InfoPictures_feed)],limit=10)</onfocus>
+	</include>
+	<include name="RunFeed23Added">
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=23,feed=$INFO[Skin.String(Menu_InfoMen1_feed)],limit=10)</onfocus>
+	</include>
+	<include name="RunFeed24Added">
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=24,feed=$INFO[Skin.String(Menu_InfoMen2_feed)],limit=10)</onfocus>
+	</include>
+	<include name="RunFeed25Added">
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=25,feed=$INFO[Skin.String(Menu_InfoMen3_feed)],limit=10)</onfocus>
+	</include>
+	<include name="RunFeed26Added">
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=26,feed=$INFO[Skin.String(Menu_InfoMen4_feed)],limit=10)</onfocus>
+	</include>
+	<include name="RunFeed27Added">
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=27,feed=$INFO[Skin.String(Menu_InfoTVShows_feed)],limit=10)</onfocus>
+	</include>
+	<include name="RunFeed28Added">
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=28,feed=$INFO[Skin.String(Menu_InfoMusic_feed)],limit=10)</onfocus>
+	</include>
+	<include name="RunFeed29Added">
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=29,feed=$INFO[Skin.String(Menu_InfoSettings_feed)],limit=10)</onfocus>
+	</include>
+	<include name="RunFeed30Added">
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=30,feed=$INFO[Skin.String(Menu_InfoVideos1_feed)],limit=10)</onfocus>
+	</include>
+	<include name="RunFeed31Added">
+		<onfocus>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=31,feed=$INFO[Skin.String(Menu_InfoVideos2_feed)],limit=10)</onfocus>
+	</include>
 	<include name="TestRecently">	
+		
 		<control type="button" id="8999">
 			<description>Run Recently added</description>
 			<visible>Substring(Skin.String(InitRunScript),True)</visible>
@@ -1542,10 +1773,34 @@ tent(LiveTV)</visible>
 			<label>-</label>
 			<font>-</font>
 			<onfocus>Skin.Reset(LibraryUpdated)</onfocus>
-			<onfocus>XBMC.RunScript(script.recentlyadded,limit=10&amp;albums=True&amp;totals=True)</onfocus>
-			<onfocus>XBMC.RunScript(script.tv.show.next.aired,silent=true)</onfocus>
-			<onfocus>XBMC.RunScript(script.randomitems,limit=10)</onfocus>
+			<include condition ="Skin.HasSetting(homepageHideRecentlyVideoAdded) | Skin.HasSetting(homepageHideRecentlyMusicAdded) | Skin.HasSetting(homepageHideRecentlyTvShowsAdded) | Skin.HasSetting(homepageHideRecentlyMovieAdded) | Skin.HasSetting(homepageHideRandomVideoAdded) | Skin.HasSetting(homepageHideRandomMusicAdded) | Skin.HasSetting(homepageHideRandomTvShowsAdded) | Skin.HasSetting(homepageHideRandomMovieAdded)">RunRecentlyAdded</include>
+			<include condition ="Skin.HasSetting(UseNextAired)|Skin.HasSetting(Menu_TVShows_sub9_act)">RunNextAiredAdded</include>
+			<include condition ="Skin.HasSetting(homepageHideRandomVideoAdded) | Skin.HasSetting(homepageHideRandomMusicAdded) | Skin.HasSetting(homepageHideRandomTvShowsAdded) | Skin.HasSetting(homepageHideRandomMovieAdded)">RunRandomAdded</include>
 			<!--<onfocus>XBMC.RunScript(script.recentlywatched,limit=10)</onfocus>-->
+			<include condition ="Skin.HasSetting(UseConcertInfo)">RunExtraMusicConcertAdded</include>
+			<include condition ="Skin.HasSetting(Menu_Info_sub1_act)+Skin.HasSetting(Menu_Info_act)">RunFeed1Added</include>
+			<include condition ="Skin.HasSetting(Menu_Info_sub2_act)+Skin.HasSetting(Menu_Info_act)">RunFeed2Added</include>
+			<include condition ="Skin.HasSetting(Menu_Info_sub3_act)+Skin.HasSetting(Menu_Info_act)">RunFeed3Added</include>
+			<include condition ="Skin.HasSetting(Menu_Info_sub4_act)+Skin.HasSetting(Menu_Info_act)">RunFeed4Added</include>
+			<include condition ="Skin.HasSetting(Menu_Info_sub5_act)+Skin.HasSetting(Menu_Info_act)">RunFeed5Added</include>
+			<include condition ="Skin.HasSetting(Menu_Info_sub6_act)+Skin.HasSetting(Menu_Info_act)">RunFeed6Added</include>
+			<include condition ="Skin.HasSetting(Menu_Info_sub7_act)+Skin.HasSetting(Menu_Info_act)">RunFeed7Added</include>
+			<include condition ="Skin.HasSetting(Menu_Info_sub8_act)+Skin.HasSetting(Menu_Info_act)">RunFeed8Added</include>
+			<include condition ="Skin.HasSetting(Menu_Info_sub9_act)+Skin.HasSetting(Menu_Info_act)">RunFeed9Added</include>
+			<include condition ="Skin.HasSetting(Menu_Info_sub10_act)+Skin.HasSetting(Menu_Info_act)">RunFeed10Added</include>
+			<include condition ="Skin.HasSetting(Menu_InfoMovie_act)+Skin.HasSetting(Menu_Movie_act)">RunFeed20Added</include>
+			<include condition ="Skin.HasSetting(Menu_InfoPrograms_act)+Skin.HasSetting(Menu_Programs_act)">RunFeed21Added</include>
+			<include condition ="Skin.HasSetting(Menu_InfoPictures_act)+Skin.HasSetting(Menu_Pictures_act)">RunFeed22Added</include>
+			<include condition ="Skin.HasSetting(Menu_InfoMen1_act)+Skin.HasSetting(Menu_Men1_act)">RunFeed23Added</include>
+			<include condition ="Skin.HasSetting(Menu_InfoMen2_act)+Skin.HasSetting(Menu_Men2_act)">RunFeed24Added</include>
+			<include condition ="Skin.HasSetting(Menu_InfoMen3_act)+Skin.HasSetting(Menu_Men3_act)">RunFeed25Added</include>
+			<include condition ="Skin.HasSetting(Menu_InfoMen4_act)+Skin.HasSetting(Menu_Men4_act)">RunFeed26Added</include>
+			<include condition ="Skin.HasSetting(Menu_InfoTVShows_act)+Skin.HasSetting(Menu_TVShows_act)">RunFeed27Added</include>
+			<include condition ="Skin.HasSetting(Menu_InfoMusic_act)+Skin.HasSetting(Menu_Music_act)">RunFeed28Added</include>
+			<include condition ="!Skin.HasSetting(HomeMenuNoSettingsButton)+Skin.HasSetting(Menu_InfoSettings_act)">RunFeed29Added</include>
+			<include condition ="Skin.HasSetting(Menu_InfoVideos1_act)+Skin.HasSetting(Menu_Videos_act)">RunFeed30Added</include>
+			<include condition ="Skin.HasSetting(Menu_InfoVideos2_act)+Skin.HasSetting(Menu_Videos_act)">RunFeed31Added</include>
+			<onfocus>Skin.SetString(InitRunScript,False)</onfocus>
 			<onfocus>SetFocus(8998)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
@@ -1564,47 +1819,235 @@ tent(LiveTV)</visible>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 		</control>	
+		
 		<control type="button" id="8998">
-			<description>run rss feeds</description>
+			
+			<description>run rss search</description>
 			<posx>-20</posx>
 			<posy>-20</posy>
 			<width>1</width>
 			<height>1</height>
 			<label>-</label>
 			<font>-</font>
-			<include condition ="Skin.HasSetting(Menu_Info_sub1_act)">RunFeed1Added</include>
-			<include condition ="Skin.HasSetting(Menu_Info_sub2_act)">RunFeed2Added</include>
-			<include condition ="Skin.HasSetting(Menu_Info_sub3_act)">RunFeed3Added</include>
-			<include condition ="Skin.HasSetting(Menu_Info_sub4_act)">RunFeed4Added</include>
-			<include condition ="Skin.HasSetting(Menu_Info_sub5_act)">RunFeed5Added</include>
-			<include condition ="Skin.HasSetting(Menu_Info_sub6_act)">RunFeed6Added</include>
-			<include condition ="Skin.HasSetting(Menu_Info_sub7_act)">RunFeed7Added</include>
-			<include condition ="Skin.HasSetting(Menu_Info_sub8_act)">RunFeed8Added</include>
-			<include condition ="Skin.HasSetting(Menu_Info_sub9_act)">RunFeed9Added</include>
-			<include condition ="Skin.HasSetting(Menu_Info_sub10_act)">RunFeed10Added</include>
-			<onfocus>Skin.SetString(InitRunScript,False)</onfocus>
+			<onfocus>Skin.SetString(SearchPictures,$INFO[MusicPlayer.Artist])</onfocus>
+			<onfocus>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=11,feed=http://pipes.yahoo.com/pipes/pipe.run?_id=9aeedcfb616c374c2b0a18bc31479dfd&amp;_render=rss&amp;filterinput=$INFO[Skin.String(ChoiseRssType)]&amp;maininput=$INFO[Skin.String(SearchPictures)]+music,limit=10)</onfocus>
+			
 			<onfocus>SetFocus(9000)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<visible>Skin.HasSetting(Menu_Info_act)</visible>
+			<visible>Player.HasAudio + Skin.HasSetting(Menu_Info_act) + Skin.HasSetting(ChoiseRssPicture)+IsEmpty(Window(10025).Property(TvTunesIsRunning))</visible>
 		</control>
 		<control type="button" id="8998">
 			
-			<description>run rss feeds</description>
+			<description>run rss search</description>
 			<posx>-20</posx>
 			<posy>-20</posy>
 			<width>1</width>
 			<height>1</height>
 			<label>-</label>
 			<font>-</font>
-			<onfocus>Skin.SetString(InitRunScript,False)</onfocus>
+			<onfocus>Skin.SetString(SearchPictures,$INFO[MusicPlayer.Artist])</onfocus>
+			<onfocus>XBMC.RunScript(script.rssclient,guiless,imagecaching=false,alarm=false,prefix=11,feed=http://pipes.yahoo.com/pipes/pipe.run?_id=9aeedcfb616c374c2b0a18bc31479dfd&amp;_render=rss&amp;filterinput=$INFO[Skin.String(ChoiseRssType)]&amp;maininput=$INFO[Skin.String(SearchPictures)],limit=10)</onfocus>
 			<onfocus>SetFocus(9000)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<visible>!Skin.HasSetting(Menu_Info_act)</visible>
+			<visible>Player.HasAudio + Skin.HasSetting(Menu_Info_act) + !Skin.HasSetting(ChoiseRssPicture)+IsEmpty(Window(10025).Property(TvTunesIsRunning))</visible>
+		</control>
+		<control type="button" id="8998">
+			
+			<description>don't run rss search</description>
+			<posx>-20</posx>
+			<posy>-20</posy>
+			<width>1</width>
+			<height>1</height>
+			<label>-</label>
+			<font>-</font>
+			<onfocus>SetFocus(9000)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>!Player.HasAudio | [Player.HasAudio + !Skin.HasSetting(Menu_Info_act)] | [Player.HasAudio + !IsEmpty(Window(10025).Property(TvTunesIsRunning))]</visible>
 		</control>
 		
 		
+	</include>
+	<include name="HomeNavWidget">
+		<control type="group" id="300">
+				<control type="button" id="302">
+					<visible>Container(9000).HasFocus(3) + Skin.HasSetting(homepageHideRecentlyMusicAdded)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8002)</onfocus>
+				</control>
+				<control type="button" id="304">
+					<visible>Container(9000).HasFocus(3) + Skin.HasSetting(homepageHideRandomMusicAdded)+ !Skin.HasSetting(homepageHideRecentlyMusicAdded)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8006)</onfocus>
+				</control>
+				<control type="button" id="3235">
+					<visible>Container(9000).HasFocus(3) + [!Skin.HasSetting(homepageHideRecentlyMusicAdded)+ !Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(Menu_InfoMusic_act)]</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8134)</onfocus>
+				</control>
+				<control type="button" id="3236">
+					<visible>Container(9000).HasFocus(2) + !Skin.HasSetting(homepageHideRecentlyVideoAdded)+ !Skin.HasSetting(homepageHideRandomVideoAdded)+Skin.HasSetting(Menu_InfoVideos1_act)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8139)</onfocus>
+				</control>
+				<control type="button" id="3237">
+					<visible>Container(9000).HasFocus(2) + !Skin.HasSetting(homepageHideRecentlyVideoAdded)+ !Skin.HasSetting(homepageHideRandomVideoAdded)+!Skin.HasSetting(Menu_InfoVideos1_act)+Skin.HasSetting(Menu_InfoVideos2_act)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8141)</onfocus>
+				</control>
+				<control type="button" id="322">
+					<visible>Container(9000).HasFocus(3) + [!Skin.HasSetting(homepageHideRecentlyMusicAdded)+ !Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(UseConcertInfo)+!Skin.HasSetting(SearchArtistConcertRss)+ !Skin.HasSetting(Menu_InfoMusic_act)]</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8060)</onfocus>
+				</control>
+				<control type="button" id="323">
+					<visible>Container(9000).HasFocus(3) + [Skin.HasSetting(homepageHideRecentlyMusicAdded)+ Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(UseConcertInfo)]</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8002)</onfocus>
+				</control>
+				<control type="button" id="324">
+					<visible>Container(9000).HasFocus(3) + [!Skin.HasSetting(homepageHideRecentlyMusicAdded)+ !Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(UseConcertInfo)+Skin.HasSetting(SearchArtistConcertRss)+ Skin.HasSetting(Menu_InfoMusic_act)]</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8063)</onfocus>
+				</control>
+				<control type="button" id="306">
+					<visible>Container(9000).HasFocus(10) +   Skin.HasSetting(homepageHideRecentlyMovieAdded)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8000)</onfocus>
+				</control>
+				<control type="button" id="307">
+					<visible>Container(9000).HasFocus(10) +  Skin.HasSetting(homepageHideRandomMovieAdded)+ !Skin.HasSetting(homepageHideRecentlyMovieAdded)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8004)</onfocus>
+				</control>
+				<control type="button" id="307">
+					<visible>Container(9000).HasFocus(10) +  !Skin.HasSetting(homepageHideRandomMovieAdded)+!Skin.HasSetting(homepageHideRecentlyMovieAdded)+Skin.HasSetting(Menu_InfoMovie_act)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8121)</onfocus>
+				</control>
+				<control type="button" id="308">
+					<visible>[Container(9000).HasFocus(11)  + Skin.HasSetting(homepageHideRecentlyTVShowsAdded)] | [Container(9000).HasFocus(2)  + Skin.HasSetting(homepageHideRecentlyVideoAdded)]</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8001)</onfocus>
+				</control>
+				<control type="button" id="309">
+					<visible>[Container(9000).HasFocus(11) + Skin.HasSetting(homepageHideRandomTVShowsAdded)+ !Skin.HasSetting(homepageHideRecentlyTVShowsAdded)] | [Container(9000).HasFocus(2) + Skin.HasSetting(homepageHideRandomVideoAdded)]</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8007)</onfocus>
+				</control>
+				<control type="button" id="320">
+					<visible>Container(9000).HasFocus(11) + !Skin.HasSetting(homepageHideRandomTVShowsAdded) + !Skin.HasSetting(homepageHideRecentlyTVShowsAdded) + Skin.HasSetting(UseNextAired)+!Skin.HasSetting(Menu_InfoTVShows_act)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8020)</onfocus>
+				</control>
+				<control type="button" id="320">
+					<visible>Container(9000).HasFocus(11) + !Skin.HasSetting(homepageHideRandomTVShowsAdded) + !Skin.HasSetting(homepageHideRecentlyTVShowsAdded)+Skin.HasSetting(Menu_InfoTVShows_act)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8130)</onfocus>
+				</control>
+				<control type="button" id="310">
+					<visible>Container(945).HasFocus(2401)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8010)</onfocus>
+				</control>
+				<control type="button" id="311">
+					<visible>Container(945).HasFocus(2402)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8032)</onfocus>
+				</control>
+				<control type="button" id="312">
+					<visible>Container(945).HasFocus(2403)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8012)</onfocus>
+				</control>
+				<control type="button" id="313">
+					<visible>Container(945).HasFocus(2404)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8013)</onfocus>
+				</control>
+				<control type="button" id="314">
+					<visible>Container(945).HasFocus(2405)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8014)</onfocus>
+				</control>
+				<control type="button" id="315">
+					<visible>Container(945).HasFocus(2406)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8015)</onfocus>
+				</control>
+				<control type="button" id="316">
+					<visible>Container(945).HasFocus(2407)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8016)</onfocus>
+				</control>
+				<control type="button" id="317">
+					<visible>Container(945).HasFocus(2408)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8017)</onfocus>
+				</control>
+				<control type="button" id="318">
+					<visible>Container(945).HasFocus(2409)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8018)</onfocus>
+				</control>
+				<control type="button" id="319">
+					<visible>Container(945).HasFocus(2410)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8019)</onfocus>
+				</control>
+				
+				<control type="button" id="321">
+					<visible>Container(9000).HasFocus(4)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8125)</onfocus>
+				</control>
+				<control type="button" id="3110">
+					<visible>Container(9000).HasFocus(1)+Skin.HasSetting(Menu_InfoPrograms_act)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8124)</onfocus>
+				</control>
+				<control type="button" id="3510">
+					<visible>Container(9000).HasFocus(5)+Skin.HasSetting(Menu_InfoSettings_act)+Skin.HasSetting(Menu_SettingsInfoSys)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8138)</onfocus>
+				</control>
+				<control type="button" id="3512">
+					<visible>Container(9000).HasFocus(5)+Skin.HasSetting(Menu_InfoSettings_act)+!Skin.HasSetting(Menu_SettingsInfoSys)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8137)</onfocus>
+				</control>
+			</control>
 	</include>
 	
 </includes>

@@ -15,7 +15,7 @@
 				<posy>0</posy>
 				<width>800</width>
 				<height>490</height>
-				<colordiffuse>DDFFFFFF</colordiffuse>
+				<include>T-Level</include>
 				<texture border="40">DialogBack.png</texture>
 			</control>
 			<control type="image">
@@ -25,6 +25,7 @@
 				<height>90</height>
 				<aspectratio>stretch</aspectratio>
 				<texture>GlassTitleBar.png</texture>
+				<include>T-Level</include>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>

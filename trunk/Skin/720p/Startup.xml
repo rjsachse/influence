@@ -7,6 +7,8 @@
 			<description>Trigger to Auto run the Latest media python after a 1 min delay if scan on startup is enabled</description>
 			<onfocus>XBMC.AlarmClock(UpdateRecentAdded,XBMC.RunScript(script.recentlyadded,limit=10),1,true)</onfocus>
 			<onfocus>Skin.SetString(InitRunScript,True)</onfocus>
+			<onfocus>Skin.Reset(SearchArtistConcertRss)</onfocus>
+			<onfocus>Skin.Reset(SearchPictures)</onfocus>
 			<onfocus>SetFocus(10)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
@@ -15,6 +17,8 @@
 		<control type="button" id="9">
 			<description>Don't run anything is scan on startup is Disabled and jump to the startup playlist</description>
 			<onfocus>Skin.SetString(InitRunScript,True)</onfocus>
+			<onfocus>Skin.Reset(SearchArtistConcertRss)</onfocus>
+			<onfocus>Skin.Reset(SearchPictures)</onfocus>
 			<onfocus>SetFocus(10)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
@@ -35,25 +39,79 @@
 			<texturefocus>-</texturefocus>
 			<visible>Skin.HasSetting(Use_Startup_Playlist)</visible>
 		</control>
+		<control type="button" id="16">
+			<texturefocus>special://skin/media/Influence_Init.png</texturefocus>
+			<onfocus>Skin.SetBool(Influence_SkinInit_b7)</onfocus>
+			<onfocus>Skin.SetString(Menu_TVShows_sub9_run,ActivateWindow(1135,return))</onfocus>
+			<onfocus>Skin.SetBool(Menu_TVShows_sub9_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_TVShows_sub9_lab,Tv Guide)</onfocus>
+			<!--<onfocus>Skin.SetString(Menu_Info_run,RunScript(script.rssclient-standalone))</onfocus>-->
+			<onfocus>Skin.SetString(ChoiseRssType,video)</onfocus>
+			<onfocus>Skin.SetString(Menu_Infomusic_feed,http://pipes.yahoo.com/pipes/pipe.run?_id=74fc14a798efee89310bea2b56f99336&amp;amp;_render=rss&amp;amp;n=10)</onfocus>
+			<onfocus>Skin.SetBool(Menu_InfoMusic_act)</onfocus>
+			<onfocus>Skin.SetBool(UseConcertInfo)</onfocus>
+			<onfocus>Skin.SetString(Menu_InfoPictures_feed,http://www.picsi.fr/feed/demo)</onfocus>
+			<onfocus>Skin.SetBool(Menu_InfoPictures_act)</onfocus>
+			<onfocus>Skin.SetBool(Menu_Pictures_fanart)</onfocus>
+			<onfocus>Skin.SetString(Menu_InfoMovie_feed,http://pipes.yahoo.com/pipes/pipe.run?_id=9KUs2CRI3hGF2JCZ3rVd_w&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;_render=rss)</onfocus>
+			<onfocus>Skin.SetBool(Menu_InfoMovie_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_InfoTVShows_feed,http://series-tv.premiere.fr/var/premiere/storage/rss/series_actu.xml)</onfocus>
+			<onfocus>Skin.SetString(Menu_InfoSettings_feed,http://xbmc.org/feed/)</onfocus>
+			<onfocus>Skin.SetBool(Menu_InfoTVShows_act)</onfocus>
+			<onfocus>Skin.SetBool(Menu_SettingsInfoSys)</onfocus>
+			<onfocus>Skin.SetString(Menu_InfoPrograms_feed,http://psp.dattebayo-fr.fr/psp2.php)</onfocus>
+			<onfocus>Skin.SetString(Menu_InfoVideos1_feed,http://www.premiere.fr/var/premiere/storage/rss/sorties_semaine_dvd.xml)</onfocus>
+			<onfocus>Skin.SetBool(Menu_InfoVideos1_act)</onfocus>
+			<onfocus>Skin.SetString(Menu_InfoVideos2_feed,http://pipes.yahoo.com/pipes/pipe.run?_id=XBUqBKJx3BGIXvy4Bx2yXQ&amp;amp;_render=rss)</onfocus>
+			<onfocus>Skin.SetBool(Menu_InfoVideos2_act)</onfocus>
+			<onfocus>Skin.SetBool(Menu_Info_act)</onfocus>
+			<onfocus>Skin.ToggleSetting(HideInfoMovieSets)</onfocus>
+			<onfocus>Skin.Reset(ManagerMovieSets)</onfocus>
+			<onfocus>Skin.ToggleSetting(homepageHideRecentlyVideoAdded)</onfocus>
+			<onfocus>Skin.ToggleSetting(homepageHideRecentlyMovieAdded)</onfocus>
+			<onfocus>Skin.ToggleSetting(Trans40)</onfocus>
+			<onfocus>Skin.ToggleSetting(TopTrans90)</onfocus>
+			<onfocus>Skin.SetString(Menu_Info_sub2_lab,Search)</onfocus>
+			<onfocus>Skin.SetString(Menu_Info_sub2_feed,http://pipes.yahoo.com/pipes/pipe.run?_id=9aeedcfb616c374c2b0a18bc31479dfd&amp;_render=rss&amp;filterinput=$INFO[Skin.String(ChoiseRssType)]&amp;maininput=$INFO[Skin.String(SearchPictures)],limit=10))</onfocus>
+			<onfocus>Skin.SetString(Menu_Info_sub2_run,SetFocus(8032))</onfocus>
+			<onfocus>Skin.SetString(Menu_Info_sub3_lab,YouTube)</onfocus>
+			<onfocus>Skin.SetString(Menu_Info_sub3_run,ActivateWindow(10024,plugin://plugin.video.youtube/))</onfocus>
+			<onfocus>Skin.SetString(Menu_Info_sub3_feed,http://gdata.youtube.com/feeds/base/standardfeeds/FR/most_viewed?client=ytapi-youtube-browse&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;alt=rss&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;time=today)</onfocus>
+<!--background-->       <onfocus>Skin.SetString(Menu_Info_Sub1_Back,special://skin/backgrounds/browse.jpg)</onfocus>
+<!--background-->       <onfocus>Skin.SetString(Menu_Info_Sub2_Back,special://skin/backgrounds/search.jpg)</onfocus>
+			<onfocus>ReloadSkin()</onfocus>	
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>!Skin.HasSetting(Influence_SkinInit_b7)</visible>
+		</control>
+		<control type="button" id="16">
+			<description>Don't run anything</description>
+			<onfocus>ReplaceWindow(Home)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>			
+			<visible>Skin.HasSetting(Influence_SkinInit_b7)</visible>
+		</control>
 		<control type="button" id="15">
+			<texturefocus>special://skin/media/Influence_Init.png</texturefocus>
 			<onfocus>Skin.SetBool(Influence_SkinInit_b6)</onfocus>
 			<onfocus>Skin.SetString(Menu_Info_sub1_run,ActivateWindow(1116))</onfocus>
 			<onfocus>Skin.SetString(Menu_Info_run,RunScript(script.rss.editor))</onfocus>
 			<onfocus>Skin.SetString(Menu_Info_sub1_lab,Browse RSS)</onfocus>
 			<onfocus>Skin.SetBool(Menu_Info_sub1_act)</onfocus>
-			<onfocus>ReloadSkin()</onfocus>	
+			<onfocus>SetFocus(16)</onfocus>	
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 			<visible>!Skin.HasSetting(Influence_SkinInit_b6)</visible>
 		</control>
 		<control type="button" id="15">
 			<description>Don't run anything</description>
-			<onfocus>ReplaceWindow(Home)</onfocus>
+			<onfocus>SetFocus(16)</onfocus>	
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>			
 			<visible>Skin.HasSetting(Influence_SkinInit_b6)</visible>
 		</control>
 		<control type="button" id="14">
+			<texturefocus>special://skin/media/Influence_Init.png</texturefocus>
 			<onfocus>Skin.SetBool(Influence_SkinInit_b5)</onfocus>
 			<onfocus>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Info&amp;Nb=10)</onfocus>
 			<onfocus>Skin.SetString(Menu_Info_run,ActivateWindow(1116))</onfocus>

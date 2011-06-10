@@ -17,6 +17,7 @@
 				<width>910</width>
 				<height>470</height>
 				<texture border="40">DialogBack.png</texture>
+				<include>Top-Level</include>
 			</control>
 			<control type="image">
 				<posx>260</posx>
@@ -24,6 +25,7 @@
 				<width>620</width>
 				<height>448</height>
 				<texture border="5">black-back2.png</texture>
+				<include>Top-Level</include>
 			</control>
 			<control type="image">
 				<posx>260</posx>
@@ -32,6 +34,7 @@
 				<height>100</height>
 				<aspectratio>stretch</aspectratio>
 				<texture>GlassTitleBar.png</texture>
+				<include>Top-Level</include>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>

@@ -20,6 +20,7 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>black-back.png</texture>
+			<include>Top-Level</include>
 			<include>dialogeffect</include>
 		</control>
 		<control type="button">

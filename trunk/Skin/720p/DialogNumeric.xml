@@ -13,6 +13,7 @@
 			<width>320</width>
 			<height>430</height>
 			<texture border="40">DialogBack.png</texture>
+			<include>Top-Level</include>
 		</control>
 		<control type="image">
 			<posx>10</posx>
@@ -21,6 +22,7 @@
 			<height>70</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>GlassTitleBar.png</texture>
+			<include>Top-Level</include>
 		</control>
 		<control type="image">
 			<posx>30</posx>
@@ -29,6 +31,7 @@
 			<height>50</height>
 			<aspectratio>stretch</aspectratio>
 			<texture border="20">KeyboardEditArea.png</texture>
+			<include>Top-Level</include>
 		</control>
 		<control type="label" id="4">
 			<description>Edit Text</description>
@@ -49,6 +52,7 @@
 			<height>30</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>GlassTitleBar.png</texture>
+			<include>Top-Level</include>
 		</control>
 		<control type="label" id="1">
 			<description>dialog Heading</description>

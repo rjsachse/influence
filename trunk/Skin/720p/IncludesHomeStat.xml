@@ -9,7 +9,7 @@
 			<animation effect="fade" time="300" delay="1000">WindowOpen</animation>
 			<animation effect="fade" time="200">WindowClose</animation>
 			<control type="group">
-				<visible>Container(9000).HasFocus(2)</visible>
+				<visible>Container(9000).HasFocus(2)+ !Skin.HasSetting(Menu_InfoVideos2_act)+[Skin.HasSetting(homepageHideRecentlyVideoAdded)|Skin.HasSetting(homepageHideRandomVideoAdded)]|Container(9000).HasFocus(2)+[!Skin.HasSetting(homepageHideRecentlyVideoAdded)+!Skin.HasSetting(homepageHideRandomVideoAdded)]</visible>
 				<control type="image">
 					<description>background</description>
 					<posx>-260</posx>
@@ -17,6 +17,7 @@
 					<width>250</width>
 					<height>130</height>
 					<texture border="10">RecentAddedNF.png</texture>
+					<include>T-Level</include>
 				</control>
 				<control type="label">
 					<posx>-230</posx>
@@ -70,6 +71,73 @@
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
+			</control>
+			<control type="group">
+				<visible>Container(9000).HasFocus(2)+ Skin.HasSetting(Menu_InfoVideos2_act) + !Skin.HasSetting(Menu_InfoVideos1_act)+[Skin.HasSetting(homepageHideRecentlyVideoAdded)|Skin.HasSetting(homepageHideRandomVideoAdded)]</visible>
+				<control type="image">
+					<description>background</description>
+					<posx>-0</posx>
+					<posy>170</posy>
+					<width>250</width>
+					<height>130</height>
+					<texture border="10">RecentAddedNF.png</texture>
+					<include>T-Level</include>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>175</posy>
+					<height>30</height>
+					<width>355</width>
+					<label>35113</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>205</posy>
+					<height>30</height>
+					<width>335</width>
+					<label>$LOCALIZE[20342]: $INFO[Window.Property(Movies.Count)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>235</posy>
+					<height>25</height>
+					<align>left</align>
+					<width>355</width>
+					<label>$LOCALIZE[16102]: $INFO[Window.Property(Movies.Watched)]</label>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>260</posy>
+					<height>30</height>
+					<width>355</width>
+					<label>$LOCALIZE[16101]: $INFO[Window.Property(Movies.UnWatched)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+			<control type="group">
+				<visible>Container(9000).HasFocus(2) + !Skin.HasSetting(Menu_InfoVideos1_act)+[Skin.HasSetting(homepageHideRecentlyVideoAdded)|Skin.HasSetting(homepageHideRandomVideoAdded)]|Container(9000).HasFocus(2)+[!Skin.HasSetting(homepageHideRecentlyVideoAdded)+!Skin.HasSetting(homepageHideRandomVideoAdded)]</visible>
 				<control type="image">
 					<description>background</description>
 					<posx>0</posx>
@@ -77,6 +145,7 @@
 					<width>250</width>
 					<height>130</height>
 					<texture border="10">RecentAddedNF.png</texture>
+					<include>T-Level</include>
 				</control>
 				<control type="label">
 					<posx>30</posx>
@@ -134,9 +203,76 @@
 					<shadowcolor>black</shadowcolor>
 				</control>
 			</control>
+			<control type="group">
+				<visible>Container(9000).HasFocus(2) + Skin.HasSetting(Menu_InfoVideos1_act)+ !Skin.HasSetting(Menu_InfoVideos2_act)+[Skin.HasSetting(homepageHideRecentlyVideoAdded)|Skin.HasSetting(homepageHideRandomVideoAdded)]</visible>
+				<control type="image">
+					<description>background</description>
+					<posx>-260</posx>
+					<posy>170</posy>
+					<width>250</width>
+					<height>130</height>
+					<texture border="10">RecentAddedNF.png</texture>
+					<include>T-Level</include>
+				</control>
+				<control type="label">
+					<posx>-230</posx>
+					<posy>175</posy>
+					<height>30</height>
+					<width>355</width>
+					<label>35113</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+				</control>
+				<control type="label">
+					<description></description>
+					<posx>-230</posx>
+					<posy>205</posy>
+					<height>30</height>
+					<width>335</width>
+					<label>$LOCALIZE[20343]: $INFO[Window.Property(TVShows.Count)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+				</control>
+				<control type="label">
+					<description></description>
+					<posx>-230</posx>
+					<posy>235</posy>
+					<height>25</height>
+					<align>left</align>
+					<width>355</width>
+					<label>$LOCALIZE[20360]: $INFO[Window.Property(Episodes.Count)]</label>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description></description>
+					<posx>-230</posx>
+					<posy>260</posy>
+					<height>30</height>
+					<width>355</width>
+					<label>$LOCALIZE[16101]: $INFO[Window.Property(Episodes.UnWatched)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
 			<!-- Vertical Movie Statistics -->
 			<control type="group">
-				<visible>Container(9000).HasFocus(10)</visible>
+				<visible>Container(9000).HasFocus(10) + ![Skin.HasSetting(homepageHideRecentlyMovieAdded) + Skin.HasSetting(homepageHideRandomMovieAdded)+Skin.HasSetting(Menu_InfoMovie_act)]</visible>
 				<control type="image">
 					<description>background</description>
 					<posx>0</posx>
@@ -144,6 +280,7 @@
 					<width>250</width>
 					<height>130</height>
 					<texture border="10">RecentAddedNF.png</texture>
+					<include>T-Level</include>
 				</control>
 				<control type="label">
 					<posx>30</posx>
@@ -187,6 +324,70 @@
 				</control>
 				<control type="label">
 					<posx>30</posx>
+					<posy>90</posy>
+					<height>30</height>
+					<width>355</width>
+					<label>$LOCALIZE[16101]: $INFO[Window.Property(Movies.UnWatched)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+			<control type="group">
+				<visible>Container(9000).HasFocus(10) + [Skin.HasSetting(homepageHideRecentlyMovieAdded) + Skin.HasSetting(homepageHideRandomMovieAdded)+Skin.HasSetting(Menu_InfoMovie_act)]</visible>
+				<control type="image">
+					<description>background</description>
+					<posx>-260</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>130</height>
+					<texture border="10">RecentAddedNF.png</texture>
+					<include>T-Level</include>
+				</control>
+				<control type="label">
+					<posx>-230</posx>
+					<posy>5</posy>
+					<height>30</height>
+					<width>355</width>
+					<label>35113</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+				</control>
+				<control type="label">
+					<posx>-230</posx>
+					<posy>35</posy>
+					<height>30</height>
+					<width>335</width>
+					<label>$LOCALIZE[20342]: $INFO[Window.Property(Movies.Count)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+				</control>
+				<control type="label">
+					<posx>-230</posx>
+					<posy>65</posy>
+					<height>25</height>
+					<align>left</align>
+					<width>355</width>
+					<label>$LOCALIZE[16102]: $INFO[Window.Property(Movies.Watched)]</label>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<posx>-230</posx>
 					<posy>90</posy>
 					<height>30</height>
 					<width>355</width>
@@ -201,6 +402,7 @@
 			<!-- Vertical Music Statistics -->
 			<control type="group">
 				<visible>Container(9000).HasFocus(3)</visible>
+				<visible>![Skin.HasSetting(Menu_InfoMusic_act) + Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded)]</visible>
 				<control type="image">
 					<description>background</description>
 					<posx>0</posx>
@@ -208,6 +410,7 @@
 					<width>250</width>
 					<height>130</height>
 					<texture border="10">RecentAddedNF.png</texture>
+					<include>T-Level</include>
 				</control>
 				<control type="label">
 					<posx>30</posx>
@@ -229,7 +432,7 @@
 					<posy>35</posy>
 					<height>30</height>
 					<width>335</width>
-					<label>$LOCALIZE[132]: $INFO[Window.Property(Music.AlbumsCount)]</label>
+					<label>$LOCALIZE[133]: $INFO[Window.Property(Music.ArtistsCount)]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12</font>
@@ -245,7 +448,7 @@
 					<height>25</height>
 					<align>left</align>
 					<width>355</width>
-					<label>$LOCALIZE[134]: $INFO[Window.Property(Music.SongsCount)]</label>
+					<label>$LOCALIZE[132]: $INFO[Window.Property(Music.AlbumsCount)]</label>
 					<aligny>center</aligny>
 					<font>font12</font>
 					<textcolor>white</textcolor>
@@ -257,7 +460,75 @@
 					<posy>90</posy>
 					<height>30</height>
 					<width>355</width>
-					<label>$LOCALIZE[16101]: $INFO[Window.Property(Episodes.UnWatched)]</label>
+					<label>$LOCALIZE[134]: $INFO[Window.Property(Music.SongsCount)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+			<control type="group">
+				
+				<visible>Container(9000).HasFocus(3)+ Skin.HasSetting(Menu_InfoMusic_act) + Skin.HasSetting(homepageHideRecentlyMusicAdded) + Skin.HasSetting(homepageHideRandomMusicAdded) + !Skin.HasSetting(UseConcertInfo)</visible>
+				<control type="image">
+					<description>background</description>
+					<posx>-260</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>130</height>
+					<texture border="10">RecentAddedNF.png</texture>
+					<include>T-Level</include>
+				</control>
+				<control type="label">
+					<posx>-230</posx>
+					<posy>5</posy>
+					<height>30</height>
+					<width>355</width>
+					<label>35113</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+				</control>
+				<control type="label">
+					<description></description>
+					<posx>-230</posx>
+					<posy>35</posy>
+					<height>30</height>
+					<width>335</width>
+					<label>$LOCALIZE[133]: $INFO[Window.Property(Music.ArtistsCount)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+				</control>
+				<control type="label">
+					<description></description>
+					<posx>-230</posx>
+					<posy>65</posy>
+					<height>25</height>
+					<align>left</align>
+					<width>355</width>
+					<label>$LOCALIZE[132]: $INFO[Window.Property(Music.AlbumsCount)]</label>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description></description>
+					<posx>-230</posx>
+					<posy>90</posy>
+					<height>30</height>
+					<width>355</width>
+					<label>$LOCALIZE[134]: $INFO[Window.Property(Music.SongsCount)]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12</font>
@@ -267,7 +538,9 @@
 			</control>
 			<!-- Vertical TV Show Statistics -->
 			<control type="group">
+				
 				<visible>Container(9000).HasFocus(11)</visible>
+				<visible>![Skin.HasSetting(Menu_InfoTVShows_act) + Skin.HasSetting(homepageHideRecentlyTvShowsAdded) + Skin.HasSetting(homepageHideRandomTvShowsAdded)]</visible>
 				<control type="image">
 					<description>background</description>
 					<posx>0</posx>
@@ -275,6 +548,7 @@
 					<width>250</width>
 					<height>130</height>
 					<texture border="10">RecentAddedNF.png</texture>
+					<include>T-Level</include>
 				</control>
 				<control type="label">
 					<posx>30</posx>
@@ -321,6 +595,73 @@
 				<control type="label">
 					<description></description>
 					<posx>30</posx>
+					<posy>90</posy>
+					<height>30</height>
+					<width>355</width>
+					<label>$LOCALIZE[16101]: $INFO[Window.Property(Episodes.UnWatched)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+			<control type="group">
+				<visible>Container(9000).HasFocus(11)+ Skin.HasSetting(Menu_InfoTVShows_act) + Skin.HasSetting(homepageHideRecentlyTvShowsAdded) + Skin.HasSetting(homepageHideRandomTvShowsAdded) + !Skin.HasSetting(UseNextAired)</visible>
+				<control type="image">
+					<description>background</description>
+					<posx>-260</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>130</height>
+					<texture border="10">RecentAddedNF.png</texture>
+					<include>T-Level</include>
+				</control>
+				<control type="label">
+					<posx>-230</posx>
+					<posy>5</posy>
+					<height>30</height>
+					<width>355</width>
+					<label>35113</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+				</control>
+				<control type="label">
+					<description></description>
+					<posx>-230</posx>
+					<posy>35</posy>
+					<height>30</height>
+					<width>335</width>
+					<label>$LOCALIZE[20343]: $INFO[Window.Property(TVShows.Count)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+				</control>
+				<control type="label">
+					<description></description>
+					<posx>-230</posx>
+					<posy>65</posy>
+					<height>25</height>
+					<align>left</align>
+					<width>355</width>
+					<label>$LOCALIZE[20360]: $INFO[Window.Property(Episodes.Count)]</label>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description></description>
+					<posx>-230</posx>
 					<posy>90</posy>
 					<height>30</height>
 					<width>355</width>
@@ -536,6 +877,132 @@
 			<texture background="true" fallback="backgrounds/tvshows.jpg">$INFO[Container(8021).ListItem.Thumb,,fanart.jpg]</texture>
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(8021)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/tvshows.jpg">$INFO[Container(8023).ListItem.Thumb,,fanart.jpg]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8023)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/info.jpg">$INFO[Container(8031).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8031)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/info.jpg">$INFO[Container(8126).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8126) + Skin.HasSetting(Menu_Men1_fanart)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/info.jpg">$INFO[Container(8127).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8127) + Skin.HasSetting(Menu_Men2_fanart)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/info.jpg">$INFO[Container(8128).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8128) + Skin.HasSetting(Menu_Men3_fanart)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/info.jpg">$INFO[Container(8129).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8129) + Skin.HasSetting(Menu_Men4_fanart)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/info.jpg">$INFO[Container(8121).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8121) + Skin.HasSetting(Menu_Movie_fanart)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/info.jpg">$INFO[Container(8122).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8122) + Skin.HasSetting(Menu_Movie_fanart)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/info.jpg">$INFO[Container(8123).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8123) + Skin.HasSetting(Menu_Movie_fanart)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/info.jpg">$INFO[Container(8124).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8124) + Skin.HasSetting(Menu_Programs_fanart)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/info.jpg">$INFO[Container(8125).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8125) + Skin.HasSetting(Menu_Pictures_fanart)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/info.jpg">$INFO[Container(8130).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8130) + Skin.HasSetting(Menu_TVShows_fanart)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/info.jpg">$INFO[Container(8131).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8131) + Skin.HasSetting(Menu_TVShows_fanart)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/info.jpg">$INFO[Container(8132).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8132) + Skin.HasSetting(Menu_TVShows_fanart)</visible>
 		</control>
 		
 </include>

@@ -11,6 +11,7 @@
 				<width>1100</width>
 				<height>720</height>
 				<texture border="15,0,0,0" flipx="true">MediaBladeSub.png</texture>
+				<include>T-Level</include>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
@@ -36,6 +37,7 @@
 				<width>800</width>
 				<height>720</height>
 				<texture border="20,0,0,0" flipx="true">VisOsdPanel.png</texture>
+				<include>Top-Level</include>
 				<visible>Window.IsVisible(124)</visible>
 			</control>
 			<control type="group">

@@ -1,0 +1,271 @@
+<includes>
+	<include name="HomeSystemInfo">
+		<control type="group">
+			<visible>!Window.IsVisible(Favourites)+ !Window.IsVisible(1117) + !Window.IsVisible(1118)+ !Window.IsVisible(1112)+ !Window.IsVisible(1116) +!Control.HasFocus(23)] + !Control.HasFocus(8010)</visible>
+			<include>VisibleFadeEffect</include>
+			<animation effect="fade" time="300" delay="1000">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>				
+			<posx>275r</posx>
+				<include condition="[Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI_HomeHorizRaise</include>
+				<include condition="![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]">HRAI</include>
+				<visible>Container(9000).Hasfocus(5)+ Skin.HasSetting(Menu_SettingsInfoSys)</visible>
+				<include>VisibleFadeEffect</include>
+				<include>HomeWidget01</include>	
+				<include>Widgets_Home_Animation</include>
+				<control type="label">
+					<description>Title label</description>
+					<posx>5</posx>
+					<posy>8</posy>
+					<height>20</height>
+					<width>250</width>
+					<label>System Info</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>CPU Text</description>
+					<posx>15</posx>
+					<posy>50</posy>
+					<width>40</width>
+					<height>20</height>
+					<label>CPU:</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<font>font10_title</font>
+				</control>
+				<control type="label">
+					<description>CPU Temp</description>
+					<posx>245</posx>
+					<posy>50</posy>
+					<width>195</width>
+					<height>20</height>
+					<label>Temp: $INFO[System.CPUTemperature]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<font>font10</font>
+					<visible>!substring(System.CPUTemperature,?)</visible>
+				</control>
+				<control type="label">
+					<description>CPU Use</description>
+					<posx>7</posx>
+					<posy>70</posy>
+					<width>246</width>
+					<height>20</height>
+					<label>$INFO[System.CPUUsage]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<font>font10</font>
+				</control>
+				<control type="progress">
+					<description>CPU BAR</description>
+					<posx>15</posx>
+					<posy>86</posy>
+					<width>230</width>
+					<height>10</height>
+					<info>System.CPUUsage</info>
+				</control>
+				<control type="label">
+					<description>Ram Text</description>
+					<posx>15</posx>
+					<posy>100</posy>
+					<width>40</width>
+					<height>20</height>
+					<label>RAM:</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<font>font10_title</font>
+				</control>
+				<control type="label">
+					<description>Memory Free</description>
+					<posx>245</posx>
+					<posy>100</posy>
+					<width>195</width>
+					<height>20</height>
+					<label>$INFO[System.FreeMemory] Free</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<font>font10</font>
+				</control>
+				<control type="label">
+					<description>Memory Pcent</description>
+					<posx>7</posx>
+					<posy>120</posy>
+					<width>246</width>
+					<height>20</height>
+					<label>$INFO[system.memory(used.percent)]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<font>font10</font>
+				</control>
+				<control type="progress">
+					<description>Memory BAR</description>
+					<posx>15</posx>
+					<posy>136</posy>
+					<width>230</width>
+					<height>10</height>
+					<info>system.memory(used)</info>
+				</control>
+				<control type="label">
+					<description>GPU Text</description>
+					<posx>15</posx>
+					<posy>150</posy>
+					<width>40</width>
+					<height>20</height>
+					<label>GPU:</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<font>font10_title</font>
+				</control>
+				<control type="label">
+					<description>GPU Temp</description>
+					<posx>245</posx>
+					<posy>150</posy>
+					<width>195</width>
+					<height>20</height>
+					<label>Temp: $INFO[System.GPUTemperature]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<font>font10</font>
+					<visible>!substring(System.GPUTemperature,?)</visible>
+				</control>
+				<control type="label">
+					<description>Rez Text</description>
+					<posx>0</posx>
+					<posy>166</posy>
+					<width>260</width>
+					<height>20</height>
+					<label>$INFO[System.ScreenMode]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<font>font10</font>
+				</control>
+				<control type="label">
+					<description>HDD Text</description>
+					<posx>15</posx>
+					<posy>190</posy>
+					<width>40</width>
+					<height>20</height>
+					<label>HDD:</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<font>font10_title</font>
+				</control>
+				<control type="label">
+					<description>HDD Total</description>
+					<posx>245</posx>
+					<posy>190</posy>
+					<width>195</width>
+					<height>20</height>
+					<label>$INFO[System.TotalSpace]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<font>font10</font>
+				</control>
+				<control type="label">
+					<description>HDD Used</description>
+					<posx>15</posx>
+					<posy>208</posy>
+					<width>230</width>
+					<height>20</height>
+					<label>$INFO[System.UsedSpacePercent] $INFO[System.FreeSpace]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<font>font10</font>
+					<visible>!substring(System.UsedSpacePercent,Unavailable)|!substring(System.FreeSpace,Unavailable)</visible>
+				</control>
+				<control type="label">
+					<description>Wan Text</description>
+					<posx>15</posx>
+					<posy>230</posy>
+					<width>40</width>
+					<height>20</height>
+					<label>WAN:</label> 
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<font>font10_title</font>
+				</control>
+				<control type="label">
+					<description>Wan Connect</description>
+					<posx>245</posx>
+					<posy>230</posy>
+					<width>190</width>
+					<height>20</height>
+					<label>$INFO[System.InternetState]</label> 
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<font>font10</font>
+				</control>
+				<control type="label">
+					<description>IP Address</description>
+					<posx>15</posx>
+					<posy>250</posy>
+					<width>50</width>
+					<height>20</height>
+					<label>LAN IP:</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<font>font10_title</font>
+				</control>
+				<control type="label">
+					<description>IP Address</description>
+					<posx>245</posx>
+					<posy>250</posy>
+					<width>180</width>
+					<height>20</height>
+					<label>$INFO[Network.IPAddress] </label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<font>font10</font>
+				</control>
+				<control type="label">
+					<description>UPTime</description>
+					<posx>15</posx>
+					<posy>265</posy>
+					<width>230</width>
+					<height>45</height>
+					<label>UP: $INFO[System.Uptime]</label>
+					<wrapmultiline>true</wrapmultiline>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<font>font10_title</font>
+				</control>
+		</control>
+	</include>
+</includes>

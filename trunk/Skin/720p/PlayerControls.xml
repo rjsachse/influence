@@ -14,6 +14,7 @@
 			<width>483</width>
 			<height>53</height>
 			<texture flipy="true" border="20,20,20,2">InfoMessagePanel.png</texture>
+			<include>T-Level</include>
 		</control>
 		<control type="group" id="100">
 			<posx>25</posx>
@@ -355,7 +356,7 @@
 			<posy>0</posy>
 			<width>500</width>
 			<height>165</height>
-			<colordiffuse>CCFFFFFF</colordiffuse>
+			<include>T-Level</include>
 			<visible>Window.IsVisible(home)</visible>
 			<texture border="20">OverlayDialogBackground.png</texture>
 		</control>

@@ -16,6 +16,7 @@
 				<width>370</width>
 				<height>80</height>
 				<visible>!player.chaptercount</visible>
+				<include>Top-Level</include>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -23,6 +24,7 @@
 				<width>450</width>
 				<height>80</height>
 				<visible>player.chaptercount</visible>
+				<include>Top-Level</include>
 			</control>
 			<control type="group">
 				<posx>260</posx>

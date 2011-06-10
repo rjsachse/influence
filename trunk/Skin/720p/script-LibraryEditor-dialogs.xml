@@ -27,6 +27,7 @@
 				<width>610</width>
 				<height>650</height>
 				<texture border="40">DialogBack.png</texture>
+				<include>Top-Level</include>
 				<animation effect="zoom" start="100" end="0,0,610,615" condition="stringcompare(container(3).NumItems,12)">Conditional</animation>
 				<animation effect="zoom" start="100" end="0,0,610,575" condition="stringcompare(container(3).NumItems,11)">Conditional</animation>
 				<animation effect="zoom" start="100" end="0,0,610,535" condition="stringcompare(container(3).NumItems,10)">Conditional</animation>
@@ -46,6 +47,7 @@
 				<height>90</height>
 				<aspectratio>stretch</aspectratio>
 				<texture>GlassTitleBar.png</texture>
+				<include>Top-Level</include>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>

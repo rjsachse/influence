@@ -34,7 +34,10 @@
 		<include condition="Skin.HasSetting(homepageHideRecentlyVideoAdded) | Skin.HasSetting(homepageHideRecentlyMovieAdded) | Skin.HasSetting(homepageHideRecentlyTvShowsAdded) | Skin.HasSetting(homepageHideRecentlyMusicAdded) ">HomeRecentlyAddedInfo</include>
 		<include condition="Skin.HasSetting(homepageHideRandomVideoAdded) | Skin.HasSetting(homepageHideRandomMovieAdded) | Skin.HasSetting(homepageHideRandomTvShowsAdded) | Skin.HasSetting(homepageHideRandomMusicAdded) ">HomeRandomAddedInfo</include>
 		<include>RssRecentlyAddedInfo</include>
+		<include>RssHomeInfo</include>
 		<include condition="Skin.HasSetting(UseNextAired)">IncludesHomeNextAired</include>
+		<include condition="Skin.HasSetting(UseConcertInfo)">IncludesHomeConcert</include>
+		<include condition="Skin.HasSetting(Menu_SettingsInfoSys)">HomeSystemInfo</include>
 <!-- weather Info -->
 		<control type="group">
 			<posx>520r</posx>
@@ -43,14 +46,8 @@
 			<animation effect="slide" start="0,0" end="550,0" delay="0" time="300">WindowClose</animation>
 			<animation effect="slide" start="550,0" end="0,0" delay="0" time="300">WindowOpen</animation>
 			<visible>!Skin.HasSetting(homepageWeatherinfo) + Weather.IsFetched</visible>
-			<control type="image">
-				<description>time background</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>180</width>
-				<height>35</height>
-				<texture flipx="true" border="32,0,0,0">header.png</texture>
-			</control>
+			
+			
 			<control type="multiimage">
 				<description>Weather image</description>
 				<posx>30</posx>
@@ -64,7 +61,7 @@
 				<colordiffuse>BFFFFFFF</colordiffuse>
 				<aspectratio>keep</aspectratio>
 			</control>
-			<control type="label">
+			<control type="button">
 				<description>time label</description>
 				<posx>60</posx>
 				<posy>0</posy>
@@ -76,6 +73,8 @@
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<label>[B]$INFO[Weather.Temperature][/B]</label>
+				<onclick>Skin.SetString(InitRunScript,True)</onclick>
+				<onclick>SetFocus(8999)</onclick>
 			</control>
 		</control>
 <!-- weather Info -->
@@ -112,10 +111,11 @@
 		<visible>Container(945).HasFocus(604) + ControlGroup(9001).HasFocus + [!Player.HasVideo + !Player.HasAudio]</visible>
 		<include condition="Skin.HasSetting(Menu_Weather_sub4_act)">CurrentWeather4</include>
 		</control>
-		<include condition="!Skin.HasSetting(VerticalMenu)+!Skin.HasSetting(HorizontalMenu)+!Skin.HasSetting(CarouselMenu)">IncludeHomeVertical</include>
+		<include condition="!Skin.HasSetting(VerticalMenu)+!Skin.HasSetting(HorizontalMenu)+!Skin.HasSetting(CarouselMenu)+!Skin.HasSetting(HomeKinect)">IncludeHomeVertical</include>
 		<include condition="Skin.HasSetting(VerticalMenu)">IncludeHomeVertical</include>
 		<include condition="Skin.HasSetting(HorizontalMenu)">IncludeHomeHorizontal</include>
 		<include condition="Skin.HasSetting(CarouselMenu)">IncludeHomeCarousel</include>
+		<!--<include condition="Skin.HasSetting(HomeKinect)">IncludeHomeKinect</include>-->
 
 		<control type="group">
 			<posx>390r</posx>
@@ -123,13 +123,15 @@
 			<animation effect="slide" start="0,0" end="-60,0" delay="0" time="300" condition="Window.IsVisible(MuteBug)">conditional</animation>
 			<animation effect="slide" start="0,0" end="420,0" delay="0" time="300">WindowClose</animation>
 			<animation effect="slide" start="420,0" end="0,0" delay="0" time="300">WindowOpen</animation>
+			
 			<control type="image">
 				<description>time background</description>
-				<posx>0</posx>
+				<posx>-120</posx>
 				<posy>0</posy>
-				<width>440</width>
+				<width>640</width>
 				<height>35</height>
 				<texture flipx="true" border="32,0,0,0">header.png</texture>
+				<include>T-Level</include>
 			</control>
 			<control type="label">
 				<description>time label</description>
@@ -227,162 +229,7 @@
 		</control>
 <!-- Next 5 Songs END -->
 <!-- LiveTV Info -->
-	       <control type="group">
-		       <posx>490r</posx>
-		       <posy>40</posy>
-<!--
-			<visible>!Skin.HasSetting(HorizontalMenu) + Container(9000).HasFocus(12) + [PVR.IsRecording | PVR.HasTimer]</visible>
--->
-			<visible>Container(9000).HasFocus(12) + [PVR.IsRecording | PVR.HasTimer]</visible>
-
-		       <animation type="Visible" reversible="false">
-			       <effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
-			       <effect type="fade" start="0" end="100" time="300" />
-		       </animation>
-		       <animation type="Hidden" reversible="false">
-			       <effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
-			       <effect type="fade" start="100" end="0" time="300" />
-		       </animation>		    
-		       <animation type="WindowOpen" reversible="false">
-			       <effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
-			       <effect type="fade" start="0" end="100" time="300" />
-		       </animation>
-		       <animation type="WindowClose" reversible="false">
-			       <effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
-			       <effect type="fade" start="100" end="0" time="300" />
-		       </animation>		    
-		       <animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(Favorites)">conditional</animation>
-		       <control type="image">
-			       <description>background</description>
-			       <posx>0</posx>
-			       <posy>0</posy>
-			       <width>480</width>
-			       <height>135</height>
-			       <colordiffuse>DDFFFFFF</colordiffuse>
-			       <texture border="20">OverlayDialogBackground.png</texture>
-		       </control>
-		       <control type="group">
-			       <visible>!PVR.IsRecording + PVR.HasTimer</visible>
-			       <control type="image">
-				       <posx>435</posx>
-				       <posy>15</posy>
-				       <width>25</width>
-				       <height>25</height>
-				       <texture>PVR-HasTimer.png</texture>
-			       </control>
-			       <control type="label">
-				       <description>Next Timer Header label</description>
-				       <posx>420</posx>
-				       <posy>15</posy>
-				       <height>25</height>
-				       <width>400</width>
-				       <label>$LOCALIZE[19157]</label>
-				       <align>right</align>
-				       <aligny>center</aligny>
-				       <font>font12_title</font>
-				       <textcolor>blue</textcolor>
-				       <shadowcolor>black</shadowcolor>
-			       </control>
-			       <control type="label">
-				       <description>NextRecordingTitle</description>
-				       <posx>460</posx>
-				       <posy>40</posy>
-				       <height>30</height>
-				       <width>440</width>
-				       <label>$INFO[PVR.NextRecordingTitle]</label>
-				       <align>right</align>
-				       <aligny>center</aligny>
-				       <font>font13</font>
-				       <shadowcolor>black</shadowcolor>
-				       <scroll>true</scroll>
-			       </control>
-			       <control type="label">
-				       <description>NextRecordingChannel</description>
-				       <posx>460</posx>
-				       <posy>70</posy>
-				       <height>25</height>
-				       <width>440</width>
-				       <label>$INFO[PVR.NextRecordingChannel]</label>
-				       <align>right</align>
-				       <aligny>center</aligny>
-				       <font>font12</font>
-				       <shadowcolor>black</shadowcolor>
-			       </control>
-			       <control type="label">
-				       <description>NextRecordingDateTime</description>
-				       <posx>460</posx>
-				       <posy>95</posy>
-				       <height>25</height>
-				       <width>440</width>
-				       <label>$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19126] - ]</label>
-				       <align>right</align>
-				       <aligny>center</aligny>
-				       <font>font12</font>
-				       <shadowcolor>black</shadowcolor>
-			       </control>
-		       </control>
-		       <control type="group">
-			       <visible>PVR.IsRecording</visible>
-			       <control type="image">
-				       <posx>423</posx>
-				       <posy>15</posy>
-				       <width>37</width>
-				       <height>25</height>
-				       <texture>PVR-IsRecording.png</texture>
-			       </control>
-			       <control type="label">
-				       <description>Is Recording Header label</description>
-				       <posx>410</posx>
-				       <posy>15</posy>
-				       <height>25</height>
-				       <width>390</width>
-				       <label>$LOCALIZE[19158]</label>
-				       <align>right</align>
-				       <aligny>center</aligny>
-				       <font>font12_title</font>
-				       <textcolor>blue</textcolor>
-				       <shadowcolor>black</shadowcolor>
-			       </control>
-			       <control type="label">
-				       <description>NextRecordingTitle</description>
-				       <posx>460</posx>
-				       <posy>40</posy>
-				       <height>30</height>
-				       <width>440</width>
-				       <label>$INFO[PVR.NowRecordingTitle]</label>
-				       <align>right</align>
-				       <aligny>center</aligny>
-				       <font>font13</font>
-				       <shadowcolor>black</shadowcolor>
-				       <scroll>true</scroll>
-			       </control>
-			       <control type="label">
-				       <description>NextRecordingChannel</description>
-				       <posx>460</posx>
-				       <posy>70</posy>
-				       <height>25</height>
-				       <width>440</width>
-				       <label>$INFO[PVR.NowRecordingChannel]</label>
-				       <align>right</align>
-				       <aligny>center</aligny>
-				       <font>font12</font>
-				       <shadowcolor>black</shadowcolor>
-			       </control>
-			       <control type="label">
-				       <description>NextRecordingDateTime</description>
-				       <posx>460</posx>
-				       <posy>95</posy>
-				       <height>25</height>
-				       <width>440</width>
-
-				       <label>$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19126] - ]</label>
-				       <align>right</align>
-				       <aligny>center</aligny>
-				       <font>font12</font>
-				       <shadowcolor>black</shadowcolor>
-			       </control>
-		       </control>
-	       </control>
+	      <include condition="!Skin.HasSetting(Menu_LiveTv_act)">TVInfo</include>
 <!-- Music Info Vertical/Carousel -->
 		<control type="group">
 			<posx>0</posx>
@@ -397,12 +244,14 @@
 			</animation>
 			<animation effect="slide" end="0,30" time="0" condition="!system.getbool(lookandfeel.enablerssfeeds)">conditional</animation>
 			<animation effect="slide" end="-70,0" condition="Skin.HasSetting(CDart)">Conditional</animation>
+							
 			<control type="image">
 				<posx>0</posx>
 				<posy>150</posy>
 				<width>1380</width>
 				<height>250</height>
 				<texture>HomeNowPlayingBack.png</texture>
+				<include>T-Level</include>
 			</control>
 			<control type="image">
 				<description>Cd overlay</description>
@@ -414,7 +263,32 @@
 				<height>165</height>
 				<texture fallback="cdart/default.png">$INFO[Player.FolderPath]/cdart.png</texture>
 				<aspectratio align="bottom">keep</aspectratio>
-				<visible>Skin.HasSetting(CDart)</visible>
+				<visible>Skin.HasSetting(CDart)+!Skin.HasSetting(Vinyl)</visible>
+			</control>
+			
+			<control type="image">
+				<description>Cd overlay</description>
+				<posx>110r</posx>
+				<posy>171</posy>
+				<animation effect="slide" start="-70" end="0" time="900" tween="cubic" easing="out" delay="2000">WindowOpen</animation>
+				<animation effect="rotate" end="-360" center="auto" time="2250" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+				<width>180</width>
+				<height>185</height>
+				<texture fallback="cdart/Vinyl.png">cdart/Vinyl.png</texture>
+				<aspectratio align="bottom">keep</aspectratio>
+				<visible>Skin.HasSetting(CDart)+Skin.HasSetting(Vinyl)</visible>
+			</control>
+			<control type="image">
+				<description>Cd overlay</description>
+				<posx>50r</posx>
+				<posy>230</posy>
+				<animation effect="slide" start="-70" end="0" time="900" tween="cubic" easing="out" delay="2000">WindowOpen</animation>
+				<animation effect="rotate" end="-360" center="auto" time="2250" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+				<width>60</width>
+				<height>65</height>
+				<texture>$INFO[Player.FolderPath]/cdart.png</texture>
+				<aspectratio align="bottom">keep</aspectratio>
+				<visible>Skin.HasSetting(CDart)+Skin.HasSetting(Vinyl)</visible>
 			</control>
 			<control type="image">
 				<description>Cover image</description>

@@ -13,6 +13,7 @@
 				<width>390</width>
 				<height>640</height>
 				<texture>black-back.png</texture>
+				<include>T-Level</include>
 			</control>
 			<control type="label">
 				<posx>475</posx>
@@ -127,6 +128,7 @@
 				<width>480</width>
 				<height>720</height>
 				<texture border="0,0,15,0">MediaBladeSub.png</texture>
+				<include>Top-Level</include>
 			</control>
 			<control type="label">
 				<posx>30</posx>
@@ -146,6 +148,7 @@
 				<width>460</width>
 				<height>4</height>
 				<texture>separator.png</texture>
+				<include>Top-Level</include>
 			</control>
 			<control type="image">
 				<posx>10</posx>
@@ -153,6 +156,7 @@
 				<width>460</width>
 				<height>4</height>
 				<texture>separator.png</texture>
+				<include>Top-Level</include>
 			</control>
 			<control type="label">
 				<description>number of files/pages in left list text label</description>
@@ -266,6 +270,7 @@
 				<width>480</width>
 				<height>720</height>
 				<texture border="15,0,0,0" flipx="true">MediaBladeSub.png</texture>
+				<include>Top-Level</include>
 			</control>
 			<control type="label">
 				<posx>440</posx>
@@ -285,6 +290,7 @@
 				<width>460</width>
 				<height>4</height>
 				<texture>separator.png</texture>
+				<include>Top-Level</include>
 			</control>
 			<control type="image">
 				<posx>10</posx>
@@ -292,6 +298,7 @@
 				<width>460</width>
 				<height>4</height>
 				<texture>separator.png</texture>
+				<include>Top-Level</include>
 			</control>
 			<control type="label">
 				<description>Page Count Label</description>
@@ -407,6 +414,7 @@
 				<width>250</width>
 				<height>35</height>
 				<texture border="0,0,32,0">header.png</texture>
+				<include>T-Level</include>
 			</control>
 			<control type="label">
 				<include>WindowTitleCommons</include>

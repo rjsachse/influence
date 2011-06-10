@@ -17,9 +17,11 @@
 				<width>1280</width>
 				<height>250</height>
 				<texture>HomeNowPlayingBack.png</texture>
+				<include>T-Level</include>
 			</control>
 			<control type="group">
 				<visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes)</visible>
+
 				<control type="image">
 					<description>Cover image</description>
 					<posx>200r</posx>
@@ -238,111 +240,30 @@
 			<visible>!Window.IsVisible(4577)</visible>
 			<animation effect="slide" end="-400,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
 			<animation effect="slide" start="-400,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
+		<control type="image">
+			<posx>372</posx>
+			<posy>0</posy>
+			<width>23</width>
+			<height>211</height>
+			<texture>sweep2.png</texture>
+			<animation type="WindowOpen">
+			<effect type="zoom" time="100" center="640,360" start="180" end="100" tween="cubic" easing="out" />
+			<effect type="fade" time="100" start="0" end="100" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="zoom" time="100" center="640,360" start="100" end="280" tween="cubic" easing="in" />
+			<effect type="fade" time="100" start="100" end="0" />
+		</animation>
+			<animation type="Conditional" reversible="false" condition="true" loop="true">
+				<effect type="fade" start="0" end="100" time="3000" delay="2000"/>
+				<effect type="slide" start="0,0" end=",500" time="10000" loop="false"/>
+				<effect type="fade" start="100" end="0" time="4500" delay="6000"/>
+				<effect type="slide" start="0,0" end="0,0" time="10000" delay="10000" loop="false"/>
+			</animation>
+		</control>
+		
 			
-			<control type="group" id="300">
-				<control type="button" id="302">
-					<visible>Container(9000).HasFocus(3) + Skin.HasSetting(homepageHideRecentlyMusicAdded)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8002)</onfocus>
-				</control>
-				<control type="button" id="304">
-					<visible>Container(9000).HasFocus(3) + Skin.HasSetting(homepageHideRandomMusicAdded)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8006)</onfocus>
-				</control>
-				<control type="button" id="306">
-					<visible>Container(9000).HasFocus(10) +   Skin.HasSetting(homepageHideRecentlyMovieAdded)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8000)</onfocus>
-				</control>
-				<control type="button" id="307">
-					<visible>Container(9000).HasFocus(10) +  Skin.HasSetting(homepageHideRandomMovieAdded)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8004)</onfocus>
-				</control>
-				<control type="button" id="308">
-					<visible>[Container(9000).HasFocus(11)  + Skin.HasSetting(homepageHideRecentlyTVShowsAdded)] | [Container(9000).HasFocus(2)  + Skin.HasSetting(homepageHideRecentlyVideoAdded)]</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8001)</onfocus>
-				</control>
-				<control type="button" id="309">
-					<visible>[Container(9000).HasFocus(11) + Skin.HasSetting(homepageHideRandomTVShowsAdded)] | [Container(9000).HasFocus(2) + Skin.HasSetting(homepageHideRandomVideoAdded)]</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8007)</onfocus>
-				</control>
-				<control type="button" id="310">
-					<visible>Container(945).HasFocus(2401)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8010)</onfocus>
-				</control>
-				<control type="button" id="311">
-					<visible>Container(945).HasFocus(2402)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8011)</onfocus>
-				</control>
-				<control type="button" id="312">
-					<visible>Container(945).HasFocus(2403)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8012)</onfocus>
-				</control>
-				<control type="button" id="313">
-					<visible>Container(945).HasFocus(2404)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8013)</onfocus>
-				</control>
-				<control type="button" id="314">
-					<visible>Container(945).HasFocus(2405)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8014)</onfocus>
-				</control>
-				<control type="button" id="315">
-					<visible>Container(945).HasFocus(2406)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8015)</onfocus>
-				</control>
-				<control type="button" id="316">
-					<visible>Container(945).HasFocus(2407)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8016)</onfocus>
-				</control>
-				<control type="button" id="317">
-					<visible>Container(945).HasFocus(2408)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8017)</onfocus>
-				</control>
-				<control type="button" id="318">
-					<visible>Container(945).HasFocus(2409)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8018)</onfocus>
-				</control>
-				<control type="button" id="319">
-					<visible>Container(945).HasFocus(2410)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8019)</onfocus>
-				</control>
-				<control type="button" id="320">
-					<visible>Container(9000).HasFocus(11) + !Skin.HasSetting(homepageHideRandomTVShowsAdded) + !Skin.HasSetting(homepageHideRecentlyTVShowsAdded) + Skin.HasSetting(UseNextAired)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8020)</onfocus>
-				</control>
-			</control>
+			<include>HomeNavWidget</include>
 			
 			<control type="group" id="9001">
 				<include>HomeBigVisible</include>
@@ -358,6 +279,27 @@
 				<animation effect="slide" end="0,204" time="300" condition="Container(9000).Row(5)">conditional</animation>
 				
 <!-- SubMenu Video  -->
+				<control type="image">
+			<posx>192</posx>
+			<posy>0</posy>
+			<width>23</width>
+			<height>211</height>
+			<texture>sweep2.png</texture>
+			<animation type="WindowOpen">
+			<effect type="zoom" time="100" center="640,360" start="180" end="100" tween="cubic" easing="out" />
+			<effect type="fade" time="100" start="0" end="100" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="zoom" time="100" center="640,360" start="100" end="280" tween="cubic" easing="in" />
+			<effect type="fade" time="100" start="100" end="0" />
+		</animation>
+			<animation type="Conditional" reversible="false" condition="true" loop="true">
+				<effect type="fade" start="0" end="100" time="3000" delay="2000"/>
+				<effect type="slide" start="0,0" end=",500" time="10000" loop="false"/>
+				<effect type="fade" start="100" end="0" time="4500" delay="6000"/>
+				<effect type="slide" start="0,0" end="0,0" time="10000" delay="10000" loop="false"/>
+			</animation>
+		</control>
 				<control type="fixedlist" id="945">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -415,31 +357,11 @@
 					<include>IncludeCommonSubMenu</include>
 				</content>
 			</control>
-			<control type="image">
-				
-				<posx>0</posx>
-				<posy>-555</posy>
-				<width>205</width>
-				<height>1800</height>
-				<texture>HomeBlade_middle.png</texture>
-			</control>
-			<control type="image">
-				
-				<posx>-630</posx>
-				<posy>-250</posy>
-				<width>846</width>
-				<height>720</height>
-				<texture>HomeBlade_top.png</texture>
-			</control>
+			<include>HomeVertical01</include>
+			<include>HomeVertical02</include>
 		</control>
-			<control type="image">
-				<posx>-450</posx>
-				<posy>0</posy>
-				<width>846</width>
-				<height>720</height>
-				<colordiffuse>DAFFFFFF</colordiffuse>
-				<texture>HomeBlade_bottom.png</texture>
-			</control>
+			
+			<include>HomeVertical03</include>
 			<include>TestRecently</include>
 <!-- OK -->
 			<control type="fixedlist" id="9000">
@@ -488,16 +410,8 @@
 						<animation effect="zoom" start="100" end="65" center="380,51" time="200">UnFocus</animation>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					<control type="image">
-						<posx>370</posx>
-						<posy>63</posy>
-						<width>18</width>
-						<height>18</height>
-						<texture>HomeHasSub.png</texture>
-						<include>HomeBigVisible</include>
-						<animation effect="fade" start="0" end="100" time="200">Focus</animation>
-						<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
-					</control>
+					
+					<include>HomeVertical04</include>
 				</focusedlayout>
 				<content>
 					<include condition="Skin.HasSetting(Influence_SkinInit_b2)">IncludeCommonMenu</include>
@@ -513,17 +427,8 @@
 				</content>
 			</control>
 <!-- OK -->
-			<control type="image">
-				<posx>0</posx>
-				<posy>-205</posy>
-				<width>385</width>
-				<height>1130</height>
-				<texture>HomeBlade_middle.png</texture>
-				<animation effect="slide" end="0,-204" time="300" condition="Container(9000).Row(1)">conditional</animation>
-				<animation effect="slide" end="0,-102" time="300" condition="Container(9000).Row(2)">conditional</animation>
-				<animation effect="slide" end="0,102" time="300" condition="Container(9000).Row(4)">conditional</animation>
-				<animation effect="slide" end="0,204" time="300" condition="Container(9000).Row(5)">conditional</animation>
-			</control>
+			
+			<include>HomeVertical05</include>
 <!-- OK -->		<control type="button" id="24">
 			<description>fake button</description>
 				<posx>390</posx>
@@ -537,14 +442,8 @@
 				<onclick>-</onclick>
 				<visible>!Skin.HasSetting(SlideFake)</visible>
 			</control>
-			<control type="image">
-				<posx>-450</posx>
-				<posy>0</posy>
-				<width>846</width>
-				<height>720</height>
-				<texture>HomeBlade_top.png</texture>
-			</control>
-			<include>HomeLogo</include>
+			<include>HomeVertical06</include>
+			<include condition="!Skin.HasSetting(HideHomeLogo)">HomeLogo</include>
 			<include condition="!Skin.HasSetting(HideHomeButton)">HomeButton</include>
 		</control>
 <!-- OK -->	

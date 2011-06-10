@@ -37,6 +37,7 @@
 					<width>1280</width>
 					<height>720</height>
 					<texture border="40">DialogBack.png</texture>
+					<include>Top-Level</include>
 				</control>
 				<control type="image">
 					<posx>90</posx>
@@ -45,6 +46,7 @@
 					<height>70</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>GlassTitleBar.png</texture>
+					<include>Top-Level</include>
 				</control>
 				<control type="button" id="9999">
 					<posx>40</posx>
@@ -96,6 +98,7 @@
 					<height>30</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>GlassTitleBar.png</texture>
+					<include>Top-Level</include>
 					<animation effect="slide" end="0,260" time="300" tween="quadratic" easing="out" condition="Control.HasFocus(9999)">Conditional</animation>
 				</control>
 				<control type="image">
@@ -117,6 +120,7 @@
 					<width>760</width>
 					<height>430</height>
 					<texture border="40">DialogBack.png</texture>
+					<include>Top-Level</include>
 				</control>
 				<control type="image">
 					<posx>80</posx>
@@ -125,6 +129,7 @@
 					<height>70</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>GlassTitleBar.png</texture>
+					<include>Top-Level</include>
 				</control>
 				<control type="image">
 					<posx>50</posx>
@@ -133,6 +138,7 @@
 					<height>50</height>
 					<aspectratio>stretch</aspectratio>
 					<texture border="20">KeyboardEditArea.png</texture>
+					<include>Top-Level</include>
 				</control>
 				<control type="image">
 					<posx>130</posx>
@@ -141,6 +147,7 @@
 					<height>30</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>GlassTitleBar.png</texture>
+					<include>Top-Level</include>
 				</control>
 				<control type="image">
 					<posx>80</posx>
@@ -205,6 +212,7 @@
 					<width>30</width>
 					<height>128</height>
 					<texture>HomeHasSub2.png</texture>
+					<include>Top-Level</include>
 					<animation effect="rotate" center="33,253" start="0" end="-90" condition="true">Conditional</animation>
 					<animation effect="slide" start="0,0" end="-30,0" time="200" condition="Control.HasFocus(9999)">Conditional</animation>
 					<visible>Skin.HasSetting(KeyboardBigText) + Control.HasFocus(9999)</visible>
@@ -216,6 +224,7 @@
 					<width>30</width>
 					<height>128</height>
 					<texture>HomeHasSub2.png</texture>
+					<include>Top-Level</include>
 					<animation effect="rotate" center="-123,281" start="0" end="90" condition="true">Conditional</animation>
 					<animation effect="slide" start="0,0" end="0,160" time="200" condition="Skin.HasSetting(KeyboardBigText) + !Control.IsVisible(1304)">Conditional</animation>
 					<visible>Skin.HasSetting(KeyboardBigText) + !Control.HasFocus(9999)</visible>

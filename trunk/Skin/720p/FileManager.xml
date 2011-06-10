@@ -12,6 +12,7 @@
 				<width>620</width>
 				<height>720</height>
 				<texture border="0,0,15,0">MediaBladeSub.png</texture>
+				<include>Top-Level</include>
 			</control>
 			<control type="image">
 				<posx>480</posx>
@@ -21,6 +22,7 @@
 				<aspectratio>keep</aspectratio>
 				<info>Container(20).ListItem.Icon</info>
 				<bordertexture border="3">black-back2.png</bordertexture>
+				<include>Top-Level</include>
 				<bordersize>5</bordersize>
 			</control>
 			<control type="label">
@@ -175,6 +177,7 @@
 				<width>620</width>
 				<height>720</height>
 				<texture border="15,0,0,0" flipx="true">MediaBladeSub.png</texture>
+				<include>Top-Level</include>
 			</control>
 			<control type="image">
 				<posx>570r</posx>
@@ -184,6 +187,7 @@
 				<aspectratio>keep</aspectratio>
 				<info>Container(21).ListItem.Icon</info>
 				<bordertexture border="3">black-back2.png</bordertexture>
+				<include>Top-Level</include>
 				<bordersize>5</bordersize>
 			</control>
 			<control type="label">
@@ -339,6 +343,7 @@
 				<width>250</width>
 				<height>35</height>
 				<texture border="0,0,32,0">header.png</texture>
+				<include>T-Level</include>
 			</control>
 			<control type="label">
 				<include>WindowTitleCommons</include>

@@ -1,0 +1,902 @@
+<window id="4578">
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<controls>
+		
+		<include>CustomViewFanart</include>
+		<include>CommonVideoBackground</include>
+		<include>CommonMediaPlayingBackground</include>
+		<include>Window_OpenClose_Animation</include>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/movies.jpg">$INFO[Container(9000).ListItem.ActualIcon]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(9000)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/movies.jpg">$INFO[Container(8000).ListItem.ActualIcon]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(8000)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/movies.jpg">$INFO[Container(7000).ListItem.ActualIcon]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(7000)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/movies.jpg">$INFO[Container(6000).ListItem.ActualIcon]</texture>
+			<fadetime>600</fadetime>
+			<visible>Control.HasFocus(6000)</visible>
+		</control>
+		
+		
+		
+		<!--<control type="group">
+		     <posy>-25</posy>
+		        <control type="label">
+			<posx>460</posx>
+			<posy>120</posy>
+			<width>500</width>
+			<height>20</height>
+			<align>left</align>
+			<font>font13_title</font>
+			<textcolor>white</textcolor>
+			<label fallback="-">Movies - $INFO[Window(Home).Property(Movies.Count)]</label>
+		</control>
+	 	 <control type="label">
+				<posx>460</posx>
+				<posy>150</posy>
+				<width>500</width>
+				<height>20</height>
+				<align>left</align>
+				<font>font13_title</font>
+				<textcolor>white</textcolor>
+				<label fallback="-">Movies Watched - $INFO[Window(Home).Property(Movies.Watched)]</label> 
+		</control>
+				<control type="label">
+				<posx>460</posx>
+				<posy>180</posy>
+				<width>500</width>
+				<height>20</height>
+				<align>left</align>
+				<font>font13_title</font>
+				<textcolor>white</textcolor>
+				<label fallback="-">Movies Unwatched - $INFO[Window(Home).Property(Movies.UnWatched)]</label> 
+		</control>
+							
+		</control> -->
+		
+		
+ 
+ 	 
+<!----------------------------------------------------recent movies---------------------------------------------------------------->
+        <control type="group">
+                <posx>50</posx>
+		<posy>50</posy>
+		 	<include>VisibleFadeEffect</include>
+				<include>HomeWidget03</include>
+				<control type="label">
+					<description>Title label</description>
+					<posx>5</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>31323</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			<control type="fixedlist" id="9000">
+				
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<height>200</height>
+				<onleft>7000</onleft>
+				<onright>7000</onright>
+				<onup>513</onup>
+				<ondown>8000</ondown>
+				<orientation>horizontal</orientation>
+				<viewtype label="535">list</viewtype>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>300</scrolltime>
+				
+				<itemlayout height="240" width="200">
+				 
+			<control type="image">
+				<posx>17</posx>
+				<posy>30</posy>
+				<width>120</width>
+				<height>180</height>
+				<aspectratio align="center">keep</aspectratio>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<bordertexture   border="8">ThumbBorder.png</bordertexture>
+				<bordersize>8</bordersize>
+				<animation reversible="false" effect="zoom" start="-2,16,128,168" end="-12,-10,148,198" time="200">focus</animation>
+				<animation reversible="false" effect="zoom" end="-2,16,128,168" start="-12,-10,148,198" time="200">unfocus</animation>
+			</control>
+			<control type="image">
+				<posx>17</posx>
+				<posy>30</posy>
+				<width>120</width>
+				<height>180</height>
+				<texture background="true">amt-blank-poster.png</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>IsEmpty(ListItem.Thumb)</visible>
+			</control>
+				 
+				</itemlayout>
+				
+				<focusedlayout height="240" width="200">
+				   
+					<control type="image">
+						<posx>17</posx>
+						<posy>30</posy>
+					    	<width>120</width>
+						<height>180</height>
+						<aspectratio align="center">keep</aspectratio>
+						<texture>$INFO[ListItem.Thumb]</texture> 
+						<bordertexture border="8">ThumbBorder.png</bordertexture>
+						<bordersize>8</bordersize>
+						<animation reversible="false" effect="zoom" start="-2,16,128,168" end="-12,-10,148,198" time="200">focus</animation>
+						<animation reversible="false" effect="zoom" end="-2,16,128,168" start="-12,-10,148,198" time="200">unfocus</animation>
+					</control>
+					
+					
+				                <control type="image">
+							<posx>17</posx>
+						        <posy>30</posy>
+					                <width>120</width>
+						        <height>180</height>
+							<texture background="true">amt-blank-poster.png</texture>
+							<aspectratio align="center">keep</aspectratio>
+							<visible>IsEmpty(ListItem.Thumb)</visible>
+						</control>
+					
+					 
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<label>$INFO[Window(Home).Property(LatestMovie.1.Title)]</label>
+						<label2>$INFO[Window(Home).Property(LatestMovie.1.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(LatestMovie.1.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(LatestMovie.1.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(LatestMovie.1.Thumb)]</thumb>
+					</item>
+					<item id="2">
+						<label>$INFO[Window(Home).Property(LatestMovie.2.Title)]</label>
+						<label2>$INFO[Window(Home).Property(LatestMovie.2.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(LatestMovie.2.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(LatestMovie.2.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(LatestMovie.2.Thumb)]</thumb>
+					</item>
+					<item id="3">
+						<label>$INFO[Window(Home).Property(LatestMovie.3.Title)]</label>
+						<label2>$INFO[Window(Home).Property(LatestMovie.3.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(LatestMovie.3.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(LatestMovie.3.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(LatestMovie.3.Thumb)]</thumb>
+					</item>
+					<item id="4">
+						<label>$INFO[Window(Home).Property(LatestMovie.4.Title)]</label>
+						<label2>$INFO[Window(Home).Property(LatestMovie.4.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(LatestMovie.4.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(LatestMovie.4.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(LatestMovie.4.Thumb)]</thumb>
+					</item>
+					<item id="5">
+						<label>$INFO[Window(Home).Property(LatestMovie.5.Title)]</label>
+						<label2>$INFO[Window(Home).Property(LatestMovie.5.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(LatestMovie.5.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(LatestMovie.5.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(LatestMovie.5.Thumb)]</thumb>
+					</item>
+					<item id="6">
+						<label>$INFO[Window(Home).Property(LatestMovie.6.Title)]</label>
+						<label2>$INFO[Window(Home).Property(LatestMovie.6.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(LatestMovie.6.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(LatestMovie.6.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(LatestMovie.6.Thumb)]</thumb>
+					</item>
+					<item id="7">
+						<label>$INFO[Window(Home).Property(LatestMovie.7.Title)]</label>
+						<label2>$INFO[Window(Home).Property(LatestMovie.7.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(LatestMovie.7.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(LatestMovie.7.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(LatestMovie.7.Thumb)]</thumb>
+					</item>
+					<item id="8">
+						<label>$INFO[Window(Home).Property(LatestMovie.8.Title)]</label>
+						<label2>$INFO[Window(Home).Property(LatestMovie.8.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(LatestMovie.8.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(LatestMovie.8.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(LatestMovie.8.Thumb)]</thumb>
+					</item>
+					<item id="9">
+						<label>$INFO[Window(Home).Property(LatestMovie.9.Title)]</label>
+						<label2>$INFO[Window(Home).Property(LatestMovie.9.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(LatestMovie.9.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(LatestMovie.9.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(LatestMovie.9.Thumb)]</thumb>
+					</item>
+					<item id="10">
+						<label>$INFO[Window(Home).Property(LatestMovie.10.Title)]</label>
+						<label2>$INFO[Window(Home).Property(LatestMovie.10.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(LatestMovie.10.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(LatestMovie.10.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(LatestMovie.10.Thumb)]</thumb>
+					</item>
+				</content>
+                    		</control>
+			</control>
+				<include>HomeWidget04</include>
+			       <control type="label">
+				       <visible>Control.HasFocus(9000)</visible>
+						<posx>410</posx>
+	                     			<posy>400</posy>
+					     	<width>450</width>
+						<height>30</height>
+					     	<font>font13_title</font>
+						<textcolor>white</textcolor>
+						<label> $INFO[Container(9000).ListItem.label] </label>
+					</control> 
+					
+				<control type="textbox">
+				   <visible>Control.HasFocus(9000)</visible>
+		       		   <width>450</width>
+			   	   <height>225</height>
+			   	   <posx>410</posx>
+			   	   <posy>435</posy>
+		       		   <textcolor>white</textcolor>
+				   <shadowcolor>grey3</shadowcolor>
+		       		   <font>font24</font>
+		                   <label> $INFO[Container(9000).ListItem.label2] </label>
+		                   <align>justify</align>
+		                  <autoscroll time="2000" delay="10000" repeat="10000">Visible</autoscroll>
+		                  <scroll>true</scroll>
+		              </control> 
+			
+			    <control type="label">
+				       <visible>Control.HasFocus(8000)</visible>
+						<posx>410</posx>
+	                     			<posy>400</posy>
+					     	<width>450</width>
+						<height>30</height>
+					     	<font>font13_title</font>
+						<textcolor>white</textcolor>
+						<label> $INFO[Container(8000).ListItem.label] </label>
+					</control> 
+					
+				<control type="textbox">
+				   <visible>Control.HasFocus(8000)</visible>
+		       		   <width>450</width>
+			   	   <height>225</height>
+			   	   <posx>410</posx>
+			   	   <posy>435</posy>
+		       		   <textcolor>white</textcolor>
+				   <shadowcolor>grey3</shadowcolor>
+		       		   <font>font24</font>
+		                   <label> $INFO[Container(8000).ListItem.label2] </label>
+		                   <align>justify</align>
+		                  <autoscroll time="2000" delay="10000" repeat="10000">Visible</autoscroll>
+		                  <scroll>true</scroll>
+		              </control> 
+			 <control type="label">
+				       <visible>Control.HasFocus(7000)</visible>
+						<posx>410</posx>
+	                     			<posy>400</posy>
+					     	<width>450</width>
+						<height>30</height>
+					     	<font>font13_title</font>
+						<textcolor>white</textcolor>
+						<label> $INFO[Container(7000).ListItem.label] </label>
+					</control> 
+					
+				<control type="textbox">
+				   <visible>Control.HasFocus(7000)</visible>
+		       		   <width>450</width>
+			   	   <height>225</height>
+			   	   <posx>410</posx>
+			   	   <posy>435</posy>
+		       		   <textcolor>white</textcolor>
+				   <shadowcolor>grey3</shadowcolor>
+		       		   <font>font24</font>
+		                   <label> $INFO[Container(7000).ListItem.label2] </label>
+		                   <align>justify</align>
+		                  <autoscroll time="2000" delay="10000" repeat="10000">Visible</autoscroll>
+		                  <scroll>true</scroll>
+		              </control> 
+					 <control type="label">
+				       <visible>Control.HasFocus(6000)</visible>
+						<posx>410</posx>
+	                     			<posy>400</posy>
+					     	<width>450</width>
+						<height>30</height>
+					     	<font>font13_title</font>
+						<textcolor>white</textcolor>
+						<label> $INFO[Container(6000).ListItem.label] </label>
+					</control> 
+					
+				<control type="textbox">
+				   <visible>Control.HasFocus(6000)</visible>
+		       		   <width>450</width>
+			   	   <height>225</height>
+			   	   <posx>410</posx>
+			   	   <posy>435</posy>
+		       		   <textcolor>white</textcolor>
+				   <shadowcolor>grey3</shadowcolor>
+		       		   <font>font24</font>
+		                   <label> $INFO[Container(6000).ListItem.label2] </label>
+		                   <align>justify</align>
+		                  <autoscroll time="2000" delay="10000" repeat="10000">Visible</autoscroll>
+		                  <scroll>true</scroll>
+		              </control> 
+					
+				 
+	
+		  
+
+	 <!-------------------------------random  movies-------------------------------------->
+           <control type="group">
+                <posx>350</posx>
+		<posy>50</posy>
+		 	<include>VisibleFadeEffect</include>
+				<include>HomeWidget03</include>
+				<control type="label">
+					<description>Title label</description>
+					<posx>5</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>31331</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			<control type="fixedlist" id="8000">
+				
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<height>200</height>
+				<onleft>9000</onleft>
+				<onright>7000</onright>
+				<onup>513</onup>
+				<ondown>8000</ondown>
+				<orientation>horizontal</orientation>
+				<viewtype label="535">list</viewtype>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>300</scrolltime>
+				
+				<itemlayout height="240" width="200">
+				 
+			<control type="image">
+				<posx>17</posx>
+				<posy>30</posy>
+				<width>120</width>
+				<height>180</height>
+				<aspectratio align="center">keep</aspectratio>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<bordertexture   border="8">ThumbBorder.png</bordertexture>
+				<bordersize>8</bordersize>
+				<animation reversible="false" effect="zoom" start="-2,16,128,168" end="-12,-10,148,198" time="200">focus</animation>
+				<animation reversible="false" effect="zoom" end="-2,16,128,168" start="-12,-10,148,198" time="200">unfocus</animation>
+			</control>
+			<control type="image">
+				<posx>17</posx>
+				<posy>30</posy>
+				<width>120</width>
+				<height>180</height>
+				<texture background="true">amt-blank-poster.png</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>IsEmpty(ListItem.Thumb)</visible>
+			</control>
+				 
+				</itemlayout>
+				
+				<focusedlayout height="240" width="200">
+				   
+					<control type="image">
+						<posx>17</posx>
+						<posy>30</posy>
+					    	<width>120</width>
+						<height>180</height>
+						<aspectratio align="center">keep</aspectratio>
+						<texture>$INFO[ListItem.Thumb]</texture> 
+						<bordertexture border="8">ThumbBorder.png</bordertexture>
+						<bordersize>8</bordersize>
+						<animation reversible="false" effect="zoom" start="-2,16,128,168" end="-12,-10,148,198" time="200">focus</animation>
+						<animation reversible="false" effect="zoom" end="-2,16,128,168" start="-12,-10,148,198" time="200">unfocus</animation>
+					</control>
+					
+					
+				                <control type="image">
+							<posx>17</posx>
+						        <posy>30</posy>
+					                <width>120</width>
+						        <height>180</height>
+							<texture background="true">amt-blank-poster.png</texture>
+							<aspectratio align="center">keep</aspectratio>
+							<visible>IsEmpty(ListItem.Thumb)</visible>
+						</control>
+					
+					 
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<label>$INFO[Window(Home).Property(RandomMovie.1.Title)]</label>
+						<label2>$INFO[Window(Home).Property(RandomMovie.1.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(RandomMovie.1.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(RandomMovie.1.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(RandomMovie.1.Thumb)]</thumb>
+					</item>
+					<item id="2">
+						<label>$INFO[Window(Home).Property(RandomMovie.2.Title)]</label>
+						<label2>$INFO[Window(Home).Property(RandomMovie.2.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(RandomMovie.2.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(RandomMovie.2.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(RandomMovie.2.Thumb)]</thumb>
+					</item>
+					<item id="3">
+						<label>$INFO[Window(Home).Property(RandomMovie.3.Title)]</label>
+						<label2>$INFO[Window(Home).Property(RandomMovie.3.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(RandomMovie.3.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(RandomMovie.3.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(RandomMovie.3.Thumb)]</thumb>
+					</item>
+					<item id="4">
+						<label>$INFO[Window(Home).Property(RandomMovie.4.Title)]</label>
+						<label2>$INFO[Window(Home).Property(RandomMovie.4.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(RandomMovie.4.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(RandomMovie.1.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(RandomMovie.4.Thumb)]</thumb>
+					</item>
+					<item id="5">
+						<label>$INFO[Window(Home).Property(RandomMovie.5.Title)]</label>
+						<label2>$INFO[Window(Home).Property(RandomMovie.5.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(RandomMovie.5.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(RandomMovie.5.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(RandomMovie.5.Thumb)]</thumb>
+					</item>
+					<item id="6">
+						<label>$INFO[Window(Home).Property(RandomMovie.6.Title)]</label>
+						<label2>$INFO[Window(Home).Property(RandomMovie.6.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(RandomMovie.6.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(RandomMovie.1.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(RandomMovie.6.Thumb)]</thumb>
+					</item>
+					<item id="7">
+						<label>$INFO[Window(Home).Property(RandomMovie.7.Title)]</label>
+						<label2>$INFO[Window(Home).Property(RandomMovie.7.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(RandomMovie.7.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(RandomMovie.7.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(RandomMovie.7.Thumb)]</thumb>
+					</item>
+					<item id="8">
+						<label>$INFO[Window(Home).Property(RandomMovie.8.Title)]</label>
+						<label2>$INFO[Window(Home).Property(RandomMovie.8.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(RandomMovie.8.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(RandomMovie.8.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(RandomMovie.8.Thumb)]</thumb>
+					</item>
+					<item id="9">
+						<label>$INFO[Window(Home).Property(RandomMovie.9.Title)]</label>
+						<label2>$INFO[Window(Home).Property(RandomMovie.9.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(RandomMovie.9.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(RandomMovie.9.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(RandomMovie.9.Thumb)]</thumb>
+					</item>
+					<item id="10">
+						<label>$INFO[Window(Home).Property(RandomMovie.10.Title)]</label>
+						<label2>$INFO[Window(Home).Property(RandomMovie.10.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(RandomMovie.10.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(RandomMovie.10.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(RandomMovie.10.Thumb)]</thumb>
+					</item>
+				</content>
+			</control>
+
+			
+			</control>
+			 <!-------------------------------last watch movies-------------------------------------->
+            <control type="group">
+                <posx>650</posx>
+		<posy>50</posy>
+		 	<include>VisibleFadeEffect</include>
+				<include>HomeWidget03</include>
+				<control type="label">
+					<description>Title label</description>
+					<posx>5</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>Derniers films vues</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			<control type="fixedlist" id="7000">
+				
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<height>200</height>
+				<onleft>8000</onleft>
+				<onright>6000</onright>
+				<onup>513</onup>
+				<ondown>7000</ondown>
+				<orientation>horizontal</orientation>
+				<viewtype label="535">list</viewtype>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>300</scrolltime>
+				
+				<itemlayout height="240" width="200">
+				 
+			<control type="image">
+				<posx>17</posx>
+				<posy>30</posy>
+				<width>120</width>
+				<height>180</height>
+				<aspectratio align="center">keep</aspectratio>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<bordertexture   border="8">ThumbBorder.png</bordertexture>
+				<bordersize>8</bordersize>
+				<animation reversible="false" effect="zoom" start="-2,16,128,168" end="-12,-10,148,198" time="200">focus</animation>
+				<animation reversible="false" effect="zoom" end="-2,16,128,168" start="-12,-10,148,198" time="200">unfocus</animation>
+			</control>
+			<control type="image">
+				<posx>17</posx>
+				<posy>30</posy>
+				<width>120</width>
+				<height>180</height>
+				<texture background="true">amt-blank-poster.png</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>IsEmpty(ListItem.Thumb)</visible>
+			</control>
+				 
+				</itemlayout>
+				
+				<focusedlayout height="240" width="200">
+				   
+					<control type="image">
+						<posx>17</posx>
+						<posy>30</posy>
+					    	<width>120</width>
+						<height>180</height>
+						<aspectratio align="center">keep</aspectratio>
+						<texture>$INFO[ListItem.Thumb]</texture> 
+						<bordertexture border="8">ThumbBorder.png</bordertexture>
+						<bordersize>8</bordersize>
+						<animation reversible="false" effect="zoom" start="-2,16,128,168" end="-12,-10,148,198" time="200">focus</animation>
+						<animation reversible="false" effect="zoom" end="-2,16,128,168" start="-12,-10,148,198" time="200">unfocus</animation>
+					</control>
+					
+					
+				                <control type="image">
+							<posx>17</posx>
+						        <posy>30</posy>
+					                <width>120</width>
+						        <height>180</height>
+							<texture background="true">amt-blank-poster.png</texture>
+							<aspectratio align="center">keep</aspectratio>
+							<visible>IsEmpty(ListItem.Thumb)</visible>
+						</control>
+					
+					 
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<label>$INFO[Window(Home).Property(RecentlyWatchedMovie.1.Title)]</label>
+						<label2>$INFO[Window(Home).Property(RecentlyWatchedMovie.1.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(RecentlyWatchedMovie.1.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(RecentlyWatchedMovie.1.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(RecentlyWatchedMovie.1.Thumb)]</thumb>
+					</item>
+					<item id="2">
+						<label>$INFO[Window(Home).Property(RecentlyWatchedMovie.2.Title)]</label>
+						<label2>$INFO[Window(Home).Property(RecentlyWatchedMovie.2.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(RecentlyWatchedMovie.2.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(RecentlyWatchedMovie.2.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(RecentlyWatchedMovie.2.Thumb)]</thumb>
+					</item>
+					<item id="3">
+						<label>$INFO[Window(Home).Property(RecentlyWatchedMovie.3.Title)]</label>
+						<label2>$INFO[Window(Home).Property(RecentlyWatchedMovie.3.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(RecentlyWatchedMovie.3.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(RecentlyWatchedMovie.3.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(RecentlyWatchedMovie.3.Thumb)]</thumb>
+					</item>
+					<item id="4">
+						<label>$INFO[Window(Home).Property(RecentlyWatchedMovie.4.Title)]</label>
+						<label2>$INFO[Window(Home).Property(RecentlyWatchedMovie.4.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(RecentlyWatchedMovie.4.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(RecentlyWatchedMovie.4.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(RecentlyWatchedMovie.4.Thumb)]</thumb>
+					</item>
+					<item id="5">
+						<label>$INFO[Window(Home).Property(RecentlyWatchedMovie.5.Title)]</label>
+						<label2>$INFO[Window(Home).Property(RecentlyWatchedMovie.5.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(RecentlyWatchedMovie.5.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(RecentlyWatchedMovie.5.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(RecentlyWatchedMovie.5.Thumb)]</thumb>
+					</item>
+					<item id="6">
+						<label>$INFO[Window(Home).Property(RecentlyWatchedMovie.6.Title)]</label>
+						<label2>$INFO[Window(Home).Property(RecentlyWatchedMovie.6.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(RecentlyWatchedMovie.6.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(RecentlyWatchedMovie.6.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(RecentlyWatchedMovie.6.Thumb)]</thumb>
+					</item>
+					<item id="7">
+						<label>$INFO[Window(Home).Property(RecentlyWatchedMovie.7.Title)]</label>
+						<label2>$INFO[Window(Home).Property(RecentlyWatchedMovie.7.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(RecentlyWatchedMovie.7.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(RecentlyWatchedMovie.7.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(RecentlyWatchedMovie.7.Thumb)]</thumb>
+					</item>
+					<item id="8">
+						<label>$INFO[Window(Home).Property(RecentlyWatchedMovie.8.Title)]</label>
+						<label2>$INFO[Window(Home).Property(RecentlyWatchedMovie.8.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(RecentlyWatchedMovie.8.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(RecentlyWatchedMovie.8.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(RecentlyWatchedMovie.8.Thumb)]</thumb>
+					</item>
+					<item id="9">
+						<label>$INFO[Window(Home).Property(RecentlyWatchedMovie.9.Title)]</label>
+						<label2>$INFO[Window(Home).Property(RecentlyWatchedMovie.9.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(RecentlyWatchedMovie.9.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(RecentlyWatchedMovie.9.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(RecentlyWatchedMovie.9.Thumb)]</thumb>
+					</item>
+					<item id="10">
+						<label>$INFO[Window(Home).Property(RecentlyWatchedMovie.10.Title)]</label>
+						<label2>$INFO[Window(Home).Property(RecentlyWatchedMovie.10.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(RecentlyWatchedMovie.10.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(RecentlyWatchedMovie.10.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(RecentlyWatchedMovie.10.Thumb)]</thumb>
+					</item>
+				</content>
+			</control>
+		</control>
+			 <!-------------------------------top watch movies-------------------------------------->
+            <control type="group">
+                <posx>950</posx>
+		<posy>50</posy>
+
+		 	<include>VisibleFadeEffect</include>
+				<include>HomeWidget03</include>
+				<control type="label">
+					<description>Title label</description>
+					<posx>5</posx>
+					<posy>5</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>Top films</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			<control type="fixedlist" id="6000">
+				
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>200</width>
+
+				<height>200</height>
+				<onleft>7000</onleft>
+				<onright>9000</onright>
+				<onup>513</onup>
+
+				<ondown>6000</ondown>
+				<orientation>horizontal</orientation>
+				<viewtype label="535">list</viewtype>
+				<pagecontrol>-</pagecontrol>
+
+				<scrolltime>300</scrolltime>
+				
+				<itemlayout height="240" width="200">
+				 
+
+			<control type="image">
+				<posx>17</posx>
+				<posy>30</posy>
+				<width>120</width>
+
+				<height>180</height>
+				<aspectratio align="center">keep</aspectratio>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<bordertexture   border="8">ThumbBorder.png</bordertexture>
+				<bordersize>8</bordersize>
+
+				<animation reversible="false" effect="zoom" start="-2,16,128,168" end="-12,-10,148,198" time="200">focus</animation>
+				<animation reversible="false" effect="zoom" end="-2,16,128,168" start="-12,-10,148,198" time="200">unfocus</animation>
+			</control>
+			<control type="image">
+
+				<posx>17</posx>
+				<posy>30</posy>
+				<width>120</width>
+				<height>180</height>
+
+				<texture background="true">amt-blank-poster.png</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>IsEmpty(ListItem.Thumb)</visible>
+			</control>
+
+				 
+				</itemlayout>
+				
+				<focusedlayout height="240" width="200">
+
+				   
+					<control type="image">
+						<posx>17</posx>
+						<posy>30</posy>
+
+					    	<width>120</width>
+						<height>180</height>
+						<aspectratio align="center">keep</aspectratio>
+						<texture>$INFO[ListItem.Thumb]</texture> 
+
+						<bordertexture border="8">ThumbBorder.png</bordertexture>
+						<bordersize>8</bordersize>
+						<animation reversible="false" effect="zoom" start="-2,16,128,168" end="-12,-10,148,198" time="200">focus</animation>
+						<animation reversible="false" effect="zoom" end="-2,16,128,168" start="-12,-10,148,198" time="200">unfocus</animation>
+
+					</control>
+					
+					
+				                <control type="image">
+
+							<posx>17</posx>
+						        <posy>30</posy>
+					                <width>120</width>
+						        <height>180</height>
+
+							<texture background="true">amt-blank-poster.png</texture>
+							<aspectratio align="center">keep</aspectratio>
+							<visible>IsEmpty(ListItem.Thumb)</visible>
+						</control>
+					
+
+					 
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<label>$INFO[Window(Home).Property(MostWatchedMovie.1.Title)]  vu $INFO[Window(Home).Property(MostWatchedMovie.1.WatchCount)] fois</label>
+						<label2>$INFO[Window(Home).Property(MostWatchedMovie.1.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(MostWatchedMovie.1.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(MostWatchedMovie.1.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(MostWatchedMovie.1.Thumb)]</thumb>
+					</item>
+					<item id="2">
+						<label>$INFO[Window(Home).Property(MostWatchedMovie.2.Title)]</label>
+						<label2>$INFO[Window(Home).Property(MostWatchedMovie.2.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(MostWatchedMovie.2.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(MostWatchedMovie.2.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(MostWatchedMovie.2.Thumb)]</thumb>
+					</item>
+					<item id="3">
+						<label>$INFO[Window(Home).Property(MostWatchedMovie.3.Title)]</label>
+						<label2>$INFO[Window(Home).Property(MostWatchedMovie.3.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(MostWatchedMovie.3.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(MostWatchedMovie.3.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(MostWatchedMovie.3.Thumb)]</thumb>
+					</item>
+					<item id="4">
+						<label>$INFO[Window(Home).Property(MostWatchedMovie.4.Title)]</label>
+						<label2>$INFO[Window(Home).Property(MostWatchedMovie.4.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(MostWatchedMovie.4.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(MostWatchedMovie.4.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(MostWatchedMovie.4.Thumb)]</thumb>
+					</item>
+					<item id="5">
+						<label>$INFO[Window(Home).Property(MostWatchedMovie.5.Title)]</label>
+						<label2>$INFO[Window(Home).Property(MostWatchedMovie.5.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(MostWatchedMovie.5.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(MostWatchedMovie.5.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(MostWatchedMovie.5.Thumb)]</thumb>
+					</item>
+					<item id="6">
+						<label>$INFO[Window(Home).Property(MostWatchedMovie.6.Title)]</label>
+						<label2>$INFO[Window(Home).Property(MostWatchedMovie.6.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(MostWatchedMovie.6.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(MostWatchedMovie.6.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(MostWatchedMovie.6.Thumb)]</thumb>
+					</item>
+					<item id="7">
+						<label>$INFO[Window(Home).Property(MostWatchedMovie.7.Title)]</label>
+						<label2>$INFO[Window(Home).Property(MostWatchedMovie.7.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(MostWatchedMovie.7.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(MostWatchedMovie.7.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(MostWatchedMovie.7.Thumb)]</thumb>
+					</item>
+					<item id="8">
+						<label>$INFO[Window(Home).Property(MostWatchedMovie.8.Title)]</label>
+						<label2>$INFO[Window(Home).Property(MostWatchedMovie.8.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(MostWatchedMovie.8.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(MostWatchedMovie.8.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(MostWatchedMovie.8.Thumb)]</thumb>
+					</item>
+					<item id="9">
+						<label>$INFO[Window(Home).Property(MostWatchedMovie.9.Title)]</label>
+						<label2>$INFO[Window(Home).Property(MostWatchedMovie.9.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(MostWatchedMovie.9.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(MostWatchedMovie.9.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(MostWatchedMovie.9.Thumb)]</thumb>
+					</item>
+					<item id="10">
+						<label>$INFO[Window(Home).Property(MostWatchedMovie.10.Title)]</label>
+						<label2>$INFO[Window(Home).Property(MostWatchedMovie.10.Plot)]</label2>
+						<onclick>PlayMedia($INFO[Window(Home).Property(MostWatchedMovie.10.Path)])</onclick>
+						<icon>$INFO[Window(Home).Property(MostWatchedMovie.10.Fanart)]</icon>
+						<thumb>$INFO[Window(Home).Property(MostWatchedMovie.10.Thumb)]</thumb>
+					</item>
+				</content>
+			</control>
+		</control>
+		
+    <control type="multiimage" id="4"> 
+      <colordiffuse>9FFFFFFF</colordiffuse>
+      <visible>Control.HasFocus(7002)|Control.HasFocus(8001)</visible>
+      <description>icon slideshow control</description>
+      <width>450</width>
+	  <height>255</height>
+	  <posx>410</posx>
+	  <posy>440</posy>
+      <visible>!Skin.HasSetting(min)</visible>
+	<imagepath fallback="fanart_fallback_music_small.jpg">special://profile/Thumbnails/Music/Fanart</imagepath>
+      <timeperimage>400</timeperimage>
+      <fadetime>1600</fadetime>
+      <randomize>true</randomize>
+      <loop>3</loop>
+      <aspectratio>stretch</aspectratio> 
+    </control>
+		<!-- bottom -->
+			<control type="group">
+			<posx>60</posx>
+			<posy>0</posy>
+			<animation effect="slide" end="-310,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="-310,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>250</width>
+				<height>35</height>
+				<texture border="0,0,32,0">header.png</texture>
+				<include>T-Level</include>
+			</control>
+			<control type="label">
+				<include>WindowTitleCommons</include>
+				<posx>220</posx>
+				<label>Browse Film </label>
+			</control>
+		</control>
+		<include>WindowTitleHomeButton</include>
+		<include>Clock</include>
+		   
+	</controls>
+	
+</window>

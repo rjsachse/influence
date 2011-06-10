@@ -129,6 +129,7 @@
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<include>T-Level</include>
 					<bordersize>8</bordersize>
 				</control>
 				<control type="image">
@@ -138,7 +139,7 @@
 					<height>100</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>GlassTitleBar.png</texture>
-					<colordiffuse>AAFFFFFF</colordiffuse>
+					<include>T-Level</include>
 				</control>
 				<control type="image">
 					<posx>48</posx>
@@ -291,7 +292,7 @@
 						<height>152</height>
 						<aspectratio>stretch</aspectratio>
 						<texture>black-back.png</texture>
-						<colordiffuse>AAFFFFFF</colordiffuse>
+						<include>T-Level</include>
 					</control>
 					<control type="image">
 						<posx>2</posx>
@@ -313,6 +314,7 @@
 						<height>168</height>
 						<aspectratio>stretch</aspectratio>
 						<bordertexture border="8">ThumbBorder.png</bordertexture>
+						<include>T-Level</include>
 						<bordersize>8</bordersize>
 						<fadetime>200</fadetime>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
@@ -450,6 +452,7 @@
 						<width>200</width>
 						<height>31</height>
 						<texture border="0,0,14,0">MediaItemDetailBG.png</texture>
+						<include>T-Level</include>
 						<visible>Control.HasFocus(511) + !IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
@@ -520,7 +523,7 @@
 					<height>100</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>GlassTitleBar.png</texture>
-					<colordiffuse>AAFFFFFF</colordiffuse>
+					<include>T-Level</include>
 				</control>
 				<control type="image">
 					<posx>48</posx>
@@ -945,6 +948,7 @@
 						<width>200</width>
 						<height>31</height>
 						<texture border="0,0,14,0">MediaItemDetailBG.png</texture>
+						<include>T-Level</include>
 						<visible>Control.HasFocus(513) + !IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
@@ -1008,7 +1012,7 @@
 					<height>100</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>GlassTitleBar.png</texture>
-					<colordiffuse>AAFFFFFF</colordiffuse>
+					<include>T-Level</include>
 				</control>
 				<control type="image">
 					<posx>48</posx>

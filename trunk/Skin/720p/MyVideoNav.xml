@@ -21,25 +21,25 @@
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<onfocus>XBMC.RunScript(script.tvtunes,backend=True&amp;loop=False)</onfocus>
-				<visible>IsEmpty(Window(10025).Property(TvTunesIsRunning))</visible>
+				<visible>IsEmpty(Window(10025).Property(TvTunesIsRunning)) + container.content(tvshows)</visible>
 			</control>
 			<control type="button" id="10001">
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<onfocus>SetFocus(50)</onfocus>
-				<visible>!IsEmpty(Window(10025).Property(TvTunesIsRunning))</visible>
+				<visible>!IsEmpty(Window(10025).Property(TvTunesIsRunning)) | !container.content(tvshows)</visible>
 			</control>
 			<control type="button" id="10002">
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<onfocus>XBMC.RunScript(script.moviesets,containerId=7000)</onfocus>
-				<visible>System.HasAddon(script.moviesets) + !Skin.HasSetting(HideInfoMovieSets) + IsEmpty(Window(10025).Property(MovieSets.IsAlive))</visible>
+				<visible>System.HasAddon(script.moviesets) + !Skin.HasSetting(HideInfoMovieSets) + IsEmpty(Window(10025).Property(MovieSets.IsAlive))+ container.content(movies)</visible>
 			</control>
 			<control type="button" id="10002">
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<onfocus>SetFocus(50)</onfocus>
-				<visible>!System.HasAddon(script.moviesets) | Skin.HasSetting(HideInfoMovieSets) | !IsEmpty(Window(10025).Property(MovieSets.IsAlive))</visible>
+				<visible>!System.HasAddon(script.moviesets) | Skin.HasSetting(HideInfoMovieSets) | !IsEmpty(Window(10025).Property(MovieSets.IsAlive)) |  !container.content(movies)</visible>
 			</control>
 		</control>
 		<control type="group">
@@ -67,6 +67,36 @@
 				<visible>!Skin.HasSetting(VideoLibraryMovieFanart) | Control.IsVisible(508)</visible>
 				<visible>Container.Content(Movies) + !Control.IsVisible(513)</visible>
 			</control>
+			<control type="multiimage">
+				<posx>0</posx>
+
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<imagepath background="true">$INFO[ListItem.Path]../extrafanart</imagepath>
+
+				<timeperimage>7000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+				<visible>!Skin.HasSetting(VideoLibraryMovieFanart) | Control.IsVisible(508)</visible>
+
+				<visible>Container.Content(Movies) + !Control.IsVisible(513)</visible>
+			</control>
+			<control type="multiimage">
+				<posx>0</posx>
+
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<imagepath background="true">$INFO[ListItem.Path]/extrafanart</imagepath>
+
+				<timeperimage>7000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+				<visible>!Skin.HasSetting(VideoLibraryMovieFanart) | Control.IsVisible(508)</visible>
+
+				<visible>Container.Content(Movies) + !Control.IsVisible(513)</visible>
+			</control>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -77,6 +107,36 @@
 				<fadetime>FanartCrossfadeTime</fadetime>
 				<visible>!Skin.HasSetting(VideoLibraryTVFanart)</visible>
 				<visible>Container.Content(TVShows) | [Container.Content(Episodes) + stringcompare(Container.FolderPath,videodb://5/)]</visible>
+			</control>
+			<control type="multiimage">
+				<posx>0</posx>
+
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<imagepath background="true">$INFO[ListItem.Path]/extrafanart</imagepath>
+
+				<timeperimage>7000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+				<visible>!Skin.HasSetting(VideoLibraryTVFanart)</visible>
+
+				<visible>Container.Content(TVShows) | [Container.Content(Episodes) + stringcompare(Container.FolderPath,videodb://5/)]</visible>
+			</control>
+			<control type="multiimage">
+				<posx>0</posx>
+
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<imagepath background="true">$INFO[ListItem.Path]../extrafanart</imagepath>
+				<timeperimage>7000</timeperimage>
+
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+				<visible>!Skin.HasSetting(VideoLibraryTVFanart)</visible>
+				<visible>Container.Content(Seasons) | [Container.Content(Episodes) + stringcompare(Container.FolderPath,videodb://5/)]</visible>
+
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -90,54 +150,60 @@
 				<visible>!Skin.HasSetting(VideoLibraryTVFanart)</visible>
 				<visible>Container.Content(Seasons) | [Container.Content(Episodes) + !stringcompare(Container.FolderPath,videodb://5/)]</visible>
 			</control>
-			
 			<control type="multiimage">
 				<posx>0</posx>
-				<posy>0</posy>
-				<width>1280</width>
-				<height>720</height>
-				<imagepath background="true">$INFO[ListItem.Path]../extrafanart</imagepath>
-				<timeperimage>7000</timeperimage>
-				<randomize>true</randomize>
-				<fadetime>1000</fadetime>
-				<visible>!Skin.HasSetting(VideoLibraryMovieFanart) | Control.IsVisible(508)</visible>
-				<visible>Container.Content(Movies) + !Control.IsVisible(513)</visible>
-			</control>
-			<control type="multiimage">
-				<posx>0</posx>
+
 				<posy>0</posy>
 				<width>1280</width>
 				<height>720</height>
 				<imagepath background="true">$INFO[ListItem.Path]/extrafanart</imagepath>
-				<timeperimage>7000</timeperimage>
-				<randomize>true</randomize>
-				<fadetime>1000</fadetime>
-				
-			</control>
-			<control type="multiimage">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>1280</width>
-				<height>720</height>
-				<imagepath background="true">$INFO[ListItem.Path]/extrafanart</imagepath>
+
 				<timeperimage>7000</timeperimage>
 				<randomize>true</randomize>
 				<fadetime>1000</fadetime>
 				<visible>!Skin.HasSetting(VideoLibraryTVFanart)</visible>
-				<visible>Container.Content(TVShows) | [Container.Content(Episodes) + stringcompare(Container.FolderPath,videodb://5/)]</visible>
+
+				<visible>Container.Content(TVShows) | [Container.Content(Episodes) + !stringcompare(Container.FolderPath,videodb://5/)]</visible>
 			</control>
 			<control type="multiimage">
 				<posx>0</posx>
+
 				<posy>0</posy>
 				<width>1280</width>
 				<height>720</height>
 				<imagepath background="true">$INFO[ListItem.Path]../extrafanart</imagepath>
 				<timeperimage>7000</timeperimage>
+
 				<randomize>true</randomize>
 				<fadetime>1000</fadetime>
 				<visible>!Skin.HasSetting(VideoLibraryTVFanart)</visible>
 				<visible>Container.Content(Seasons) | [Container.Content(Episodes) + !stringcompare(Container.FolderPath,videodb://5/)]</visible>
+
 			</control>
+			<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true">special://skin/backgrounds/GenreFanart/$INFO[ListItem.Label,,.jpg]</texture>
+			<aspectratio>scale</aspectratio>
+			<fadetime>FanartCrossfadeTime</fadetime>
+			<include>VisibleFadeEffect</include>
+			
+			<visible>Container.Content(Genres)+ ![Player.HasVideo + Skin.HasSetting(VideoBackgrounds)]</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true">special://skin/backgrounds/Countries/Fanarts/$INFO[ListItem.Label,,.jpg]</texture>
+			<aspectratio>scale</aspectratio>
+			<fadetime>FanartCrossfadeTime</fadetime>
+			<include>VisibleFadeEffect</include>
+			
+			<visible>Container.Content(Countries)+ ![Player.HasVideo + Skin.HasSetting(VideoBackgrounds)]</visible>
+		</control>
 		</control>
 		<include>CommonMediaPlayingBackground</include>
 		<control type="group">
@@ -148,6 +214,7 @@
 				<width>1280</width>
 				<height>720</height>
 				<texture border="20">black-back.png</texture>
+				<include>T-Level</include>
 				<include>VisibleFadeEffect</include>
 				<visible>Control.IsVisible(50) | Control.IsVisible(500) | Control.IsVisible(505)</visible>
 			</control>
@@ -157,6 +224,7 @@
 				<width>1280</width>
 				<height>128</height>
 				<texture>floor.png</texture>
+				<include>T-Level</include>
 				<include>VisibleFadeEffect</include>
 				<visible>Control.IsVisible(50) | Control.IsVisible(500) | Control.IsVisible(505)</visible>
 			</control>
@@ -169,6 +237,7 @@
 					<width>750</width>
 					<height>600</height>
 					<texture border="20">ContentPanel.png</texture>
+					<include>T-Level</include>
 				</control>
 				<control type="image">
 					<posx>50</posx>
@@ -177,6 +246,7 @@
 					<height>600</height>
 					<aspectratio aligny="top">keep</aspectratio>
 					<texture diffuse="diffuse_mirror3.png" flipy="true" border="20">ContentPanel.png</texture>
+					<include>T-Level</include>
 				</control>
 			</control>
 			<control type="image">
@@ -185,6 +255,7 @@
 				<width>1280</width>
 				<height>720</height>
 				<texture>ContentPanel2.png</texture>
+				<include>T-Level</include>
 				<include>VisibleFadeEffect</include>
 				<visible>Control.IsVisible(501)</visible>
 			</control>
@@ -194,6 +265,7 @@
 				<width>1280</width>
 				<height>725</height>
 				<texture border="0,5,0,0">ContentPanel4.png</texture>
+				<include>T-Level</include>
 				<include>VisibleFadeEffect</include>
 				<visible>Control.IsVisible(7700) | Control.IsVisible(504) | Control.IsVisible(511) | Control.IsVisible(550) | Control.IsVisible(560)</visible>
 			</control>
@@ -206,6 +278,7 @@
 					<width>1130</width>
 					<height>600</height>
 					<texture border="20">ContentPanel.png</texture>
+					<include>T-Level</include>
 				</control>
 				<control type="image">
 					<posx>75</posx>
@@ -214,6 +287,7 @@
 					<height>600</height>
 					<aspectratio aligny="top">keep</aspectratio>
 					<texture diffuse="diffuse_mirror3.png" flipy="true" border="20">ContentPanel.png</texture>
+					<include>T-Level</include>
 				</control>
 			</control>
 		</control>
@@ -251,6 +325,7 @@
 					<width>1</width>
 					<height>720</height>
 					<texture>MediaBladeSub_Part1.png</texture>
+					<include>Top-Level</include>
 					<animation effect="zoom" start="0,0,1,720" end="0,0,229,720" time="300" tween="quadratic" easing="out" condition="Control.HasFocus(97) | Control.HasFocus(98) | ControlGroup(9001).HasFocus | ControlGroup(9701).HasFocus">Conditional</animation>
 				</control>
 				<control type="image">
@@ -259,6 +334,7 @@
 					<width>12</width>
 					<height>720</height>
 					<texture>MediaBladeSub_Part2.png</texture>
+					<include>Top-Level</include>
 					<animation effect="slide" end="228,0" time="300" tween="quadratic" easing="out" condition="Control.HasFocus(97) | Control.HasFocus(98) | ControlGroup(9001).HasFocus | ControlGroup(9701).HasFocus">Conditional</animation>
 				</control>
 			</control>
@@ -318,15 +394,15 @@
 						<onclick>RunScript(script.moviesets)</onclick>
 						<onclick>SetFocus(50)</onclick>
 						<enable>!StringCompare(ListItem.Label,..) + Skin.HasSetting(ManagerMovieSets) + container.content(movies)</enable>
-						<visible>Control.IsVisible(190)</visible>
+						<visible>Control.IsVisible(190)+ Skin.HasSetting(ManagerMovieSets)</visible>
 					</control>
-					<control type="button" id="193">
+					<!--<control type="button" id="193">
 						<description>open setting MovieSets</description>
 						<include>ButtonMediaSubCommonValues</include>
 						<label>5</label>
 						<onclick>Addon.OpenSettings(script.moviesets)</onclick>
 						<visible>Control.IsVisible(190)</visible>
-					</control>
+					</control>-->
 
 					<control type="label" id="195">
 						<width>220</width>
@@ -483,6 +559,8 @@
 					</control>
 					<control type="radiobutton" id="22">
 						<description>Toggle Top Info Screen</description>
+
+
 						<include>ButtonMediaSubCommonValues</include>
 						<label>35133</label>
 						<onclick>Skin.ToggleSetting(HideTopScreen)</onclick>
@@ -543,6 +621,15 @@
 						<onclick>Skin.ToggleSetting(VideoLibraryFanartView504)</onclick>
 						<selected>!Skin.HasSetting(VideoLibraryFanartView504)</selected>
 						<visible>[Control.IsVisible(504) + [Container.Content(Movies) | Container.Content(TVShows)]]</visible>
+					</control>
+					<control type="radiobutton" id="28">
+						<description>Toggle MoviesFanart</description>
+						<textwidth>170</textwidth>
+						<include>ButtonMediaSubCommonValues</include>
+						<label>$LOCALIZE[31557]</label>
+						<onclick>Skin.ToggleSetting(SizePlot)</onclick>
+						<selected>Skin.HasSetting(SizePlot)</selected>
+						<visible>Container.Content(Movies)</visible>
 					</control>
 
 					<include>Include_CustomView_Cust</include>
@@ -699,5 +786,7 @@
 			</control>
 		</control>
 		<include>MyVideoTopScreen</include>
+		<include>WindowTitleHomeButton</include>
+		<include>Clock</include>
 	</controls>
 </window>

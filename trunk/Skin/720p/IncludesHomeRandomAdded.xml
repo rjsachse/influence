@@ -1,23 +1,88 @@
 <includes>
 	<include name="HomeRandomAddedInfo">
 		<control type="group">
-			<visible>!Window.IsVisible(Favourites) + !Window.IsVisible(1117) + !Window.IsVisible(4577)</visible>
+			<visible>!Window.IsVisible(Favourites)+ !Window.IsVisible(1117) + !Window.IsVisible(1118)+ !Window.IsVisible(1112)+ !Window.IsVisible(1116) +!Control.HasFocus(23)] + !Control.HasFocus(8010)</visible>
 			<include>VisibleFadeEffect</include>
 			<animation effect="fade" time="300" delay="1000">WindowOpen</animation>
 			<animation effect="fade" time="200">WindowClose</animation>
-			<control type="group" id="860">
+			<control type="group" id="3300">
+				<control type="button" id="3310">
+					<visible>Container(9000).HasFocus(2)+ Skin.HasSetting(Menu_InfoVideos1_act)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8140)</onfocus>
+				</control>
+				<control type="button" id="3311">
+					<visible>Container(9000).HasFocus(2)+ !Skin.HasSetting(Menu_InfoVideos1_act)+Skin.HasSetting(Menu_InfoVideos2_act)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8142)</onfocus>
+				</control>
+				<control type="button" id="3312">
+					<visible>Container(9000).HasFocus(2)+ !Skin.HasSetting(Menu_InfoVideos1_act)+!Skin.HasSetting(Menu_InfoVideos2_act)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(9000)</onfocus>
+				</control>
+				<control type="button" id="3312">
+					<visible>Container(9000).HasFocus(11)+ [Skin.HasSetting(UseNextAired) + !Skin.HasSetting(homepageHideRecentlyTVShowsAdded)+Skin.HasSetting(Menu_InfoTVShows_act)]</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8023)</onfocus>
+				</control>
+			</control>
+			<control type="group" id="3200">
+			<control type="button" id="3671">
+					<visible>Container(9000).HasFocus(3) + Skin.HasSetting(UseConcertInfo) +  !Skin.HasSetting(SearchArtistConcertRss) + !Skin.HasSetting(homepageHideRecentlyMusicAdded)+Skin.HasSetting(Menu_InfoMusic_act)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8064)</onfocus>
+				</control>
+				<control type="button" id="3672">
+					<visible>Container(9000).HasFocus(3) + Skin.HasSetting(UseConcertInfo) + Skin.HasSetting(SearchArtistConcertRss) + !Skin.HasSetting(homepageHideRecentlyMusicAdded)+Skin.HasSetting(Menu_InfoMusic_act)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8065)</onfocus>
+				</control>
+				<control type="button" id="3672">
+					<visible>Container(9000).HasFocus(10)+ Skin.HasSetting(homepageHideRecentlyMovieAdded)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8000)</onfocus>
+				</control>
+				<control type="button" id="3672">
+					<visible>Container(9000).HasFocus(2)+ Skin.HasSetting(homepageHideRandomVideoAdded)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8007)</onfocus>
+				</control>
 				
-				<control type="button" id="360">
-					<visible>Container(9000).HasFocus(11) + Skin.HasSetting(UseNextAired)</visible>
+			</control>
+			<control type="group" id="860">
+				<control type="button" id="367">
+					<visible>Container(9000).HasFocus(10)+ Skin.HasSetting(Menu_InfoMovie_act)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8122)</onfocus>
+				</control>
+				
+				<control type="button" id="36111">
+					<visible>Container(9000).HasFocus(11) + Skin.HasSetting(UseNextAired) + !Skin.HasSetting(homepageHideRecentlyTVShowsAdded)+!Skin.HasSetting(Menu_InfoTVShows_act)</visible>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<onfocus>SetFocus(8021)</onfocus>
 				</control>
-				<control type="button" id="361">
-					<visible>Container(9000).HasFocus(11) + !Skin.HasSetting(UseNextAired)</visible>
+				<control type="button" id="36112">
+					<visible>Container(9000).HasFocus(11) + !Skin.HasSetting(UseNextAired)+ !Skin.HasSetting(homepageHideRecentlyTVShowsAdded)+!Skin.HasSetting(Menu_InfoTVShows_act)</visible>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<onfocus>SetFocus(9000)</onfocus>
+				</control>
+				<control type="button" id="36113">
+					<visible>Container(9000).HasFocus(11)+ !Skin.HasSetting(homepageHideRecentlyTVShowsAdded)+Skin.HasSetting(Menu_InfoTVShows_act)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8131)</onfocus>
 				</control>
 				<control type="button" id="362">
 					<visible>Container(9000).HasFocus(2) + Skin.HasSetting(homepageHideRandomVideoAdded)</visible>
@@ -25,6 +90,32 @@
 					<texturenofocus>-</texturenofocus>
 					<onfocus>SetFocus(8005)</onfocus>
 				</control>
+				<control type="button" id="363">
+					<visible>Container(9000).HasFocus(3) + Skin.HasSetting(UseConcertInfo) +  !Skin.HasSetting(SearchArtistConcertRss) + !Skin.HasSetting(homepageHideRecentlyMusicAdded)+!Skin.HasSetting(Menu_InfoMusic_act)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8061)</onfocus>
+				</control>
+				<control type="button" id="364">
+					<visible>Container(9000).HasFocus(3) + Skin.HasSetting(UseConcertInfo) +  Skin.HasSetting(SearchArtistConcertRss) + !Skin.HasSetting(homepageHideRecentlyMusicAdded)+!Skin.HasSetting(Menu_InfoMusic_act)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8062)</onfocus>
+				</control>
+				<control type="button" id="365">
+					<visible>Container(9000).HasFocus(3) + !Skin.HasSetting(UseConcertInfo)+!Skin.HasSetting(Menu_InfoMusic_act)| [Skin.HasSetting(homepageHideRandomMusicAdded) + Skin.HasSetting(homepageHideRecentlyMusicAdded)+Skin.HasSetting(UseConcertInfo)]</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(9000)</onfocus>
+				</control>
+				<control type="button" id="366">
+					<visible>Container(9000).HasFocus(3) + !Skin.HasSetting(homepageHideRecentlyMusicAdded)+Skin.HasSetting(Menu_InfoMusic_act)</visible>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onfocus>SetFocus(8135)</onfocus>
+				</control>
+				
+				
 			</control>
 			<control type="group">
 				<posx>275r</posx>
@@ -36,14 +127,8 @@
 <!--
 				<animation effect="slide" time="0" start="0,0" end="-260,0" condition="[Library.HasContent(TVShows) + ![Skin.HasSetting(HomeMenuNoMoviesButton) | Skin.HasSetting(HomeMenuNoTVShowsButton)]] + ![Container(9000).Hasfocus(10)]">Conditional</animation>
 -->
-				<control type="image">
-					<description>background</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>250</width>
-					<height>300</height>
-					<texture border="10">RecentAddedNF.png</texture>
-				</control>
+				<include>HomeWidget01</include>
+				<include>Widgets_Home_Animation</include>
 				<control type="label">
 					<description>Title label</description>
 					<posx>10</posx>
@@ -158,7 +243,7 @@
 					<posy>200</posy>
 					<width>250</width>
 					<height>92</height>
-					<onleft>9000</onleft>
+					<onleft>860</onleft>
 					<onright>9000</onright>
 					<onup>8004</onup>
 					<ondown>8004</ondown>
@@ -219,14 +304,8 @@
 <!--
 				<animation effect="slide" time="0" start="0,0" end="-260,0" condition="[Library.HasContent(TVShows) + ![Skin.HasSetting(HomeMenuNoMoviesButton) | Skin.HasSetting(HomeMenuNoTVShowsButton)]] + ![Container(9000).Hasfocus(10)]">Conditional</animation>
 -->
-				<control type="image">
-					<description>background</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>250</width>
-					<height>300</height>
-					<texture border="10">RecentAddedNF.png</texture>
-				</control>
+				<include>HomeWidget01</include>
+				<include>Widgets_Home_Animation</include>
 				<control type="label">
 					<description>Title label</description>
 					<posx>10</posx>
@@ -342,7 +421,7 @@
 					<width>250</width>
 					<height>92</height>
 					<onleft>9000</onleft>
-					<onright>8000</onright>
+					<onright>3200</onright>
 					<onup>8005</onup>
 					<ondown>8005</ondown>
 					<viewtype label="535">list</viewtype>
@@ -397,14 +476,8 @@
 				<visible>Library.HasContent(Music)+ !Control.HasFocus(23)</visible>
 				<visible>Container(9000).Hasfocus(3)+ Skin.HasSetting(homepageHideRandomMusicAdded)+!Skin.HasSetting(homepageHideRecentlyMusicAdded)</visible>
 				<include>VisibleFadeEffect</include>
-				<control type="image">
-					<description>background</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>250</width>
-					<height>300</height>
-					<texture border="10">RecentAddedNF.png</texture>
-				</control>
+				<include>HomeWidget01</include>
+				<include>Widgets_Home_Animation</include>
 				<control type="label">
 					<description>Title label</description>
 					<posx>10</posx>
@@ -519,8 +592,8 @@
 					<posy>155</posy>
 					<width>250</width>
 					<height>136</height>
-					<onleft>8008</onleft>
-					<onright>9000</onright>
+					<onleft>860</onleft>
+					<onright>3200</onright>
 					<onup>8006</onup>
 					<ondown>8006</ondown>
 					<viewtype label="535">list</viewtype>
@@ -601,14 +674,8 @@
 				<visible>Library.HasContent(TVShows)+ !Control.HasFocus(23)</visible>
 				<visible>[Container(9000).Hasfocus(2) + !Skin.HasSetting(HomeMenuNoTVShowsButton)]+ Skin.HasSetting(homepageHideRandomVideoAdded) | Container(9000).Hasfocus(11)+ Skin.HasSetting(homepageHideRandomTvShowsAdded)+!Skin.HasSetting(homepageHideRecentlyTvShowsAdded)</visible>
 				<include>VisibleFadeEffect</include>
-				<control type="image">
-					<description>background</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>250</width>
-					<height>300</height>
-					<texture border="10">RecentAddedNF.png</texture>
-				</control>
+				<include>HomeWidget01</include>
+				<include>Widgets_Home_Animation</include>
 				<control type="label">
 					<description>Title label</description>
 					<posx>10</posx>
@@ -651,7 +718,7 @@
 					<width>250</width>
 					<height>136</height>
 					<onleft>860</onleft>
-					<onright>9000</onright>
+					<onright>3300</onright>
 					<onup>8007</onup>
 					<ondown>8007</ondown>
 					<viewtype label="535">list</viewtype>
@@ -733,15 +800,8 @@
 				<visible>Library.HasContent(Music)</visible>
 				<visible>Container(9000).Hasfocus(3)+ Skin.HasSetting(homepageHideRandomMusicAdded)+Skin.HasSetting(homepageHideRecentlyMusicAdded)</visible>
 				<include>VisibleFadeEffect</include>
-
-				<control type="image">
-					<description>background</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>250</width>
-					<height>300</height>
-					<texture border="10">RecentAddedNF.png</texture>
-				</control>
+				<include>HomeWidget01</include>
+				<include>Widgets_Home_Animation</include>
 				<control type="label">
 					<description>Title label</description>
 					<posx>10</posx>
@@ -856,7 +916,7 @@
 					<posy>155</posy>
 					<width>250</width>
 					<height>136</height>
-					<onleft>9000</onleft>
+					<onleft>860</onleft>
 					<onright>8002</onright>
 					<onup>8008</onup>
 					<ondown>8008</ondown>
@@ -940,14 +1000,8 @@
 				<visible>Container(9000).Hasfocus(11)+ Skin.HasSetting(homepageHideRandomTvShowsAdded)+ Skin.HasSetting(homepageHideRecentlyTvShowsAdded)</visible>
 				<include>VisibleFadeEffect</include>
 
-				<control type="image">
-					<description>background</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>250</width>
-					<height>300</height>
-					<texture border="10">RecentAddedNF.png</texture>
-				</control>
+				<include>HomeWidget01</include>
+				<include>Widgets_Home_Animation</include>
 				<control type="label">
 					<description>Title label</description>
 					<posx>10</posx>

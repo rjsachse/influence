@@ -8,6 +8,8 @@ if ( __name__ == "__main__" ):
     else:
         try: os.remove(xbmc.translatePath('special://skin/720p/View_Custom%s.xml' % NumView))
         except: print "erreur os.remove(%s)" % xbmc.translatePath('special://skin/720p/View_Custom%s.xml' % NumView)
+	try: os.remove(xbmc.translatePath('special://profile/View_Custom%s.xml' % NumView))
+        except: print "erreur os.remove(%s)" % xbmc.translatePath('special://profile/View_Custom%s.xml' % NumView)
         try: os.rmdir(xbmc.translatePath('special://skin/media/Custom_Media%s' % NumView))
         except: print "erreur os.rmdir('%s')" % xbmc.translatePath('special://skin/media/Custom_Media%s' % NumView)
         

@@ -195,112 +195,23 @@
 				</control>
 			</control>
 		</control>
-	<control type="group" id="300">
-				
-				<control type="button" id="302">
-					<visible>Container(9000).HasFocus(3) + Skin.HasSetting(homepageHideRecentlyMusicAdded)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8002)</onfocus>
-				</control>
-				<control type="button" id="304">
-					<visible>Container(9000).HasFocus(3) + Skin.HasSetting(homepageHideRandomMusicAdded)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8006)</onfocus>
-				</control>
-				<control type="button" id="306">
-					<visible>Container(9000).HasFocus(10) +   Skin.HasSetting(homepageHideRecentlyMovieAdded)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8000)</onfocus>
-				</control>
-				<control type="button" id="307">
-					<visible>Container(9000).HasFocus(10) +  Skin.HasSetting(homepageHideRandomMovieAdded)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8004)</onfocus>
-				</control>
-				<control type="button" id="308">
-					<visible>[Container(9000).HasFocus(11)  + Skin.HasSetting(homepageHideRecentlyTVShowsAdded)] | [Container(9000).HasFocus(2)  + Skin.HasSetting(homepageHideRecentlyVideoAdded)]</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8001)</onfocus>
-				</control>
-				<control type="button" id="309">
-					<visible>[Container(9000).HasFocus(11) + Skin.HasSetting(homepageHideRandomTVShowsAdded)] | [Container(9000).HasFocus(2) + Skin.HasSetting(homepageHideRandomVideoAdded)]</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8007)</onfocus>
-				</control>
-				<control type="button" id="310">
-					<visible>Container(945).HasFocus(2401)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8010)</onfocus>
-				</control>
-				<control type="button" id="311">
-					<visible>Container(945).HasFocus(2402)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8011)</onfocus>
-				</control>
-				<control type="button" id="312">
-					<visible>Container(945).HasFocus(2403)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8012)</onfocus>
-				</control>
-				<control type="button" id="313">
-					<visible>Container(945).HasFocus(2404)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8013)</onfocus>
-				</control>
-				<control type="button" id="314">
-					<visible>Container(945).HasFocus(2405)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8014)</onfocus>
-				</control>
-				<control type="button" id="315">
-					<visible>Container(945).HasFocus(2406)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8015)</onfocus>
-				</control>
-				<control type="button" id="316">
-					<visible>Container(945).HasFocus(2407)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8016)</onfocus>
-				</control>
-				<control type="button" id="317">
-					<visible>Container(945).HasFocus(2408)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8017)</onfocus>
-				</control>
-				<control type="button" id="318">
-					<visible>Container(945).HasFocus(2409)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8018)</onfocus>
-				</control>
-				<control type="button" id="319">
-					<visible>Container(945).HasFocus(2410)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8019)</onfocus>
-				</control>
-				<control type="button" id="320">
-					<visible>Container(9000).HasFocus(11) + !Skin.HasSetting(homepageHideRandomTVShowsAdded) + !Skin.HasSetting(homepageHideRecentlyTVShowsAdded) + Skin.HasSetting(UseNextAired)</visible>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onfocus>SetFocus(8020)</onfocus>
-				</control>
-			</control>
+			<include>HomeNavWidget</include>
 			<include>GetFocusSubMenu</include>
+			<control type="image">
+				<animation condition="System.IdleTime(33)" type="Conditional" loop="true" reversible="false">
+            			<effect type="rotatex" tween="sine" easing="inout" acceleration="-1" center="auto" start="0" end="3600" time="180000" />
+            			<effect type="rotatey" tween="sine" easing="inout" acceleration="-1" center="auto" start="0" end="3600" time="42000" />
+            			<effect type="rotatey" tween="sine" easing="inout" acceleration="-1" center="auto" start="0" end="-3600" time="42000" delay="89000" />
+           			<effect type="rotatex" tween="sine" easing="inout" acceleration="-1" center="auto" start="0" end="-3600" time="180000" delay="89000" />
+                	</animation>
+				<posx>20</posx>
+				<posy>180</posy>
+				<width>675</width>
+				<height>490</height>
+				<texture border="20">ContentPanel.png</texture>
+				<include>T-Level</include>
+				<visible>Skin.HasSetting(CarouselBackMenu)</visible>
+			</control>
 	<!-- Alternate Submenu -->
 		<control type="group" id="9001">
 			<visible>!Window.IsVisible(1117)</visible>
@@ -404,7 +315,7 @@
 			</content>
 		</control>
 		<include>Carousel</include>
-		<include>HomeLogo</include>
+		<include condition="!Skin.HasSetting(HideHomeLogo)">HomeLogo</include>
 		<include condition="!Skin.HasSetting(HideHomeButton)">HomeButton</include>
 		<include>RssFeeds1</include>
 			<include>RssFeeds2</include>

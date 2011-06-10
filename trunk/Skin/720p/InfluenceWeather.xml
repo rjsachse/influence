@@ -10,6 +10,7 @@
 				<width>500</width>
 				<height>620</height>
 				<texture border="20">ContentPanel.png</texture>
+				<include>T-Level</include>
 				<visible>!Skin.HasSetting(HorizontalMenu) +  [!Player.HasVideo + !Player.HasAudio] | Window.IsActive(weather)</visible>
 			</control>
 			<control type="image">
@@ -18,7 +19,8 @@
 				<width>500</width>
 				<height>400</height>
 				<texture border="20">ContentPanel.png</texture>
-				<visible>!Skin.HasSetting(HorizontalMenu)  + [ Player.HasVideo | Player.HasAudio] +  !Window.IsActive(weather)</visible>
+				<include>T-Level</include>
+				<visible>!Skin.HasSetting(HorizontalMenu)  + [Player.HasVideo | Player.HasAudio] +  !Window.IsActive(weather)</visible>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -26,6 +28,7 @@
 				<width>500</width>
 				<height>545</height>
 				<texture border="20">ContentPanel.png</texture>
+				<include>T-Level</include>
 				<visible>Skin.HasSetting(HorizontalMenu) + !Window.IsActive(weather)</visible>
 			</control>
 			<control type="image">
@@ -35,6 +38,7 @@
 				<height>90</height>
 				<aspectratio>stretch</aspectratio>
 				<texture>GlassTitleBar.png</texture>
+				<include>T-Level</include>
 			</control>
 			<control type="label">
 				<description>header label</description>
@@ -133,6 +137,7 @@
 				<width>460</width>
 				<height>4</height>
 				<texture>separator.png</texture>
+				<include>T-Level</include>
 				<visible>![!Skin.HasSetting(HorizontalMenu) +  [Player.HasVideo | Player.HasAudio ]] |  Window.IsActive(weather)</visible>
 			</control>
 			<control type="label">
@@ -289,6 +294,7 @@
 					<width>500</width>
 					<height>620</height>
 					<texture border="20">ContentPanel.png</texture>
+					<include>T-Level</include>
 					<visible>!Skin.HasSetting(HorizontalMenu) +  [!Player.HasVideo + !Player.HasAudio] | Window.IsActive(weather)</visible>
 				</control>
 					<control type="image">
@@ -297,7 +303,8 @@
 					<width>500</width>
 					<height>400</height>
 					<texture border="20">ContentPanel.png</texture>
-					<visible>!Skin.HasSetting(HorizontalMenu)+  !Window.IsActive(weather)</visible>
+					<include>T-Level</include>
+					<visible>!Skin.HasSetting(HorizontalMenu)  + [Player.HasVideo | Player.HasAudio] +  !Window.IsActive(weather)</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -305,6 +312,7 @@
 					<width>500</width>
 					<height>545</height>
 					<texture border="20">ContentPanel.png</texture>
+					<include>T-Level</include>
 					<visible>Skin.HasSetting(HorizontalMenu) + !Window.IsActive(weather)</visible>
 				</control>
 				<control type="image">
@@ -314,6 +322,7 @@
 					<height>90</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>GlassTitleBar.png</texture>
+					<include>T-Level</include>
 				</control>
 				<control type="label">
 					<description>header label</description>
@@ -478,6 +487,7 @@
 					<width>460</width>
 					<height>4</height>
 					<texture>separator.png</texture>
+					<include>T-Level</include>
 					<visible>!Skin.HasSetting(HorizontalMenu)+  !Window.IsActive(weather)</visible>
 				</control>
 				<control type="image">
@@ -486,6 +496,7 @@
 					<width>460</width>
 					<height>4</height>
 					<texture>separator.png</texture>
+					<include>T-Level</include>
 					<visible>Skin.HasSetting(HorizontalMenu) + !Window.IsActive(weather)</visible>
 				</control>
 				<control type="group">
@@ -588,6 +599,7 @@
 						<width>460</width>
 						<height>4</height>
 						<texture>separator.png</texture>
+						<include>T-Level</include>
 					</control>
 				</control>
 				<control type="group">
@@ -785,6 +797,7 @@
 						<width>460</width>
 						<height>4</height>
 						<texture>separator.png</texture>
+						<include>T-Level</include>
 					</control>
 				</control>
 				<control type="group">
@@ -896,6 +909,7 @@
 					<width>500</width>
 					<height>620</height>
 					<texture border="20">ContentPanel.png</texture>
+					<include>T-Level</include>
 					<visible>!Skin.HasSetting(HorizontalMenu) +  [!Player.HasVideo + !Player.HasAudio] | Window.IsActive(weather)</visible>
 				</control>
 					<control type="image">
@@ -904,7 +918,8 @@
 					<width>500</width>
 					<height>400</height>
 					<texture border="20">ContentPanel.png</texture>
-					<visible>!Skin.HasSetting(HorizontalMenu)+  !Window.IsActive(weather)</visible>
+					<include>T-Level</include>
+					<visible>!Skin.HasSetting(HorizontalMenu)  + [Player.HasVideo | Player.HasAudio] +  !Window.IsActive(weather)</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -912,6 +927,7 @@
 					<width>500</width>
 					<height>545</height>
 					<texture border="20">ContentPanel.png</texture>
+					<include>T-Level</include>
 					<visible>Skin.HasSetting(HorizontalMenu) + !Window.IsActive(weather)</visible>
 				</control>
 				<control type="image">
@@ -921,6 +937,7 @@
 					<height>90</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>GlassTitleBar.png</texture>
+					<include>T-Level</include>
 				</control>
 				<control type="label">
 					<description>header label</description>
@@ -1084,6 +1101,7 @@
 					<width>460</width>
 					<height>4</height>
 					<texture>separator.png</texture>
+					<include>T-Level</include>
 					<visible>!Skin.HasSetting(HorizontalMenu)+  !Window.IsActive(weather)</visible>
 				</control>
 				<control type="image">
@@ -1092,6 +1110,7 @@
 					<width>460</width>
 					<height>4</height>
 					<texture>separator.png</texture>
+					<include>T-Level</include>
 					<visible>Skin.HasSetting(HorizontalMenu) + !Window.IsActive(weather)</visible>
 				</control>
 					
@@ -1322,6 +1341,7 @@
 					<width>500</width>
 					<height>620</height>
 					<texture border="20">ContentPanel.png</texture>
+					<include>T-Level</include>
 					<visible>!Skin.HasSetting(HorizontalMenu) +  [!Player.HasVideo + !Player.HasAudio] | Window.IsActive(weather)</visible>
 				</control>
 				<control type="image">
@@ -1330,7 +1350,8 @@
 					<width>500</width>
 					<height>400</height>
 					<texture border="20">ContentPanel.png</texture>
-					<visible>!Skin.HasSetting(HorizontalMenu)+  !Window.IsActive(weather)</visible>
+					<include>T-Level</include>
+					<visible>!Skin.HasSetting(HorizontalMenu)  + [Player.HasVideo | Player.HasAudio] +  !Window.IsActive(weather)</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -1338,6 +1359,7 @@
 					<width>500</width>
 					<height>545</height>
 					<texture border="20">ContentPanel.png</texture>
+					<include>T-Level</include>
 					<visible>Skin.HasSetting(HorizontalMenu) + !Window.IsActive(weather)</visible>
 				</control>
 				<control type="image">
@@ -1347,6 +1369,7 @@
 					<height>90</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>GlassTitleBar.png</texture>
+					<include>T-Level</include>
 				</control>
 				<control type="label">
 					<description>header label</description>
@@ -1457,6 +1480,7 @@
 						<width>460</width>
 						<height>4</height>
 						<texture>separator.png</texture>
+						<include>T-Level</include>
 						<visible>!Skin.HasSetting(HorizontalMenu)+  !Window.IsActive(weather)</visible>
 					</control>
 				</control>
@@ -1561,6 +1585,7 @@
 						<width>460</width>
 						<height>4</height>
 						<texture>separator.png</texture>
+						<include>T-Level</include>
 					</control>
 				</control>
 				<control type="group">
@@ -1663,6 +1688,7 @@
 						<width>460</width>
 						<height>4</height>
 						<texture>separator.png</texture>
+						<include>T-Level</include>
 					</control>
 				</control>
 				<control type="group">
@@ -1827,7 +1853,7 @@
 						<width>460</width>
 						<height>4</height>
 						<texture>separator.png</texture>
-						
+						<include>T-Level</include>
 					</control>
 				</control>
 				<control type="group">
@@ -1931,6 +1957,7 @@
 						<width>460</width>
 						<height>4</height>
 						<texture>separator.png</texture>
+						<include>T-Level</include>
 					</control>
 				</control>
 				<control type="group">
@@ -2033,6 +2060,7 @@
 						<width>460</width>
 						<height>4</height>
 						<texture>separator.png</texture>
+						<include>T-Level</include>
 					</control>
 				</control>
 				<control type="group">
@@ -2144,6 +2172,7 @@
 					<width>500</width>
 					<height>620</height>
 					<texture border="20">ContentPanel.png</texture>
+					<include>T-Level</include>
 					<visible>!Skin.HasSetting(HorizontalMenu) +  [!Player.HasVideo + !Player.HasAudio] | Window.IsActive(weather)</visible>
 				</control>
 					<control type="image">
@@ -2152,7 +2181,8 @@
 					<width>500</width>
 					<height>400</height>
 					<texture border="20">ContentPanel.png</texture>
-					<visible>!Skin.HasSetting(HorizontalMenu)+  !Window.IsActive(weather)</visible>
+					<include>T-Level</include>
+					<visible>!Skin.HasSetting(HorizontalMenu)  + [Player.HasVideo | Player.HasAudio] +  !Window.IsActive(weather)</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -2160,6 +2190,7 @@
 					<width>500</width>
 					<height>545</height>
 					<texture border="20">ContentPanel.png</texture>
+					<include>T-Level</include>
 					<visible>Skin.HasSetting(HorizontalMenu) + !Window.IsActive(weather)</visible>
 				</control>
 				<control type="image">
@@ -2169,6 +2200,7 @@
 					<height>90</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>GlassTitleBar.png</texture>
+					<include>T-Level</include>
 				</control>
 				<control type="label">
 					<description>header label</description>
@@ -2333,6 +2365,7 @@
 					<width>460</width>
 					<height>4</height>
 					<texture>separator.png</texture>
+					<include>T-Level</include>
 					<visible>!Skin.HasSetting(HorizontalMenu)+  !Window.IsActive(weather)</visible>
 				</control>
 				<control type="image">
@@ -2341,6 +2374,7 @@
 					<width>460</width>
 					<height>4</height>
 					<texture>separator.png</texture>
+					<include>T-Level</include>
 					<visible>Skin.HasSetting(HorizontalMenu) + !Window.IsActive(weather)</visible>
 				</control>
 				<control type="group">
@@ -2443,6 +2477,7 @@
 						<width>460</width>
 						<height>4</height>
 						<texture>separator.png</texture>
+						<include>T-Level</include>
 					</control>
 				</control>
 				<control type="group">
@@ -2640,6 +2675,7 @@
 						<width>460</width>
 						<height>4</height>
 						<texture>separator.png</texture>
+						<include>T-Level</include>
 					</control>
 				</control>
 				<control type="group">

@@ -16,6 +16,7 @@
 				<width>800</width>
 				<height>680</height>
 				<texture border="40">DialogBack.png</texture>
+				<include>Top-Level</include>
 			</control>
 			<control type="image">
 				<posx>80</posx>
@@ -24,6 +25,7 @@
 				<height>90</height>
 				<aspectratio>stretch</aspectratio>
 				<texture>GlassTitleBar.png</texture>
+				<include>Top-Level</include>
 			</control>
 			<control type="label" id="1">
 				<description>header label</description>
@@ -139,6 +141,7 @@
 				<height>280</height>
 				<aspectratio>stretch</aspectratio>
 				<texture>separator_vertical.png</texture>
+				<include>Top-Level</include>
 			</control>
 			<control type="label">
 				<description>Scraper List Header</description>
