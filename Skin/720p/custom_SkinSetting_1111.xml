@@ -465,7 +465,16 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					
+					<control type="label">
+						<width>750</width>
+						<height>45</height>
+						<font>font13</font>
+						<label>$LOCALIZE[31561]</label>
+						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
 					<control type="group" id="135">
 						<width>780</width>
 						<height>35</height>
@@ -544,7 +553,6 @@
 								<onclick>Skin.Reset(Trans90)</onclick>
 								<onclick>Skin.Reset(Trans100)</onclick>
 								<selected>Skin.HasSetting(Trans20)</selected>
-								
 							</control>
 							<control type="radiobutton" id="140">
 								<description>Transparency Level 30</description>
@@ -731,6 +739,16 @@
 								
 							</control>
 						</control>
+					</control>
+					<control type="label">
+						<width>750</width>
+						<height>45</height>
+						<font>font13</font>
+						<label>$LOCALIZE[31560]</label>
+						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
 					</control>
 					<control type="group" id="148">
 						<width>780</width>
