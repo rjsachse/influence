@@ -1765,7 +1765,7 @@ tent(LiveTV)</visible>
 		
 		<control type="button" id="8999">
 			<description>Run Recently added</description>
-			<visible>Substring(Skin.String(InitRunScript),True)</visible>
+			<include condition="Skin.HasSetting(RunScriptsOneTime)">ScriptOneTime</include>
 			<posx>-20</posx>
 			<posy>-20</posy>
 			<width>1</width>
@@ -2049,5 +2049,8 @@ tent(LiveTV)</visible>
 				</control>
 			</control>
 	</include>
+<include name="ScriptOneTime">
+<visible>Substring(Skin.String(InitRunScript),True)</visible>
+</include>
 	
 </includes>

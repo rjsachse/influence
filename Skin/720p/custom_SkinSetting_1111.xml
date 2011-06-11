@@ -465,7 +465,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="label">
+					<control type="label" id="135">
 						<width>750</width>
 						<height>45</height>
 						<font>font13</font>
@@ -475,18 +475,18 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="group" id="135">
+					<control type="group" id="136">
 						<width>780</width>
 						<height>35</height>
-						<control type="grouplist" id="136">
+						<control type="grouplist" id="137">
 							<orientation>horizontal</orientation>
 							
 							<width>780</width>
 							<height>35</height>
 							<itemgap>0</itemgap>
-							<onup>134</onup>
-							<ondown>147</ondown>
-							<control type="radiobutton" id="137">
+							<onup>133</onup>
+							<ondown>150</ondown>
+							<control type="radiobutton" id="138">
 								<description>Transparency Level 0</description>
 								<width>68</width>
 								<height>35</height>
@@ -509,7 +509,7 @@
 								<selected>Skin.HasSetting(Trans0)</selected>
 								
 							</control>
-							<control type="radiobutton" id="138">
+							<control type="radiobutton" id="139">
 								<description>Transparency Level 10</description>
 								<width>68</width>
 								<height>35</height>
@@ -532,7 +532,7 @@
 								<selected>Skin.HasSetting(Trans10)</selected>
 								
 							</control>
-							<control type="radiobutton" id="139">
+							<control type="radiobutton" id="140">
 								<description>Transparency Level 20</description>
 								<width>68</width>
 								<height>35</height>
@@ -554,7 +554,7 @@
 								<onclick>Skin.Reset(Trans100)</onclick>
 								<selected>Skin.HasSetting(Trans20)</selected>
 							</control>
-							<control type="radiobutton" id="140">
+							<control type="radiobutton" id="141">
 								<description>Transparency Level 30</description>
 								<width>68</width>
 								<height>35</height>
@@ -577,7 +577,7 @@
 								<selected>Skin.HasSetting(Trans30)</selected>
 								
 							</control>
-							<control type="radiobutton" id="141">
+							<control type="radiobutton" id="142">
 								<description>Transparency Level 40</description>
 								<width>68</width>
 								<height>35</height>
@@ -600,7 +600,7 @@
 								<selected>Skin.HasSetting(Trans40)</selected>
 								
 							</control>
-							<control type="radiobutton" id="142">
+							<control type="radiobutton" id="143">
 								<description>Transparency Level 50</description>
 								<width>68</width>
 								<height>35</height>
@@ -623,7 +623,7 @@
 								<selected>Skin.HasSetting(Trans50)</selected>
 								
 							</control>
-							<control type="radiobutton" id="143">
+							<control type="radiobutton" id="144">
 								<description>Transparency Level 60</description>
 								<width>68</width>
 								<height>35</height>
@@ -646,7 +646,7 @@
 								<selected>Skin.HasSetting(Trans60)</selected>
 								
 							</control>
-							<control type="radiobutton" id="144">
+							<control type="radiobutton" id="145">
 								<description>Transparency Level 70</description>
 								<width>68</width>
 								<height>35</height>
@@ -669,7 +669,7 @@
 								<selected>Skin.HasSetting(Trans70)</selected>
 								
 								</control>
-							<control type="radiobutton" id="145">
+							<control type="radiobutton" id="146">
 								<description>Transparency Level 80</description>
 								<width>68</width>
 								<height>35</height>
@@ -692,7 +692,7 @@
 								<selected>Skin.HasSetting(Trans80)</selected>
 								
 							</control>
-							<control type="radiobutton" id="146">
+							<control type="radiobutton" id="147">
 								<description>Transparency Level 90</description>
 								<width>68</width>
 								<height>35</height>
@@ -715,7 +715,7 @@
 								<selected>Skin.HasSetting(Trans90)</selected>
 								
 							</control>
-							<control type="radiobutton" id="147">
+							<control type="radiobutton" id="148">
 								<description>Transparency Level 100</description>
 								<width>78</width>
 								<height>35</height>
@@ -740,7 +740,7 @@
 							</control>
 						</control>
 					</control>
-					<control type="label">
+					<control type="label" id="149">
 						<width>750</width>
 						<height>45</height>
 						<font>font13</font>
@@ -750,18 +750,18 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="group" id="148">
+					<control type="group" id="150">
 						<width>780</width>
 						<height>35</height>
-						<control type="grouplist" id="149">
+						<control type="grouplist" id="151">
 							<orientation>horizontal</orientation>
 							
 							<width>780</width>
 							<height>35</height>
 							<itemgap>0</itemgap>
-							<onup>136</onup>
-							<ondown>136</ondown>
-							<control type="radiobutton" id="150">
+							<onup>138</onup>
+							<ondown>138</ondown>
+							<control type="radiobutton" id="152">
 								<description>Transparency Level 0</description>
 								<width>68</width>
 								<height>35</height>
@@ -784,7 +784,7 @@
 								<selected>Skin.HasSetting(TopTrans0)</selected>
 								
 							</control>
-							<control type="radiobutton" id="151">
+							<control type="radiobutton" id="153">
 								<description>Transparency Level 10</description>
 								<width>68</width>
 								<height>35</height>
@@ -807,7 +807,7 @@
 								<selected>Skin.HasSetting(TopTrans10)</selected>
 								
 							</control>
-							<control type="radiobutton" id="152">
+							<control type="radiobutton" id="154">
 								<description>Transparency Level 20</description>
 								<width>68</width>
 								<height>35</height>
@@ -830,7 +830,7 @@
 								<selected>Skin.HasSetting(TopTrans20)</selected>
 								
 							</control>
-							<control type="radiobutton" id="153">
+							<control type="radiobutton" id="155">
 								<description>Transparency Level 30</description>
 								<width>68</width>
 								<height>35</height>
@@ -853,7 +853,7 @@
 								<selected>Skin.HasSetting(TopTrans30)</selected>
 								
 							</control>
-							<control type="radiobutton" id="154">
+							<control type="radiobutton" id="156">
 								<description>Transparency Level 40</description>
 								<width>68</width>
 								<height>35</height>
@@ -876,7 +876,7 @@
 								<selected>Skin.HasSetting(TopTrans40)</selected>
 								
 							</control>
-							<control type="radiobutton" id="155">
+							<control type="radiobutton" id="157">
 								<description>Transparency Level 50</description>
 								<width>68</width>
 								<height>35</height>
@@ -899,7 +899,7 @@
 								<selected>Skin.HasSetting(TopTrans50)</selected>
 								
 							</control>
-							<control type="radiobutton" id="156">
+							<control type="radiobutton" id="158">
 								<description>Transparency Level 60</description>
 								<width>68</width>
 								<height>35</height>
@@ -922,7 +922,7 @@
 								<selected>Skin.HasSetting(TopTrans60)</selected>
 								
 							</control>
-							<control type="radiobutton" id="157">
+							<control type="radiobutton" id="159">
 								<description>Transparency Level 70</description>
 								<width>68</width>
 								<height>35</height>
@@ -945,7 +945,7 @@
 								<selected>Skin.HasSetting(TopTrans70)</selected>
 								
 								</control>
-							<control type="radiobutton" id="158">
+							<control type="radiobutton" id="160">
 								<description>Transparency Level 80</description>
 								<width>68</width>
 								<height>35</height>
@@ -968,7 +968,7 @@
 								<selected>Skin.HasSetting(TopTrans80)</selected>
 								
 							</control>
-							<control type="radiobutton" id="159">
+							<control type="radiobutton" id="161">
 								<description>Transparency Level 90</description>
 								<width>68</width>
 								<height>35</height>
@@ -991,7 +991,7 @@
 								<selected>Skin.HasSetting(TopTrans90)</selected>
 								
 							</control>
-							<control type="radiobutton" id="160">
+							<control type="radiobutton" id="162">
 								<description>Transparency Level 100</description>
 								<width>78</width>
 								<height>35</height>
@@ -1559,6 +1559,19 @@
 						<label>$LOCALIZE[31555]</label>
 						<onclick>Skin.ToggleSetting(AnimWidgets)</onclick>
 						<selected>Skin.HasSetting(AnimWidgets)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="234">
+						<description>rUN Widgets</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$LOCALIZE[31562]</label>
+						<onclick>Skin.ToggleSetting(RunScriptsOneTime)</onclick>
+						<selected>Skin.HasSetting(RunScriptsOneTime)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
