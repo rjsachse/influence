@@ -141,6 +141,32 @@
 			<visible>substring(Listitem.mpaa,Rated NC)</visible>
 		</control>
 	</include>
+	<include name="MovieStudioFlag">
+		<visible>![ListItem.IsFolder | stringcompare(ListItem.Label,..)]</visible>
+	<!-- Studio -->
+		<control type="image">
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture fallback="mediaflag-studio.png">special://skin/backgrounds/Studios/$INFO[ListItem.Studio,,.png]</texture>
+			<visible>[Container.Content(Movies) | Window.IsVisible(VideoPlaylist)] + !stringcompare(ListItem.Label,..)</visible>
+		</control>
+		<control type="image">
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture fallback="mediaflag-studio.png">special://skin/backgrounds/Studios/$INFO[ListItem.Studio,,.png]</texture>
+			<visible>Container.Content(Episodes)+ !stringcompare(ListItem.Label,..)</visible>
+		</control>
+	<!-- Studio MusicVideos -->
+		<control type="image">
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture fallback="mediaflag-studio.png">special://skin/backgrounds/Studios/$INFO[ListItem.Studio,,.png]</texture>
+			<visible>Container.Content(MusicVideos) + !stringcompare(ListItem.Label,..)</visible>
+		</control>
+	</include>
 	<include name="VideoMPAAFlaggingConditions">
 		<control type="image">
 			<description>Rated G</description>
@@ -278,6 +304,7 @@
 		</control>
 <!-- Wallstream -->
 	</include>
+
 	<include name="AudioCodecFlaggingConditions">
 		<control type="image">
 			<description>Dolby Digital Image</description>
