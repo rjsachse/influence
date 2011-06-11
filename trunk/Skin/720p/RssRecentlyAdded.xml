@@ -185,7 +185,7 @@
 					<visible>Control.HasFocus(8011)</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
-				<control type="list" id="8011">
+				<control type="list" id="8011"> 
 					<posx>0</posx>
 					<posy>155</posy>
 					<width>250</width>
@@ -1301,7 +1301,7 @@
 				<visible>Container(945).Hasfocus(2402)+ Container(9000).Hasfocus(24) + !Window.IsVisible(1112) + ![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)]</visible>
 				<include>VisibleFadeEffect</include>
 				<include>HomeWidget02</include>
-				
+				<include>Widgets_Home_Animation</include>
 				
 				<control type="button" id="8032">
 					<posx>120</posx>
