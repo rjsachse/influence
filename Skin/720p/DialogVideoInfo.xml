@@ -76,6 +76,10 @@
 					<include>AudioCodecFlaggingConditions</include>
 					<include>AspectCodecFlaggingConditions</include>
 					<include>VideoTypeHackFlaggingConditions</include>
+					<include>MovieStudioFlag</include>
+					<include>VideoMPAAFlaggingConditions</include>
+					<include>VideoMPAAFlaggingConditionsCSA</include>
+					<include>VideoMPAAFlaggingConditionsUK</include>
 				</control>
 					
 				<control type="group">

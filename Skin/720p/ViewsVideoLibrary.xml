@@ -458,8 +458,10 @@
 				<include>AudioCodecFlaggingConditions</include>
 				<include>AspectCodecFlaggingConditions</include>
 				<include>VideoTypeHackFlaggingConditions</include>
+				<include>MovieStudioFlag</include>
+				<include>VideoMPAAFlaggingConditions</include>
 			</control>
-			<control type="grouplist">
+			<!--<control type="grouplist">
 				<description>MPAA Rating Flagging Images</description>
 				<posx>80</posx>
 				<posy>350</posy>
@@ -468,7 +470,8 @@
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
 				<include>VideoMPAAFlaggingConditions</include>
-			</control>
+			</control>-->
+			
 			
 		</control>
 	</include>

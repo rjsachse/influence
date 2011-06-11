@@ -1365,6 +1365,7 @@ tent(LiveTV)</visible>
 			<include>AspectCodecFlaggingConditions</include>
 			<include>VideoTypeHackFlaggingConditions</include>
 			<include>MovieSetsTypeHackFlaggingConditions</include>
+			<include>MovieStudioFlag</include>
 			<include>VideoMPAAFlaggingConditions</include>
 			<include>VideoMPAAFlaggingConditionsCSA</include>
 			<include>VideoMPAAFlaggingConditionsUK</include>

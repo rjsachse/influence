@@ -138,6 +138,7 @@
 	</include>
 	<include name="Animation_Viewtype_Landscape_Fanart_FocusArea">
 		<animation type="WindowOpen">
+
 			<effect type="slide" start="1400" end="-400,0" time="600" tween="cubic" easing="inout" />
 			<effect type="slide" start="0,0" end="400,0" time="800" delay="600" tween="cubic" easing="inout" />
 		</animation>			
@@ -306,6 +307,10 @@
 		<include>AudioCodecFlaggingConditions</include>
 		<include>AspectCodecFlaggingConditions</include>
 		<include>VideoTypeHackFlaggingConditions</include>
+		<include>MovieStudioFlag</include>
+		<include>VideoMPAAFlaggingConditions</include>
+		<include>VideoMPAAFlaggingConditionsCSA</include>
+		<include>VideoMPAAFlaggingConditionsUK</include>	
 	</include>
 	<include name="Dimensions_Fullscreen">
 		<posx>0</posx>
@@ -1741,6 +1746,7 @@
 					<posy>90</posy>
 					<width>630</width>
 					<height>89</height>
+
 					<font>Font_TVShow</font>
 					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.18.NextDate)][/COLOR][/B]</label>
 					<visible>StringCompare(Window(Home).Property(NextAired.18.ShowTitle),ListItem.Label)</visible>
