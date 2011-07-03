@@ -39,8 +39,44 @@
 			<texturefocus>-</texturefocus>
 			<visible>Skin.HasSetting(Use_Startup_Playlist)</visible>
 		</control>
+		<control type="button" id="666">
+			<texturefocus>special://skin/backgrounds/Influence_Init.png</texturefocus>
+			<onfocus>Skin.SetBool(Influence_SkinReInit_b1)</onfocus>
+			<include condition="Skin.HasSetting(ViewCustom1001_IsInstall)">ViewCustom1001_ReInit</include>
+			<include condition="Skin.HasSetting(ViewCustom1002_IsInstall)">ViewCustom1002_ReInit</include>
+			<include condition="Skin.HasSetting(ViewCustom1003_IsInstall)">ViewCustom1003_ReInit</include>
+			<include condition="Skin.HasSetting(ViewCustom1004_IsInstall)">ViewCustom1004_ReInit</include>
+			<include condition="Skin.HasSetting(ViewCustom1005_IsInstall)">ViewCustom1005_ReInit</include>
+			<include condition="Skin.HasSetting(ViewCustom1006_IsInstall)">ViewCustom1006_ReInit</include>
+			<include condition="Skin.HasSetting(ViewCustom1007_IsInstall)">ViewCustom1007_ReInit</include>
+			<include condition="Skin.HasSetting(ViewCustom1008_IsInstall)">ViewCustom1008_ReInit</include>
+			<include condition="Skin.HasSetting(ViewCustom1009_IsInstall)">ViewCustom1009_ReInit</include>
+			<include condition="Skin.HasSetting(ViewCustom1010_IsInstall)">ViewCustom1010_ReInit</include>
+			<include condition="Skin.HasSetting(ViewCustom1011_IsInstall)">ViewCustom1011_ReInit</include>
+			<include condition="Skin.HasSetting(ViewCustom1012_IsInstall)">ViewCustom1012_ReInit</include>
+			<include condition="Skin.HasSetting(ViewCustom1013_IsInstall)">ViewCustom1013_ReInit</include>
+			<include condition="Skin.HasSetting(ViewCustom1014_IsInstall)">ViewCustom1014_ReInit</include>
+			<include condition="Skin.HasSetting(ViewCustom1015_IsInstall)">ViewCustom1015_ReInit</include>
+			<include condition="Skin.HasSetting(ViewCustom1016_IsInstall)">ViewCustom1016_ReInit</include>
+			<include condition="Skin.HasSetting(ViewCustom1017_IsInstall)">ViewCustom1017_ReInit</include>
+			<include condition="Skin.HasSetting(ViewCustom1018_IsInstall)">ViewCustom1018_ReInit</include>
+			<include condition="Skin.HasSetting(ViewCustom1019_IsInstall)">ViewCustom1019_ReInit</include>
+			<include condition="Skin.HasSetting(ViewCustom1020_IsInstall)">ViewCustom1020_ReInit</include>
+			<onfocus>ReloadSkin()</onfocus>
+			<onfocus>ReplaceWindow(Home)</onfocus>	
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>!Skin.HasSetting(Influence_SkinReInit_b1)</visible>
+		</control>
+		<control type="button" id="666">
+			<description>Don't run anything</description>
+			<onfocus>ReplaceWindow(Home)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>			
+			<visible>Skin.HasSetting(Influence_SkinReInit_b1)</visible>
+		</control>
 		<control type="button" id="16">
-			<texturefocus>special://skin/media/Influence_Init.png</texturefocus>
+			<texturefocus>special://skin/backgrounds/Influence_Init.png</texturefocus>
 			<onfocus>Skin.SetBool(Influence_SkinInit_b7)</onfocus>
 			<onfocus>Skin.SetString(Menu_TVShows_sub9_run,ActivateWindow(1135,return))</onfocus>
 			<onfocus>Skin.SetBool(Menu_TVShows_sub9_act)</onfocus>
@@ -73,26 +109,28 @@
 			<onfocus>Skin.ToggleSetting(TopTrans90)</onfocus>
 			<onfocus>Skin.SetString(Menu_Info_sub2_lab,Search)</onfocus>
 			<onfocus>Skin.SetString(Menu_Info_sub2_feed,http://pipes.yahoo.com/pipes/pipe.run?_id=9aeedcfb616c374c2b0a18bc31479dfd&amp;_render=rss&amp;filterinput=$INFO[Skin.String(ChoiseRssType)]&amp;maininput=$INFO[Skin.String(SearchPictures)],limit=10))</onfocus>
+
+
 			<onfocus>Skin.SetString(Menu_Info_sub2_run,SetFocus(8032))</onfocus>
 			<onfocus>Skin.SetString(Menu_Info_sub3_lab,YouTube)</onfocus>
 			<onfocus>Skin.SetString(Menu_Info_sub3_run,ActivateWindow(10024,plugin://plugin.video.youtube/))</onfocus>
 			<onfocus>Skin.SetString(Menu_Info_sub3_feed,http://gdata.youtube.com/feeds/base/standardfeeds/FR/most_viewed?client=ytapi-youtube-browse&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;alt=rss&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;time=today)</onfocus>
 <!--background-->       <onfocus>Skin.SetString(Menu_Info_Sub1_Back,special://skin/backgrounds/browse.jpg)</onfocus>
 <!--background-->       <onfocus>Skin.SetString(Menu_Info_Sub2_Back,special://skin/backgrounds/search.jpg)</onfocus>
-			<onfocus>ReloadSkin()</onfocus>	
+			<onfocus>SetFocus(666)</onfocus>	
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 			<visible>!Skin.HasSetting(Influence_SkinInit_b7)</visible>
 		</control>
 		<control type="button" id="16">
 			<description>Don't run anything</description>
-			<onfocus>ReplaceWindow(Home)</onfocus>
+			<onfocus>SetFocus(666)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>			
 			<visible>Skin.HasSetting(Influence_SkinInit_b7)</visible>
 		</control>
 		<control type="button" id="15">
-			<texturefocus>special://skin/media/Influence_Init.png</texturefocus>
+			<texturefocus>special://skin/backgrounds/Influence_Init.png</texturefocus>
 			<onfocus>Skin.SetBool(Influence_SkinInit_b6)</onfocus>
 			<onfocus>Skin.SetString(Menu_Info_sub1_run,ActivateWindow(1116))</onfocus>
 			<onfocus>Skin.SetString(Menu_Info_run,RunScript(script.rss.editor))</onfocus>
@@ -111,7 +149,7 @@
 			<visible>Skin.HasSetting(Influence_SkinInit_b6)</visible>
 		</control>
 		<control type="button" id="14">
-			<texturefocus>special://skin/media/Influence_Init.png</texturefocus>
+			<texturefocus>special://skin/backgrounds/Influence_Init.png</texturefocus>
 			<onfocus>Skin.SetBool(Influence_SkinInit_b5)</onfocus>
 			<onfocus>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Info&amp;Nb=10)</onfocus>
 			<onfocus>Skin.SetString(Menu_Info_run,ActivateWindow(1116))</onfocus>
@@ -155,7 +193,7 @@
 			<visible>Skin.HasSetting(Influence_SkinInit_b4)</visible>
 		</control>		
 		<control type="button" id="12">
-			<texturefocus>special://skin/media/Influence_Init.png</texturefocus>
+			<texturefocus>special://skin/backgrounds/Influence_Init.png</texturefocus>
 			<description>Trigger to Auto run the Latest media python after a 1 min delay if scan on startup is enabled</description>
 			<onfocus>Skin.SetBool(Influence_SkinInit_b3)</onfocus>
 			<onfocus>Skin.SetBool(Menu_Music_sub_act)</onfocus>
@@ -278,7 +316,7 @@
 			<visible>Skin.HasSetting(Influence_SkinInit_b3)</visible>
 		</control>
 		<control type="button" id="11">
-			<texturefocus>special://skin/media/Influence_Init.png</texturefocus>
+			<texturefocus>special://skin/backgrounds/Influence_Init.png</texturefocus>
 			<description>Trigger to Auto run the Latest media python after a 1 min delay if scan on startup is enabled</description>
 			<onfocus>Skin.SetBool(Influence_SkinInit_b2)</onfocus>
 			<onfocus>Skin.SetString(Menu_Men1_lab,Menu 1)</onfocus>

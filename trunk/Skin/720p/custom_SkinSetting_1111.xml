@@ -1067,17 +1067,17 @@
 					<include condition="Skin.HasSetting(ViewCustom1007_IsInstall)">ViewCustom1007_Init</include>
 					<include condition="Skin.HasSetting(ViewCustom1008_IsInstall)">ViewCustom1008_Init</include>
 					<include condition="Skin.HasSetting(ViewCustom1009_IsInstall)">ViewCustom1009_Init</include>
-					<include condition="Skin.HasSetting(ViewCustom10010_IsInstall)">ViewCustom1010_Init</include>
-					<include condition="Skin.HasSetting(ViewCustom10011_IsInstall)">ViewCustom1011_Init</include>
-					<include condition="Skin.HasSetting(ViewCustom10012_IsInstall)">ViewCustom1012_Init</include>
-					<include condition="Skin.HasSetting(ViewCustom10013_IsInstall)">ViewCustom1013_Init</include>
-					<include condition="Skin.HasSetting(ViewCustom10014_IsInstall)">ViewCustom1014_Init</include>
-					<include condition="Skin.HasSetting(ViewCustom10015_IsInstall)">ViewCustom1015_Init</include>
-					<include condition="Skin.HasSetting(ViewCustom10016_IsInstall)">ViewCustom1016_Init</include>
-					<include condition="Skin.HasSetting(ViewCustom10017_IsInstall)">ViewCustom1017_Init</include>
-					<include condition="Skin.HasSetting(ViewCustom10018_IsInstall)">ViewCustom1018_Init</include>
-					<include condition="Skin.HasSetting(ViewCustom10019_IsInstall)">ViewCustom1019_Init</include>
-					<include condition="Skin.HasSetting(ViewCustom10020_IsInstall)">ViewCustom1020_Init</include>
+					<include condition="Skin.HasSetting(ViewCustom1010_IsInstall)">ViewCustom1010_Init</include>
+					<include condition="Skin.HasSetting(ViewCustom1011_IsInstall)">ViewCustom1011_Init</include>
+					<include condition="Skin.HasSetting(ViewCustom1012_IsInstall)">ViewCustom1012_Init</include>
+					<include condition="Skin.HasSetting(ViewCustom1013_IsInstall)">ViewCustom1013_Init</include>
+					<include condition="Skin.HasSetting(ViewCustom1014_IsInstall)">ViewCustom1014_Init</include>
+					<include condition="Skin.HasSetting(ViewCustom1015_IsInstall)">ViewCustom1015_Init</include>
+					<include condition="Skin.HasSetting(ViewCustom1016_IsInstall)">ViewCustom1016_Init</include>
+					<include condition="Skin.HasSetting(ViewCustom1017_IsInstall)">ViewCustom1017_Init</include>
+					<include condition="Skin.HasSetting(ViewCustom1018_IsInstall)">ViewCustom1018_Init</include>
+					<include condition="Skin.HasSetting(ViewCustom1019_IsInstall)">ViewCustom1019_Init</include>
+					<include condition="Skin.HasSetting(ViewCustom1020_IsInstall)">ViewCustom1020_Init</include>
 				</control>
 				<control type="grouplist" id="9002"> <!-- Home Window -->
 					<visible>Container(9000).Hasfocus(2)</visible>

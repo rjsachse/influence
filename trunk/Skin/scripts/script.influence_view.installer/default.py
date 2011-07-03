@@ -48,9 +48,9 @@ if ( __name__ == "__main__" ):
                 if xbmc.getCondVisibility("!Skin.HasSetting(ViewCustom%s_IsInstall)" % (v) ) or os.access(xbmc.translatePath('special://skin/720p/View_Custom%s.xml' % v),os.F_OK)==False:
                     print zipview
                     fp, ok = install( zipview )
-                    SrcView=open('special://skin/720p/View_Custom.xml','r')
-                    NewView=open('special://skin/720p/View_Custom%s.xml' % (v),'w')
-		    SaveView=open('special://profile/View_Custom%s.xml' % (v),'w')
+                    SrcView=open(xbmc.translatePath('special://skin/720p/View_Custom.xml'),'r')
+                    NewView=open(xbmc.translatePath('special://skin/720p/View_Custom%s.xml' % (v)),'w')
+                    SaveView=open(xbmc.translatePath('special://masterprofile/View_Custom%s.xml' % (v)),'w')
                     f=SrcView.readlines()
                     SrcView.close
                     for l in f:
@@ -63,8 +63,8 @@ if ( __name__ == "__main__" ):
                     try: os.remove(xbmc.translatePath('special://skin/720p/View_Custom.xml'))
                     except: print "erreur os.remove(%s)" % xbmc.translatePath('special://skin/720p/View_Custom.xml')
                     break	
-                    try: os.remove(xbmc.translatePath('special://profile/720p/View_Custom.xml'))
-                    except: print "erreur os.remove(%s)" % xbmc.translatePath('special://profile/720p/View_Custom.xml')
+                    try: os.remove(xbmc.translatePath('special://masterprofile/720p/View_Custom.xml'))
+                    except: print "erreur os.remove(%s)" % xbmc.translatePath('special://masterprofile/720p/View_Custom.xml')
                     break        
 			
             if ViewOK:
