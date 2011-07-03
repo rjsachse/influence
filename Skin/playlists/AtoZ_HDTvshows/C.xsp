@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="episodes">
+    <name>C</name>
+    <match>all</match>
+    <rule field="videoresolution" operator="greaterthan">710</rule>
+	<rule field="tvshow" operator="startswith">C</rule>
+	<rule field="tvshow" operator="startswith">c</rule>
+</smartplaylist>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="tvshows">
+    <name>L</name>
+    <match>all</match>
+    <rule field="tvshow" operator="startswith">L</rule>
+    <rule field="tvshow" operator="startswith">l</rule>
+</smartplaylist>

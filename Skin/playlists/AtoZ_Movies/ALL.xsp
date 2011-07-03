@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="movies">
+    <name>ALL</name>
+    <match>all</match>
+    <rule field="title" operator="isnot">###</rule>
+    <order direction="ascending">title</order>
+</smartplaylist>

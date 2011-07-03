@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="movies">
+    <name>P</name>
+    <match>all</match>
+    <rule field="videoresolution" operator="greaterthan">710</rule>
+	<rule field="title" operator="startswith">P</rule>
+	<rule field="title" operator="startswith">p</rule>
+    <order direction="ascending">title</order>
+</smartplaylist>
