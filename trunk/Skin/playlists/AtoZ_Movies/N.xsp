@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="movies">
+    <name>N</name>
+    <match>all</match>
+    <rule field="title" operator="startswith">N</rule>
+    <rule field="title" operator="startswith">n</rule>
+</smartplaylist>

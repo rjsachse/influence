@@ -11,6 +11,8 @@
 			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
+			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimWidgets)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimWidgets)">Conditional</animation>
 			<visible>Container(9000).HasFocus</visible>
 		</control>
 <!-- randomsitem and recentlyadded fanart dans IncludeHomeStat-->
@@ -27,6 +29,8 @@
 			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
+			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimWidgets)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimWidgets)">Conditional</animation>
 			<visible>Control.HasFocus(945)</visible>
 <!-- end -->	</control>
 		<include>CommonMediaPlayingBackground</include>

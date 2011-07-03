@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="songs">
+    <name>G</name>
+    <match>all</match>
+    <rule field="artist" operator="startswith">G</rule>
+    <rule field="artist" operator="startswith">g</rule>
+</smartplaylist>
