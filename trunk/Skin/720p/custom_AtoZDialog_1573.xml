@@ -1,0 +1,210 @@
+<window id="1573" type="dialog">
+	<!-- Home Search button -->
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<include>dialogeffect</include>
+	<coordinates>
+		<system>1</system>
+		<posx>934</posx>
+		<posy>197</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<posx>-934</posx>
+			<posy>-197</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>black-back.png</texture>
+			<include>Top-Level</include>				
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>200</width>
+			<height>380</height>
+			<texture border="20">OverlayDialogBackground.png</texture>
+			<include>Top-Level</include>
+		</control>
+		<control type="group" id="9000">
+			<control type="button" id="1">
+				<description>Search Video DB Button</description>
+				<posx>10</posx>
+				<posy>18</posy>
+				<width>180</width>
+				<height>40</height>
+				<label>[UPPERCASE]$INFO[Skin.String(Menu_Music_lab)] Songs[/UPPERCASE]</label>
+				<font>font13</font>
+				<align>center</align>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<onclick>Dialog.Close(1573)</onclick>
+				<onclick>ActivateWindow(10502,&quot;special://skin/playlists/AtoZ_MusicSongs/&quot;)</onclick>			
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onleft>Dialog.Close(1573)</onleft>
+				<onright>1</onright>
+				<onup>3</onup>
+				<ondown>2</ondown>				
+			</control>
+			<control type="button" id="1">
+				<description>Search Video DB Button</description>
+				<posx>10</posx>
+				<posy>58</posy>
+				<width>180</width>
+				<height>40</height>
+				<label>[UPPERCASE]$INFO[Skin.String(Menu_Music_lab)] Albums[/UPPERCASE]</label>
+				<font>font13</font>
+				<align>center</align>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<onclick>Dialog.Close(1573)</onclick>
+				<onclick>ActivateWindow(10502,&quot;special://skin/playlists/AtoZ_MusicAlbums/&quot;)</onclick>			
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onleft>Dialog.Close(1573)</onleft>
+				<onright>1</onright>
+				<onup>3</onup>
+				<ondown>2</ondown>				
+			</control>
+			<control type="button" id="2">
+				<description>Search Video DB Button</description>
+				<posx>10</posx>
+				<posy>98</posy>
+				<width>180</width>
+				<height>40</height>
+				<label>[UPPERCASE]$INFO[Skin.String(Menu_Videos_lab)][/UPPERCASE]</label>
+				<font>font13</font>
+				<align>center</align>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<onclick>Dialog.Close(1573)</onclick>
+				<onclick>ActivateWindow(10025,&quot;special://skin/playlists/AtoZ/&quot;)</onclick>				
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onleft>Dialog.Close(1573)</onleft>
+				<onright>2</onright>
+				<onup>1</onup>
+				<ondown>3</ondown>
+			</control>	
+			<control type="button" id="2">
+				<description>Search Video DB Button</description>
+				<posx>10</posx>
+				<posy>178</posy>
+				<width>180</width>
+				<height>40</height>
+				<label>[UPPERCASE]$INFO[Skin.String(Menu_TVShows_lab)][/UPPERCASE]</label>
+				<font>font13</font>
+				<align>center</align>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<onclick>Dialog.Close(1573)</onclick>
+				<onclick>ActivateWindow(10025,&quot;special://skin/playlists/AtoZ_TvShows&quot;)</onclick>				
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onleft>Dialog.Close(1573)</onleft>
+				<onright>2</onright>
+				<onup>1</onup>
+				<ondown>3</ondown>
+			</control>
+			<control type="button" id="2">
+				<description>Search Video DB Button</description>
+				<posx>10</posx>
+				<posy>138</posy>
+				<width>180</width>
+				<height>40</height>
+				<label>[UPPERCASE]$INFO[Skin.String(Menu_Movie_lab)][/UPPERCASE]</label>
+				<font>font13</font>
+				<align>center</align>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<onclick>Dialog.Close(1573)</onclick>
+				<onclick>ActivateWindow(10025,&quot;special://skin/playlists/AtoZ_Movies&quot;)</onclick>				
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onleft>Dialog.Close(1573)</onleft>
+				<onright>2</onright>
+				<onup>1</onup>
+				<ondown>3</ondown>
+			</control>
+			<control type="button" id="2">
+				<description>Search Video DB Button</description>
+				<posx>10</posx>
+				<posy>208</posy>
+				<width>180</width>
+				<height>40</height>
+				<label>[UPPERCASE]$INFO[Skin.String(Menu_Movie_lab)] HD[/UPPERCASE]</label>
+				<font>font13</font>
+				<align>center</align>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<onclick>Dialog.Close(1573)</onclick>
+				<onclick>ActivateWindow(10025,&quot;special://skin/playlists/AtoZ_HDMovies&quot;)</onclick>				
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onleft>Dialog.Close(1573)</onleft>
+				<onright>2</onright>
+				<onup>1</onup>
+				<ondown>3</ondown>
+			</control>
+			<control type="button" id="2">
+				<description>Search Video DB Button</description>
+				<posx>10</posx>
+				<posy>248</posy>
+				<width>180</width>
+				<height>40</height>
+				<label>[UPPERCASE]$INFO[Skin.String(Menu_TVShows_lab)] HD[/UPPERCASE]</label>
+				<font>font13</font>
+				<align>center</align>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<onclick>Dialog.Close(1573)</onclick>
+				<onclick>ActivateWindow(10025,&quot;special://skin/playlists/AtoZ_HDTvShows&quot;)</onclick>				
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onleft>Dialog.Close(1573)</onleft>
+				<onright>2</onright>
+				<onup>1</onup>
+				<ondown>3</ondown>
+			</control>	
+			<control type="button" id="2">
+				<description>Search Video DB Button</description>
+				<posx>10</posx>
+				<posy>288</posy>
+				<width>180</width>
+				<height>40</height>
+				<label>[UPPERCASE]$INFO[Skin.String(Menu_Music_lab)] $INFO[Skin.String(Menu_Videos_lab)][/UPPERCASE]</label>
+				<font>font13</font>
+				<align>center</align>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<onclick>Dialog.Close(1573)</onclick>
+				<onclick>ActivateWindow(10025,&quot;special://skin/playlists/AtoZ_VideoMusic&quot;)</onclick>				
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onleft>Dialog.Close(1573)</onleft>
+				<onright>2</onright>
+				<onup>1</onup>
+				<ondown>3</ondown>
+			</control>	
+			<control type="button" id="3">
+				<description>Cancel Button</description>
+				<posx>10</posx>
+				<posy>328</posy>
+				<width>180</width>
+				<height>40</height>
+				<label>222</label>
+				<font>font13</font>
+				<align>center</align>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<onclick>Dialog.Close(1573)</onclick>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onleft>Dialog.Close(1573)</onleft>
+				<onright>3</onright>
+				<onup>2</onup>
+				<ondown>1</ondown>
+			</control>
+			
+		</control>
+	</controls>
+</window>
