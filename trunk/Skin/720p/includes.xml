@@ -2053,5 +2053,123 @@ tent(LiveTV)</visible>
 <include name="ScriptOneTime">
 <visible>Substring(Skin.String(InitRunScript),True)</visible>
 </include>
-	
+	<include name="ViewCustom1001_ReInit">
+
+			
+ 			<onfocus>RunScript(special://skin/scripts/script.influence_view.reinstall/default.py,1001)</onfocus>
+				
+	</include>
+	<include name="ViewCustom1002_ReInit">
+
+			
+ 			<onfocus>RunScript(special://skin/scripts/script.influence_view.reinstall/default.py,1002)</onfocus>
+				
+	</include>
+	<include name="ViewCustom1003_ReInit">
+
+			
+ 			<onfocus>RunScript(special://skin/scripts/script.influence_view.reinstall/default.py,1003)</onfocus>
+				
+	</include>
+	<include name="ViewCustom1004_ReInit">
+
+			
+ 			<onfocus>RunScript(special://skin/scripts/script.influence_view.reinstall/default.py,1004)</onfocus>
+				
+	</include>
+	<include name="ViewCustom1005_ReInit">
+
+			
+ 			<onfocus>RunScript(special://skin/scripts/script.influence_view.reinstall/default.py,1005)</onfocus>
+				
+	</include>
+	<include name="ViewCustom1006_ReInit">
+
+			
+ 			<onfocus>RunScript(special://skin/scripts/script.influence_view.reinstall/default.py,1006)</onfocus>
+				
+	</include>
+	<include name="ViewCustom1007_ReInit">
+
+			
+ 			<onfocus>RunScript(special://skin/scripts/script.influence_view.reinstall/default.py,1007)</onfocus>
+				
+	</include>
+	<include name="ViewCustom1008_ReInit">
+
+ 			<onfocus>RunScript(special://skin/scripts/script.influence_view.reinstall/default.py,1008)</onfocus>
+				
+	</include>
+	<include name="ViewCustom1009_ReInit">
+
+			
+ 			<onfocus>RunScript(special://skin/scripts/script.influence_view.reinstall/default.py,1009)</onfocus>
+				
+	</include>
+	<include name="ViewCustom1010_ReInit">
+
+			
+ 			<onfocus>RunScript(special://skin/scripts/script.influence_view.reinstall/default.py,1010)</onfocus>
+				
+	</include>
+	<include name="ViewCustom1011_ReInit">
+
+			
+ 			<onfocus>RunScript(special://skin/scripts/script.influence_view.reinstall/default.py,1011)</onfocus>
+				
+	</include>
+	<include name="ViewCustom1012_ReInit">
+
+			
+ 			<onfocus>RunScript(special://skin/scripts/script.influence_view.reinstall/default.py,1012)</onfocus>
+				
+	</include>
+	<include name="ViewCustom1013_ReInit">
+
+			<onfocus>Skin.ToggleSetting(ViewCustom1013_IsEnable)</onfocus>
+ 			<onfocus>RunScript(special://skin/scripts/script.influence_view.reinstall/default.py,1013)</onfocus>
+				
+	</include>
+	<include name="ViewCustom1014_ReInit">
+
+			
+ 			<onfocus>RunScript(special://skin/scripts/script.influence_view.reinstall/default.py,1014)</onfocus>
+				
+	</include>
+	<include name="ViewCustom1015_ReInit">
+
+			
+ 			<onfocus>RunScript(special://skin/scripts/script.influence_view.reinstall/default.py,1015)</onfocus>
+				
+	</include>
+	<include name="ViewCustom1016_ReInit">
+
+			
+ 			<onfocus>RunScript(special://skin/scripts/script.influence_view.reinstall/default.py,1016)</onfocus>
+				
+	</include>
+	<include name="ViewCustom1017_ReInit">
+
+			
+ 			<onfocus>RunScript(special://skin/scripts/script.influence_view.reinstall/default.py,1017)</onfocus>
+				
+	</include>
+	<include name="ViewCustom1018_ReInit">
+
+			
+ 			<onfocus>RunScript(special://skin/scripts/script.influence_view.reinstall/default.py,1018)</onfocus>
+				
+	</include>
+	<include name="ViewCustom1019_ReInit">
+
+			
+ 			<onfocus>RunScript(special://skin/scripts/script.influence_view.reinstall/default.py,1019)</onfocus>
+				
+	</include>
+	<include name="ViewCustom1020_ReInit">
+
+			
+ 			<onfocus>RunScript(special://skin/scripts/script.influence_view.reinstall/default20)</onfocus>
+				
+	</include>
 </includes>
