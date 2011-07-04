@@ -41,7 +41,8 @@
 		</control>
 		<control type="button" id="666">
 			<texturefocus>special://skin/backgrounds/Influence_Init.png</texturefocus>
-			<onfocus>Skin.SetBool(Influence_SkinReInit_b1)</onfocus>
+			<onfocus>Skin.SetBool(Influence_SkinReInit_b2)</onfocus>
+			<onfocus>Skin.Reset(Influence_SkinReInit_b1)</onfocus>
 			<include condition="Skin.HasSetting(ViewCustom1001_IsInstall)">ViewCustom1001_ReInit</include>
 			<include condition="Skin.HasSetting(ViewCustom1002_IsInstall)">ViewCustom1002_ReInit</include>
 			<include condition="Skin.HasSetting(ViewCustom1003_IsInstall)">ViewCustom1003_ReInit</include>
@@ -66,14 +67,14 @@
 			<onfocus>ReplaceWindow(Home)</onfocus>	
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<visible>!Skin.HasSetting(Influence_SkinReInit_b1)</visible>
+			<visible>!Skin.HasSetting(Influence_SkinReInit_b2)</visible>
 		</control>
 		<control type="button" id="666">
 			<description>Don't run anything</description>
 			<onfocus>ReplaceWindow(Home)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>			
-			<visible>Skin.HasSetting(Influence_SkinReInit_b1)</visible>
+			<visible>Skin.HasSetting(Influence_SkinReInit_b2)</visible>
 		</control>
 		<control type="button" id="16">
 			<texturefocus>special://skin/backgrounds/Influence_Init.png</texturefocus>
@@ -109,6 +110,7 @@
 			<onfocus>Skin.ToggleSetting(TopTrans90)</onfocus>
 			<onfocus>Skin.SetString(Menu_Info_sub2_lab,Search)</onfocus>
 			<onfocus>Skin.SetString(Menu_Info_sub2_feed,http://pipes.yahoo.com/pipes/pipe.run?_id=9aeedcfb616c374c2b0a18bc31479dfd&amp;_render=rss&amp;filterinput=$INFO[Skin.String(ChoiseRssType)]&amp;maininput=$INFO[Skin.String(SearchPictures)],limit=10))</onfocus>
+
 
 
 			<onfocus>Skin.SetString(Menu_Info_sub2_run,SetFocus(8032))</onfocus>

@@ -109,11 +109,12 @@
 						<icon>special://skin/backgrounds/pictures.jpg</icon>
 					</item>
 					<item id="5">
-						<label>31502</label>
+						<label>$INFO[Skin.String(Menu_LiveTv_lab)]</label>
 						<label2>31409</label2>
 						<onclick>ActivateWindow(MyTVSettings)</onclick>
 						<icon>special://skin/backgrounds/tv.jpg</icon>
 						<visible>Skin.HasSetting(LiveTvIsEnable)</visible>
+						<visible>Skin.HasSetting(Menu_LiveTv_act)</visible>
 					</item>
 					<item id="6">
 						<label>8</label>
@@ -245,6 +246,7 @@
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>250</width>
+
 				<height>35</height>
 				<texture border="0,0,32,0">header.png</texture>
 				<include>T-Level</include>
