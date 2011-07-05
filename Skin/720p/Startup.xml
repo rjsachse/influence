@@ -41,8 +41,7 @@
 		</control>
 		<control type="button" id="666">
 			<texturefocus>special://skin/backgrounds/Influence_Init.png</texturefocus>
-			<onfocus>Skin.SetBool(Influence_SkinReInit_b2)</onfocus>
-			<onfocus>Skin.Reset(Influence_SkinReInit_b1)</onfocus>
+			<onfocus>Skin.SetBool(Influence_SkinReInit_b3)</onfocus>
 			<include condition="Skin.HasSetting(ViewCustom1001_IsInstall)">ViewCustom1001_ReInit</include>
 			<include condition="Skin.HasSetting(ViewCustom1002_IsInstall)">ViewCustom1002_ReInit</include>
 			<include condition="Skin.HasSetting(ViewCustom1003_IsInstall)">ViewCustom1003_ReInit</include>
@@ -67,14 +66,30 @@
 			<onfocus>ReplaceWindow(Home)</onfocus>	
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<visible>!Skin.HasSetting(Influence_SkinReInit_b2)</visible>
+			<visible>!Skin.HasSetting(Influence_SkinReInit_b3)</visible>
 		</control>
 		<control type="button" id="666">
 			<description>Don't run anything</description>
 			<onfocus>ReplaceWindow(Home)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>			
-			<visible>Skin.HasSetting(Influence_SkinReInit_b2)</visible>
+			<visible>Skin.HasSetting(Influence_SkinReInit_b3)</visible>
+		</control>
+		<control type="button" id="17">
+			<texturefocus>special://skin/backgrounds/Influence_Init.png</texturefocus>
+			<onfocus>Skin.SetBool(Influence_SkinInit_b8)</onfocus>
+			<onfocus>Skin.SetBool(RunScriptsOneTime)</onfocus>
+			<onfocus>SetFocus(666)</onfocus>	
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>!Skin.HasSetting(Influence_SkinInit_b8)</visible>
+		</control>
+		<control type="button" id="17">
+			<description>Don't run anything</description>
+			<onfocus>SetFocus(666)</onfocus>	
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>			
+			<visible>Skin.HasSetting(Influence_SkinInit_b8)</visible>
 		</control>
 		<control type="button" id="16">
 			<texturefocus>special://skin/backgrounds/Influence_Init.png</texturefocus>
@@ -119,14 +134,14 @@
 			<onfocus>Skin.SetString(Menu_Info_sub3_feed,http://gdata.youtube.com/feeds/base/standardfeeds/FR/most_viewed?client=ytapi-youtube-browse&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;alt=rss&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;time=today)</onfocus>
 <!--background-->       <onfocus>Skin.SetString(Menu_Info_Sub1_Back,special://skin/backgrounds/browse.jpg)</onfocus>
 <!--background-->       <onfocus>Skin.SetString(Menu_Info_Sub2_Back,special://skin/backgrounds/search.jpg)</onfocus>
-			<onfocus>SetFocus(666)</onfocus>	
+			<onfocus>SetFocus(17)</onfocus>	
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 			<visible>!Skin.HasSetting(Influence_SkinInit_b7)</visible>
 		</control>
 		<control type="button" id="16">
 			<description>Don't run anything</description>
-			<onfocus>SetFocus(666)</onfocus>
+			<onfocus>SetFocus(17)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>			
 			<visible>Skin.HasSetting(Influence_SkinInit_b7)</visible>

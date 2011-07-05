@@ -37,7 +37,6 @@
 	<include file="IncludesHomeVertical.xml" />
 	<include file="IncludesHomeHorizontal.xml" />
 	<include file="IncludesHomeCarousel.xml" />
-	<include file="IncludesHomeKinect.xml" />
 	<include file="IncludesCustomBackground.xml" />
 	<include file="IncludeCommonMenu.xml" />
 	<include file="IncludesHomeStat.xml" />
@@ -46,6 +45,9 @@
 	<include file="IncludesInitSkin.xml" />
 	<include file="Includes_Transparency.xml" />
         <include file="Includes-ConcertGuide.xml" />
+	<!-- Touch -->
+	<include file="includesVideoFullScreen.xml" />
+	<include file="IncludePlayerControls.xml" />
 	<!-- Custom Views -->
 	<include file="View_Custom1001.xml" />
 	<include file="View_Custom1002.xml" />
@@ -103,6 +105,26 @@
 	</include>
 	<include name="NoViewSizePlot">
 		<font>font12</font>
+	</include>
+	<include name="SizeCloseButton">
+		<width>64</width>
+		<height>32</height>
+	</include>
+	<include name="SizeCloseButtonTouch">
+		<width>94</width>
+		<height>48</height>
+	</include>
+	<include name="SizeHomeButton">
+		<posx>20</posx>
+		<posy>5</posy>
+		<width>25</width>
+		<height>20</height>
+	</include>
+	<include name="SizeHomeButtonTouch">
+		<posx>20</posx>
+		<posy>0</posy>
+		<width>38</width>
+		<height>30</height>
 	</include>
 	<include name="Widgets_Home_Animation">
 		<animation condition="System.IdleTime(33) + Skin.HasSetting(AnimWidgets)" type="Conditional" loop="true" reversible="false">
@@ -318,6 +340,8 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
+			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 			<visible>![Container.Content(TVShows) | Container.Content(Seasons) |Container.Content(Episodes)] + !Container.Content(Movies) </visible>
 		</control>
 		<control type="multiimage">
@@ -329,6 +353,8 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
+			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 			<visible>!Skin.HasSetting(VideoLibraryMovieFanart)</visible>
 			<visible>Control.IsVisible(1001) + Skin.HasSetting(ViewCustom1001_ShowFanart) | [Container.Content(Movies) + !Control.IsVisible(513)]</visible>
 		</control>
@@ -341,6 +367,8 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
+			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 			<visible>!Skin.HasSetting(VideoLibraryTVFanart)</visible>
 			<visible>[Container.Content(TVShows) | Container.Content(Seasons) |Container.Content(Episodes)]</visible>
 		</control>
@@ -355,6 +383,8 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
+			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 		</control>
 	</include>
 	<include name="CommonPictureBackground">
@@ -367,6 +397,8 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
+			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 		</control>
 	</include>
 	<include name="CommonProgramsBackground">
@@ -379,6 +411,8 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
+			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 		</control>
 	</include>
 	<include name="CommonScriptBackground">
@@ -391,6 +425,8 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
+			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 		</control>
 	</include>
 	<include name="CommonWeatherBackground">
@@ -403,6 +439,8 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
+<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
 			<visible>![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))]</visible>
 		</control>
 		<control type="multiimage">
@@ -414,6 +452,8 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
+<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
 			<visible>Skin.HasSetting(ShowWeatherFanart) + !Skin.HasSetting(WeatheCustomFanart)</visible>
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
@@ -426,6 +466,8 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
+<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
 			<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
@@ -440,6 +482,8 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
+<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
 		</control>
 	</include>
 	<include name="CommonInfoBackground">
@@ -452,6 +496,8 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
+<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
 		</control>
 	</include>
 	<include name="BehindDialogFadeOut">
@@ -494,10 +540,9 @@
 			</control>
 			<control type="button">
 				<hitrect x="0" y="0" w="60" h="30" />
-				<posx>20</posx>
-				<posy>5</posy>
-				<width>25</width>
-				<height>20</height>
+				
+				<include condition="!Skin.HasSetting(TactileMenu)">SizeHomeButton</include>
+				<include condition="Skin.HasSetting(TactileMenu)">SizeHomeButtonTouch</include>
 				<texturenofocus>HomeIcon.png</texturenofocus>
 				<texturefocus>HomeIcon-Focus.png</texturefocus>
 				<label>-</label>
@@ -1225,6 +1270,39 @@ tent(LiveTV)</visible>
 				<font>font12</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[System.Time]</label>
+			</control>
+			<control type="button">
+				<posx>80</posx>
+				<posy>0</posy>
+				<width>38</width>
+				<height>30</height>
+				<texturenofocus>headerx5-NF.png</texturenofocus>
+				<texturefocus>headerx5-FO.png</texturefocus>
+				<label>-</label>
+				<onclick>ParentDir</onclick>
+				<visible>Skin.HasSetting(TactileMenu)+!Window.IsVisible(FileManager)+ !Window.IsVisible(MusicPlaylist) + !Window.IsVisible(VideoPlaylist)</visible>
+			</control>
+			<control type="button">
+				<posx>80</posx>
+				<posy>0</posy>
+				<width>38</width>
+				<height>30</height>
+				<texturenofocus>headerx5-NF.png</texturenofocus>
+				<texturefocus>headerx5-FO.png</texturefocus>
+				<label>-</label>
+				<onclick>Playlist</onclick>
+				<visible>Skin.HasSetting(TactileMenu)+Window.IsVisible(MusicPlaylist) | Skin.HasSetting(TactileMenu)+Window.IsVisible(VideoPlaylist)</visible>
+			</control>
+			<control type="button">
+				<posx>80</posx>
+				<posy>0</posy>
+				<width>38</width>
+				<height>30</height>
+				<texturenofocus>headerx5-NF.png</texturenofocus>
+				<texturefocus>headerx5-FO.png</texturefocus>
+				<label>-</label>
+				<onclick>PreviousMenu</onclick>
+				<visible>Skin.HasSetting(TactileMenu)+Window.IsVisible(FileManager)</visible>
 			</control>
 		</control>
 	</include>
