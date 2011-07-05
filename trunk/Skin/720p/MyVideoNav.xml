@@ -21,13 +21,13 @@
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<onfocus>XBMC.RunScript(script.tvtunes,backend=True&amp;loop=False)</onfocus>
-				<visible>IsEmpty(Window(10025).Property(TvTunesIsRunning)) + container.content(tvshows)</visible>
+				<visible>IsEmpty(Window(10025).Property(TvTunesIsRunning))</visible>
 			</control>
 			<control type="button" id="10001">
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<onfocus>SetFocus(50)</onfocus>
-				<visible>!IsEmpty(Window(10025).Property(TvTunesIsRunning)) | !container.content(tvshows)</visible>
+				<visible>!IsEmpty(Window(10025).Property(TvTunesIsRunning))</visible>
 			</control>
 			<control type="button" id="10002">
 				<texturefocus>-</texturefocus>
@@ -54,6 +54,8 @@
 				<texture background="true">$INFO[Container(7000).ListItem.Property(Fanart_Image)]</texture>
 				<include>backgroundfade</include>
 				<fadetime>FanartCrossfadeTime</fadetime>
+			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 				<visible>![IsEmpty(container(7000).ListItem.Property(HasMovieSets)) + IsEmpty(Container(7000).ListItem.Property(Fanart_Image))]</visible>
 			</control>
 			<control type="image">
@@ -64,6 +66,8 @@
 				<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
 				<include>backgroundfade</include>
 				<fadetime>FanartCrossfadeTime</fadetime>
+			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 				<visible>!Skin.HasSetting(VideoLibraryMovieFanart) | Control.IsVisible(508)</visible>
 				<visible>Container.Content(Movies) + !Control.IsVisible(513)</visible>
 			</control>
@@ -78,6 +82,8 @@
 				<timeperimage>7000</timeperimage>
 				<randomize>true</randomize>
 				<fadetime>1000</fadetime>
+			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 				<visible>!Skin.HasSetting(VideoLibraryMovieFanart) | Control.IsVisible(508)</visible>
 
 				<visible>Container.Content(Movies) + !Control.IsVisible(513)</visible>
@@ -93,6 +99,8 @@
 				<timeperimage>7000</timeperimage>
 				<randomize>true</randomize>
 				<fadetime>1000</fadetime>
+			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 				<visible>!Skin.HasSetting(VideoLibraryMovieFanart) | Control.IsVisible(508)</visible>
 
 				<visible>Container.Content(Movies) + !Control.IsVisible(513)</visible>
@@ -105,6 +113,8 @@
 				<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
 				<include>backgroundfade</include>
 				<fadetime>FanartCrossfadeTime</fadetime>
+			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 				<visible>!Skin.HasSetting(VideoLibraryTVFanart)</visible>
 				<visible>Container.Content(TVShows) | [Container.Content(Episodes) + stringcompare(Container.FolderPath,videodb://5/)]</visible>
 			</control>
@@ -119,6 +129,8 @@
 				<timeperimage>7000</timeperimage>
 				<randomize>true</randomize>
 				<fadetime>1000</fadetime>
+			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 				<visible>!Skin.HasSetting(VideoLibraryTVFanart)</visible>
 
 				<visible>Container.Content(TVShows) | [Container.Content(Episodes) + stringcompare(Container.FolderPath,videodb://5/)]</visible>
@@ -134,6 +146,8 @@
 
 				<randomize>true</randomize>
 				<fadetime>1000</fadetime>
+			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 				<visible>!Skin.HasSetting(VideoLibraryTVFanart)</visible>
 				<visible>Container.Content(Seasons) | [Container.Content(Episodes) + stringcompare(Container.FolderPath,videodb://5/)]</visible>
 
@@ -147,6 +161,8 @@
 				<texture background="true">$INFO[Fanart.Image]</texture>
 				<include>backgroundfade</include>
 				<fadetime>FanartCrossfadeTime</fadetime>
+			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 				<visible>!Skin.HasSetting(VideoLibraryTVFanart)</visible>
 				<visible>Container.Content(Seasons) | [Container.Content(Episodes) + !stringcompare(Container.FolderPath,videodb://5/)]</visible>
 			</control>
@@ -161,6 +177,8 @@
 				<timeperimage>7000</timeperimage>
 				<randomize>true</randomize>
 				<fadetime>1000</fadetime>
+			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 				<visible>!Skin.HasSetting(VideoLibraryTVFanart)</visible>
 
 				<visible>Container.Content(TVShows) | [Container.Content(Episodes) + !stringcompare(Container.FolderPath,videodb://5/)]</visible>
@@ -176,6 +194,8 @@
 
 				<randomize>true</randomize>
 				<fadetime>1000</fadetime>
+			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 				<visible>!Skin.HasSetting(VideoLibraryTVFanart)</visible>
 				<visible>Container.Content(Seasons) | [Container.Content(Episodes) + !stringcompare(Container.FolderPath,videodb://5/)]</visible>
 
@@ -189,7 +209,8 @@
 			<aspectratio>scale</aspectratio>
 			<fadetime>FanartCrossfadeTime</fadetime>
 			<include>VisibleFadeEffect</include>
-			
+						<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 			<visible>Container.Content(Genres)+ ![Player.HasVideo + Skin.HasSetting(VideoBackgrounds)]</visible>
 		</control>
 		<control type="image">
@@ -201,7 +222,8 @@
 			<aspectratio>scale</aspectratio>
 			<fadetime>FanartCrossfadeTime</fadetime>
 			<include>VisibleFadeEffect</include>
-			
+						<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 			<visible>Container.Content(Countries)+ ![Player.HasVideo + Skin.HasSetting(VideoBackgrounds)]</visible>
 		</control>
 		</control>
@@ -561,7 +583,9 @@
 						<description>Toggle Top Info Screen</description>
 
 
+
 						<include>ButtonMediaSubCommonValues</include>
+
 						<label>35133</label>
 						<onclick>Skin.ToggleSetting(HideTopScreen)</onclick>
 						<selected>Skin.HasSetting(HideTopScreen)</selected>
@@ -788,5 +812,6 @@
 		<include>MyVideoTopScreen</include>
 		<include>WindowTitleHomeButton</include>
 		<include>Clock</include>
+
 	</controls>
 </window>

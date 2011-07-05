@@ -11,8 +11,8 @@
 			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimWidgets)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimWidgets)">Conditional</animation>
+			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
 			<visible>Container(9000).HasFocus</visible>
 		</control>
 <!-- randomsitem and recentlyadded fanart dans IncludeHomeStat-->
@@ -29,8 +29,8 @@
 			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimWidgets)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimWidgets)">Conditional</animation>
+			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
 			<visible>Control.HasFocus(945)</visible>
 <!-- end -->	</control>
 		<include>CommonMediaPlayingBackground</include>
@@ -64,6 +64,7 @@
 				<fadetime>0</fadetime>
 				<colordiffuse>BFFFFFFF</colordiffuse>
 				<aspectratio>keep</aspectratio>
+				
 			</control>
 			<control type="button">
 				<description>time label</description>
@@ -115,11 +116,11 @@
 		<visible>Container(945).HasFocus(604) + ControlGroup(9001).HasFocus + [!Player.HasVideo + !Player.HasAudio]</visible>
 		<include condition="Skin.HasSetting(Menu_Weather_sub4_act)">CurrentWeather4</include>
 		</control>
-		<include condition="!Skin.HasSetting(VerticalMenu)+!Skin.HasSetting(HorizontalMenu)+!Skin.HasSetting(CarouselMenu)+!Skin.HasSetting(HomeKinect)">IncludeHomeVertical</include>
+		<include condition="!Skin.HasSetting(VerticalMenu)+!Skin.HasSetting(HorizontalMenu)+!Skin.HasSetting(CarouselMenu)">IncludeHomeVertical</include>
 		<include condition="Skin.HasSetting(VerticalMenu)">IncludeHomeVertical</include>
 		<include condition="Skin.HasSetting(HorizontalMenu)">IncludeHomeHorizontal</include>
 		<include condition="Skin.HasSetting(CarouselMenu)">IncludeHomeCarousel</include>
-		<!--<include condition="Skin.HasSetting(HomeKinect)">IncludeHomeKinect</include>-->
+		
 
 		<control type="group">
 			<posx>390r</posx>
