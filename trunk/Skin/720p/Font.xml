@@ -723,7 +723,7 @@
 			<filename>Title.ttf</filename>
 			<size>16</size>
 		</font>
-		<font>
+		<!--<font>
 			<name>calendar45caps_title</name>
 			<filename>calendarTitleCaps.ttf</filename>
 			<size>45</size>
@@ -767,7 +767,7 @@
 			<name>calendar10</name>
 			<filename>calendarDefaultCaps.ttf</filename>
 			<size>10</size>
-		</font>
+		</font>-->
 	</fontset>
 
 	<fontset id="Default_NoCaps" idloc="31391" unicode="true">
@@ -852,7 +852,7 @@
 			<filename>DejaVuSans-Bold.ttf</filename>
 			<size>80</size>
 		</font>
-		<font>
+		<!--<font>
 			<name>calendar45caps_title</name>
 			<filename>calendarTitleCaps.ttf</filename>
 			<size>45</size>
@@ -896,7 +896,7 @@
 			<name>calendar10</name>
 			<filename>calendarDefaultCaps.ttf</filename>
 			<size>10</size>
-		</font>
+		</font>-->
 	</fontset>
 
 	<fontset id="Arial" idloc="31392" unicode="true">

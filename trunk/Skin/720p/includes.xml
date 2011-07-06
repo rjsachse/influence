@@ -142,7 +142,7 @@
 <!--
 			<visible>!Skin.HasSetting(HorizontalMenu) + Container(9000).HasFocus(12) + [PVR.IsRecording | PVR.HasTimer]</visible>
 -->
-			<visible>Container(9000).HasFocus(12) + [PVR.IsRecording | PVR.HasTimer]</visible>
+			<visible>Container(9000).HasFocus(15) + [PVR.IsRecording | PVR.HasTimer]</visible>
 
 		       <animation type="Visible" reversible="false">
 			       <effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
