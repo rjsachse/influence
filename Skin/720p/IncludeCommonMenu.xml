@@ -14,7 +14,7 @@
 		<label>$INFO[Skin.String(Menu_Weather_lab)]</label>
 		<label2>$INFO[Skin.String(Menu_Weather_Ico)]</label2>
 		<icon>$INFO[Skin.String(Menu_Weather_Back)]</icon>
-		<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</thumb>
+		<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</thumb>
 		<onclick>Skin.SetString(CurrentBackground,$INFO[Skin.String(Home_Custom_Back_Weather_Folder)])</onclick>
 		<onclick>$INFO[Skin.String(Menu_Weather_run)]</onclick>
 		<visible>Skin.HasSetting(Menu_Weather_act)</visible>
@@ -933,7 +933,7 @@
 		<label>$INFO[Skin.String(Menu_Weather_sub1_lab)]</label>
 		<label2>$INFO[Skin.String(Menu_Weather_sub1_Ico)]</label2>
 		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
-		<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</thumb>
+		<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</thumb>
 		<onclick>RunScript(special://skin/scripts/SetBackground.py,Menu=Weather&amp;SubMenu=sub1)</onclick>
 		<visible>Container(9000).HasFocus(6) + Skin.HasSetting(Menu_Weather_sub1_act)</visible>
 		<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
@@ -951,7 +951,7 @@
 		<label>$INFO[Skin.String(Menu_Weather_sub2_lab)]</label>
 		<label2>$INFO[Skin.String(Menu_Weather_sub2_Ico)]</label2>
 		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
-		<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</thumb>
+		<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</thumb>
 		<onclick>RunScript(special://skin/scripts/SetBackground.py,Menu=Weather&amp;SubMenu=sub2)</onclick>
 		<visible>Container(9000).HasFocus(6) + Skin.HasSetting(Menu_Weather_sub2_act)</visible>
 		<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
@@ -969,7 +969,7 @@
 		<label>$INFO[Skin.String(Menu_Weather_sub3_lab)]</label>
 		<label2>$INFO[Skin.String(Menu_Weather_sub3_Ico)]</label2>
 		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
-		<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</thumb>
+		<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</thumb>
 		<onclick>RunScript(special://skin/scripts/SetBackground.py,Menu=Weather&amp;SubMenu=sub3)</onclick>
 		<visible>Container(9000).HasFocus(6) + Skin.HasSetting(Menu_Weather_sub3_act)</visible>
 		<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
@@ -987,7 +987,7 @@
 		<label>$INFO[Skin.String(Menu_Weather_sub4_lab)]</label>
 		<label2>$INFO[Skin.String(Menu_Weather_sub4_Ico)]</label2>
 		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
-		<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</thumb>
+		<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</thumb>
 		<onclick>RunScript(special://skin/scripts/SetBackground.py,Menu=Weather&amp;SubMenu=sub4)</onclick>
 		<visible>Container(9000).HasFocus(6) + Skin.HasSetting(Menu_Weather_sub4_act)</visible>
 		<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
@@ -1005,7 +1005,7 @@
 		<label>$INFO[Skin.String(Menu_Weather_sub5_lab)]</label>
 		<label2>$INFO[Skin.String(Menu_Weather_sub5_Ico)]</label2>
 		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
-		<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</thumb>
+		<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</thumb>
 		<onclick>RunScript(special://skin/scripts/SetBackground.py,Menu=Weather&amp;SubMenu=sub5)</onclick>
 		<visible>Container(9000).HasFocus(6) + Skin.HasSetting(Menu_Weather_sub5_act)</visible>
 		<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
@@ -1023,7 +1023,7 @@
 		<label>$INFO[Skin.String(Menu_Weather_sub6_lab)]</label>
 		<label2>$INFO[Skin.String(Menu_Weather_sub6_Ico)]</label2>
 		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
-		<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</thumb>
+		<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</thumb>
 		<onclick>RunScript(special://skin/scripts/SetBackground.py,Menu=Weather&amp;SubMenu=sub6)</onclick>
 		<visible>Container(9000).HasFocus(6) + Skin.HasSetting(Menu_Weather_sub6_act)</visible>
 		<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
@@ -1033,7 +1033,7 @@
 		<label>$INFO[Skin.String(Menu_Weather_sub7_lab)]</label>
 		<label2>$INFO[Skin.String(Menu_Weather_sub7_Ico)]</label2>
 		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
-		<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</thumb>
+		<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</thumb>
 		<onclick>RunScript(special://skin/scripts/SetBackground.py,Menu=Weather&amp;SubMenu=sub7)</onclick>
 		<visible>Container(9000).HasFocus(6) + Skin.HasSetting(Menu_Weather_sub7_act)</visible>
 		<visible>!Skin.HasSetting(ShowWeatherFanart) | IsEmpty(Skin.String(WeatherFanartDir))</visible>
@@ -1063,7 +1063,7 @@
 		<label>$INFO[Skin.String(Menu_Weather_sub8_lab)]</label>
 		<label2>$INFO[Skin.String(Menu_Weather_sub8_Ico)]</label2>
 		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
-		<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</thumb>
+		<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</thumb>
 		<onclick>RunScript(special://skin/scripts/SetBackground.py,Menu=Weather&amp;SubMenu=sub8)</onclick>
 		<visible>Container(9000).HasFocus(6) + Skin.HasSetting(Menu_Weather_sub8_act)</visible>
 		<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
@@ -1084,7 +1084,7 @@
 		<label2>$INFO[Skin.String(Menu_Weather_sub9_Ico)]</label2>
 		<onclick>RunScript(special://skin/scripts/SetBackground.py,Menu=Weather&amp;SubMenu=sub9)</onclick>
 		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
-		<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</thumb>
+		<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</thumb>
 		<visible>Container(9000).HasFocus(6) + Skin.HasSetting(Menu_Weather_sub9_act)</visible>
 		<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
 	</item>
@@ -1103,7 +1103,7 @@
 		<label>$INFO[Skin.String(Menu_Weather_sub10_lab)]</label>
 		<label2>$INFO[Skin.String(Menu_Weather_sub10_Ico)]</label2>
 		<icon>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</icon>
-		<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</thumb>
+		<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</thumb>
 		<onclick>RunScript(special://skin/scripts/SetBackground.py,Menu=Weather&amp;SubMenu=sub10)</onclick>
 		<visible>Container(9000).HasFocus(6) + Skin.HasSetting(Menu_Weather_sub10_act)</visible>
 		<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>

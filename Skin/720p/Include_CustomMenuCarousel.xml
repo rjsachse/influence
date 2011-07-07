@@ -5158,7 +5158,7 @@
 			<label>$INFO[Skin.String(Menu_Weather_lab)]</label>
 			<label2>$INFO[Skin.String(Menu_Weather_Ico)]</label2>
 			<icon>$INFO[Skin.String(Menu_Weather_Back)]</icon>
-			<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</thumb>
+			<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</thumb>
 			<onclick>-</onclick>
 			<visible>Skin.HasSetting(Menu_Weather_act)</visible>
 			<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
