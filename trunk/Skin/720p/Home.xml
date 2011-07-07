@@ -58,7 +58,7 @@
 				<posy>1</posy>
 				<width>25</width>
 				<height>25</height>
-				<imagepath>special://skin/backgrounds/Weather/Icons/$INFO[Weather.FanartCode]</imagepath>
+				<imagepath>special://skin/backgrounds/Weather/Icons/$INFO[Window(Weather).Property(Current.FanartCode)]</imagepath>
 				<timeperimage>100</timeperimage>
 				<randomize>false</randomize>
 				<fadetime>0</fadetime>
@@ -234,7 +234,165 @@
 		</control>
 <!-- Next 5 Songs END -->
 <!-- LiveTV Info -->
-	      <include condition="!Skin.HasSetting(Menu_LiveTv_act)">TVInfo</include>
+	     <!-- <include condition="Skin.HasSetting(Menu_LiveTv_act)">TVInfo</include>-->
+ <control type="group">
+		       <posx>490r</posx>
+		       <posy>40</posy>
+<!--
+			<visible>!Skin.HasSetting(HorizontalMenu) + Container(9000).HasFocus(12) + [PVR.IsRecording | PVR.HasTimer]</visible>
+-->
+			<visible>Container(9000).HasFocus(15) + [PVR.IsRecording | PVR.HasTimer]</visible>
+
+		       <animation type="Visible" reversible="false">
+			       <effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
+			       <effect type="fade" start="0" end="100" time="300" />
+		       </animation>
+		       <animation type="Hidden" reversible="false">
+			       <effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+			       <effect type="fade" start="100" end="0" time="300" />
+		       </animation>		    
+		       <animation type="WindowOpen" reversible="false">
+			       <effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
+			       <effect type="fade" start="0" end="100" time="300" />
+		       </animation>
+		       <animation type="WindowClose" reversible="false">
+			       <effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+			       <effect type="fade" start="100" end="0" time="300" />
+		       </animation>		    
+		       <animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(Favourites)">conditional</animation>
+		       <control type="image">
+			       <description>background</description>
+			       <posx>0</posx>
+			       <posy>0</posy>
+			       <width>480</width>
+			       <height>135</height>
+			       <include>T-Level</include>
+			       <texture border="20">OverlayDialogBackground.png</texture>
+		       </control>
+		       <control type="group">
+			       <visible>!PVR.IsRecording + PVR.HasTimer</visible>
+			       <control type="image">
+				       <posx>435</posx>
+				       <posy>15</posy>
+				       <width>25</width>
+				       <height>25</height>
+				       <texture>PVR-HasTimer.png</texture>
+					<include>T-Level</include>
+			       </control>
+			       <control type="label">
+				       <description>Next Timer Header label</description>
+				       <posx>420</posx>
+				       <posy>15</posy>
+				       <height>25</height>
+				       <width>400</width>
+				       <label>$LOCALIZE[19157]</label>
+				       <align>right</align>
+				       <aligny>center</aligny>
+				       <font>font12_title</font>
+				       <textcolor>blue</textcolor>
+				       <shadowcolor>black</shadowcolor>
+			       </control>
+			       <control type="label">
+				       <description>NextRecordingTitle</description>
+				       <posx>460</posx>
+				       <posy>40</posy>
+				       <height>30</height>
+				       <width>440</width>
+				       <label>$INFO[PVR.NextRecordingTitle]</label>
+				       <align>right</align>
+				       <aligny>center</aligny>
+				       <font>font13</font>
+				       <shadowcolor>black</shadowcolor>
+				       <scroll>true</scroll>
+			       </control>
+			       <control type="label">
+				       <description>NextRecordingChannel</description>
+				       <posx>460</posx>
+				       <posy>70</posy>
+				       <height>25</height>
+				       <width>440</width>
+				       <label>$INFO[PVR.NextRecordingChannel]</label>
+				       <align>right</align>
+				       <aligny>center</aligny>
+				       <font>font12</font>
+				       <shadowcolor>black</shadowcolor>
+			       </control>
+			       <control type="label">
+				       <description>NextRecordingDateTime</description>
+				       <posx>460</posx>
+				       <posy>95</posy>
+				       <height>25</height>
+				       <width>440</width>
+				       <label>$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19126] - ]</label>
+				       <align>right</align>
+				       <aligny>center</aligny>
+				       <font>font12</font>
+				       <shadowcolor>black</shadowcolor>
+			       </control>
+		       </control>
+		       <control type="group">
+			       <visible>PVR.IsRecording</visible>
+			       <control type="image">
+				       <posx>423</posx>
+				       <posy>15</posy>
+				       <width>37</width>
+				       <height>25</height>
+				       <texture>PVR-IsRecording.png</texture>
+					<include>T-Level</include>
+			       </control>
+			       <control type="label">
+				       <description>Is Recording Header label</description>
+				       <posx>410</posx>
+				       <posy>15</posy>
+				       <height>25</height>
+				       <width>390</width>
+				       <label>$LOCALIZE[19158]</label>
+				       <align>right</align>
+				       <aligny>center</aligny>
+				       <font>font12_title</font>
+				       <textcolor>blue</textcolor>
+				       <shadowcolor>black</shadowcolor>
+			       </control>
+			       <control type="label">
+				       <description>NextRecordingTitle</description>
+				       <posx>460</posx>
+				       <posy>40</posy>
+				       <height>30</height>
+				       <width>440</width>
+				       <label>$INFO[PVR.NowRecordingTitle]</label>
+				       <align>right</align>
+				       <aligny>center</aligny>
+				       <font>font13</font>
+				       <shadowcolor>black</shadowcolor>
+				       <scroll>true</scroll>
+			       </control>
+			       <control type="label">
+				       <description>NextRecordingChannel</description>
+				       <posx>460</posx>
+				       <posy>70</posy>
+				       <height>25</height>
+				       <width>440</width>
+				       <label>$INFO[PVR.NowRecordingChannel]</label>
+				       <align>right</align>
+				       <aligny>center</aligny>
+				       <font>font12</font>
+				       <shadowcolor>black</shadowcolor>
+			       </control>
+			       <control type="label">
+				       <description>NextRecordingDateTime</description>
+				       <posx>460</posx>
+				       <posy>95</posy>
+				       <height>25</height>
+				       <width>440</width>
+
+				       <label>$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19126] - ]</label>
+				       <align>right</align>
+				       <aligny>center</aligny>
+				       <font>font12</font>
+				       <shadowcolor>black</shadowcolor>
+			       </control>
+		       </control>
+	       </control>
 <!-- Music Info Vertical/Carousel -->
 		<control type="group">
 			<posx>0</posx>
