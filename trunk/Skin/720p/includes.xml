@@ -139,10 +139,10 @@
 	 <control type="group">
 		       <posx>490r</posx>
 		       <posy>40</posy>
-<!--
-			<visible>!Skin.HasSetting(HorizontalMenu) + Container(9000).HasFocus(12) + [PVR.IsRecording | PVR.HasTimer]</visible>
--->
-			<visible>Container(9000).HasFocus(15) + [PVR.IsRecording | PVR.HasTimer]</visible>
+
+			<visible>!Skin.HasSetting(HorizontalMenu) + Container(9000).HasFocus(15) + [PVR.IsRecording | PVR.HasTimer]</visible>
+
+			
 
 		       <animation type="Visible" reversible="false">
 			       <effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
@@ -161,24 +161,25 @@
 			       <effect type="fade" start="100" end="0" time="300" />
 		       </animation>		    
 		       <animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(Favourites)">conditional</animation>
-		       <control type="image">
-			       <description>background</description>
-			       <posx>0</posx>
-			       <posy>0</posy>
-			       <width>480</width>
-			       <height>135</height>
-			       <include>T-Level</include>
-			       <texture border="20">OverlayDialogBackground.png</texture>
-		       </control>
+		      
 		       <control type="group">
 			       <visible>!PVR.IsRecording + PVR.HasTimer</visible>
+				 <control type="image">
+				       <description>background</description>
+				       <posx>0</posx>
+				       <posy>0</posy>
+				       <width>480</width>
+				       <height>135</height>
+				       <include>T-Level</include>
+				       <texture border="20">OverlayDialogBackground.png</texture>
+			       </control>
 			       <control type="image">
 				       <posx>435</posx>
 				       <posy>15</posy>
 				       <width>25</width>
 				       <height>25</height>
 				       <texture>PVR-HasTimer.png</texture>
-					<include>T-Level</include>
+					
 			       </control>
 			       <control type="label">
 				       <description>Next Timer Header label</description>
@@ -233,13 +234,22 @@
 		       </control>
 		       <control type="group">
 			       <visible>PVR.IsRecording</visible>
+				 <control type="image">
+				       <description>background</description>
+				       <posx>0</posx>
+				       <posy>0</posy>
+				       <width>480</width>
+				       <height>135</height>
+				       <include>T-Level</include>
+				       <texture border="20">OverlayDialogBackground.png</texture>
+			       </control>
 			       <control type="image">
 				       <posx>423</posx>
 				       <posy>15</posy>
 				       <width>37</width>
 				       <height>25</height>
 				       <texture>PVR-IsRecording.png</texture>
-					<include>T-Level</include>
+					
 			       </control>
 			       <control type="label">
 				       <description>Is Recording Header label</description>
@@ -340,8 +350,8 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="zoom" start="110" end="130" center="auto" time="32000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="24000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 			<visible>![Container.Content(TVShows) | Container.Content(Seasons) |Container.Content(Episodes)] + !Container.Content(Movies) </visible>
 		</control>
 		<control type="multiimage">
@@ -353,8 +363,8 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="zoom" start="110" end="130" center="auto" time="32000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="24000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 			<visible>!Skin.HasSetting(VideoLibraryMovieFanart)</visible>
 			<visible>Control.IsVisible(1001) + Skin.HasSetting(ViewCustom1001_ShowFanart) | [Container.Content(Movies) + !Control.IsVisible(513)]</visible>
 		</control>
@@ -367,8 +377,8 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="zoom" start="110" end="130" center="auto" time="32000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="24000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 			<visible>!Skin.HasSetting(VideoLibraryTVFanart)</visible>
 			<visible>[Container.Content(TVShows) | Container.Content(Seasons) |Container.Content(Episodes)]</visible>
 		</control>
@@ -383,8 +393,8 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="zoom" start="110" end="130" center="auto" time="32000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="24000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 		</control>
 	</include>
 	<include name="CommonPictureBackground">
@@ -397,8 +407,8 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="zoom" start="110" end="130" center="auto" time="32000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="24000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 		</control>
 	</include>
 	<include name="CommonProgramsBackground">
@@ -411,8 +421,8 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="zoom" start="110" end="130" center="auto" time="32000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="24000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 		</control>
 	</include>
 	<include name="CommonScriptBackground">
@@ -425,8 +435,8 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="zoom" start="110" end="130" center="auto" time="32000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="24000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 		</control>
 	</include>
 	<include name="CommonWeatherBackground">
@@ -439,8 +449,8 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
+<animation effect="zoom" start="110" end="130" center="auto" time="32000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="24000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
 			<visible>![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))]</visible>
 		</control>
 		<control type="multiimage">
@@ -452,8 +462,8 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
+<animation effect="zoom" start="110" end="130" center="auto" time="32000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="24000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
 			<visible>Skin.HasSetting(ShowWeatherFanart) + !Skin.HasSetting(WeatheCustomFanart)</visible>
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
@@ -466,8 +476,8 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
+<animation effect="zoom" start="110" end="130" center="auto" time="32000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="24000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
 			<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
@@ -482,8 +492,8 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
+<animation effect="zoom" start="110" end="130" center="auto" time="32000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="24000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
 		</control>
 	</include>
 	<include name="CommonInfoBackground">
@@ -496,8 +506,8 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
+<animation effect="zoom" start="110" end="130" center="auto" time="32000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="24000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
 		</control>
 	</include>
 	<include name="BehindDialogFadeOut">

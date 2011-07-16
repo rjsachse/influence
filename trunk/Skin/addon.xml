@@ -8,7 +8,7 @@
     <import addon="xbmc.gui" version="3.00"/>
     <import addon="script.tvtunes" version="0.8.2"/>
     <import addon="script.moviesets" version="1.0.5"/>
-    <import addon="script.rssclient" version="1.0.3"/>
+    <import addon="script.rssclient" version="1.0.5"/>
     <import addon="script.favourites" version="1.0.6"/>
     <import addon="script.randomitems" version="1.0.6"/>
     <import addon="script.recentlyadded" version="1.0.5"/>
@@ -17,7 +17,7 @@
     <import addon="script.logo-downloader" version="2.0.0"/>
     <import addon="script.ExtraMusicInfo" version="0.0.4"/>
     <import addon="plugin.image.mypicsdb" version="0.5.1"/>
-    <import addon="script.rssfeeds" version="1.0.0"/>
+    <import addon="script.rssfeeds" version="1.0.1"/>
     <import addon="script.image.lastfm.slideshow" version="0.0.3"/>
     <import addon="plugin.image.lastfm" version="0.0.2"/>
     </requires>

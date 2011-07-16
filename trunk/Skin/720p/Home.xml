@@ -11,12 +11,12 @@
 			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
+			<animation effect="zoom" start="110" end="130" center="auto" time="32000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="24000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
 			<visible>Container(9000).HasFocus</visible>
 		</control>
 <!-- randomsitem and recentlyadded fanart dans IncludeHomeStat-->
-	<include>IncludesShowFanart</include>
+	
 		
 <!-- randomsitem and recentlyadded fanart (end) -->
 <!-- gestion des sous menu -->
@@ -29,10 +29,21 @@
 			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
+			<animation effect="zoom" start="110" end="130" center="auto" time="32000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="24000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
 			<visible>Control.HasFocus(945)</visible>
 <!-- end -->	</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true">special://skin/backgrounds/media-overlay.png</texture>
+			<aspectratio>scale</aspectratio>
+			<fadetime>1000</fadetime>	
+			<visible>Player.HasAudio + Skin.HasSetting(MusicFanArtIsEnable) + !Skin.HasSetting(ShowBackgroundVis)</visible>
+		</control>
+		<include>IncludesShowFanart</include>
 		<include>CommonMediaPlayingBackground</include>
 		
 		<include condition="Skin.HasSetting(homepageHideRecentlyVideoAdded) | Skin.HasSetting(homepageHideRecentlyMovieAdded) | Skin.HasSetting(homepageHideRecentlyTvShowsAdded) | Skin.HasSetting(homepageHideRecentlyMusicAdded) ">HomeRecentlyAddedInfo</include>
