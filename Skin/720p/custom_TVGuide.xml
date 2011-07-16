@@ -109,7 +109,7 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<texture>black.png</texture>
+			<texture>tvguideblack.png</texture>
 			<colordiffuse>7FFFFFFF</colordiffuse>
 		</control>
 		
@@ -123,7 +123,7 @@
 				<posy>0</posy>
 				<width>100</width>
 				<height>630</height>
-				<texture border="2">genre-l-unknown.png</texture>
+				<texture border="2">tvguideback01.png</texture>
 				<colordiffuse>5FFFFFFF</colordiffuse>
 			</control>
 			<control type="image">
@@ -131,7 +131,7 @@
 				<posy>0</posy>
 				<width>948</width>
 				<height>91</height>
-				<texture border="2">genre-l-unknown.png</texture>
+				<texture border="2">tvguideback01.png</texture>
 				<colordiffuse>4FFFFFFF</colordiffuse>
 			</control>
 			<control type="image">
@@ -139,7 +139,7 @@
 				<posy>0</posy>
 				<width>948</width>
 				<height>91</height>
-				<texture border="2">black.png</texture>
+				<texture border="2">tvguideblack.png</texture>
 				<include>Top-Level</include>
 				<visible>substring(System.Date,$LOCALIZE[41])</visible>
 			</control>
@@ -232,7 +232,7 @@
 						<posy>0</posy>
 						<width>170</width>
 						<height>90</height>
-						<texture border="2">genre-l-unknown.png</texture>
+						<texture border="2">tvguideback01.png</texture>
 				<include>Top-Level</include>
 						<visible>Control.HasFocus(4001)</visible>
 					</control>
@@ -713,7 +713,7 @@
 				<posy>0</posy>
 				<width>948</width>
 				<height>91</height>
-				<texture border="2">genre-l-unknown.png</texture>
+				<texture border="2">tvguideback01.png</texture>
 				<colordiffuse>AFFFFFFF</colordiffuse>
 			</control>
 			<control type="image">
@@ -721,7 +721,7 @@
 				<posy>0</posy>
 				<width>948</width>
 				<height>91</height>
-				<texture border="2">genre-l-unknown.png</texture>
+				<texture border="2">tvguideback01.png</texture>
 				<include>Top-Level</include>
 				<visible>substring(System.Date,$LOCALIZE[42])</visible>
 			</control>
@@ -730,7 +730,7 @@
 				<posy>0</posy>
 				<width>946</width>
 				<height>1</height>
-				<texture border="2">black.png</texture>
+				<texture border="2">tvguideblack.png</texture>
 				<include>Top-Level</include>
 			</control>
 			<control type="label">
@@ -822,7 +822,7 @@
 						<posy>0</posy>
 						<width>170</width>
 						<height>90</height>
-						<texture border="2">genre-l-unknown.png</texture>
+						<texture border="2">tvguideback01.png</texture>
 				<include>Top-Level</include>
 						<visible>Control.HasFocus(4002)</visible>
 					</control>
@@ -1303,7 +1303,7 @@
 				<posy>0</posy>
 				<width>948</width>
 				<height>91</height>
-				<texture border="2">genre-l-unknown.png</texture>
+				<texture border="2">tvguideback01.png</texture>
 				<colordiffuse>4FFFFFFF</colordiffuse>
 			</control>
 			<control type="image">
@@ -1311,7 +1311,7 @@
 				<posy>0</posy>
 				<width>948</width>
 				<height>91</height>
-				<texture border="2">genre-l-unknown.png</texture>
+				<texture border="2">tvguideback01.png</texture>
 				<include>Top-Level</include>
 				<visible>substring(System.Date,$LOCALIZE[43])</visible>
 			</control>
@@ -1320,7 +1320,7 @@
 				<posy>0</posy>
 				<width>946</width>
 				<height>1</height>
-				<texture border="2">black.png</texture>
+				<texture border="2">tvguideblack.png</texture>
 				<include>Top-Level</include>
 			</control>
 			<control type="label">
@@ -1412,7 +1412,7 @@
 						<posy>0</posy>
 						<width>170</width>
 						<height>90</height>
-						<texture border="2">genre-l-unknown.png</texture>
+						<texture border="2">tvguideback01.png</texture>
 				<include>Top-Level</include>
 						<visible>Control.HasFocus(4003)</visible>
 					</control>
@@ -1893,7 +1893,7 @@
 				<posy>0</posy>
 				<width>948</width>
 				<height>91</height>
-				<texture border="2">genre-l-unknown.png</texture>
+				<texture border="2">tvguideback01.png</texture>
 				<colordiffuse>AFFFFFFF</colordiffuse>
 			</control>
 			<control type="image">
@@ -1901,7 +1901,7 @@
 				<posy>0</posy>
 				<width>948</width>
 				<height>91</height>
-				<texture border="2">genre-l-unknown.png</texture>
+				<texture border="2">tvguideback01.png</texture>
 				<include>Top-Level</include>
 				<visible>substring(System.Date,$LOCALIZE[44])</visible>
 			</control>
@@ -1910,7 +1910,7 @@
 				<posy>0</posy>
 				<width>946</width>
 				<height>1</height>
-				<texture border="2">black.png</texture>
+				<texture border="2">tvguideblack.png</texture>
 				<include>Top-Level</include>
 			</control>
 			<control type="label">
@@ -2002,7 +2002,7 @@
 						<posy>0</posy>
 						<width>170</width>
 						<height>90</height>
-						<texture border="2">genre-l-unknown.png</texture>
+						<texture border="2">tvguideback01.png</texture>
 				<include>Top-Level</include>
 						<visible>Control.HasFocus(4004)</visible>
 					</control>
@@ -2483,7 +2483,7 @@
 				<posy>0</posy>
 				<width>948</width>
 				<height>91</height>
-				<texture border="2">genre-l-unknown.png</texture>
+				<texture border="2">tvguideback01.png</texture>
 				<colordiffuse>4FFFFFFF</colordiffuse>
 			</control>
 			<control type="image">
@@ -2491,7 +2491,7 @@
 				<posy>0</posy>
 				<width>948</width>
 				<height>91</height>
-				<texture border="2">genre-l-unknown.png</texture>
+				<texture border="2">tvguideback01.png</texture>
 				<include>Top-Level</include>
 				<visible>substring(System.Date,$LOCALIZE[45])</visible>
 			</control>
@@ -2500,7 +2500,7 @@
 				<posy>0</posy>
 				<width>946</width>
 				<height>1</height>
-				<texture border="2">black.png</texture>
+				<texture border="2">tvguideblack.png</texture>
 				<include>Top-Level</include>
 			</control>
 			<control type="label">
@@ -2592,7 +2592,7 @@
 						<posy>0</posy>
 						<width>170</width>
 						<height>90</height>
-						<texture border="2">genre-l-unknown.png</texture>
+						<texture border="2">tvguideback01.png</texture>
 				<include>Top-Level</include>
 						<visible>Control.HasFocus(4005)</visible>
 					</control>
@@ -3073,7 +3073,7 @@
 				<posy>0</posy>
 				<width>948</width>
 				<height>91</height>
-				<texture border="2">genre-l-unknown.png</texture>
+				<texture border="2">tvguideback01.png</texture>
 				<colordiffuse>AFFFFFFF</colordiffuse>
 			</control>
 			<control type="image">
@@ -3081,7 +3081,7 @@
 				<posy>0</posy>
 				<width>948</width>
 				<height>91</height>
-				<texture border="2">genre-l-unknown.png</texture>
+				<texture border="2">tvguideback01.png</texture>
 				<include>Top-Level</include>
 				<visible>substring(System.Date,$LOCALIZE[46])</visible>
 			</control>
@@ -3090,7 +3090,7 @@
 				<posy>0</posy>
 				<width>946</width>
 				<height>1</height>
-				<texture border="2">black.png</texture>
+				<texture border="2">tvguideblack.png</texture>
 				<include>Top-Level</include>
 			</control>
 			<control type="label">
@@ -3182,7 +3182,7 @@
 						<posy>0</posy>
 						<width>170</width>
 						<height>90</height>
-						<texture border="2">genre-l-unknown.png</texture>
+						<texture border="2">tvguideback01.png</texture>
 				<include>Top-Level</include>
 						<visible>Control.HasFocus(4006)</visible>
 					</control>
@@ -3663,7 +3663,7 @@
 				<posy>0</posy>
 				<width>948</width>
 				<height>91</height>
-				<texture border="2">genre-l-unknown.png</texture>
+				<texture border="2">tvguideback01.png</texture>
 				<colordiffuse>4FFFFFFF</colordiffuse>
 			</control>
 			<control type="image">
@@ -3671,7 +3671,7 @@
 				<posy>0</posy>
 				<width>948</width>
 				<height>91</height>
-				<texture border="2">genre-l-unknown.png</texture>
+				<texture border="2">tvguideback01.png</texture>
 				<include>Top-Level</include>
 				<visible>substring(System.Date,$LOCALIZE[47])</visible>
 			</control>
@@ -3680,7 +3680,7 @@
 				<posy>0</posy>
 				<width>946</width>
 				<height>1</height>
-				<texture border="2">black.png</texture>
+				<texture border="2">tvguideblack.png</texture>
 				<include>Top-Level</include>
 			</control>
 			<control type="label">
@@ -3772,7 +3772,7 @@
 						<posy>0</posy>
 						<width>170</width>
 						<height>90</height>
-						<texture border="2">genre-l-unknown.png</texture>
+						<texture border="2">tvguideback01.png</texture>
 				<include>Top-Level</include>
 						<visible>Control.HasFocus(4007)</visible>
 					</control>
@@ -4254,7 +4254,7 @@
 				<posy>0</posy>
 				<width>266</width>
 				<height>630</height>
-				<texture border="2">genre-l-unknown.png</texture>
+				<texture border="2">tvguideback01.png</texture>
 				<colordiffuse>4F000000</colordiffuse>
 			</control>
 			<control type="image">
@@ -4262,7 +4262,7 @@
 				<posy>0</posy>
 				<width>266</width>
 				<height>90</height>
-				<texture border="2">genre-l-unknown.png</texture>
+				<texture border="2">tvguideback01.png</texture>
 				<include>Top-Level</include>
 			</control>
 			<control type="image">
@@ -4270,7 +4270,7 @@
 				<posy>540</posy>
 				<width>266</width>
 				<height>90</height>
-				<texture border="2">genre-l-unknown.png</texture>
+				<texture border="2">tvguideback01.png</texture>
 				<include>Top-Level</include>
 				<animation effect="rotate" start="0" end="180" center="auto" time="0" condition="true">Conditional</animation>
 			</control>

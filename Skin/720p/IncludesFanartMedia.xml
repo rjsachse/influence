@@ -11,8 +11,8 @@
 			<!--<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true">Conditional</animation>-->
 			<colordiffuse>88FFFFFF</colordiffuse>	
 			<visible>!Skin.HasSetting(ShowBackgroundVis) + Skin.HasSetting(MusicFanArtIsEnable) + Player.HasAudio</visible>
-			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="zoom" start="110" end="130" center="auto" time="32000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="24000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -24,8 +24,8 @@
 			<fadetime>1000</fadetime>
 			<!--<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true">Conditional</animation>-->
 			<visible>Skin.HasSetting(ShowBackgroundVis) + Skin.HasSetting(MusicFanArtIsEnable) + Player.HasAudio</visible>
-			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="zoom" start="110" end="130" center="auto" time="32000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="24000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 		</control>
 		<control type="multiimage">
 			<posx>0</posx>
@@ -37,8 +37,8 @@
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
 		<!--	<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true">Conditional</animation>-->
-			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="zoom" start="110" end="130" center="auto" time="32000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="24000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 			<visible>!Skin.HasSetting(ShowBackgroundVis) + Skin.HasSetting(MusicFanArtIsEnable) + Player.HasAudio</visible>
 		</control>
 		<control type="multiimage">
@@ -51,8 +51,8 @@
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
 		<!--	<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true">Conditional</animation>-->
-			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="zoom" start="110" end="130" center="auto" time="32000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
+			<animation effect="slide" start="-10,-10" end="20,20" time="24000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimMediaScreens)">Conditional</animation>
 			<visible>Skin.HasSetting(ShowBackgroundVis) + Skin.HasSetting(MusicFanArtIsEnable) + Player.HasAudio</visible>
 		</control>
 	</include>

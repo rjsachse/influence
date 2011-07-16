@@ -249,7 +249,7 @@
 				<texture>home/nowplaying_shadow.png</texture>
 			</control>
 			<control type="group">
-				<visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(LiveTV)</visible>
+				<visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) </visible>
 				<control type="image">
 					<description>Cover image</description>
 					<posx>1200r</posx>
