@@ -2257,7 +2257,7 @@ tent(LiveTV)</visible>
 	<include name="ViewCustom1020_ReInit">
 
 			
- 			<onfocus>RunScript(special://skin/scripts/script.influence_view.reinstall/default20)</onfocus>
+ 			<onfocus>RunScript(special://skin/scripts/script.influence_view.reinstall/default.py,1020)</onfocus>
 				
 	</include>
 </includes>
