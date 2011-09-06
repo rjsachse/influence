@@ -3088,19 +3088,7 @@
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.SetString(RunOpt_var,Menu_Pictures_sub7_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
-				<visible>Skin.HasSetting(Menu_Pic<control type="button" id="43001">
-				<width>750</width>
-				<height>40</height>
-				<font>font13</font>
-				<label>[B]Widgets[/B]</label>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<texturefocus>MenuItemFO.png</texturefocus>
-				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onclick>Skin.ToggleSetting(Menu_PicturesWidget_act)</onclick>
-				<selected>Skin.HasSetting(Menu_PicturesWidget_act)</selected>
-				<visible>Skin.HasSetting(Menu_Pictures)+Skin.HasSetting(Menu_Pictures_act)</visible>
-			</control>tures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(Menu_Pictures_sub7_act)</visible>
+				<visible>Skin.HasSetting(Menu_Pictures) + Skin.HasSetting(Menu_Pictures_act) + Skin.HasSetting(Menu_Pictures_sub7_act)</visible>
 			</control>
 			<control type="radiobutton" id="44081">
 				<width>750</width>

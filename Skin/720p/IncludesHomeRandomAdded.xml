@@ -400,7 +400,7 @@
 					<aspectratio align="left">keep</aspectratio>
 					<texture background="true">$INFO[Window.Property(RandomMovie.1.Thumb)]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
-					<visible>Control.HasFocus(8005)</visible>
+					<visible>!Control.HasFocus(8005)</visible>
 					<bordersize>8</bordersize>
 				</control>
 				<control type="image">

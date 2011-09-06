@@ -18,8 +18,8 @@
 				<description>Close Window button</description>
 				<posx>230</posx>
 				<posy>0</posy>
-				<width>64</width>
-				<height>32</height>
+				<include condition="!Skin.HasSetting(TactileMenu)">SizeCloseButton</include>
+				<include condition="Skin.HasSetting(TactileMenu)">SizeCloseButtonTouch</include>
 				<label>-</label>
 				<font>-</font>
 				<onclick>PreviousMenu</onclick>
@@ -1005,7 +1005,7 @@
 						<description>DB Editor</description>
 						<label>DB $LOCALIZE[33065]</label>
 						<onclick>RunScript(script.library.editor)</onclick>
-						<visible>System.HasAddon(script.library.editor) + IsEmpty(ListItem.Property(HasMovieSets))</visible>
+						<visible>System.HasAddon(script.library.editor)</visible>
 						<enable>container.content(Movies) | Container.Content(MusicVideos) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</enable>
 						<include>ButtonInfoDialogsCommonValues</include>
 					</control>
