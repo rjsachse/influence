@@ -26,8 +26,8 @@
 				<description>Close Window button</description>
 				<posx>980</posx>
 				<posy>9</posy>
-				<width>64</width>
-				<height>32</height>
+				<include condition="!Skin.HasSetting(TactileMenu)">SizeCloseButton</include>
+				<include condition="Skin.HasSetting(TactileMenu)">SizeCloseButtonTouch</include>
 				<label>-</label>
 				<font>-</font>
 				<onclick>PreviousMenu</onclick>
@@ -1093,7 +1093,7 @@
 -->						
 					<onup>9002</onup>
 					<ondown>9002</ondown>
-					<control type="label" id="200">
+					<control type="label" id="198">
 						<width>750</width>
 						<height>45</height>
 						<font>font13_title</font>
@@ -1104,6 +1104,35 @@
 						<aligny>center</aligny>
 					</control>
 					<!-- Horizontal Menu -->
+					<control type="radiobutton" id="199">
+						<description>Use Confluence style</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>Confluence style</label>
+						<onclick>Skin.SetBool(BlackMenu)</onclick>
+						<onclick>Skin.Reset(WhiteMenu)</onclick>
+						<selected>Skin.HasSetting(BlackMenu)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="200">
+						<description>Use Glass style</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>Glass style</label>
+						<onclick>Skin.SetBool(WhiteMenu)</onclick>
+						<onclick>Skin.Reset(BlackMenu)</onclick>
+						<onclick>Skin.Reset(RaiseHorizontalMenu)</onclick>
+						<selected>Skin.HasSetting(WhiteMenu)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
 					<control type="radiobutton" id="201">
 						<description>Use Vertical Menu</description>
 						<width>750</width>
@@ -1137,6 +1166,23 @@
 						<visible>!Skin.HasSetting(VerticalMenu)</visible>
 					</control>
 					<control type="radiobutton" id="203">
+						<description>Use big vertical Menu</description>
+						<visible>Skin.HasSetting(VerticalMenu)</visible>
+						<width>750</width>
+						<height>40</height>
+						<font>font12caps</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>Menu large</label>
+						<onclick>Skin.ToggleSetting(BigVerticalMenu)</onclick>
+					
+
+						<selected>Skin.HasSetting(BigVerticalMenu)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					
+					</control>
+					<control type="radiobutton" id="204">
 						<description>Use Carousel Menu</description>
 						<width>750</width>
 						<height>40</height>
@@ -1152,7 +1198,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<visible>Skin.HasSetting(CarouselMenu)</visible>
 					</control>
-					<control type="radiobutton" id="204">
+					<control type="radiobutton" id="205">
 						<description>Use Carousel Menu</description>
 						<width>750</width>
 						<height>40</height>
@@ -1168,7 +1214,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<visible>!Skin.HasSetting(CarouselMenu)</visible>
 					</control>
-					<control type="radiobutton" id="205">
+					<control type="radiobutton" id="206">
 						<description>Use Carousel background</description>
 						<visible>Skin.HasSetting(CarouselMenu)</visible>
 						<width>750</width>
@@ -1182,7 +1228,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="206">
+					<control type="radiobutton" id="207">
 						<description>Use Carousel Icons</description>
 						<visible>Skin.HasSetting(CarouselMenu)</visible>
 						<width>750</width>
@@ -1196,7 +1242,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="207">
+					<control type="radiobutton" id="208">
 						<description>Use Horizontal Menu</description>
 						<width>750</width>
 						<height>40</height>
@@ -1212,7 +1258,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<visible>Skin.HasSetting(HorizontalMenu)</visible>
 					</control>
-					<control type="radiobutton" id="208">
+					<control type="radiobutton" id="209">
 						<description>Use Horizontal Menu</description>
 						<width>750</width>
 						<height>40</height>
@@ -1228,7 +1274,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<visible>!Skin.HasSetting(HorizontalMenu)</visible>
 					</control>
-					<control type="radiobutton" id="209">
+					<control type="radiobutton" id="210">
 						<description>Raise Horizontal Menu</description>
 						<visible>Skin.HasSetting(HorizontalMenu)</visible>
 						<width>750</width>
@@ -1238,11 +1284,50 @@
 						<focusedcolor>white</focusedcolor>
 						<label>35001</label>
 						<onclick>Skin.ToggleSetting(RaiseHorizontalMenu)</onclick>
+						<onclick>Skin.Reset(BackHorizontalMenu)</onclick>
+
 						<selected>Skin.HasSetting(RaiseHorizontalMenu)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
+					
 					</control>
 					<control type="radiobutton" id="211">
+						<description>Horizontal back Menu</description>
+						<visible>Skin.HasSetting(HorizontalMenu)</visible>
+						<width>750</width>
+						<height>40</height>
+						<font>font12caps</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>35001</label>
+						<onclick>Skin.ToggleSetting(BackHorizontalMenu)</onclick>
+						<onclick>Skin.Reset(RaiseHorizontalMenu)</onclick>
+						<selected>Skin.HasSetting(BackHorizontalMenu)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					
+					</control>
+					<control type="radiobutton" id="212">
+						<description>Use Tactile Menu</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>Tactile</label>
+						<onclick>Skin.ToggleSetting(TactileMenu)</onclick>
+						<onclick>Skin.Reset(RaiseHorizontalMenu)</onclick>
+						<onclick>Skin.Reset(BackHorizontalMenu)</onclick>
+						<onclick>Skin.Reset(VerticalMenu)</onclick>
+						<onclick>Skin.Reset(CarouselMenu)</onclick>
+						<onclick>Skin.Reset(HorizontalMenu)</onclick>
+						<selected>Skin.HasSetting(TactileMenu)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						
+					</control>
+
+					<control type="radiobutton" id="213">
 						<description>enable video info</description>
 						<width>750</width>
 						<height>40</height>
@@ -1255,7 +1340,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="212">
+					<control type="radiobutton" id="214">
 						<description>enable music info</description>
 						<width>750</width>
 						<height>40</height>
@@ -1268,7 +1353,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>					
-					<control type="radiobutton" id="213">
+					<control type="radiobutton" id="215">
 						<description>Enable LiveTV</description>
 						<width>750</width>
 						<height>40</height>
@@ -1282,20 +1367,20 @@
 						<onclick>Skin.ToggleSetting(Menu_LiveTv_act)</onclick>
 						<selected>Skin.HasSetting(LiveTvIsEnable)</selected>
 						</control>
-					<control type="button" id="214">
+					<control type="button" id="216">
 						<description>Show Recently added info</description>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
+						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
 						<label>31117</label>
 						<onclick>Skin.ToggleSetting(homepageHideRecentlyAdded)</onclick>
 						<selected>Skin.HasSetting(homepageHideRecentlyAdded)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="215">
+					<control type="radiobutton" id="217">
 						<description>Show Recently Video added info</description>
 						<width>750</width>
 						<height>40</height>
@@ -1311,7 +1396,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
 					</control>
-					<control type="radiobutton" id="216">
+					<control type="radiobutton" id="218">
 						<description>Show Recently Movie added info</description>
 						<width>750</width>
 						<height>40</height>
@@ -1326,7 +1411,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
 					</control>
-					<control type="radiobutton" id="217">
+					<control type="radiobutton" id="219">
 						<description>Show Recently TvShows added info</description>
 						<width>750</width>
 						<height>40</height>
@@ -1341,7 +1426,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
 					</control>
-					<control type="radiobutton" id="218">
+					<control type="radiobutton" id="220">
 						<description>Show Recently Music added info</description>
 						<width>750</width>
 						<height>40</height>
@@ -1356,20 +1441,20 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
 					</control>
-					<control type="button" id="219">
+					<control type="button" id="221">
 						<description>Show Random info</description>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
+						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
 						<label>$LOCALIZE[35129]</label>
 						<onclick>Skin.ToggleSetting(homepageHideRandomAdded)</onclick>
 						<selected>Skin.HasSetting(homepageHideRandomAdded)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="220">
+					<control type="radiobutton" id="222">
 						<description>Show Random video info</description>
 						<width>750</width>
 						<height>40</height>
@@ -1385,7 +1470,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<visible>Skin.HasSetting(homepageHideRandomAdded)</visible>
 					</control>
-					<control type="radiobutton" id="221">
+					<control type="radiobutton" id="223">
 						<description>Show Random Movie info</description>
 						<width>750</width>
 						<height>40</height>
@@ -1400,7 +1485,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<visible>Skin.HasSetting(homepageHideRandomAdded)</visible>
 					</control>
-					<control type="radiobutton" id="222">
+					<control type="radiobutton" id="224">
 						<description>Show Random TvShows info</description>
 						<width>750</width>
 						<height>40</height>
@@ -1415,7 +1500,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<visible>Skin.HasSetting(homepageHideRandomAdded)</visible>
 					</control>
-					<control type="radiobutton" id="223">
+					<control type="radiobutton" id="225">
 						<description>Show Random Music info</description>
 						<width>750</width>
 						<height>40</height>
@@ -1430,7 +1515,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<visible>Skin.HasSetting(homepageHideRandomAdded)</visible>
 					</control>
-					<control type="radiobutton" id="224">
+					<control type="radiobutton" id="226">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -1443,7 +1528,7 @@
 						<onclick>Skin.SetString(InitRunScript,True)</onclick>
 						<selected>Skin.HasSetting(UseNextAired)</selected>
 					</control>
-					<control type="radiobutton" id="225">
+					<control type="radiobutton" id="227">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -1456,7 +1541,7 @@
 						<selected>Skin.HasSetting(UseNextAiredClearart)</selected>
 						<visible>Skin.HasSetting(UseNextAired)</visible>
 					</control>
-					<control type="radiobutton" id="226">
+					<control type="radiobutton" id="228">
 						<description>Show Library Stats</description>
 						<width>750</width>
 						<height>40</height>
@@ -1469,7 +1554,8 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="227">
+					<control type="radiobutton" id="229">
+
 						<description>Show CDArt</description>
 						<width>750</width>
 						<height>40</height>
@@ -1482,7 +1568,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="228">
+					<control type="radiobutton" id="230">
 						<description>Show Vinyl</description>
 						<width>750</width>
 						<height>40</height>
@@ -1496,7 +1582,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<visible>Skin.HasSetting(CDart)</visible>
 					</control>
-					<control type="radiobutton" id="229">
+					<control type="radiobutton" id="231">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -1510,7 +1596,7 @@
 						<selected>Skin.HasSetting(UseConcertInfo)</selected>
 					</control>
 					
-					<control type="radiobutton" id="230">
+					<control type="radiobutton" id="232">
 						<description>Show Next Five Songs</description>
 						<width>750</width>
 						<height>40</height>
@@ -1523,7 +1609,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="231">
+					<control type="radiobutton" id="233">
 						<description>Hide Home buttons</description>
 						<width>750</width>
 						<height>40</height>
@@ -1536,7 +1622,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="232">
+					<control type="radiobutton" id="234">
 						<description>Hide Home Logo</description>
 						<width>750</width>
 						<height>40</height>
@@ -1549,7 +1635,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="233">
+					<control type="radiobutton" id="235">
 						<description>Anim Widgets</description>
 						<width>750</width>
 						<height>40</height>
@@ -1562,8 +1648,8 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="234">
-						<description>Anim Widgets</description>
+					<control type="radiobutton" id="236">
+						<description>Ken burn effect</description>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -1575,8 +1661,8 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="235">
-						<description>Anim Widgets</description>
+					<control type="radiobutton" id="237">
+						<description>Ken burn effect</description>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -1589,7 +1675,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<visible>Skin.HasSetting(AnimScreens)</visible>
 					</control>
-					<control type="radiobutton" id="236">
+					<control type="radiobutton" id="238">
 						<description>rUN Widgets</description>
 						<width>750</width>
 						<height>40</height>
@@ -1748,6 +1834,7 @@
 		<include>BehindDialogFadeOut</include>
 		<control type="group">
 			<posx>60</posx>
+
 			<posy>0</posy>
 			<animation effect="slide" end="-310,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 			<animation effect="slide" start="-310,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>

@@ -1767,6 +1767,10 @@ tent(LiveTV)</visible>
 		<onfocus>XBMC.RunScript(script.recentlyadded,limit=10&amp;albums=True&amp;totals=True)</onfocus>
 		
 	</include>
+	<include name="RunRecentlyPath">
+		<onfocus>XBMC.RunScript(script.recentlypath,limit=10&amp;albums=True&amp;totals=True)</onfocus>
+		
+	</include>
 	<include name="RunRandomAdded">
 		<onfocus>XBMC.RunScript(script.randomitems,limit=10)</onfocus>
 		
@@ -1864,6 +1868,7 @@ tent(LiveTV)</visible>
 			<onfocus>Skin.Reset(LibraryUpdated)</onfocus>
 			<include condition ="Skin.HasSetting(homepageHideRecentlyVideoAdded) | Skin.HasSetting(homepageHideRecentlyMusicAdded) | Skin.HasSetting(homepageHideRecentlyTvShowsAdded) | Skin.HasSetting(homepageHideRecentlyMovieAdded) | Skin.HasSetting(homepageHideRandomVideoAdded) | Skin.HasSetting(homepageHideRandomMusicAdded) | Skin.HasSetting(homepageHideRandomTvShowsAdded) | Skin.HasSetting(homepageHideRandomMovieAdded)">RunRecentlyAdded</include>
 			<include condition ="Skin.HasSetting(UseNextAired)|Skin.HasSetting(Menu_TVShows_sub9_act)">RunNextAiredAdded</include>
+			<include>RunRecentlyPath</include>
 			<include condition ="Skin.HasSetting(homepageHideRandomVideoAdded) | Skin.HasSetting(homepageHideRandomMusicAdded) | Skin.HasSetting(homepageHideRandomTvShowsAdded) | Skin.HasSetting(homepageHideRandomMovieAdded)">RunRandomAdded</include>
 			<!--<onfocus>XBMC.RunScript(script.recentlywatched,limit=10)</onfocus>-->
 			<include condition ="Skin.HasSetting(UseConcertInfo)">RunExtraMusicConcertAdded</include>
