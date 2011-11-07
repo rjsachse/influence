@@ -286,7 +286,7 @@
 							</control>
 							<control type="button" id="301">
 								<include>BackCustomMulti</include>
-								<onclick>Skin.SetPath(Home_Custom_Back_Settings_Folder)</onclick><include>BackCustomMulti</include>
+								<onclick>Skin.SetPath(Home_Custom_Back_Settings_Folder)</onclick>
 							</control>
 							<control type="button" id="302">
 								<include>BackCustomReset</include>
