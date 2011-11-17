@@ -89,7 +89,7 @@
 						<label>$LOCALIZE[419] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>Weather.IsFetched</visible>
+						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>high value</description>
@@ -115,7 +115,7 @@
 						<label>$LOCALIZE[418] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>Weather.IsFetched</visible>
+						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>low value</description>
@@ -190,7 +190,7 @@
 						<label>$LOCALIZE[419] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>Weather.IsFetched</visible>
+						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>high value</description>
@@ -216,7 +216,7 @@
 						<label>$LOCALIZE[418] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>Weather.IsFetched</visible>
+						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>low value</description>
@@ -291,7 +291,7 @@
 						<label>$LOCALIZE[419] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>Weather.IsFetched</visible>
+						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>high value</description>
@@ -317,7 +317,7 @@
 						<label>$LOCALIZE[418] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>Weather.IsFetched</visible>
+						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>low value</description>
@@ -392,7 +392,7 @@
 						<label>$LOCALIZE[419] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>Weather.IsFetched</visible>
+						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>high value</description>
@@ -418,7 +418,7 @@
 						<label>$LOCALIZE[418] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>Weather.IsFetched</visible>
+						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>low value</description>
@@ -517,6 +517,26 @@
 						<onclick>Skin.SetBool(WeatherCustomFanart)</onclick>
 						<onclick>Skin.SetString(WeatherFanartDir,special://skin/backgrounds/Weather/FanartMeteo/)</onclick>
 						<selected>!Skin.HasSetting(ShowWeatherFanart)</selected>
+					</control>
+					<control type="button" id="251">
+						<include>ButtonMediaSubCommonValues</include>
+						<label>31317</label>
+						<onclick>Skin.SetPath(WeatherFanartDir)</onclick>
+						<enable>Skin.HasSetting(ShowWeatherFanart)</enable>
+					</control>
+					<control type="radiobutton" id="252">
+						<description>Icone Toggle</description>
+						<include>ButtonMediaSubCommonValues</include>
+						<label>Hide Icons</label>
+						<onclick>Skin.ToggleSetting(ShowWeatherIcon)</onclick>
+						<selected>Skin.HasSetting(ShowWeatherIcon)</selected>
+					</control>
+										<control type="radiobutton" id="253">
+						<description>Fanart Toggle</description>
+						<include>ButtonMediaSubCommonValues</include>
+						<label>Hide Animation</label>
+						<onclick>Skin.ToggleSetting(ShowWeatherSubFanart)</onclick>
+						<selected>Skin.HasSetting(ShowWeatherSubFanart)</selected>
 					</control>
 					<control type="radiobutton" id="213">
 						<description>enable weather info</description>
