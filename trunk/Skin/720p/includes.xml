@@ -45,9 +45,7 @@
 	<include file="IncludesInitSkin.xml" />
 	<include file="Includes_Transparency.xml" />
         <include file="Includes-ConcertGuide.xml" />
-	<!-- Touch -->
-	<include file="includesVideoFullScreen.xml" />
-	<include file="IncludePlayerControls.xml" />
+
 	<!-- Custom Views -->
 	<include file="View_Custom1001.xml" />
 	<include file="View_Custom1002.xml" />

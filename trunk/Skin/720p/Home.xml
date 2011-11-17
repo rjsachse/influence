@@ -13,7 +13,7 @@
 			<fadetime>1000</fadetime>
 			<animation effect="zoom" start="110" end="130" center="auto" time="32000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
 			<animation effect="slide" start="-10,-10" end="20,20" time="24000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimScreens)">Conditional</animation>
-		<!--	<visible>Container(9000).HasFocus</visible>-->
+			<!--<visible>Container(9000).HasFocus</visible>-->
 		</control>
 <!-- randomsitem and recentlyadded fanart dans IncludeHomeStat-->
 	
@@ -60,7 +60,7 @@
 			<animation effect="slide" start="0,0" end="-60,0" delay="0" time="300" condition="Window.IsVisible(MuteBug)">conditional</animation>
 			<animation effect="slide" start="0,0" end="550,0" delay="0" time="300">WindowClose</animation>
 			<animation effect="slide" start="550,0" end="0,0" delay="0" time="300">WindowOpen</animation>
-			<visible>!Skin.HasSetting(homepageWeatherinfo) + Weather.IsFetched+!StringCompare(Weather.Plugin,weather.weatherplus)</visible>
+			<visible>!Skin.HasSetting(homepageWeatherinfo) + [Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]+!StringCompare(Weather.Plugin,weather.weatherplus)</visible>
 			
 			
 			<control type="multiimage">
@@ -93,7 +93,7 @@
 				<onclick>SetFocus(8999)</onclick>
 			</control>
 		</control>
-				<control type="group">
+		<control type="group">
 			<posx>520r</posx>
 			<posy>0</posy>
 			<animation effect="slide" start="0,0" end="-60,0" delay="0" time="300" condition="Window.IsVisible(MuteBug)">conditional</animation>
@@ -135,26 +135,26 @@
 <!-- weather Info -->
 		<control type="group">
 			<!--
-			<visible>Container(9000).HasFocus(6)+Weather.IsFetched+![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)] + ![Player.HasAudio + Skin.HasSetting(Next5Songs)]</visible>
+			<visible>Container(9000).HasFocus(6)+[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]+![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)] + ![Player.HasAudio + Skin.HasSetting(Next5Songs)]</visible>
 			-->
 			<visible>Container(9000).HasFocus(6) + !ControlGroup(9001).HasFocus + ![Skin.HasSetting(HorizontalMenu) + Skin.HasSetting(RaiseHorizontalMenu)] + [[Skin.HasSetting(CarouselMenu) | Skin.HasSetting(VerticalMenu)] | [Skin.HasSetting(HorizontalMenu) +  ![Player.HasAudio + Skin.HasSetting(Next5Songs)]]]</visible>
-	        	<include condition="!StringCompare(Weather.Plugin,weather.weatherplus)+Weather.IsFetched+Skin.HasSetting(ChoiceWeatherOne)">CurrentWeather</include>
-	        	<include condition="StringCompare(Weather.Plugin,weather.weatherplus)+Skin.HasSetting(ChoiceWeatherOne)">CurrentWeatherPlus</include>
-			<include condition="!StringCompare(Weather.Plugin,weather.weatherplus)+Weather.IsFetched+Skin.HasSetting(ChoiceWeatherTwo) + [!Player.HasVideo + !Player.HasAudio]">CurrentWeather2</include>
-			<include condition="!StringCompare(Weather.Plugin,weather.weatherplus)+Weather.IsFetched+Skin.HasSetting(ChoiceWeatherThree) + [!Player.HasVideo + !Player.HasAudio]">CurrentWeather3</include>
-			<include condition="!StringCompare(Weather.Plugin,weather.weatherplus)+Weather.IsFetched+Skin.HasSetting(ChoiceWeatherFour) + [!Player.HasVideo + !Player.HasAudio]">CurrentWeather4</include>
-			<include condition="[Skin.HasSetting(ChoiceWeatherTwo) | Skin.HasSetting(ChoiceWeatherThree) | Skin.HasSetting(ChoiceWeatherFour)] + [Player.HasVideo | Player.HasAudio]+Weather.IsFetched+!StringCompare(Weather.Plugin,weather.weatherplus)">CurrentWeather</include>
+	        	<include condition="!StringCompare(Weather.Plugin,weather.weatherplus)+[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]+Skin.HasSetting(ChoiceWeatherOne)">CurrentWeather</include>
+	      	<include condition="StringCompare(Weather.Plugin,weather.weatherplus)+Skin.HasSetting(ChoiceWeatherOne)">CurrentWeatherPlus</include>
+			<include condition="!StringCompare(Weather.Plugin,weather.weatherplus)+[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]+Skin.HasSetting(ChoiceWeatherTwo) + [!Player.HasVideo + !Player.HasAudio]">CurrentWeather2</include>
+			<include condition="!StringCompare(Weather.Plugin,weather.weatherplus)+[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]+Skin.HasSetting(ChoiceWeatherThree) + [!Player.HasVideo + !Player.HasAudio]">CurrentWeather3</include>
+			<include condition="!StringCompare(Weather.Plugin,weather.weatherplus)+[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]+Skin.HasSetting(ChoiceWeatherFour) + [!Player.HasVideo + !Player.HasAudio]">CurrentWeather4</include>
+			<include condition="[Skin.HasSetting(ChoiceWeatherTwo) | Skin.HasSetting(ChoiceWeatherThree) | Skin.HasSetting(ChoiceWeatherFour)] + [Player.HasVideo | Player.HasAudio]+[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]+!StringCompare(Weather.Plugin,weather.weatherplus)">CurrentWeather</include>
 			<include condition="[Skin.HasSetting(ChoiceWeatherTwo) | Skin.HasSetting(ChoiceWeatherThree) | Skin.HasSetting(ChoiceWeatherFour)] + [Player.HasVideo | Player.HasAudio]+StringCompare(Weather.Plugin,weather.weatherplus)">CurrentWeatherPlus</include>
 		</control>
 
 
 		<control type="group">
 		<visible>Container(945).HasFocus(601) + ControlGroup(9001).HasFocus + [!Player.HasVideo + !Player.HasAudio]</visible>
-		<include condition="!StringCompare(Weather.Plugin,weather.weatherplus)+Weather.IsFetched+Skin.HasSetting(Menu_Weather_sub1_act)">CurrentWeather</include>
-		<include condition="StringCompare(Weather.Plugin,weather.weatherplus)+Skin.HasSetting(Menu_Weather_sub1_act)">CurrentWeatherPlus</include>
+		<include condition="!StringCompare(Weather.Plugin,weather.weatherplus)+[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]+Skin.HasSetting(Menu_Weather_sub1_act)">CurrentWeather</include>
+	<include condition="StringCompare(Weather.Plugin,weather.weatherplus)+Skin.HasSetting(Menu_Weather_sub1_act)">CurrentWeatherPlus</include>
 		</control>
 		<control type="group">
-		<visible>[Container(945).HasFocus(601) | Container(945).HasFocus(602)| Container(945).HasFocus(603) | Container(945).HasFocus(604)] + ControlGroup(9001).HasFocus + [ Player.HasVideo | Player.HasAudio] + !Skin.HasSetting(HorizontalMenu)+Weather.IsFetched+!StringCompare(Weather.Plugin,weather.weatherplus)</visible>
+		<visible>[Container(945).HasFocus(601) | Container(945).HasFocus(602)| Container(945).HasFocus(603) | Container(945).HasFocus(604)] + ControlGroup(9001).HasFocus + [ Player.HasVideo | Player.HasAudio] + !Skin.HasSetting(HorizontalMenu)+[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]+!StringCompare(Weather.Plugin,weather.weatherplus)</visible>
 		<include>CurrentWeather</include>
 		</control>
 				<control type="group">
@@ -163,15 +163,15 @@
 		</control>
 		<control type="group">
 		<visible>Container(945).HasFocus(602) + ControlGroup(9001).HasFocus + [!Player.HasVideo + !Player.HasAudio]</visible>
-		<include condition="!StringCompare(Weather.Plugin,weather.weatherplus)+Weather.IsFetched+Skin.HasSetting(Menu_Weather_sub2_act)">CurrentWeather2</include>
+		<include condition="!StringCompare(Weather.Plugin,weather.weatherplus)+[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]+Skin.HasSetting(Menu_Weather_sub2_act)">CurrentWeather2</include>
 		</control>
 		<control type="group">
 		<visible>Container(945).HasFocus(603) + ControlGroup(9001).HasFocus + [!Player.HasVideo + !Player.HasAudio]</visible>
-		<include condition="!StringCompare(Weather.Plugin,weather.weatherplus)+Weather.IsFetched+Skin.HasSetting(Menu_Weather_sub3_act)">CurrentWeather3</include>
+		<include condition="!StringCompare(Weather.Plugin,weather.weatherplus)+[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]+Skin.HasSetting(Menu_Weather_sub3_act)">CurrentWeather3</include>
 		</control>
 		<control type="group">
 		<visible>Container(945).HasFocus(604) + ControlGroup(9001).HasFocus + [!Player.HasVideo + !Player.HasAudio]</visible>
-		<include condition="!StringCompare(Weather.Plugin,weather.weatherplus)+Weather.IsFetched+Skin.HasSetting(Menu_Weather_sub4_act)">CurrentWeather4</include>
+		<include condition="!StringCompare(Weather.Plugin,weather.weatherplus)+[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]+Skin.HasSetting(Menu_Weather_sub4_act)">CurrentWeather4</include>
 		</control>
 		<include condition="!Skin.HasSetting(VerticalMenu)+!Skin.HasSetting(HorizontalMenu)+!Skin.HasSetting(CarouselMenu)">IncludeHomeVertical</include>
 		<include condition="Skin.HasSetting(VerticalMenu)">IncludeHomeVertical</include>

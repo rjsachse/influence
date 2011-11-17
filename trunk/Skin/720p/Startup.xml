@@ -41,7 +41,7 @@
 		</control>
 		<control type="button" id="666">
 			<texturefocus>special://skin/backgrounds/Influence_Init.png</texturefocus>
-			<onfocus>Skin.SetBool(Influence_SkinReInit_b8)</onfocus>
+			<onfocus>Skin.SetBool(Influence_SkinReInit_b9)</onfocus>
 			<include condition="Skin.HasSetting(ViewCustom1001_IsInstall)">ViewCustom1001_ReInit</include>
 			<include condition="Skin.HasSetting(ViewCustom1002_IsInstall)">ViewCustom1002_ReInit</include>
 			<include condition="Skin.HasSetting(ViewCustom1003_IsInstall)">ViewCustom1003_ReInit</include>
@@ -66,14 +66,14 @@
 			<onfocus>ReplaceWindow(Home)</onfocus>	
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<visible>!Skin.HasSetting(Influence_SkinReInit_b8)</visible>
+			<visible>!Skin.HasSetting(Influence_SkinReInit_b9)</visible>
 		</control>
 		<control type="button" id="666">
 			<description>Don't run anything</description>
 			<onfocus>ReplaceWindow(Home)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>			
-			<visible>Skin.HasSetting(Influence_SkinReInit_b8)</visible>
+			<visible>Skin.HasSetting(Influence_SkinReInit_b9)</visible>
 		</control>
 
 		<control type="button" id="17">

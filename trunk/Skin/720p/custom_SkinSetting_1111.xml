@@ -1104,7 +1104,7 @@
 						<aligny>center</aligny>
 					</control>
 					<!-- Horizontal Menu -->
-					<control type="radiobutton" id="199">
+				<!--	<control type="radiobutton" id="199">
 						<description>Use Confluence style</description>
 						<width>750</width>
 						<height>40</height>
@@ -1132,7 +1132,7 @@
 						<selected>Skin.HasSetting(WhiteMenu)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
+					</control>-->
 					<control type="radiobutton" id="201">
 						<description>Use Vertical Menu</description>
 						<width>750</width>
