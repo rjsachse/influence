@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="skin.influence"
-  version="1.3.29"
+  version="1.3.30"
   name="Influence"
   provider-name="Yiarkyiark/Ronan/Frost, Team Passion XBMC">
   <requires>
     <import addon="xbmc.gui" version="3.00"/>
-    <import addon="weather.fanart.pda.style" version="1.8.0"/>
+    <import addon="weather.fanart.pda.style" version="1.0.0"/>
     <import addon="script.tvtunes" version="0.8.2"/>
     <import addon="script.moviesets" version="1.0.5"/>
     <import addon="script.rssclient" version="1.0.5"/>
