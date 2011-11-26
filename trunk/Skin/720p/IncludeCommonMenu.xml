@@ -523,6 +523,14 @@
 		<onclick>RunScript(special://skin/scripts/SetBackground.py,Menu=Exit&amp;SubMenu=sub4)</onclick>
 		<visible>Container(9000).HasFocus(13) + Skin.HasSetting(Menu_Exit_sub4_act)</visible>
 	</item>
+		<item id="1305">
+		<label>$INFO[Skin.String(Menu_Exit_sub5_lab)]</label>
+		<label2>$INFO[Skin.String(Menu_Exit_sub5_Ico)]</label2>
+		<icon>$INFO[Skin.String(Home_Custom_Back_Exit_Folder)]</icon>
+		<thumb>$INFO[Skin.String(Menu_Exit_sub5_back)]</thumb>
+		<onclick>RunScript(special://skin/scripts/SetBackground.py,Menu=Exit&amp;SubMenu=sub5)</onclick>
+		<visible>Container(9000).HasFocus(13) + Skin.HasSetting(Menu_Exit_sub5_act)</visible>
+	</item>
 <!-- Exit end -->
 <!-- Movies -->
 	<item id="1001">
