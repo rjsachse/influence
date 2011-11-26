@@ -4981,7 +4981,7 @@
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.ToggleSetting(Menu_Exit_act)</onclick>
-				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Exit&amp;Nb=4)</onclick>
+				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Exit&amp;Nb=5)</onclick>
 				<selected>Skin.HasSetting(Menu_Exit_act)</selected>
 				<visible>Skin.HasSetting(Menu_Exit)</visible>
 			</control>
@@ -5022,7 +5022,7 @@
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.ToggleSetting(Menu_Exit_sub1_act)</onclick>
-				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Exit&amp;Nb=4)</onclick>
+				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Exit&amp;Nb=5)</onclick>
 				<selected>Skin.HasSetting(Menu_Exit_sub1_act)</selected>
 				<visible>Skin.HasSetting(Menu_Exit) + Skin.HasSetting(Menu_Exit_act)</visible>
 			</control>
@@ -5063,7 +5063,7 @@
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.ToggleSetting(Menu_Exit_sub2_act)</onclick>
-				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Exit&amp;Nb=4)</onclick>
+				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Exit&amp;Nb=5)</onclick>
 				<selected>Skin.HasSetting(Menu_Exit_sub2_act)</selected>
 				<visible>Skin.HasSetting(Menu_Exit) + Skin.HasSetting(Menu_Exit_act)</visible>
 			</control>
@@ -5104,7 +5104,7 @@
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.ToggleSetting(Menu_Exit_sub3_act)</onclick>
-				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Exit&amp;Nb=4)</onclick>
+				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Exit&amp;Nb=5)</onclick>
 				<selected>Skin.HasSetting(Menu_Exit_sub3_act)</selected>
 				<visible>Skin.HasSetting(Menu_Exit) + Skin.HasSetting(Menu_Exit_act)</visible>
 			</control>
@@ -5145,7 +5145,7 @@
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onclick>Skin.ToggleSetting(Menu_Exit_sub4_act)</onclick>
-				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Exit&amp;Nb=4)</onclick>
+				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Exit&amp;Nb=5)</onclick>
 				<selected>Skin.HasSetting(Menu_Exit_sub4_act)</selected>
 				<visible>Skin.HasSetting(Menu_Exit) + Skin.HasSetting(Menu_Exit_act)</visible>
 			</control>
@@ -5175,6 +5175,47 @@
 				<onclick>Skin.SetString(RunOpt_var,Menu_Exit_sub4_run)</onclick>
 				<onclick>ActivateWindow(2114)</onclick>
 				<visible>Skin.HasSetting(Menu_Exit) + Skin.HasSetting(Menu_Exit_act) + Skin.HasSetting(Menu_Exit_sub4_act)</visible>
+			</control>
+			<control type="radiobutton" id="134051">
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$LOCALIZE[31119] [B]$INFO[Skin.String(Menu_Exit_sub5_lab)][/B]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Menu_Exit_sub5_act)</onclick>
+				<onclick>XBMC.Runscript(special://skin/scripts/SetSubAct.py,Menu=Exit&amp;Nb=5)</onclick>
+				<selected>Skin.HasSetting(Menu_Exit_sub5_act)</selected>
+				<visible>Skin.HasSetting(Menu_Exit) + Skin.HasSetting(Menu_Exit_act)</visible>
+			</control>
+			<control type="button" id="134052">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[31120]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Exit_sub5_lab)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(Menu_Exit_sub5_lab)</onclick>
+				<visible>Skin.HasSetting(Menu_Exit) + Skin.HasSetting(Menu_Exit_act) + Skin.HasSetting(Menu_Exit_sub5_act)</visible>
+			</control>
+			<control type="button" id="134053">
+				<width>750</width>
+				<height>40</height>
+				<font>font12</font>
+				<label> - $LOCALIZE[31121]</label>
+				<label2>[COLOR=selected]$INFO[Skin.String(Menu_Exit_sub5_run)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick>Skin.SetString(RunOpt_var,Menu_Exit_sub5_run)</onclick>
+				<onclick>ActivateWindow(2114)</onclick>
+				<visible>Skin.HasSetting(Menu_Exit) + Skin.HasSetting(Menu_Exit_act) + Skin.HasSetting(Menu_Exit_sub5_act)</visible>
 			</control>
 <!-- Menu Exit END -->
 <!-- Menu Favorites -->
