@@ -861,7 +861,7 @@
 						<label>$LOCALIZE[419] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>high value</description>
@@ -887,7 +887,7 @@
 						<label>$LOCALIZE[418] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>low value</description>
@@ -964,7 +964,7 @@
 						<label>$LOCALIZE[419] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>high value</description>
@@ -990,7 +990,7 @@
 						<label>$LOCALIZE[418] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>low value</description>
@@ -1060,7 +1060,7 @@
 						<label>$LOCALIZE[419] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>high value</description>
@@ -1086,7 +1086,7 @@
 						<label>$LOCALIZE[418] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>low value</description>
@@ -1163,7 +1163,7 @@
 						<label>$LOCALIZE[419] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>high value</description>
@@ -1189,7 +1189,7 @@
 						<label>$LOCALIZE[418] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>low value</description>
@@ -1483,7 +1483,7 @@
 						<label>$LOCALIZE[419] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 						
 					</control>
 					<control type="label">
@@ -1511,7 +1511,7 @@
 						<label>$LOCALIZE[418] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 						
 					</control>
 					<control type="label">
@@ -1589,7 +1589,7 @@
 						<label>$LOCALIZE[419] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 						
 					</control>
 					<control type="label">
@@ -1617,7 +1617,7 @@
 						<label>$LOCALIZE[418] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 						
 					</control>
 					<control type="label">
@@ -1848,7 +1848,7 @@
 						<label>$LOCALIZE[419] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>high value</description>
@@ -1874,7 +1874,7 @@
 						<label>$LOCALIZE[418] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>low value</description>
@@ -1951,7 +1951,7 @@
 						<label>$LOCALIZE[419] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>high value</description>
@@ -2054,7 +2054,7 @@
 						<label>$LOCALIZE[419] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>high value</description>
@@ -2080,7 +2080,7 @@
 						<label>$LOCALIZE[418] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>low value</description>
@@ -2220,7 +2220,7 @@
 						<label>$LOCALIZE[419] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>high value</description>
@@ -2246,7 +2246,7 @@
 						<label>$LOCALIZE[418] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>low value</description>
@@ -2323,7 +2323,7 @@
 						<label>$LOCALIZE[419] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>high value</description>
@@ -2426,7 +2426,7 @@
 						<label>$LOCALIZE[419] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>high value</description>
@@ -2452,7 +2452,7 @@
 						<label>$LOCALIZE[418] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>low value</description>
@@ -2740,7 +2740,7 @@
 						<label>$LOCALIZE[419] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>high value</description>
@@ -2766,7 +2766,7 @@
 						<label>$LOCALIZE[418] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>low value</description>
@@ -2843,7 +2843,7 @@
 						<label>$LOCALIZE[419] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>high value</description>
@@ -2869,7 +2869,7 @@
 						<label>$LOCALIZE[418] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>low value</description>
@@ -2938,7 +2938,7 @@
 						<label>$LOCALIZE[419] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>high value</description>
@@ -2964,7 +2964,7 @@
 						<label>$LOCALIZE[418] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>low value</description>
@@ -3041,7 +3041,7 @@
 						<label>$LOCALIZE[419] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>high value</description>
@@ -3067,7 +3067,7 @@
 						<label>$LOCALIZE[418] :</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<visible>[Weather.IsFetched | IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
+						<visible>[Weather.IsFetched | !IsEmpty(Window(Weather).Property(Weather.IsFetched))]</visible>
 					</control>
 					<control type="label">
 						<description>low value</description>
