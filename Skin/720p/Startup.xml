@@ -94,7 +94,7 @@
 		</control>
 		<control type="button" id="16">
 			<texturefocus>special://skin/backgrounds/Influence_Init.png</texturefocus>
-			<onfocus>Skin.SetBool(Influence_SkinInit_b7)</onfocus>
+			<onfocus>Skin.SetBool(Influence_SkinInit_b8)</onfocus>
 			<onfocus>Skin.SetString(Menu_TVShows_sub9_run,ActivateWindow(1135,return))</onfocus>
 			<onfocus>Skin.SetBool(Menu_TVShows_sub9_act)</onfocus>
 			<onfocus>Skin.SetString(Menu_TVShows_sub9_lab,Tv Guide)</onfocus>
@@ -138,14 +138,14 @@
 			<onfocus>SetFocus(17)</onfocus>	
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<visible>!Skin.HasSetting(Influence_SkinInit_b7)</visible>
+			<visible>!Skin.HasSetting(Influence_SkinInit_b8)</visible>
 		</control>
 		<control type="button" id="16">
 			<description>Don't run anything</description>
 			<onfocus>SetFocus(17)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>			
-			<visible>Skin.HasSetting(Influence_SkinInit_b7)</visible>
+			<visible>Skin.HasSetting(Influence_SkinInit_b8)</visible>
 		</control>
 		<control type="button" id="15">
 			<texturefocus>special://skin/backgrounds/Influence_Init.png</texturefocus>
